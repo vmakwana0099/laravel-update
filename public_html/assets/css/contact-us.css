@@ -1,0 +1,314 @@
+
+.vps_main .banner-inner {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+
+.vps_main .banner-content {
+    text-align: center;
+}
+.vps_main.google_apps_main .banner-inner .banner-image {
+    background-image: url(../images/gsuite-icon.png);
+}
+
+.vps_main .banner-inner .banner-image {
+    background-image: url(../images/vps_hosting/VPS-Hosting-icon.svg);
+}
+.banner-inner .banner-image {
+    width: 68px;
+    height: 68px;
+    background-image: none;
+    margin: 0 auto 10px;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.banner-inner .banner-content .banner-text {
+    max-width: 1000px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    margin: 19px auto;
+}
+
+
+
+
+
+
+
+
+
+.contact_form .left_part {
+    padding: 75px 5%;
+}
+.contact_form .contact-left {
+    width: 100%;
+    max-width: 510px;
+}
+.contact_form .contact-title {
+    font-size: 40px;
+    color: #03305d;
+    margin: 0 0 30px;
+}
+.contact_form .contact-left .require-field {
+    color: red;
+    margin-bottom: 13px;
+    text-align: right;
+    font-size: 13px;
+    position: relative;
+    top: -3px;
+}
+
+.require-field {
+    font-size: 13px;
+    color: red;
+}
+.require-field, .vpsplan_slider_div .ukvtab_div .scale .col-sm-3:last-child {
+    text-align: right;
+}
+.contact_form .contact-left .form-group {
+    position: relative;
+    margin: 0 0 17px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+.contact_form .contact-left .form-group .required {
+    color: red;
+    font-size: 17px;
+    position: relative;
+    top: 2px;
+    left: 4px;
+}
+.contact_form .contact-left .form-control {
+    height: 46px;
+    border-color: #e4e4e4;
+    border-radius: 4px;
+    background: #f7fafc;
+    position: relative;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: none;
+}
+.contact_form .contact-left textarea.form-control {
+    height: 120px;
+    resize: none;
+}
+.contact_form .contact-left .btn {
+    width: 100%;
+    border-radius: 7px;
+    height: 46px;
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #18b35c;
+    color: #fff;
+}
+
+
+
+
+.contact_form .right_part {
+    background: #f7fafc;
+    padding: 75px 5%;
+}
+.contact_form .contact-right {
+    width: 100%;
+    max-width: 510px;
+}
+.contact_form .contact-title {
+    font-size: 40px;
+    color: #03305d;
+    margin: 0 0 30px;
+}
+.contact_form .contact-right .contact-box-1 {
+    display: block;
+    margin-bottom: 30px;
+    background: #fff;
+    align-self: center;
+    border-left: 2px solid #18b35c;
+    -webkit-box-shadow: 3px 4px 4px #f0f0f0;
+    box-shadow: 3px 4px 4px #f0f0f0;
+    padding: 20px;
+}
+.contact_form .contact-right .contact-box-1 .fonts-big {
+    font-size: 42px;
+    display: block;
+    color: #03305d;
+    margin: 0 auto;
+}
+.contact_form .contact-right .contact-box-1 .contact-head {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 11px 0;
+}
+.contact_form .contact-right .contact-box-1 .contact-text {
+    color: #03305d;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.contact_form .contact-right .social {
+    display: block;
+    margin-top: 22px;
+}
+.contact_form .contact-right .social li {
+    display: inline-block;
+    margin: 0;
+}
+.contact_form .contact-right .social li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #4f6e8e;
+    padding: 0;
+    margin: 0 3px;
+}
+.contact_form .contact-right .social li a i {
+    font-size: 15px;
+    color: #fff;
+    align-self: center;
+}
+
+
+
+.contact_form .contact-right .chat, .contact_form .contact-right .ticket, .contact_form .contact-right .whatsapp {
+    background-color: rgba(204, 204, 204, .18);
+    box-shadow: 0 1px 8px 0 #b3b3b3;
+    padding: 10px 10px 10px 70px;
+    position: relative;
+    cursor: pointer;
+}
+.contact_form .contact-right .chat a, .contact_form .contact-right .ticket a, .contact_form .contact-right .whatsapp a {
+    color: #01254b;
+}
+.contact_form .contact-right .chat span {
+    background-image: url(../images/chat.png);
+}
+
+.contact_form .contact-right .chat span, .contact_form .contact-right .ticket span, .contact_form .contact-right .whatsapp span {
+    width: 50px;
+    height: 49px;
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    transition: all .3s ease;
+    transform: rotateY(0);
+    transition-duration: .8s;
+}
+.contact_form .contact-right .chat p, .contact_form .contact-right .ticket p, .contact_form .contact-right .whatsapp p {
+    font-size: 16px;
+    color: #01254b;
+    letter-spacing: .6px;
+    display: block;
+    font-weight: 500;
+}
+.contact_form .contact-right .ticket span {
+    background-image: url(../images/ticket.png);
+}
+.contact_form .contact-right .whatsapp span {
+    background-image: url(../images/whatsapp.png);
+}
+.contact_form .contact-right .whatsapp {
+    margin-top: 30px;
+}
+.accordion-header{
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .contact_form .left_part {
+        padding: 45px 15px;
+    }
+    .contact_form .contact-title {
+        font-size: 30px;
+        margin: 0 0 10px;
+    }
+    .contact_form .right_part {
+        padding: 45px 15px;
+    }
+    .contact_form .contact-right .contact-box-1 {
+        padding: 15px;
+    }
+    .contact_form .contact-right .contact-box-1 .contact-text {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .contact_form .contact-left {
+        max-width: 100%;
+    }
+    .contact_form .contact-right {
+        max-width: 100%;
+    }
+
+}

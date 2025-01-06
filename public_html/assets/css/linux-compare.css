@@ -1,0 +1,421 @@
+
+
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.compare-main .compare-plan {
+    overflow: hidden;
+    padding: 40px 0;
+}
+.compare-main .compare-plan .plan-1 {
+    text-align: center;
+}
+.compare-main .compare-plan .compare-head {
+    color: #333;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 1px;
+    margin: 0 auto 20px;
+}
+.cms h1, .cms h3, .cms h4, .cms h6 {
+    color: #03305d;
+    margin-bottom: 15px;
+}
+.compare-main .compare-plan .compare-text {
+    max-width: 980px;
+    color: #262626;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    display: block;
+    margin: 0 auto 5px;
+}
+.compare-main .plan-table {
+    display: flex;
+    max-width: 900px;
+    margin: 80px auto 40px;
+}
+.compare-main .plan-table .col-4 {
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+}
+.compare-main .plan-table .col-4:nth-child(1) ul {
+    -webkit-box-shadow: -4px -4px 4px -1px #f5f5f5;
+    box-shadow: -4px -4px 4px -1px #f5f5f5;
+    border-left: 1px solid #f3f3f3;
+    border-radius: 7px 0 0 7px;
+}
+
+.compare-main .plan-table ul {
+    display: block;
+    background: #f0f8ff;
+}
+.cms ul, .cms ul li {
+    position: relative;
+}
+.compare-main .plan-table .col-4:nth-child(1) ul li {
+    justify-content: left;
+    border-right: none;
+}
+
+.compare-main .plan-table ul li:nth-child(1) {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.compare-main .plan-table ul li {
+    height: 61px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex
+;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    font-weight: 500;
+    text-align: left;
+    color: #333;
+    font-size: 14px;
+    padding: 16px;
+    margin: 0;
+}
+.cms ul li {
+    padding-left: 20px;
+    font-size: 14px;
+}
+.compare-main .plan-table ul li h6 {
+    color: inherit;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+.compare-main .plan-table .col-4:nth-child(2) ul {
+    -webkit-box-shadow: 0 0 20px 6px rgba(210, 209, 209, .29);
+    box-shadow: 0 0 20px 6px rgba(210, 209, 209, .29);
+    border: 1px solid #e4e4e4;
+    background: #fff;
+    z-index: 1;
+    position: relative;
+    top: -30px;
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+    border-radius: 7px;
+}
+.compare-main .plan-table .col-4:nth-child(2) ul li:first-child {
+    height: 93px;
+}
+
+.compare-main .plan-table .col-4:nth-child(2) ul li {
+    border-right: none;
+    height: 60px;
+}
+.compare-main .plan-table ul li:nth-child(1) {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.compare-main .plan-table ul li img {
+    margin: 0;
+}
+.cms img {
+    float: left;
+    max-width: 45%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.compare-main .plan-table ul li .whole-span {
+    font-size: 24px;
+    color: #333;
+}
+.compare-main .plan-table ul li .whole-span .ruppess {
+    font-family: opensans;
+    font-weight: 600;
+    font-size: 17px;
+}
+.compare-main .plan-table ul li .whole-span span {
+    font-size: inherit;
+    color: inherit;
+    font-weight: 600;
+}
+.compare-main .plan-table ul li .whole-span .per-month {
+    font-size: 16px;
+}
+.compare-main .plan-table .col-4:nth-child(2) ul li {
+    border-right: none;
+    height: 60px;
+}
+.compare-main .plan-table ul li i {
+    font-size: 30px;
+    color: #18b35c;
+}
+.compare-main .plan-table ul li .btn {
+    border-bottom: 2px solid #fff;
+    padding: 6px 30px;
+    background-color: #18b35c;
+    color: #fff;
+    border: 1px solid #18b35c;
+}
+.compare-main .plan-table ul li .btn:hover  {
+    color: #fff;
+    background-color: #03305d;
+    border-color: #03305d;
+}
+.btn:not(:disabled):not(.disabled), .navbar-toggler:not(:disabled):not(.disabled), .page-link:not(:disabled):not(.disabled), summary {
+    cursor: pointer;
+}
+.cms button {
+    margin: 10px;
+}
+
+
+
+
+.compare-main .compare-about {
+    background: #f0f0f0;
+    overflow: hidden;
+}
+.compare-main .compare-plan {
+    overflow: hidden;
+    padding: 40px 0;
+}
+.compare-main .compare-plan .plan-1 {
+    text-align: center;
+}
+.compare-main .compare-about .compare-head {
+    color: #03305d;
+}
+.compare-main .compare-plan .compare-head {
+    color: #333;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 1px;
+    margin: 0 auto 20px;
+}
+.compare-main .compare-about .compare-text {
+    color: #262626;
+}
+
+.compare-main .compare-plan .compare-text {
+    max-width: 980px;
+    color: #262626;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+
+.testomonial-section {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #f1f7fe;
+    overflow: hidden;
+}
+.testomonial-section .testomonial-head {
+    color: #15ac54;
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 1px;
+}
+.testomonial-section .testomonial-head span {
+    font-size: 100%;
+    font-weight: 600;
+}
+
+.c-blue {
+    color: #115baa;
+}
+.testomonial-section .owl-carousel .item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .03);
+}
+.testomonial-section .features-icon {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.testomonial-section .features-icon i.fa {
+    color: #ffc10d;
+    font-size: 30px;
+}
+.testomonial-section .features-head {
+    color: #737373;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: 1px;
+}
+.cms p {
+    color: #262626;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.cms a, .cms p {
+    font-weight: 500;
+}
+.testomonial-section p {
+    max-width: 617px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #737373;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: .3px;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+    .banner-inner .banner-content .banner-title {
+        font-size: 32px;
+    }
+    .compare-main .compare-plan .compare-head {
+        font-size: 30px;
+    }
+    .compare-main .plan-table {
+        margin: 60px auto 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner-inner .banner-content .banner-title {
+        font-size: 24px;
+    }
+    .compare-main .compare-plan .compare-head {
+        font-size: 24px;
+        margin: 0 auto 10px;
+    }
+    .compare-main .compare-plan .compare-text {
+        text-align: justify;
+    }
+
+}
+
+
+@media screen and (max-width: 479px) {
+    .compare-main .overlay {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-right: 40px;
+    }
+    .compare-main .plan-table {
+        width: 520px;
+    }
+    .cms img {
+        display: block;
+        max-width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+    .compare-main .plan-table .white-overlay1 {
+        width: 50px;
+        background-color: #fff;
+        opacity: .8;
+        z-index: 10;
+        -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+        box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+        position: absolute;
+        left: auto;
+        right: 1px;
+        top: 0;
+        bottom: 15px;
+    }
+    .compare-main .plan-table .white-overlay1 .overlay_link {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        text-align: center;
+        margin: auto;
+        display: block;
+        left: 0;
+    }
+    .compare-main .plan-table .white-overlay1 .overlay_link i {
+        font-size: 34px;
+        color: #333;
+        -webkit-transform: translate(-50%, -50%);
+        -khtml-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left: auto;
+        right: -7px;
+        top: 50%;
+        margin: 0 auto;
+    }
+    .compare-main .main-plan {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .compare-main .plan-table ul li .btn{
+        padding: 6px 20px;
+    }
+}

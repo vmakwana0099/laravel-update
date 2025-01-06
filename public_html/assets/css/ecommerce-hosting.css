@@ -1,0 +1,153 @@
+.vps_main .banner-inner {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+.linux-main .banner-content .banner-image {
+    background-image: url(../images/linux-hosting-i.png);
+    width: 90px;
+    height: 80px;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle,
+.banner-inner .banner-content .banner-text {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.banner-inner .banner-image {
+    width: 68px;
+    height: 68px;
+    background-image: none;
+    margin: 0 auto 10px;
+}
+
+
+
+
+.vps_main .vps-plan-main-div {
+    width: 100%;
+    height: auto;
+    background: url(../images/domain_search/vps-plan-bg.png) center bottom no-repeat #f6f6f6;
+    padding: 40px 0;
+}
+
+
+
+
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon {
+    margin: auto;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+    background-image: url(../images/features-sprite-image.png);
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.vfi-1 {
+    background-position: -1000px 0;
+    width: 55px;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.vfi-2 {
+    background-position: -1066px 0;
+    width: 55px;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.vfi-3 {
+    background-position: -1132px 0;
+    width: 56px;
+}
+.automated-backup-icon{
+    background:url("/assets/images/hosting-sprite.png") -127px -122px no-repeat;
+    width:53px;
+    height:41px;
+    display:block
+}
+.unlimited-storage-icon{
+    background:url("/assets/images/hosting-sprite.png") -1px -174px no-repeat;
+    width:51px;
+    height:51px;
+    display:block
+}
+.unlimited-websites-icon{
+    background:url("/assets/images/hosting-sprite.png") -52px -183px no-repeat;
+    width:54px;
+    height:48px;
+    display:block
+}
+.unlimited-emails-icon{
+    background:url("/assets/images/hosting-sprite.png") -106px -183px no-repeat;
+    width:50px;
+    height:40px;
+    display:block
+}
+.web-builder-websites-icon{
+    background: url(/assets/images/hosting-sprite.png) -67px 0px no-repeat;
+    width: 64px;
+    height: 58px;
+    display: block;
+}
+
+
+
+.g-suite-lists .g_s_l-box {
+    margin-bottom: 20px;
+}
+.g-suite-lists .g-list-box {
+    display: inline-block;
+    position: relative;
+    padding-left: 60px;
+}
+.list-num {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #18b35c;
+    color: #fff;
+    text-align: center;
+    font-size: 20px
+}
+.g-suite-lists .g-list-box h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #4d4d4d;
+    font-weight: 500;
+}
+.g-suite-lists .g-list-box span {
+    color: #262626;
+    font-weight: 400;
+}

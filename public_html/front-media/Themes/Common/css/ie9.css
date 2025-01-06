@@ -1,0 +1,12 @@
+.banner{background:url(../images/banner-bg.jpg) repeat-x left top;}
+.dom-find-box{background:url(../images/search-bg.jpg) repeat-x left top;}
+nav{background:url(../images/menu-bg.jpg) repeat-x left top;}
+.banner .signup-btn{background:url(../images/sign-bg.jpg) repeat-x left top;}
+.banner .signup-btn:hover{background:url(../images/sign-bg-hvr.jpg) repeat-x left top;}
+.services article .icon-bg{background:url(../images/features-bg-round.png) no-repeat left top;}
+.more-btn{background:url(background:url(../images/more-btn.png) repeat-x;}
+.banner .dom-find-box .white-bg .find-btn input{background-color:#414e6d;}
+.banner .dom-find-box .white-bg .find-btn input:hover{background-color:#586481;}
+.detail .more-btn{ background:#ebeaef;}
+.detail .more-btn:hover{background:#e0e0e1;}
+.bouns-features{ margin-top:10px;}

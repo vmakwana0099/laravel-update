@@ -1,0 +1,1 @@
+function checkTermsFun(){var c=$("#check_terms").prop("checked");$.ajax({type:"post",url:"check_terms",data:{_token:"{{ csrf_token() }}",ischeck_term:c},success:function(c){},error:function(c,e,n){console.log(e)}})}$(function(){$("#check_terms").change(()=>{checkTermsFun()}),continueCheckoutBtn()});

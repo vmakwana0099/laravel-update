@@ -1,0 +1,339 @@
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .inner-banner-height {
+        min-height: 290px;
+        margin: auto;
+    }
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.banner-inner .banner-content .banner-subtitle p {
+    color: inherit;
+    max-width: inherit;
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
+
+
+
+
+
+.domain_offer_section {
+    padding-top: 30px;
+    padding-bottom: 0;
+    background-image: url(../images/pricing_banner.png);
+    background-attachment: fixed;
+}
+
+.chart-compare:after, .domain_offer_section {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.domain_offer_section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #115baa;
+}
+.cms h2, .cms h5 {
+    margin-bottom: 15px;
+    color: #18b35c;
+}
+}
+.domain_offer_section .short_content {
+    display: block;
+    font-size: 15px;
+    color: #4d4d4d;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.cms p {
+    color: #262626;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.cms a, .cms p {
+    font-weight: 500;
+}
+.domain_offer_section .tld_box {
+    margin-bottom: 50px;
+}
+.domain_offer_section .tld_box .left_part {
+    width: 96px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 90%;
+    color: #fff;
+    background: #18b35c;
+    position: relative;
+    z-index: 2;
+    padding: 30px 10px;
+}
+.domain_offer_section .tld_box .left_part::before {
+    bottom: 0;
+    border-top: 20px solid #015c2a;
+}
+
+.domain_offer_section .tld_box .left_part::after, .domain_offer_section .tld_box .left_part::before {
+    position: absolute;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 10px solid transparent;
+    content: '';
+}
+.domain_offer_section .tld_box .left_part span.upto {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+}
+.domain_offer_section .tld_box .left_part i.percent {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+}
+.domain_offer_section .tld_box .left_part::after {
+    top: 0;
+    border-bottom: 20px solid #015c2a;
+}
+.domain_offer_section .tld_box .left_part::after, .domain_offer_section .tld_box .left_part::before {
+    position: absolute;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 10px solid transparent;
+    content: '';
+}
+.domain_offer_section .tld_box .right_part .price {
+    padding: 5px 26px 0 30px;
+    background: #ecfff5;
+    color: #115baa;
+    font-size: 30px;
+    position: relative;
+    top: 7px;
+    z-index: 1;
+    left: -20px;
+}
+.domain_offer_section .tld_box .right_part .price i.rp-icon {
+    color: #115baa;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+.domain_offer_section .tld_box .right_part .price span {
+    font-size: 13px;
+    color: #115baa;
+    margin-left: 5px;
+}
+.domain_offer_section .tld_box .right_part .price::after {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 100%;
+    background: #ecfff5;
+    top: 0;
+    right: -16px;
+    transform: skew(-34deg, 0);
+    -moz-transform: skew(-34deg, 0);
+    -webkit-transform: skew(-34deg, 0);
+}
+.domain_offer_section .tld_box .right_part .doman_name {
+    background: #c0ffdc;
+    text-align: center;
+    position: relative;
+    bottom: 7px;
+    left: -20px;
+    transition: all .3s ease-in-out;
+}
+.domain_offer_section .tld_box .right_part .doman_name a {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #18b35c;
+    letter-spacing: 1px;
+    padding: 18px 20px 3px 30px;
+    display: block;
+}
+.domain_offer_section .tld_box .right_part .doman_name::after {
+    position: absolute;
+    content: '';
+    width: 34px;
+    height: 100%;
+    background: #c0ffdc;
+    top: 0;
+    right: -17px;
+    transition: all .3s ease-in-out;
+    transform: skew(-34deg, 0);
+    -moz-transform: skew(-34deg, 0);
+    -o-transform: skew(-34deg, 0);
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .domain_offer_section .tld_box:hover .right_part .doman_name a {
+        color: #fff;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .domain_offer_section .tld_box:hover .right_part .doman_name::after {
+        box-shadow: 4px 3px 3px rgba(0, 0, 0, .1);
+        background: #115baa;
+    }
+}
+
+
+
+
+.pricing_table_section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: url(../images/domainprice-bg-image3.png) center top repeat-x #f9f9f9;
+}
+.pricing_table_section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.pricing_table_section h2 span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: #03305d;
+    line-height: inherit;
+}
+.pricing_table_section .short-txt {
+    font-size: 20px;
+    font-weight: 500;
+    color: #03305d;
+    display: block;
+    margin-bottom: 25px;
+}
+.pricing_table_section table {
+    border: none;
+}
+
+body table {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+}
+.pricing_table_section table tr:nth-of-type(odd) {
+    background: #18b35c;
+    background: rgba(24, 179, 92, 0);
+}
+
+body table tr th, body table tr:nth-of-type(odd) {
+    background-color: #f0f0f0;
+}
+.pricing_table_section table tr th {
+    background: #115baa;
+    background: rgba(17, 91, 170, 0);
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 20px;
+    font-weight: 600;
+    color: #115baa;
+}
+body table tr th {
+    border-bottom: 1px solid #e0e0e0;
+    color: #000;
+}
+body table tr td, body table tr th {
+    font-size: 16px;
+    line-height: 150%;
+    color: #a6a6a6;
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body table tr td, body table tr th {
+    font-weight: 400;
+    font-style: normal;
+}
+.pricing_table_section table tr:nth-of-type(even), .pricing_table_section table.table-hover tr:hover {
+    background: #18b35c;
+    background: rgba(24, 179, 92, .06);
+}
+.pricing_table_section table tr td {
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    color: #03305d;
+    font-size: 14px;
+    padding: 10px 8px;
+}
+.pricing_table_section table tr td .domain_name {
+    color: #18b35c;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.cms a {
+    color: #18b35c;
+    font-size: 16px;
+}
+.cms a, .cms p {
+    font-weight: 500;
+}
+.pricing_table_section table tr td .domain_name span {
+    color: #18b35c;
+    transition: .4s;
+}
+.pricing_table_section table tr td .domain_name i {
+    color: #03305d;
+    font-size: 18px;
+    vertical-align: middle;
+    font-weight: 600;
+    transition: .4s;
+    position: relative;
+}
+
+.ac-pagination ul{
+    text-align: center;
+}

@@ -1,0 +1,253 @@
+/* v1.0.5 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+.royalSlider {width:994px;height:380px;position: relative;direction: ltr;}
+.royalSlider > * {float: left;}
+.rsWebkit3d .rsSlide {-webkit-transform: translateZ(0);}
+.rsWebkit3d .rsSlide, .rsWebkit3d .rsContainer, .rsWebkit3d .rsThumbs, .rsWebkit3d .rsPreloader, .rsWebkit3d img, .rsWebkit3d .rsOverflow, .rsWebkit3d .rsBtnCenterer, .rsWebkit3d .rsAbsoluteEl, .rsWebkit3d .rsABlock, .rsWebkit3d .rsLink {-webkit-backface-visibility: hidden;}
+.rsFade.rsWebkit3d .rsSlide, .rsFade.rsWebkit3d img, .rsFade.rsWebkit3d .rsContainer {-webkit-transform: none;}
+.rsOverflow {width: 994px !important;height:380px !important;position: relative;overflow: hidden;float: left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.rsVisibleNearbyWrap {width: 100%;height: 100%;position: relative;overflow: hidden;left: 0;top: 0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.rsVisibleNearbyWrap .rsOverflow {position: absolute;left: 0;top: 0;}
+.rsContainer {position: relative;height:100%;width: 994px;}
+.rsArrow, .rsThumbsArrow {cursor: pointer;}
+.rsThumb {float: left;position: relative;}
+.rsArrow, .rsNav, .rsThumbsArrow {opacity: 1;-webkit-transition:opacity 0.3s linear;-moz-transition:opacity 0.3s linear;-o-transition:opacity 0.3s linear;transition:opacity 0.3s linear;}
+.rsHidden {opacity: 0;visibility: hidden;-webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;-moz-transition:visibility 0s linear 0.3s,opacity 0.3s linear;-o-transition:visibility 0s linear 0.3s,opacity 0.3s linear;transition:visibility 0s linear 0.3s,opacity 0.3s linear;}
+.rsGCaption {width: 100%;float: left;text-align: center;}
+/* Fullscreen options, very important ^^ */
+.royalSlider.rsFullscreen {position: fixed !important;height: auto !important;width: auto !important;margin: 0 !important;padding: 0 !important;z-index: 2147483647 !important;top: 0 !important;left: 0 !important;bottom: 0 !important;right: 0 !important;}
+.royalSlider .rsSlide.rsFakePreloader {opacity: 1 !important;-webkit-transition: 0s;-moz-transition: 0s;-o-transition:  0s;transition:  0s;display: none;}
+.rsSlide {position: absolute;left: 0;top: 0;display: block;overflow: hidden;border:none !important;height: 100%;width: 100%;}
+.royalSlider.rsAutoHeight, .rsAutoHeight .rsSlide {height: auto;}
+.rsContent {width: 984px;height: 100%;position: relative;}
+.rsPreloader {position:absolute;z-index: 0;	}
+.rsNav {-moz-user-select: -moz-none;-webkit-user-select: none;}
+.rsNavItem {-webkit-tap-highlight-color:rgba(0,0,0,0.25);}
+.rsThumbs {cursor: pointer;position: relative;overflow: hidden;float: left;z-index: 22}
+.rsTabs {float: left;background: none !important;}
+.rsTabs, .rsThumbs {-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.rsVideoContainer {width: auto;height: auto;line-height: 0;position: relative;}
+.rsVideoFrameHolder {position: absolute;left: 0;top: 0;background: #141414;opacity: 0;-webkit-transition: .3s;}
+.rsVideoFrameHolder.rsVideoActive {opacity: 1;}
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {position: absolute;z-index: 50;left: 0;top: 0;width: 100%;height: 100%}
+/* ios controls over video bug, shifting video */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding-right: 44px;}
+
+.slider_img{position:relative; z-index:0;}
+img.rsImg {max-width: none;}
+.rsNoDrag {cursor: auto;}
+.rsLink {left:0;top:0;position:absolute;width:100%;height:100%;display:block;z-index: 20;}
+/*banner start*/
+#slider-with-blocks-1 {width:100%;border:none}
+.rsContent {color: #FFF;font-size: 24px;line-height: 32px;float: left;}
+.bContainer {position: relative;}
+.rsABlock {position: absolute;z-index: 15;display: block;left:30px;top:10px;}
+.blockHeadline {font-size: 25px;line-height: 50px;letter-spacing:15px}
+.blockSubHeadline {font-size: 32px;line-height: 40px}
+.txtCent {text-align: left; width:70%; font-size:40px; color:#FFF; line-height:55px; }
+.support-text{text-shadow:0 3px 5px #000000; line-height:80px; left:35px; top:88px;}
+.reseller-host-text{top:113px; left:40px; color:#262626;}
+.domain-icn1,.domain-icn2,.domain-icn3,.domain-icn4{width: 31px;height: 32px; float:left; margin-right:10px;}
+.domain-icn2{background-position:-40px 0; width:41px;height:35px; margin-left:-10px;}
+.domain-icn3{background-position:-97px 0; width:32px;height:34px;}
+.domain-icn4{background-position:-145px 2px; width:33px;height:37px;}
+
+.domain-text{ color:#FFF; display:inline-block; float:left; font-size:16px; line-height:26px;}
+.wdt300px .domain-text{font-weight:bold}
+.get-start a{width: 221px;
+background-color: #FFA029; 
+background-image: -webkit-linear-gradient(bottom, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+background-image: -moz-linear-gradient(bottom, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+background-image: -o-linear-gradient(bottom, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+background-image: linear-gradient(to top, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+ display:block;
+ font-size:32px; 
+color: #222222 !important;
+ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+ font-weight: 700;
+ text-align:center;
+ font-weight:bold;
+ margin:10px 0 0;
+ }
+.get-start a:hover{box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+	background-image: -webkit-linear-gradient(top, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+	background-image: -moz-linear-gradient(top, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+	background-image: -o-linear-gradient(top, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157);
+	background-image: linear-gradient(to bottom, #fd9f17, #ffa029 49%, #fcb736 51%, #ffc157); background-color:#fcb736;}
+
+.slide1 .bContainer {top:0;}
+.domain-box{float:left; width:700px;}
+/*.slide1{background:url(../images/dedicated-inner-banner.jpg) no-repeat; width:994px; height:320px;}*/
+/*.rsContent slide1 img{position:relative; z-index:0;}
+.slide2{background:url(../images/domain-inner-banner.jpg) no-repeat; width:994px; height:320px;}
+.slide3{background:url(../images/ssl-inner-banner.jpg) no-repeat; width:994px; height:320px;}
+.slide4{background:url(../images/reseller-inner-banner.jpg) no-repeat; width:994px; height:320px;}
+.slide5{background:url(../images/webhosting-inner-banner.jpg) no-repeat; width:994px; height:320px;}
+.slide6{background:url(../images/inner-banner-support.jpg) no-repeat; width:994px; height:320px;}*/
+
+.slide2 {color:#000;}
+.slide2 .bContainer {top:0px;}
+.slide2 .txtCent {line-height: 44px;}
+.slide2 .blockHeadline {line-height: 66px;}
+.slide3 {color:#FFF;}
+.slide3 .bContainer {top:0;}
+.slide3 span {line-height: 44px;}
+.slide4 .bContainer {position: absolute;left: 0;width: 100%;height: auto;top:0px;}
+.photoCopy{position:absolute;line-height:24px;font-size:12px;background:black;color:white;background-color:rgba(0, 0, 0, 0.75);padding:0px 10px;position:absolute;left:12px;bottom:12px;top:auto;border-radius:2px;z-index:25;}
+.photoCopy a {color: #FFF;}
+.palmImg {left: 0;top: auto;bottom: -60px;position: absolute;}
+/* Background */
+.rsMinW, .rsMinW .rsOverflow, .rsMinW .rsSlide, .rsMinW .rsVideoFrameHolder, .rsMinW .rsThumbs {background: #313c68;color: #FFF;}
+/*1. Arrows*/
+.rsMinW .rsArrow {height: 32px;width: 32px;position: absolute;display: block;cursor: pointer;z-index: 21;}
+.rsMinW .rsArrowLeft {left:-2px; bottom: 180px; }
+.rsMinW .rsArrowRight { right:0px; bottom:180px; }
+.rsMinW .rsArrowIcn{width:28px;height:28px;margin-top:10px;margin-left: 3px;position: absolute;cursor: pointer;	background:url(../images/savannahunited-images.png) no-repeat;border-radius: 2px;}
+.rsMinW.rsHor .rsArrowLeft .rsArrowIcn { background-position:0px 0px; }
+.rsMinW.rsHor .rsArrowLeft .rsArrowIcn:hover{background-position:-31px 0px}
+.rsMinW.rsHor .rsArrowRight .rsArrowIcn { background-position: 0px -32px; }
+.rsMinW.rsHor .rsArrowRight .rsArrowIcn:hover{background-position:-31px -32px}
+.rsMinW.rsVer .rsArrowLeft .rsArrowIcn { background-position: -100px -36px; }
+.rsMinW.rsVer .rsArrowRight .rsArrowIcn { background-position: -100px -68px; }
+.rsMinW .rsArrowDisabled .rsArrowIcn { opacity: .3 !important;}
+/*2. Bullets*/
+.rsMinW .rsBullets {position: absolute;bottom:8px;z-index: 35;padding-top: 4px;height: auto;text-align: center;line-height: 6px;overflow: hidden;left:20px}
+.rsMinW .rsBullet {display: inline-block;display: inline-block;height: 15px;padding: 0 0 0 5px;width: 15px;}
+.rsMinW .rsBullet span {display: block;width: 15px;height: 15px;border-radius: 50%;background:url(../images/savannahunited-images.png) -7px -176px;cursor:pointer;}
+.rsMinW .rsBullet.rsNavSelected span, .rsMinW .rsBullet span:hover {background:url(../images/savannahunited-images.png) -26px -176px;height:15px;width:15px;cursor:pointer}
+/* 3. Thumbnails*/
+.rsMinW .rsThumbsHor {width: 100%;height: 72px;}
+.rsMinW .rsThumbsVer {width: 96px;height: 100%;position: absolute;top: 0;right: 0;}
+.rsMinW.rsWithThumbsHor .rsThumbsContainer {position: relative;height: 100%;}
+.rsMinW.rsWithThumbsVer .rsThumbsContainer {position: relative;width: 100%;}
+.rsMinW .rsThumb {float: left;overflow: hidden;width: 96px;height: 72px;}
+.rsMinW .rsThumb img {width: 100%;height: 100%;}
+.rsMinW .rsThumb.rsNavSelected {background: #333;}
+.rsMinW .rsThumb.rsNavSelected img {opacity: 0.7}
+.rsMinW .rsThumb.rsNavSelected span.thumbIco {position: absolute;top: 0;bottom: 0;left: 0;right: 0;border: 2px solid #FFF;border: 2px solid rgba(255,255,255,0.9);-webkit-backface-visibility: hidden;}
+.rsMinW .rsTmb {display: block;}
+/* Thumbnails arrow icons */
+.rsMinW .rsThumbsArrow {height: 100%;width: 20px;position: absolute;display: block;cursor: pointer;	z-index: 21;	}
+.rsMinW.rsWithThumbsVer .rsThumbsArrow {width: 100%;height: 20px;}
+.rsMinW.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.rsMinW.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+.rsMinW.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.rsMinW.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+.rsMinW .rsThumbsArrowIcn {		width: 16px;height: 16px;top: 50%;left: 50%;margin-top:-8px;	margin-left: -8px;position: absolute;	cursor: pointer;	}
+.rsMinW.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.rsMinW.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+.rsMinW.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.rsMinW.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+.rsMinW .rsThumbsArrowDisabled { display: none !important; }
+.check-icn{background:url(../images/check-icn.png) no-repeat 0 0;width: 31px;height: 32px; float:left;}
+.rs-icn{background:url(../images/rupee-icn.png) no-repeat 0 0;width: 31px;height: 32px; float:left;display:block; margin: 14px -4px 0 0;}
+.price{float:left;display:block;position:relative;top:12px}
+.price .low-rs span{font-size:13px;font-family: 'open_sansregular';}
+.get-start{float:left;margin:0 20px 0 0}
+.low-rs{font-size:38px;font-family: 'open_sansbold';}
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+.rsMinW .rsThumb {width: 59px;height: 44px;}
+.rsMinW .rsThumbsHor {height: 44px;}
+.rsMinW .rsThumbsVer {width: 59px}
+}
+/*4. Tabs*/
+.rsMinW .rsTabs{width:100%;height:auto;margin:0 auto;text-align:center;overflow:hidden; padding-top: 12px; position: relative;}
+.rsMinW .rsTab{display:inline-block;cursor:pointer;text-align:center;height: auto;width:auto;color:#333;padding:5px 13px 6px;min-width:72px;border:1px solid #D9D9DD;border-right:1px solid #f5f5f5;text-decoration:none;background-color:#000;background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);background-image:-moz-linear-gradient(top, #fefefe, #f4f4f4);background-image:linear-gradient(to bottom, #fefefe, #f4f4f4);}
+.rsMinW .rsTab:first-child {-webkit-border-top-left-radius: 4px;border-top-left-radius: 4px;-webkit-border-bottom-left-radius: 4px;border-bottom-left-radius: 4px;}
+.rsMinW .rsTab:last-child{ -webkit-border-top-right-radius: 4px;border-top-right-radius: 4px;-webkit-border-bottom-right-radius: 4px;border-bottom-right-radius: 4px;border-right:  1px solid #cfcfcf;}
+.rsMinW .rsTab:active { border: 1px solid #D9D9DD;   background-color: #f4f4f4;box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;}
+.rsMinW .rsTab.rsNavSelected { color: #000;border: 1px solid #999;text-shadow: 1px 1px #838383;box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;background: #ACACAC;background-image: -webkit-linear-gradient(top, #ACACAC, #BBB);background-image: -moz-llinear-gradient(top, #ACACAC, #BBB);background-image: linear-gradient(to bottom, #ACACAC, #BBB);}
+/*5. Fullscreen button*/
+.rsMinW .rsFullscreenBtn {right: 0;top: 0;width: 44px;height: 44px;z-index: 22;display: block;position: absolute;cursor: pointer;	}
+.rsMinW .rsFullscreenIcn {display: block;margin: 6px;width: 32px;height: 32px;background:transparent;}
+.rsMinW .rsFullscreenIcn:hover {opacity: 0.8;}
+.rsMinW.rsFullscreen .rsFullscreenIcn {background-position: -32px 0;}
+/*6. Play/close video button*/
+.rsMinW .rsPlayBtn {-webkit-tap-highlight-color:rgba(0,0,0,0.3);width:64px;height:64px;margin-left:-32px;margin-top:-32px;cursor: pointer;}
+.rsMinW .rsPlayBtnIcon{width:64px;display:block;height:64px;-webkit-border-radius:4px;border-radius:4px;-webkit-transition: .3s;-moz-transition: .3s;transition: .3s;background-color:#000;background-color: rgba(0,0,0,0.75);}
+.rsMinW .rsPlayBtn:hover .rsPlayBtnIcon {background-color: rgba(0,0,0,0.9);}
+.rsMinW .rsBtnCenterer {position:absolute;left:50%;top:50%;width: 20px;height: 20px;}
+.rsMinW .rsCloseVideoBtn {right: 0;top: 0;width: 44px;height: 44px;z-index: 500;position: absolute;cursor: pointer;-webkit-backface-visibility: hidden;-webkit-transform: translateZ(0);	}
+.rsMinW .rsCloseVideoBtn.rsiOSBtn {top: -38px;right: -6px;}
+.rsMinW .rsCloseVideoIcn {margin: 6px;width: 32px;height: 32px;background-color: #000;background-color: rgba(0,0,0,0.75);}
+.rsMinW .rsCloseVideoIcn:hover {background-color: rgba(0,0,0,0.9);}
+/*7. Preloader*/
+.rsMinW .rsPreloader {width:20px;height:20px;left:50%;top:50%;margin-left:-10px;margin-top:-10px;	}
+.slider-main-img-div-outer {cursor: pointer;height: 392px;margin: auto !important;overflow: hidden;position: relative;text-align: center;width: 975px;}
+.slider-main-img-div {display: table-cell;height: 392px;overflow: hidden;text-align: center;vertical-align: middle;width:975px;}
+.slider-main-img-div * {vertical-align: middle;}
+img.rsImg {height: auto !important;max-width: none;width: auto !important;}
+.slider-main-img-div img {max-height: 392px;max-width: 975px;}
+.slider-main-img-div * {vertical-align: middle;}
+/*8. Global caption*/
+.rsMinW .rsGCaption{position:absolute;float:none;bottom:6px;left:6px;text-align:left;background:#000;background:rgba(0,0,0, 0.75);color:#FFF;padding:2px 8px;width:auto;font-size:12px;border-radius: 2px;}
+
+/*booking-process page slider Start*/
+
+ .contentSlider {
+  width:100%;
+}
+.contentSlider .rsContainer {width:210px !important;}
+.contentSlider,
+.contentSlider .rsOverflow,
+.contentSlider .rsSlide,
+.contentSlider .rsVideoFrameHolder,
+.contentSlider .rsThumbs {
+  background:#f6f6f6;
+  color: #000;
+  width:210px;
+}
+
+.contentSlider .rsSlide,
+.contentSlider .rsOverflow {
+  background: #f6f6f6;
+  width:210px !important;
+}
+.contentSlider h3 {
+  font-size: 18px;
+  line-height:18px;
+  margin: 12px 0 8px;
+  font-weight: bold;
+  text-align:left; 
+  color:#000;
+}
+.contentSlider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.content-slider-bg {
+  width: 93%;
+  padding: 0px 4%;
+  background: #f6f6f6;
+  box-shadow:0px -5.4px #008bd1;
+   margin-top:10px;
+}
+.Right_cont_slider .rsOverflow{ height:150px !important;}
+.Tips  ul li .point_title {
+    float: left;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    padding-left: 30px;
+   
+}
+
+/*booking-process page slider Close*/
+
+@media screen and (min-width: 0px) and (max-width: 960px) { 
+.rsContent{font-size: 22px;line-height: 28px;}
+.blockHeadline{font-size: 32px;line-height: 32px;}
+.blockSubHeadline{font-size:26px;line-height: 32px}
+}
+@media screen and (min-width: 0px) and (max-width: 500px) { 
+.royalSlider, .rsOverflow {height: 330px !important;}
+.rsContent {font-size: 18px;line-height: 26px;}
+.blockHeadline {font-size: 24px;line-height: 32px;}
+.blockSubHeadline {font-size: 22px;line-height: 32px}
+}

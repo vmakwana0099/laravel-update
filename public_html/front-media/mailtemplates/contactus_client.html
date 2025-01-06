@@ -1,0 +1,44 @@
+<html>
+<body>
+    <center>
+    	<br><br><br><br>
+        <table width="684" style="border:20px solid #EEEEEE; padding:25px;" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="border-bottom:3px solid #CCCCCC;">
+                    <a href="@SITE_URL_FOR_MAIL_LINKS">
+                    	<img src="@LOGO_PATH" alt="@SITE_NAME_IN_WORDS" title="@SITE_NAME_IN_WORDS" border="0" />
+                    </a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <br />
+                  
+                 <span style="color:#999999; font-weight:bold;">@SITE_NAME_IN_WORDS sent this message to you.</span>
+                     <br>@Feedback<br>
+                      <span style="text-align:left"> Dear <b>@Admin, </b></span> 
+                    <br>
+                    <br>
+                    
+                     <table width=100% >
+                        
+                        <tr>
+
+                            <td>@DETAIL_DATA</td>
+                        </tr>
+                         </table>
+
+		    <br>
+
+                    <span style="text-align:left" > <b>Best Regards,</b> </span> <br>
+                    <a href='@SITE_URL_FOR_MAIL_LINKS' style="text-align:left">@MAIL_TEXT_AFTER_BEST_REGARDS</a>
+                    <br />
+                    <hr />
+                    <span style="color:#CCCCCC;">Copyright &copy; @YEAR, <a href="{{ url('/') }}">Host IT Smart</a>  All Rights Reserved</span>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

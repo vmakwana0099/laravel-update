@@ -1,0 +1,460 @@
+
+08-14-2019 08:44:53 Array
+(
+    [wb.xyz..design] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-14-2019 08:45:13 Array
+(
+    [wb.xyz..xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-14-2019 08:45:46 Array
+(
+    [wb.xyz..xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-14-2019 08:59:37 Array
+(
+    [wb.xyz..xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-14-2019 10:19:11 | {"shrey.com":{"classkey":"domcno","status":"regthroughothers"}}
+08-14-2019 10:20:58 | {"status":"ERROR","message":"Invalid DomainName format - shrey"}
+08-14-2019 10:21:16 | {"status":"ERROR","message":"Premium Domains not supported"}
+08-14-2019 10:22:25 | {"status":"ERROR","message":"Invalid DomainName format - shrey"}
+08-14-2019 10:22:31 | {"status":"ERROR","message":"Invalid DomainName format - shrey"}
+08-14-2019 10:22:53 | {"status":"ERROR","message":"Invalid DomainName format - businessstore"}
+08-14-2019 10:23:17 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 10:23:43 | {"status":"ERROR","message":"Invalid DomainName format - businessstore"}
+08-14-2019 10:23:52 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 10:24:51 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 10:25:18 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 10:26:11 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 12:40:22 | {"premium":"false","status":"SUCCESS"}
+08-14-2019 12:46:32 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:48:14 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:49:09 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:51:58 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:52:11 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:53:30 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:53:46 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:53:54 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:54:40 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:55:25 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:55:50 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:56:01 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:56:30 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 12:59:55 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:01:28 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:16:51 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:18:50 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:19:08 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"350.00","create":"350.00","renew":"350.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"280.00","create":"280.00","renew":"280.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:19:29 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:20:20 | {"wb.in.in":{"status":"unknown"}}
+08-14-2019 13:22:56 | {"wb.club.club":{"status":"unknown"}}
+08-14-2019 13:23:39 | {"wb.us.us":{"status":"unknown"}}
+08-14-2019 13:23:53 | {"wb.us":{"classkey":"domus","status":"regthroughothers"}}
+08-14-2019 13:24:16 | {"wb.xyz":{"costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"classkey":"dotxyz","status":"available"}}
+08-14-2019 13:24:33 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:24:45 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"350.00","create":"350.00","renew":"350.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"280.00","create":"280.00","renew":"280.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:25:05 | {"wb.com.com":{"status":"unknown"}}
+08-14-2019 13:25:27 | {"wb.com.com":{"status":"unknown"}}
+08-14-2019 13:25:35 | {"wb.com.xyz":{"status":"unknown"}}
+08-14-2019 13:25:49 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"3500.00","create":"3500.00","renew":"3500.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"2800.00","create":"2800.00","renew":"2800.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:27:37 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:27:56 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:28:29 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:28:51 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:29:13 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:29:29 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:29:56 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:30:51 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"3500.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"2800.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:31:22 | {"premium":"true","status":"SUCCESS","costHash":{"transfer":"27.97","create":"7000.00","renew":"27.97","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"transfer":"22.38","create":"5600.00","renew":"22.38","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:31:55 | {"wb.club.club":{"status":"unknown"}}
+08-14-2019 13:33:24 | {"wb.biz.biz":{"status":"unknown"}}
+08-14-2019 13:35:18 | {"premium":"true","status":"SUCCESS","costHash":{"create":"140000.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"create":"112000.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 13:47:39 | {"premium":"true","status":"SUCCESS","costHash":{"create":"140000.00","sellingCurrencySymbol":"USD"},"resellerCostPriceHash":{"create":"112000.00","sellingCurrencySymbol":"USD"}}
+08-14-2019 14:03:20 | {"wb.bid":{"status":"unknown"}}
+08-14-2019 14:03:38 | {"wb.in.in":{"status":"unknown"}}
+08-14-2019 14:03:57 | {"wb.in":{"status":"unknown"}}
+08-14-2019 14:04:30 | {"wb.trade":{"status":"unknown"}}
+08-14-2019 14:04:52 | {"wb.global":{"status":"unknown"}}
+08-14-2019 14:50:16 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:58:24 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:13 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:14 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:14 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:14 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:14 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:14 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:15 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:15 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:15 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:15 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:16 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:16 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:16 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:16 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:17 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:17 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:17 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:18 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:18 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:18 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:18 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 14:59:19 | {"asdjasbdhabsdasd.com":{"classkey":"domcno","status":"available"}}
+08-14-2019 15:01:03 | {"asdjasbdhabsdasd.co":{"classkey":"dotco","status":"available"}}
+08-14-2019 15:05:43 | {"asdjasbdhabsdasd.co":{"classkey":"dotco","status":"available"}}
+08-14-2019 15:15:14 | {"asdjasbdhabsdasd.xyz":{"classkey":"dotxyz","status":"available"}}
+08-16-2019 06:01:14 | {"myscience.science":{"classkey":"dotscience","status":"available"}}
+08-16-2019 06:02:18 | {"myscience.science":{"classkey":"dotscience","status":"available"}}
+08-16-2019 07:47:43 Array
+(
+    [wb.design.design] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-16-2019 07:47:55 Array
+(
+    [wb.xyz.xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-16-2019 07:48:00 Array
+(
+    [wb.xyz.xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-16-2019 07:49:13 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 09:55:22 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 09:58:06 Array
+(
+    [wb.men] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 27.97
+                    [create] => 7000.00
+                    [renew] => 27.97
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotmen
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:10:06 Array
+(
+    [wb.xyz.xyz] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-16-2019 10:10:18 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:11:10 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:11:17 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:11:36 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:12:51 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:13:03 Array
+(
+    [asdihausbdahsgd.xyz] => Array
+        (
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:16:33 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:16:57 Array
+(
+    [wb.trade] => Array
+        (
+            [status] => unknown
+        )
+
+)
+
+08-16-2019 10:17:04 Array
+(
+    [asgdhasgdgasd.trade] => Array
+        (
+            [classkey] => dottrade
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:22:30 Array
+(
+    [asgdhasgdgasd.trade] => Array
+        (
+            [classkey] => dottrade
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:27:10 Array
+(
+    [asgdhasgdgasd.trade] => Array
+        (
+            [classkey] => dottrade
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:27:13 Array
+(
+    [asgdhasgdgasd.trade] => Array
+        (
+            [classkey] => dottrade
+            [status] => available
+        )
+
+)
+
+08-16-2019 10:29:46 Array
+(
+    [wb.xyz] => Array
+        (
+            [costHash] => Array
+                (
+                    [transfer] => 3500.00
+                    [create] => 3500.00
+                    [renew] => 3500.00
+                    [sellingCurrencySymbol] => USD
+                )
+
+            [classkey] => dotxyz
+            [status] => available
+        )
+
+)
+
+09-24-2019 03:36:21 | {"skjfslkdjflskdjlfskd.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 03:38:11 | {"mytestingdomain123.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 03:38:28 | {"mytestingdomain123.co.in":{"classkey":"thirdleveldotin","status":"available"},"mytestingdomain123.net":{"classkey":"dotnet","status":"available"},"mytestingdomain123.in":{"classkey":"dotin","status":"available"},"mytestingdomain123.biz":{"classkey":"dombiz","status":"available"},"mytestingdomain123.org":{"classkey":"domorg","status":"available"},"mytestingdomain123.net.in":{"classkey":"thirdleveldotin","status":"available"},"mytestingdomain123.info":{"classkey":"dominfo","status":"available"},"mytestingdomain123.ind.in":{"classkey":"thirdleveldotin","status":"available"},"mytestingdomain123.co":{"classkey":"dotco","status":"regthroughothers"},"mytestingdomain123.org.in":{"classkey":"thirdleveldotin","status":"available"}}
+09-24-2019 03:42:54 | {"sfksdjflskjfdlskdjlfsdf.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 03:43:12 | {"sfksdjflskjfdlskdjlfsdf.org":{"classkey":"domorg","status":"available"},"sfksdjflskjfdlskdjlfsdf.co":{"classkey":"dotco","status":"regthroughothers"},"sfksdjflskjfdlskdjlfsdf.info":{"classkey":"dominfo","status":"available"},"sfksdjflskjfdlskdjlfsdf.org.in":{"classkey":"thirdleveldotin","status":"available"},"sfksdjflskjfdlskdjlfsdf.net":{"classkey":"dotnet","status":"available"},"sfksdjflskjfdlskdjlfsdf.in":{"classkey":"dotin","status":"available"},"sfksdjflskjfdlskdjlfsdf.co.in":{"classkey":"thirdleveldotin","status":"available"},"sfksdjflskjfdlskdjlfsdf.ind.in":{"classkey":"thirdleveldotin","status":"available"},"sfksdjflskjfdlskdjlfsdf.biz":{"classkey":"dombiz","status":"available"},"sfksdjflskjfdlskdjlfsdf.net.in":{"classkey":"thirdleveldotin","status":"available"}}
+09-24-2019 04:29:24 | {"aapkioffer.com":{"classkey":"domcno","status":"regthroughothers"}}
+09-24-2019 04:29:42 | {"aapkioffer.biz":{"classkey":"dombiz","status":"available"},"aapkioffer.org.in":{"classkey":"thirdleveldotin","status":"available"},"aapkioffer.in":{"classkey":"dotin","status":"available"},"aapkioffer.co.in":{"classkey":"thirdleveldotin","status":"available"},"aapkioffer.info":{"classkey":"dominfo","status":"available"},"aapkioffer.org":{"classkey":"domorg","status":"available"},"aapkioffer.co":{"classkey":"dotco","status":"regthroughothers"},"aapkioffer.ind.in":{"classkey":"thirdleveldotin","status":"available"},"aapkioffer.net":{"classkey":"dotnet","status":"available"},"aapkioffer.net.in":{"classkey":"thirdleveldotin","status":"available"}}
+09-24-2019 05:21:15 | {"jessilmathew.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 05:21:33 | {"jessilmathew.co":{"classkey":"dotco","status":"regthroughothers"},"jessilmathew.info":{"classkey":"dominfo","status":"available"},"jessilmathew.biz":{"classkey":"dombiz","status":"available"},"jessilmathew.org":{"classkey":"domorg","status":"available"},"jessilmathew.co.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.in":{"classkey":"dotin","status":"available"},"jessilmathew.net.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.ind.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.net":{"classkey":"dotnet","status":"available"},"jessilmathew.org.in":{"classkey":"thirdleveldotin","status":"available"}}
+09-24-2019 05:50:47 | {"asdjahskjdahksjdasda.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 05:51:05 | {"asdjahskjdahksjdasda.co.in":{"classkey":"thirdleveldotin","status":"available"},"asdjahskjdahksjdasda.in":{"classkey":"dotin","status":"available"},"asdjahskjdahksjdasda.biz":{"classkey":"dombiz","status":"available"},"asdjahskjdahksjdasda.ind.in":{"classkey":"thirdleveldotin","status":"available"},"asdjahskjdahksjdasda.org":{"classkey":"domorg","status":"available"},"asdjahskjdahksjdasda.net":{"classkey":"dotnet","status":"available"},"asdjahskjdahksjdasda.co":{"classkey":"dotco","status":"regthroughothers"},"asdjahskjdahksjdasda.org.in":{"classkey":"thirdleveldotin","status":"available"},"asdjahskjdahksjdasda.net.in":{"classkey":"thirdleveldotin","status":"available"},"asdjahskjdahksjdasda.info":{"classkey":"dominfo","status":"available"}}
+09-24-2019 05:53:03 | {"asdlkajsdkajsldkajlsdasd.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 05:53:20 | {"asdlkajsdkajsldkajlsdasd.net":{"classkey":"dotnet","status":"available"},"asdlkajsdkajsldkajlsdasd.net.in":{"classkey":"thirdleveldotin","status":"available"},"asdlkajsdkajsldkajlsdasd.co":{"classkey":"dotco","status":"regthroughothers"},"asdlkajsdkajsldkajlsdasd.org.in":{"classkey":"thirdleveldotin","status":"available"},"asdlkajsdkajsldkajlsdasd.ind.in":{"classkey":"thirdleveldotin","status":"available"},"asdlkajsdkajsldkajlsdasd.co.in":{"classkey":"thirdleveldotin","status":"available"},"asdlkajsdkajsldkajlsdasd.biz":{"classkey":"dombiz","status":"available"},"asdlkajsdkajsldkajlsdasd.org":{"classkey":"domorg","status":"available"},"asdlkajsdkajsldkajlsdasd.in":{"classkey":"dotin","status":"available"},"asdlkajsdkajsldkajlsdasd.info":{"classkey":"dominfo","status":"available"}}
+09-24-2019 05:57:08 | {"asdasdasdaskdjahksjdasda.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 05:57:26 | {"asdasdasdaskdjahksjdasda.co.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdasdaskdjahksjdasda.info":{"classkey":"dominfo","status":"available"},"asdasdasdaskdjahksjdasda.ind.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdasdaskdjahksjdasda.biz":{"classkey":"dombiz","status":"available"},"asdasdasdaskdjahksjdasda.org":{"classkey":"domorg","status":"available"},"asdasdasdaskdjahksjdasda.in":{"classkey":"dotin","status":"available"},"asdasdasdaskdjahksjdasda.net":{"classkey":"dotnet","status":"available"},"asdasdasdaskdjahksjdasda.co":{"classkey":"dotco","status":"regthroughothers"},"asdasdasdaskdjahksjdasda.org.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdasdaskdjahksjdasda.net.in":{"classkey":"thirdleveldotin","status":"available"}}
+09-24-2019 05:59:36 | {"asdasdkjahsdjkasda.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 05:59:53 | {"asdasdkjahsdjkasda.info":{"classkey":"dominfo","status":"available"},"asdasdkjahsdjkasda.biz":{"classkey":"dombiz","status":"available"},"asdasdkjahsdjkasda.org":{"classkey":"domorg","status":"available"},"asdasdkjahsdjkasda.in":{"classkey":"dotin","status":"available"},"asdasdkjahsdjkasda.co.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdkjahsdjkasda.co":{"classkey":"dotco","status":"regthroughothers"},"asdasdkjahsdjkasda.net.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdkjahsdjkasda.org.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdkjahsdjkasda.ind.in":{"classkey":"thirdleveldotin","status":"available"},"asdasdkjahsdjkasda.net":{"classkey":"dotnet","status":"available"}}
+09-24-2019 06:00:49 | {"jessilmathew.com":{"classkey":"domcno","status":"available"}}
+09-24-2019 06:01:12 | {"jessilmathew.co":{"classkey":"dotco","status":"regthroughothers"},"jessilmathew.info":{"classkey":"dominfo","status":"available"},"jessilmathew.biz":{"classkey":"dombiz","status":"available"},"jessilmathew.org":{"classkey":"domorg","status":"available"},"jessilmathew.co.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.in":{"classkey":"dotin","status":"available"},"jessilmathew.net.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.ind.in":{"classkey":"thirdleveldotin","status":"available"},"jessilmathew.net":{"classkey":"dotnet","status":"available"},"jessilmathew.org.in":{"classkey":"thirdleveldotin","status":"available"}}
+05-27-2024 07:17:30 | {"v-nod.com":{"classkey":"domcno","status":"available"}}
+05-27-2024 13:26:12 | {"v-nod.info":{"classkey":"dominfo","status":"available"}}
+05-27-2024 13:34:34 | {"v-nod.ca":{"classkey":"dotca","status":"available"}}
+05-27-2024 15:48:04 | {"goodsghope21.com":{"classkey":"domcno","status":"available"}}
+05-27-2024 21:11:59 | {"saiuuiqsdqsdqs.com":{"classkey":"domcno","status":"available"}}
+05-27-2024 21:22:35 | {"gbhghbgyhbyhuyuh.com":{"classkey":"domcno","status":"available"}}
+06-11-2024 12:43:01 | {"kreditzone.com":{"classkey":"domcno","status":"regthroughothers"}}
+06-11-2024 12:44:05 | {"kreditszone.com":{"classkey":"domcno","status":"available"}}
+06-13-2024 11:11:04 | {"fgfdhfghftgh.com":{"classkey":"domcno","status":"available"}}
+06-13-2024 11:11:11 | {"fgfdhfghftgh1223.com":{"classkey":"domcno","status":"available"}}
+06-13-2024 11:59:09 | {"fdhgfgh.com":{"classkey":"domcno","status":"available"}}
+06-27-2024 23:29:41 | {"arishpatel.ca":{"classkey":"dotca","status":"available"}}
+06-28-2024 12:21:57 | {"arishpatel.ca":{"classkey":"dotca","status":"available"}}
+06-28-2024 12:22:17 | {"arishpatel.com":{"classkey":"domcno","status":"available"}}
+06-29-2024 15:02:17 | {"arishpatel.com":{"classkey":"domcno","status":"available"}}
+06-29-2024 15:02:30 | {"arishpatel.ca":{"classkey":"dotca","status":"available"}}
+06-29-2024 15:02:37 | {"arishpatel.com":{"classkey":"domcno","status":"available"}}
+07-08-2024 15:12:22 | {"uspsnotice.com":{"classkey":"domcno","status":"available"}}
+07-19-2024 14:11:28 | {"atlantide-finance.com":{"classkey":"domcno","status":"available"}}
+07-19-2024 14:40:05 | {"atlantide-finance.com":{"classkey":"domcno","status":"available"}}
+07-19-2024 15:37:52 | {"atlantide-finance.com":{"classkey":"domcno","status":"available"}}
+08-08-2024 21:41:12 | {"testdetestdetstdet.com":{"classkey":"domcno","status":"available"}}
+08-17-2024 14:22:27 | {"fdgdgsdfgdsfgdfin.com":{"classkey":"domcno","status":"available"}}
+10-23-2024 02:41:11 | {"filebr.com":{"classkey":"domcno","status":"available"}}
+11-01-2024 21:29:58 | {"barmokas.ca":{"classkey":"dotca","status":"available"}}
+11-01-2024 21:30:09 | {"barmokas.ca":{"classkey":"dotca","status":"available"}}
+11-01-2024 21:32:05 | {"barmokas.com.ca":{"status":"unknown"}}
+11-01-2024 21:32:11 | {"barmokas.ca":{"classkey":"dotca","status":"available"}}
+11-04-2024 14:11:37 | {"carihaji.com.com":{"status":"unknown"}}
+11-04-2024 14:11:54 | {"findhaji.com.com":{"status":"unknown"}}
+11-04-2024 14:12:09 | {"hajiscanner.com.com":{"status":"unknown"}}
+11-04-2024 14:12:20 | {"carihaji.com":{"classkey":"domcno","status":"available"}}
+11-06-2024 15:04:51 | {"asdsdfjvsdfv.com":{"classkey":"domcno","status":"available"}}
+11-06-2024 15:07:42 | {"zxghcjzhghdfxjhgvvsdf.com":{"classkey":"domcno","status":"available"}}
+11-06-2024 15:09:39 | {"karan2.com":{"classkey":"domcno","status":"available"}}
+11-06-2024 15:10:28 | {"karan2.com":{"classkey":"domcno","status":"available"}}
+11-13-2024 12:14:48 | {"desarokev.com":{"classkey":"domcno","status":"available"}}
+11-21-2024 13:04:42 | {"atlantide-bluestar.com":{"classkey":"domcno","status":"available"}}
+11-21-2024 15:43:46 | {"atlantide-bluestar.com":{"classkey":"domcno","status":"available"}}

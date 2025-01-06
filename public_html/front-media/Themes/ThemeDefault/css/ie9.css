@@ -1,0 +1,40 @@
+.banner{background:#008ad2 url(../images/banner-bg.jpg) repeat-x left top;background-color:#008bd1;}
+.dom-find-box{background:url(../images/search-bg.jpg) repeat-x left top;}
+nav{background:url(../images/menu-bg.jpg) repeat-x left top;}
+.banner .signup-btn{background:url(../images/sign-bg.jpg) repeat-x left top;}
+.banner .signup-btn:hover{background:url(../images/sign-bg-hvr.jpg) repeat-x left top;}
+.services article .icon-bg{background:url(../images/features-bg-round.png) no-repeat left top;}
+.more-btn{background:url(../images/more-btn.png) repeat-x;}
+.banner .dom-find-box .white-bg .find-btn input{background-color:#414e6d;}
+.banner .dom-find-box .white-bg .find-btn input:hover{background-color:#586481;}
+.detail .more-btn{ background:#ebeaef;}
+.detail .more-btn:hover{background:#20b9f2;}
+.bouns-features{margin-top:28px;}
+.AwardsSoftwares section .head{background:#ebeaef;}
+.buorg{display:none !important;}
+
+.inner-banner{background:#008ad2 url(../images/inner-banner.png) repeat-x left top;background-color:#008bd1;}
+.pkgExtra-wrap .pkgExtra-Box h5.catName{background:#008ad2 url(../images/catName.png) repeat-x left top;background-color:#008BD1;}
+.PkgBox{background:#ededed url(../images/PkgBox.png) repeat-x left top;background-color:#ededed;}.PkgBox .signup-btn{background:#fd9f17 url(../images/signup-btn.png) repeat-x left top;background-color:#FD9F17;}.PkgBox .signup-btn:hover{background:#ffc157 url(../images/signup-btn-hover.png) repeat-x left top;background-color:#FFC157;}
+.reseller-pkgs .PkgBox:nth-child(1) .priceBox{background:#79C04D;#29A891}.pkgTitle{background:#97BEDE url(../images/pkgTitle.png) repeat-x left top;background-color:#98bfdf;}
+.PkgBox .priceBox .pkgPrice b{margin-top:-10px;}.reseller-pkgs .PkgBox:nth-child(2) .priceBox{background:#29A891;}.reseller-pkgs .PkgBox:nth-child(3) .priceBox{background:#009BBE;}
+.PkgBox .priceBox .pkgPrice b{margin-top:-10px;}.reseller-pkgs .PkgBox:nth-child(2) .priceBox{background:#29A891;}.reseller-pkgs .PkgBox:nth-child(3) .priceBox{background:#009BBE;}.PackagesArea .PkgBox:nth-child(1) .priceBox{background:#A0A81C;}
+.PkgBox .priceBox{background:#79C04D;}
+.PackagesArea .PkgBox:nth-child(3) .priceBox{background:#29A891;}
+.PackagesArea .PkgBox:nth-child(4) .priceBox{background:#009BBE;}
+
+table tr th{background:#008ad2 url(../images/catName.png) repeat-x left top;background-color:#008BD1;}
+.pkgServer .signup-btn{border:3px solid #EBEBEB;width:115px;margin-top:-3px;background:#FCB736;}.signup-btn:hover{ background-color:#fda019;}nav ul li:nth-last-child(1) a{padding:0 20px}
+.ContactForm .LargeBtn{background-color:#fe9f1d; border:none;}
+.ContactForm .LargeBtn:hover{background-color:#febf4f;}
+.pkgServer .signup-btn1{background-color:#fe9f1d;}.pkgServer .signup-btn1:hover{background-color:#febf4f;}
+input[type=text].SelectYear{ border: solid 1px #E6E6E6}
+
+.pkgServer .signup-btn1{background-color:#fe9f1d;}.pkgServer .signup-btn1:hover{background-color:#febf4f;}
+.Pagination A{background-color:#fe9f1d;}.Pagination A:hover{background-color:#febf4f;}
+.RightPanel section input[type="submit"], .RightPanel section button{ background-color:#fe9f1d;} 
+.RightPanel section input[type="submit"], .RightPanel section button:hover{background-color:#febf4f;}
+nav ul li:nth-last-child(1) a{padding:0 20px}
+.OrgBtn{ background-image:url(../images/orgbg.jpg); background-repeat:repeat-x; background-position:left top}
+.greenBtn{ background-image:url(../images/greenbg.jpg); background-repeat:repeat-x; background-position:left top}
+.RightPanel section h3.First{background:#008ad2 url(../images/catName.png) repeat-x left top;background-color:#008BD1;}

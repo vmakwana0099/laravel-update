@@ -1,0 +1,511 @@
+.ds-plans-table {
+    border-radius: 15px
+}
+
+.ds-plans-table table thead tr th:last-child {
+    border-radius: 0 10px 10px 0
+}
+
+.ds-plans-table table thead tr th:first-child {
+    border-radius: 10px 0 0 10px
+}
+
+.ds-plans-table table tbody tr {
+    background-color: #fff;
+    box-shadow: 0 0 20px #08020208
+}
+
+.dedicated-plan-main-div {
+    background: #fff
+}
+
+.dedicatedserver-pricing-table {
+    overflow: visible;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-collapse: unset;
+    border-spacing: 0 10px
+}
+
+.dedicatedserver-pricing-table>thead>tr>th {
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-family: poppins, sans-serif;
+    background: #007aff !important;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center
+}
+
+.dedicatedserver-pricing-table>tbody>tr>td {
+    padding: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    background-color: #fff !important;
+    text-align: center;
+    color: #28282a !important;
+    border-top: 1px solid #ebe0e0;
+    border-bottom: 1px solid #ebe0e0
+}
+
+.dedicatedserver-pricing-row>td {
+    border: none
+}
+
+.dedicatedserver-pricing-row>td:first-child {
+    border-radius: 15px 0 0 15px;
+    border-left: 1px solid #ebe0e0
+}
+
+.dedicatedserver-pricing-row>td:last-child {
+    border-radius: 0 15px 15px 0;
+    border-right: 1px solid #ebe0e0
+}
+
+.dedicatedserver-pricing-table>tbody>tr>td::before {
+    content: attr(data-value);
+    display: none;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: relative;
+    left: initial;
+    top: initial;
+    opacity: 1
+}
+
+.dedicatedserver-pricing-row span.pricing-onsale {
+    display: block
+}
+
+.dedicatedserver-pricing-row span.price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #28282a
+}
+
+.dedicatedserver-pricing-row span.price i.fa.fa-inr {
+    display: inline;
+    color: #28282a;
+    font-size: 20px;
+    padding-right: 2px
+}
+
+.dedicatedserver-pricing-row span.price span {
+    color: #28282a
+}
+
+.ds-plans-table .vps_managed_btn {
+    border: 1px solid #18b35c;
+    color: #18b35c;
+    border-radius: 60px;
+    background-color: transparent;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%
+}
+
+.dedicatedserver-pricing-row:hover td {
+    border-top: 1px solid #007aff !important;
+    border-bottom: 1px solid #007aff !important
+}
+
+.dedicatedserver-pricing-row:hover td:first-child {
+    border-left: 1px solid #007aff !important
+}
+
+.dedicatedserver-pricing-row:hover td:last-child {
+    border-right: 1px solid #007aff !important
+}
+
+.dedicatedserver-pricing-row:hover .ds-plan-price {
+    background-color: #007aff !important;
+    border-right: 1px solid #007aff !important
+}
+
+.dedicatedserver-pricing-row:hover .ds-plan-price span.price,
+.dedicatedserver-pricing-row:hover .ds-plan-price span.price i {
+    color: #fff !important
+}
+
+.dedicatedserver-pricing-row:hover .ds-plan-price span.price span {
+    color: #e9e8e8 !important
+}
+
+.dedicatedserver-pricing-row:hover .ds-plan-conf-btn {
+    background-color: #007aff !important;
+    border-left: 1px solid #007aff !important
+}
+
+.dedicatedserver-pricing-row:hover .ds-plan-conf-btn button {
+    background-color: #18b35c !important;
+    color: #fff !important;
+    border: 1px solid #18b35c !important
+}
+
+.dedicatedserver-pricing-table thead tr th img {
+    vertical-align: middle;
+    margin-right: 4px;
+    margin-bottom: 1px
+}
+
+.ds-control-panel-ul ul li,
+p.ds-control-panel-cnt {
+    line-height: 24px;
+    color: #28282a;
+    font-size: 18px
+}
+
+.ds-control-panel-left .ds-control-panel-btn {
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 30px;
+    background-color: #f2f2f2
+}
+
+.ds-control-panel-left a.active {
+    background-color: #fff !important;
+    border: 2px solid #115baa;
+    box-shadow: 0 0 60px #0000001a
+}
+
+.ds-control-panel-ul {
+    padding: 3rem 0 0
+}
+
+p.ds-control-panel-cnt {
+    padding: 20px 0;
+    font-weight: 400
+}
+
+.ds-control-panel-img img {
+    max-width: 100%;
+    width: 150px
+}
+
+.ds-control-panel-ul ul li {
+    font-weight: 600;
+    display: flex;
+    align-items: center
+}
+
+.ds-control-panel-cnt-icon {
+    display: flex;
+    align-items: center
+}
+
+span.ds-control-panel-cnt-icon i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #115baa
+}
+
+.wn-features-ul ul li {
+    display: inline-flex;
+    width: 48%
+}
+
+span.wn-features-cnt-icon {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+    margin-left: 30px
+}
+
+span.wn-features-cnt-icon:before {
+    position: absolute;
+    content: "\f00c";
+    color: #28282a;
+    font-family: FontAwesome;
+    left: -30px
+}
+
+span.wn-features-cnt-icon i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #28282a
+}
+
+.disc-full-power,
+.ds-acr-bkp {
+    background-color: #f7f9ff
+}
+
+.disc-full-power .faqs-span {
+    color: #28282a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0
+}
+
+.disc-full-power .faq-wrap .card {
+    border: 1px solid #aac7f9
+}
+
+.disc-full-power .faqs-card p {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #585858;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+.disc-full-power .faq-wrap .card .card-body {
+    padding: 0 1.25rem;
+    background-color: inherit
+}
+
+img.win-vps-features-icon {
+    width: 50px
+}
+
+.disc-full-power .faq-wrap .card .card-header:after {
+    font-family: "Font Awesome 6 FREE";
+    font-weight: 900;
+    content: "\f077";
+    float: right;
+    -webkit-transition: .5s;
+    transition: .5s;
+    width: 30px;
+    color: #000;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px
+}
+
+.disc-full-power .faq-wrap .card .card-header.collapsed:after {
+    content: "\f078";
+    -webkit-transition: .5s;
+    transition: .5s;
+    color: #000
+}
+
+.speed-perfmncs-main-img {
+    margin-bottom: 40px
+}
+
+.sec-dt-acr-price {
+    display: flex;
+    align-items: baseline
+}
+
+.sec-dt-prc-one {
+    font-size: 20px;
+    font-weight: 600;
+    color: #28282a
+}
+
+.sec-dt-prc-two {
+    font-size: 36px;
+    font-weight: 700;
+    color: #18b362;
+    margin-left: 10px
+}
+
+.sec-dt-prc-two span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #28282a;
+}
+
+@media only screen and (max-width:1600px) {
+    .ds-control-panel-left .ds-control-panel-btn {
+        font-size: 16px
+    }
+}
+
+@media (max-width:1441px) {
+    .dedicatedserver-pricing-table {
+        width: 90%;
+        margin: auto
+    }
+}
+
+@media only screen and (max-width:1366) {
+    .dedicatedserver-pricing-table>tbody>tr>td {
+        font-size: 13px
+    }
+}
+
+@media only screen and (max-width:1099px) {
+    .ds-control-panel-ul {
+        padding: 1rem
+    }
+    .ds-control-panel-ul ul li,
+    .wn-features-ul ul li {
+        margin: 8px 0
+    }
+    span.ds-control-panel-cnt-icon,
+    span.wn-features-cnt-icon {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .ds-control-panel-ul ul li,
+    .wn-features-ul ul li,
+    p.ds-control-panel-cnt,
+    p.wn-features-cnt {
+        font-size: 16px
+    }
+    .dedicatedserver-pricing-row>td:last-child::before,
+    .dedicatedserver-pricing-table>thead,
+    .disc-full-power-img,
+    .disc-full-power-img .section-heading {
+        display: none
+    }
+    .sec-dt-acr-price {
+        margin-bottom: 40px
+    }
+    .dedicatedserver-pricing-table {
+        width: 100%
+    }
+    .dedicatedserver-pricing-row>td:first-child,
+    .dedicatedserver-pricing-row>td:last-child {
+        border: none !important
+    }
+    .dedicatedserver-pricing-table>tbody>tr>td {
+        border: none !important;
+        background: #fff !important
+    }
+    .dedicatedserver-pricing-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-radius: 4px;
+        width: 45%;
+        float: left;
+        margin: 0 10px 18px;
+        background-color: #fff !important
+    }
+    .dedicatedserver-pricing-table>tbody>tr {
+        padding: 15px
+    }
+    .dedicatedserver-pricing-table>thead>tr>th {
+        text-align: left
+    }
+    .dedicatedserver-pricing-table>tbody>tr>td {
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: 400;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: inherit
+    }
+    .dedicatedserver-pricing-row:hover.border-accent-primary>td:first-child {
+        margin-bottom: 0;
+        border-radius: 0;
+        border-left: none
+    }
+    .dedicatedserver-pricing-row>td:first-child {
+        border-left: none;
+        border-radius: 0
+    }
+    .dedicatedserver-pricing-row>td:before,
+    .dedicatedserver-pricing-table>tbody>tr>td::before {
+        display: block;
+        width: 45%
+    }
+    .dedicatedserver-pricing-row>td:last-child {
+        text-align: center !important;
+        margin: auto
+    }
+    .ds-plans-table table tbody tr {
+        border: 1px solid #ebe0e0
+    }
+    .dedicatedserver-pricing-row:hover td {
+        border-top: 0 solid transparent !important;
+        border-bottom: 0 solid transparent !important
+    }
+    .dedicatedserver-pricing-row:hover td:first-child {
+        border-left: 1px solid transparent !important
+    }
+    .dedicatedserver-pricing-row:hover .ds-plan-conf-btn,
+    .dedicatedserver-pricing-row:hover .ds-plan-price {
+        background-color: transparent !important;
+        border-right: 1px solid transparent !important;
+        border-left: 1px solid transparent !important
+    }
+    .dedicatedserver-pricing-row:hover .ds-plan-price span.price,
+    .dedicatedserver-pricing-row:hover .ds-plan-price span.price i,
+    .dedicatedserver-pricing-row:hover .ds-plan-price span.price span {
+        color: inherit !important
+    }
+    .dedicatedserver-pricing-row:hover td:last-child {
+        border-right: 1px solid transparent !important
+    }
+    .ds-self-manage-assist .row {
+        flex-direction: column-reverse
+    }
+    .ds-self-manage-assist .wn-features-ul {
+        margin-bottom: 20px
+    }
+    .ds-control-panel-left div {
+        flex-direction: row !important;
+        justify-content: space-between
+    }
+    .ds-control-panel-left .ds-control-panel-btn {
+        width: 32%;
+        padding: 15px 30px
+    }
+}
+
+@media (max-width:576px) {
+    .dedicatedserver-pricing-row {
+        width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-bottom: 15px
+    }
+    .dedicatedserver-pricing-table>tbody>tr {
+        padding: 15px 0 15px 15px
+    }
+    .dedicatedserver-pricing-table>tbody>tr>td {
+        padding: 10px 0
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .ds-control-panel-left .ds-control-panel-btn {
+        padding: 10px;
+        width: 30%;
+        margin: 5px
+    }
+    .ds-control-panel-ul ul li,
+    .wn-features-ul ul li,
+    p.ds-control-panel-cnt,
+    p.wn-features-cnt {
+        font-size: 14px
+    }
+    .ds-control-panel-left .nav {
+        flex-direction: row !important
+    }
+    span.ds-control-panel-cnt-icon i,
+    span.wn-features-cnt-icon i {
+        font-size: 14px;
+        margin-top: 5px
+    }
+    .ds-acr-mb {
+        display: block
+    }
+    .ds-acr-desk {
+        display: none
+    }
+}

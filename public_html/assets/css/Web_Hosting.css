@@ -1,0 +1,261 @@
+.hs-platform-box,
+.pf-online-box {
+    text-align: center
+}
+
+.smart-wh-cnt ul p,
+.wh-control-pnl .section-heading {
+    margin-bottom: 20px
+}
+
+.hs-platform {
+    background-color: #eff7ff
+}
+
+.hs-platform-bg {
+    background-image: url("/assets/images/web_hosting/Hosting_solution_platform_bg.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.hs-platform-box {
+    background-color: #fff;
+    border: 1px solid #d9d8d8;
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: rgba(99, 99, 99, .2) 0 2px 8px 0
+}
+
+.hs-platform-img-round {
+    display: inline-block;
+    background: #efb2b2;
+    border: 7px solid #ededed;
+    padding: 7px 7px 0;
+    border-radius: 60px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    align-content: center
+}
+
+.hs-platform-tittle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #28282a;
+    margin: 20px 0 15px
+}
+
+.hs-platform-cnt {
+    font-size: 14px;
+    font-weight: 400;
+    color: #28282a
+}
+
+.hs-platform-prc-m {
+    font-size: 14px;
+    font-weight: 500;
+    color: #115baa;
+    margin: 15px 0
+}
+
+.hs-platform-prc-m span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #115baa
+}
+
+.hs-platform-explore-btn button {
+    padding: 10px 60px;
+    background-color: #007aff;
+    display: inline-block;
+    border: none;
+    color: #fff;
+    border-radius: 40px;
+}
+
+.pf-online-presn-row {
+    display: flex;
+    justify-content: center
+}
+
+.pf-online-presn-box-1 {
+    background-color: #ebfbf2;
+    padding: 30px 20px
+}
+
+.pf-online-presn-box-1 .hs-platform-img-round {
+    background: #5eab80;
+    border: 7px solid #fff
+}
+
+.pf-online-presn-box-2 {
+    background-color: #fef0f4;
+    padding: 30px 20px
+}
+
+.pf-online-presn-box-2 .hs-platform-img-round {
+    background: #c7355e;
+    border: 7px solid #fff
+}
+
+.pf-online-presn-box-3 {
+    background-color: #e4f1ff;
+    padding: 30px 20px
+}
+
+.pf-online-presn-box-3 .hs-platform-img-round {
+    background: #2262a7;
+    border: 7px solid #fff
+}
+
+.pf-online-presn-box-4 {
+    background-color: #f2f2fe;
+    padding: 30px 20px
+}
+
+.pf-online-presn-box-4 .hs-platform-img-round {
+    background: #5353d9;
+    border: 7px solid #fff
+}
+
+.smart-wh-cnt ul li {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2262a7
+}
+
+.smart-wh-cnt ul p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #28282a
+}
+
+.smart-wh-left-col {
+    background-color: #eff7ff;
+    padding: 40px
+}
+
+button.smart-wh-next-btn,
+button.smart-wh-prev-btn {
+    background-color: transparent;
+    margin: 20px 20px 0 0;
+    padding: 0;
+    border: none;
+}
+
+.smart-wh-left-col,
+.smart-wh-right-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1
+}
+
+.wn-features-ul ul li {
+    display: inline-flex;
+    width: 48%
+}
+
+span.wn-features-cnt-icon {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+    margin-left: 30px
+}
+
+span.wn-features-cnt-icon:before {
+    position: absolute;
+    content: "\f00c";
+    color: #28282a;
+    font-family: FontAwesome;
+    left: -30px
+}
+
+span.wn-features-cnt-icon i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #28282a
+}
+
+.wh-control-pnl {
+    background-color: #eff7ff;
+    padding: 80px 0
+}
+
+.wh-control-panel-box {
+    background: #fff;
+    box-shadow: 0 0 10px #00000014;
+    padding: 40px;
+    border-radius: 30px
+}
+
+.smart-wh-cnt ul {
+    min-height: 380px;
+}
+
+@media only screen and (max-width:1399px) {
+    .hs-platform-cnt {
+        font-size: 12px
+    }
+    .smart-wh-cnt ul {
+        min-height: 400px;
+    }
+}
+
+@media only screen and (max-width:1099px) {
+    .wn-features-ul ul li {
+        margin: 8px 0
+    }
+    span.wn-features-cnt-icon {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .wn-features-ul ul li,
+    p.wn-features-cnt {
+        font-size: 16px
+    }
+    .pf-online-box {
+        width: 50%
+    }
+    .pf-online-presn-row {
+        flex-wrap: wrap
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .wn-features-ul ul li,
+    p.wn-features-cnt {
+        font-size: 14px
+    }
+    span.wn-features-cnt-icon i {
+        font-size: 14px;
+        margin-top: 5px
+    }
+    .empower-web-speed,
+    .wh-control-pnl {
+        padding: 30px 0
+    }
+    .pf-online-presn-row {
+        flex-wrap: wrap
+    }
+    .smart-wh-left-col,
+    .wh-control-panel-box {
+        padding: 20px
+    }
+    .pf-online-box,
+    .wb-pnl-ul ul li {
+        width: 100%
+    }
+    .wh-server-location-desk {
+        display: none
+    }
+    .wh-server-location-mo {
+        display: block
+    }
+}

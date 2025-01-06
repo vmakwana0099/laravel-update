@@ -1,0 +1,222 @@
+
+
+html {
+    scroll-behavior: smooth
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    font-family: Rubik, sans-serif !important
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a, a:hover{
+    text-decoration: none !important;
+}
+ol, ul{
+    padding-left: 0 !important;
+}
+li{
+    list-style: none !important;
+    margin: 10px 0;
+}
+.text_head {
+    color: #28282a
+}
+.head-tb-p-40 {
+    padding: 40px 0
+}
+.section-heading {
+    margin-bottom: 50px
+}
+
+.section-heading p {
+    color: #282821;
+    line-height: 1.7em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .4px
+}
+
+
+/* feaatures-box-s */
+.vps-features {
+    background-color: #e8f4ff;
+    height: auto;
+    overflow: hidden;
+}
+.vps-features .features-main {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.vps-features .features-main .features-start .feature-ul {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.vps-features .features-main .features-start .feature-ul .feature-box:nth-child(1), .vps-features .features-main .features-start .feature-ul .feature-box:nth-child(2), .vps-features .features-main .features-start .feature-ul .feature-box:nth-child(3) {
+    border-top: none;
+}
+
+.vps-features .features-main .features-start .feature-ul .feature-box {
+    display: inline-table;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    border-top: 1px solid #fff;
+    padding: 40px 36px 46px;
+    margin: 0;
+}
+.vps-features .features-main .features-start .content-main .feature-icon {
+    height: 56px;
+    display: inline-block;
+    -webkit-transform: rotateY(0);
+    -khtml-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+    transition-duration: .8s;
+    -moz-transition-duration: .8s;
+    -webkit-transition-duration: .8s;
+}
+.vps-features .features-main .features-start .content-main h3 {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    width: 100%;
+    margin: 0;
+}
+
+.vps-features .features-main .features-start .content-main h3, .vps-features .features-main .features-start .content-main h3 a {
+    font-size: 17px;
+    font-weight: 700;
+    color: #172838;
+    letter-spacing: .5px;
+}
+.vps-features .features-main .features-start .content-main .content {
+    color: #172838;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    width: 100%;
+}
+
+.content {
+    overflow: auto;
+    position: relative;
+    max-height: 260px;
+    box-sizing: border-box;
+}
+#examples, .all-themes-switch, .callbacks, .callbacks+p, .content, .dialog, .disable-destroy, .scrollTo, .show-hide {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.vps-features .features-main .features-start .feature-ul .feature-box:hover {
+    background-color: #fff;
+    -webkit-transform: translateY(-1px);
+    -khtml-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, .15);
+}
+.vps-features .features-main .features-start .feature-ul .feature-box:hover .content-main .feature-icon {
+    transition: .3s;
+    -webkit-transform: perspective(2500px) rotateY(-180deg);
+    -khtml-transform: perspective(2500px) rotateY(-180deg);
+    -moz-transform: perspective(2500px) rotateY(-180deg);
+    -ms-transform: perspective(2500px) rotateY(-180deg);
+    -o-transform: perspective(2500px) rotateY(-180deg);
+    transform: perspective(2500px) rotateY(-180deg);
+    transition-duration: 1s;
+}
+/* feaatures-box-E */
+
+
+@media only screen and (max-width: 992px) { 
+    .head-tb-p-40 {
+        padding: 20px 0
+    }   
+}

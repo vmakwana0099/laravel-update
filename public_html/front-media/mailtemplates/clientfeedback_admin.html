@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>@SITE_NAME</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+            <style type="text/css">
+
+                body {
+
+                    background:#f5f5f5;
+
+                    line-height: 18px;
+
+                    margin: 0;
+
+                }
+
+                img{ border:none;}
+
+
+
+            </style>
+
+    </head>
+
+    <body>
+
+        @MAIL_HEADER
+
+        <table border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff" style="border-left:solid 8px #00AEEF; border-right:solid 8px #00AEEF; width:640px; margin:0 auto;">
+
+            <tr>
+
+                <td>
+
+                    <span style="font-size:14px; color:#008BD1; font-family:Arial, Helvetica, sans-serif;padding: 0 0 5px;display:block">
+
+                        Dear<span style="font-size:15px; font-weight:bold"> @NAME,</span>
+
+                    </span>
+
+                    @DETAIL_DATA
+
+                </td>
+
+            </tr>
+
+            @MAIL_ADV 
+
+            <tr>
+
+            <td>
+
+            @EMAIL_SIGNATURE 
+
+            </td>
+
+            </tr>
+
+        </table>
+
+        @MAIL_FOOTER
+
+    </body>
+
+</html>
+

@@ -1,0 +1,480 @@
+
+.vps_main .banner-inner {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+
+.vps_main .banner-content {
+    text-align: center;
+}
+.vps_main.google_apps_main .banner-inner .banner-image {
+    background-image: url(../images/gsuite-icon.png);
+}
+
+.vps_main .banner-inner .banner-image {
+    background-image: url(../images/vps_hosting/VPS-Hosting-icon.svg);
+}
+.banner-inner .banner-image {
+    width: 68px;
+    height: 68px;
+    background-image: none;
+    margin: 0 auto 10px;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.banner-inner .banner-content .banner-text {
+    max-width: 1000px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    margin: 19px auto;
+}
+
+
+
+.gsuite-intro {
+    background-color: #f0f8ff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.gsuite-intro .left {
+    padding-left: 0;
+}
+.gsuite-intro .left .title {
+    margin-bottom: 20px;
+}
+.gsuite-intro .left .title p {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #333;
+}
+.gsuite-intro .google-apps-case {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
+}
+.gsuite-intro .google-apps-case .title {
+    margin-bottom: 20px;
+}
+.gsuite-intro .google-apps-case .title p {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #333;
+}
+.gsuite-intro .google-apps-case .google-apps-slider {
+    background: #fff;
+    padding: 20px 10px 10px;
+}
+.gsuite-intro .google-apps-case .google-apps-slider .owl-carousel .owl-stage-outer {
+    margin-left: 0;
+    margin-right: 0;
+}
+.owl-stage, .owl-theme .owl-dots, .owl-theme .owl-nav, .ui-button {
+    text-align: center;
+}
+.gsuite-intro .google-apps-case .google-apps-slider .owl-carousel .item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+.gsuite-intro .google-apps-case .google-apps-slider .owl-carousel .item .g-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+.vps_main .vps-plan-main-div {
+    width: 100%;
+    height: auto;
+    background: url(../images/domain_search/vps-plan-bg.png) center bottom no-repeat #f6f6f6;
+    padding: 40px 0;
+}
+.switch-plan {
+    margin: 0 auto 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.switch-plan .form-check.form-switch {
+    margin: 0px 10px 0 10px;
+}
+.switch-plan .form-switch .form-check-input {
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+}
+.switch-plan .month-tab {
+    text-transform: uppercase;
+    vertical-align: top;
+    position: relative;
+    top: 4px;
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+}
+.vps_main .vps-plan-main-div .tab-content {
+    width: 100%;
+    margin-top: 14px;
+}
+.vps_main .vps-plan-main-div .tab-content .tab-pane.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition: .5s ease-in;
+}
+.vps_main .vps-plan-main-div .tab-content .plan-main-div {
+    text-align: center;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px -2px 15px #e0e0e0;
+    box-shadow: -1px -2px 15px #e0e0e0;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.vps_main .vps-plan-main-div .tab-content .plan-head {
+    color: #115baa;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: inherit;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-price-padding {
+    padding: 0 15px;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-start {
+    display: table;
+    font-size: 14px;
+    color: #666;
+    margin: 10px auto 3px;
+}
+.dollar-sign {
+    font-family: sans-serif !important;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-price {
+    color: #115baa;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+.vps_main .vps-plan-main-div .tab-content .price-icon {
+    color: inherit;
+    font-family: "Open Sans";
+    font-size: 19px;
+    font-weight: 600;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-price strong {
+    font-size: 40px;
+    color: inherit;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-features {
+    text-align: left;
+    overflow: hidden;
+    transition: height 2s;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-features li {
+    color: #666;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    padding-left: 37px;
+    margin: 8px 0;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-features li:before {
+    content: "\f00c";
+    font: normal normal normal 16px / 1 Fontawesome;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    color: #333;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div .more-features {
+    text-align: left;
+    padding-left: 30px;
+    color: #666;
+    display: table;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div .more-features i {
+    margin-right: 4px;
+    color: inherit;
+    display: inline-block;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-btm {
+    display: table;
+    width: 100%;
+    margin: 15px 0 25px;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded .plan-head {
+    font-size: 27px;
+    color: #18b35c;
+    padding: 49px 0 24px;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded .vps-price strong {
+    font-size: 57px;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded .sub-title, .vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded .vps-price {
+    color: #18b35c;
+}
+.vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded .plan-head .recommanded-icon {
+    background: url(../images/sprite-image.png) -492px -93px no-repeat;
+    width: 102px;
+    height: 71px;
+    left: 0;
+    right: 0;
+    top: -35px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+@media screen and (max-width: 992px) {
+    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
+        padding: 0 7px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
+        padding: 0 15px;
+    }
+    .vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded {
+            margin-top: 40px;
+    }
+    .vps_main .vps-plan-main-div .tab-content .vps-plan-div {
+        margin-top: 20px;
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.mail-at-company {
+    background-position: -1063px 0;
+    width: 62px;
+}
+
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon {
+    margin: auto;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+    background-image: url(../images/features-sprite-image.png);
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.meetings {
+    background-position: -645px 0;
+    width: 80px;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.video-call {
+    background-position: -312px 0;
+    width: 58px;
+}
+
+
+
+
+
+
+
+
+
+
+.g-suite-lists .g_s_l-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+.g-suite-lists .g-icons.atrate {
+    width: 40px;
+    height: 40px;
+    background-position: 0 -67px;
+}
+.g-suite-lists .g-icons {
+    background-image: url(../images/g-apps-sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0;
+    position: absolute;
+    top: 4px;
+    left: 15px;
+}
+.g-suite-lists .g-list-box {
+    display: inline-block;
+    position: relative;
+    padding-left: 80px;
+}
+.g-suite-lists .g-list-box h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #4d4d4d;
+    font-weight: 500;
+}
+.g-suite-lists .g-list-box span {
+    color: #262626;
+    font-weight: 400;
+}
+.g-suite-lists .g-icons.storage {
+    width: 40px;
+    height: 34px;
+    background-position: -55px -67px;
+}
+.g-suite-lists .g-icons.real-time {
+    width: 40px;
+    height: 40px;
+    background-position: -167px -67px;
+}
+.g-suite-lists .g-icons.work-anywhere {
+    width: 40px;
+    height: 35px;
+    background-position: -292px -67px;
+}
+.g-suite-lists .g-icons.migration {
+    width: 40px;
+    height: 40px;
+    background-position: -108px -67px;
+}
+.g-suite-lists .g-icons.adv-controls {
+    width: 40px;
+    height: 40px;
+    background-position: -232px -67px;
+}
+
+
+
+
+
+
+
+
+
+
+.g-video-section {
+    background-image: url(../images/gsuite-video-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-color: #18b35c;
+}
+.g-video-section .g-left {
+    background-color: #03305d;
+    padding: 50px 20px 50px 14%;
+}
+.g-video-section .g_l-content .title {
+    color: #fff;
+    margin: 0 0 20px;
+}
+.g-video-section .g_l-content .desc {
+    color: #fff;
+    letter-spacing: .68px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    display: block;
+}
+.g-video-section .g_l-content .image {
+    max-width: 400px;
+    width: 100%;
+}
+.g-video-section .g-right {
+    background-color: transparent;
+    padding: 50px 10% 50px 20px;
+}
+.g-video-section .g_r_content .play-icon {
+    width: 100%;
+    margin: 50px auto 0;
+    display: block;
+    text-align: center;
+}
+.g-video-section .g_r_content .play-icon i {
+    font-size: 110px;
+    color: #fff;
+}
+.accordion-header{
+    position: relative;
+}
+.fa-play-circle-o:before {
+    content: "";
+}
+
+
+@media screen and (max-width: 1199px) {
+    .g-video-section .g-left {
+        padding: 50px 20px 50px 5%;
+    }
+    .g-video-section .g-right {
+        padding: 50px 5% 50px 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .g-video-section .g-left {
+        padding: 30px 20px 30px 5%;
+    }
+    .g-video-section .g-right {
+        padding: 30px 5% 30px 20px;
+    }
+}
+@media screen and (max-width: 476px) {
+    .g-video-section {
+        background-size: cover;
+        background-position: bottom right;
+    }
+}

@@ -1,0 +1,77 @@
+.deals-main {
+    width: 100%;
+    height: auto;
+    background: url(../images/domain_search/vps-plan-bg.png) center bottom no-repeat #f6f6f6;
+}
+.deals-main .deals-tabbing {
+    padding: 16px 0;
+}
+ul.nav.nav-pills.nav-deals {
+    margin: 43px 0 24px;
+    border-radius: 33px;
+    box-shadow: 0 0 15px #e4e4e4;
+    background: #fff;
+}
+li.col.text-center.nav-item {
+    margin: 0;
+    padding: 0;
+}
+.deals-main .deals-tabbing .nav-deals li a.active {
+    background: #18b35c;
+    color: #fff;
+    border-radius: 33px;
+}
+.nav-deals .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: .25rem;
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 14.84px;
+    font-weight: 500;
+    color: #334045;
+    text-transform: uppercase;
+}
+
+
+
+.deals-main .tab-content>.tab-pane {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+.no-record {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 3px 3px 12px #d3d3d3;
+    border-top: 3px solid #ff8080;
+}
+.no-record .no-record-icon {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/no-record.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.no-record span {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 11px;
+    display: block;
+    color: #ff2626;
+    text-transform: capitalize;
+}
+.deals-main .tab-content>.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition: .5s ease-in;
+}

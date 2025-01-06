@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\DailyCronJobs',
     ];
 
     /**
@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        //echo "asdasdas1";
+        //file_put_contents("cronlogmydata.txt", "\n cron run at 1:".date("d/m/Y H:i:s", FILE_APPEND));
+        //$schedule->command('dailycronjob:pricingset')->everyMinute();
     }
 
     /**

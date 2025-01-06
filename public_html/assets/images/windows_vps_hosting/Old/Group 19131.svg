@@ -1,0 +1,27 @@
+<svg id="Group_19131" data-name="Group 19131" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50.112" viewBox="0 0 50 50.112">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_18128" data-name="Rectangle 18128" width="50" height="50.112" fill="none" stroke="#707070" stroke-width="1.5"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_18125" data-name="Rectangle 18125" width="50" height="50" fill="none" stroke="#707070" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_19098" data-name="Group 19098" clip-path="url(#clip-path)">
+    <g id="Group_19097" data-name="Group 19097" transform="translate(0 0)">
+      <g id="Group_19096" data-name="Group 19096" clip-path="url(#clip-path)">
+        <g id="Group_19095" data-name="Group 19095" transform="translate(0 0.056)" opacity="0">
+          <g id="Group_19094" data-name="Group 19094">
+            <g id="Group_19093" data-name="Group 19093" clip-path="url(#clip-path-3)">
+              <rect id="Rectangle_18124" data-name="Rectangle 18124" width="50" height="50" fill="#eaeaea" stroke="#707070" stroke-width="1.5"/>
+            </g>
+          </g>
+        </g>
+        <rect id="Rectangle_18126" data-name="Rectangle 18126" width="36.834" height="30.695" rx="6.274" transform="translate(6.583 18.917)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <circle id="Ellipse_47" data-name="Ellipse 47" cx="3.069" cy="3.069" r="3.069" transform="translate(21.931 28.391)" fill="none" stroke="#146ecd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Line_53" data-name="Line 53" y2="6.139" transform="translate(25 34.53)" fill="none" stroke="#146ecd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_73360" data-name="Path 73360" d="M50,19.417H43.887V12.548a5.434,5.434,0,0,0-5.434-5.435H37.017a5.434,5.434,0,0,0-5.434,5.435v6.869H25.469V13.265a12.266,12.266,0,0,1,24.531,0Z" transform="translate(-12.734 -0.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
