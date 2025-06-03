@@ -225,23 +225,6 @@
     position: absolute;
 }
 
-@media screen and (max-width: 992px) {
-    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
-        padding: 0 7px;
-    }
-}
-@media screen and (max-width: 767px) {
-    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
-        padding: 0 15px;
-    }
-    .vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded {
-            margin-top: 40px;
-    }
-    .vps_main .vps-plan-main-div .tab-content .vps-plan-div {
-        margin-top: 20px;
-    }  
-}
-
 
 
 
@@ -302,4 +285,26 @@
     width: 50px;
     height: 50px;
     background-position: -3px -117px;
+}
+
+.aws-para {
+    margin: 30px 0;
+}
+
+
+@media screen and (max-width: 992px) {
+    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
+        padding: 0 7px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .vps_main .vps-plan-main-div .tab-content .plan-main-div .col-md-4 {
+        padding: 0 15px;
+    }
+    .vps_main .vps-plan-main-div .tab-content .vps-plan-div.recommanded {
+            margin-top: 40px;
+    }
+    .vps_main .vps-plan-main-div .tab-content .vps-plan-div {
+        margin-top: 20px;
+    }  
 }

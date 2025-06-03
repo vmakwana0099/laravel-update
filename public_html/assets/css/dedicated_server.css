@@ -35,7 +35,7 @@
     text-transform: uppercase;
     vertical-align: middle;
     font-family: poppins, sans-serif;
-    background: #007aff !important;
+    background: #3838ff !important;
     color: #fff;
     padding: 15px 20px;
     text-align: center
@@ -101,8 +101,8 @@
 }
 
 .ds-plans-table .vps_managed_btn {
-    border: 1px solid #18b35c;
-    color: #18b35c;
+    border: 1px solid #000c66;
+    color: #000c66;
     border-radius: 60px;
     background-color: transparent;
     padding: 12px 20px;
@@ -112,21 +112,21 @@
 }
 
 .dedicatedserver-pricing-row:hover td {
-    border-top: 1px solid #007aff !important;
-    border-bottom: 1px solid #007aff !important
+    border-top: 1px solid #3838ff !important;
+    border-bottom: 1px solid #3838ff !important
 }
 
 .dedicatedserver-pricing-row:hover td:first-child {
-    border-left: 1px solid #007aff !important
+    border-left: 1px solid #3838ff !important
 }
 
 .dedicatedserver-pricing-row:hover td:last-child {
-    border-right: 1px solid #007aff !important
+    border-right: 1px solid #3838ff !important
 }
 
 .dedicatedserver-pricing-row:hover .ds-plan-price {
-    background-color: #007aff !important;
-    border-right: 1px solid #007aff !important
+    background-color: #3838ff !important;
+    border-right: 1px solid #3838ff !important
 }
 
 .dedicatedserver-pricing-row:hover .ds-plan-price span.price,
@@ -139,14 +139,14 @@
 }
 
 .dedicatedserver-pricing-row:hover .ds-plan-conf-btn {
-    background-color: #007aff !important;
-    border-left: 1px solid #007aff !important
+    background-color: #3838ff !important;
+    border-left: 1px solid #3838ff !important
 }
 
 .dedicatedserver-pricing-row:hover .ds-plan-conf-btn button {
-    background-color: #18b35c !important;
+    background-color: #000c66 !important;
     color: #fff !important;
-    border: 1px solid #18b35c !important
+    border: 1px solid #000c66 !important
 }
 
 .dedicatedserver-pricing-table thead tr th img {
@@ -166,12 +166,14 @@ p.ds-control-panel-cnt {
     border-radius: 10px;
     margin: 10px 0;
     padding: 30px;
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
 }
 
 .ds-control-panel-left a.active {
     background-color: #fff !important;
-    border: 2px solid #115baa;
+    border: 2px solid #3838ff;
     box-shadow: 0 0 60px #0000001a
 }
 

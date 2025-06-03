@@ -1,32 +1,3 @@
-.banner_left_s h1,
-
-.btn-started,
-
-.countdown>div {
-
-    font-family: "Open Sans", sans-serif
-
-}
-
-
-
-.banner_left_s h1,
-
-h1 {
-
-    text-transform: uppercase
-
-}
-
-
-
-.banner_left_s {
-
-    padding: 40px
-
-}
-
-
 
 .cstmr-rtg-main {
 
@@ -82,63 +53,10 @@ h1 {
 
 
 
-#slider,
-
-.vps_main vps_hosting_banner .carousel-inner {
-
-    height: inherit
-
-}
 
 
 
-vps_hosting_banner .carousel-inner img {
 
-    width: inherit
-
-}
-
-
-
-vps_hosting_banner .carousel-item.active {
-
-    display: inherit !important
-
-}
-
-
-
-.btn-started {
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    color: #fff;
-
-    letter-spacing: 0;
-
-    background-color: #115baa;
-
-    padding: 10px 30px;
-
-    border-radius: 50px;
-
-    transition: .6s;
-
-    display: inline-block
-
-}
-
-
-
-.btn-started:hover {
-
-    background-color: #007aff;
-
-    color: #fff
-
-}
 
 
 
@@ -166,13 +84,15 @@ vps_hosting_banner .carousel-item.active {
 
 .banner_left_s h1 {
 
-    font-size: 20px;
-
-    font-weight: 700;
-
-    color: #28282a;
-
-    text-align: left
+    font-size: 18px;
+    font-weight: 500;
+    color: #3838ff;
+    text-align: left;
+    background: #ffffff;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 25px;
 
 }
 
@@ -182,14 +102,11 @@ vps_hosting_banner .carousel-item.active {
 
     font-size: 45px;
 
-    font-weight: 800;
+    font-weight: 700;
 
-    color: #115baa;
+    color: #080808;
 
-    margin: 20px 0;
-
-    letter-spacing: 1px
-
+    margin: 10px 0;
 }
 
 
@@ -198,7 +115,7 @@ p.banner_data_txt {
 
     font-size: 18px;
 
-    font-weight: 500;
+    font-weight: 400;
 
     color: #28282a
 
@@ -232,13 +149,12 @@ p.banner_data_txt {
 
 .banner-pricing-box {
 
-    font-weight: 500;
+    font-weight: 400;
 
     color: #28282a;
 
     font-size: 18px;
 
-    font-family: "Open Sans", sans-serif
 
 }
 
@@ -246,7 +162,7 @@ p.banner_data_txt {
 
 .banner-left-s-features p {
 
-    margin-bottom: 20px
+    margin-bottom: 10px
 
 }
 
@@ -302,13 +218,6 @@ p.banner_data_txt {
 
 }
 
-
-
-vps_hosting_banner .carousel-inner {
-
-    height: 1040px
-
-}
 
 
 
@@ -422,65 +331,6 @@ span.domain-tltp-price {
 
 
 
-.countdown {
-
-    display: flex;
-
-    gap: 15px;
-
-    margin: 15px 0 25px
-
-}
-
-
-
-.countdown>div {
-
-    display: flex;
-
-    flex-wrap: nowrap;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
-
-    width: 60px;
-
-    height: 60px;
-
-    border-radius: 5px;
-
-    background-color: #fff
-
-}
-
-
-
-.number {
-
-    font-weight: 600;
-
-    font-size: 24px;
-
-    color: #18b35c;
-
-    line-height: 30px
-
-}
-
-
-
-.countdown .num-day {
-
-    font-size: 12px
-
-}
-
-
 
 .banner_left_s h1 span {
 
@@ -507,6 +357,28 @@ span.domain-tltp-price {
 }
 
 
+/* new-review-s */
+.review-top-main {
+    background: #2a5691;
+    text-align: center;
+}
+.review-top-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+}
+.review-star-icon {
+    margin: 0 10px;
+}
+.review-star-icon img {
+    margin: 0px 3px;
+}
+
+/* new-review-e */
 
 
 
@@ -531,12 +403,6 @@ span.domain-tltp-price {
 
 
 @media only screen and (max-width:1600px) {
-
-    vps_hosting_banner .carousel-inner {
-
-        height: 920px !important
-
-    }
 
 
 
@@ -578,6 +444,15 @@ span.domain-tltp-price {
 
 }
 
+@media only screen and (max-width: 1399px) {
+    .banner_left_s h2{
+        font-size: 28px;
+    }
+    .bnnr-wbh-right img {
+        width: 450px;
+    }    
+}
+
 @media only screen and (max-width: 1200px) {
 
 
@@ -585,12 +460,6 @@ span.domain-tltp-price {
     .banner_left_s h2 {
 
         font-size: 45px;
-
-    }
-
-    vps_hosting_banner .carousel-inner {
-
-        height: 1140px !important
 
     }
 
@@ -602,18 +471,6 @@ span.domain-tltp-price {
 
 @media only screen and (max-width:1099px) {
 
-
-
-    .btn-started,
-
-    .chat-box-btn {
-
-        font-size: 16px;
-
-        padding: 10px 20px
-
-    }
-
     .banner_left_s h2 {
 
         font-size: 22px;
@@ -624,27 +481,10 @@ span.domain-tltp-price {
 
 
 
-@media only screen and (max-width:1024px) {
-
-    vps_hosting_banner .carousel-inner {
-
-        height: 860px !important
-
-    }
-
-}
 
 
 
 @media only screen and (max-width:992px) {
-
-    vps_hosting_banner .carousel-inner {
-
-        height: 1320px !important
-
-    }
-
-
 
     .banner-black-friday-offer-23-hp-main {
 
@@ -702,17 +542,11 @@ span.domain-tltp-price {
 
     .wordpress_bnnr {
 
-        padding: 20px
+        padding: 20px 0;
 
     }
 
 
-
-    vps_hosting_banner .carousel-inner {
-
-        height: 645px !important
-
-    }
 
 
 
@@ -745,6 +579,10 @@ span.domain-tltp-price {
         padding: 40px 0 20px
 
     }
+    
+    .review-top-main{
+        display: none;
+    }
 
 }
 
@@ -757,17 +595,6 @@ span.domain-tltp-price {
         height: 710px !important
 
     }
-
-
-
-    .banner_left_s {
-
-        padding: 10px
-
-    }
-
-
-
     .banner_left_s h1 {
 
         font-size: 18px

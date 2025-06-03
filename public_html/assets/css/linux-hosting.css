@@ -1,263 +1,706 @@
-.hosting-features-icon {
-    width: 56px;
-    height: 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    transition: all .3s ease-in-out;
-    -webkit-transform: rotateY(0);
-    -khtml-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-    transition-duration: .8s;
-    background-image: url(../images/hosting-features-sprite-image.png);
-    margin: 0 auto;
-}
-.hosting-features-icon.cpanel {
-    background-position: -1130px 0;
-    width: 56px;
-}
-.hosting-features-icon.support24 {
-    background-position: -994px 0;
-    width: 56px;
-}
-.hosting-features-icon.backups {
-    background-position: -206px 0;
-    width: 56px;
-}
-.hosting-features-icon.infrastructure {
-    background-position: -798px 0;
-    width: 55px;
-}
-.hosting-features-icon.scanning {
-    background-position: -1060px 0;
-    width: 60px;
-}
-.hosting-features-icon.email {
-    background-position: -402px 0;
-    width: 56px;
-}
-.web-builder-websites-icon {
-    
-    background: url("{{url('/')}}/assets/images/hosting-sprite.png") 0 6px no-repeat;
-    width: 66px;
-    margin: auto;
-    height: 60px;
-    display: block;
+.why-dvlp-busi {
+
+  padding: 50px 0;
+
 }
 
-.i_app_image {
-    margin: 30px 0;
+.why-dvlp-busi .why-dvlp-img {
+
+  position: sticky;
+
+  top: 116px;
+
+  max-width: 609px;
+
 }
 
-.vps-plan-main .plan-second-title {
-    display: table;
-    color: #333;
-    font-size: 16px;
-    margin: 10px auto 26px;
-}
-.la {
-    font: normal normal normal 16px / 1 LineAwesome;
-    font-size: inherit;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
-.ac-switch.ac-switch__icon input:empty~span:after, .la {
-    text-rendering: optimizeLegibility;
-    text-transform: none;
-}
-.fa, .fa-stack, .la, .la-stack {
-    display: inline-block;
-}
-.fa, .la {
-    -moz-osx-font-smoothing: grayscale;
-}
-.vps-plan-main .table-relative {
-    width: 100%;
-}
-.vps-plan-main .table-relative .table-plan-vps {
-    border: none;
-    width: 99.99%;
-}
-.vps-plan-main .table-relative .table-plan-vps tr:nth-of-type(odd) {
-    background: 0 0;
+.why-dvlp-busi .service-cards ul {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  position: relative;
+
 }
 
-body table tr th, body table tr:nth-of-type(odd) {
-    background-color: #f0f0f0;
-}
-.vps-plan-main .table-relative .table-plan-vps tr th {
-    background: #e8f4ff;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    text-align: center;
+.why-dvlp-busi .service-cards ul li:nth-child(1) {
+
+  top: 116px;
+
 }
 
-body table tr th {
-    border-bottom: 1px solid #e0e0e0;
-    color: #000;
-}
-body table tr td, body table tr th {
-    font-size: 16px;
-    line-height: 150%;
-    color: #a6a6a6;
-    border: 1px solid #e0e0e0;
-    padding: 8px;
-}
-body h1, body h2, body h3, body h4, body h5, body h6, body p, body table tr td, body table tr th {
-    font-weight: 400;
-    font-style: normal;
-}
-body table tr th, body table tr:nth-of-type(odd) {
-    background-color: #f0f0f0;
-}
-.vps-plan-main .table-relative .table-plan-vps tr th img.hostitsmart-logo {
-    width: 110px;
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    -o-filter: grayscale(0);
-    filter: grayscale(0);
+.why-dvlp-busi .service-cards ul li:nth-child(2) {
+
+  top: 132px;
+
 }
 
-.vps-plan-main .table-relative .table-plan-vps tr th img {
-    height: auto;
-    vertical-align: middle;
-    filter: grayscale(100%);
-}
-.business_section .business-image img, .vps-plan-main .table-relative .table-plan-vps tr th img {
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-.vps-plan-main .table-relative .table-plan-vps tr td.boldfonts {
-    font-weight: 600;
-    text-align: left;
-    padding-left: 27px;
-    font-size: 15px;
-    color: #333;
+.why-dvlp-busi .service-cards ul li:nth-child(3) {
+
+  top: 148px;
+
 }
 
-.vps-plan-main.compare-high .table-relative .table-plan-vps tr td {
-    font-size: 15px;
-}
-.vps-plan-main .table-relative .table-plan-vps tr td {
-    border: none;
-    border-bottom: 1px solid #f0f8ff;
-    height: 76px;
-    vertical-align: middle;
-    color: #333;
-    font-size: 16px;
-    border-right: 1px solid #f0f8ff;
-    font-weight: 500;
-    position: relative;
-    text-align: center;
-}
-.vps-plan-main .table-relative .table-plan-vps tr td.bg_blue {
-    background: #115baa;
-    color: #fff;
-    border: none;
-}
-.vps-plan-main .table-relative .table-plan-vps tr td.bg_blue i {
-    color: #fff;
+.why-dvlp-busi .service-cards ul li:nth-child(4) {
+
+  top: 164px;
+
 }
 
-.vps-plan-main .table-relative .table-plan-vps tr td i {
-    font-size: 30px;
-    color: #18b35c;
-}
-.fa {
-    font: normal normal normal 14px / 1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-.fa-check-circle:before {
-    content: "";
-}
-.vps-plan-main .table-relative .table-plan-vps tr td span.cancel-ic {
-    width: 22px;
-    height: 22px;
-    background-position: -132px -40px;
-    position: absolute;
-    left: 41%;
-    top: 36%;
+.why-dvlp-busi .service-cards ul li:nth-child(5) {
+
+  top: 180px;
+
 }
 
-.vps-plan-main .table-relative .table-plan-vps tr td span {
-    color: inherit;
-    font-size: inherit;
+.why-dvlp-busi .service-cards ul li:nth-child(6) {
+
+  top: 196px;
+
 }
-.sprite-image {
-    background-image: url(../images/sprite-image.png);
-    background-repeat: no-repeat;
+
+.why-dvlp-busi .service-cards ul li:nth-child(7) {
+
+  top: 214px;
+
 }
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td {
+
+.why-dvlp-busi .service-cards ul li:nth-child(8) {
+
+  top: 230px;
+
+}
+
+.why-dvlp-busi .service-cards ul li:nth-child(9) {
+
+  top: 246px;
+
+}
+
+.why-dvlp-busi .service-cards ul li {
+
+  padding: 30px;
+
+  box-shadow: 0px -4px 6px -3px rgba(151, 151, 151, 0.2),
+
+    0px 4px 6px rgba(140, 140, 140, 0.2);
+
+  position: sticky;
+
+  margin-bottom: 30px;
+
+  background: #fff;
+
+  z-index: 1;
+
+  border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+
+  -moz-border-radius: 10px;
+
+}
+
+.why-dvlp-busi .service-cards ul li .service-title {
+
+  display: flex;
+
+  align-items: center;
+
+  padding-bottom: 20px;
+
+}
+
+.why-dvlp-busi .service-cards ul li .service-title .h3 {
+
+  width: 100%;
+
+  font-size: 24px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+
+}
+
+.why-dvlp-busi .service-cards ul li p {
+
+  margin: 0;
+
+}
+
+
+
+.vps-features .feature-icon i {
+
+  width: 60px;
+
+  height: 60px;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: contain;
+
+}
+
+i.Wide-Compatibility {
+
+  background-image: url(/assets/images/linux-hosting/Wide-Compatibility.svg);
+
+}
+
+i.CloudLinux-OS {
+
+  background-image: url(/assets/images/linux-hosting/CloudLinux-OS.svg);
+
+}
+
+i.Included-Malware-Scanning {
+
+  background-image: url(/assets/images/linux-hosting/Included_Malware_Scanning.svg);
+
+}
+
+i.High-Performing {
+
+  background-image: url(/assets/images/linux-hosting/Stable-and-High-Performing.svg);
+
+}
+
+i.Control-Panels {
+
+  background-image: url(/assets/images/linux-hosting/User-Friendly-Control-Panels.svg);
+
+}
+
+i.Cost-Efficiency {
+
+  background-image: url(/assets/images/linux-hosting/Cost-Efficiency.svg);
+
+}
+
+i.One-Click-Installer {
+
+  background-image: url(/assets/images/linux-hosting/One-Click-Installer.svg);
+
+}
+
+i.Website-Builder {
+
+  background-image: url(/assets/images/linux-hosting/Free-Website-Builder.svg);
+
+}
+
+i.Email-Configuration {
+
+  background-image: url(/assets/images/linux-hosting/Email-Configuration.svg);
+
+}
+
+i.Technical-Support {
+
+  background-image: url(/assets/images/linux-hosting/Round-the-Clock-Technical-Support.svg);
+
+}
+
+i.SSL-Certificate {
+
+  background-image: url(/assets/images/linux-hosting/Free-SSL-Certificate.svg);
+
+}
+
+i.Domain-icon {
+
+  background-image: url(/assets/images/linux-hosting/Domain-icon.svg);
+
+}
+
+i.SSD_Based_Servers_ {
+    background-image: url(/assets/images/web_hosting/SSD_Based_Servers_.webp);
+}
+
+i.No_Overselling {
+    background-image: url(/assets/images/web_hosting/No_Overselling.webp);
+}
+
+i.Day_Money_Back_Guarantee {
+    background-image: url(/assets/images/web_hosting/30-Day_Money_Back_Guarantee.webp);
+}
+
+.cta-box {
+
+  background-image: url(/assets/images/linux-hosting/cta-bg.png);
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  padding: 60px;
+
+  border-radius: 10px;
+
+}
+
+.cta-cnt-box {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+.cta-cnt h2,
+
+.cta-cnt p {
+
+  color: #fff;
+
+}
+
+.cta-btn a {
+
+  background-color: #fff;
+
+  padding: 15px 38px;
+
+  border-radius: 40px;
+
+  color: #115baa;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  display: block;
+
+}
+
+.cta-cnt p {
+
+  font-size: 20px;
+
+  letter-spacing: 1px;
+
+}
+
+
+
+.tsrt-box {
+
+  background-color: #fff6e9;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+}
+
+.tsrt-box-icon-f {
+
+  background-color: #fff;
+
+  border-radius: 50px;
+
+  font-weight: 400;
+
+  font-size: 24px;
+
+  height: 60px;
+
+  width: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.tsrt-box-1 .tsrt-box-icon-f {
+
+  color: #3838ff;
+
+}
+
+.tsrt-box-2 .tsrt-box-icon-f {
+
+  color: #000c66;
+
+}
+
+.tsrt-box-3 .tsrt-box-icon-f {
+
+  color: #3838ff;
+
+}
+
+.tsrt-box-4 .tsrt-box-icon-f {
+
+  color: #050a30;
+
+}
+
+.tsrt-box-title {
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  margin: 10px 0;
+
+}
+
+.tsrt-box-p {
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  color: #28282a;
+
+}
+
+.tsrt-box-icon-b {
+
+  color: #fff;
+
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 40px;
+
+  transform: rotate(-45deg);
+
+  margin-top: 10px;
+
+}
+
+.tsrt-box-icon-b a {
+
+  display: list-item;
+
+}
+
+.tsrt-box-1 .tsrt-box-icon-b {
+
+  background-color: #3838ff;
+
+}
+
+.tsrt-box-2 .tsrt-box-icon-b {
+
+  background-color: #000c66;
+
+}
+
+.tsrt-box-3 .tsrt-box-icon-b {
+
+  background-color: #3838ff;
+
+}
+
+.tsrt-box-4 .tsrt-box-icon-b {
+
+  background-color: #050a30;
+
+}
+
+.tsrt-box-1 {
+
+  background-color: #fff6e9;
+
+}
+
+.tsrt-box-2 {
+
+  background-color: #ebfff4;
+
+}
+
+.tsrt-box-3 {
+
+  background-color: #ffefef;
+
+}
+
+.tsrt-box-4 {
+
+  background-color: #f2f3ff;
+
+}
+
+
+
+.faq-main {
+
+  background-color: #eff7fe;
+
+}
+
+.accordion-item.faq-item {
+
+  border: none;
+
+  background: #fff;
+
+  margin: 10px 0;
+
+  border-radius: 10px !important;
+
+  padding: 10px 0;
+
+}
+
+.faq-header button.accordion-button {
+
+  background: none;
+
+  box-shadow: none;
+
+  padding: 10px 6px;
+
+}
+
+h3.accordion-header.faq-header {
+
+  border: none;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  align-items: center;
+
+  display: flex;
+
+  padding: 10px 20px;
+
+}
+
+.accordion-body.faq-body {
+
+  padding: 0px 30px 20px 30px;
+
+}
+
+.faq-main .accord-btn::after {
+
+  position: absolute;
+
+  content: "\2b";
+
+  font-family: "Fontawesome free";
+
+  right: 20px;
+
+  background-image: inherit;
+
+  font-weight: 800;
+
+  font-size: 26px;
+
+  transition: 0.6s;
+
+}
+
+.faq-main .accord-btn:not(.collapsed)::after {
+
+  transform: rotate(45deg);
+
+  background-image: inherit;
+
+}
+
+button.accord-btn {
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  background-color: inherit;
+
+  border: none;
+
+}
+
+
+
+.trst-tg-box-carousel {
+
+  overflow: hidden;
+
+
+
+  padding: 30px 0px;
+
+
+
+  white-space: nowrap;
+
+
+
+  position: relative;
+
+}
+
+
+
+.trst-tg-box-carousel:before,
+
+.trst-tg-box-carousel:after {
+
+  position: absolute;
+
+
+
+  top: 0;
+
+
+
+  content: "";
+
+
+
+  width: 250px;
+
+
+
+  height: 100%;
+
+
+
+  z-index: 2;
+
+}
+
+
+
+/* .trst-tg-box-carousel:before {
+
+
+
+    left: 0;
+
+
+
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+
+
+
+  }
+
+
+
+  
+
+
+
+  .trst-tg-box-carousel:after {
+
+
+
+    right: 0;
+
+
+
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+
+
+
+  } */
+
+
+
+.tsrt-tg-box-items {
+
+  display: inline-block;
+
+
+
+  animation: 135s slides infinite linear;
+
+}
+
+
+
+.trst-tg-box-carousel:hover .tsrt-tg-box-items {
+
+  animation-play-state: paused;
+
+}
+
+
+
+.tsrt-tg-box-items img {
+
+  height: 100px;
+
+
+
+  margin: 0 40px;
+
+}
+
+
+
+@keyframes slides {
+
+  from {
+
+    transform: translateX(0);
+
+  }
+
+
+
+  to {
+
+    transform: translateX(-100%);
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+  .tsrt-box {
+
+    margin: 10px 0;
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+  .cta-box {
+
+    padding: 30px 20px;
+
+  }
+
+  .cta-btn a {
+
     font-size: 14px;
-    max-width: 85px;
-    height: 58px;
-    border: none;
-    padding: 12px 0;
-}
-.vps-plan-main .table-relative .table-plan-vps tr td.boldfonts {
-    font-weight: 600;
-    text-align: left;
-    padding-left: 27px;
-    font-size: 15px;
-    color: #333;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td a {
-    color: #333;
-    border: 1px solid #18b35c;
-    display: block;
-    font-size: 14px;
-    border-right: none;
-    min-width: 115px;
-    font-weight: 500;
-    padding: 3px 9px;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td.border-radius a {
-    background: #18b35c;
-    color: #fff;
-    border-radius: 4px 0 0 4px;
-    padding: 14px 15px;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td:last-child a {
-    border-radius: 0 3px 3px 0;
-    border-right: 1px solid #18b35c;
-}
-.vps-plan-main .table-relative .table-plan-vps tr:hover {
-    background: #e8f4ff;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td.border-radius a:hover {
-    background: #03305d;
-    border: 1px solid #03305d;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td a:hover {
-    background: #18b35c;
-    color: #fff;
-}
-.vps-plan-main .table-relative .table-plan-vps tr.last-row td a:hover {
-    background: #18b35c;
-    color: #fff;
-}
-@media screen and (min-width: 1366px) {
-    .vps-plan-main .table-relative .table-plan-vps tr.last-row td a {
-        height: 51px;
-    }
-}
 
+  }
 
-
-
-
-
-
+}
 

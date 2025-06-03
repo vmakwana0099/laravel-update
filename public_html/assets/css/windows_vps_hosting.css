@@ -25,12 +25,13 @@
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    background: #007aff;
+    background: #000C66;
     color: #fff !important;
     text-align: center;
-    font-size: 20px
+    font-size: 20px;
+    font-weight: 500 !important;
 }
-.g-suite-lists .g-list-box h4 {
+.g-suite-lists .g-list-box h3 {
     margin: 0 0 10px;
     font-size: 18px;
     color: #4d4d4d;
@@ -38,7 +39,8 @@
 }
 .g-suite-lists .g-list-box span {
     color: #262626;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 
@@ -50,7 +52,7 @@
 }
 
 .g-apps-features-box {
-  background: #f3f9ff;
+  background: #fff;
 }
 
 table.table.g-apps-ftrs-tbl {
@@ -60,7 +62,7 @@ table.table.g-apps-ftrs-tbl {
 .g-apps-ftrs-tbl thead tr th {
   font-size: 18px;
   font-weight: 600;
-  color: #666;
+  color: #080808;
   padding: 14px 20px;
   vertical-align: middle;
 }
@@ -79,7 +81,7 @@ table.table.g-apps-ftrs-tbl {
 
 .g-apps-ftrs-tbl tr td {
   text-align: center;
-  color: #115baa;
+  color: #000C66;
   font-size: 15px;
   padding: 12px;
   width: 20%;
@@ -110,13 +112,13 @@ table.table.g-apps-ftrs-tbl {
 
     text-align: center;
 
-    border: 1px solid #cfd8dc;
+    border: 1px solid #7EC8E3;
 
     border-radius: 20px;
 
-    border-top: 6px solid #efefef;
+    border-top: 6px solid #7EC8E3;
 
-    border-bottom: 6px solid #efefef;
+    border-bottom: 6px solid #7EC8E3;
 
     padding: 30px 0;
 
@@ -138,7 +140,7 @@ table.table.g-apps-ftrs-tbl {
 
 .vps_plan_price .plan-head {
 
-    color: #007aff;
+    color: #000C66;
 
     font-size: 24px;
 
@@ -316,7 +318,7 @@ span.vps-desc-icon i {
 
     color: #fff;
 
-    background-color: #115baa;
+    background-color: #000C66;
 
     padding: 8px 40px;
 
@@ -330,7 +332,7 @@ span.vps-desc-icon i {
 
 .vps-plan-conf-btn a:hover {
 
-    background-color: #18b362;
+    background-color: #000C66;
 
     color: #fff
 
@@ -368,7 +370,7 @@ span.vps-desc-icon i {
 
 .vps_managed_btn:hover {
 
-    background-color: #007aff
+    background-color: #004898
 
 }
 
@@ -398,7 +400,7 @@ span.vps-desc-icon i {
 
 .web_panel_avail_main {
 
-    background: #f7f9ff
+    background: #f8f8ff
 
 }
 
@@ -472,9 +474,9 @@ span.vps-desc-icon i {
 
 .wb-pnl-avl-left a.active {
 
-    border-bottom: 4px solid #115baa;
+    border-bottom: 4px solid #000C66;
 
-    color: #115baa !important;
+    color: #000C66 !important;
 
     font-weight: 700;
 
@@ -588,13 +590,13 @@ span.wb-pnl-cnt-icon i {
 
 
 
-.win-hstg-tittle h3 {
+.win-hstg-tittle .price {
 
     font-size: 36px;
 
     font-weight: 700;
 
-    color: #18b362
+    color: #000C66
 
 }
 
@@ -604,7 +606,7 @@ span.win-hstg-price-mo {
 
     font-size: 20px;
 
-    color: #18b362;
+    color: #000C66;
 
     font-weight: 600
 
@@ -614,7 +616,7 @@ span.win-hstg-price-mo {
 
 .wb-pnl-avl-left .wb-pnl-btn:hover {
 
-    color: #115baa
+    color: #000C66
 
 }
 
@@ -708,7 +710,7 @@ span.win-hstg-price-mo {
 
     font-weight: 700;
 
-    color: #18b362;
+    color: #000C66;
 
     margin-left: 10px
 
@@ -732,7 +734,7 @@ span.win-hstg-price-mo {
 
 .disc-full-power {
 
-    background-color: #f7f9ff
+    background-color: #f8f8ff;
 
 }
 
@@ -754,7 +756,7 @@ span.win-hstg-price-mo {
 
 .disc-full-power .faq-wrap .card {
 
-    border: 1px solid #aac7f9
+    border: 1px solid transparent
 
 }
 
@@ -791,6 +793,9 @@ img.win-vps-features-icon {
 }
 
 
+.disc-full-power .faq-wrap .card, .disc-full-power .faq-wrap .card .card-header{
+    background-color: transparent;
+}
 
 .disc-full-power .faq-wrap .card .card-header:after {
 
@@ -977,7 +982,8 @@ tbody.vps-hstg-prv-body tr td:nth-of-type(2) {
     color: #28282a
 
 }
-
+.disc-full-power-img{
+text-align: end;
 
 
 @media only screen and (min-width:1650px) {
@@ -1266,6 +1272,14 @@ tbody.vps-hstg-prv-body tr td:nth-of-type(2) {
 
         padding-top: 0
 
+    }
+    .wb-pnl-avl-left .nav {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        width: 100%;
+        flex-wrap: nowrap;
     }
 
 }

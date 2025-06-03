@@ -14,6 +14,10 @@
 }
 .career-form .form-control:focus {
     background: 0 0;
+    box-shadow: 1px solid #3838ff;
+}
+.form-group.frm_cstm_wdth label {
+    margin-top: 15px !important;
 }
 .career-form .custom-file-label {
     background: 0 0;

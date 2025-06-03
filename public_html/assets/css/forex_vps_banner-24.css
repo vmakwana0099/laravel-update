@@ -1,1 +1,255 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);.banner_left_s h1,.banner_left_s h2,.btn-started{font-family:"Open Sans",sans-serif}.cstmr-rtg-main{display:flex;justify-content:center;align-items:center;flex-direction:column}.hm-bnnr-cstmr-rtg{display:flex;justify-content:space-evenly;align-items:center;flex-direction:row;padding:60px 0 20px}.cst-rtg-star img{max-width:25px;margin:12px 0}.cst-rtg-data p{font-size:16px;font-weight:800;letter-spacing:.4px;color:#28282a}#slider,.vps_main vps_hosting_banner .carousel-inner{height:inherit}vps_hosting_banner .carousel-inner img{width:inherit}vps_hosting_banner .carousel-item.active{display:inherit!important}.btn-started{font-size:16px;font-weight:600;color:#fff;letter-spacing:0;background-color:#115baa;padding:10px 30px;border-radius:50px;transition:.6s;display:inline-block}.btn-started:hover{background-color:#007aff;color:#fff}.forex_vps_bnnr{padding:0 4rem;background-image:url(/assets/images/forex_vps_hosting/forex_vps_hosting_banner_bg.webp);background-position:center;background-repeat:no-repeat;background-size:cover;display:flex;align-items:center;justify-content:center}.banner_left_s h1{font-size:20px;font-weight:700;color:#bcccdd !important;text-align:left;text-transform:uppercase}.banner_left_s h2{font-size:36px;font-weight:800;color:#fff;margin:20px 0 10px}p.banner_data_txt{font-size:18px;font-weight:500;color:#95c8ff}.banner-left-s-features{margin:30px 0}.banner-left-s-features h3{font-size:18px;color:#303133;font-weight:700;margin-bottom:25px}.banner-left-s-features p,.banner-pricing-box{font-weight:500;font-family:"Open Sans",sans-serif}.banner-left-s-features p{font-size:18px;margin-bottom:20px;color:#fff}.banner-left-s-features p i{margin-right:10px;font-size:20px;color:#fff}.banner-pricing-box{margin:10px 0;font-size:18px;color:#28282a}.banner-pricing-box span.price{font-size:55px;color:#115baa;font-weight:700}.banner-pricing-box span.r-icon{font-size:22px;color:#115baa;font-weight:600}.banner-pricing-box span.free-offer{font-weight:600;color:#28282a}vps_hosting_banner .carousel-inner{height:1040px}.banner-left-s-features p span{font-size:18px;font-weight:900;color:#28282a}p.banner-tooltip .free_domain_bnner_tltp{font-weight:700!important}p.banner-tooltip{position:relative}.free_domain_bnner_tltp{z-index:1;cursor:pointer;color:#000!important;font-weight:600!important;display:inline-block;position:relative}span.domain_tooltip_bnnr{position:absolute;background:#444;color:#fff;font-size:14px!important;padding:15px 20px;text-align:center;bottom:30px;border-radius:10px;margin:auto;visibility:hidden;height:auto;font-weight:400!important;left:-20px;z-index:1;width:580px}.free_domain_bnner_tltp:hover span.domain_tooltip_bnnr{visibility:visible;color:#fff!important}span.domain-tltp-price{color:#fff!important;display:block;font-size:16px!important;font-weight:700!important}@media only screen and (min-width:1200px){.forex_vps_bnnr{height:550px}.forex_vps_bnnr .bnnr-wbh-right img{max-width:90%}}@media only screen and (min-width:1700px){.forex_vps_bnnr{height:600px}}@media only screen and (max-width:1600px){vps_hosting_banner .carousel-inner{height:920px!important}.banner-left-s-features p{font-size:16px;margin:8px 0}.banner-left-s-features p span,.banner-pricing-box{font-size:16px}.banner-pricing-box span.price{font-size:40px;font-weight:800}.forex_vps_bnnr{padding:40px 60px}}@media only screen and (max-width:1199px){vps_hosting_banner .carousel-inner{height:1140px!important}}@media only screen and (max-width:1099px){.btn-started,.chat-box-btn{font-size:16px;padding:10px 20px}}@media only screen and (max-width:1024px){vps_hosting_banner .carousel-inner{height:860px!important}}@media only screen and (max-width:992px){vps_hosting_banner .carousel-inner{height:1320px!important}.banner-black-friday-offer-23-hp-main{padding:3rem 4rem}.bnnr-wbh-right{padding-top:40px}}@media only screen and (max-width:768px){.forex_vps_bnnr{background-position:top}span.domain_tooltip_bnnr{width:280px;font-size:12px!important;top:30px;bottom:inherit}}@media only screen and (max-width:767px){.home_page_wbh_bnnr{padding:0}.forex_vps_bnnr{padding:20px}vps_hosting_banner .carousel-inner{height:645px!important}.cst-rtg-tittle{min-height:40px!important}.cst-rtg-tittle img{width:100px!important}.cst-rtg-star img{width:16px!important}.bnnr-wbh-right{display:none}.hm-bnnr-cstmr-rtg{padding:40px 0 20px}}@media only screen and (max-width:567px){vps_hosting_banner .carousel-inner{height:710px!important}}
+
+
+.cstmr-rtg-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.hm-bnnr-cstmr-rtg {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px 0 20px
+}
+
+.cst-rtg-star img {
+    max-width: 25px;
+    margin: 12px 0
+}
+
+.cst-rtg-data p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    color: #28282a
+}
+
+.forex_vps_bnnr {
+    padding: 0 4rem;
+    background-image: url(/assets/images/forex_vps_hosting/forex_vps_hosting_banner_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.banner_left_s h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3838ff;
+    text-align: left;
+    background: #fff;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 25px;
+}
+
+.banner_left_s h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 0 10px
+}
+
+p.banner_data_txt {
+    font-size: 18px;
+    font-weight: 400;
+    color: #f8f8ff
+}
+
+.banner-left-s-features {
+    margin: 30px 0
+}
+
+.banner-left-s-features h3 {
+    font-size: 18px;
+    color: #303133;
+    font-weight: 700;
+    margin-bottom: 25px
+}
+
+.banner-left-s-features p,
+.banner-pricing-box {
+    font-weight: 400;
+}
+
+.banner-left-s-features p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.banner-left-s-features p i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff
+}
+
+.banner-pricing-box {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #28282a
+}
+
+.banner-pricing-box span.price {
+    font-size: 55px;
+    color: #115baa;
+    font-weight: 700
+}
+
+.banner-pricing-box span.r-icon {
+    font-size: 22px;
+    color: #115baa;
+    font-weight: 600
+}
+
+.banner-pricing-box span.free-offer {
+    font-weight: 600;
+    color: #28282a
+}
+
+.banner-left-s-features p span {
+    font-size: 18px;
+    font-weight: 900;
+    color: #28282a
+}
+
+@media only screen and (min-width:1200px) {
+    .forex_vps_bnnr {
+        height: 550px
+    }
+    .forex_vps_bnnr .bnnr-wbh-right img {
+        max-width: 90%
+    }
+}
+
+@media only screen and (min-width:1700px) {
+    .forex_vps_bnnr {
+        height: 600px
+    }
+}
+
+@media only screen and (max-width:1600px) {
+    .banner-left-s-features p {
+        font-size: 16px;
+        margin: 8px 0
+    }
+    .banner-left-s-features p span,
+    .banner-pricing-box {
+        font-size: 16px
+    }
+    .banner-pricing-box span.price {
+        font-size: 40px;
+        font-weight: 800
+    }
+    .forex_vps_bnnr {
+        padding: 40px 60px
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .banner-black-friday-offer-23-hp-main {
+        padding: 3rem 4rem
+    }
+    .bnnr-wbh-right {
+        padding-top: 40px
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .forex_vps_bnnr {
+        background-position: top
+    }
+    span.domain_tooltip_bnnr {
+        width: 280px;
+        font-size: 12px !important;
+        top: 30px;
+        bottom: inherit
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .home_page_wbh_bnnr {
+        padding: 0
+    }
+    .forex_vps_bnnr {
+        padding: 40px 10px;
+    }
+    .cst-rtg-tittle {
+        min-height: 40px !important
+    }
+    .cst-rtg-tittle img {
+        width: 100px !important
+    }
+    .cst-rtg-star img {
+        width: 16px !important
+    }
+    .bnnr-wbh-right {
+        display: none
+    }
+    .hm-bnnr-cstmr-rtg {
+        padding: 40px 0 20px
+    }
+}
+
+.price-box-bnr {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.price-box-bnr span {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* new-review-s */
+
+.review-top-main {
+    background: #3838ff;
+    text-align: center;
+}
+
+.review-top-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.review-star-icon {
+    margin: 0 10px;
+}
+
+.review-star-icon img {
+    margin: 0px 3px;
+}
+
+@media only screen and (max-width: 767px) {
+    .review-top-main {
+        display: none;
+    }
+    .banner_left_s h1,
+    p.banner_data_txt {
+        font-size: 16px;
+    }
+    .banner_left_s h2 {
+        font-size: 28px;
+    }
+    .banner-left-s-features {
+        margin: 10px 0 20px;
+    }
+}
+
+/* new-review-e */

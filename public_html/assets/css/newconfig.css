@@ -36,7 +36,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
-    color: #007aff;
+    color: #3838ff;
     margin-bottom: 15px
 }
 
@@ -353,13 +353,15 @@ a:visited {
 
 .cart-configuration span.linethrough.cpbm-mp-cut {
     display: block;
-    font-size: 16px !important;
-    top: -10px;
+    font-size: 15px !important;
+    right: 5px;
     color: #888;
     position: relative;
-    font-weight: 500 !important
+    font-weight: 400 !important
 }
-
+.plan-nm-line span.linethrough{
+    display: inline-block !important;
+}
 .cart-configuration small.cpbm-mp-mnth {
     font-size: 14px;
     display: block;
@@ -375,13 +377,13 @@ a:visited {
 }
 
 .cart-configuration span.cpbm-save.cpbms-cc {
-    background-color: #007aff
+    background-color: #3838ff
 }
 
 .cart-configuration span.cpbm-save {
     padding: 5px;
     border-radius: 30px;
-    background-color: #007aff;
+    background-color: #3838ff;
     color: #fff;
     font-weight: 500;
     position: absolute;
@@ -400,7 +402,7 @@ a:visited {
 }
 
 .cart-configuration .cpbm-stotal span.subtotal {
-    color: #115baa;
+    color: #3838ff;
     font-weight: 500;
     padding-top: 3px
 }
@@ -447,7 +449,7 @@ span#siup_in_pass {
 }
 
 .cart-configuration .radio-cycle-box.rcb-billing:hover {
-    border-color: #007aff
+    border-color: #3838ff
 }
 
 .cart-configuration .radio-cycle-box.rcb-billing.rcb-active {
@@ -512,6 +514,17 @@ span#siup_in_pass {
     margin-bottom: 20px;
 }
 
+
+
+@media only screen and (max-width:767px) {
+    .cart-configuration .field-container {
+        padding: 10px
+    }
+    .cart-configuration .c_c_box {
+        padding: 20px !important
+    }
+}
+
 @media (max-width:560px) {
     .cart-configuration .input-group {
         flex-direction: column;
@@ -525,17 +538,6 @@ span#siup_in_pass {
         width: 100% !important
     }
 }
-
-@media only screen and (max-width:767px) {
-    .cart-configuration .field-container {
-        padding: 10px
-    }
-    .cart-configuration .c_c_box {
-        padding: 20px !important
-    }
-}
-
-
 
 
 
@@ -694,9 +696,9 @@ span#siup_in_pass {
     padding: 0 0 50px;
 }
 .cart-configuration .c_c_title {
-    color: #115baa;
-    font-size: 17px;
-    font-weight: 600;
+    color: #3838ff;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 170%;
     letter-spacing: .2px;
     margin: 0 0 20px;
@@ -722,14 +724,10 @@ span#siup_in_pass {
     display: inline-block;
     vertical-align: middle;
 }
-.btn-primary:hover, .btn:hover, button:hover {
-    color: #fff !important;
-    background-color: #03305d !important;
-    border-color: #03305d !important;
-}
+
 
 .cart-configuration .c_c_title.c_c_blue-title {
-    color: #115baa;
+    color: #3838ff;
 }
 .select_domain_div {
     padding: 0;
@@ -757,9 +755,11 @@ span#siup_in_pass {
     width: 100%;
 }
 .select_domain_div .form-group .input-group .form-control {
-    border-radius: 20px;
+    border-radius: 40px;
     border-color: #e4e4e4;
     padding: 7px 150px 7px 15px;
+    border-top-right-radius: 40px !important;
+    border-bottom-right-radius: 40px !important;
 }
 .select_domain_div .form-group .input-group .btn {
     border-radius: 20px;
@@ -798,6 +798,8 @@ span#siup_in_pass {
 }
 .select_domain_div .form-group .input-group .form-control.combo_input {
     padding-right: 250px;
+    border-top-right-radius: 40px !important;
+    border-bottom-right-radius: 40px !important;
 }
 .select_domain_div .form-group .input-group .domain_combo {
     position: absolute;
@@ -822,6 +824,8 @@ span#siup_in_pass {
     line-height: 130%;
     padding: 5px 15px;
     border-radius: 7px;
+    background-color: #03305d;
+    color: #fff;
 }
 .cart-configuration .last-step-checkout .btn {
     font-size: 20px;
@@ -863,7 +867,7 @@ span#siup_in_pass {
     margin-top: 20px;
 }
 .cart-configuration .c_c_box .low-price-main .low-price {
-    color: #115baa;
+    color: #3838ff;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
@@ -962,12 +966,12 @@ span#siup_in_pass {
 .secure-payment-info .continue-checkout-portion .c_c_p_total .total-price {
     font-size: 20px;
     font-weight: inherit;
-    color: #115baa;
+    color: #3838ff;
 }
 .secure-payment-info .continue-checkout-portion .c_c_p_total .total-price .rupee, .secure-payment-info .continue-checkout-portion .c_c_p_total .total-price span {
     font-size: 18px;
     font-weight: inherit;
-    color: #115baa;
+    color: #3838ff;
 }
 .secure-payment-info .continue-checkout-portion .c_c_p_btn {
     display: inline-block;
@@ -997,7 +1001,7 @@ span#siup_in_pass {
     line-height: inherit;
     letter-spacing: inherit;
     text-transform: inherit;
-    color: #115baa;
+    color: #3838ff;
     text-decoration: underline !important;
 }
 .pull-left {
@@ -1093,10 +1097,20 @@ span#siup_in_pass {
 }
 
 
+.search-dmn-desk{
+    display: block;
+}
+.search-dmn-mo{
+    display: none;
+}
 
 
 
-
+@media only screen and (max-width: 1399px) {
+    .cart-configuration span.cpbm-mprice{
+        font-size: 22px !important;
+    }
+}
 
 @media only screen and (max-width: 1200px) {
     .about-support .support-time .b-text {
@@ -1163,7 +1177,25 @@ span#siup_in_pass {
     .secure-payment-info .continue-checkout-portion .c_c_p_total {
         display: inline-block;
     }
-
+    .domain_combo .selct_tld{
+        border: none;
+        min-width: 70px;
+        width: 100%;
+        padding-left: 12px;
+        height: 100%;
+    }
+    .search-dmn-desk{
+        display: none;
+    }
+    .search-dmn-mo{
+        display: block;
+    }
+    .select_domain_div .form-group .input-group .domain_combo{
+        right: 60px;
+    }
+    .select_domain_div .form-group .input-group .btn{
+        min-width: 50px;
+    }
 }
 @media only screen and (max-width: 600px) {
     .secure-payment-info .continue-checkout-portion .c_c_p_terms {
@@ -1345,7 +1377,7 @@ span#siup_in_pass {
     padding: 3px 10px;
     border: 1px solid #c8c8c8;
     border-radius: 6px;
-    background: #115baa;
+    background: #3838ff;
 }
 
 .order-section .empty_cart_section {
@@ -1439,7 +1471,7 @@ span#siup_in_pass {
     top: 0;
     right: 0;
     height: 35px;
-    background: #115baa;
+    background: #3838ff;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
@@ -1480,7 +1512,7 @@ span#siup_in_pass {
     font-family: FontAwesome;
     font-size: 18px;
     z-index: 1;
-    color: #115baa;
+    color: #3838ff;
     font-style: normal;
 }
 .promocode {
@@ -1773,7 +1805,7 @@ label {
     padding-bottom: 5px;
 }
 .cart-check-billing .billingform_div button.btn.save_btn {
-    background: #115baa;
+    background: #3838ff;
     color: #fff;
     width: 202px;
     font-size: 16px;

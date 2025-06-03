@@ -83,12 +83,12 @@
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    background: #18b35c;
+    background: #004898;
     color: #fff;
     text-align: center;
     font-size: 20px
 }
-.g-suite-lists .g-list-box h4 {
+.g-suite-lists .g-list-box .g-list-title {
     margin: 0 0 10px;
     font-size: 18px;
     color: #4d4d4d;

@@ -1,422 +1,825 @@
 .domanilist-banner {
+
     padding-top: 25px;
+
     padding-bottom: 25px;
+
     overflow: auto;
+
     z-index: 99;
+
     position: relative;
+
     width: 100%;
+
     background-color: #115baa;
+
 }
+
+
 
 .banner-inner {
+
     width: 100%;
+
     height: auto;
+
     background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+
     position: relative;
+
     overflow: hidden;
+
     padding: 50px 0;
+
 }
+
 .banner-inner, .banner-inner .banner-image {
+
     background-position: center;
+
     background-size: cover;
+
     background-repeat: no-repeat;
+
 }
+
 .domanilist-banner .doamin_search_div {
+
     max-width: 100%;
+
     width: 100%;
+
     position: relative;
+
     display: flex
+
 ;
+
     justify-content: space-between;
+
 }
+
 .doamin_search_div {
+
     max-width: 725px;
+
     width: 100%;
+
     position: relative;
+
 }
+
 .domanilist-banner .doamin_search_div .form-group {
+
     margin-bottom: 0;
+
     position: relative;
+
     width: calc(100% - 215px);
+
 }
+
 .doamin_search_div .dropdown-bulk {
+
     position: absolute;
+
     right: 50px;
+
     top: 0;
+
 }
+
 .domanilist-banner .doamin_search_div .form-group .btn {
+
     position: absolute;
+
     right: 0;
+
     top: 0;
+
     height: 45px;
+
     font-size: 20px;
-    color: #fff;
+
+    color: #000;
+
     border-radius: 0 5px 5px 0;
+
 }
+
+
 
 .doamin_search_div .dropdown-bulk .btn {
+
     background: 0 0;
+
     color: #333;
+
     font-size: 14px;
+
     font-weight: 500;
+
     letter-spacing: 1px;
+
 }
-.doamin_search_div .dropdown-bulk .btn:after {
+
+/*.doamin_search_div .dropdown-bulk .btn:after {
+
     content: "\f110";
+
     font: normal normal normal 16px / 1 Fontawesome;
+
     border-top: none;
+
     font-size: 13px;
+
     font-weight: 400;
+
     letter-spacing: 1px;
+
     position: absolute;
+
     left: -8px;
+
     right: auto;
+
     top: 16px;
+
     margin: 0;
-}
+
+}*/
+
 .doamin_search_div .dropdown-bulk ul.dropdown-menu {
+
     z-index: 1;
+
     border: 1px solid #e4e4e4;
+
     -webkit-box-shadow: 3px 4px 14px rgba(0, 0, 0, .33);
+
     box-shadow: 3px 4px 14px rgba(0, 0, 0, .33);
+
     border-radius: 3px;
+
     margin: 0;
+
     padding: 0;
+
 }
+
 .doamin_search_div .dropdown-bulk ul.dropdown-menu li {
+
     margin: 0;
+
 }
+
 .doamin_search_div .dropdown-bulk ul.dropdown-menu li a {
+
     color: #666;
+
     display: block;
+
     border-bottom: 1px solid #e4e4e4;
+
     font-size: 13px;
+
     font-weight: 500;
+
     letter-spacing: 1px;
+
     padding: 6px 10px;
-}
-.domanilist-banner .doamin_search_div .form-group .form-control {
-    margin-bottom: 15px;
+
 }
 
 .domanilist-banner .doamin_search_div .form-group .form-control {
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.domanilist-banner .doamin_search_div .form-group .form-control {
+
     height: 45px;
+
     border: none;
+
     border-radius: 8px;
+
     color: #262626;
+
     font-size: 16px;
+
     font-weight: 500;
+
     line-height: 34px;
+
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1), 0 1px 18px 0 rgba(0, 0, 0, .1), 0 3px 5px -1px rgba(0, 0, 0, .1);
+
     padding-right: 183px;
+
 }
+
 .domanilist-banner .doamin_search_div .form-group .form-control, .getquestion-div #accordion .card .card-body, .navbar-header ul.navbar .megamenu .menu_04 .month-offer .btn {
+
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1), 0 1px 18px 0 rgba(0, 0, 0, .1), 0 3px 5px -1px rgba(0, 0, 0, .1);
+
 }
+
 .domanilist-banner .doamin_search_div .form-group .form-control, .getquestion-div #accordion .card .card-body, .navbar-header ul.navbar .megamenu .menu_04 .month-offer .btn {
+
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1), 0 1px 18px 0 rgba(0, 0, 0, .1), 0 3px 5px -1px rgba(0, 0, 0, .1);
+
 }
+
 .doamin_search_div .form-group .form-control {
+
     height: 45px;
+
     border: none;
+
     border-radius: 8px;
+
     color: #262626;
+
     font-size: 16px;
+
     font-weight: 500;
+
     line-height: 34px;
+
     -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1), 0 1px 18px 0 rgba(0, 0, 0, .1), 0 3px 5px -1px rgba(0, 0, 0, .1);
+
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1), 0 1px 18px 0 rgba(0, 0, 0, .1), 0 3px 5px -1px rgba(0, 0, 0, .1);
+
     padding-right: 183px;
+
 }
+
 .form-control {
+
     display: block;
+
     width: 100%;
+
     padding: .375rem .75rem;
+
     font-size: 1rem;
+
     line-height: 1.5;
+
     color: #495057;
+
     background-color: #fff;
+
     border: 1px solid #ced4da;
+
     border-radius: .25rem;
+
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
     box-shadow: none;
+
 }
-.domanilist-banner .doamin_search_div .form-group .btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 45px;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-}
+
+
+
 .domanilist-banner .doamin_search_div .form-group .btn i {
+
     color: inherit;
+
 }
+
 .domanilist-banner .doamin_search_div a.btn {
+
     display: inline-block;
+
     height: 45px;
+
     line-height: 32px;
+
     background-color: #18b35c;
+
     color: #fff;
+
 }
+
 .selected_domain_text {
+
     text-align: right;
+
     margin-top: 10px;
+
     font-size: 14px;
+
     font-weight: 600;
+
     line-height: 150%;
+
     letter-spacing: .5px;
+
     color: #fff;
+
 }
+
 .domainlist-page {
+
     padding-top: 15px;
+
     padding-bottom: 15px;
+
 }
+
 .domainlist-page .domain_status_note {
+
     font-size: 20px;
+
     font-weight: 400;
+
     line-height: 150%;
+
     letter-spacing: .5px;
+
     color: #4d4d4d;
+
     display: block;
+
     margin-bottom: 25px;
+
     margin-top: 10px;
+
 }
+
 .domainlist-page .available_main {
+
     width: 100%;
+
     overflow: hidden;
+
     margin-bottom: 15px;
+
     background: url(../images/available_domain.jpg) right center no-repeat #e3e5e6;
+
     background-size: cover;
+
     border-radius: 8px;
+
     border: 1px solid #c8c8c8;
+
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, .08);
+
     padding: 15px 10px;
+
 }
+
 .domainlist-page .available_main .available_domain {
+
     position: relative;
+
     padding-left: 40px;
+
 }
+
 .domainlist-page .available_main .available_domain i {
+
     color: #18b35c;
-    font-size: 40px;
+
+    font-size: 32px;
+
     position: absolute;
+
     left: 0;
-    top: -4px;
+
+    top: 0px;
+
 }
+
 .domainlist-page .available_main .available_domain .domain_name {
+
     font-size: 20px;
+
     font-weight: 600;
+
     line-height: 150%;
+
     letter-spacing: 1px;
+
     color: #4d4d4d;
+
     width: 100%;
+
     word-wrap: break-word;
+
 }
+
 .domainlist-page .available_main .available_domain .domain_name span {
+
     font-size: inherit;
+
     font-weight: 300;
+
     color: #4d4d4d;
+
 }
+
 .domainlist-page .available_main .domain_price .price {
+
     font-size: 20px;
+
     font-weight: 600;
+
     margin-right: 0;
+
     color: #115baa;
+
 }
+
 .domainlist-page .available_main .domain_price .price .rupees_ico {
-    font-family: "Open Sans";
-    font-size: inherit;
-    font-weight: inherit;
-    color: inherit;
+
+    margin-right: 4px;
+
 }
+
 .domainlist-page .available_main .domain_price .btn {
+
     border-radius: 5px;
+
     min-height: auto;
+
     padding: 12px 20px;
+
     background-color: #18b35c;
+
     color: #fff;
-}
-.domainlist-page .available_main .renewal_txt {
-    margin-top: 5px;
+
 }
 
 .domainlist-page .available_main .renewal_txt {
+
+    margin-top: 5px;
+
+}
+
+
+
+.domainlist-page .available_main .renewal_txt {
+
     text-align: right;
+
     display: block;
+
     font-size: 12px;
+
     font-weight: 500;
+
     line-height: 150%;
+
     letter-spacing: 1px;
+
     color: #4d4d4d;
+
 }
+
 .domainlist-page .available_main .renewal_txt .rupees_ico {
+
     font-family: "Open Sans";
+
     font-size: inherit;
+
     font-weight: inherit;
+
     color: inherit;
+
     display: inline-block;
+
     margin-right: 2px;
+
     margin-top: 2px;
+
 }
+
 .domainlist-page .available_main .more_available_items {
+
     border-top: 1px solid #c8c8c8;
+
     padding-top: 15px;
+
     margin-top: 15px;
+
     width: 100%;
+
 }
+
 .domainlist-page .available_main .domain_price .item_price_big {
+
     text-align: right;
+
     margin-right: 15px;
+
 }
+
 .domainlist-page .available_main .more_available_items .domain_price .item_price_big .price {
+
     font-size: 14px;
+
     font-weight: 600;
+
     margin-right: 0;
+
     color: #115baa;
+
 }
+
 .domainlist-page .available_main .more_available_items .domain_price .btn {
+
     padding: 8px;
+
     font-size: 12px;
+
     line-height: 140%;
-    height: 30px;
+
     background-color: #18b35c;
+
     color: #fff;
+
 }
+
 .domainlist-page .available_main .domain_price .btn {
+
     border-radius: 5px;
+
     min-height: auto;
+
     padding: 12px 20px;
+
 }
+
+
+
+
+
+
 
 
 
 
 
 .domainlist-page .domain_info_btns {
+
     margin-bottom: 15px;
+
     margin-top: 5px;
-}
-.domainlist-page .domain_info_btns .btn.fill {
-    background: #4d4d4d;
-    color: #fff;
+
 }
 
-.domainlist-page .domain_info_btns .btn {
-    min-height: auto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: 0;
-    background: #fff;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 3px;
-    padding: 3px 8px;
-}
-.domainlist-page .domain_info_btns .btn.fill span {
+.domainlist-page .domain_info_btns .btn.fill {
+
+    background: #4d4d4d;
+
     color: #fff;
+
 }
+
+
+
+.domainlist-page .domain_info_btns .btn {
+
+    min-height: auto;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 150%;
+
+    letter-spacing: 0;
+
+    background: #fff;
+
+    background: rgba(255, 255, 255, 0);
+
+    border-radius: 3px;
+
+    padding: 3px 8px;
+
+}
+
+.domainlist-page .domain_info_btns .btn.fill span {
+
+    color: #fff;
+
+}
+
 .domainlist-page .domain_info_btns .btn span {
+
     font-weight: 600;
+
     color: #4d4d4d;
+
 }
+
 .domainlist-page .domain_info_btns .btn.border_btn {
+
     border: 1px solid #4d4d4d;
+
     color: #4d4d4d;
+
 }
+
+
+
+
+
 
 
 
 
 .domainlist-page .domain_list_table {
+
     position: relative;
+
     border-radius: 10px;
+
     overflow: hidden;
+
     border: 1px solid #f0f0f0;
+
     margin-bottom: 30px;
-}
-body table {
-    width: 100%;
-    margin-bottom: 15px;
-    border: 1px solid #e0e0e0;
-}
-body table tr th, body table tr:nth-of-type(odd) {
-    background-color: #f0f0f0;
-}
-body table tr th {
-    border-bottom: 1px solid #e0e0e0;
-    color: #000;
+
 }
 
-body table tr td, body table tr th {
-    font-size: 16px;
-    line-height: 150%;
-    color: #a6a6a6;
+body table {
+
+    width: 100%;
+
+    margin-bottom: 15px;
+
     border: 1px solid #e0e0e0;
-    padding: 8px;
+
+}
+
+body table tr th, body table tr:nth-of-type(odd) {
+
+    background-color: #f0f0f0;
+
+}
+
+body table tr th {
+
+    border-bottom: 1px solid #e0e0e0;
+
     color: #000;
+
 }
+
+
+
+body table tr td, body table tr th {
+
+    font-size: 16px;
+
+    line-height: 150%;
+
+    color: #a6a6a6;
+
+    border: 1px solid #e0e0e0;
+
+    padding: 8px;
+
+    color: #000;
+
+}
+
 .domainlist-page .filter-arrow {
+
     display: inline-block;
+
     vertical-align: middle;
+
     margin-left: 5px;
+
 }
+
 .domainlist-page .filter-arrow .top-arrow {
+
     border-bottom: 8px solid grey;
+
     margin-bottom: 1px;
+
 }
+
+
 
 .domainlist-page .filter-arrow .bottom-arrow, .domainlist-page .filter-arrow .top-arrow {
+
     display: block;
+
     width: 0;
+
     height: 0;
+
     border-left: 5px solid transparent;
+
     border-right: 5px solid transparent;
+
     transition: .4s;
+
     cursor: pointer;
-}
-.domainlist-page .filter-arrow .bottom-arrow {
-    border-top: 8px solid grey;
-}
-body table tr:first-of-type td {
-    background-color: #f0f0f0;
-    color: #000;
+
 }
 
-body table tr td, body table tr th {
-    font-size: 16px;
-    line-height: 150%;
-    color: #a6a6a6;
-    border: 1px solid #e0e0e0;
-    padding: 8px;
-    color: #28282a;
+.domainlist-page .filter-arrow .bottom-arrow {
+
+    border-top: 8px solid grey;
+
 }
-.c-radio-btn {
-    position: relative;
-    padding-right: 25px;
-}
-.domain_list_table .c-radio-btn .custom-radio {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 0;
-    color: #115baa;
-    display: inline-block;
-    max-width: 430px;
-    text-overflow: ellipsis;
-    overflow-wrap: break-word;
-    padding: 0 0 0 25px;
-}
-#domain_table .btn {
-    padding: 10px 16px;
-    background-color: #18b35c;
-    border-radius: 40px;
-    color: #fff;
-    margin-left: 10px;
-}
-span#filter_price {
+
+body table tr:first-of-type td {
+
+    background-color: #f0f0f0;
+
     color: #000;
+
 }
+
+
+
+body table tr td, body table tr th {
+
+    font-size: 16px;
+
+    line-height: 150%;
+
+    color: #a6a6a6;
+
+    border: 1px solid #e0e0e0;
+
+    padding: 8px;
+
+    color: #28282a;
+
+}
+
+.c-radio-btn {
+
+    position: relative;
+
+    padding-right: 25px;
+
+}
+
+.domain_list_table .c-radio-btn .custom-radio {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    margin-bottom: 0;
+
+    color: #115baa;
+
+    display: inline-block;
+
+    max-width: 430px;
+
+    text-overflow: ellipsis;
+
+    overflow-wrap: break-word;
+
+    padding: 0 0 0 25px;
+
+}
+
+#domain_table .btn {
+
+    padding: 10px 16px;
+
+    background-color: #18b35c;
+
+    border-radius: 40px;
+
+    color: #fff;
+
+    margin-left: 10px;
+
+}
+
+span#filter_price {
+
+    color: #000;
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -426,182 +829,395 @@ span#filter_price {
 
 
 .domainlist-page .left_panel .extension_part {
+
     overflow: hidden;
+
     border-radius: 10px;
+
     background: #f8fbfe;
+
     padding-bottom: 5px;
+
     border: 1px solid #e4e4e4;
+
     margin-bottom: 20px;
+
 }
+
 .domainlist-page .left_panel .extension_part h3 {
+
     font-size: 15px;
+
     font-weight: 700;
+
     line-height: 150%;
+
     letter-spacing: 1px;
+
     background: #f0f0f0;
+
     margin: 0;
+
     color: #262626;
+
     padding: 15px;
+
 }
+
 .domainlist-page .left_panel .extension_part .extension_list {
+
     padding-left: 15px;
+
     padding-right: 15px;
+
     padding-top: 15px;
+
     margin-bottom: 10px;
+
     height: 250px;
+
 }
+
 .mCustomScrollBox {
+
     position: relative;
+
     overflow: hidden;
+
     height: 100%;
+
     max-width: 100%;
+
     outline: 0;
+
     direction: ltr;
+
 }
+
 .domainlist-page .left_panel .extension_part .extension_list .name {
+
     margin-top: 0;
+
     margin-bottom: 13px;
+
 }
+
 .domainlist-page .left_panel .extension_part .extension_list .name .c-radio-btn {
+
     padding-left: 0;
+
     padding-right: 0;
+
 }
+
+
 
 .c-radio-btn {
+
     position: relative;
+
     padding-right: 25px;
-}
-.domainlist-page .left_panel .extension_part .extension_list .name .c-radio-btn .custom-radio {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 0;
-    color: #262626;
-    display: inline-block;
-    padding: 0 0 0 25px;
-}
-.custom-radio input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    width: 100% !important;
-    left: 0;
-    height: 100%;
-}
-.domainlist-page .left_panel .extension_part .extension_list .name .c-radio-btn .custom-radio .checkmark {
-    border-radius: 3px;
-    top: 2px;
+
 }
 
-.checkmark {
-    height: 17px;
-    width: 17px;
-    border: 1px solid;
-    position: absolute;
-    left: 0;
-    right: auto;
-    top: 3px;
-}
-.checkmark, .custom-radio input:checked~.checkmark {
-    background-color: transparent;
-}
-.domainlist-page .left_panel .extension_part .clear_list_link {
-    margin-left: 15px;
-    margin-bottom: 25px;
-    display: inline-block;
-}
-.domainlist-page .left_panel .extension_part .checkbox_div .listing {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid #e4e4e4;
-}
-.domainlist-page .left_panel .extension_part .checkbox_div .listing .c-radio-btn {
-    padding-left: 0;
-    padding-right: 0;
-}
-.domainlist-page .left_panel .extension_part .checkbox_div .listing .c-radio-btn .custom-radio {
-    font-size: 14px;
+.domainlist-page .left_panel .extension_part .extension_list .name .c-radio-btn .custom-radio {
+
+    font-size: 15px;
+
     font-weight: 600;
+
     margin-bottom: 0;
+
     color: #262626;
+
     display: inline-block;
+
     padding: 0 0 0 25px;
+
 }
+
+.custom-radio input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    width: 100% !important;
+
+    left: 0;
+
+    height: 100%;
+
+}
+
+.domainlist-page .left_panel .extension_part .extension_list .name .c-radio-btn .custom-radio .checkmark {
+
+    border-radius: 3px;
+
+    top: 2px;
+
+}
+
+
+
+.checkmark {
+
+    height: 17px;
+
+    width: 17px;
+
+    border: 1px solid;
+
+    position: absolute;
+
+    left: 0;
+
+    right: auto;
+
+    top: 3px;
+
+}
+
+.checkmark, .custom-radio input:checked~.checkmark {
+
+    background-color: transparent;
+
+}
+
+.domainlist-page .left_panel .extension_part .clear_list_link {
+
+    margin-left: 15px;
+
+    margin-bottom: 25px;
+
+    display: inline-block;
+
+}
+
+.domainlist-page .left_panel .extension_part .checkbox_div .listing {
+
+    padding-top: 15px;
+
+    padding-bottom: 15px;
+
+    border-top: 1px solid #e4e4e4;
+
+    padding-left: 15px;
+
+}
+
+.domainlist-page .left_panel .extension_part .checkbox_div .listing .c-radio-btn {
+
+    padding-left: 0;
+
+    padding-right: 0;
+
+}
+
+.domainlist-page .left_panel .extension_part .checkbox_div .listing .c-radio-btn .custom-radio {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 0;
+
+    color: #262626;
+
+    display: inline-block;
+
+    padding: 0 0 0 25px;
+
+}
+
+
+
+
+
+
 
 
 
 
 
 .domainlist-page .left_panel .all_domain_div {
+
     overflow: hidden;
+
     border-radius: 10px;
+
     background: #f8fbfe;
+
     border: 1px solid #e4e4e4;
+
     margin-bottom: 20px;
-}
-.domainlist-page .left_panel .all_domain_div h3 {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 1px;
-    background: #f0f0f0;
-    margin: 0;
-    color: #262626;
-    padding: 15px;
-}
-.domainlist-page .left_panel .all_domain_div ul.domain_list {
-    padding: 20px 15px;
-}
-.domainlist-page .left_panel .all_domain_div ul.domain_list li {
-    padding-left: 40px;
-    margin-top: 0;
-    margin-bottom: 23px;
-    position: relative;
-    color: #4d4d4d;
-    font-size: 13px .5;
-    font-weight: 500;
-    line-height: 150%;
-    display: block;
-}
-.domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.domainforward_icon {
-    width: 27px;
-    height: 28px;
-    background-position: 0 -1px;
+
 }
 
+.domainlist-page .left_panel .all_domain_div h3 {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 150%;
+
+    letter-spacing: 1px;
+
+    background: #f0f0f0;
+
+    margin: 0;
+
+    color: #262626;
+
+    padding: 15px;
+
+}
+
+.domainlist-page .left_panel .all_domain_div ul.domain_list {
+
+    padding: 20px 15px !important;
+
+}
+
+.domainlist-page .left_panel .all_domain_div ul.domain_list li {
+
+    padding-left: 40px;
+
+    margin-top: 0;
+
+    margin-bottom: 23px;
+
+    position: relative;
+
+    color: #4d4d4d;
+
+    font-size: 13px .5;
+
+    font-weight: 500;
+
+    line-height: 150%;
+
+    display: block;
+
+}
+
+.domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.domainforward_icon {
+
+    width: 27px;
+
+    height: 28px;
+
+    background-position: 0 -1px;
+
+}
+
+
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite {
+
     background-image: url(../images/domain_sprite.png);
+
     background-repeat: no-repeat;
+
     position: absolute;
+
     left: 0;
+
     top: -4px;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.urlmasking_icon {
+
     width: 28px;
+
     height: 27px;
+
     background-position: -39px -1px;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.dns_icon {
+
     width: 28px;
+
     height: 27px;
+
     background-position: -80px -2px;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.protection_icon {
+
     width: 28px;
+
     height: 27px;
+
     background-position: -120px -1px;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.bulk_icon {
+
     width: 28px;
+
     height: 28px;
+
     background-position: -161px -1px;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.controlpanel_icon {
+
     width: 27px;
+
     height: 28px;
+
     background-position: -200px 0;
+
 }
+
 .domainlist-page .left_panel .all_domain_div ul.domain_list li .domain_sprite.support_icon {
+
     width: 27px;
+
     height: 28px;
+
     background-position: -240px -1px;
+
+}
+span.added-list.remove_span {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .domanilist-banner .doamin_search_div{
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+    .domanilist-banner .doamin_search_div .form-group{
+
+        width: auto;
+
+    }
+
 }

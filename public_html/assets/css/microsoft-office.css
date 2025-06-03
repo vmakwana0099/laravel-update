@@ -292,6 +292,7 @@
 
 .g-suite-lists .g_s_l-box {
     margin-bottom: 20px;
+    position: relative;
 }
 .office365-lists .g-icons.first-impression {
     background-position: 0 0;
