@@ -381,7 +381,8 @@ $Slide++;
 
                         <div class="col-sm-12">
 
-                            <h2 class="text-center fnd_prfct_dmn text-cstm-clr">Perfect Domain Name is Just a Search Away 456</h2>
+
+                            <h2 class="text-center fnd_prfct_dmn text-cstm-clr">Perfect Domain Name is Just a Search Away 891</h2>
 
                             <form class="domain-search-form" id="domainlookupfrm" onsubmit="margetlds()" autocomplete="off" name="domainlookupfrm" action="{{url('/domain-checker')}}" method="post" novalidate="novalidate">
 
