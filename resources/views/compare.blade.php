@@ -118,13 +118,13 @@
                     <div class="chartBars"> 
                         <ul class="bars">  
                             <li> 
-                                <div data-percentage="40" class="bar greenBarFlat"></div><img src="{{url('/')}}/assets/images/logo.png" class="hostitsmart-logo" alt="Hostitsmart"/></li>
+                                <div data-percentage="40" class="bar greenBarFlat"></div><img src="{{url('/')}}/assets/images/logo.webp" class="hostitsmart-logo" alt="Hostitsmart"/></li>
                             <li>
-                                <div data-percentage="60" class="bar orangeBarFlat"></div><img src="{{url('/')}}/assets/images/fastcomet-big.png" alt="FastComet" /></li>
+                                <div data-percentage="60" class="bar orangeBarFlat"></div><img src="{{url('/')}}/assets/images/fastcomet-big.webp" alt="FastComet" /></li>
                             <li>
-                                <div data-percentage="85" class="bar blueBarFlat"></div><img src="{{url('/')}}/assets/images/godaddy-big.png" alt="godaddy"/></li>
+                                <div data-percentage="85" class="bar blueBarFlat"></div><img src="{{url('/')}}/assets/images/godaddy-big.webp" alt="godaddy"/></li>
                             <li>
-                                <div data-percentage="90" class="bar purpleBarFlat"></div><img src="{{url('/')}}/assets/images/bluehost-logo-big.png" alt="godaddy"/></li>
+                                <div data-percentage="90" class="bar purpleBarFlat"></div><img src="{{url('/')}}/assets/images/bluehost-logo-big.webp" alt="godaddy"/></li>
                             <li>
                                 <div data-percentage="100"  class="bar yellowBarFlat"> </div><img src="assets/images/inmotion.svg" alt="Inmotions"/></li>
                         </ul>

@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="domain_images">
-                        <img style="max-width: 100%;" alt=".com" src="../assets/images/com-logo1437112107.png">
+                        <img style="max-width: 100%;" alt=".com" src="../assets/images/com-logo1437112107.webp">
                     </div>
                 </div>
             </div>

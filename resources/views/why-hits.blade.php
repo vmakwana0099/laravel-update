@@ -399,7 +399,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/servers/vps-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/servers/vps-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>

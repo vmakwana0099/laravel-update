@@ -118,7 +118,7 @@
 
                                 <div class="thumbnail">
 
-                                    <img src="{{Config::get('Constant.CDNURL')}}/assets/images/about_cpanel.png" alt="2018"/>
+                                    <img src="/assets/images/about_cpanel.webp" alt="2018"/>
 
                                 </div>
 
@@ -144,7 +144,7 @@
 
                                 <div class="thumbnail">
 
-                                    <img src="{{Config::get('Constant.CDNURL')}}/assets/images/about_cloudlinux.png" alt="2017"/>
+                                    <img src="/assets/images/about_cloudlinux.webp" alt="2017"/>
 
                                 </div>
 
@@ -224,7 +224,7 @@
 
                                 <div class="thumbnail">
 
-                                    <img src="{{Config::get('Constant.CDNURL')}}/assets/images/about_icann.png" alt="2016"/>
+                                    <img src="/assets/images/about_icann.webp" alt="2016"/>
 
                                 </div>
 
@@ -250,7 +250,7 @@
 
                                 <div class="thumbnail">
 
-                                    <img src="{{Config::get('Constant.CDNURL')}}/assets/images/about_partners_microsoft.png" alt="2015"/>
+                                    <img src="/assets/images/about_partners_microsoft.webp" alt="2015"/>
 
                                 </div>
 
@@ -332,7 +332,7 @@
 
                                     <div class="thumbnail">
 
-                                        <img src="{{Config::get('Constant.CDNURL')}}/assets/images/logo.png" alt="2014"/>
+                                        <img src="/assets/images/logo.webp" alt="2014"/>
 
                                     </div>
 
@@ -362,7 +362,7 @@
 
                                     <div class="thumbnail">
 
-                                        <img src="{{Config::get('Constant.CDNURL')}}/assets/images/about_google_partner.png" alt="2013"/>
+                                        <img src="/assets/images/about_google_partner.webp" alt="2013"/>
 
                                     </div>
 
@@ -424,7 +424,7 @@
 
                                     <div class="company-text">
 
-                                        Mr.Kartik Mehta has founded {{ Config::get('Constant.SITE_NAME') }} with the aim of providing domain and technology loaded Web Hosting service.
+                                        {{ Config::get('Constant.SITE_NAME') }} was founded with the aim of providing domain and technology loaded Web Hosting service.
 
                                     </div>
 
@@ -446,7 +446,7 @@
 
                                     <div class="thumbnail">
 
-                                        <img src="{{Config::get('Constant.CDNURL')}}/assets/images/logo.png" alt="2012"/>
+                                        <img src="/assets/images/logo.webp" alt="2012"/>
 
                                     </div>
 

@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-7 col-lg-6">
                 <div class="hstng-content-wrap">
-                    <h3 class="">Quality Hardware For Powering Your Online Presence</h3>
+                    <span class="">Quality Hardware For Powering Your Online Presence</span>
                <p>At Host IT Smart, we understand that successful websites rely on powerful hardware, so we invest in top-tier servers and infrastructure to guarantee optimal performance regardless of traffic volume.</p>
                <p>Our VPS servers, equipped with robust 2x20 Intel Xeon Gold Processor CPUs, ensure your website can effortlessly handle heavy traffic and complex operations. In addition, our shared hosting servers are built on redundant cloud infrastructure, offering an extra layer of reliability and performance.</p>
              </div>
@@ -24,7 +24,7 @@
         <div class="row align-items-center justify-content-between mt-5">
             <div class="col-md-7 col-lg-6">
                 <div class="hstng-content-wrap">
-                    <h3 class="">Robust Hosting Solutions for Smooth Website Operations</h3>
+                    <span class="">Robust Hosting Solutions for Smooth Website Operations</span>
                     <p>At Host IT Smart, we offer robust hosting systems designed to ensure your websites run smoothly without any technical hiccups. We proudly own and fully control our infrastructure for virtual servers. It is built on high-grade devices and equipped with contingencies that leave zero room for errors.</p>
                     <p>We also provide servers and network devices with a manufacturer’s warranty, ensuring peace of mind and quality assurance. For shared hosting, we go the extra mile with automated weekly snapshots of the server, in addition to backups, ensuring you never lose crucial data.</p>
                 </div>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-7 col-lg-6">
                 <div class="hstng-content-wrap">
-                    <h3 class="">Experience Lightning-Fast Connectivity and Low Latency</h3>
+                    <span class="">Experience Lightning-Fast Connectivity and Low Latency</span>
                     <p>Our fast connectivity and low latency are not just promises but realities that power your online presence! Our data infrastructure is built for lightning-fast connectivity, ensuring your website loads in the blink of an eye.</p>
                     <p>You will get the benefit from our Class A Internet Service Provider status and high-speed NVMe SSD servers, which maximize the speed and performance of your online project.</p>
                 </div>
@@ -70,7 +70,7 @@
                             <div class="mig-tra-image">
                                 <img  loading="lazy" src="assets/images/Homepage/domain_transfer.webp" alt="domain_transfer">
                             </div>
-                            <h3 class="text-cstm-clr">Domain Transfer</h3>
+                            <span class="text-cstm-clr">Domain Transfer</span>
                             <p>Transfer your Domain to {{ Config::get('Constant.SITE_NAME') }} for great performance and ease of web management! {{ Config::get('Constant.SITE_NAME') }}'s Domain Management comes with good Cost Benefits so that you can direct your precious resources to other areas of business growth, and we provide Constant Support to help you deal with any and all web challenges that you may ever encounter. </p>
                         </div>
                         <div class="action-btns mt-4">
@@ -82,7 +82,7 @@
                             <div class="mig-tra-image">
                                 <img  loading="lazy" src="assets/images/Homepage/website_migration.webp" alt="website_migration">
                             </div>
-                            <h3 class="text-cstm-clr">Website Migration</h3>
+                            <span class="text-cstm-clr">Website Migration</span>
                             <p>Being able to manage your Hosting and all your Domains in one place is a great advantage! You can save a lot of time and efforts by doing so. But more importantly, with all your domains centralized with us, you will never miss your renewal deadlines, sparing you any potential loss of your web identity. Let us help you migrate to {{ Config::get('Constant.SITE_NAME') }}! </p>
                         </div>
                         <div class="action-btns mt-4">
@@ -114,7 +114,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Promising Performance</h3>
+                                    <div class="card-promo-title">Promising Performance</div>
                                     <p class="mb-0">At Host IT Smart, we deliver blazing-fast speeds tailored to keep your website running smoothly, ensuring a seamless experience for your visitors. With our industry-leading 99.9% uptime guarantee, you can count on your site being available around the clock, giving your business the reliability and performance it deserves.</p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Flexible Options</h3>
+                                    <div class="card-promo-title">Flexible Options</div>
                                     <p class="mb-0">Whether you're a small startup or a growing enterprise, our high-performance hosting plans are designed to scale with your needs. Start small and seamlessly upgrade as your business expands, ensuring you always have the power and flexibility to support your growth.</p>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Incredibly Inexpensive</h3>
+                                    <div class="card-promo-title">Incredibly Inexpensive</div>
                                     <p class="mb-0">Our hosting plans are crafted to be incredibly affordable, offering top-tier services at prices that suit businesses of every size and budget. Whether you're a small startup or a growing enterprise, our flexible pricing ensures you get the performance you need without breaking the bank.</p>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Strong Security</h3>
+                                    <div class="card-promo-title">Strong Security</div>
                                     <p class="mb-0">Our hosting platform is designed to provide top-tier protection for your website, ensuring that your data and transactions remain safe. With built-in free SSL encryption, you get a secure connection that shields your site from vulnerabilities, safeguarding your business and visitors with confidence.</p>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Quality Assurance</h3>
+                                    <div class="card-promo-title">Quality Assurance</div>
                                     <p class="mb-0">At Host IT Smart, we believe in delivering the best for our customers, which is why we proudly offer a 30-day money-back guarantee. This means you can experience our exceptional services risk-free! Whether you’re starting a new website or migrating an existing one, we invite you to try Host IT Smart now!</p>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                                     </span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h3 class="h5">Everpresent Support</h3>
+                                    <div class="card-promo-title">Everpresent Support</div>
                                     <p class="mb-0">Experience unparalleled assistance with our 24/7 chat support available year-round! No matter the time or day, our dedicated team is just a click away, ready to address your questions and resolve any issues you may encounter. </p>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">SSD Storage</h3>
+                                <div class="text-cstm-clr h5">SSD Storage</div>
                                 <p class="mb-0">We employ the new-age Solid State Drives for Storage that offers fast, smooth function, along with strong security. SSD servers can be up to 3X faster and offer more reliability. </p>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">Powerful Enterprise Servers</h3>
+                                <div class="text-cstm-clr h5">Powerful Enterprise Servers</div>
                                 <p class="mb-0">{{ Config::get('Constant.SITE_NAME') }} maintains powerful servers that offer high performance and reliability. Our servers offer large memory, high IOPS, and better Virtualization. </p>
                             </div>
                         </div>
@@ -229,7 +229,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">Easily Scalable</h3>
+                                <div class="text-cstm-clr h5">Easily Scalable</div>
                                 <p class="mb-0">Our services can keep up with rapid growth and exponential audience activities by offering extra Compute, RAM, and Storage on demand. </p>
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">Advanced Level Security</h3>
+                                <div class="text-cstm-clr h5">Advanced Level Security</div>
                                 <p class="mb-0">We conduct regular malware-scanning with special tools that offer enhanced Server Security from infected files along with Anti-DDos protection to ensure Network Protection and Data Confidentiality. </p>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">User-Friendly cPanel</h3>
+                                <div class="text-cstm-clr h5">User-Friendly cPanel</div>
                                 <p class="mb-0">{{ Config::get('Constant.SITE_NAME') }} offers the feature-rich c-Panel along with CloudLinux hosted on Cloud to help you easily manage Domains, Databases, Emails, and Backups.</p>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">WordPress Optimized</h3>
+                                <div class="text-cstm-clr h5">WordPress Optimized</div>
                                 <p class="mb-0">For those opting for WordPress, we have special servers for you that are specially optimized for hosting WordPress websites. These add performance points to your website and offer stronger security.</p>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">1-Click Installs</h3>
+                                <div class="text-cstm-clr h5">1-Click Installs</div>
                                 <p class="mb-0">Our hosting comes with robust 1-click install Apps, and over 380 scripts to help you with all your dreams.</p>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">Free SSL Certificate</h3>
+                                <div class="text-cstm-clr h5">Free SSL Certificate</div>
                                 <p class="mb-0">Your hosting comes with Secure Sockets Layer or (SSL) Security Certification which ensures data encryption for security against data leaks or thefts. </p>
                             </div>
                         </div>
@@ -277,7 +277,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="hosting-feature">
                             <div class="pt-2 pb-3">
-                                <h3 class="text-cstm-clr h5">Latest Operating System and applications</h3>
+                                <div class="text-cstm-clr h5">Latest Operating System and applications</div>
                                 <p class="mb-0">Consistent Updates are an advantage. We employ the most dependable and latest Operating Systems and Applications for better security and higher performance. </p>
                             </div>
                         </div>

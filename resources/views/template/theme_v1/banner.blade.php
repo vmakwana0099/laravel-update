@@ -367,59 +367,79 @@ $Slide++;
 
     @if(request()->route()->getName() == 'home')
 
-                 <section class="position-relative find-search-box zindex-2">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12">
-                <div class="domain-search-wrap">
-                    <div class="row justify-content-center align-items-center">
-                    <div class="col-sm-12">
-                    <h2></h2>
-                    <h3></h3>
-                    <h4 class="text-center fnd_prfct_dmn text-cstm-clr">Find the Perfect Address for your Website!</h4>
-                    <form class="domain-search-form" id="domainlookupfrm" onsubmit="margetlds()" autocomplete="off" name="domainlookupfrm" action="{{url('/domain-checker')}}" method="post" novalidate="novalidate">
-                        <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}"/>
-                        <input type="hidden" name="hide_tlddata" id="hide_tlddata" value="{{$Tlds}}" />
-                        <input type="hidden" name="domain_search" id="domain_search" value="y" />
-                        <input type="text" id="domain_name" name="domainname" class="form-control gray-light-bg" placeholder="Search Your Domain" />
-                        {{-- <div class="select-group">
-                            <select name="selcetlds" id="selcetlds" class="form-control">
-                                @foreach($FeaturedTlds as $tlddata)
-                                    <option value="{{ $tlddata->varTitle }}">.{{ $tlddata->varTitle }}</option>
-                                @endforeach
-                            </select>
-                        </div> --}}
-                        <div class="">
-                            <button type="submit" class="btn btn-brand-01 dsf-button" style="border-radius: 30px"><img src="../assets/images/Homepage/search.webp" alt="search"></button>
-                        </div>
-                    </form>
-                    <div class="domain-list-wrap text-center mt-4">
-                        <ul class="list-inline domain-search-list">
-                            @foreach($FeaturedTlds as $tlddata)
-                            @php 
-                                $width = 0;
-                                $height = 0;
+                <section class="find-search-box head-tb-p-40">
 
-                                if (strtolower($tlddata->varTitle) == "com") {
-                                $width = 60;
-                                $height = 14;
-                                } elseif (strtolower($tlddata->varTitle) == "info") {
-                                    $width = 56;
-                                    $height = 20;
-                                } elseif (strtolower($tlddata->varTitle) == "org") {
-                                    $width = 49;
-                                    $height = 20;                                
-                                } else {
-                                    $width = 44;
-                                    $height = 25;
-                                }
-                            @endphp
-                            <li class="list-inline-item">
-                                {{-- <a href="{{url('/domain-registration?tld='.$tlddata->varTitle)}}" title="{{ ucwords(strtolower($tlddata->varTitle)) }}"> --}}
-                                    <a href="{{ url('/domain/buy-' . $tlddata->varTitle . '-domain-names') }}" title="{{ ucwords(strtolower($tlddata->varTitle)) }}">
-                                    <img src="{{Config::get('Constant.CDNURL')}}/assets/images/{{(strtolower('dot'.$tlddata->varTitle))}}.png" alt=".{{ ucwords(strtolower($tlddata->varTitle)) }}" title="buy {{ ucwords(strtolower($tlddata->varTitle)) }} domain names" width="{{$width}}" class="img-fluid" height="{{$height}}"> 
-                                    <span class="text-cstm-clr">
-                                        @if(Config::get('Constant.sys_currency') == 'INR')
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12">
+
+                <div class="domain-search-wrap">
+
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-sm-12">
+
+                            <h2 class="text-center fnd_prfct_dmn text-cstm-clr">Perfect Domain Name is Just a Search Away</h2>
+
+                            <form class="domain-search-form" id="domainlookupfrm" onsubmit="margetlds()" autocomplete="off" name="domainlookupfrm" action="{{url('/domain-checker')}}" method="post" novalidate="novalidate">
+
+                                <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}" />
+
+                                <input type="hidden" name="hide_tlddata" id="hide_tlddata" value="{{$Tlds}}" />
+
+                                <input type="hidden" name="domain_search" id="domain_search" value="y" />
+
+                                <input type="hidden" name="is_banner_form" id="is_banner_form" value="y" />
+
+                                <input type="text" id="domain_name" name="domainname" class="form-control" placeholder="Search Your Domain" />
+
+                                <div class="select-group domain-select-list">
+
+                                    <select name="selcetlds" id="selcetlds" class="form-select" aria-label="Select a domain extension">
+
+                                        @foreach($FeaturedTlds as $tlddata)
+
+                                        <option value="{{ $tlddata->varTitle }}">.{{ $tlddata->varTitle }}</option>
+
+                                        @endforeach
+
+                                    </select>
+
+                                </div>
+
+                                <div class="">
+
+                                    <button type="submit" class="secondary-btn-sq">Search</button>
+
+                                </div>
+
+                            </form>
+
+                            <div class="domain-list-wrap text-center mt-4">
+
+                                <ul class="domain-search-list">
+                            @foreach($FeaturedTlds as $tlddata)
+                            
+                                @php
+                                    $domainClass = "domain-list-1";
+                                    if($tlddata->varTitle == "in"){
+                                        $domainClass = "domain-list-2";
+                                    }elseif($tlddata->varTitle == "net"){
+                                        $domainClass = "domain-list-3";
+                                    }elseif($tlddata->varTitle == "org"){
+                                        $domainClass = "domain-list-4";
+                                    }elseif($tlddata->varTitle == "co"){
+                                        $domainClass = "domain-list-5";
+                                    }  
+                                @endphp
+                                <li class="{{$domainClass}}">
+                                    <a href="{{ url('/domain/buy-' . $tlddata->varTitle . '-domain-names') }}" title="{{ ucwords(strtolower($tlddata->varTitle)) }}" class="text-black">
+                                        <span class="domain-search-title">.{{ strtolower($tlddata->varTitle) }}</span>
+
+                                        <span class="domain-search-price">
+                                             @if(Config::get('Constant.sys_currency') == 'INR')
                                             {!! Config::get('Constant.sys_currency_symbol') !!}
                                             {{ Config::get('Constant.'.$tlddata->varWHMCSFieldName.'_INR') }}
                                         @elseif(Config::get('Constant.sys_currency') == 'CAD')
@@ -429,16 +449,64 @@ $Slide++;
                                             {!! Config::get('Constant.sys_currency_symbol') !!}
                                             {{ Config::get('Constant.'.$tlddata->varWHMCSFieldName.'_USD') }}
                                         @endif
-                                    </span>
-                                </a>
-                            </li>
+                                        </span>
+                                    </a>
+
+
+                                    </li>
                             @endforeach
-                        </ul>
+                                    {{-- <li class="domain-list-1">
+
+                                        <span class="domain-search-title">.com</span>
+
+                                        <span class="domain-search-price">₹199/Year</span>
+
+                                    </li>
+
+                                    <li class="domain-list-2">
+
+                                        <span class="domain-search-title">.in</span>
+
+                                        <span class="domain-search-price">₹199/Year</span>
+
+                                    </li>
+
+                                    <li class="domain-list-3">
+
+                                        <span class="domain-search-title">.net</span>
+
+                                        <span class="domain-search-price">₹199/Year</span>
+
+                                    </li>
+
+                                    <li class="domain-list-4">
+
+                                        <span class="domain-search-title">.org</span>
+
+                                        <span class="domain-search-price">₹199/Year</span>
+
+                                    </li>
+
+                                    <li class="domain-list-5">
+
+                                        <span class="domain-search-title">.co</span>
+
+                                        <span class="domain-search-price">₹199/Year</span>
+
+                                    </li> --}}
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
-        </div>
-    </div>
+
 </section>
 
                 @endif

@@ -206,7 +206,148 @@
 
     @endif
 
-   
+    <?php /*<div class="what-we-offer" data-type="background" data-speed="7">
+
+        <div class="container">
+
+            @if(session()->has('frontlogin'))
+
+            @php
+
+            $renew_link = url('https://manage.hostitsmart.com/clientarea.php?action=domains');
+
+            $login_attr = '';
+
+            $target = 'target="_blank"';
+
+            @endphp
+
+            @else
+
+            @php
+
+            $login_attr = 'data-toggle="modal" data-target="#loginModal"';
+
+            $renew_link = 'javascript:;';
+
+            $target ='';
+
+            @endphp
+
+            @endif
+
+
+
+            <div class="offer-tabbing">
+
+                <h5 class="" data-aos="fade-up">What We Offer</h5>
+
+                <ul class="nav nav-pills nav-offer justify-content-center" data-aos="fade-up">
+
+                    <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="CodeGuard"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">CodeGuard</span></a></li>
+
+                    <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="Site Lock"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">Site Lock</span></a></li>
+
+                    <!--<li><a data-toggle="pill" href="#offer3" class="justify-content-center" title="G Suite"><span class="bg-white-tab"><i class="offer-1-icon offer-3-icon align-self-center"></i></span><span class="offer-tabbing-name">G Suite</span></a></li>-->
+
+                    <li><a data-toggle="pill" href="#offer4" class="justify-content-center" title="Domain Privacy"><span class="bg-white-tab"><i class="offer-1-icon offer-4-icon align-self-center"></i></span><span class="offer-tabbing-name">Domain Privacy</span></a></li>
+
+                </ul>
+
+                <div class="tab-content aos-init" data-aos="fade-up" data-aos-delay="250">
+
+                    <div id="offer1" class="tab-pane active show">
+
+                        <div class="offer-tab-text" data-aos="fade-up">
+
+                            <h3>CodeGuard</h3>
+
+                            <p>CodeGuard is the fastest and most reliable website backup service. It keeps a track of daily changes made on your website so that you never lose a fraction of your data</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+
+                    </div>
+
+                    <div id="offer2" class="tab-pane">
+
+                        <div class="offer-tab-text" data-aos="fade-up">
+
+                            <h3>Site Lock</h3>
+
+                            <p>The SiteLock SMART will continuously monitor your website from all angles, and if malware is detected, it will automatically remove it, so your website stays safe and secure</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+
+                    </div>
+
+<!--                    <div id="offer3" class="tab-pane">
+
+                        <div class="offer-tab-text" data-aos="fade-up">
+
+                            <h3>G Suite</h3>
+
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><span>Available for purchase at checkout</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout">Checkout</a></div>
+
+                    </div>-->
+
+                    <div id="offer4" class="tab-pane">
+
+                        <div class="offer-tab-text" data-aos="fade-up">
+
+                            <h3>Domain Privacy</h3>
+
+                            <p>When you buy a domain, the registrant information will be stored in whois database which can be accessed globally. The domain privacy will mask the original contact information and thus, save you from unwanted marketing calls</p><span>Available for purchase at checkout</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout">Checkout</a></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> 
+
+</div>*/?>
+
+<!--<div class="promotional-banner row for-green-banner-col-width">
+
+    <div class="col-lg-4 col-12 z-index-1 padding-0">
+
+        <div class="row">
+
+            <div class="banner-1 justify-content-end d-flex">
+
+                <div class="banner-wp-logo-green"></div><span class="banner-text" data-aos="fade-left">WordPress hosting Deals</span>
+
+                <div class="banner-wp-blue-logo"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 col-12 z-index-0 padding-0">
+
+        <div class="row">
+
+            <div class="banner-text2"><span class="starting-from">Today Starting From</span> <span class="whole-span"><span class="ruppess">{!! Config::get('Constant.sys_currency_symbol') !!}</span> <span class="big-price">199</span><span class="per-month">/mo*</span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4 col-12 padding-0 d-flex">
+
+        <div class="row align-self-center" data-aos="fade-right">
+
+            <div class="banner-button"><a class="btn-primary align-self-center" title="Start Your Site Now!">Start Your Site Now!</a></div>
+
+        </div>
+
+    </div>
+
+</div>-->
+
 <div class="lading_bottom">
 
     @if(!empty($FaqData) && count($FaqData) >0)
@@ -333,7 +474,7 @@
 
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
 
-    <div class="hostingtype_div">
+    <div class="hostingtype_div head-tb-p-40">
 
         <div class="container-fluid">
 

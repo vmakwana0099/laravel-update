@@ -150,7 +150,7 @@
                         </p>
                     </div>
                     <a title="Contact Support" href="{{url('/contact')}}" class="btn aos-init" data-aos="fade-up" data-aos-delay="200" title="Contact Support">Contact Support</a>
-                    <a target="_blank" title="Submit Ticket" href="{{ config('app.api_url') }}/submitticket.php" class="btn aos-init" data-aos="fade-up" data-aos-delay="200" title="Submit Ticket">Submit Ticket</a>
+                    <a target="_blank" title="Submit Ticket" href="https://www.hostitsmart.com/manage/submitticket.php" class="btn aos-init" data-aos="fade-up" data-aos-delay="200" title="Submit Ticket">Submit Ticket</a>
                 </div>
             </div>
             <div class="col-lg-7 col-sm-12 col-12 d-none d-md-block">
@@ -183,3 +183,77 @@
 </div>
 </div>
 @include('template.review')
+<?php
+
+/*<div class="review">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="review-l" data-aos="fade-right">
+                <p class="review-title">8.8</p>
+                <div class="review-star">
+                    <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star-half-o"></i> </div>
+                <div class="review-text">
+                    Based on 63 reviews 
+                    See some of the reviews here.
+                </div>
+                <div class="trustpilot-image">
+                    <a target="_blank" href="https://hostadvice.com/hosting-company/host-smart-reviews/"><img alt="hostadvice" title="hostadvice" src="{{Config::get('Constant.CDNURL')}}/assets/images/logo-2.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="owl-carousel owl-theme" id="review-owl">
+                <div class="item col" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="review-slider">
+                        <div class="review-l">
+                            <p class="review-title">4.4</p>
+                            <div class="review-star">
+                                <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star-half-o"></i> </div>
+                            <div class="review-text">
+                                Based on 143 reviews 
+                                See some of the reviews here.
+                            </div>
+                            <div class="trustpilot-image">
+                                <a target="_blank" href="https://www.google.com/search?num=100&rlz=1C1AVNE_enIN715IN715&ei=2YkXXMeSJ5T_wAOB6ZX4AQ&q=host+it+smart&oq=host+it+smart&gs_l=psy-ab.3..0l3j0i22i30l7.1080.3046..3688...0.0..0.238.2460.0j9j4......0....1..gws-wiz.......0i71j0i131j0i67j0i10j0i131i67.oxHhcjMtoSY#lrd=0x395e84d7c974bd5f:0x91cf8c25003fbd01,1,,"><img alt="google" title="google" src="{{Config::get('Constant.CDNURL')}}/assets/images/googlelogo-1_v2.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item col" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="review-slider">
+                        <div class="review-l">
+                            <p class="review-title">4.6</p>
+                            <div class="review-star">
+                                <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star-half-o"></i> </div>
+                            <div class="review-text">
+                                Based on 235 reviews 
+                                See some of the reviews here.
+                            </div>
+                            <div class="trustpilot-image">
+                                <a target="_blank" href="https://www.facebook.com/pg/hostitsmart/reviews/?ref=page_internal"><img alt="facebook" title="facebook" src="{{Config::get('Constant.CDNURL')}}/assets/images/facebook-logo-1_v2.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item col" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="review-slider">
+                        <div class="review-l">
+                            <p class="review-title">8.8</p>
+                            <div class="review-star">
+                                <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star"></i> <i class="la la-star-half-o"></i> </div>
+                            <div class="review-text">
+                                Based on 45 reviews 
+                                See some of the reviews here.
+                            </div>
+                            <div class="trustpilot-image">
+                                <a target="_blank" href="https://www.trustpilot.com/review/www.hostitsmart.com"><img alt="trustpilot" title="trustpilot" src="{{Config::get('Constant.CDNURL')}}/assets/images/trustpilot_v2.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*/
+
+?>

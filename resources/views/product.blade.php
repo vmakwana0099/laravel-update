@@ -58,7 +58,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="web-hosting-banner-left">
-                                    <img src="{{url('/assets/images/Linux_Hosting-2.webp')}}" / alt="Linux Hosting">
+                                    <img src="{{url('/assets/images/Linux_Hosting-2.webp')}}" / alt="Linux Hosting" width="600" height="600">
                                 </div>
                             </div>
                         </div>
@@ -198,21 +198,21 @@
                  <div class="col-sm-12">
                <div class="section-heading">
                     @php if($ProductBanner->id == 8){ @endphp
-                    <h4 class="text-center text_head ">Quality hosting does not mean elephantile costs. Not atleast with our plans.</h4>
+                    <h2 class="text-center text_head ">Quality hosting does not mean elephantile costs. Not atleast with our plans.</h2>
                     @php } else if($ProductBanner->id == 4){ @endphp
-                    <h4 class="text-center text_head " id="wordPress_hosting_plan">Choose Your WordPress Hosting Plan</h4>
+                    <h2 class="text-center text_head " id="wordPress_hosting_plan">Choose Your WordPress Hosting Plan</h2>
                     @php } else if($ProductBanner->id == 1){ @endphp
                     <h2 class="text-center text_head " id="linux_hosting_plans">Choose Your Linux Hosting Plans</h2>
                     @php } else if($ProductBanner->id == 12){ @endphp
-                    <h4 class="text-center text_head " id="landingloc">Choose Your Windows Reseller Hosting Plans</h4>
+                    <h2 class="text-center text_head " id="landingloc">Choose Your Windows Reseller Hosting Plans</h2>
                     @php } else if($ProductBanner->id == 13){ @endphp
-                    <h4 class="text-center text_head " id="landingloc">Choose your Java Hosting Plan</h4>
+                    <h2 class="text-center text_head " id="landingloc">Choose your Java Hosting Plan</h2>
                     @php } else if($ProductBanner->id == 2){ @endphp
-                    <h4 class="text-center text_head " id="windows_hosting_plans">Choose Your Windows Hosting Plans</h4>
+                    <h2 class="text-center text_head " id="windows_hosting_plans">Choose Your Windows Hosting Plans</h2>
                     @php } else if($ProductBanner->id == 6){ @endphp
-                    <h4 class="text-center text_head " id="landingloc">Choose Your eCommerce Hosting Plan</h4>
+                    <h2 class="text-center text_head " id="landingloc">Choose Your eCommerce Hosting Plan</h2>
                     @php } else { @endphp
-                    <h4 class="text-center text_head " id="landingloc">Quality hosting does not mean elephantile costs. Not atleast with our plans</h4>
+                    <h2 class="text-center text_head " id="landingloc">Quality hosting does not mean elephantile costs. Not atleast with our plans</h2>
                     @php } @endphp
                 </div>
                 </div>
@@ -220,7 +220,7 @@
                  {{-- <div class="col-12">
                      
                     <div class="dedicated-head">
-                        <h4 class="server-head" data-aos="fade-up" data-aos-delay="200" id="landingloc">Choose Your WordPress Hosting Plan</h4>
+                        <h2 class="server-head" data-aos="fade-up" data-aos-delay="200" id="landingloc">Choose Your WordPress Hosting Plan</h2>
                         <span class="server-text2" data-aos="fade-up" data-aos-delay="300">(Select Server Location)</span>
                         <ul class="nav-server-location">
                             <li><a href="javascript:void(0)" onclick="changeLocation('India');" title="India" class="show active-tab" id="loc1"><i class="hosting-location-icon map-india"></i></a></li>
@@ -254,17 +254,17 @@
                     <div class="wh-server-location-tab">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="loc1" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
+                                <button class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="eager" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="loc2" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
+                                <button class="nav-link" id="loc2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
                                     <img loading="eager" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons" > Canada</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="loc3" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
+                            {{-- <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="loc3" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
                                     <img loading="eager" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button >
-                            </li>
+                            </li> --}}
                         </ul>
 
 
@@ -286,18 +286,18 @@
                 
                 <!-- <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='monthshow' style="display: none">
                     <ul class="nav nav-pills nav-vps-hosting @if($ProductBanner->id == 7) pb-10 @endif">
-                        <li><a data-toggle="pill" href="#vps-plan1" title="1 month" id='onemonths'>1 month @if(!empty($ProductBanner->varOfferTextOneMonth))<span><span class="bg-color">{{$ProductBanner->varOfferTextOneMonth}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan2" title="3 months" id='threemonths' class="active show">3 months @if(!empty($ProductBanner->varOfferTextThreeMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeMonth}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan3" title="6 months" id='sixmonths'>6 months @if(!empty($ProductBanner->varOfferTextSixMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextSixMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan1" title="1 month" id='onemonths'>1 month @if(!empty($ProductBanner->varOfferTextOneMonth))<span><span class="bg-color">{{$ProductBanner->varOfferTextOneMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan2" title="3 months" id='threemonths' class="active show">3 months @if(!empty($ProductBanner->varOfferTextThreeMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan3" title="6 months" id='sixmonths'>6 months @if(!empty($ProductBanner->varOfferTextSixMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextSixMonth}}</span></span>@endif</a></li>
                     </ul>
                 </div> -->
                  @if($ProductBanner->id == 2) 
                 <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='yearshow'>
                     <ul class="nav nav-pills nav-vps-hosting d-flex justify-content-center mb-4 @if($ProductBanner->id == 7) pb-10 @endif">
-                        <li><a class="nav-link" data-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
                     </ul>
                 </div>
                 @endif
@@ -520,7 +520,7 @@
                                             
                                             
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -645,7 +645,7 @@
                                             
                                             
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -770,7 +770,7 @@
                                           
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -869,7 +869,7 @@
                                             </ul>
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1015,7 +1015,7 @@
                                             
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1166,7 +1166,7 @@
                                            
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1316,7 +1316,7 @@
                                             </ul>
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1446,7 +1446,7 @@
                                             
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1588,7 +1588,7 @@
                                             
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1737,7 +1737,7 @@
                                             
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -1883,7 +1883,7 @@
                                             
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2014,7 +2014,7 @@
                                             
                                            
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2118,6 +2118,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                         @elseif(strtolower(trim($Specification)) == 'plesk')
                                                         <li> <div class="free_domain">{{$Specification}}
                                                             <span class="domain_tooltip">Our basic web hosting package includes a Plesk panel for managing your websites, domains, emails, and more.
@@ -2166,7 +2173,7 @@
                                             
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2281,6 +2288,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '25,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "10 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
@@ -2340,7 +2354,7 @@
                                             
                                             
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2445,6 +2459,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '50,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "20 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
@@ -2504,7 +2525,7 @@
                                             
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2602,6 +2623,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '1,00,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "unlimited mysql db's" || strtolower(trim($Specification)) =="20 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
@@ -2649,7 +2677,7 @@
                                             
                                          
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -2932,7 +2960,7 @@
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <i class="list-num">1</i>
-                                        <h4>ASP.NET Hosting</h4>
+                                        <div class="g-list-title">ASP.NET Hosting</div>
                                         <span>This kind of hosting runs on the browser as well on the backend and thus is preferred by most and is available on Windows Web Hosting. </span>
                                     </div>
                                 </div>
@@ -2942,7 +2970,7 @@
                                 <div class="g_s_l-box">
                                    <div class="g-list-box">
                                         <i class="list-num">2</i>
-                                        <h4>One-click Script Installs</h4>
+                                        <div class="g-list-title">One-click Script Installs</div>
                                         <span>Even the cheap Windows Hosting options available in the current scenario offer the option of one-click script installing, thus, minimalizing the entire process of configuration.
                                         </span>
                                     </div>
@@ -2953,7 +2981,7 @@
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <i class="list-num">3</i>
-                                        <h4>MS Access and MS SQL </h4>
+                                        <div class="g-list-title">MS Access and MS SQL </div>
                                         <span>MS Access is the comparatively older database which is used for the smaller, more basic purposes whereas MS SQL is the newer, more recent version and both these versions are available on Windows Web Hosting options.</span>
                                     </div>
                                 </div>
@@ -2962,7 +2990,7 @@
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <i class="list-num">4</i>
-                                        <h4>Fast & Best</h4>
+                                        <div class="g-list-title">Fast & Best</div>
                                         <span>Get the speed you desire with our full-line of fine-tuned options for cheap Windows hosting. Choose from our high-octane Windows hosting plans in India and give your business the functionality you want. </span>
                                     </div>
                                 </div>
@@ -3025,7 +3053,79 @@
 @endif
 @if(Request::segment(2)=='linux-hosting')
     <!-- combo offer section start -->
-
+<!-- <div class="combo-offer-section" id="comboofferplan">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="combo_main_title">Linux Hosting Combo Offer</h3>
+                    <p class="combo_sub_text">This combo makes it easy for you to get one stop solution to start a website. Few steps and you can make your own professional website. Get Domain, Free SSL with Hosting & Five Emails all in one combo pack.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="combo_item">
+                        <div class="combo_title"><i class="combo_icon c_i_domain"></i> Domain</div>
+                        <div class="combo_features">
+                            <ul>
+                                <li>.com Only</li>
+                                <li>DNS Management</li>
+                                <li>Domain Forwarding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="combo_item">
+                        <div class="combo_title"><i class="combo_icon c_i_hosting"></i> Hosting</div>
+                        <div class="combo_icon"></div>
+                        <div class="combo_features">
+                            <ul>
+                                <li>1 Domain Hosting</li>
+                                <li>10 GB Storage</li>
+                                <li>1 MySql Database</li>
+                                <li>5 Emails</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="combo_item combo_item_last">
+                        <div class="combo_title"><i class="combo_icon c_i_ssl"></i> SSL Certificate</div>
+                        <div class="combo_icon"></div>
+                        <div class="combo_features">
+                            <ul>
+                                <li>Single Domain</li>
+                                <li>Domain Validation</li>
+                                <li>Free Let's Encrypt SSL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="combo_item_price">
+                        <div class="c_i_p_border">
+                            <span class="sub_text">At Just</span>
+                            <div class="c_i_amount_part">
+                                <span class="ruppess">&#8377;</span> <span class="combo_i_price" style="font-size:33px" >159</span><span class="pmon">/mo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <form action="https://www.hostitsmart.com/cart/store" method="post" name="form_hosting_218" id="form_hosting_218" class="planform">
+                       <input type="hidden" id="producttype" name="producttype[]" value="hosting">
+                       <input type="hidden" id="pid" name="pid[]" value="218">
+                       <input type="hidden" id="billingcycle" name="billingcycle[]" value="annually">
+                       <input type="hidden" id="location" name="location[]" value="India">
+                       <input type="hidden" id="_token" name="_token" value="<?php echo csrf_token(); ?>">
+                      <button type="submit"  title="Grab Now!" class="btn-primary" title="Grab Now!">Grab Now!</button> 
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- combo offer section end -->
 @endif
 @php if($ProductBanner->id == 4){ @endphp
@@ -3212,7 +3312,7 @@
                                             <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
                                                 <div class="content-main align-self-start" @if ($uagent !="mobile" )data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100" @endif>
                                                     <div class="{{$featureIconDivClass}}"><i class="{{$Features->varIconClass}}"></i></div>
-                                                    <h3>{{$Features->varTitle}}</h3>
+                                                    <span>{{$Features->varTitle}}</span>
                                                     <div class="content">{!! $Features->varShortDescription !!}</div>
                                                 </div>
                                             </div>
@@ -3375,8 +3475,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content more_feature_modal">
         <h2 class="htwo-prime1 plntbl-hdrttl">Host IT Smart Shared Hosting Features</h2>
-    <div class="">
-        <div class="more-features-close-icon" data-dismiss="modal">x</div>
+    <div class="table-responsive">
+        <div class="more-features-close-icon" data-bs-dismiss="modal">x</div>
     <table class="table-responsive">
     <thead>
     </thead> 
@@ -4163,7 +4263,80 @@
      </div>
 </div>
 @php } @endphp
+<?php /*@if($ProductBanner->id != 8)
+<div class="what-we-offer" data-type="background" data-speed="7">
+    <div class="container">
+        @if(session()->has('frontlogin'))
+        @php
+        $renew_link = url('https://manage.hostitsmart.com/clientarea.php?action=domains');
+        $login_attr = '';
+        $target = 'target="_blank"';
+        @endphp
+        @else
+        @php
+        $login_attr = 'data-bs-toggle="modal" data-bs-target="#loginModal"';
+        $renew_link = 'javascript:;';
+        $target ='';
+        @endphp
+        @endif
 
+        <div class="offer-tabbing">
+            <h5 class="" data-aos="fade-up">What We Offer</h5>
+            <ul class="nav nav-pills nav-offer justify-content-center" data-aos="fade-up">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <li><a data-bs-toggle="pill" href="#offer1" class="justify-content-center active" title="Dedicated IP"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">Dedicated IP</span></a></li>
+                <li><a data-bs-toggle="pill" href="#offer2" class="justify-content-center" title="SSL"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">SSL</span></a></li>
+                @else
+                <li><a data-bs-toggle="pill" href="#offer1" class="justify-content-center active" title="CodeGuard"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">CodeGuard</span></a></li>
+                <li><a data-bs-toggle="pill" href="#offer2" class="justify-content-center" title="Site Lock"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">Site Lock</span></a></li>
+                @endif
+            </ul>
+            <div class="tab-content aos-init" data-aos="fade-up" data-aos-delay="250">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Dedicated IP</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>SSL</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } @endphp
+                </div>
+                @else
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>CodeGuard</h3>
+                         @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Site Lock</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        
+                         @php } @endphp
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+@endif */?>
 @endif
 @if($ProductBanner->id == 7)
 @include('template.vps-compare')
@@ -4323,14 +4496,14 @@
   <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
 @include('template.'.$themeversion.'.faq-section')
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
-    <div class="hostingtype_div">
+   {{--  <div class="hostingtype_div head-tb-p-40">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                      @if($ProductBanner->id == 4)
-                    <h3 class="title">Didn't hit your sweet spot?</h3>
+                    <span class="title">Didn't hit your sweet spot?</span>
                     @else
-                    <h3 class="title">Didn't hit your sweet spot?</h3>
+                    <span class="title">Didn't hit your sweet spot?</span>
                     @endif
                 </div>
                 @php $p = 0; $class = ''; $color = ''; $info = ''; @endphp
@@ -4356,7 +4529,7 @@
                         </div>
                         <div class="info" data-aos="fade-left" data-aos-delay="100">
                             <h2 class="name">{{$FeaturedProducts->varTitle}}</h2>
-                            <h3 class="info-text">{{$FeaturedProducts->varShortDescription}}</h3>
+                            <div class="info-text">{{$FeaturedProducts->varShortDescription}}</div>
                             @php $FeaturedProductsDec = explode("\n",$FeaturedProducts->varFeature); @endphp 
                             <ul class="list">
                                 @foreach($FeaturedProductsDec as $info)
@@ -4371,10 +4544,66 @@
                 @endforeach
             </div>
         </div>
+    </div> --}}
+    <section class="most-power-plans head-tb-p-40">
+    <div class="container">
+        <div class="section-heading">
+           @if(Request::segment(2) == 'dedicated-servers')
+            <h2 class="text_head text-center">Looking For Something Else?</h2>
+            @elseif(Request::segment(1) == 'web-hosting')
+            <h2 class="text_head text-center">Planning to Throttle Your Project to Success?</h2>
+            <p class="wh-powerplan-cnt text-center">Discover Our Robust and Powerful Solutions!</p>
+
+           @else
+
+            <h2 class="text_head text-center">Looking For Something Else?</h2>
+        @endif
+          
+        </div>
+        <div class="row justify-content-center">
+            @foreach($FeaturedProductsData as $FeaturedProducts)
+            <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="most-power-card">
+                    <div class="power-card-tittle">
+                        <h2 class="text-light">{{$FeaturedProducts->varTitle}}</h2>
+                        <p>{{$FeaturedProducts->varShortDescription}}</p>
+                        <div class="most-power-circle-ol">
+                            <div class="most-power-circle">
+                                <div class="frnt-cnt">
+                                    Starting @
+                                </div>
+                                <div class="price-cnt">
+                                    @if(Config::get('Constant.sys_currency') == 'INR')
+                                    ₹<span></i>{{ Config::get('Constant.'.$FeaturedProducts->varWHMCSFieldName.'_INR') }}</span>/mo*
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="power-card-data">
+                        <div class="power-card-cnt">
+                            @php $FeaturedProductsDec = explode("\n",$FeaturedProducts->varFeature); @endphp
+                            <ul>
+                                @foreach($FeaturedProductsDec as $info)
+                                <li>
+                                    {{$info}}
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="power-plans-btn">
+                            <a href="{{$FeaturedProducts->varButtonLink}}" class="buy-now-btn" title="{{$FeaturedProducts->varButtonName}}">{{$FeaturedProducts->varButtonName}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
+</section>
     @endif
     @if($ProductBanner->id == 2) 
-    <div class="product_offers">
+   {{--  <div class="product_offers">
         <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-10">
@@ -4391,14 +4620,14 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/servers/vps-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/servers/vps-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>
             </div>
         </div>
         </div>
-    </div>
+    </div> --}}
     @elseif($ProductBanner->id == 1)
     <div class="product_offers">
         <div class="container">
@@ -4417,7 +4646,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/hosting/wordpress-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/hosting/wordpress-hosting">Click to Host Today</a>
                         </div>
                 </div>
             </div>
@@ -4442,7 +4671,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/hosting/linux-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/hosting/linux-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>
@@ -4468,7 +4697,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/hosting/linux-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/hosting/linux-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>
@@ -4693,9 +4922,11 @@ function LoadFeatures(fea, count) {
     .click(function(){ return false; });
  </script>
  <script>
-document.addEventListener('DOMContentLoaded',function(){const canadaButton=document.getElementById('loc2');const germanyButton=document.getElementById('loc3');const indiaButton=document.getElementById('loc1');const vpsPlanDiv=document.getElementById('basic_three_div');function hideVpsPlanDiv(){vpsPlanDiv.classList.add('d-none')}
+    // const germanyButton=document.getElementById('loc3');
+    // germanyButton.addEventListener('click',hideVpsPlanDiv);
+document.addEventListener('DOMContentLoaded',function(){const canadaButton=document.getElementById('loc2');const indiaButton=document.getElementById('loc1');const vpsPlanDiv=document.getElementById('basic_three_div');function hideVpsPlanDiv(){vpsPlanDiv.classList.add('d-none')}
 function showVpsPlanDiv(){vpsPlanDiv.classList.remove('d-none')}
-canadaButton.addEventListener('click',hideVpsPlanDiv);germanyButton.addEventListener('click',hideVpsPlanDiv);indiaButton.addEventListener('click',showVpsPlanDiv)})
+canadaButton.addEventListener('click',hideVpsPlanDiv);indiaButton.addEventListener('click',showVpsPlanDiv)})
 </script>
 <script>
 $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){setTimeout(function(){var targetSection=document.getElementById('see_more_features');if(targetSection){targetSection.scrollIntoView({behavior:'smooth',block:'start'})}},300)})})

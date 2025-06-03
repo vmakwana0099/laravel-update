@@ -372,8 +372,8 @@ example.in
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close close-popup" data-dismiss="modal"></button>
                     <h2 class="modal-title">How Can We Help?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="common-body">
@@ -751,7 +751,7 @@ if(array_key_exists('prmomessage',$cart_array))   { unset($cart_array['prmomessa
                     }
                     else {
                         var transfer_link = SITE_URL + '/domain/domain-transfer';
-                        appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" class="btn inquiry_btn" title="Inquiry of ' + response[domain]["domainname"] + '" onclick="setdomainname(this);" data-toggle="modal" data-target="#commonPopup"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" class="btn transfer_btn" title="Transfer" target="_blank">Transfer</a> </td>';
+                        appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" class="btn inquiry_btn" title="Inquiry of ' + response[domain]["domainname"] + '" onclick="setdomainname(this);" data-bs-toggle="modal" data-bs-target="#commonPopup"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" class="btn transfer_btn" title="Transfer" target="_blank">Transfer</a> </td>';
                     }
 
                     appned_data += '</tr>';

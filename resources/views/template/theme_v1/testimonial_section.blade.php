@@ -21,30 +21,41 @@ if($live_url == URL::to('/')){
                         </div>
                     </div>
                 </div>
+                <?php 
+                    $heading = "Our Prime Goal: Customers Delight";
+                    $sub_heading = "Hear What Our Delighted Customers Have to Say About Us!";
+
+                    if(request()->segment(2) == "vps-hosting-india"){
+                        $heading = "Our Prime Goal: Customers Satisfaction";
+                        $sub_heading = "Read What Our Delighted Customers Have to Say About Us!";
+                    }
+                ?>
                 <div class="col-lg-9">
                     <div class="section-heading">
-                        <h2 class="text_head">Our Prime Goal: Customers Delight</h2>
-                        <p>Hear What Our Delighted Customers Have to Say About Us!</p>
+                        <h2 class="text_head">$heading</h2>
+                        <p>$sub_heading</p>
                     </div>
                     <div class="cust-del-owl-carousel">
                         <div class="owl-carousel cust-delight-owl-carousel">
 
                             <div class="item cust-del-item">
+                                <p>Host IT Smart has proven to be a trustworthy and reliable provider of server solutions. Their exceptional customer service, top-notch products, and commitment to transparency make them stand out in the industry. If you're in search of a server provider that delivers on its promises, I wholeheartedly recommend giving Host IT Smart a try. They have certainly earned my trust and gratitude for their outstanding service.</p>
+                                <span>Sameer Shaikh</span>
+                            </div>
+                            <div class="item cust-del-item">
                                 <p>Excellent Fast Service... I have been using the services of Host IT Smart since 2020 & Satisfied with their products and customer services. Their staff are very co-operative and Quickly Resolve the problems that we face. They have an expertise team which provides quick solutions so that businesses can focus on their core work. Thanks a Lot to Host IT Smart Team.</p>
                                 <span>Dr Rakesh Kumar Santani</span>
+                            </div>
+                            
+                            <div class="item cust-del-item">
+                                <p>I have been working with Host IT Smart to build a new website for my business. Their team was professional, knowledgeable, and always available to answer any questions I had. They listened to my needs and delivered the perfect hosting plan for my needs that perfectly captures my brand's vision. I highly recommend this company to anyone looking for a top-notch Hosting experience.</p>
+                                <span>Prahlad Shukla</span>
                             </div>
                             <div class="item cust-del-item">
                                 <p>Considering hosting services, Host IT Smart stands out with its excellent quality, competitive pricing, and reliable support. When compared to Big Rock, Host IT Smart consistently delivers top-notch service at the best prices. Experience unmatched hosting with Host IT Smart for a seamless and cost-effective online presence.</p>
                                 <span>Laxmi Ayyavari</span>
                             </div>
-                            <div class="item cust-del-item">
-                                <p>Host IT Smart has proven to be a trustworthy and reliable provider of server solutions. Their exceptional customer service, top-notch products, and commitment to transparency make them stand out in the industry. If you're in search of a server provider that delivers on its promises, I wholeheartedly recommend giving Host IT Smart a try. They have certainly earned my trust and gratitude for their outstanding service.</p>
-                                <span>Sameer Shaikh</span>
-                            </div>
-                            <div class="item cust-del-item">
-                                <p>I have been working with Host IT Smart to build a new website for my business. Their team was professional, knowledgeable, and always available to answer any questions I had. They listened to my needs and delivered the perfect hosting plan for my needs that perfectly captures my brand's vision. I highly recommend this company to anyone looking for a top-notch Hosting experience.</p>
-                                <span>Prahlad Shukla</span>
-                            </div>
+                            
                             <div class="item cust-del-item">
                                 <p>I have been using the services of Host IT Smart since 2019 and am pleased with their products and customer services. Their staff are very cooperative and quickly take actions to the problems that we face. They have an expertise team which provides quick solutions so that businesses can focus on their core work.</p>
                                 <span>Shatrughan Saravagi</span>
@@ -94,6 +105,46 @@ if($live_url == URL::to('/')){
                             <div class="item cust-del-item">
                                 <p>Dealing with Happy Service’s customer support was a breeze. They were courteous, quick to respond, and resolved my issue efficiently, leaving me with a positive impression of their commitment to customer satisfaction.</p>
                                 <span>Nilesh Mourya</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>The host Support team is easy to reach. Appreciate their efficiency of reaching out to them within seconds. Keep it up, guys. Mohsin was a smart guy to provide resolutions quickly.</p>
+                                <span>Selvakumar Baskaran</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I have been using servers from Host IT Smart since the last 3 years and I recommend the service of Host IT Smart. They were quick to respond to any queries or concerns. Service and support are awesome!!</p>
+                                <span>Bhavesh Tarkhala</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I've been using Host IT Smart for over 2 years now, and I couldn't be happier! The server performance is fantastic, with almost no downtime, and the loading speeds are incredible. But what stands out the most is their customer support. Anytime I’ve had an issue, their team has been quick to respond and extremely helpful. Highly recommend it for anyone looking for reliable and top-notch hosting!</p>
+                                <span>Patel Rushil</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I am very happy to be a customer of host it smart from a reputed company. Especially the immediate service was made available. We hope to continue to provide the same service....Ramdas Tambe Reporter today news channel.</p>
+                                <span>Ramdas Tambe</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>We have experienced exceptional server support and performance with this service. The team is highly responsive, professional, and always available to address any concerns or issues we encounter. Overall, we are highly satisfied with both the support and the server's performance.</p>
+                                <span>Axone Infotech</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>Jay Vagadiya was very helpful and quickly resolved one of the issues faced.. We have made the right moving to hostitsmart. Helpdesk, Sales and technical support teams are very easy to approach for help when needed.</p>
+                                <span>Vasudev Doddipalle</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>Great Service!! I've been using a Hosting service from Host IT Smart from the last few years. They provide a great service. You can reach them anytime for help or with queries. Their service is recommended. I didn't face any major issues while using their hosting plan. Everything works smoothly. Great service.</p>
+                                <span>Chandni Gupta</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I have purchased a dedicated server of 32 GB RAM. And I am very much satisfied with the service. Mr Jay is very helpful and supportive. I recommend to all of you who are willing to buy their service.</p>
+                                <span>Milan Parmar</span>
                             </div>
                         </div>
                     </div>
@@ -125,30 +176,41 @@ else{
                         </div>
                     </div>
                 </div>
+                <?php 
+                    $heading = "Our Prime Goal: Customers Delight";
+                    $sub_heading = "Hear What Our Delighted Customers Have to Say About Us!";
+
+                    if(request()->segment(2) == "vps-hosting-india"){
+                        $heading = "Our Prime Goal: Customers Satisfaction";
+                        $sub_heading = "Read What Our Delighted Customers Have to Say About Us!";
+                    }
+                ?>
                 <div class="col-lg-9">
                     <div class="section-heading">
-                        <h2 class="text_head">Our Prime Goal: Customers Delight</h2>
-                        <p>Hear What Our Delighted Customers Have to Say About Us!</p>
+                        <h2 class="text_head">{{$heading}}</h2>
+                        <p>{{$sub_heading}}</p>
                     </div>
                     <div class="cust-del-owl-carousel">
                         <div class="owl-carousel cust-delight-owl-carousel">
 
                             <div class="item cust-del-item">
+                                <p>Host IT Smart has proven to be a trustworthy and reliable provider of server solutions. Their exceptional customer service, top-notch products, and commitment to transparency make them stand out in the industry. If you're in search of a server provider that delivers on its promises, I wholeheartedly recommend giving Host IT Smart a try. They have certainly earned my trust and gratitude for their outstanding service.</p>
+                                <span>Sameer Shaikh</span>
+                            </div>
+                            <div class="item cust-del-item">
                                 <p>Excellent Fast Service... I have been using the services of Host IT Smart since 2020 & Satisfied with their products and customer services. Their staff are very co-operative and Quickly Resolve the problems that we face. They have an expertise team which provides quick solutions so that businesses can focus on their core work. Thanks a Lot to Host IT Smart Team.</p>
                                 <span>Dr Rakesh Kumar Santani</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I have been working with Host IT Smart to build a new website for my business. Their team was professional, knowledgeable, and always available to answer any questions I had. They listened to my needs and delivered the perfect hosting plan for my needs that perfectly captures my brand's vision. I highly recommend this company to anyone looking for a top-notch Hosting experience.</p>
+                                <span>Prahlad Shukla</span>
                             </div>
                             <div class="item cust-del-item">
                                 <p>Considering hosting services, Host IT Smart stands out with its excellent quality, competitive pricing, and reliable support. When compared to Big Rock, Host IT Smart consistently delivers top-notch service at the best prices. Experience unmatched hosting with Host IT Smart for a seamless and cost-effective online presence.</p>
                                 <span>Laxmi Ayyavari</span>
                             </div>
-                            <div class="item cust-del-item">
-                                <p>Host IT Smart has proven to be a trustworthy and reliable provider of server solutions. Their exceptional customer service, top-notch products, and commitment to transparency make them stand out in the industry. If you're in search of a server provider that delivers on its promises, I wholeheartedly recommend giving Host IT Smart a try. They have certainly earned my trust and gratitude for their outstanding service.</p>
-                                <span>Sameer Shaikh</span>
-                            </div>
-                            <div class="item cust-del-item">
-                                <p>I have been working with Host IT Smart to build a new website for my business. Their team was professional, knowledgeable, and always available to answer any questions I had. They listened to my needs and delivered the perfect hosting plan for my needs that perfectly captures my brand's vision. I highly recommend this company to anyone looking for a top-notch Hosting experience.</p>
-                                <span>Prahlad Shukla</span>
-                            </div>
+                            
                             <div class="item cust-del-item">
                                 <p>I have been using the services of Host IT Smart since 2019 and am pleased with their products and customer services. Their staff are very cooperative and quickly take actions to the problems that we face. They have an expertise team which provides quick solutions so that businesses can focus on their core work.</p>
                                 <span>Shatrughan Saravagi</span>
@@ -204,6 +266,46 @@ else{
                             <div class="item cust-del-item">
                                 <p>Dealing with Happy Service’s customer support was a breeze. They were courteous, quick to respond, and resolved my issue efficiently, leaving me with a positive impression of their commitment to customer satisfaction.</p>
                                 <span>Nilesh Mourya</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>The host Support team is easy to reach. Appreciate their efficiency of reaching out to them within seconds. Keep it up, guys. Mohsin was a smart guy to provide resolutions quickly.</p>
+                                <span>Selvakumar Baskaran</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I have been using servers from Host IT Smart since the last 3 years and I recommend the service of Host IT Smart. They were quick to respond to any queries or concerns. Service and support are awesome!!</p>
+                                <span>Bhavesh Tarkhala</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I've been using Host IT Smart for over 2 years now, and I couldn't be happier! The server performance is fantastic, with almost no downtime, and the loading speeds are incredible. But what stands out the most is their customer support. Anytime I’ve had an issue, their team has been quick to respond and extremely helpful. Highly recommend it for anyone looking for reliable and top-notch hosting!</p>
+                                <span>Patel Rushil</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I am very happy to be a customer of host it smart from a reputed company. Especially the immediate service was made available. We hope to continue to provide the same service....Ramdas Tambe Reporter today news channel.</p>
+                                <span>Ramdas Tambe</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>We have experienced exceptional server support and performance with this service. The team is highly responsive, professional, and always available to address any concerns or issues we encounter. Overall, we are highly satisfied with both the support and the server's performance.</p>
+                                <span>Axone Infotech</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>Jay Vagadiya was very helpful and quickly resolved one of the issues faced.. We have made the right moving to hostitsmart. Helpdesk, Sales and technical support teams are very easy to approach for help when needed.</p>
+                                <span>Vasudev Doddipalle</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>Great Service!! I've been using a Hosting service from Host IT Smart from the last few years. They provide a great service. You can reach them anytime for help or with queries. Their service is recommended. I didn't face any major issues while using their hosting plan. Everything works smoothly. Great service.</p>
+                                <span>Chandni Gupta</span>
+                            </div>
+
+                            <div class="item cust-del-item">
+                                <p>I have purchased a dedicated server of 32 GB RAM. And I am very much satisfied with the service. Mr Jay is very helpful and supportive. I recommend to all of you who are willing to buy their service.</p>
+                                <span>Milan Parmar</span>
                             </div>
                         </div>
                     </div>
@@ -352,7 +454,7 @@ else{
 
 
 @if(Request::segment(2) == 'forex-vps-hosting' || Request::segment(2) == 'vps-hosting' || Request::segment(2) == 'linux-vps-hosting'|| Request::segment(2) == 'managed-vps-hosting' || Request::segment(2) == 'windows-vps-hosting' || Request::segment(2) == 'wordpress-hosting')
-<section class="contact-us-section head-tb-p-40">
+<!-- <section class="contact-us-section head-tb-p-40">
     <div class="container">
         <div class="section-heading text-center">
             <h2 class="text_head">Have a Query?</h2>
@@ -394,7 +496,7 @@ else{
             </div>
         </div>
     </div>
-</section>
+</section> -->
 @endif
 
 <!-- testimonials-carousel-S -->

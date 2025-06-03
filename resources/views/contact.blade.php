@@ -187,7 +187,7 @@
 
 <div class="lading_bottom">
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
-    <div class="hostingtype_div">
+    <div class="hostingtype_div head-tb-p-40">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -267,7 +267,6 @@
         </div>
     </div>--}}
 </div>
-@include('template.'.$themeversion.'.faq-section')
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
  {{-- <script src="{{ url('assets/js/contact.js?v={{date('YmdHi')}}') }}"></script> --}}

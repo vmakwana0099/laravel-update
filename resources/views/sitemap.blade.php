@@ -86,7 +86,7 @@
             <div class="sitemap-m">
                 <h6>Resources</h6>
                 <ul>
-                    <li><a href="{{ url('/blog') }}" title="Blog">Blog</a></li>
+                    <li><a href="{{ url('/blog').'/' }}" title="Blog">Blog</a></li>
                     <li><a href="{{ url('/manage/knowledgebase/') }}" title="Knowledgebase">Knowledgebase</a></li>
                     {{-- <li><a href="https://www.youtube.com/playlist?list=PLH-E6HR4144OtJbgJFadteerb7sw5ZsmO" title="Video Tutorials">Video Tutorials</a></li> --}}
                     <li><a href="{{ Config::get('Constant.SOCIAL_YOUTUBE_LINK') }}" title="Video Tutorials">Video Tutorials</a></li>

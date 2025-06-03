@@ -2,11 +2,13 @@
 @section('content')
 @include('layouts.inner_banner')
 <div class="contact_form">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">	
             <div class="col-lg-6 col-12 left_part d-flex justify-content-end">
                 <div class="contact-left aos-init" data-aos="fade-right">	
-                    <h3 class="contact-title aos-init">OTP Verification</h3>
+                    <div class="section-heading mb-2">
+                    <h2 class="text_head text-start">OTP Verification</h2>
+                    </div>
                     <div class="require-field">*(Denotes Required)</div>
                     {!! Form::open(['method' => 'post','url' => '/otp-send','class'=>'form-horizontal row contact_form', 'name' => 'contact_form', 'id' => 'contact_form']) !!}
                     {!! Form::hidden('varRefURL',URL::previous(),null) !!}
@@ -22,7 +24,7 @@
                 <div class="col-md-12 col-12">
                      <div class="form-group">
                 <label for="loginusername">Country</label>
-                <select class="form-control " data-live-search="true" id="otpcountry" name="otpcountry">
+                <select class="form-select" data-live-search="true" id="otpcountry" name="otpcountry">
                 <option value="">Select</option>
                 @php $country_count=0; @endphp
                 @if(isset($countryDialingCode))

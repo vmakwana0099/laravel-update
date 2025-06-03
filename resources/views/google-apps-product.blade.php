@@ -56,7 +56,7 @@
             </div>
             <div class="col-12 col-sm-4 order-xs-2">
                 <div class="right">
-                    <img src="{{ url('/assets/images/new_icon/g-workspace.webp') }}" alt="Google Workspace Apps">
+                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-workspace.webp" alt="Google Workspace Apps">
                 </div>
             </div>
             <div class="col-sm-12 order-xs-4">
@@ -68,63 +68,63 @@
                         <div class="owl-carousel owl-theme">
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-mail.webp') }}" alt="Gmail">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-mail.webp" alt="Gmail">
                                     <!-- <i class="g-apps-sprite gmail"></i> -->
                                     <span class="app-name">Gmail</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-calendar.webp') }}" alt="Google Calandar">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-calendar.webp" alt="Google Calandar">
                                     <!-- <i class="g-apps-sprite calendar"></i> -->
                                     <span class="app-name">Calendar</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-chat.webp') }}" alt="Google Chat">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-chat.webp" alt="Google Chat">
                                     <!-- <i class="g-apps-sprite hangouts"></i> -->
                                     <span class="app-name">Chat</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-drive.webp') }}" alt="Google Drive">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-drive.webp" alt="Google Drive">
                                     <!-- <i class="g-apps-sprite drive"></i> -->
                                     <span class="app-name">Drive</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-docs.webp') }}" alt="Google Docs">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-docs.webp" alt="Google Docs">
                                     <!-- <i class="g-apps-sprite docs"></i> -->
                                     <span class="app-name">Docs</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-sheets.webp') }}" alt="Google Sheet">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-sheets.webp" alt="Google Sheet">
                                     <!-- <i class="g-apps-sprite sheets"></i> -->
                                     <span class="app-name">Sheets</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-forms.webp') }}" alt="Google Forms">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-forms.webp" alt="Google Forms">
                                     <!-- <i class="g-apps-sprite forms"></i> -->
                                     <span class="app-name">Forms</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-slides.webp') }}" alt="Google Slides">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-slides.webp" alt="Google Slides">
                                     <!-- <i class="g-apps-sprite slides"></i> -->
                                     <span class="app-name">Slides</span>
                                 </div>
                             </div>
                             <div class="item g-suits-main">
                                 <div class="g-logo g-suits-img">
-                                    <img src="{{ url('/assets/images/new_icon/g-meet.webp') }}" alt="Google Meet">
+                                    <img src="https://www.hostitsmart.com/assets/images/new_icon/g-meet.webp" alt="Google Meet">
                                     <!-- <i class="g-apps-sprite sites"></i> -->
                                     <span class="app-name">Meet</span>
                                 </div>
@@ -1948,7 +1948,80 @@
         </div>
     </div>
 </div>
+<?php /*@if($ProductBanner->id != 8)
+<div class="what-we-offer" data-type="background" data-speed="7">
+    <div class="container">
+        @if(session()->has('frontlogin'))
+        @php
+        $renew_link = url('https://manage.hostitsmart.com/clientarea.php?action=domains');
+        $login_attr = '';
+        $target = 'target="_blank"';
+        @endphp
+        @else
+        @php
+        $login_attr = 'data-bs-toggle="modal" data-bs-target="#loginModal"';
+        $renew_link = 'javascript:;';
+        $target ='';
+        @endphp
+        @endif
 
+        <div class="offer-tabbing">
+            <h5 class="" data-aos="fade-up">What We Offer</h5>
+            <ul class="nav nav-pills nav-offer justify-content-center" data-aos="fade-up">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="Dedicated IP"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">Dedicated IP</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="SSL"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">SSL</span></a></li>
+                @else
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="CodeGuard"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">CodeGuard</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="Site Lock"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">Site Lock</span></a></li>
+                @endif
+            </ul>
+            <div class="tab-content aos-init" data-aos="fade-up" data-aos-delay="250">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Dedicated IP</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>SSL</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } @endphp
+                </div>
+                @else
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>CodeGuard</h3>
+                         @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Site Lock</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        
+                         @php } @endphp
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+@endif */?>
 @endif
 @if($ProductBanner->id == 7)
 @include('template.vps-compare')
@@ -2181,7 +2254,7 @@
                                     <h4 class="title">{{ Config::get('Constant.SITE_NAME') }} is a partner of Google Cloud.</h4>
                                     <span class="desc">So, when you buy Google Workspace from {{ Config::get('Constant.SITE_NAME') }}, you get Google Workspace at the same price as Google and at the same time, {{ Config::get('Constant.SITE_NAME') }} helps you with assisted migration and deployment.</span>
                                     <div class="image">
-                                        <img style="border-radius: 10px" src="{{ url('/assets/images/new_icon/google-workspace-partner.webp') }}" alt="Google Cloud Partner">
+                                        <img style="border-radius: 10px" src="https://www.hostitsmart.com/assets/images/new_icon/google-workspace-partner.webp" alt="Google Cloud Partner">
                                         </div>
                                     </div>
                                 </div>
@@ -2189,7 +2262,7 @@
                                     <div class="g_l-content g_r_content">
                                         <h4 class="title">Get more information about Google Workspace</h4>
                                         <span class="desc">This 3 min video tour will provide an insight of what Google Workspace plans for India has in store for you.</span>
-                                        <a class="play-icon" href="#" data-toggle="modal" data-target="#googlepartner">
+                                        <a class="play-icon" href="#" data-bs-toggle="modal" data-bs-target="#googlepartner">
                                             <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -2201,7 +2274,7 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close close-popup" data-dismiss="modal">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
                                         <i class="la la-close"></i>
                                     </button>
                                 </div>
@@ -2410,7 +2483,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/web-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/web-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>

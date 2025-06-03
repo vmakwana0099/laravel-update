@@ -19,11 +19,10 @@
                         </div>
                         
                         <div class="affi_ibl_content_3">
-                           <a href="{{Config::get('Constant.AFFILIATES_URL')}}/signup.php" target="_blank" class="affi-program-btn-1">
+                           <a href="https://affiliates.hostitsmart.com/register" target="_blank" class="affi-program-btn-1">
   <button>Become an Affiliate</button>
 </a>
-{{Config::get('Constant.AFFILIATES_URL')}}
-                            <a href="{{Config::get('Constant.AFFILIATES_URL')}}" class="affi-program-btn-2" target="_blank">
+                            <a href="https://affiliates.hostitsmart.com/" class="affi-program-btn-2" target="_blank">
     <button>Already an Affiliate</button>
     <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 </a>

@@ -57,11 +57,26 @@ $class_best_seller = ' ';
             @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
           <div class="plan-cut-price">  
     <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
-        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+        @if(isset($element->productpricing['monthly_renewal']))
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
+                                        @else
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+                                        @endif
     </span> 
-    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+    @php
+                                    if(isset($element->productpricing['monthly_renewal'])){
+                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly_renewal']) * 100), 0);
+                                    }else{
+                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
+                                    }
+
+                                    @endphp
+                                    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+                                        Save {{$percentageOff}}%
+                                    </span>
+    {{-- <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
    Save {{$percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0)}}%
-    </span>
+    </span> --}}
           </div>
             <div class="plan-price-main" id="oneyear-price{{str_replace(' ', '', $planName)}}">
                 
@@ -98,6 +113,8 @@ $class_best_seller = ' ';
             </div>
         </div>
     </section>
+     @include('template.'.$themeversion.'.testimonial_section')
+
     @include('template.'.$themeversion.'.30-day-moneyback') 
     
     <section class="tech_exprt_main head-tb-p-40">
@@ -427,7 +444,7 @@ $class_best_seller = ' ';
                                             <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
                                                 <div class="content-main align-self-start" @if ($uagent !="mobile" )data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100" @endif>
                                                     <div class="{{$featureIconDivClass}}"><i class="{{$Features->varIconClass}}"></i></div>
-                                                    <h3>{{$Features->varTitle}}</h3>
+                                                    <span>{{$Features->varTitle}}</span>
                                                     <div class="content">{!! $Features->varShortDescription !!}</div>
                                                 </div>
                                             </div>
@@ -455,48 +472,49 @@ $class_best_seller = ' ';
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/logo.webp" alt="logo"></th>
-                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-bluehost.webp" alt="providers-bluehost"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-godaddy.webp" alt="providers-godaddy"></th>
+                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-bluehost.webp" alt="providers-bluehost"></th>
+                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-hostinger.webp" alt="providers-hostinger"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-br.webp" alt="providers-br"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-hostgator.webp" alt="providers-hostgator"></th>
-                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-hostinger.webp" alt="providers-hostinger"></th>
+                                    
                                 </tr>
                             </thead>
                             <tbody class="vps-hstg-prv-body">
                                 <tr>
                                     <td>Monthly Pricing</td>
-                                    <td>₹720/mo</td>
-                                    <td>₹1049/mo</td>
-                                    <td>₹1699/mo</td>
-                                    <td>₹999/mo</td>
+                                    <td>₹420/mo</td>
                                     <td>₹649/mo</td>
-                                    <td>₹999/mo</td>
+                                    <td>₹1749/mo</td>
+                                    <td>₹439/mo</td>
+                                    <td>₹449/mo</td>
+                                    <td>₹699/mo</td>
                                 </tr>
                                 <tr>
                                     <td>CPU</td>
-                                    <td>2vCPU</td>
+                                    <td>1vCPU</td>
                                     <td>1vCPU</td>
                                     <td>2 CPU</td>
                                     <td>1 vCPU</td>
-                                    <td>1 CPU</td>
+                                    <td>2 CPU</td>
                                     <td>2 CPU</td>
                                 </tr>
                                 <tr>
                                     <td>RAM</td>
-                                    <td>2 GB</td>
+                                    <td>4 GB</td>
                                     <td>2 GB</td>
                                     <td>2 GB</td>
                                     <td>4 GB</td>
-                                    <td>1 GB</td>
+                                    <td>2 GB</td>
                                     <td>2 GB</td>
                                 </tr>
                                 <tr>
                                     <td>Storage</td>
-                                    <td>40GB SSD</td>
+                                    <td>50GB SSD</td>
                                     <td>40GB NVMe SSD</td>
                                     <td>30GB SSD</td>
                                     <td>50GB NVME SSD</td>
-                                    <td>15GB</td>
+                                    <td>20GB</td>
                                     <td>20GB</td>
                                 </tr>
                                 <tr>
@@ -526,7 +544,7 @@ $class_best_seller = ' ';
     </section>
     
      <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
- @include('template.'.$themeversion.'.testimonial_section') 
+ @include('template.'.$themeversion.'.help_section') 
 @include('template.'.$themeversion.'.faq-section')
 @include('template.'.$themeversion.'.two-hosting-add')
 

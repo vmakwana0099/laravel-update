@@ -14,7 +14,7 @@
 		{{ csrf_field() }}
 		@if(Session::has('status'))
       <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+        <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true"></button>
         {{ Session::get('status') }}
       </div>
     @endif

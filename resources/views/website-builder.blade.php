@@ -10,6 +10,17 @@
     $customerRatingReview = unserialize($serializedString);
 @endphp
 <section class="web_build_banner">
+<div class="review-top-main">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="review-top-bx">Our Customers Love Us
+<div class="review-star-icon"><img alt="star-icon-1" src="../assets/images/Homepage/star-icon-1.png"><img alt="star-icon-1" src="../assets/images/Homepage/star-icon-1.png"><img alt="star-icon-1" src="../assets/images/Homepage/star-icon-1.png"><img alt="star-icon-1" src="../assets/images/Homepage/star-icon-1.png"><img alt="star-icon-1" src="../assets/images/Homepage/star-icon-1.png"></div>
+4.5 out of 5 based on 1500+ Reviews</div>
+</div>
+</div>
+</div>
+</div>
     <div class="web-build-bnnr">
     <div class="container-fluid">
         <div class="row">
@@ -34,7 +45,7 @@
             </div>
             <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
                 <div class="web_build_inner_right">
-                    <img src="/assets/images/website_builder/web_build_banner.webp" alt="your business online">
+                    <img width="800" height="600" src="/assets/images/website_builder/web_build_banner.webp" alt="your business online">
                 </div>
             </div>
         </div>
@@ -45,7 +56,7 @@
 <div class="col-lg-12">
 <div class="hm-bnnr-cstmr-rtg">
 <div class="cstmr-rtg-main cst-rtg-hostadvice">
-<div class="cst-rtg-tittle"><img alt="hostadvice" src="../assets/images/Homepage/hostadvice-logo.webp" /></div>
+<div class="cst-rtg-tittle"><img alt="hostadvice" src="../assets/images/Homepage/hostadvice-logo.png" /></div>
 
 <div class="cst-rtg-star"><img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /></div>
 
@@ -55,7 +66,7 @@
 </div>
 
 <div class="cstmr-rtg-main cst-rtg-trustpilot">
-<div class="cst-rtg-tittle"><img alt="trustpilot" src="../assets/images/Homepage/trustpilot-logo.webp" /></div>
+<div class="cst-rtg-tittle"><img alt="trustpilot" src="../assets/images/Homepage/trustpilot-logo.png" /></div>
 
 <div class="cst-rtg-star"><img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /></div>
 
@@ -65,7 +76,7 @@
 </div>
 
 <div class="cstmr-rtg-main cst-rtg-google">
-<div class="cst-rtg-tittle"><img alt="google" src="../assets/images/Homepage/google-logo.webp" /></div>
+<div class="cst-rtg-tittle"><img alt="google" src="../assets/images/Homepage/google-logo.png" /></div>
 
 <div class="cst-rtg-star"><img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /> <img alt="star-icon" src="../assets/images/Homepage/star-icon.webp" /></div>
 
@@ -86,7 +97,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <div class="section-heading" id="threeyear">
+                    <div class="" id="threeyear">
                         <b>
                             <h2 class="text-center text_head" id="landingloc">Start Building Your Website Hassle-Free</h2>
                         </b>
@@ -107,17 +118,17 @@
                 
                {{--  <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='monthshow'>
                     <ul class="nav nav-pills nav-vps-hosting @if($ProductBanner->id == 7) pb-10 @endif">
-                        <li><a data-toggle="pill" href="#vps-plan1" title="1 month" id='onemonths'>1 month @if(!empty($ProductBanner->varOfferTextOneMonth))<span><span class="bg-color">{{$ProductBanner->varOfferTextOneMonth}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan2" title="3 months" id='threemonths'>3 months @if(!empty($ProductBanner->varOfferTextThreeMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeMonth}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan3" title="6 months" id='sixmonths' class="active show">6 months @if(!empty($ProductBanner->varOfferTextSixMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextSixMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan1" title="1 month" id='onemonths'>1 month @if(!empty($ProductBanner->varOfferTextOneMonth))<span><span class="bg-color">{{$ProductBanner->varOfferTextOneMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan2" title="3 months" id='threemonths'>3 months @if(!empty($ProductBanner->varOfferTextThreeMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeMonth}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan3" title="6 months" id='sixmonths' class="active show">6 months @if(!empty($ProductBanner->varOfferTextSixMonth)) <span><span class="bg-color">{{$ProductBanner->varOfferTextSixMonth}}</span></span>@endif</a></li>
                     </ul>
                 </div> --}}
                 {{-- <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='yearshow'>
                     <ul class="nav nav-pills nav-vps-hosting @if($ProductBanner->id == 7) pb-10 @endif">
-                        <li><a data-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
-                        <li><a data-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
+                        <li><a data-bs-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
                     </ul>
                 </div> --}}
                 <div class="row">
@@ -126,17 +137,17 @@
                     <div class="wh-server-location-tab">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="loc1" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
+                                <button class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="eager" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="loc2" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
+                                <button class="nav-link" id="loc2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
                                     <img loading="eager" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons" > Canada</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="loc3" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
+                            {{-- <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="loc3" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
                                     <img loading="eager" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button >
-                            </li>
+                            </li> --}}
                         </ul>
 
 
@@ -296,6 +307,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '25,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "10 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
@@ -346,7 +364,7 @@
                                             
                                             
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -451,6 +469,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '50,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "20 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
@@ -501,7 +526,7 @@
                                             
                                           
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -598,6 +623,13 @@
                                                             </span>
                                                             </div>
                                                         </li>
+                                                        @elseif(strtolower(trim($Specification)) == '1,00,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                     @elseif(strtolower(trim($Specification)) == "unlimited mysql db's" || strtolower(trim($Specification)) =="20 mysql db's")
                                                         <li> <div class="free_domain free_domain_black">{{$Specification}}
                                                             <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
@@ -642,7 +674,7 @@
                                             
                                          
                                             @if($ProductBanner->id == 1 || $ProductBanner->id == 4 || $ProductBanner->id == 6 || $ProductBanner->id == 30)
-                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                                <a href="" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                             @endif
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -681,7 +713,7 @@
             <div class="modal-content more_feature_modal">
                 <h2 class="htwo-prime1 plntbl-hdrttl">Host IT Smart Website Builder Features</h2>
                 <div class="table-responsive">
-                    <div class="more-features-close-icon" data-dismiss="modal">x</div>
+                    <div class="more-features-close-icon" data-bs-dismiss="modal">x</div>
                     <table class="w-100">
                         <thead>
                         </thead>
@@ -1925,12 +1957,7 @@
                         <div class="wbf_feature_box">
                             <img alt="easily customizable" src="/assets/images/website_builder/wbf_easy_05.webp" />
                             <h4>Easily Customizable</h4>
-                            <p>With Host IT Smart&#39;s Website Builder, create and design your website as you want. Customize
-                                your theme to pages to your widgets. Create a website with multiple pages and sub-pages,
-                                arrange them in the order of your choice, and arrange your menus and sub-menus to grab your
-                                audience&#39;s attention. Your light, trendy, responsive, and informative website can convert
-                                casual visitors into regular and loyal customers. Create this priceless piece of creativity
-                                with your audience in view.</p>
+                            <p>With Host IT Smart’s Website Builder, create and customize your website just the way you want, from themes and pages to widgets and menus. Build multiple pages, organize subpages, and design responsive, trendy websites that turn visitors into loyal customers. Craft your online presence with creativity and purpose!</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -2129,7 +2156,7 @@
                             </div>
                         </div>
                             <div class="product_offers_btn">
-                                <a href="{{ url('/domain/buy-com-domain-names') }}">Go Online Today</a>
+                                <a href="https://www.hostitsmart.com/domain/buy-com-domain-names">Go Online Today</a>
                             </div>
                         
                     </div>

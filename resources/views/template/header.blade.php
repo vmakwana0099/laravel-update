@@ -40,6 +40,21 @@
                     <?php /*<div class="logo aos-init" data-aos="fade-right" itemscope itemtype="http://schema.org/Organization">*/?>
                         <a href="{{url('/')}}" itemprop="url" title="{{ Config::get('Constant.SITE_NAME') }}"><img src="{{Config::get('Constant.CDNURL')}}/assets/images/logo.png" itemprop="logo" alt="{{ Config::get('Constant.SITE_NAME') }}"/></a>
                          @if(empty(Request::segment(1)))
+                        <?php /*<div  itemscope itemtype="http://schema.org/Organization">
+    <span style="display:none" itemprop="name">Host IT Smart</span>
+    <span style="display:none" itemprop="email">Support@HostITSmart.com</span>
+    <span style="display:none" itemprop="image"><img src="{{Config::get('Constant.CDNURL')}}/assets/images/logo.png" itemprop="image" alt="HostITSmart"></span>
+    <span style="display:none" itemprop="telephone">079-6605-0099</span>
+    <span style="display:none" itemprop="url">https://www.hostitsmart.com/</span>
+    <span style="display:none" itemprop="description">Host IT Smart is India's leading hosting company and we offer web hosting, dedicated servers, domain registration, SSL and more in India with 24X7 support.</span>
+    <div style="display:none" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="name">Host IT Smart - Address</span>
+        <span itemprop="streetAddress">501, Mauryansh Elanza, 
+    Beside Parekh&#039;s Hospital,
+    Near Shyamal Cross Roads, Satellite</span>
+        <span itemprop="addressRegion">Ahmedabad, Gujarat</span><span itemprop="addressCountry">India</span>
+                    </div>
+                    </div>*/?>
                     @endif
                 <?php /*</div>*/?>
                 </div>
@@ -1174,6 +1189,26 @@
                                                 <img src="{{Config::get('Constant.CDNURL')}}/assets/images/rating1.png" alt="Rating">
                                             </div>
                                         </div>
+                                       
+                                       <?php
+                                        /*<div class="menu_04">
+                                            <div class="month-offer text-center">
+                                                <span class="offer-icon"></span> 
+                                                <p class="menu_offer_title">Offer of the Month</p>
+                                                <span class="tagline">Cheapest Dedicated Challenge</span>
+                                                <div class="price_text">
+                                                    @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    Start at <span class="rs-ico">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="rupees">{{ Config::get('Constant.MEGAMENU_DEDICATED_SERVERS_OFFER_PRICE_INR') }}</span><span class="permonth">/mo*</span>
+                                                    @else
+                                                    Start at <span class="rs-ico">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="rupees">{{ Config::get('Constant.MEGAMENU_DEDICATED_SERVERS_OFFER_PRICE_USD') }}</span><span class="permonth">/mo*</span>
+                                                    @endif
+                                                </div>
+                                                <ul class="offer_list">
+                                                    <li>Processor: Xeon L5420</li> <li>SSD: 250GB - 2TB SATA (Variable)</li> <li>RAM: 8GB - 24GB (Variable)</li> <li>Bandwidth: 33TB/Month</li> </ul>
+                                                <a target="_blank" href="https://www.hostitsmart.com/manage/cart.php?a=add&pid=182" class="btn" title="Get Start Now">Get Start Now</a>
+                                            </div>
+                                        </div>*/
+                                        ?>
                                     </div>
                                 </div>
                             </li>
@@ -1282,6 +1317,10 @@
                     </div> 
                     @if(session()->has('frontlogin'))
                     <div class="login_part d-md-flex d-none align-self-md-center aos-init" data-aos="fade-left" data-aos-delay="200">
+                        <?php /*<a id="logoutlink" onclick="do_logout();" href="javascript:void(0);" class="btn" title="Logout">Logout</a>*/?>
+                        <?php 
+                        //<a id="myaccountheaderlink" target="_blank" href="{{url('https://www.hostitsmart.com/manage')}}" class="btn" title="My account">My Account</a>
+                        ?>
 <div class="dropdown my_account_dropdown">
 <button id="myaccountheaderlink" type="button" title="My account" class="btn btn-primary dropdown-toggle d-none d-sm-block" data-toggle="dropdown"> My Account </button>
 <button type="button" class="btn btn-primary dropdown-toggle d-block d-sm-none" data-toggle="dropdown"> <i class="fa fa-user" ></i></button>
@@ -1334,7 +1373,7 @@
                         @endphp
                         <span class="counter" id="cart_cout" {{ $count_array == '0' ? 'style=display:none' : '' }} >{{ $count_array == '0' ? '' : $count_array }}</span>
                         @else
-                        <span class="counter" id="cart_cout" style="display: none;">0</span>
+                        {{-- <span class="counter" id="cart_cout" style="display: none;">0</span> --}}
                         @endif
                     </a>
                     @if (!session()->has('UserID'))
@@ -1391,9 +1430,7 @@
     </div>
     @endif
     <script type="text/javascript">
-        function do_logout() { 
-            var apiUrl = "{{ config('app.api_url') }}";
-            $.get(apiUrl + "/hits_logout.php", function () {
+        function do_logout() { $.get("{{url('https://manage.hostitsmart.com/hits_logout.php')}}", function () {
                 window.location.href = "{{ url('/user-logout') }}"; }); }
         @if(isset($uagent) && $uagent == 'mobile')
 	//To add sub menus items in mobile view

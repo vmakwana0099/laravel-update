@@ -8,7 +8,7 @@
                 <div class="login-box-flex">
                     <div class="login-box-right">
                         <div class="login-box-right-head">
-                            <h3>Our Clients Speak for Us!</h3>
+                            <div class="clnt-rvw-hd">Our Clients Speak for Us!</div>
                         </div>
                         <div class="login-box-ratings">
                             <div class="login-box-ratings-box">
@@ -36,7 +36,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Shivang Kareliya</h2>
+                                                <div class="login-box-rtng-tittle">Shivang Kareliya</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>Exceptional help center! Quick and effective solutions provided with a friendly and knowledgeable team. They made my experience smooth and hassle-free. Definitely my go-to for assistance.</p>
@@ -47,7 +47,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>s2 TECH INDIA</h2>
+                                                <div class="login-box-rtng-tittle">s2 TECH INDIA</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>Considering hosting services, Host IT Smart stands out with its excellent quality, competitive pricing, and reliable support. When compared to Big Rock, Host IT Smart consistently delivers top-notch service at the best prices. Experience unmatched hosting with Host IT Smart for a seamless and cost-effective online presence.</p>
@@ -58,7 +58,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Laxmi Ayyavari</h2>
+                                                <div class="login-box-rtng-tittle">Laxmi Ayyavari</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>One of the best service providers. Extremely satisfied with their customer service and cost effectiveness. Using their services for quite a long and have never faced any delays in taking action against issues. Thanks much!! </p>
@@ -69,7 +69,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Urvashi Shrivastava</h2>
+                                                <div class="login-box-rtng-tittle">Urvashi Shrivastava</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>I have been using their services quite a lot for the last 6 months. I like the ease of use they provided while working with VPS. Also, In case of any issues, the resolution is quite fast.</p>
@@ -80,17 +80,10 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Divyanshu Agarwal</h2>
+                                                <div class="login-box-rtng-tittle">Divyanshu Agarwal</div>
                                             </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                        
                                     </div>
                                 </div>
                                 
@@ -136,7 +129,7 @@
                                 <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                 <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                 </div>
-                                <p>4.4 Ratings</p>
+                                <p>4.5 Ratings</p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +183,7 @@
 
         <div class="modal-content">
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="la la-close"></i></button>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
 
             <div class="modal-body">
                 <div class="container-fluid">
@@ -199,7 +192,7 @@
                             <div class="login-box-flex">
                                 <div class="login-box-right">
                                     <div class="login-box-right-head">
-                                        <h3>Our Clients Speak for Us!</h3>
+                                        <div class="clnt-rvw-hd">Our Clients Speak for Us!</div>
                                     </div>
                                     <div class="login-box-ratings">
                                         <div class="login-box-ratings-box">
@@ -227,7 +220,7 @@
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                             </div>
-                                                            <h2>Shivang Kareliya</h2>
+                                                            <div class="login-box-rtng-tittle">Shivang Kareliya</div>
                                                         </div>
                                                         <div class="login-box-carousel-item carousel-item">
                                                             <p>Exceptional help center! Quick and effective solutions provided with a friendly and knowledgeable team. They made my experience smooth and hassle-free. Definitely my go-to for assistance.</p>
@@ -238,7 +231,7 @@
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                             </div>
-                                                            <h2>s2 TECH INDIA</h2>
+                                                            <div class="login-box-rtng-tittle">s2 TECH INDIA</div>
                                                         </div>
                                                         <div class="login-box-carousel-item carousel-item">
                                                             <p>Considering hosting services, Host IT Smart stands out with its excellent quality, competitive pricing, and reliable support. When compared to Big Rock, Host IT Smart consistently delivers top-notch service at the best prices. Experience unmatched hosting with Host IT Smart for a seamless and cost-effective online presence.</p>
@@ -249,7 +242,7 @@
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                             </div>
-                                                            <h2>Laxmi Ayyavari</h2>
+                                                            <div class="login-box-rtng-tittle">Laxmi Ayyavari</div>
                                                         </div>
                                                         <div class="login-box-carousel-item carousel-item">
                                                             <p>One of the best service providers. Extremely satisfied with their customer service and cost effectiveness. Using their services for quite a long and have never faced any delays in taking action against issues. Thanks much!! </p>
@@ -260,7 +253,7 @@
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                             </div>
-                                                            <h2>Urvashi Shrivastava</h2>
+                                                            <div class="login-box-rtng-tittle">Urvashi Shrivastava</div>
                                                         </div>
                                                         <div class="login-box-carousel-item carousel-item">
                                                             <p>I have been using their services quite a lot for the last 6 months. I like the ease of use they provided while working with VPS. Also, In case of any issues, the resolution is quite fast.</p>
@@ -271,17 +264,10 @@
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                                 <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                             </div>
-                                                            <h2>Divyanshu Agarwal</h2>
+                                                            <div class="login-box-rtng-tittle">Divyanshu Agarwal</div>
                                                         </div>
                                                     </div>
-                                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
+                                                    
                                                 </div>
                                             </div>
 
@@ -323,7 +309,7 @@
                                                 <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                                 <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                             </div>
-                                            <p>4.4 Ratings</p>
+                                            <p>4.5 Ratings</p>
                                         </div>
                                     </div>
                                 </div>
@@ -337,7 +323,7 @@
                                     </div>
                                 </div>
                                  <form action="javascript:;" class="thank-you-box" style="display: none;" id="password-reset-link">
-                                    <h2>Password Reset Link Sent</h2>
+                                    <div class="passwrd-rst-link-title">Password Reset Link Sent</div>
 
                                     <p><strong>We have sent a password reset link to your email. Please check your inbox to proceed with resetting your password. If you do not see the email, be sure to check your spam or junk folder.</strong></p>
                                     <div class="d-grid sign-up-box-btn">

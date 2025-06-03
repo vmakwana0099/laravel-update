@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="thankyou-found">
+<div class="thankyou-found head-tb-p-40">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -19,10 +19,10 @@
     // echo '<pre>123'; print_r($lowercaseMessage); exit; // For debugging purposes
 
         ?>
-        <a class="btn" href="{{ url('/login') }}" title="Back to home">Back to login</a>
+        <a class="primary-btn-sq" href="{{ url('/login') }}" title="Back to home">Back to login</a>
     <?php } else { ?>
         <!-- Display something else or just the same button -->
-        <a class="btn" href="{{ url('/') }}" title="Back to home">Back to Home</a>
+        <a class="primary-btn-sq" href="{{ url('/') }}" title="Back to home">Back to Home</a>
     <?php }
 ?>
 

@@ -56,16 +56,31 @@ $class_best_seller = ' ';
             <div class="plan-head">{{$planName}}</div>
           <div class="plan-cut-price">
     <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
-        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']+250}}
-    </span>
-    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">Save 
+        @if(isset($element->productpricing['monthly_renewal']))
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
+                                        @else
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+                                        @endif
+    </span> 
+    @php
+                                    if(isset($element->productpricing['monthly_renewal'])){
+                                        $percentageOff = round((100-($element->productpricing['annually'] +220) / ($element->productpricing['monthly_renewal'] +220) * 100), 0);
+                                    }else{
+                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
+                                    }
+
+                                    @endphp
+                                    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+                                        Save {{$percentageOff}}%
+                                    </span>
+    {{-- <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">Save 
    {{$percentageOff = round((100-($element->productpricing['annually'] + 250) / ($element->productpricing['monthly'] + 250) * 100))}}%
-    </span>
+    </span> --}}
 
           </div>
             @if(Config::get('Constant.sys_currency') == 'INR')
             @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
-            <div class="plan-price-main" id="oneyear-price{{str_replace(' ', '', $planName)}}"> <span class="plan-price-r-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>{{$element->productpricing['annually']+250}}<span class="vps-prc-mo">/mo</span></div>
+            <div class="plan-price-main" id="oneyear-price{{str_replace(' ', '', $planName)}}"> <span class="plan-price-r-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>{{$element->productpricing['annually']+220}}<span class="vps-prc-mo">/mo</span></div>
             @endif
              {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
                 <div class="vps-plan-conf-btn" id="oneyear-btn{{str_replace(' ', '', $planName)}}">
@@ -73,7 +88,7 @@ $class_best_seller = ' ';
                 </div>
             @elseif(Config::get('Constant.sys_currency') == 'USD')
             @if (isset($element->productpricing['monthly']))
-            <h2>{!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']+250}}<span class="vps-prc-mo">/Mo</span></h2>
+            <h2>{!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']+220}}<span class="vps-prc-mo">/Mo</span></h2>
             @endif
             @endif
         </div>
@@ -102,6 +117,7 @@ $class_best_seller = ' ';
             </div>
         </div>
     </section>
+    @include('template.'.$themeversion.'.testimonial_section')
     @include('template.'.$themeversion.'.30-day-moneyback') 
     <section class="tech_exprt_main head-tb-p-40">
         <div class="container">
@@ -138,10 +154,10 @@ $class_best_seller = ' ';
                     <div class="col-12 col-sm-12 col-lg-12">
                         <div class="wb-pnl-avl-left">
                             <div class="nav flex-row nav-pills justify-content-between" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link wb-pnl-btn active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home"  role="tab" aria-controls="v-pills-home" aria-selected="true"><img class="img-fluid" src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-admin-tab" data-toggle="pill" data-target="#v-pills-admin"  role="tab" aria-controls="v-pills-admin" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile"  role="tab" aria-controls="v-pills-profile" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages"  role="tab" aria-controls="v-pills-messages" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
+                                <a class="nav-link wb-pnl-btn active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"  role="tab" aria-controls="v-pills-home" aria-selected="true"><img class="img-fluid" src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-admin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-admin"  role="tab" aria-controls="v-pills-admin" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"  role="tab" aria-controls="v-pills-profile" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"  role="tab" aria-controls="v-pills-messages" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
                             </div>
                         </div>
                     </div>
@@ -442,7 +458,7 @@ $class_best_seller = ' ';
         </div>
         @endif
     </section>
-    <section class="vps_hosting_prov_comp_main head-tb-p-40">
+    {{-- <section class="vps_hosting_prov_comp_main head-tb-p-40">
         <div class="container">
             <div class="section-heading text-center">
                 <h2 class="text_head">Don’t Believe Us Yet?</h2>
@@ -542,9 +558,24 @@ $class_best_seller = ' ';
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
-@include('template.'.$themeversion.'.testimonial_section') 
+@include('template.'.$themeversion.'.help_section') 
+
+<div class="dy-money-back-grnt head-tb-p-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dy-money-back-grnt-box text-center">
+                            <h2>Want to Look Professional in Every Email?</h2>
+                            <p>Get a custom email with Google Workspace for your business.</p>
+                            <a href="https://www.hostitsmart.com/email/google-workspace-india" title="Boost With Google Workspace">Boost With Google Workspace</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 @include('template.'.$themeversion.'.faq-section')
 @include('template.'.$themeversion.'.two-hosting-add')
  

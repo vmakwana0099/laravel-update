@@ -41,24 +41,25 @@
     <div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
         <div class="container">
             <div class="section-heading">
-                <h2 class="text_head text-center">Choose & Buy Your Web Hosting Package</h2>
+                <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
+                <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="wh-server-location-tab">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button title="India" class="nav-link active" id="loc1" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
+                                <button title="India" class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="lazy" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button title="Canada" class="nav-link" id="loc2" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
+                                <button title="Canada" class="nav-link" id="loc2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
                                     <img loading="lazy" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons"> Canada</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button title="Germany" class="nav-link" id="loc3" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
+                           {{--  <li class="nav-item" role="presentation">
+                                <button title="Germany" class="nav-link" id="loc3" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
                                     <img loading="lazy" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button>
-                            </li>
+                            </li> --}}
                         </ul>
                         <script type="text/javascript">
                             function changeLocation(locstr) {
@@ -243,6 +244,13 @@
                                                             </span>
                                                         </div>
                                                     </li>
+                                                    @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                      @elseif(strtolower(trim($Specification)) == 'plesk')
                                                     <li>
                                                         <div class="free_domain">{{$Specification}}
@@ -286,7 +294,7 @@
                                             </ul>
 
 
-                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
 
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -403,6 +411,13 @@
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '25,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "10 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -455,7 +470,7 @@
                                         </ul>
 
 
-                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
 
                                         @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
                                         <div class="plan-text-slider">
@@ -562,6 +577,13 @@
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '50,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "20 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -614,7 +636,7 @@
                                         </ul>
 
 
-                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
 
                                         @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
                                         <div class="plan-text-slider">
@@ -713,6 +735,13 @@
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '1,00,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "unlimited mysql db's" || strtolower(trim($Specification)) =="20 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -758,7 +787,7 @@
                                         </ul>
 
 
-                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                        <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
 
                                         @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
                                         <div class="plan-text-slider">
@@ -796,12 +825,43 @@
 </div>
 </div>
 
+<section class="wp-ecommerce head-tb-p-40">
+    <div class="container">
+        <div class="section-heading text-center">
+            <h2 class="text_head">Did You Know?</h2>
+            {{-- <p>Sell smarter with our eCommerce-optimized WordPress hosting. It ensures a smooth online shopping experience with advanced security features.</p> --}}
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="wp-ecom-img">
+                    <img width="480px" height="auto" src="../assets/images/web_hosting/web_hosting_tips.webp" alt="web_hosting_ecomm">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="wp-ecom-cnt">
+                    <div class="wp-ecom-box">
+                        <span>Speed Sells</span>
+                        <p>In 2024 alone, slow-loading websites caused businesses to lose $2.6 billion in sales! Sounds crazy, right? Don’t let yours be one of them. Choose Host IT Smart for fast and cheap hosting to keep your website quick, your visitors happy, and your sales growing.</p>
+                    </div>
+                    <div class="wp-ecom-box">
+                        <span>Cyber Threats Are Real</span>
+                        <p>In 2024, 43% of cyberattacks are targeting small businesses like yours. That means if your website isn’t properly protected, it could easily become a target for hackers. Host in our secured environment & keep your data secure & build trust with your visitors.</p>
+                    </div>
+                    <div class="wp-ecom-box">
+                        <span>Downtime Cost is Higher</span>
+                        <p>44% of businesses reveal that hourly downtime can cost anywhere from $1 million to more than $5 million. Also, 91% of organizations report that an hour of downtime on critical servers or apps leads to losses of over $300,000. Seems scary, right? That’s why our reliable hosting and server uptime is non-negotiable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="hs-platform head-tb-p-40">
     <div class="hs-platform-bg">
         <div class="container">
             <div class="section-heading">
-                <h2 class="text_head text-center">Explore Cheap Hosting Solutions Tailored for Every <br> Platform and Purpose</h2>
+                <h2 class="text_head text-center">Explore Cheap Web Hosting Solutions in India & Canada Tailored for Every Platform and Purpose</h2>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-4 col-xl-4">
@@ -819,8 +879,13 @@
                             Starting @ Just <span>₹90/mo</span>
                         </div>
                         <div class="hs-platform-explore-btn">
-                            <button onclick="window.location.href='{{ url('/hosting/windows-hosting') }}'" title="Explore">Explore</button>
+                            <a href="https://www.hostitsmart.com/hosting/windows-hosting" class="primary-btn-sq" title="Explore Windows Hosting">
+                                Explore Windows Hosting
+                            </a>
                         </div>
+
+
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-xl-4">
@@ -837,8 +902,10 @@
                         <div class="hs-platform-prc-m">
                             Starting @ Just <span>₹45/mo</span>
                         </div>
-                        <div class="hs-platform-explore-btn">
-                            <button onclick="window.location.href='{{ url('/hosting/wordpress-hosting') }}'" title="Explore">Explore</button>
+                        <div class="hs-platform-explore-btn">                           
+                             <a href="https://www.hostitsmart.com/hosting/wordpress-hosting" class="primary-btn-sq" title="Explore WordPress Hosting">
+                                Explore WordPress Hosting
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -856,8 +923,74 @@
                         <div class="hs-platform-prc-m">
                             Starting @ Just <span>₹45/mo</span>
                         </div>
+                        <div class="hs-platform-explore-btn">                           
+                            <a href="https://www.hostitsmart.com/hosting/ecommerce-hosting" class="primary-btn-sq" title="Explore eCommerce Hosting">
+                                Explore eCommerce Hosting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <div class="hs-platform-box">
+                        <div class="hs-platform-img-round">
+                            <img loading="lazy" src="../assets/images/web_hosting/VPS-hosting.webp" alt="VPS-hosting">
+                        </div>
+                        <div class="hs-platform-tittle">
+                            VPS Hosting
+                        </div>
+                        <div class="hs-platform-cnt">
+                            Great Server Performance at Affordable Costs
+                        </div>
+                        <div class="hs-platform-prc-m">
+                            Starting @ Just <span>₹420/mo</span>
+                        </div>
+                        <div class="hs-platform-explore-btn">                           
+                            <a href="https://www.hostitsmart.com/servers/vps-hosting" class="primary-btn-sq" title="Explore VPS Hosting">
+                                Explore VPS Hosting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <div class="hs-platform-box">
+                        <div class="hs-platform-img-round">
+                            <img loading="lazy" src="../assets/images/web_hosting/windows_vps_hosting.webp" alt="windows_vps_hosting">
+                        </div>
+                        <div class="hs-platform-tittle">
+                            Windows VPS
+                        </div>
+                        <div class="hs-platform-cnt">
+                            Benefit of Power & Flexibility at the best costs
+                        </div>
+                        <div class="hs-platform-prc-m">
+                            Starting @ Just <span>₹825/mo</span>
+                        </div>
                         <div class="hs-platform-explore-btn">
-                            <button onclick="window.location.href='{{ url('/hosting/ecommerce-hosting') }}'" title="Explore">Explore</button>
+                            
+                             <a href="https://www.hostitsmart.com/servers/windows-vps-hosting" class="primary-btn-sq" title="Explore Windows VPS">
+                                Explore Windows VPS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <div class="hs-platform-box">
+                        <div class="hs-platform-img-round">
+                            <img loading="lazy" src="../assets/images/web_hosting/dedicated-server.webp" alt="dedicated-server">
+                        </div>
+                        <div class="hs-platform-tittle">
+                            Dedicated Server
+                        </div>
+                        <div class="hs-platform-cnt">
+                            With great Server Autonomy comes great performance!
+                        </div>
+                        <div class="hs-platform-prc-m">
+                            Starting @ Just <span>₹5202/mo</span>
+                        </div>
+                        <div class="hs-platform-explore-btn">                            
+                            <a href="https://www.hostitsmart.com/servers/dedicated-servers" class="primary-btn-sq" title="Explore Dedicated Server">
+                                Explore Dedicated Server
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -868,22 +1001,135 @@
 <section class="wh-server-location-img head-tb-p-40">
     <div class="container">
         <div class="section-heading">
-            <h2 class="text_head text-center">Experience Unmatched Speed and Reliability With Our Strategically Positioned Server Locations</h2>
+            <h2 class="text_head text-center">Stay Fast and Connected With Our Well-Placed Servers!</h2>
+            <p class="text-center">Our server location of web hosting services are in India & Canada</p>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="wh-server-location-img text-center">
                     <div class="wh-server-location-desk">
-                        <img loading="lazy" src="../assets/images/web_hosting/server_location_map.webp" alt="server_location_map">
+                        <img loading="lazy" src="{{url('assets/images/web_hosting/server_location_map2.webp')}}" alt="server_location_map">
                     </div>
-                    <div class="wh-server-location-mo">
+                    <!-- <div class="wh-server-location-mo">
                         <img loading="lazy" src="../assets/images/web_hosting/server_location_map_new.webp" alt="server_location_map">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+{{-- <div class="g-suite-lists head-tb-p-40">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="section-heading">
+                                <h2 class="text_head text-center">Why Choosing the Best Web Hosting is Crucial <br>
+                                For Your Business
+                             </h2>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">1</span>
+                                        <div class="g-list-title">Speed That Impresses Your Visitors</div>
+                                        <span>In today’s fast-paced world, users expect websites to load in seconds. A reliable web hosting service like ours ensures faster loading times, keeping visitors engaged and reducing bounce rates.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">2</span>
+                                        <div class="g-list-title">Protect Your Digital Assets</div>
+                                        <span>A secure hosting provider offers features like SSL certificates, firewalls, and regular updates to protect your website from cyber threats. Security is vital for protecting sensitive data and building customer trust. </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">3</span>
+                                        <div class="g-list-title">Uptime You Can Rely On</div>
+                                        <span>Frequent downtime can harm your business reputation and lead to lost opportunities. A good hosting provider offers excellent uptime guarantees, ensuring your website remains accessible around the clock. </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">4</span>
+                                        <div class="g-list-title">Scalable Solutions for Growing Businesses</div>
+                                        <span>As your business grows, your hosting needs will change. The right hosting allows for easy scalability, ensuring your website performs optimally, even during traffic surges. </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">5</span>
+                                        <div class="g-list-title">Support When You Need It Most</div>
+                                        <span>Technical issues can arise anytime; prompt support is crucial to resolving them. Quality hosting services like ours provide 24/7 expert assistance, minimizing downtime and ensuring smooth operations. </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                   <div class="g-list-box">
+                                        <span class="list-num">6</span>
+                                        <div class="g-list-title">Better SEO and Online Visibility</div>
+                                        <span>Fast and reliable websites rank better on search engines. A robust hosting solution improves SEO performance, driving more organic traffic to your website.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">7</span>
+                                        <div class="g-list-title">Simplified Business Operations</div>
+                                        <span>Web hosting isn’t just about storage; it includes tools for managing emails, backups, and analytics. With efficient hosting, managing your online presence becomes seamless and stress-free.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">8</span>
+                                        <div class="g-list-title">Regular Backups for Peace of Mind</div>
+                                        <span>Data loss can result from unexpected errors or cyberattacks. The best hosting providers offer automatic backups, ensuring you can quickly recover and restore your site. </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">9</span>
+                                        <div class="g-list-title">Long-Term Cost Efficiency</div>
+                                        <span>Investing in quality hosting saves money in the long run by minimizing unexpected expenses like downtime and data recovery costs. It’s a smart choice for sustaining your business online. </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">10</span>
+                                        <div class="g-list-title">Build a Credible Online Presence</div>
+                                        <span>A fast, secure, and reliable website enhances your brand’s credibility. Customers are more likely to trust and engage with businesses that offer a seamless online experience. </span>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div> --}}
+
 <section class="pf-online-presn head-tb-p-40">
     <div class="container">
         <div class="section-heading">
@@ -900,7 +1146,7 @@
                             Free .COM Domain
                         </div>
                         <div class="hs-platform-cnt">
-                            Establish your digital foothold with a free .COM domain with web hosting plans.
+                            Get a free .COM domain with a web hosting plan and build your online presence easily.
                         </div>
                     </div>
                     <div class="pf-online-box pf-online-presn-box-2">
@@ -911,7 +1157,7 @@
                             Free Website Builder
                         </div>
                         <div class="hs-platform-cnt">
-                            Craft your digital masterpiece effortlessly with our user-friendly Website Builder.
+                            Craft your digital masterpiece effortlessly with our beginner-friendly Website Builder.
                         </div>
                     </div>
                     <div class="pf-online-box pf-online-presn-box-3">
@@ -922,7 +1168,7 @@
                             Free SSL Certificate
                         </div>
                         <div class="hs-platform-cnt">
-                            Safeguard Your website and visitors, absolutely Free with web hosting.
+                            Get a Free SSL with your hosting to keep your website and visitors safe.
                         </div>
                     </div>
                     <div class="pf-online-box pf-online-presn-box-4">
@@ -933,7 +1179,7 @@
                             Business Email
                         </div>
                         <div class="hs-platform-cnt">
-                            Elevate your professionalism with personalized business email solutions.
+                            Look more professional with your own personalized business Email.
                         </div>
                     </div>
                 </div>
@@ -957,11 +1203,11 @@
                                     <div class="smart-wh-cnt">
                                         <ul>
                                             <li>Ideal For Novices</li>
-                                            <p>Start your business journey using Host IT Smart's world-class web hosting services. Even beginners can use our services easily and experience reliable performance & top-notch support.</p>
+                                            <p>Start your business journey using Host IT Smart's world-class cheapest web hosting services, where beginners can also use our services easily and experience reliable performance with top-notch support.</p>
                                             <li>Perfect for Simple Business Websites</li>
-                                            <p>Use Host IT Smart's web hosting, specially designed to empower simple business websites. Enjoy reliable performance and secured infrastructure with essential features to boost your online presence.</p>
+                                            <p>Use Host IT Smart's cheapest web hosting, specially designed to empower your simple business websites & enjoy power-packed performance with secured infrastructure to boost your online presence.</p>
                                             <li>Cheapest Month-to-Month Web Hosting</li>
-                                            <p>If you want an affordable hosting solution for your business, try Host IT Smart's month-to-month web hosting today. Crack our introductory deals without committing long years. Great rates, quality, and performance are assured.</p>
+                                            <p>If you are looking for a cheap web hosting solution for your business, you can try Host IT Smart's month-to-month web hosting at the best cost without committing for long years.</p>
                                         </ul>
                                     </div>
                                 </div>
@@ -969,32 +1215,32 @@
                                     <div class="smart-wh-cnt">
                                         <ul>
                                             <li>Ideal For Maintaining Affordable Renewal Rates</li>
-                                            <p>Say goodbye to unexpected price hikes and hello to predictable, budget-friendly renewal rates. By choosing our hosting plans, you can rest assured knowing that you are getting the best value for your money.</p>
+                                            <p>Just say goodbye to unexpected high price hikes at renewal time. With our budget-friendly renewal rates, you can rest assured that you will get the best value for your money for a lifetime.</p>
                                             <li>Ideal Hosting Offering Top-Notch Support</li>
-                                            <p>Experience Host IT Smart's unparalleled support with web hosting services. We pride ourselves on delivering top-notch support to our customers, ensuring their online journey is smooth and worry-free.</p>
+                                            <p>Experience Host IT Smart's world-class 24/7 Indian support with our amazing web hosting services that deliver top-notch support to customers, ensuring their online journey is smooth and worry-free.</p>
                                             <li>Speedy Yet Pocket-friendly Hosting Services</li>
-                                            <p>Host IT Smart offers a perfect blend of speed and affordability with its web hosting service. Enjoy lightning-fast performance without exorbitant rates & experience a seamless online experience for your business.</p>
+                                            <p>Host IT Smart offers a perfect blend of speed and affordability with its cheap web hosting service in India & Canada to get lightning-fast performance without expensive pricing & experiencing a seamless online experience for your business.</p>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="smart-wh-cnt">
                                         <ul>
-                                            <li>Best for Websites Focused in Asia & Europe</li>
-                                            <p>Strengthen your brand visibility with Host IT Smart's specialized web hosting services, focused on Asian and European websites. Leverage optimized performance and support for your region.</p>
+                                            <li>Best for Websites Focused in Asia</li>
+                                            <p>You can strengthen your brand visibility with Host IT Smart's specialized cheap web hosting India services focused on Asian countries by leveraging optimized performance and support for your region.</p>
                                             <li>Unbeatable Introductory Pricing</li>
-                                            <p>Kickstart your online business journey with Host IT Smart's unbeatable web hosting introductory pricing. Don't rush for long-term commitments when you can experience exceptional value and performance at a discounted price. Give it a try today.</p>
+                                            <p>Start your online journey with Host IT Smart's unbeatable web hosting introductory pricing. Just go for long-term commitments at an exceptional value and performance at an amazing discounted price. </p>
                                             <li>Intuitive and User-Centric Website Builder Tool</li>
-                                            <p>Host IT Smart's intuitive and user-centric website builder tool with web hosting plans brings your creativity alive. Build stunning and flawless websites with our user-friendly builder that caters to your unique design needs and preferences.</p>
+                                            <p>Host IT Smart's simple and user-centric website builder tool with web hosting plans brings your creativity alive to build stunning websites that cater to your unique design needs and preferences.</p>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <button class="smart-wh-prev-btn" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                            <button class="smart-wh-prev-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <img src="../assets/images/web_hosting/left_arrow.webp" title="Previous" alt="left_arrow">
                                 <span class="sr-only">Previous</span>
                             </button>
-                            <button class="smart-wh-next-btn" type="button" data-target="#carouselExampleControls" data-slide="next">
+                            <button class="smart-wh-next-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                 <img src="../assets/images/web_hosting/right_arrow.webp" title="Next" alt="right_arrow">
                                 <span class="sr-only">Next</span>
                             </button>
@@ -1024,22 +1270,23 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2 class="text_head">Let Our Robust and User-Friendly Control Panel
-                            Simplify Your Website Management</h2>
-                        <p>Manage your website effortlessly with our robust and user-friendly control panel. Our control panel enhances your online business presence while ensuring smooth operations and an enriched user experience.</p>
-                        <p>As a Host It Smart user, your privilege is to experience seamless website management with our advanced, robust, and user-friendly control panel.</p>
-                        <p>Our control panel simplifies tasks like website creation, domain management, email setup, and more. What more can you expect when you have a series of power-packed features to manage your online presence effortlessly? We travel that extra mile to smoothen your operations and deliver optimal performance while you focus on elevating your business to the next level.</p>
+                        <h2 class="text_head">Offering a User-Friendly Control Panel For Control Without the Tech Headache!
+                        </h2>
+                        <p>It is quite important that managing your dream website should be super easy!</p>
+                        <p>That’s exactly what you get with our easy-to-use and powerful control panel to create a website, manage your domain, set up emails, or keep things running smoothly.</p>
+                        <p>At Host IT Smart, we offer user-friendly panels like Plesk (with our Basic hosting plan) and cPanel (with our other hosting plans), so you can handle everything with just a few clicks & put all the tools you need in one place to make your online journey smoother and your business stronger.</p>
                     </div>
                     <div class="wn-features-ul">
                         <div class="wn-features-cnt">
                             <ul>
                                 <li><span class="wn-features-cnt-icon">One-click Installation</li>
-                                <li><span class="wn-features-cnt-icon">Domain management tools</li>
-                                <li><span class="wn-features-cnt-icon">Email management functionalities</li>
-                                <li><span class="wn-features-cnt-icon">Simple File management system</li>
-                                <li><span class="wn-features-cnt-icon">Database Management tools</li>
+                                <li><span class="wn-features-cnt-icon">Domain Management Tools</li>
+                                <li><span class="wn-features-cnt-icon">Email Management Functionalities</li>
+                                <li><span class="wn-features-cnt-icon">Simple File Management System</li>
+                                <li><span class="wn-features-cnt-icon">Database Management Tools</li>
                                 <li><span class="wn-features-cnt-icon">Combined With Security Features</li>
                                 <li><span class="wn-features-cnt-icon">Offers Website Statistics & Analytics</li>
+                                <li><span class="wn-features-cnt-icon">Support For Multiple Programming Languages</li>
                                 <li><span class="wn-features-cnt-icon">Free Website Builder Integration</li>
                             </ul>
                         </div>
@@ -1055,10 +1302,11 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2 class="text_head">Empower Your Online Presence With Our Blazing Website Speed</h2>
-                    <p>We understand the pain most businesses face during the slow website loading times and the damage it causes to their online presence. Even the visitors are reluctant to return to your website.</p>
-                    <p>Align with Host IT Smart’s web hosting services in india to experience blazing website speed that accelerates your online presence & bid farewell to boredom and slow loading times. Thanks to our top-notch infrastructure, which has helped millions of businesses deliver seamless user experiences, boosted their website's efficiency, empowered their online presence, and created brand credibility that is par excellence.</p>
-                    <p>We deploy speed optimization techniques on our robust hosting servers to ensure the quick loading of your websites. Keeping your visitors engaged and happy is the primary purpose behind offering superior speed and enhanced server performance.</p>
+                    <h2 class="text_head">Empowering Your Online Presence with Blazing Website Speed</h2>
+                    <p>Nobody likes waiting for longgg! When your website takes forever to load, visitors lose patience & you lose potential customers; let’s be honest, they probably won’t come back.</p>
+                    <p>That’s where we come in.</p>
+                    <p>At Host IT Smart, we are all about speed! Our web hosting services are designed to give your website a lightning-fast boost that offers a smooth, snappy experience for keeping people coming back, creating more trust and a stronger online presence.</p>
+                    <p>Till now, we have helped 1000+ businesses across India to create seamless websites by improving performance and building stronger online credibility.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -1091,9 +1339,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content more_feature_modal">
             <h2 class="htwo-prime1 plntbl-hdrttl">Host IT Smart Shared Hosting Features</h2>
-            <div class="">
-                <div class="more-features-close-icon" data-dismiss="modal" title="Close">x</div>
-                <table class="table-responsive">
+            <div class="table-responsive">
+                <div class="more-features-close-icon" data-bs-dismiss="modal" title="Close">x</div>
+                <table class="w-100">
                     <thead>
                     </thead>
 
@@ -1840,7 +2088,7 @@
         <div class="row">
             <div class="features-main">
                 <div class="section-heading">
-                    <h2 class="text_head text-center" data-aos="fade-up">Features of Our Web Hosting</h2>
+                    <h2 class="text_head text-center" data-aos="fade-up">Why Choose Our Web Hosting?</h2>
                 </div>
                 @php
                 $featureMainDivClass;
@@ -1869,7 +2117,7 @@
 
                                     </div>
 
-                                    <h3>{{$Features->varTitle}}</h3>
+                                    <span>{{$Features->varTitle}}</span>
                                     <div class="content">{!! $Features->varShortDescription !!}</div>
                                 </div>
                             </div>
@@ -1886,9 +2134,39 @@
     </div>
 </div>
 <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
+<div class="dy-money-back-grnt head-tb-p-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="dy-money-back-grnt-box text-center">
+                    <h2>Looking For Something More Powerful?</h2>
+                    <p>We have Indian VPS Hosting for you, boosting your online project without breaking the bank!</p>
+                    <a href="{{url('/servers/vps-hosting-india')}}" title="Discover Google Workspace">Explore VPS in India</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @include('template.'.$themeversion.'.testimonial_section')
+
+@include('template.'.$themeversion.'.support_section_home')
+
+<div class="dy-money-back-grnt head-tb-p-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dy-money-back-grnt-box text-center">
+                            <h2>Want to Work Smarter, Not Harder?</h2>
+                            <p>Try Google Workspace that gives you all the tools you need in one place!</p>
+                            <a href="https://www.hostitsmart.com/email/google-workspace-india" title="Discover Google Workspace">Discover Google Workspace</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 @include('template.'.$themeversion.'.faq-section')
-@include('template.'.$themeversion.'.two-hosting-add')
+{{-- @include('template.'.$themeversion.'.two-hosting-add') --}}
 <script>
 $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){setTimeout(function(){var targetSection=document.getElementById('see_more_features');if(targetSection){targetSection.scrollIntoView({behavior:'smooth',block:'start'})}},300)})})
 </script>
@@ -1896,7 +2174,7 @@ $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){s
     document.addEventListener('DOMContentLoaded', function() {
         // Get references to the buttons and the div to be hidden
         const canadaButton = document.getElementById('loc2');
-        const germanyButton = document.getElementById('loc3');
+        // const germanyButton = document.getElementById('loc3');
         const indiaButton = document.getElementById('loc1');
         const vpsPlanDiv = document.getElementById('basic_three_div');
 
@@ -1913,7 +2191,7 @@ $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){s
 
         // Add event listeners to the buttons
         canadaButton.addEventListener('click', hideVpsPlanDiv);
-        germanyButton.addEventListener('click', hideVpsPlanDiv);
+        // germanyButton.addEventListener('click', hideVpsPlanDiv);
         indiaButton.addEventListener('click', showVpsPlanDiv);
     });
 </script>

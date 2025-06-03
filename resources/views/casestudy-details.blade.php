@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{ URL::to('/assets/css/testimonial.css') }}">
 <link rel="stylesheet" href="{{ URL::to('/assets/images/svg') }}" media="all" />
 <!-- /public_html/assets/images/svg -->
-<div class="banner-inner" style="background-image:url('{{ asset('assets/images/domain_search/banner-bg-hosting.jpg') }}');">
+<div class="banner-inner" style="background-image:url('https://www.hostitsmart.com/assets/images/domain_search/banner-bg-hosting.jpg');">
     <div class="container">
         <div class="banner-content">
             <h1 class="banner-title">

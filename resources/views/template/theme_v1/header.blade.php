@@ -1,61 +1,50 @@
 
-<div class="mega-menu-fixed fixed-header" id="myHeader">
-  <div class="mega-menu-top">
+<div class="mega-menu-fixed fixed-header" >
+  <!-- <div class="mega-menu-top">
     <div class="header-top-menu">
       <div class="hdr-tp-lft hdr_tp_cmn">
         <ul>
           <li><a href="{{url('/web-hosting-affiliates')}}" title="Affiliates" id="affiliates_header">Affiliates</a></li>
-          <li><a href="{{ url('/blog') }}" title="Blog" id="blog_header">Blog</a></li>
-          <li><a href="{{ url('/manage/knowledgebase/') }}" title="Knowledgebase" id="knowledgebase_header">Knowledgebase</a></li>
+          <li><a href="https://new.hostitsmart.com/blog/" title="Blog" id="blog_header">Blog</a></li>
+          <li><a href="https://new.hostitsmart.com/manage/knowledgebase/" title="Knowledgebase" id="knowledgebase_header">Knowledgebase</a></li>
         </ul>
       </div>
 
 
 
 
+      <div class="header-top-menu-right">
+<div class="dropdown header-tp-menu-contact">
+          <a class=" btn-headr-top-r dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Us
+          </a>
+          <ul class="dropdown-menu header-tp-r-ul-box">
+            <li><a class="dropdown-item" title="Call Us on 079-3507-9700" id="phone_number_header" class="dropdown-item" target="_blank" href="tel:{{Config::get('Constant.DEFAULT_PHONENO')}}"><i class="fa-solid fa-phone"></i>{{Config::get('Constant.DEFAULT_PHONENO')}}</a></li>
+            <li><a class="dropdown-item" title="Live Chat" id="live_chat_header" class="dropdown-item" href="javascript:void(Tawk_API.toggle())"><i class="fa-solid fa-comments"></i>Live Chat</a></li>
+            <li><a title="Raise a Ticket" id="raise_ticket_header" class="dropdown-item" target="_blank" href="https://manage.hostitsmart.com/clientarea.php"><i class="fa-solid fa-ticket"></i>Raise a Ticket</a></li>
+          </ul>
+        </div>
+      @unless(session()->has('frontlogin'))
+<div class="dropdown header-tp-menu-contact">
+          <a class=" btn-headr-top-r dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+          Register/Login
+          </a>
+          <ul class="dropdown-menu header-tp-r-ul-box">
+            <li><a class="dropdown-item" title="Sign in" id="login_page_home" class="dropdown-item" href="{{url('/login')}}">
+            <i class="fa-solid fa-user"></i>LOGIN</a></li>
+            <li><a class="dropdown-item" title="Sign Up" id="signup_page_home" class="dropdown-item createaccount" id="login_header" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-solid fa-user-plus"></i>REGISTER</a></li>
+          </ul>
+        </div>
 
-
-
-
-
-
-
-
-      <div class="hdr-tp-rgt hdr_tp_cmn">
-      <ul>
-          <li class="nav-item dropdown hdr_top_cntc_us">
-            <a title="Contact Us" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Contact Us <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <div class="dropdown-menu">
-              @if(null!==(Config::get('Constant.DEFAULT_PHONENO')) && strlen(Config::get('Constant.DEFAULT_PHONENO')) > 0)
-              <a title="Call Us on 079-3507-9700" id="phone_number_header" class="dropdown-item" target="_blank" href="tel:{{Config::get('Constant.DEFAULT_PHONENO')}}"><i class="fa-solid fa-phone"></i>{{Config::get('Constant.DEFAULT_PHONENO')}}</a>
-              {{-- <a class="dropdown-item" target="_blank" href="tel:{ App\Helpers\MyLibrary::encrypt_decrypt('decrypt',$contactData->varPhoneNo) }}"><i class="fa-solid fa-phone"></i> {{ App\Helpers\MyLibrary::encrypt_decrypt('decrypt',$contactData->varPhoneNo) }}</a> --}}
-              @endif
-              <a title="Live Chat" id="live_chat_header" class="dropdown-item" href="javascript:void(Tawk_API.toggle())"><i class="fa-solid fa-comments"></i> Live Chat</a>
-              <a title="Raise a Ticket" id="raise_ticket_header" class="dropdown-item" target="_blank" href="{{ config('app.api_url') }}/clientarea.php"><i class="fa-solid fa-ticket"></i> Raise a Ticket</a>
-            </div>
-          </li>
-           @unless(session()->has('frontlogin'))
-          <li class="nav-item dropdown hdr_top_cntc_us">
-            <a title="Account" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Register/Login <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <div class="dropdown-menu">
-              <a title="LOGIN" id="login_page_home" class="dropdown-item" href="{{url('/login')}}">
-              <i class="fa-solid fa-user"></i>LOGIN</a>
-              <a title="REGISTER" id="signup_page_home" class="dropdown-item createaccount" id="login_header" href="#" data-toggle="modal" data-target="#loginModal">
-              <i class="fa-solid fa-user-plus"></i>REGISTER</a>
-            </div>
-          </li>  
-          
-        @endunless
+@endunless
         @if(session()->has('frontlogin'))
-          <li class="nav-item dropdown hdr_top_cntc_us my-acc-top header-megamenu-li my-acc-top-device">
-            <a class="nav-link mega-nav" href="#" role="button" data-toggle="dropdown" aria-expanded="false" title="My Account">
-              My Account <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <div class="dropdown-menu">
+      <div class="dropdown header-tp-menu-contact"> 
+          <a class=" btn-headr-top-r dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+          My Account
+          </a>
+          <ul class="dropdown-menu header-tp-r-ul-box">
+            <li>
               <a class="dropdown-item top-menu-myacc" href="javascript:void(0)" title="Host IT Smart">
                 <p> Host IT Smart</p>
                 <p>
@@ -64,60 +53,136 @@
                   @endif
                 </p>
               </a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php" title="My Profile"><i class="fa-solid fa-user"></i> My Profile</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=invoices" title="Invoices"><i class="fa-solid fa-file-invoice"></i> Invoices</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=services" title="Products"><i class="fa-solid fa-share-nodes"></i> Products/Services</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=domains" title="Domain"><i class="fa-solid fa-globe"></i> Domain</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/supporttickets.php" title="Support"><i class="fa-solid fa-ticket"></i> Support</a>
-              <div class="my-acc-log-out-btn">
+            </li>
+            <li>
+            <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php" title="My Profile"><i class="fa-solid fa-user"></i> My Profile</a>
+          </li>
+            <li>
+            <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php?action=invoices" title="Invoices"><i class="fa-solid fa-file-invoice"></i> Invoices</a>
+          </li>
+            <li>
+            <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php?action=services" title="Products"><i class="fa-solid fa-share-nodes"></i> Products/Services</a>
+          </li>
+            <li>
+            <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php?action=domains" title="Domain"><i class="fa-solid fa-globe"></i> Domain</a>
+          </li>
+            <li>
+            <a class="dropdown-item" href="https://manage.hostitsmart.com/supporttickets.php" title="Support"><i class="fa-solid fa-ticket"></i> Support</a>
+          </li>
+            <li>
+            <div class="my-acc-log-out-btn">
                 <a href="javascript:void(0)" id="logoutlink" onclick="do_logout();" title="Logout">LOGOUT</a>
               </div>
+          </li>
+          </ul>
+        </div>
+
+   @endif
+
+<div class="dropdown header-tp-menu-contact">
+          <a class=" btn-headr-top-r dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/images/new_img/india_flag.webp" alt="india_flag_icon" loading="lazy">
+              <span class="cntry-list-in"> India </span> 
+          </a>
+          <ul class="dropdown-menu header-tp-r-ul-box">
+            <li><a class="dropdown-item" title="Canada" class="dropdown-item" href="https://www.hostitsmart.ca/"><img src="../assets/images/new_img/canada_flag.webp" alt="canada_flag_icon" loading="lazy">
+                Canada</a></li>
+            <li><a class="dropdown-item" title="Global" class="dropdown-item" href="https://global.hostitsmart.com/"><img src="../assets/images/new_img/global_icon.webp" alt="global_icon" loading="lazy">
+                Global</a></li>
+          </ul>
+        </div>
+
+        </div>
+
+
+      <!-- <div class="hdr-tp-rgt hdr_tp_cmn">
+        <ul>
+          <li class="nav-item dropdown hdr_top_cntc_us">
+            <a title="Contact Us" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact Us <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              @if(null!==(Config::get('Constant.DEFAULT_PHONENO')) && strlen(Config::get('Constant.DEFAULT_PHONENO')) > 0)
+              <a title="Call Us on 079-3507-9700" id="phone_number_header" class="dropdown-item" target="_blank" href="tel:{{Config::get('Constant.DEFAULT_PHONENO')}}"><i class="fa-solid fa-phone"></i>{{Config::get('Constant.DEFAULT_PHONENO')}}</a>
+              {{-- <a class="dropdown-item" target="_blank" href="tel:{ App\Helpers\MyLibrary::encrypt_decrypt('decrypt',$contactData->varPhoneNo) }}"><i class="fa-solid fa-phone"></i> {{ App\Helpers\MyLibrary::encrypt_decrypt('decrypt',$contactData->varPhoneNo) }}</a> --}}
+              @endif
+              <a title="Live Chat" id="live_chat_header" class="dropdown-item" href="javascript:void(Tawk_API.toggle())"><i class="fa-solid fa-comments"></i> Live Chat</a>
+              <a title="Raise a Ticket" id="raise_ticket_header" class="dropdown-item" target="_blank" href="https://manage.hostitsmart.com/clientarea.php"><i class="fa-solid fa-ticket"></i> Raise a Ticket</a>
             </div>
           </li>
-          @endif
-         
-          {{-- <li class="nav-item dropdown hdr_top_login header-megamenu-li hdr_top_login_mb">
-            <a class="nav-link mega-nav" id="login_header" href="#" title="Login" data-toggle="modal" data-target="#loginModal">
-            <i class="hdr-tp-icon fa-solid fa-user"></i> Login</a></li> --}}
-         
-            <li class="nav-item dropdown hdr_top_ctry_list">
-            <a title="India" title="India" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+
+          @unless(session()->has('frontlogin'))
+          <li class="nav-item dropdown hdr_top_cntc_us">
+            <a title="Account" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Register/Login <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a title="Sign in" id="" class="dropdown-item" href="{{url('/login')}}">
+                <i class="fa-solid fa-user"></i>LOGIN</a>
+              <a title="Sign Up" id="" class="dropdown-item createaccount" id="login_header" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa-solid fa-user-plus"></i>SIGN UP</a>
+
+            </div>
+          </li>
+          @endunless
+          <li class="nav-item dropdown hdr_top_ctry_list">
+            <a title="India" title="India" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="../assets/images/new_img/india_flag.webp" alt="india_flag_icon" loading="lazy">
               <span class="cntry-list-in"> India </span> <i class="fa-solid fa-angle-down"></i>
             </a>
             <div class="dropdown-menu">
-              <a title="Canada" class="dropdown-item" href="https://www.hostitsmart.ca/"><img src="../assets/images/new_img/canada_flag.webp" alt="canada_flag_icon" loading="lazy">
+              <a title="Canada" class="dropdown-item" href="https://www.hostitsmart.ca/"><img src="../assets/images/new_img/canada_flag.png" alt="canada_flag_icon" loading="lazy">
                 <p> Canada</p>
               </a>
-              <a title="Global" class="dropdown-item" href="https://global.hostitsmart.com/"><img src="../assets/images/new_img/global_icon.webp" alt="global_icon" loading="lazy">
+              <a title="Global" class="dropdown-item" href="https://global.hostitsmart.com/"><img src="../assets/images/new_img/global_icon.png" alt="global_icon" loading="lazy">
                 <p> Global</p>
               </a>
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
 
   </div>
 
 
-  <div class="main_navbar_megamenu">
+  <div class="main_navbar_megamenu" id="myHeader">
     <nav class="navbar navbar-expand-lg navbar-light rounded megamenu-navbar" id="navbar-nav">
-      <a class="navbar-brand navbar-megamenu-logo" href="{{url('/')}}"  title="Host IT Smart"><img style=" max-height: 70px;" src="../assets/images/logo.webp" alt="logo" loading="lazy"></a>
-      <button class="navbar-toggler megamenu-toggle" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand navbar-megamenu-logo" href="{{url('/')}}" title="Host IT Smart"><img style=" max-height: 50px;" src="../assets/images/logo.webp" alt="logo" loading="lazy"></a>
+      <button class="navbar-toggler megamenu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class=" toggle-icon" onclick="toggleIcon()"><i id="icon" class="fa-solid fa-bars"></i></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mega-menu">
+          @unless(session()->has('frontlogin'))
+        <li class="nav-item dropdown header-megamenu-li header-login-mo">
+        <div class="">
+        <div class="login-user">
+              <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+              <div class="user-cnt">
+                Hi, Webmaster
+                <p>Login and Signup Here</p>
+              </div>
+            </div>
+            <div class="login-user-btn">
+              <a class="dropdown-item blk-btn-sq" title="Sign Up" id="signup_page_home" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" href="javascript:void(0)">Login/Signup</a>
+            </div>
+</div>
+        
+      </li>
+      @endunless
+
           <li class="nav-item dropdown header-megamenu-li">
-            <a class="nav-link mega-nav active" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Domains">Domains<i class="fa-solid fa-angle-down"></i></a>
+            <a class="nav-link mega-nav active" href="" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Domains">Domains<i class="arrow fa-solid fa-angle-down"></i></a>
             <div class="dropdown-menu header-megamenu domains-dropdown-megamenu" aria-labelledby="dropdown01">
               <ul class="mega-box-clm">
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/domain-registration')}}" title="Domain Registration">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/dmn-register.webp" alt="Domain Registration" loading="lazy"></div>
-                    <div class="mega-menu-cont" >
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M481.901 339.399C420.099 468.999 325 497 256 497c-77.701 0-150.901-38.8-195.901-102.1-45.298-63.9-56.1-144.9-30-222.301L34.9 162.7C71.499 75.399 160.3 15 256 15c77.701 0 150.901 38.8 195.901 102.1 45.298 63.9 56.1 144.9 30 222.299z" style="" fill="#65b1fc" data-original="#65b1fc"/><path d="M481.901 339.399C420.099 468.999 325 497 256 497V15c77.701 0 150.901 38.8 195.901 102.1 45.298 63.9 56.1 144.9 30 222.299z" style="" fill="#1689fc" data-original="#1689fc" class=""/><path d="M464.2 108.399C416.201 41.199 338.5 0 256 0 153.1 0 58.9 64.6 20.2 159.699L15.099 170.2C-12.446 254.076-1.721 333.523 47.8 403.599 95.799 470.799 173.5 512 256 512c101.7 0 194.7-63.1 234.6-156.101l4.499-9c29.986-85.319 19.482-167.281-30.899-238.5zm-391.8 277.8c-42.599-60-52.5-135.899-27.9-208.799l3.9-8.101C72.7 111.099 121 66 178.599 44.399c-36.299 47.401-58.2 139.6-55.499 169.6-.3.901-.601 1.8-.601 3.001-7.8 100.499 15 197.5 57.9 251.8C137.5 453.199 99.401 424.3 72.4 386.199zm168.6 93.1c-10.499-3.6-21-11.499-30.901-22C168.1 412 145 316.3 152.5 219.399V216.7c0-.901.3-2.1.3-3.001 8.699-93.3 45.3-166.899 88.2-181v446.6zm30-.3v-446.3c46.199 15.3 84.901 100.3 89.399 201.7 4.2 93.6-19.199 181.5-59.7 224.101-9.6 9.899-19.498 17.199-29.699 20.499zM467.5 334.6c-33.6 70.8-81 114.399-135.899 133.9 40.199-50.7 62.999-141.1 58.798-235.3-3.6-79.801-26.1-148.599-58.799-190 42.9 15.599 80.999 44.5 107.999 82.599 42.6 60 52.501 135.901 27.901 208.801z" style="" fill="#96ebe6" data-original="#96ebe6" class=""/><path d="M464.2 108.399C416.201 41.199 338.5 0 256 0v512c101.7 0 194.7-63.1 234.6-156.101l4.499-9c29.986-85.319 19.482-167.281-30.899-238.5zM271 478.999v-446.3c46.199 15.3 84.901 100.3 89.399 201.7 4.2 93.6-19.199 181.5-59.7 224.101-9.6 9.899-19.498 17.199-29.699 20.499zM467.5 334.6c-33.6 70.8-81 114.399-135.899 133.9 40.199-50.7 62.999-141.1 58.798-235.3-3.6-79.801-26.1-148.599-58.799-190 42.9 15.599 80.999 44.5 107.999 82.599 42.6 60 52.501 135.901 27.901 208.801z" style="" fill="#00c8c8" data-original="#00c8c8" class=""/><path d="M466 151H46c-24.901 0-46 20.099-46 45v120c0 24.899 21.099 45 46 45h420c24.901 0 46-20.101 46-45V196c0-24.901-21.099-45-46-45z" style="" fill="#0053bf" data-original="#0053bf"/><path d="M512 196v120c0 24.899-21.099 45-46 45H256V151h210c24.901 0 46 20.099 46 45z" style="" fill="#05377f" data-original="#05377f" class=""/><path d="m329.5 232.599-30 60C296.8 297.7 291.7 301 286 301s-10.8-3.3-13.5-8.401L256 259.6l-16.5 32.999c-5.099 10.201-21.901 10.201-27.001 0l-30-60c-3.6-7.2-.599-16.199 6.901-20.099 7.2-3.6 16.199-.601 20.099 6.899L226 252.4l16.5-33.001c2.701-5.099 8.101-7.8 13.5-7.8 5.399 0 10.8 2.701 13.5 7.8L286 252.4l16.5-33.001c3.9-7.5 12.9-10.499 20.099-6.899 7.5 3.9 10.501 12.899 6.901 20.099z" style="" fill="#e1f1fa" data-original="#e1f1fa" class=""/><path d="M436 301a15.006 15.006 0 0 1-13.418-8.291L406 259.545l-16.582 33.164c-5.098 10.166-21.738 10.166-26.836 0l-28.74-57.495c-1.86-2.285-3.062-5.112-3.267-8.218-.527-8.262 5.288-15.366 13.549-15.908 6.27-.146 12.598 2.813 15.293 8.203L376 252.455l16.582-33.164c5.098-10.166 21.738-10.166 26.836 0L436 252.455l16.582-33.164c3.721-7.427 12.729-10.371 20.127-6.709 7.412 3.706 10.415 12.715 6.709 20.127l-30 60A15.006 15.006 0 0 1 436 301z" style="" fill="#bfe1ff" data-original="#bfe1ff" class=""/><path d="M166.967 211.029c-5.903-.059-11.689 2.871-14.385 8.262L136 252.455l-16.582-33.164c-5.403-10.769-21.492-10.688-26.836 0L76 252.455l-16.582-33.164c-3.721-7.427-12.744-10.371-20.127-6.709-7.412 3.706-10.415 12.715-6.709 20.127l30 60C65.131 297.792 70.316 301 76 301s10.869-3.208 13.418-8.291L106 259.545l16.582 33.164C125.131 297.792 130.316 301 136 301s10.869-3.208 13.418-8.291l28.257-56.514c2.139-2.432 3.516-5.64 3.75-9.199.527-8.262-6.196-15.425-14.458-15.967z" style="" fill="#e1f1fa" data-original="#e1f1fa" class=""/><path d="m329.5 232.599-30 60C296.8 297.7 291.7 301 286 301s-10.8-3.3-13.5-8.401L256 259.6v-48.001c5.4 0 10.8 2.701 13.5 7.8L286 252.4l16.5-33.001c3.9-7.5 12.9-10.499 20.099-6.899 7.5 3.9 10.501 12.899 6.901 20.099z" style="" fill="#bfe1ff" data-original="#bfe1ff" class=""/></g></svg>
+                    </div>
+                    <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Domain Registration</div>
                       <p>Think, search & claim your digital identity.</p>
                     </div>
@@ -125,7 +190,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/domain/domain-transfer')}}" title="Domain Transfer">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/transfer-icon.webp" alt="Domain Transfer" loading="lazy"></div>
+                    <div class="mega-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 510 510"><g><path d="m307.708 310.063c-.422.922-.638 1.929-.638 3.002v97.181c-24.996 10.781-52.552 16.754-81.504 16.754-1.712 0-3.414-.02-5.111-.062-111.411-2.714-200.901-93.887-200.901-205.95 0-112.071 89.501-203.225 200.922-205.927 1.69-.041 3.386-.061 5.09-.061 113.773 0 205.988 92.215 205.988 205.988 0 15.059-1.616 29.741-4.683 43.882h-71.607c-1.335 0-2.567.309-3.662.96.212-.126.432-.239.661-.337v40.889c0 2.039-1.643 3.681-3.681 3.681zm43.854-44.209c-.516.312-1.001.7-1.451 1.168.471-.471.942-.86 1.451-1.168z" fill="#9bc9ff"/><path d="m299.07 421.999c-22.93 8.393-47.696 12.976-73.529 12.976-118.155 0-213.987-95.832-213.987-213.988 0-118.155 95.832-213.987 213.987-213.987 118.156 0 213.988 95.832 213.988 213.987 0 12.219-1.026 24.199-2.994 35.859h46.605c8.424 0 15.306 6.881 15.306 15.305v215.543c0 8.424-6.882 15.306-15.306 15.306h-168.764c-8.424 0-15.306-6.882-15.306-15.306zm121.219-165.153c1.663-9.085 2.705-18.387 3.081-27.859h-69.231c-.316 9.532-1.166 18.966-2.531 28.265 1.17-.272 2.391-.406 3.656-.406zm3.081-43.859c-1.902-47.835-20.787-91.312-50.789-124.567-13.676 8.003-28.92 14.639-45.197 19.908 16.108 31.622 25.645 67.115 26.78 104.659zm-62.365-136.374c-27.457-25.773-62.265-43.806-100.935-50.611 23.725 18.871 43.953 41.982 59.513 68.17 14.834-4.664 28.791-10.517 41.422-17.559zm-169.927-50.622c-38.685 6.794-73.508 24.825-100.976 50.6 12.632 7.053 26.595 12.913 41.44 17.582 15.557-26.194 35.79-49.309 59.536-68.182zm-112.553 62.404c-30.015 33.258-48.909 76.745-50.812 124.592h69.277c1.133-37.543 10.656-73.035 26.754-104.657-16.289-5.275-31.541-11.92-45.219-19.935zm-50.812 140.592c1.903 47.87 20.814 91.375 50.854 124.639 13.669-8.008 28.91-14.657 45.187-19.942-16.209-32-25.513-67.604-26.739-104.697zm62.437 136.442c27.424 25.717 62.172 43.717 100.773 50.528-24.053-19.103-44.074-42.203-59.373-68.057-14.828 4.649-28.778 10.49-41.4 17.529zm170.072 50.518c13.468-2.381 26.466-6.123 38.848-11.08v-27.448c-11.396 14.108-24.395 27.04-38.848 38.528zm38.848-65.502v-8.035c-20.984-4.829-43.193-7.513-65.529-8.041v81.189c26.392-17.445 48.517-39.649 65.529-65.113zm0-24.429v-12.976c0-4.155 1.527-7.843 4.495-10.811 0 0 16.679-16.678 28.715-28.715 3.333-14.464 5.313-29.361 5.849-44.527h-104.588v89.451c22.288.476 44.457 2.999 65.529 7.578zm45.193-41.857-17.879 17.879h17.879zm-29.193 33.879v168.962h167.376v-214.154h-122.183v33.511c0 6.47-5.212 11.681-11.681 11.681zm23.086-105.051c-1.164-36.003-10.589-69.978-26.425-100.091-24.767 6.473-51.395 10.002-78.19 10.587v89.504zm-34.564-114.327c-17.854-28.827-41.822-53.495-70.051-72.172v81.313c23.953-.555 47.756-3.602 70.051-9.141zm-86.051 9.14v-81.27c-28.227 18.672-52.174 43.326-70.009 72.132 22.278 5.537 46.067 8.583 70.009 9.138zm-78.144 5.1c-15.826 30.112-25.238 64.085-26.399 100.087h104.543v-89.504c-26.783-.586-53.395-4.114-78.144-10.583zm-26.373 116.087c1.256 35.555 10.442 69.637 26.378 100.115 24.749-6.493 51.361-10.05 78.139-10.654v-89.461zm34.527 114.437c17.517 28.389 41.206 53.068 69.99 72.092v-81.157c-23.938.538-47.719 3.555-69.99 9.065zm188.837 29.122c-4.415 0-8-3.585-8-8s3.585-8 8-8h109.971l-13.003-19.939c-2.412-3.698-1.368-8.659 2.331-11.071 3.698-2.412 8.659-1.367 11.071 2.331l21.07 32.309c1.604 2.459 1.732 5.599.334 8.18-1.399 2.582-4.099 4.19-7.034 4.19zm124.74 14.754c4.415 0 8 3.584 8 8 0 4.415-3.585 8-8 8h-109.971l13.003 19.938c2.412 3.698 1.368 8.659-2.331 11.071-3.698 2.412-8.659 1.368-11.071-2.331l-21.07-32.308c-1.604-2.459-1.732-5.599-.334-8.181 1.399-2.581 4.099-4.189 7.034-4.189z" fill="#69f"/></g></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Domain Transfer</div>
                       <p>Effortlessly migrate your domain to a new home.</p>
@@ -133,8 +200,10 @@
                   </a>
                 </li>
                 <li class="hdr_tp_menu_li">
-                  <a class="dropdown-item" href="{{url('/domain/bulk-domain-search')}}"  title="Bulk Domain Search">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/search-icon.webp" alt="Bulk Domain Search" loading="lazy"></div>
+                  <a class="dropdown-item" href="{{url('/domain/bulk-domain-search')}}" title="Bulk Domain Search">
+                    <div class="mega-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" enable-background="new 0 0 100 100" viewBox="0 0 100 100"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-.991" x2="91.026" y1="-3.993" y2="96.847"><stop offset="0" stop-color="#97e0ff"/><stop offset="1" stop-color="#1075ff"/></linearGradient><path d="m94.5326157 79.8716354-16.8151627-16.8151588c-2.5717316-2.5717278-6.1325836-3.3630333-9.2977982-2.3739052l-5.9347648-5.9347649c3.7586861-5.5391121 5.9347649-12.4630089 5.7369423-19.7825508-.5934754-18.0021171-14.8369103-31.8499007-32.8390312-31.8499007-19.5847206 0-35.0151062 17.0129929-32.641201 36.9933662 1.7804306 14.8369102 13.847784 26.5086174 28.4868698 28.4868736 9.0999699 1.1869431 17.6064663-1.5826035 24.1347065-6.528244l5.7369385 5.7369461c-.9891281 3.1651993-.1978264 6.7260666 2.373909 9.2977982l16.8151703 16.8151627c3.9565048 3.9565125 10.2869263 3.9565125 14.2434311 0 3.9565028-3.9565187 3.9565028-10.2869325-.0000096-14.0456224zm-59.1498146-20.9694938c-12.6608276 0-22.9477539-10.2869263-22.9477539-22.9477577s10.2869244-22.7499275 22.9477539-22.7499275 22.9477577 10.2869253 22.9477577 22.9477539-10.2869263 22.7499313-22.9477577 22.7499313z" fill="url(#SVGID_1_)"/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Bulk Domain Search</div>
                       <p>Discover multiple domains at once with our Search tool.</p>
@@ -143,7 +212,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/whois')}}" title="Whois Checker">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/check-icon.webp" alt="Whois Checker" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" enable-background="new 0 0 100 100" viewBox="0 0 100 100"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-.051" x2="91.966" y1="-4.851" y2="95.99"><stop offset="0" stop-color="#97e0ff"/><stop offset="1" stop-color="#1075ff"/></linearGradient><path clip-rule="evenodd" d="m97.4999542 50.0000458c0-.9000778-.3599243-1.7700081-.9999847-2.4000511l-5.7199402-5.7099266 3.0999451-7.4700966c.3499985-.8299484.3499985-1.7599907 0-2.5999565-.3398819-.8299503-.9999847-1.4900494-1.839859-1.8300266l-7.4700928-3.0900211.0099258-8.0799236c0-.9100037-.3599243-1.7700081-.9898758-2.4100704-.6402435-.6299524-1.4999771-.9899654-2.4100723-.9899654l-8.0800095.0100183-3.0900268-7.4700057c-.340065-.8399677-.9999847-1.5000672-1.8301163-1.8399515-.8396912-.3500862-1.7698212-.3500862-2.5997696 0l-7.4701004 3.0999494-5.7100182-5.719943c-.6299514-.6400629-1.4999732-1.0000754-2.3999595-1.0000754s-1.7700081.3600125-2.3999596 1.0000756l-5.7100182 5.719943-7.4700965-3.0999496c-.8299484-.3500862-1.7600822-.3500862-2.5997734 0-.8301334.3398843-1.4900494.9999838-1.8301182 1.8399515l-3.0900211 7.4700055-8.0800152-.0100183c-.9100952 0-1.7698231.360013-2.4100704.9899654-.6299524.6400623-.9898729 1.5000668-.9898729 2.4100704l.0099258 8.0799236-7.4700975 3.0900211c-.8398762.3399773-1.4999752 1.0000763-1.8398595 1.8300266-.3499942.8399658-.3499942 1.7700081 0 2.5999565l3.0999494 7.4700966-5.719943 5.7099266c-.640063.630043-.9999835 1.4999733-.9999835 2.4000511 0 .8999863.3599205 1.7699165.9999835 2.3999596l5.719943 5.7100182-3.0999494 7.4699097c-.3499942.8300476-.3499942 1.7600861 0 2.6000519.3398843.83004.9999833 1.4900513 1.8398595 1.8300247l7.4700975 3.0900269-.0099258 8.0800095c0 .9099121.3599205 1.7700119.9898729 2.4098892.6402473.630043 1.4999752.9900589 2.4100704.9900589l8.0800152-.0099258 3.0900211 7.4699097c.3400688.840065.9999847 1.4999771 1.8301182 1.8400421.8396912.3499985 1.769825.3499985 2.5997734 0l7.4700966-3.1000366 5.7100182 5.7200317c.6299514.6399688 1.4999732.9999847 2.3999595.9999847s1.7700081-.3600159 2.3999596-.9999847l5.7100182-5.7200317 7.4701004 3.1000366c.8299484.3499985 1.7600784.3499985 2.5997696 0 .8301315-.340065 1.4900513-.9999771 1.8301163-1.8400421l3.0900269-7.4699097 8.0800095.0099258c.9100952 0 1.7698288-.3600159 2.4100723-.9900589.6299515-.6398773.9898758-1.4999771.9898758-2.4098892l-.0099258-8.0800095 7.4700928-3.0900269c.8398743-.3399734 1.4999771-.9999847 1.839859-1.8300247.3499985-.8399658.3499985-1.7700043 0-2.6000519l-3.0999451-7.4699097 5.7199402-5.7100182c.6400602-.6300429.9999845-1.4999732.9999845-2.3999594zm-63.8836937 3.6140022c-1.9876499-1.9877434-1.9876499-5.2403526 0-7.228096s5.2254677-1.9877434 7.2280083 0l6.0535774 6.0535774 11.7909813-15.7211571c1.686554-2.2587891 4.8940392-2.7105255 7.1528244-1.0239716 2.2587891 1.6865501 2.7106171 4.8940353 1.02388 7.1528206l-15.3295288 20.4344979c-.888588 1.1895943-2.2587852 1.9274483-3.7344971 2.0328712s-2.9214592-.4366608-3.9754868-1.4907837z" fill="url(#SVGID_1_)" fill-rule="evenodd"/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Whois Checker</div>
                       <p>Uncover domain details with our WHOIS Checker online.</p>
@@ -154,21 +225,23 @@
             </div>
           </li>
           <li class="nav-item dropdown header-megamenu-li">
-            <a class="nav-link mega-nav active" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Hosting">Hosting <i class="fa-solid fa-angle-down"></i></a>
-            <div class="dropdown-menu header-megamenu hosting-dropdown-megamenu" aria-labelledby="dropdown01">
+            <a class="nav-link mega-nav active" href="" id="dropdown04" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Hosting">Hosting <i class="arrow fa-solid fa-angle-down"></i></a>
+            <div class="dropdown-menu header-megamenu hosting-dropdown-megamenu" aria-labelledby="dropdown04">
               <ul class="mega-box-clm">
-                                <li class="hdr_tp_menu_li">
-                                    <a class="dropdown-item" href="{{url('/web-hosting')}}" title="Web Hosting ">
-                                        <div class="mega-menu-icon"> <img src="../assets/images/new_img/web-hosting-icon.webp" alt="web-hosting-icon" loading="lazy"></div>
-                                        <div class="mega-menu-cont">
-                                            <div class="mega-menu-tittle">Web Hosting</div>
-                                            <p>Experience lightning-fast and reliable web hosting for your online business.</p>
-                                        </div>
-                                    </a>
-                                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="{{url('/web-hosting')}}" title="Web Hosting ">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 512 512" data-name="Layer 1"><g fill="#c9d4fe"><path d="m420.635 22h-329.271c-8.284 0-15.024 6.753-15.024 15.053v47.31c0 8.3 6.74 15.053 15.024 15.053h329.271c8.285 0 15.025-6.753 15.025-15.053v-47.31c0-8.3-6.74-15.053-15.025-15.053z"/><path d="m420.635 265.211h-329.271c-8.284 0-15.024 6.74-15.024 15.025v47.338c0 8.301 6.74 15.054 15.024 15.054h329.271c8.285 0 15.025-6.753 15.025-15.054v-47.338c0-8.285-6.74-15.025-15.025-15.025z"/><path d="m420.635 143.605h-329.271c-8.284 0-15.024 6.74-15.024 15.025v47.338c0 8.301 6.74 15.054 15.024 15.054h329.271c8.285 0 15.025-6.753 15.025-15.054v-47.338c0-8.285-6.74-15.025-15.025-15.025z"/></g><path d="m449.66 84.363v-47.31c0-16.02-13.021-29.053-29.025-29.053h-329.271c-16.004 0-29.024 13.033-29.024 29.053v47.31c0 14.8 11.115 27.042 25.427 28.822v16.651c-14.311 1.779-25.427 14.009-25.427 28.794v47.338c0 14.8 11.115 27.042 25.427 28.823v16.651c-14.311 1.779-25.427 14.009-25.427 28.794v47.338c0 16.021 13.021 29.054 29.024 29.054h329.271c16.005 0 29.025-13.033 29.025-29.054v-47.338c0-14.785-11.115-27.015-25.427-28.794v-16.651c14.312-1.781 25.427-14.022 25.427-28.822v-47.338c0-14.785-11.115-27.015-25.427-28.794v-16.651c14.312-1.781 25.427-14.022 25.427-28.822zm-373.32 0v-47.31c0-8.3 6.74-15.053 15.024-15.053h329.271c8.285 0 15.025 6.753 15.025 15.053v47.31c0 8.3-6.74 15.053-15.025 15.053h-329.271c-8.284 0-15.024-6.753-15.024-15.053zm333.894 29.053v16.189h-308.467v-16.189zm-308.467 137.795v-16.188h308.467v16.188zm333.894 29.025v47.338c0 8.301-6.74 15.054-15.025 15.054h-329.272c-8.284 0-15.024-6.753-15.024-15.054v-47.338c0-8.285 6.74-15.025 15.024-15.025h329.271c8.285 0 15.025 6.74 15.025 15.025zm0-121.605v47.338c0 8.301-6.74 15.054-15.025 15.054h-329.272c-8.284 0-15.024-6.753-15.024-15.054v-47.338c0-8.285 6.74-15.025 15.024-15.025h329.271c8.285 0 15.025 6.74 15.025 15.025zm-47.483 145.275c0 3.866-3.134 7-7 7h-7.059c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.059c3.866 0 7 3.134 7 7zm-179.602-11.424v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm-35.376 0v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm-35.377 0v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm218.521 11.424c0 3.866-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.058c3.866 0 7 3.134 7 7zm-31.833 0c0 3.866-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.058c3.866 0 7 3.134 7 7zm63.666-121.605c0 3.866-3.134 7-7 7h-7.059c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.059c3.866 0 7 3.134 7 7zm-179.602-11.424v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm-35.376 0v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm-35.377 0v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7zm218.521 11.424c0 3.866-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.058c3.866 0 7 3.134 7 7zm-31.833 0c0 3.866-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7s3.134-7 7-7h7.058c3.866 0 7 3.134 7 7zm42.607-121.605c0-3.866 3.134-7 7-7h7.059c3.866 0 7 3.134 7 7s-3.134 7-7 7h-7.059c-3.866 0-7-3.134-7-7zm-172.543 11.452v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7zm-35.376 0v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7zm-35.377 0v-22.875c0-3.866 3.134-7 7-7s7 3.134 7 7v22.875c0 3.866-3.134 7-7 7s-7-3.134-7-7zm211.464-11.452c0-3.866 3.134-7 7-7h7.058c3.866 0 7 3.134 7 7s-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7zm-31.833 0c0-3.866 3.134-7 7-7h7.058c3.866 0 7 3.134 7 7s-3.134 7-7 7h-7.058c-3.866 0-7-3.134-7-7zm-47.453 309.599c-3.866 0-7 3.134-7 7v79.677c-9.85 3.004-17.036 12.174-17.036 22.993 0 13.253 10.782 24.036 24.036 24.036s24.036-10.783 24.036-24.036c0-10.819-7.187-19.989-17.036-22.993v-79.677c0-3.866-3.134-7-7-7zm10.036 109.67c0 5.534-4.502 10.036-10.036 10.036s-10.036-4.502-10.036-10.036 4.502-10.036 10.036-10.036 10.036 4.502 10.036 10.036zm-52.726-38.893c3.866 0 7-3.134 7-7v-56.778c0-3.866-3.134-7-7-7s-7 3.134-7 7v49.778h-52.244c-3.866 0-7 3.134-7 7v22.899c-9.85 3.004-17.036 12.174-17.036 22.993 0 13.253 10.782 24.036 24.036 24.036s24.036-10.783 24.036-24.036c0-10.819-7.187-19.989-17.036-22.993v-15.899zm-49.208 38.893c0 5.534-4.502 10.036-10.036 10.036s-10.036-4.502-10.036-10.036c0-4.98 3.65-9.113 8.413-9.893.521.124 1.063.197 1.623.197s1.102-.073 1.623-.197c4.763.78 8.413 4.913 8.413 9.893zm13.547-82.289v-20.381c0-3.866-3.134-7-7-7s-7 3.134-7 7v13.381h-54.282c-3.007-9.833-12.175-17.008-22.991-17.008-13.254 0-24.036 10.77-24.036 24.008s10.782 24.036 24.036 24.036c10.82 0 19.989-7.187 22.993-17.036h61.28c3.866 0 7-3.134 7-7zm-91.273 10.036c-5.534 0-10.036-4.502-10.036-10.036s4.502-10.008 10.036-10.008 10.036 4.489 10.036 10.008-4.502 10.036-10.036 10.036zm271.585 96.289c13.238 0 24.008-10.783 24.008-24.036 0-10.816-7.174-19.984-17.008-22.991v-22.901c0-3.866-3.134-7-7-7h-52.271v-49.778c0-3.866-3.134-7-7-7s-7 3.134-7 7v56.778c0 3.866 3.134 7 7 7h52.271v15.899c-9.85 3.004-17.036 12.174-17.036 22.993 0 13.253 10.782 24.036 24.036 24.036zm-1.623-33.929c.521.124 1.063.197 1.623.197s1.1-.073 1.622-.196c4.748.781 8.386 4.913 8.386 9.892 0 5.534-4.489 10.036-10.008 10.036s-10.036-4.502-10.036-10.036c0-4.98 3.65-9.113 8.413-9.893zm69.286-48.36c13.254 0 24.036-10.783 24.036-24.036s-10.782-24.008-24.036-24.008c-10.817 0-19.984 7.174-22.991 17.008h-54.282v-13.381c0-3.866-3.134-7-7-7s-7 3.134-7 7v20.381c0 3.866 3.134 7 7 7h61.28c3.004 9.849 12.174 17.036 22.993 17.036zm0-34.044c5.534 0 10.036 4.489 10.036 10.008s-4.502 10.036-10.036 10.036-10.036-4.502-10.036-10.036 4.502-10.008 10.036-10.008z" fill="#0000cb"/><g fill="#6582fd"><path d="m347.925 479.964c0 5.534 4.502 10.036 10.036 10.036s10.008-4.502 10.008-10.036c0-4.979-3.638-9.111-8.386-9.892-.521.124-1.062.196-1.622.196s-1.102-.073-1.623-.197c-4.763.78-8.413 4.913-8.413 9.893z"/><path d="m154.066 470.268c-.56 0-1.102-.073-1.623-.197-4.763.78-8.413 4.913-8.413 9.893 0 5.534 4.502 10.036 10.036 10.036s10.036-4.502 10.036-10.036c0-4.98-3.65-9.113-8.413-9.893-.521.124-1.063.197-1.623.197z"/><path d="m101.767 113.417h308.467v16.189h-308.467z"/><path d="m101.767 235.022h308.467v16.188h-308.467z"/><path d="m86.376 387.667c-5.534 0-10.036 4.489-10.036 10.008s4.502 10.036 10.036 10.036 10.036-4.502 10.036-10.036-4.502-10.008-10.036-10.008z"/><path d="m425.624 407.711c5.534 0 10.036-4.502 10.036-10.036s-4.502-10.008-10.036-10.008-10.036 4.489-10.036 10.008 4.502 10.036 10.036 10.036z"/><circle cx="256" cy="479.964" r="10.036"/></g></svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Web Hosting</div>
+                      <p>Experience lightning-fast and reliable web hosting for your online business.</p>
+                    </div>
+                  </a>
+                </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/hosting/linux-hosting')}}" title="Linux Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/linux-hosting.webp" alt="Linux Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><linearGradient id="lg1"><stop offset="0" stop-opacity=".1"/><stop offset="1" stop-opacity="0"/></linearGradient><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.383" x2="17.165" xlink:href="#lg1" y1="6.81" y2="13.591"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="17.862" x2="21.759" xlink:href="#lg1" y1="17.22" y2="21.117"/><linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="5.245" x2="23.086" y1="10.06" y2="18.379"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><g><path d="m19.6811523 18.0336914c.2182618-.4682617.3188477-1.1245117.3188477-2.0336914 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024413.040039.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079102-4c.1982422-.1928711.2021484-.5092773.0097656-.7070312-.0517578-.0532227-.1123046-.0922852-.1772461-.1176758z" fill="#1a1a1a"/><path d="m7.3129883 9.9316406c.6103515-1.1884765 1.1870117-2.3110351 1.1870117-3.6816406 0-4.9794922 1.3994141-6 3.5-6 1.012207 0 1.8530273.3295898 2.4990234.9790039 1.3337402 1.3413696 1.4893188 3.704895 1.5021362 5.2008057.0008545-1.4671631-.086792-4.0272827-1.5021362-5.4508057-.6459961-.6494141-1.4868164-.9790039-2.4990234-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0227661.0130005.0428467.0160522.0652466.0847168-1.3361206 1.0783691-3.9163818 1.5205688-5.0037231.2319337-.5698243.5087892-1.1088868.7763673-1.6298829z" fill="#fff" opacity=".2"/><path d="m19.8583984 18.4013672c.0620117.0637817.0961304.1410522.1174316.2213745.041687-.163208.0084839-.3419189-.1174316-.4713745-.0302734-.0311279-.0682373-.0473022-.1035767-.0687866-.0244141.0672607-.0453491.1403198-.0736694.2011108.0649415.0253906.1254883.0644531.1772461.1176758z" fill="#0099d8"/><path d="m16 7.25c0 .7431641.5751953 1.4633789 1.3027344 2.375 1.1904907 1.491394 2.664978 3.3479004 2.6923218 6.5393066.0008544-.0567016.0049438-.1055297.0049438-.1643066 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.725769-.9094238-1.2989502-1.628418-1.3017578-2.3696289v.0117188z" fill="#fff" opacity=".2"/><path d="m16 7c0 .0018311.0009766.00354.0009766.0053711.0009766-.1713257.0019531-.3643188.0001831-.5755615-.000061.114563.0003662.2373047-.0001831.3372803z" fill="#0099d8"/><g><path d="m16.1294117 16.8117638c-.0119629-2.4346304-.3427773-5.1733255-2.2666664-9.1058807-.9520874.6437373-2.6998434 1.1529412-2.9098043 1.1529412-.37854 0-1.2050161-.2702007-1.8122549-.8062725-.2496338.7364502-.5952148 1.418335-.9380493 2.0861206-.2578125.5014648-.5244141 1.0205078-.7392578 1.5498047-.6043701 1.4848633-1.2945557 3.4396362-1.4338379 4.4784546.4229736.2818604.7179565.8918457 1.0437012 1.5733032.3374023.7060547.7197266 1.5063477 1.2124023 1.8496094.9015503.6276855 1.3689575 1.5230103 1.4914551 2.3365479.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737812-.2477417 4.0972309-.9902344.0686645-1.3227545.3009795-3.4444624.9882354-4.1882368z" fill="#fff"/></g><path d="m19.9950562 16.1643066c-.0122681.8200073-.1097412 1.4313965-.3139038 1.8693848.0269775.0105591.0485229.0335693.0736694.0488892.1635742-.4508667.2451782-1.0413819.2451782-1.8325806 0-.0300903-.0046997-.0558472-.0049438-.0856934z" fill="#0099d8"/><path d="m9.7770996 21.9263916c.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737793-.2477417 4.097229-.9902344v-.25c-1.2234497.7424927-2.8773193.9902344-4.097229.9902344-.491333 0-.9993038-.0342407-1.3423824-.0683594" opacity=".1"/><path d="m15.7438536 22.6083984c-.0932617.0908204-.2182617.1416016-.3486328.1416016h-3.3920898c-.8881836 0-2.3608398.328125-2.5830078.5756836-.0957032.1069336-.2348634.1694336-.3769532.1694336-.0200195 0-.0400391-.0014648-.0600586-.0039062-.1625977-.0205078-.3076172-.1152344-.3837891-.2602539l-3.5390625-6.7485352c-.0270386-.0516357-.0332642-.1098633-.0410767-.1671753-.0037841.0595093-.0160522.1304931-.0160522.1847534 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024414.0400391.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079092-4c.1343384-.1306763.171936-.3168945.1271973-.4856567-.0220337.0861206-.0587158.1690674-.1271973.2356567z" opacity=".3"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.1069335-.118164-.3032226-.2592773-.6279296-.2592773-.2675781 0-.4628906.2119141-.4746094.4790039-.0003052.0072632.0026856.013794.0026856.0209961h-2.0280762c0-.2763672-.2236328-.5-.5-.5-1.4829102 0-1.5 5.4448242-1.5058594 5.5639648-.027832.2983398-.0932617.9980469.3544922 1.4892578.2700195.2963868.6572266.4467774 1.1513672.4467774 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="#fdb515"/><path d="m8.2856445 19.5898438c-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210937-1.631836.3232421-1.631836 1.2358398 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.3022461-.9633789-.0981445-2.4907226-1.4370117-3.4228515z" fill="#fdb515"/><path d="m3.5531006 18.0141602c.190918-.0366211.4799194-.0917969.5567017-.1376953.0045166-.0219727.052002-.2094727.083313-.3339844.1131591-.4516602.324829-1.2924805 1.2927245-1.2924805.7668457 0 1.1659546.8066406 1.6276855 1.7402344.3490601.7060547.7446289 1.5063477 1.2543335 1.8496094.5077515.3416748.8823853.7640381 1.1412354 1.2085571-.2467041-.53479-.6415405-1.0534668-1.2234497-1.4585571-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.5300903.1051636-1.3684082.2727661-1.5802612.9125977.3312377-.4367066 1.0327758-.572693 1.5015258-.6625977z" fill="#fff" opacity=".2"/><path d="m19.5 15.5c-.0958252 0-.1801758.0340576-.2562256.0806885l-3.338623-5.4631958c-.364563-1.0300293-.8309326-2.1226807-1.4608154-3.3464966-.1259766-.2446289-.4272461-.3417969-.6733398-.2158203-.2451172.1264648-.3417969.4282227-.215332.6738281 2.2573242 4.3867188 2.4443359 7.125 2.4453125 9.7431641-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578124.2724609.6040038.4165039 1.001953.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.2763672-.2236328-.5-.5-.5z" fill="#1a1a1a"/><path d="m19.3349609 18.2866211c-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762695-.0009765c-.3979492 0-.7441406-.144043-1.0019531-.4165039-.4032593-.4266357-.4845581-1.0585938-.4974976-1.3934326 0 .0106201.0004272.0214844.0004272.0321045-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578126.2724609.604004.4165039 1.0019532.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.0160522-.0076904-.0296021-.0091553-.0452881-.022644 1.1668091-.2226562 1.9024048-.6558838 2.3319092z" opacity=".3"/><path d="m13 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><ellipse cx="13" cy="4.888" rx=".454" ry=".888"/><path d="m10 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><path d="m13.8018799 7.7424927c-.9630737.6259155-2.6430664 1.116333-2.848938 1.116333-.37854 0-1.2050171-.2702026-1.8122559-.8062744l6.7815552 6.7815552c-.1610107-1.9360352-.6687622-4.1383668-2.1203613-7.0916138z" fill="url(#SVGID_1_)"/><ellipse cx="10" cy="4.871" rx=".445" ry=".871"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m20.5400391 21.5097656c-.4375.159668-.9331055.340332-1.1865234.59375-.1103516.1103516-.215332.2216797-.3178711.3310547-.6083985.6464844-1.237793 1.3154297-2.5356446 1.3154297-.4941406 0-.8813477-.1503906-1.1513672-.4467773-.2931519-.3215942-.3590698-.7246704-.3668213-1.053833-.0216064.3453979-.0092163.8912964.3668213 1.303833.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.0362549-.0172729-.062439-.0202026-.0970459-.0999756.6099243-.7764283.864502-1.4397583 1.1068115z" opacity=".1"/><path d="m9.7226562 22.7626953c-.1943359.6181641-.6513671.9873047-1.2226562.9873047-.7944336 0-1.6240234-.3823242-2.2905273-.6899414-.3115234-.1435547-.6337891-.2919922-.7875977-.3164062-.0991211-.015625-.253418-.0273438-.4389648-.0429688-1.0805054-.0898438-2.8504639-.2475586-2.9620972-1.3487549-.0021973.008667-.0024414.0143433-.0046997.0230713-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.0790405-.2519531.1069946-.543396.0856934-.8517456-.0054321.2141113-.0286865.4199829-.0856934.6017456z" opacity=".1"/><path d="m10.9890747 8.75c-.5604858 0-2.1712646-.8812256-2.4877319-1.7559814 0 .0020141-.0013428.0039672-.0013428.0059814 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-.0193481-.010498-.0349121-.0114746-.0539551-.4745483.8552857-3.2236939 1.8039551-3.4994507 1.8039551z" opacity=".1"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0362549-.0401001-.0941162-.0776978-.1567383-.1129761-.0628662.9104004-.2607422 1.5180054-.6362305 1.8903198-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762694-.0009764c-.3979492 0-.7441406-.144043-1.0019531-.4165039l3.4207764 3.4207764c.199646-.0893555.4161987-.1696777.6212158-.2445068.7177734-.2622071 1.4599609-.5332032 1.4599609-1.2597657 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_2_)"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0341797-.0377197-.0947266-.0740967-.1483765-.111145.0134279-.2005615.0204469-.4155884.0204469-.6481323 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4187622 1.0296631-1.3328247 3.399231-1.5014648 4.7835693-.5404663.227417-.6967773.8345337-.784668 1.1973877-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210938-1.631836.3232422-1.631836 1.2358399 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.3419189 0 .633728-.1454468.8619385-.3841553.0174561-.0148315.0396729-.0229492.0550537-.0401611.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.0606689c.0551147.192749.1345215.3848877.2879639.5532227.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_3_)"/></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg></div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Linux Hosting</div>
                       <p>Perfect match for open-source lovers and coders.</p>
@@ -177,7 +250,7 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/hosting/windows-hosting')}}" title="Windows Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/windows-hosting.webp" alt="Windows Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512.00039"><path d="m215.632812 62.089844v165.984375c0 10.867187-8.839843 19.703125-19.707031 19.703125l-88.109375-.019532-88.121094-.019531c-10.847656 0-19.6835932-8.828125-19.695312-19.675781v-142.039062c-.0117188-9.804688 7.320312-18.203126 17.054688-19.523438l90.761718-12.328125 85.460938-11.605469c5.636718-.761718 11.328125.9375 15.605468 4.6875 4.289063 3.738282 6.75 9.148438 6.75 14.835938zm0 0" fill="#ff5b5b"/><path d="m511.496094 285.839844-.058594 206.464844c0 5.699218-2.46875 11.117187-6.78125 14.867187-3.609375 3.128906-8.195312 4.828125-12.914062 4.828125-.910157 0-1.832032-.070312-2.75-.191406l-116.253907-16.355469-121.792969-17.136719c-9.667968-1.359375-16.96875-9.746094-16.96875-19.515625v-172.96875c0-10.867187 8.839844-19.707031 19.707032-19.707031h238.105468c5.269532 0 10.21875 2.050781 13.9375 5.777344 1.859376 1.859375 3.300782 4.03125 4.28125 6.390625.980469 2.359375 1.488282 4.910156 1.488282 7.546875zm0 0" fill="#ffb64c"/><path d="m215.703125 285.832031v167.730469c0 5.691406-2.46875 11.097656-6.757813 14.847656-3.609374 3.148438-8.21875 4.847656-12.949218 4.847656-.890625 0-1.789063-.058593-2.679688-.179687l-85.5-11.714844-90.578125-12.417969c-9.699219-1.332031-17.027343-9.71875-17.027343-19.515624l-.011719-143.597657c0-5.261719 2.050781-10.210937 5.769531-13.929687 3.730469-3.726563 8.667969-5.777344 13.9375-5.777344h176.089844c10.859375 0 19.707031 8.839844 19.707031 19.707031zm0 0" fill="#6aa9ff"/><path d="m511.4375 19.699219v206.445312c0 10.855469-8.839844 19.695313-19.695312 19.695313h-238.058594c-10.867188 0-19.707032-8.839844-19.707032-19.695313v-171.800781c0-4.859375 1.820313-9.390625 4.832032-12.867188 3.019531-3.480468 7.226562-5.929687 12.035156-6.628906l121.894531-17.738281 116.164063-16.90625c5.65625-.820313 11.394531.851563 15.726562 4.601563 4.328125 3.746093 6.808594 9.175781 6.808594 14.894531zm0 0" fill="#a8ebfa"/><path d="m195.925781 247.777344-88.109375-.019532v-193.585937l85.460938-11.605469c5.636718-.761718 11.328125.9375 15.605468 4.6875 4.289063 3.738282 6.75 9.148438 6.75 14.835938v165.984375c0 10.867187-8.839843 19.703125-19.707031 19.703125zm0 0" fill="#ff3636"/><path d="m215.703125 285.832031v167.730469c0 5.691406-2.46875 11.097656-6.757813 14.847656-3.609374 3.148438-8.21875 4.847656-12.949218 4.847656-.890625 0-1.789063-.058593-2.679688-.179687l-85.5-11.714844v-195.238281h88.179688c10.859375 0 19.707031 8.839844 19.707031 19.707031zm0 0" fill="#2682ff"/><path d="m491.742188 245.839844h-119.003907v-228.730469l116.164063-16.90625c5.65625-.820313 11.394531.851563 15.726562 4.601563 4.328125 3.746093 6.808594 9.175781 6.808594 14.894531v206.445312c0 10.855469-8.839844 19.695313-19.695312 19.695313zm0 0" fill="#76e2f8"/><path d="m511.496094 285.839844-.058594 206.464844c0 5.699218-2.46875 11.117187-6.78125 14.867187-3.609375 3.128906-8.195312 4.828125-12.914062 4.828125-.910157 0-1.832032-.070312-2.75-.191406l-116.253907-16.355469v-229.328125h119.050781c5.269532 0 10.21875 2.050781 13.9375 5.777344 1.859376 1.859375 3.300782 4.03125 4.28125 6.390625.980469 2.359375 1.488282 4.910156 1.488282 7.546875zm0 0" fill="#ff9f00"/></svg></div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Windows Hosting</div>
                       <p>Ideal match for businesses using Windows applications.</p>
@@ -186,7 +259,47 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/hosting/wordpress-hosting')}}" title="Wordpress Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/wordpress-hosting.webp" alt="WordPress Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 447.674 447.674" style="enable-background:new 0 0 447.674 447.674;" xml:space="preserve">
+                        <g>
+                          <path style="fill:#00769D;" d="M134.289,138.16h-24.722l67.399,190.521l37.732-107.825l-29.254-82.696H159.36v-18.154h115.508   v18.154h-27.049l67.398,190.521l24.227-69.234c31.781-88.702-26.048-116.333-26.048-136.129s16.048-35.843,35.843-35.843   c1.071,0,2.111,0.058,3.13,0.153c-33.541-31.663-78.768-51.08-128.534-51.08c-65.027,0-122.306,33.146-155.884,83.458h66.336   v18.154L134.289,138.16L134.289,138.16z"/>
+                          <path style="fill:#00769D;" d="M36.548,223.837c0,71.704,40.302,133.986,99.483,165.458l-84.52-238.919   C41.883,172.932,36.548,197.761,36.548,223.837z"/>
+                          <path style="fill:#00769D;" d="M386.833,131.547c2.679,15.774,1.868,33.503-2.243,51.301h0.745l-2.832,8.092l0,0   c-1.678,5.843-3.791,11.82-6.191,17.693l-64.444,180.541c59.057-31.51,99.256-93.725,99.256-165.338   C411.124,190.279,402.29,158.788,386.833,131.547z"/>
+                          <path style="fill:#00769D;" d="M166.075,402.033c18.195,5.894,37.603,9.091,57.762,9.091c19.228,0,37.777-2.902,55.239-8.285   l-54.784-154.862L166.075,402.033z"/>
+                          <path style="fill:#00769D;" d="M382.113,65.56C339.836,23.283,283.625,0,223.836,0S107.837,23.283,65.56,65.56S0,164.047,0,223.837   c0,59.789,23.283,115.999,65.56,158.276s98.488,65.56,158.277,65.56s115.999-23.283,158.277-65.56   c42.277-42.277,65.56-98.488,65.56-158.276C447.673,164.047,424.39,107.837,382.113,65.56z M223.836,431.883   c-114.717,0-208.046-93.329-208.046-208.046S109.119,15.79,223.836,15.79s208.046,93.33,208.046,208.047   S338.554,431.883,223.836,431.883z"/>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">WordPress Hosting</div>
                       <p>Tailored web hosting solution for bloggers & creators.</p>
@@ -195,7 +308,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/hosting/ecommerce-hosting')}}" title="Ecommerce Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/ecommerce-hosting.webp" alt="eCommerce Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 497 497" height="512" viewBox="0 0 497 497" width="512"><g><g><g><path d="m475.835 163.501v253.801c0 12.118-6.943 22.614-17.068 27.727l-85.267 3.316h-322.054c-17.452 0-31.6-14.148-31.6-31.6v-255.244z" fill="#fae9e6"/><path d="m19.846 161.501v.175l415.99 1.825v253.801c0 12.118-6.943 22.614-17.068 27.727l-85.267 3.316h40l85.267-3.316c10.125-5.113 17.068-15.609 17.068-27.727v-253.801z" fill="#fae0db"/><path d="m19.846 100.579v-68.979c0-17.452 14.148-31.6 31.6-31.6h392.789c17.452 0 31.6 14.148 31.6 31.6v68.978z" fill="#7561f6"/><path d="m444.235 0h-40c17.452 0 31.6 14.148 31.6 31.6v68.978h40v-68.978c0-17.452-14.148-31.6-31.6-31.6z" fill="#5e48f0"/><g><circle cx="61.294" cy="40.501" fill="#83f9d1" r="13.794"/><circle cx="113.5" cy="40.501" fill="#ffc600" r="13.794"/><circle cx="165.706" cy="40.501" fill="#ff81e5" r="13.794"/></g></g><path d="m72.5 246.5h149v149h-149z" fill="#7561f6"/><g><path d="m72.5 403c-1.919 0-3.839-.732-5.303-2.197-2.929-2.929-2.929-7.678 0-10.606l149-149c2.929-2.929 7.678-2.929 10.606 0 2.929 2.929 2.929 7.678 0 10.606l-149 149c-1.464 1.465-3.384 2.197-5.303 2.197z" fill="#5e48f0"/></g><g><path d="m420.5 269h-141c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h141c4.143 0 7.5 3.358 7.5 7.5s-3.357 7.5-7.5 7.5z" fill="#c1c0fa"/></g><g><path d="m365.5 305h-86c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h86c4.143 0 7.5 3.358 7.5 7.5s-3.357 7.5-7.5 7.5z" fill="#c1c0fa"/></g><path d="m372.5 386.5h-93v-50h141v50h-19z" fill="#ffc600"/><g><path d="m41.988 196.071c-22.63.123-41.988-17.813-41.988-40.845v-6.962h82.833v6.962c0 22.558-18.287 40.845-40.845 40.845z" fill="#ff81e5"/><path d="m124.821 196.071c-22.63.123-41.988-17.813-41.988-40.846v-6.962h82.833v6.962c.001 22.559-18.287 40.846-40.845 40.846z" fill="#c1c0fa"/><path d="m207.654 196.071c-22.63.123-41.988-17.813-41.988-40.846v-6.962h82.834v6.962c0 22.559-18.287 40.846-40.846 40.846z" fill="#ff81e5"/><path d="m290.488 196.071c-22.63.123-41.988-17.813-41.988-40.846v-6.962h82.833v6.962c0 22.559-18.287 40.846-40.845 40.846z" fill="#c1c0fa"/><path d="m373.321 196.071c-22.63.123-41.988-17.813-41.988-40.846v-6.962h82.833v6.962c.001 22.559-18.287 40.846-40.845 40.846z" fill="#ff81e5"/><path d="m456.154 196.071c-22.63.123-41.988-17.813-41.988-40.846v-6.962h82.834v6.962c0 22.559-18.287 40.846-40.846 40.846z" fill="#c1c0fa"/></g><g><path d="m.031 148.277 19.75-67.698h75.989l-12.937 67.682z" fill="#e85ecc"/><path d="m82.833 148.261 12.937-67.682h75.988l-6.089 67.685z" fill="#b3b2fa"/><path d="m165.669 148.264 6.089-67.685h76.745v67.682z" fill="#e85ecc"/><path d="m248.503 148.261v-67.682h75.232l7.606 67.682z" fill="#b3b2fa"/><path d="m331.341 148.261-7.606-67.682h75.988l14.446 67.685z" fill="#e85ecc"/><path d="m414.169 148.264-14.446-67.685h75.988l21.289 67.685z" fill="#b3b2fa"/></g></g><path d="m374.398 362.078-.975 134.922 37.825-46.04 59.306 5.77z" fill="#7561f6"/></g></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">eCommerce Hosting</div>
                       <p>Optimize your eCommerce website with tailored hosting.</p>
@@ -213,7 +328,46 @@
                 </li> -->
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/deals')}}#Web-Hosting" title="Hosting Deals">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/deals-icon.webp" alt="Hosting Deals" loading="lazy"></div>
+                    <div class="mega-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.035 512.035" style="enable-background:new 0 0 512.035 512.035;" xml:space="preserve">
+                        <path style="fill:#F44336;" d="M488.502,256.035l22.464-58.592c2.464-6.464,0.544-13.792-4.864-18.176l-48.704-39.488l-9.856-61.984  c-1.088-6.848-6.464-12.192-13.312-13.28l-61.984-9.856L332.79,5.923c-4.352-5.408-11.84-7.328-18.144-4.864l-58.624,22.496  L197.43,1.091c-6.496-2.496-13.76-0.512-18.144,4.864l-39.488,48.736l-61.984,9.856c-6.816,1.088-12.192,6.464-13.28,13.28  l-9.856,61.984L5.942,179.299c-5.376,4.352-7.328,11.68-4.864,18.144l22.464,58.592L1.078,314.627  c-2.496,6.464-0.512,13.792,4.864,18.144l48.736,39.456l9.856,61.984c1.088,6.848,6.432,12.224,13.28,13.312l61.984,9.856  l39.488,48.704c4.384,5.44,11.712,7.36,18.176,4.864l58.56-22.432l58.592,22.464c1.856,0.704,3.776,1.056,5.728,1.056  c4.704,0,9.344-2.08,12.448-5.952l39.456-48.704l61.984-9.856c6.848-1.088,12.224-6.464,13.312-13.312l9.856-61.984l48.704-39.456  c5.408-4.384,7.328-11.68,4.864-18.144L488.502,256.035z"/>
+                        <g>
+                          <path style="fill:#FAFAFA;" d="M208.022,224.035c-26.464,0-48-21.536-48-48s21.536-48,48-48s48,21.536,48,48   S234.486,224.035,208.022,224.035z M208.022,160.035c-8.832,0-16,7.168-16,16s7.168,16,16,16s16-7.168,16-16   S216.854,160.035,208.022,160.035z"/>
+                          <path style="fill:#FAFAFA;" d="M304.022,384.035c-26.464,0-48-21.536-48-48s21.536-48,48-48s48,21.536,48,48   S330.486,384.035,304.022,384.035z M304.022,320.035c-8.8,0-16,7.2-16,16s7.2,16,16,16s16-7.2,16-16   S312.822,320.035,304.022,320.035z"/>
+                          <path style="fill:#FAFAFA;" d="M176.022,384.035c-3.232,0-6.464-0.96-9.28-2.976c-7.2-5.152-8.864-15.136-3.712-22.336l160-224   c5.152-7.2,15.136-8.864,22.336-3.712c7.2,5.12,8.832,15.136,3.712,22.304l-160,224   C185.91,381.699,181.014,384.035,176.022,384.035z"/>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Hosting Deals</div>
                       <p>Get Budget-friendly web hosting offers for everyone.</p>
@@ -224,13 +378,15 @@
             </div>
           </li>
           <li class="nav-item dropdown header-megamenu-li">
-            <a class="nav-link mega-nav" href="" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Servers">Servers <i class="fa-solid fa-angle-down"></i></a>
+            <a class="nav-link mega-nav" href="" id="dropdown02" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Servers">Servers <i class="arrow fa-solid fa-angle-down"></i></a>
             <div class="dropdown-menu header-megamenu servers-dropdown-megamenu" aria-labelledby="dropdown01">
               <ul class="mega-box-clm">
 
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/servers/vps-hosting')}}" title="VPS Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/linux-hosting.webp" alt="Linux VPS Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><linearGradient id="lg1"><stop offset="0" stop-opacity=".1"/><stop offset="1" stop-opacity="0"/></linearGradient><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.383" x2="17.165" xlink:href="#lg1" y1="6.81" y2="13.591"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="17.862" x2="21.759" xlink:href="#lg1" y1="17.22" y2="21.117"/><linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="5.245" x2="23.086" y1="10.06" y2="18.379"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><g><path d="m19.6811523 18.0336914c.2182618-.4682617.3188477-1.1245117.3188477-2.0336914 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024413.040039.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079102-4c.1982422-.1928711.2021484-.5092773.0097656-.7070312-.0517578-.0532227-.1123046-.0922852-.1772461-.1176758z" fill="#1a1a1a"/><path d="m7.3129883 9.9316406c.6103515-1.1884765 1.1870117-2.3110351 1.1870117-3.6816406 0-4.9794922 1.3994141-6 3.5-6 1.012207 0 1.8530273.3295898 2.4990234.9790039 1.3337402 1.3413696 1.4893188 3.704895 1.5021362 5.2008057.0008545-1.4671631-.086792-4.0272827-1.5021362-5.4508057-.6459961-.6494141-1.4868164-.9790039-2.4990234-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0227661.0130005.0428467.0160522.0652466.0847168-1.3361206 1.0783691-3.9163818 1.5205688-5.0037231.2319337-.5698243.5087892-1.1088868.7763673-1.6298829z" fill="#fff" opacity=".2"/><path d="m19.8583984 18.4013672c.0620117.0637817.0961304.1410522.1174316.2213745.041687-.163208.0084839-.3419189-.1174316-.4713745-.0302734-.0311279-.0682373-.0473022-.1035767-.0687866-.0244141.0672607-.0453491.1403198-.0736694.2011108.0649415.0253906.1254883.0644531.1772461.1176758z" fill="#0099d8"/><path d="m16 7.25c0 .7431641.5751953 1.4633789 1.3027344 2.375 1.1904907 1.491394 2.664978 3.3479004 2.6923218 6.5393066.0008544-.0567016.0049438-.1055297.0049438-.1643066 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.725769-.9094238-1.2989502-1.628418-1.3017578-2.3696289v.0117188z" fill="#fff" opacity=".2"/><path d="m16 7c0 .0018311.0009766.00354.0009766.0053711.0009766-.1713257.0019531-.3643188.0001831-.5755615-.000061.114563.0003662.2373047-.0001831.3372803z" fill="#0099d8"/><g><path d="m16.1294117 16.8117638c-.0119629-2.4346304-.3427773-5.1733255-2.2666664-9.1058807-.9520874.6437373-2.6998434 1.1529412-2.9098043 1.1529412-.37854 0-1.2050161-.2702007-1.8122549-.8062725-.2496338.7364502-.5952148 1.418335-.9380493 2.0861206-.2578125.5014648-.5244141 1.0205078-.7392578 1.5498047-.6043701 1.4848633-1.2945557 3.4396362-1.4338379 4.4784546.4229736.2818604.7179565.8918457 1.0437012 1.5733032.3374023.7060547.7197266 1.5063477 1.2124023 1.8496094.9015503.6276855 1.3689575 1.5230103 1.4914551 2.3365479.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737812-.2477417 4.0972309-.9902344.0686645-1.3227545.3009795-3.4444624.9882354-4.1882368z" fill="#fff"/></g><path d="m19.9950562 16.1643066c-.0122681.8200073-.1097412 1.4313965-.3139038 1.8693848.0269775.0105591.0485229.0335693.0736694.0488892.1635742-.4508667.2451782-1.0413819.2451782-1.8325806 0-.0300903-.0046997-.0558472-.0049438-.0856934z" fill="#0099d8"/><path d="m9.7770996 21.9263916c.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737793-.2477417 4.097229-.9902344v-.25c-1.2234497.7424927-2.8773193.9902344-4.097229.9902344-.491333 0-.9993038-.0342407-1.3423824-.0683594" opacity=".1"/><path d="m15.7438536 22.6083984c-.0932617.0908204-.2182617.1416016-.3486328.1416016h-3.3920898c-.8881836 0-2.3608398.328125-2.5830078.5756836-.0957032.1069336-.2348634.1694336-.3769532.1694336-.0200195 0-.0400391-.0014648-.0600586-.0039062-.1625977-.0205078-.3076172-.1152344-.3837891-.2602539l-3.5390625-6.7485352c-.0270386-.0516357-.0332642-.1098633-.0410767-.1671753-.0037841.0595093-.0160522.1304931-.0160522.1847534 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024414.0400391.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079092-4c.1343384-.1306763.171936-.3168945.1271973-.4856567-.0220337.0861206-.0587158.1690674-.1271973.2356567z" opacity=".3"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.1069335-.118164-.3032226-.2592773-.6279296-.2592773-.2675781 0-.4628906.2119141-.4746094.4790039-.0003052.0072632.0026856.013794.0026856.0209961h-2.0280762c0-.2763672-.2236328-.5-.5-.5-1.4829102 0-1.5 5.4448242-1.5058594 5.5639648-.027832.2983398-.0932617.9980469.3544922 1.4892578.2700195.2963868.6572266.4467774 1.1513672.4467774 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="#fdb515"/><path d="m8.2856445 19.5898438c-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210937-1.631836.3232421-1.631836 1.2358398 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.3022461-.9633789-.0981445-2.4907226-1.4370117-3.4228515z" fill="#fdb515"/><path d="m3.5531006 18.0141602c.190918-.0366211.4799194-.0917969.5567017-.1376953.0045166-.0219727.052002-.2094727.083313-.3339844.1131591-.4516602.324829-1.2924805 1.2927245-1.2924805.7668457 0 1.1659546.8066406 1.6276855 1.7402344.3490601.7060547.7446289 1.5063477 1.2543335 1.8496094.5077515.3416748.8823853.7640381 1.1412354 1.2085571-.2467041-.53479-.6415405-1.0534668-1.2234497-1.4585571-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.5300903.1051636-1.3684082.2727661-1.5802612.9125977.3312377-.4367066 1.0327758-.572693 1.5015258-.6625977z" fill="#fff" opacity=".2"/><path d="m19.5 15.5c-.0958252 0-.1801758.0340576-.2562256.0806885l-3.338623-5.4631958c-.364563-1.0300293-.8309326-2.1226807-1.4608154-3.3464966-.1259766-.2446289-.4272461-.3417969-.6733398-.2158203-.2451172.1264648-.3417969.4282227-.215332.6738281 2.2573242 4.3867188 2.4443359 7.125 2.4453125 9.7431641-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578124.2724609.6040038.4165039 1.001953.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.2763672-.2236328-.5-.5-.5z" fill="#1a1a1a"/><path d="m19.3349609 18.2866211c-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762695-.0009765c-.3979492 0-.7441406-.144043-1.0019531-.4165039-.4032593-.4266357-.4845581-1.0585938-.4974976-1.3934326 0 .0106201.0004272.0214844.0004272.0321045-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578126.2724609.604004.4165039 1.0019532.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.0160522-.0076904-.0296021-.0091553-.0452881-.022644 1.1668091-.2226562 1.9024048-.6558838 2.3319092z" opacity=".3"/><path d="m13 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><ellipse cx="13" cy="4.888" rx=".454" ry=".888"/><path d="m10 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><path d="m13.8018799 7.7424927c-.9630737.6259155-2.6430664 1.116333-2.848938 1.116333-.37854 0-1.2050171-.2702026-1.8122559-.8062744l6.7815552 6.7815552c-.1610107-1.9360352-.6687622-4.1383668-2.1203613-7.0916138z" fill="url(#SVGID_1_)"/><ellipse cx="10" cy="4.871" rx=".445" ry=".871"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m20.5400391 21.5097656c-.4375.159668-.9331055.340332-1.1865234.59375-.1103516.1103516-.215332.2216797-.3178711.3310547-.6083985.6464844-1.237793 1.3154297-2.5356446 1.3154297-.4941406 0-.8813477-.1503906-1.1513672-.4467773-.2931519-.3215942-.3590698-.7246704-.3668213-1.053833-.0216064.3453979-.0092163.8912964.3668213 1.303833.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.0362549-.0172729-.062439-.0202026-.0970459-.0999756.6099243-.7764283.864502-1.4397583 1.1068115z" opacity=".1"/><path d="m9.7226562 22.7626953c-.1943359.6181641-.6513671.9873047-1.2226562.9873047-.7944336 0-1.6240234-.3823242-2.2905273-.6899414-.3115234-.1435547-.6337891-.2919922-.7875977-.3164062-.0991211-.015625-.253418-.0273438-.4389648-.0429688-1.0805054-.0898438-2.8504639-.2475586-2.9620972-1.3487549-.0021973.008667-.0024414.0143433-.0046997.0230713-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.0790405-.2519531.1069946-.543396.0856934-.8517456-.0054321.2141113-.0286865.4199829-.0856934.6017456z" opacity=".1"/><path d="m10.9890747 8.75c-.5604858 0-2.1712646-.8812256-2.4877319-1.7559814 0 .0020141-.0013428.0039672-.0013428.0059814 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-.0193481-.010498-.0349121-.0114746-.0539551-.4745483.8552857-3.2236939 1.8039551-3.4994507 1.8039551z" opacity=".1"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0362549-.0401001-.0941162-.0776978-.1567383-.1129761-.0628662.9104004-.2607422 1.5180054-.6362305 1.8903198-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762694-.0009764c-.3979492 0-.7441406-.144043-1.0019531-.4165039l3.4207764 3.4207764c.199646-.0893555.4161987-.1696777.6212158-.2445068.7177734-.2622071 1.4599609-.5332032 1.4599609-1.2597657 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_2_)"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0341797-.0377197-.0947266-.0740967-.1483765-.111145.0134279-.2005615.0204469-.4155884.0204469-.6481323 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4187622 1.0296631-1.3328247 3.399231-1.5014648 4.7835693-.5404663.227417-.6967773.8345337-.784668 1.1973877-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210938-1.631836.3232422-1.631836 1.2358399 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.3419189 0 .633728-.1454468.8619385-.3841553.0174561-.0148315.0396729-.0229492.0550537-.0401611.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.0606689c.0551147.192749.1345215.3848877.2879639.5532227.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_3_)"/></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">VPS Hosting</div>
                       <p>Fully secured and efficient self-managed hosting for Linux enthusiasts.</p>
@@ -239,7 +395,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/servers/managed-vps-hosting')}}" title="Manage VPS Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/linux-hosting.webp" alt="Manage VPS Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><linearGradient id="lg1"><stop offset="0" stop-opacity=".1"/><stop offset="1" stop-opacity="0"/></linearGradient><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.383" x2="17.165" xlink:href="#lg1" y1="6.81" y2="13.591"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="17.862" x2="21.759" xlink:href="#lg1" y1="17.22" y2="21.117"/><linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="5.245" x2="23.086" y1="10.06" y2="18.379"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><g><path d="m19.6811523 18.0336914c.2182618-.4682617.3188477-1.1245117.3188477-2.0336914 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024413.040039.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079102-4c.1982422-.1928711.2021484-.5092773.0097656-.7070312-.0517578-.0532227-.1123046-.0922852-.1772461-.1176758z" fill="#1a1a1a"/><path d="m7.3129883 9.9316406c.6103515-1.1884765 1.1870117-2.3110351 1.1870117-3.6816406 0-4.9794922 1.3994141-6 3.5-6 1.012207 0 1.8530273.3295898 2.4990234.9790039 1.3337402 1.3413696 1.4893188 3.704895 1.5021362 5.2008057.0008545-1.4671631-.086792-4.0272827-1.5021362-5.4508057-.6459961-.6494141-1.4868164-.9790039-2.4990234-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4619141 1.1357422-1.5366211 3.9155274-1.5366211 5.1884766 0 .0227661.0130005.0428467.0160522.0652466.0847168-1.3361206 1.0783691-3.9163818 1.5205688-5.0037231.2319337-.5698243.5087892-1.1088868.7763673-1.6298829z" fill="#fff" opacity=".2"/><path d="m19.8583984 18.4013672c.0620117.0637817.0961304.1410522.1174316.2213745.041687-.163208.0084839-.3419189-.1174316-.4713745-.0302734-.0311279-.0682373-.0473022-.1035767-.0687866-.0244141.0672607-.0453491.1403198-.0736694.2011108.0649415.0253906.1254883.0644531.1772461.1176758z" fill="#0099d8"/><path d="m16 7.25c0 .7431641.5751953 1.4633789 1.3027344 2.375 1.1904907 1.491394 2.664978 3.3479004 2.6923218 6.5393066.0008544-.0567016.0049438-.1055297.0049438-.1643066 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.725769-.9094238-1.2989502-1.628418-1.3017578-2.3696289v.0117188z" fill="#fff" opacity=".2"/><path d="m16 7c0 .0018311.0009766.00354.0009766.0053711.0009766-.1713257.0019531-.3643188.0001831-.5755615-.000061.114563.0003662.2373047-.0001831.3372803z" fill="#0099d8"/><g><path d="m16.1294117 16.8117638c-.0119629-2.4346304-.3427773-5.1733255-2.2666664-9.1058807-.9520874.6437373-2.6998434 1.1529412-2.9098043 1.1529412-.37854 0-1.2050161-.2702007-1.8122549-.8062725-.2496338.7364502-.5952148 1.418335-.9380493 2.0861206-.2578125.5014648-.5244141 1.0205078-.7392578 1.5498047-.6043701 1.4848633-1.2945557 3.4396362-1.4338379 4.4784546.4229736.2818604.7179565.8918457 1.0437012 1.5733032.3374023.7060547.7197266 1.5063477 1.2124023 1.8496094.9015503.6276855 1.3689575 1.5230103 1.4914551 2.3365479.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737812-.2477417 4.0972309-.9902344.0686645-1.3227545.3009795-3.4444624.9882354-4.1882368z" fill="#fff"/></g><path d="m19.9950562 16.1643066c-.0122681.8200073-.1097412 1.4313965-.3139038 1.8693848.0269775.0105591.0485229.0335693.0736694.0488892.1635742-.4508667.2451782-1.0413819.2451782-1.8325806 0-.0300903-.0046997-.0558472-.0049438-.0856934z" fill="#0099d8"/><path d="m9.7770996 21.9263916c.3430786.0341187.7755127.0638428 1.2668457.0638428 1.2199097 0 2.8737793-.2477417 4.097229-.9902344v-.25c-1.2234497.7424927-2.8773193.9902344-4.097229.9902344-.491333 0-.9993038-.0342407-1.3423824-.0683594" opacity=".1"/><path d="m15.7438536 22.6083984c-.0932617.0908204-.2182617.1416016-.3486328.1416016h-3.3920898c-.8881836 0-2.3608398.328125-2.5830078.5756836-.0957032.1069336-.2348634.1694336-.3769532.1694336-.0200195 0-.0400391-.0014648-.0600586-.0039062-.1625977-.0205078-.3076172-.1152344-.3837891-.2602539l-3.5390625-6.7485352c-.0270386-.0516357-.0332642-.1098633-.0410767-.1671753-.0037841.0595093-.0160522.1304931-.0160522.1847534 0 .0810547.0195312.1606445.0571289.2324219l3.5390625 6.7485352c.0761719.1450195.2211914.2397461.3837891.2602539.0200195.0024414.0400391.0039062.0600586.0039062.1420898 0 .28125-.0625.3769531-.1694336.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.3920898c.1303711 0 .2553711-.0507812.3486328-.1416016l4.1079092-4c.1343384-.1306763.171936-.3168945.1271973-.4856567-.0220337.0861206-.0587158.1690674-.1271973.2356567z" opacity=".3"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.1069335-.118164-.3032226-.2592773-.6279296-.2592773-.2675781 0-.4628906.2119141-.4746094.4790039-.0003052.0072632.0026856.013794.0026856.0209961h-2.0280762c0-.2763672-.2236328-.5-.5-.5-1.4829102 0-1.5 5.4448242-1.5058594 5.5639648-.027832.2983398-.0932617.9980469.3544922 1.4892578.2700195.2963868.6572266.4467774 1.1513672.4467774 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="#fdb515"/><path d="m8.2856445 19.5898438c-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210937-1.631836.3232421-1.631836 1.2358398 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.3022461-.9633789-.0981445-2.4907226-1.4370117-3.4228515z" fill="#fdb515"/><path d="m3.5531006 18.0141602c.190918-.0366211.4799194-.0917969.5567017-.1376953.0045166-.0219727.052002-.2094727.083313-.3339844.1131591-.4516602.324829-1.2924805 1.2927245-1.2924805.7668457 0 1.1659546.8066406 1.6276855 1.7402344.3490601.7060547.7446289 1.5063477 1.2543335 1.8496094.5077515.3416748.8823853.7640381 1.1412354 1.2085571-.2467041-.53479-.6415405-1.0534668-1.2234497-1.4585571-.4926758-.3432617-.875-1.1435547-1.2124023-1.8496094-.4462891-.9335938-.8320313-1.7402344-1.5732422-1.7402344-.9355469 0-1.1401367.8408203-1.2495117 1.2924805-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.5300903.1051636-1.3684082.2727661-1.5802612.9125977.3312377-.4367066 1.0327758-.572693 1.5015258-.6625977z" fill="#fff" opacity=".2"/><path d="m19.5 15.5c-.0958252 0-.1801758.0340576-.2562256.0806885l-3.338623-5.4631958c-.364563-1.0300293-.8309326-2.1226807-1.4608154-3.3464966-.1259766-.2446289-.4272461-.3417969-.6733398-.2158203-.2451172.1264648-.3417969.4282227-.215332.6738281 2.2573242 4.3867188 2.4443359 7.125 2.4453125 9.7431641-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578124.2724609.6040038.4165039 1.001953.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.2763672-.2236328-.5-.5-.5z" fill="#1a1a1a"/><path d="m19.3349609 18.2866211c-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762695-.0009765c-.3979492 0-.7441406-.144043-1.0019531-.4165039-.4032593-.4266357-.4845581-1.0585938-.4974976-1.3934326 0 .0106201.0004272.0214844.0004272.0321045-.0058594.1049805-.0415039 1.0415039.4970703 1.6113281.2578126.2724609.604004.4165039 1.0019532.4165039l.1762695.0009766c.0561523.0004883.112793.0009766.1704102.0009766.5083008 0 1.0581055-.0385742 1.4882812-.465332.459961-.4560548.6650391-1.2382814.6650391-2.5366212 0-.0160522-.0076904-.0296021-.0091553-.0452881-.022644 1.1668091-.2226562 1.9024048-.6558838 2.3319092z" opacity=".3"/><path d="m13 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><ellipse cx="13" cy="4.888" rx=".454" ry=".888"/><path d="m10 3.0415039c-.5795898 0-1 .6220703-1 1.4794922 0 .8569336.4204102 1.4790039 1 1.4790039s1-.6220703 1-1.4790039c0-.8574219-.4204102-1.4794922-1-1.4794922z" fill="#fff"/><path d="m13.8018799 7.7424927c-.9630737.6259155-2.6430664 1.116333-2.848938 1.116333-.37854 0-1.2050171-.2702026-1.8122559-.8062744l6.7815552 6.7815552c-.1610107-1.9360352-.6687622-4.1383668-2.1203613-7.0916138z" fill="url(#SVGID_1_)"/><ellipse cx="10" cy="4.871" rx=".445" ry=".871"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m11.5981445 5.0097656c-.0322265-.0063476-.0654297-.0097656-.0981445-.0097656-1.0751953 0-3 1.0083008-3 2 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-1.3081055-2.2211914-1.8540039-2.9018555-1.9902344z" fill="#fdb515"/><path d="m20.5400391 21.5097656c-.4375.159668-.9331055.340332-1.1865234.59375-.1103516.1103516-.215332.2216797-.3178711.3310547-.6083985.6464844-1.237793 1.3154297-2.5356446 1.3154297-.4941406 0-.8813477-.1503906-1.1513672-.4467773-.2931519-.3215942-.3590698-.7246704-.3668213-1.053833-.0216064.3453979-.0092163.8912964.3668213 1.303833.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.0362549-.0172729-.062439-.0202026-.0970459-.0999756.6099243-.7764283.864502-1.4397583 1.1068115z" opacity=".1"/><path d="m9.7226562 22.7626953c-.1943359.6181641-.6513671.9873047-1.2226562.9873047-.7944336 0-1.6240234-.3823242-2.2905273-.6899414-.3115234-.1435547-.6337891-.2919922-.7875977-.3164062-.0991211-.015625-.253418-.0273438-.4389648-.0429688-1.0805054-.0898438-2.8504639-.2475586-2.9620972-1.3487549-.0021973.008667-.0024414.0143433-.0046997.0230713-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.5712891 0 1.0283203-.3691406 1.2226562-.9873047.0790405-.2519531.1069946-.543396.0856934-.8517456-.0054321.2141113-.0286865.4199829-.0856934.6017456z" opacity=".1"/><path d="m10.9890747 8.75c-.5604858 0-2.1712646-.8812256-2.4877319-1.7559814 0 .0020141-.0013428.0039672-.0013428.0059814 0 .9370117 1.8911133 2 2.5 2 .2954102 0 3.5-1.112793 3.5-2 0-.0193481-.010498-.0349121-.0114746-.0539551-.4745483.8552857-3.2236939 1.8039551-3.4994507 1.8039551z" opacity=".1"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0362549-.0401001-.0941162-.0776978-.1567383-.1129761-.0628662.9104004-.2607422 1.5180054-.6362305 1.8903198-.4301758.4267578-.9799805.465332-1.4882812.465332-.0576172 0-.1142578-.0004883-.1704102-.0009766l-.1762694-.0009764c-.3979492 0-.7441406-.144043-1.0019531-.4165039l3.4207764 3.4207764c.199646-.0893555.4161987-.1696777.6212158-.2445068.7177734-.2622071 1.4599609-.5332032 1.4599609-1.2597657 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_2_)"/><path d="m20.9262695 19.0742188c-.2070312-.1357422-.4213867-.2763672-.5727539-.4277344-.0883789-.0883789-.0478516-.4970703-.0263672-.7167969.0415039-.421875.0844727-.8574219-.1992188-1.1704102-.0341797-.0377197-.0947266-.0740967-.1483765-.111145.0134279-.2005615.0204469-.4155884.0204469-.6481323 0-3.246582-1.4956055-5.1196289-2.6972656-6.625-.7275391-.9116211-1.3027344-1.6318359-1.3027344-2.375l.0009766-.2329102c.0078125-1.3803711.0239258-4.253418-1.5019531-5.7880859-.6459962-.6494141-1.4868165-.9790039-2.4990235-.9790039-2.1005859 0-3.5 1.0205078-3.5 6 0 1.3706055-.5766602 2.4931641-1.1870117 3.6816406-.2675781.5209961-.5444336 1.0600586-.7763672 1.6298828-.4187622 1.0296631-1.3328247 3.399231-1.5014648 4.7835693-.5404663.227417-.6967773.8345337-.784668 1.1973877-.0302734.1245117-.0761719.3120117-.0805664.3339844-.0742188.0458984-.3535156.1010742-.5380859.1376953-.6103516.1210938-1.631836.3232422-1.631836 1.2358399 0 .265625.0395508.4912109.0830078.7260742.0771484.4160156.1499024.8085938-.0668945 1.6489258-.0107422.0405273-.0161133.0830078-.0161133.125 0 1.2021484 1.8671875 1.3579102 2.9829102 1.4506836.1855469.015625.3398438.0273438.4389648.0429688.1538086.0244141.4760742.1728516.7875977.3164062.6665039.3076172 1.4960937.6899414 2.2905273.6899414.3419189 0 .633728-.1454468.8619385-.3841553.0174561-.0148315.0396729-.0229492.0550537-.0401611.222168-.2475586 1.6948242-.5756836 2.5830078-.5756836h3.0606689c.0551147.192749.1345215.3848877.2879639.5532227.2700195.2963867.6572266.4467773 1.1513672.4467773 1.2978516 0 1.9272461-.6689453 2.5356445-1.3154297.1025391-.109375.2075195-.2207031.3178711-.3310547.253418-.253418.7490234-.434082 1.1865234-.59375.7177735-.262207 1.459961-.5332031 1.459961-1.2597656 0-.7211914-.5952148-1.1118164-1.0737305-1.4257812z" fill="url(#SVGID_3_)"/></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Managed VPS Hosting</div>
                       <p>Leave your entire linux server technicalities to us.</p>
@@ -248,7 +406,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/servers/windows-vps-hosting')}}" title="Windows VPS Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/windows-hosting.webp" alt="Windows VPS Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512.00039"><path d="m215.632812 62.089844v165.984375c0 10.867187-8.839843 19.703125-19.707031 19.703125l-88.109375-.019532-88.121094-.019531c-10.847656 0-19.6835932-8.828125-19.695312-19.675781v-142.039062c-.0117188-9.804688 7.320312-18.203126 17.054688-19.523438l90.761718-12.328125 85.460938-11.605469c5.636718-.761718 11.328125.9375 15.605468 4.6875 4.289063 3.738282 6.75 9.148438 6.75 14.835938zm0 0" fill="#ff5b5b"/><path d="m511.496094 285.839844-.058594 206.464844c0 5.699218-2.46875 11.117187-6.78125 14.867187-3.609375 3.128906-8.195312 4.828125-12.914062 4.828125-.910157 0-1.832032-.070312-2.75-.191406l-116.253907-16.355469-121.792969-17.136719c-9.667968-1.359375-16.96875-9.746094-16.96875-19.515625v-172.96875c0-10.867187 8.839844-19.707031 19.707032-19.707031h238.105468c5.269532 0 10.21875 2.050781 13.9375 5.777344 1.859376 1.859375 3.300782 4.03125 4.28125 6.390625.980469 2.359375 1.488282 4.910156 1.488282 7.546875zm0 0" fill="#ffb64c"/><path d="m215.703125 285.832031v167.730469c0 5.691406-2.46875 11.097656-6.757813 14.847656-3.609374 3.148438-8.21875 4.847656-12.949218 4.847656-.890625 0-1.789063-.058593-2.679688-.179687l-85.5-11.714844-90.578125-12.417969c-9.699219-1.332031-17.027343-9.71875-17.027343-19.515624l-.011719-143.597657c0-5.261719 2.050781-10.210937 5.769531-13.929687 3.730469-3.726563 8.667969-5.777344 13.9375-5.777344h176.089844c10.859375 0 19.707031 8.839844 19.707031 19.707031zm0 0" fill="#6aa9ff"/><path d="m511.4375 19.699219v206.445312c0 10.855469-8.839844 19.695313-19.695312 19.695313h-238.058594c-10.867188 0-19.707032-8.839844-19.707032-19.695313v-171.800781c0-4.859375 1.820313-9.390625 4.832032-12.867188 3.019531-3.480468 7.226562-5.929687 12.035156-6.628906l121.894531-17.738281 116.164063-16.90625c5.65625-.820313 11.394531.851563 15.726562 4.601563 4.328125 3.746093 6.808594 9.175781 6.808594 14.894531zm0 0" fill="#a8ebfa"/><path d="m195.925781 247.777344-88.109375-.019532v-193.585937l85.460938-11.605469c5.636718-.761718 11.328125.9375 15.605468 4.6875 4.289063 3.738282 6.75 9.148438 6.75 14.835938v165.984375c0 10.867187-8.839843 19.703125-19.707031 19.703125zm0 0" fill="#ff3636"/><path d="m215.703125 285.832031v167.730469c0 5.691406-2.46875 11.097656-6.757813 14.847656-3.609374 3.148438-8.21875 4.847656-12.949218 4.847656-.890625 0-1.789063-.058593-2.679688-.179687l-85.5-11.714844v-195.238281h88.179688c10.859375 0 19.707031 8.839844 19.707031 19.707031zm0 0" fill="#2682ff"/><path d="m491.742188 245.839844h-119.003907v-228.730469l116.164063-16.90625c5.65625-.820313 11.394531.851563 15.726562 4.601563 4.328125 3.746093 6.808594 9.175781 6.808594 14.894531v206.445312c0 10.855469-8.839844 19.695313-19.695312 19.695313zm0 0" fill="#76e2f8"/><path d="m511.496094 285.839844-.058594 206.464844c0 5.699218-2.46875 11.117187-6.78125 14.867187-3.609375 3.128906-8.195312 4.828125-12.914062 4.828125-.910157 0-1.832032-.070312-2.75-.191406l-116.253907-16.355469v-229.328125h119.050781c5.269532 0 10.21875 2.050781 13.9375 5.777344 1.859376 1.859375 3.300782 4.03125 4.28125 6.390625.980469 2.359375 1.488282 4.910156 1.488282 7.546875zm0 0" fill="#ff9f00"/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Windows VPS Hosting</div>
                       <p>Best for scaling applications & secured environment.</p>
@@ -257,7 +417,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/servers/forex-vps-hosting')}}" title="Fores VPS Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/forex-vps.webp" alt="Forex VPS Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" viewBox="0 0 512 512" data-name="Layer 1"><linearGradient id="linear-gradient" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="498.177" y2="13.823"><stop offset="0" stop-color="#9345ff"/><stop offset="1" stop-color="#00c1ff"/></linearGradient><path d="m468.48 180.737c0-13.395-10.925-24.32-24.32-24.32h-47.572v235.698h-49.938v-277.554h-27.141v41.856h-251.669c-13.395 0-24.32 10.925-24.32 24.32v252.081h424.96zm-303.13 211.378h-49.939v-111.187h49.939zm77.079 0h-49.939v-194.698h49.939zm77.079 0h-49.938v-154.074h49.938zm-203.231-258.196c-3.138-4.541-2.005-10.774 2.531-13.913l104.002-71.997c3.63-2.521 8.48-2.353 11.931.395l49.176 39.265 76.061-52.652-10.948-1.258c-5.491-.641-9.42-5.602-8.793-11.083.632-5.491 5.602-9.41 11.083-8.788l37.327 4.3c2.801.328 5.342 1.817 6.99 4.117 1.644 2.304 2.232 5.192 1.629 7.954l-7.896 36.228c-1.171 5.399-6.503 8.812-11.902 7.641-5.39-1.171-8.807-6.498-7.636-11.902l2.497-11.425-83.143 57.545c-3.625 2.512-8.48 2.352-11.927-.41l-49.181-39.26-97.889 67.77c-1.731 1.201-3.722 1.779-5.679 1.779-3.172 0-6.291-1.504-8.234-4.305zm379.723 316.897v12.801c0 19.035-15.525 34.56-34.56 34.56h-410.88c-19.034 0-34.56-15.525-34.56-34.56v-12.801z" fill="url(#linear-gradient)" fill-rule="evenodd"/></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Forex VPS Hosting</div>
                       <p>Streamline your forex trading operations with VPS server.</p>
@@ -266,7 +428,9 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/servers/dedicated-servers')}}" title="Dedicated Server Hosting">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/dedicated-server.webp" alt="Dedicated Server Hosting" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><linearGradient id="SVGID_1" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="512" y2="0"><stop offset="0" stop-color="#a93aff"/><stop offset="1" stop-color="#ff81ff"/></linearGradient><g><g><g><path d="m226 90c8.284 0 15-6.716 15-15s-6.716-15-15-15-15 6.716-15 15 6.716 15 15 15zm-120 0c8.284 0 15-6.716 15-15s-6.716-15-15-15-15 6.716-15 15 6.716 15 15 15zm375 105c0-24.508-11.818-46.306-30.052-60 18.234-13.694 30.052-35.492 30.052-60 0-41.355-33.645-75-75-75h-300c-41.355 0-75 33.645-75 75 0 24.508 11.818 46.306 30.052 60-18.234 13.694-30.052 35.492-30.052 60s11.818 46.306 30.052 60c-18.234 13.694-30.052 35.492-30.052 60 0 41.355 33.645 75 75 75h135v34.58c-12.764 4.527-22.893 14.656-27.42 27.42h-107.58c-8.284 0-15 6.716-15 15s6.716 15 15 15h107.58c6.192 17.458 22.865 30 42.42 30s36.228-12.542 42.42-30h107.58c8.284 0 15-6.716 15-15s-6.716-15-15-15h-107.58c-4.527-12.764-14.656-22.893-27.42-27.42v-34.58h135c41.355 0 75-33.645 75-75 0-24.508-11.818-46.306-30.052-60 18.234-13.694 30.052-35.492 30.052-60zm-420-120c0-24.813 20.187-45 45-45h300c24.813 0 45 20.187 45 45s-20.187 45-45 45h-300c-24.813 0-45-20.187-45-45zm195 407c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm195-167c0 24.813-20.187 45-45 45h-300c-24.813 0-45-20.187-45-45s20.187-45 45-45h300c24.813 0 45 20.187 45 45zm-45-75h-300c-24.813 0-45-20.187-45-45s20.187-45 45-45h300c24.813 0 45 20.187 45 45s-20.187 45-45 45zm-240-150c8.284 0 15-6.716 15-15s-6.716-15-15-15-15 6.716-15 15 6.716 15 15 15zm-60 90c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm60 0c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm60 0c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm0 120c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm-60 0c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm-60 0c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z" fill="url(#SVGID_1)"/></g></g></g></svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Dedicated Server Hosting</div>
                       <p>Robust & custom solutions for data-intensive applications.</p>
@@ -276,7 +440,46 @@
 
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/deals')}}#SERVERS" title="Server Deals">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/deals-icon.webp" alt="Deals Icon" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.035 512.035" style="enable-background:new 0 0 512.035 512.035;" xml:space="preserve">
+                        <path style="fill:#F44336;" d="M488.502,256.035l22.464-58.592c2.464-6.464,0.544-13.792-4.864-18.176l-48.704-39.488l-9.856-61.984  c-1.088-6.848-6.464-12.192-13.312-13.28l-61.984-9.856L332.79,5.923c-4.352-5.408-11.84-7.328-18.144-4.864l-58.624,22.496  L197.43,1.091c-6.496-2.496-13.76-0.512-18.144,4.864l-39.488,48.736l-61.984,9.856c-6.816,1.088-12.192,6.464-13.28,13.28  l-9.856,61.984L5.942,179.299c-5.376,4.352-7.328,11.68-4.864,18.144l22.464,58.592L1.078,314.627  c-2.496,6.464-0.512,13.792,4.864,18.144l48.736,39.456l9.856,61.984c1.088,6.848,6.432,12.224,13.28,13.312l61.984,9.856  l39.488,48.704c4.384,5.44,11.712,7.36,18.176,4.864l58.56-22.432l58.592,22.464c1.856,0.704,3.776,1.056,5.728,1.056  c4.704,0,9.344-2.08,12.448-5.952l39.456-48.704l61.984-9.856c6.848-1.088,12.224-6.464,13.312-13.312l9.856-61.984l48.704-39.456  c5.408-4.384,7.328-11.68,4.864-18.144L488.502,256.035z"/>
+                        <g>
+                          <path style="fill:#FAFAFA;" d="M208.022,224.035c-26.464,0-48-21.536-48-48s21.536-48,48-48s48,21.536,48,48   S234.486,224.035,208.022,224.035z M208.022,160.035c-8.832,0-16,7.168-16,16s7.168,16,16,16s16-7.168,16-16   S216.854,160.035,208.022,160.035z"/>
+                          <path style="fill:#FAFAFA;" d="M304.022,384.035c-26.464,0-48-21.536-48-48s21.536-48,48-48s48,21.536,48,48   S330.486,384.035,304.022,384.035z M304.022,320.035c-8.8,0-16,7.2-16,16s7.2,16,16,16s16-7.2,16-16   S312.822,320.035,304.022,320.035z"/>
+                          <path style="fill:#FAFAFA;" d="M176.022,384.035c-3.232,0-6.464-0.96-9.28-2.976c-7.2-5.152-8.864-15.136-3.712-22.336l160-224   c5.152-7.2,15.136-8.864,22.336-3.712c7.2,5.12,8.832,15.136,3.712,22.304l-160,224   C185.91,381.699,181.014,384.035,176.022,384.035z"/>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Server Deals</div>
                       <p>Get Budget-friendly server offers for everyone.</p>
@@ -289,13 +492,52 @@
           <li class="nav-item header-megamenu-li">
             <a class="nav-link mega-nav" href="{{url('/hosting/website-builder')}}" title="Website Builder">Website Builder</a>
           </li>
+
+
           <li class="nav-item dropdown header-megamenu-li">
-            <a class="nav-link mega-nav" href="" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Email">Email <i class="fa-solid fa-angle-down"></i></a>
+            <a class="nav-link mega-nav" href="" id="dropdown03" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Email">Email <i class="arrow fa-solid fa-angle-down"></i></a>
             <div class="dropdown-menu header-megamenu email-dropdown-megamenu" aria-labelledby="dropdown01">
               <ul class="mega-box-clm">
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/email/google-workspace-india')}}" title="Google Workspace">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/google-icon.webp" alt="Google Workspace" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256  c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456  C103.821,274.792,107.225,292.797,113.47,309.408z"/>
+                        <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451  c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535  c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
+                        <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512  c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771  c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
+                        <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012  c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0  C318.115,0,375.068,22.126,419.404,58.936z"/>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Google Workspace</div>
                       <p>Stay connected and collaborate with Google Workspace.</p>
@@ -304,7 +546,41 @@
                 </li>
                 <li class="hdr_tp_menu_li">
                   <a class="dropdown-item" href="{{url('/email/microsoft-office-365-suite')}}" title="Microsoft 365">
-                    <div class="mega-menu-icon"> <img src="../assets/images/new_img/microsoft365-icon.webp" alt="Microsoft 365" loading="lazy"></div>
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511.987 511.987" style="enable-background:new 0 0 511.987 511.987;" xml:space="preserve">
+                        <path style="fill:#FF5722;" d="M461.603,43.08L312.27,0.414c-2.325-0.667-4.807-0.524-7.04,0.405l-256,106.667  c-3.965,1.659-6.547,5.536-6.549,9.835v277.333c0,5.85,4.711,10.608,10.56,10.667c-5.891,0.036-10.637,4.842-10.6,10.732  c0.028,4.584,2.982,8.637,7.336,10.068l256,85.333c1.089,0.352,2.226,0.532,3.371,0.533c0.989-0.006,1.973-0.15,2.923-0.427  l149.333-42.667c4.576-1.304,7.736-5.481,7.744-10.24V53.32C469.339,48.562,466.18,44.384,461.603,43.08z M58.126,404.19l64-32  c3.609-1.808,5.888-5.499,5.888-9.536V136.328l192-48v357.888L54.968,405.448c-0.501-0.084-1.007-0.127-1.515-0.128  C55.076,405.299,56.673,404.913,58.126,404.19z"/>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
                     <div class="mega-menu-cont">
                       <div class="mega-menu-tittle">Microsoft 365</div>
                       <p>Boost productivity with Microsoft 365 for businesses.</p>
@@ -317,40 +593,354 @@
           <li class="nav-item header-megamenu-li">
             <a class="nav-link mega-nav" href="{{url('/ssl-certificates')}}" title="SSL">SSL</a>
           </li>
-          @if(session()->has('frontlogin'))
-          <li class="nav-item dropdown hdr_top_cntc_us my-acc-top header-megamenu-li my-acc-top-desktop">
-            <a class="nav-link mega-nav" href="#" role="button" data-toggle="dropdown" aria-expanded="false" title="My Account">
-              My Account <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item top-menu-myacc" href="javascript:void(0)" title="Host IT Smart">
-                <p> Host IT Smart</p>
-                <p>
-                  @if(Session::has('useremail'))
-                  {{ Session::get('useremail') }}
-                  @endif
-                </p>
-              </a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php" title="My Profile"><i class="fa-solid fa-user"></i> My Profile</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=invoices" title="Invoices"><i class="fa-solid fa-file-invoice"></i> Invoices</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=services" title="Products"><i class="fa-solid fa-share-nodes"></i> Products/Services</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/clientarea.php?action=domains" title="Domain"><i class="fa-solid fa-globe"></i> Domain</a>
-              <a class="dropdown-item" href="{{ config('app.api_url') }}/supporttickets.php" title="Support"><i class="fa-solid fa-ticket"></i> Support</a>
-              <div class="my-acc-log-out-btn">
-                <a href="javascript:void(0)" id="logoutlink" onclick="do_logout();" title="Logout">LOGOUT</a>
-              </div>
+          
+          
+          <li class="nav-item dropdown header-megamenu-li">
+            <a class="nav-link mega-nav" href="" id="dropdown03" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Help Center">Help Center <i class="arrow fa-solid fa-angle-down"></i></a>
+            <div class="dropdown-menu header-megamenu help-dropdown-megamenu" aria-labelledby="dropdown01">
+              <ul class="mega-box-clm">
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="tel:{{Config::get('Constant.DEFAULT_PHONENO')}}" title="Call Our Team">
+                  {{-- <a class="dropdown-item" href="tel:{{Config::get('Constant.DEFAULT_PHONENO')}}" title="Call Our Team"> --}}
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.719" height="55.719" viewBox="0 0 55.719 55.719">
+                        <defs>
+                          <linearGradient id="linear-gradient_01" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#5558ff"/>
+                            <stop offset="1" stop-color="#00c0ff"/>
+                          </linearGradient>
+                          <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#addcff"/>
+                            <stop offset="0.503" stop-color="#eaf6ff"/>
+                            <stop offset="1" stop-color="#eaf6ff"/>
+                          </linearGradient>
+                        </defs>
+                        <g id="Group_169694" data-name="Group 169694" transform="translate(-0.001)">
+                          <path id="Path_243655" data-name="Path 243655" d="M46.726,118.879a4.883,4.883,0,0,0-2.157-3.595l-8.31-5.54a4.91,4.91,0,0,0-6.18.612l-2.656,2.678c-.6.21-3.4-.974-7-4.574s-4.768-6.372-4.615-6.923l2.724-2.724a4.911,4.911,0,0,0,.612-6.18l-5.54-8.31a4.9,4.9,0,0,0-7.537-.746l-4.11,4.11c-5.632,5.632,1.7,18.009,11.468,27.776,6.639,6.639,21.168,18.085,27.776,11.468l4.11-4.11A4.875,4.875,0,0,0,46.726,118.879Z" transform="translate(0 -73.202)" fill="url(#linear-gradient_01)"/>
+                          <path id="Path_243656" data-name="Path 243656" d="M273.632,0a1.632,1.632,0,1,0,0,3.265,21.246,21.246,0,0,1,21.221,21.221,1.632,1.632,0,1,0,3.265,0A24.513,24.513,0,0,0,273.632,0Zm0,6.53a1.632,1.632,0,1,0,0,3.265,14.708,14.708,0,0,1,14.692,14.692,1.632,1.632,0,0,0,3.265,0A17.977,17.977,0,0,0,273.632,6.53Zm0,6.53a1.632,1.632,0,1,0,0,3.265,8.172,8.172,0,0,1,8.162,8.162,1.632,1.632,0,0,0,3.265,0A11.441,11.441,0,0,0,273.632,13.059Zm0,6.53a1.632,1.632,0,1,0,0,3.265,1.634,1.634,0,0,1,1.632,1.632,1.632,1.632,0,0,0,3.265,0A4.9,4.9,0,0,0,273.632,19.589Z" transform="translate(-242.399)" fill="url(#linear-gradient-2)"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">079-3507-9700</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="javascript:void(Tawk_API.toggle())" title="Live Chat">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="62.789" height="55" viewBox="0 0 62.789 55">
+                        <g id="Group_169696" data-name="Group 169696" transform="translate(-2.25 -3.25)">
+                          <path id="Path_243657" data-name="Path 243657" d="M52.134,49.365a4.008,4.008,0,0,1-2.193-.65L45.7,45.961A10.455,10.455,0,0,0,40,44.28H15.1A8.861,8.861,0,0,1,6.25,35.426v-6.44L40.864,7.251H47.3a8.861,8.861,0,0,1,8.855,8.855V45.343a4.025,4.025,0,0,1-4.025,4.025Zm.438-4.7H52.6Z" transform="translate(8.88 8.882)" fill="#549bff"/>
+                          <path id="Path_243658" data-name="Path 243658" d="M43.3,3.25H11.1A8.861,8.861,0,0,0,2.25,12.1V41.342a4.025,4.025,0,0,0,6.218,3.375l5.847-3.79a3.985,3.985,0,0,1,2.186-.647H43.3a8.861,8.861,0,0,0,8.855-8.855V12.1A8.861,8.861,0,0,0,43.3,3.25Z" fill="#bad7ff"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Live Chat</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php" title="Raise a Ticket">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="62.789" height="42.915" viewBox="0 0 62.789 42.915">
+                        <g id="Group_169699" data-name="Group 169699" transform="translate(-6.5 -24.7)">
+                          <path id="Path_243659" data-name="Path 243659" d="M66.21,35.674,6.5,33.338l42.287-6.29,1.889-.278,13.9-2.069Z" transform="translate(0)" fill="#fba616"/>
+                          <path id="Path_243660" data-name="Path 243660" d="M50.4,33.087a1.343,1.343,0,0,1-.142.011.957.957,0,0,1-.945-.819l-.524-3.511,1.889-.278L51.2,32A.963.963,0,0,1,50.4,33.087ZM65.56,48.468a5.274,5.274,0,0,0,3.729,9V69.336H6.5V57.471a5.272,5.272,0,0,0,0-10.543V35.064H69.289V46.928a5.27,5.27,0,0,0-3.729,1.54Z" transform="translate(0 -1.721)" fill="#fbdd6b"/>
+                          <path id="Path_243661" data-name="Path 243661" d="M65.56,53.934a5.274,5.274,0,0,0,3.729,9V74.8H6.5V62.938a5.272,5.272,0,0,0,0-10.543V40.53H69.289V52.394a5.27,5.27,0,0,0-3.729,1.54Z" transform="translate(0 -7.187)" fill="#fbdd6b"/>
+                          <g id="Group_169698" data-name="Group 169698" transform="translate(16.891 33.343)">
+                            <path id="Path_243662" data-name="Path 243662" d="M62.838,40.53v3.549a.955.955,0,1,1-1.911,0V40.53Zm-.955,18.607a.953.953,0,0,0-.955.955V66.4a.955.955,0,0,0,1.911,0V60.093A.957.957,0,0,0,61.883,59.137Zm0-11.16a.953.953,0,0,0-.955.955v6.306a.955.955,0,0,0,1.911,0V48.933A.957.957,0,0,0,61.883,47.977Zm.955,23.276V74.8H60.927V71.253a.955.955,0,0,1,1.911,0Zm-24.49-21.72H26.486a.955.955,0,1,1,0-1.911H38.348a.955.955,0,0,1,0,1.911Zm11.861,6.058H26.486a.955.955,0,1,1,0-1.911H50.209a.955.955,0,0,1,0,1.911Zm0,6.059H26.486a.955.955,0,1,1,0-1.911H50.209a.955.955,0,0,1,0,1.911Zm0,6.059H26.486a.955.955,0,0,1,0-1.911H50.209a.955.955,0,0,1,0,1.911Z" transform="translate(-25.531 -40.53)" fill="#fba616"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Raise a Ticket</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="https://www.hostitsmart.com/blog/" title="Blog">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+                        <g id="Group_169756" data-name="Group 169756" transform="translate(-1 -1)">
+                          <path id="Path_243726" data-name="Path 243726" d="M1,8.948V52.569a3.793,3.793,0,0,0,3.793,3.793H46.517a3.793,3.793,0,0,0,3.793-3.793V8.948L49.362,8H1.948Z" transform="translate(0 -0.362)" fill="#e3f0ff"/>
+                          <path id="Path_243727" data-name="Path 243727" d="M50.31,4.793V8.586H1V4.793A3.793,3.793,0,0,1,4.793,1H46.517A3.793,3.793,0,0,1,50.31,4.793Z" fill="#11117f"/>
+                          <path id="Path_243728" data-name="Path 243728" d="M6.948,23.483A.948.948,0,0,1,6,22.534V14.948A.948.948,0,0,1,6.948,14H44.879a.948.948,0,0,1,.948.948v8.534Z" transform="translate(-0.259 -0.672)" fill="#4f53ff"/>
+                          <rect id="Rectangle_23911" data-name="Rectangle 23911" width="13.276" height="9.483" rx="1" transform="translate(5.741 41.776)" fill="#ed5f54"/>
+                          <path id="Path_243729" data-name="Path 243729" d="M57.938,24.363l-2.162,2.162L51.9,24.638,50.01,20.759,52.172,18.6a2.038,2.038,0,0,1,2.883,0l2.883,2.883a2.038,2.038,0,0,1,0,2.883Z" transform="translate(-2.535 -0.879)" fill="#ed5f54"/>
+                          <path id="Path_243730" data-name="Path 243730" d="M41.211,41.106l-.009.019a3.888,3.888,0,0,1-1.678.967L34.308,43.5a.985.985,0,0,1-1.261-1.261l1.413-5.216a3.731,3.731,0,0,1,.977-1.669l.009-.019,4.191,1.574Z" transform="translate(-1.655 -1.776)" fill="#d6a36b"/>
+                          <path id="Path_243731" data-name="Path 243731" d="M52.146,29.716l-10.8,10.8L35.58,34.751l10.8-10.8L50.2,25.894Z" transform="translate(-1.789 -1.187)" fill="#f2c23b"/>
+                          <path id="Path_243732" data-name="Path 243732" d="M6.9,5.9H5.948a.948.948,0,0,1,0-1.9H6.9a.948.948,0,0,1,0,1.9Zm4.741,0H10.69a.948.948,0,0,1,0-1.9h.948a.948.948,0,0,1,0,1.9Zm4.741,0h-.948a.948.948,0,0,1,0-1.9h.948a.948.948,0,1,1,0,1.9Z" transform="translate(-0.207 -0.155)" fill="#fff"/>
+                          <g id="Group_169755" data-name="Group 169755" transform="translate(4.793 26.603)">
+                            <path id="Path_243733" data-name="Path 243733" d="M35.345,29.9H5.948a.948.948,0,0,1,0-1.9h29.4a.948.948,0,0,1,0,1.9ZM30.6,34.638H5.948a.948.948,0,0,1,0-1.9H30.6a.948.948,0,1,1,0,1.9Zm-1.9,4.741H5.948a.948.948,0,0,1,0-1.9H28.707a.948.948,0,0,1,0,1.9Zm-.948,4.741H23.966a.948.948,0,1,1,0-1.9h3.793a.948.948,0,1,1,0,1.9Zm17.069,4.741H23.966a.948.948,0,1,1,0-1.9H44.828a.948.948,0,1,1,0,1.9Zm0,4.741H23.966a.948.948,0,0,1,0-1.9H44.828a.948.948,0,0,1,0,1.9Z" transform="translate(-5 -28)" fill="#c3d2ea"/>
+                          </g>
+                          <path id="Path_243734" data-name="Path 243734" d="M37.9,37.087l10.8-10.8,1.341,1.341-10.8,10.8Z" transform="translate(-1.909 -1.308)" fill="#eaad32"/>
+                          <path id="Path_243735" data-name="Path 243735" d="M46.963,23.8l2.882-2.883,5.765,5.766L52.727,29.56Z" transform="translate(-2.377 -1.03)" fill="#d5e1f7"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Blog</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="https://www.hostitsmart.com/manage/knowledgebase/" title="Knowledgebase">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="60.078" height="69.063" viewBox="0 0 60.078 69.063">
+                        <g id="Group_169711" data-name="Group 169711" transform="translate(-33.298)">
+                          <path id="Path_243664" data-name="Path 243664" d="M200.989,424.373v4.4a7.417,7.417,0,1,0,14.833,0v-4.4Z" transform="translate(-145.068 -367.122)" fill="#e7dfdd"/>
+                          <path id="Path_243665" data-name="Path 243665" d="M263.38,428.767v-4.4h-7.417v11.812a7.425,7.425,0,0,0,7.417-7.416Z" transform="translate(-192.626 -367.121)" fill="#dad0cb"/>
+                          <path id="Path_243666" data-name="Path 243666" d="M125.147,71.344H125A20.4,20.4,0,0,0,111.276,106.7a7.229,7.229,0,0,1,2.329,5.272V114h23.083V111.95a7.1,7.1,0,0,1,2.282-5.2,20.4,20.4,0,0,0-13.824-35.4Z" transform="translate(-61.81 -61.719)" fill="#ffef4a"/>
+                          <path id="Path_243667" data-name="Path 243667" d="M255.963,71.344V114H267.5V111.95a7.1,7.1,0,0,1,2.282-5.2,20.4,20.4,0,0,0-13.824-35.4Z" transform="translate(-192.626 -61.719)" fill="#ffd321"/>
+                          <path id="Path_243668" data-name="Path 243668" d="M215.241,233.975h-4.047v3.882l-3.477,2.236-3.477-2.236v-3.882h-4.047v6.091l5.5,3.538v10.411h4.047V243.6l5.5-3.538Z" transform="translate(-144.38 -202.41)" fill="#ecbe00"/>
+                          <path id="Path_243669" data-name="Path 243669" d="M259.44,233.975v3.882l-3.477,2.236v13.922h2.024V243.6l5.5-3.538v-6.091Z" transform="translate(-192.626 -202.41)" fill="#ff9d21"/>
+                          <path id="Path_243670" data-name="Path 243670" d="M170.411,372.339h23.083v11.067H170.411Z" transform="translate(-118.615 -322.108)" fill="#f4f1f1"/>
+                          <path id="Path_243671" data-name="Path 243671" d="M255.963,372.339H267.5v11.067H255.963Z" transform="translate(-192.626 -322.108)" fill="#e7dfdd"/>
+                          <path id="Path_243672" data-name="Path 243672" d="M61.314,0h4.047V5.468H61.314ZM46.565,5.022,50.07,3l2.741,4.748-3.5,2.024ZM36.31,16.758l2.024-3.5,4.748,2.741-2.024,3.5ZM33.3,28H38.78v4.047H33.3Zm54.6,0h5.482v4.047H87.894Zm-4.3-12.008,4.748-2.741,2.024,3.5L85.614,19.5ZM73.863,7.747,76.6,3l3.5,2.024L77.368,9.771Z" fill="#ffd321"/>
+                          <path id="Path_243673" data-name="Path 243673" d="M280.52,28H286v4.047H280.52Zm-4.3-12.008,4.748-2.741,2.024,3.5L278.24,19.5Zm-9.728-8.246L269.23,3l3.5,2.024-2.741,4.748ZM255.963,0h2.024V5.468h-2.024Z" transform="translate(-192.626)" fill="#ecbe00"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Knowledgebase</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLH-E6HR4144OtJbgJFadteerb7sw5ZsmO" title="Video Tutorials">
+                    <div class="mega-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53">
+                        <g id="Group_169712" data-name="Group 169712" transform="translate(-2 -2)">
+                          <rect id="Rectangle_23910" data-name="Rectangle 23910" width="53" height="38" rx="3" transform="translate(2 2)" fill="#f0446a"/>
+                          <path id="Path_243674" data-name="Path 243674" d="M53,26H3.889a1.889,1.889,0,1,0,0,3.778H53A1.889,1.889,0,1,0,53,26Z" transform="translate(0 21.331)" fill="#d5eaf7"/>
+                          <circle id="Ellipse_637" data-name="Ellipse 637" cx="5.5" cy="5.5" r="5.5" transform="translate(6 44)" fill="#b5d4e5"/>
+                          <path id="Path_243675" data-name="Path 243675" d="M27.093,13.28l-9.329-5.77A3.778,3.778,0,0,0,12,10.722V22.263a3.779,3.779,0,0,0,5.763,3.213L27.093,19.7a3.779,3.779,0,0,0,0-6.426Z" transform="translate(8.889 4.396)" fill="#eaf6fd"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Video Tutorials</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="hdr_tp_menu_li">
+                  <a class="dropdown-item" href="https://www.hostitsmart.com/web-hosting-affiliates" title="Earn with Us">
+                    <div class="mega-menu-icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="61.558" height="63.541" viewBox="0 0 61.558 63.541">
+                        <g id="Group_169744" data-name="Group 169744" transform="translate(-7.99)">
+                          <path id="Path_243702" data-name="Path 243702" d="M142.759,52.775a.957.957,0,0,1-.773-.391,5.191,5.191,0,0,0-4.865-2.283,9.632,9.632,0,0,1-6.294-1.43.959.959,0,1,1,1.033-1.616,7.731,7.731,0,0,0,5.058,1.139,7.132,7.132,0,0,1,6.612,3.053.959.959,0,0,1-.771,1.527Z" transform="translate(-107.205 -41.084)" fill="#ffd064"/>
+                          <path id="Path_243703" data-name="Path 243703" d="M142.445,94.5a.959.959,0,0,1-.816-1.461c1.229-2,3.481-3.378,6.513-3.979a17.385,17.385,0,0,1,4.143-.313.959.959,0,0,1-.13,1.913c-.067,0-6.577-.39-8.893,3.382A.958.958,0,0,1,142.445,94.5Z" transform="translate(-116.929 -77.714)" fill="#ffd064"/>
+                          <path id="Path_243704" data-name="Path 243704" d="M129.469,53.523c15.746,0,24.453-23.1-.413-40.936a2.333,2.333,0,0,1-.978-1.92,3.12,3.12,0,0,1,.567-1.755,45.377,45.377,0,0,0,3.845-6.8.789.789,0,0,0-.747-1.139c-1.494,0-1.494-.977-2.987-.977s-1.494.977-2.987.977c-1.273,0-1.8-1.1-2.414-.3C121.55,3,127.731,11.17,127.731,11.17c-27.3,17.947-18.5,42.353-2.379,42.353h4.117Z" transform="translate(-89.501)" fill="#eabc6b"/>
+                          <path id="Path_243705" data-name="Path 243705" d="M252.022,11.17s6.273-8.142,4.469-10.477c-.615-.8-1.139.285-2.41.285-1.494,0-1.494-.977-2.988-.977s-1.494.977-2.987.977c-.074,0-.141,0-.207-.009-.6,2.573-3.3,6.581-4.852,8.727.609.894,1.048,1.474,1.048,1.474q-.54.355-1.072.722c26.083,17.928,17.355,41.632,1.4,41.632H254.5c16.167,0,24.915-24.347-2.476-42.353Z" transform="translate(-205.864)" fill="#e8ae4d"/>
+                          <path id="Path_243706" data-name="Path 243706" d="M236.284,81.006a21.822,21.822,0,0,1-10.892,0,2.326,2.326,0,0,1-1.532-3.044l.015-.044a2.146,2.146,0,0,1,2.533-1.43,17.733,17.733,0,0,0,8.859,0,2.146,2.146,0,0,1,2.533,1.43l.015.044A2.325,2.325,0,0,1,236.284,81.006Z" transform="translate(-188.959 -66.941)" fill="#ffe07d"/>
+                          <path id="Path_243707" data-name="Path 243707" d="M48.777,337.771l13.882,5.167a10.563,10.563,0,0,0,3.685.664H80.65a10.563,10.563,0,0,0,5.654-1.641l17.913-11.35a3.144,3.144,0,0,0,.512-4.12c-.973-1.43-2.582-1.678-4.353-.841l-17.44,7.679.021-2.829a5.064,5.064,0,0,0-4.33-4.513l-10.62-1.223c-2.45-.347-3.674-1.168-5.81-2.417a19.035,19.035,0,0,0-9.611-2.6H48.777Z" transform="translate(-35.725 -280.061)" fill="#ffddce"/>
+                          <path id="Path_243708" data-name="Path 243708" d="M61.816,340.185a11.106,11.106,0,0,0,3.874.7h15.04a11.1,11.1,0,0,0,4.62-1.008l10.518-6.665a3.248,3.248,0,0,0,.994-4.62s-.32-.549-.649-1.107l-13.277,5.846.021-2.829a5.064,5.064,0,0,0-4.33-4.513l-10.62-1.223c-2.45-.347-3.674-1.168-5.81-2.417a19.035,19.035,0,0,0-9.611-2.6H48.777v15.59Z" transform="translate(-35.725 -280.061)" fill="#ffddce"/>
+                          <path id="Path_243709" data-name="Path 243709" d="M104.728,364.811c-.973-1.43-2.582-1.678-4.353-.841l-4.8,2.112.417.661a3.144,3.144,0,0,1-.512,4.12l-10.437,6.614a10.563,10.563,0,0,1-4.4.959H66.344a10.563,10.563,0,0,1-3.685-.664l-13.882-5.167v3.485l13.882,5.167a10.563,10.563,0,0,0,3.685.664H80.65a10.563,10.563,0,0,0,5.654-1.641l17.913-11.35A3.144,3.144,0,0,0,104.728,364.811Z" transform="translate(-35.725 -318.381)" fill="#ffcbbe"/>
+                          <path id="Path_243710" data-name="Path 243710" d="M313.69,382.938v.068l.045-.02Z" transform="translate(-267.762 -335.414)" fill="#f5dbcc"/>
+                          <path id="Path_243711" data-name="Path 243711" d="M240.717,415.677H229.873a.959.959,0,0,1,0-1.918h10.858Z" transform="translate(-193.507 -362.41)" fill="#ffcbbe"/>
+                          <path id="Path_243712" data-name="Path 243712" d="M16.039,316.822a1.824,1.824,0,0,1-1.824,1.824h-4.4a1.824,1.824,0,0,1-1.824-1.824V294.492a1.824,1.824,0,0,1,1.824-1.824h4.4a1.824,1.824,0,0,1,1.824,1.824Z" transform="translate(0 -256.347)" fill="#407093"/>
+                          <path id="Path_243713" data-name="Path 243713" d="M246.98,163.069q-.611-.215-1.216-.447v-6.113a3.94,3.94,0,0,1,1.865.819.959.959,0,0,0,1.295-1.414,5.937,5.937,0,0,0-3.16-1.341v-1.363a.959.959,0,0,0-1.918,0v1.441a7.1,7.1,0,0,0-.711.174,4.636,4.636,0,0,0-3.173,3.639,4.055,4.055,0,0,0,1.318,4,11.617,11.617,0,0,0,2.567,1.45v7.583a5.089,5.089,0,0,1-2.982-1.035.959.959,0,0,0-1.05,1.6,7.022,7.022,0,0,0,4.032,1.346v1.522a.959.959,0,0,0,1.918,0v-1.589a5.617,5.617,0,0,0,4.6-4.648A4.918,4.918,0,0,0,246.98,163.069Zm-4.517-2.118a2.161,2.161,0,0,1-.617-2.133,2.743,2.743,0,0,1,1.842-2.158c.053-.016.106-.03.158-.044v5.179A8.082,8.082,0,0,1,242.463,160.951Zm6.014,7.425a3.735,3.735,0,0,1-2.713,3.006v-6.713c.187.068.377.137.577.208A3.018,3.018,0,0,1,248.477,168.377Z" transform="translate(-202.674 -133.355)" fill="#fff"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="mega-menu-cont">
+                      <div class="mega-menu-tittle">Earn with Us</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </li>
-          @else
-          {{-- <li class="nav-item dropdown hdr_top_login header-megamenu-li">
-            <a class="nav-link mega-nav" id="login_header" href="#" title="Login" data-toggle="modal" data-target="#loginModal">
-            <i class="hdr-tp-icon fa-solid fa-user"></i> Login</a></li> --}}
-          @endif
-          {{-- <li class="nav-item header-megamenu-li cart-megamenu-li">
-            <a class="nav-link cart-icon-hdr-tp" href="{{url('/cart/signin')}}" title="Cart">
-              <i class="fa-solid fa-cart-shopping"></i></a>
-            <span class="counter" id="cart_cout"></span>
-          </li> --}}
+
+
+
+
+
+
+          
+
+      @unless(session()->has('frontlogin'))
+      <li class="nav-item dropdown header-megamenu-li header-login-desk">
+        <a class="nav-link mega-nav" href="" id="dropdown06" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Account">Account <i class="arrow fa-solid fa-angle-down"></i></a>
+        <div class="dropdown-menu header-megamenu account-dropdown-megamenu" aria-labelledby="dropdown06">
+          <ul class="mega-box-clm">
+            
+          <li class="hdr_tp_menu_li">
+              <a class="dropdown-item"  title="Sign Up" id="signup_page_home" class="dropdown-item createaccount" id="login_header" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <div class="mega-menu-icon"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="59.018" viewBox="0 0 50 59.018">
+  <g id="Group_169747" data-name="Group 169747" transform="translate(0 -61.2)">
+    <path id="Path_243714" data-name="Path 243714" d="M15.839,293.4h17.11a15.833,15.833,0,0,1,15.839,15.839,6.374,6.374,0,0,1-6.381,6.381H6.381A6.374,6.374,0,0,1,0,309.239,15.833,15.833,0,0,1,15.839,293.4Z" transform="translate(0 -199.42)" fill="#2c5ede"/>
+    <circle id="Ellipse_639" data-name="Ellipse 639" cx="14.131" cy="14.131" r="14.131" transform="translate(10.263 61.2)" fill="#95baf9"/>
+    <g id="Group_169754" data-name="Group 169754" transform="translate(-2 2)">
+      <path id="Path_243725" data-name="Path 243725" d="M13.5,0A13.5,13.5,0,1,1,0,13.5,13.5,13.5,0,0,1,13.5,0Z" transform="translate(25 91.218)" fill="#f2f3ff"/>
+      <g id="Group_169753" data-name="Group 169753">
+        <path id="Path_243715" data-name="Path 243715" d="M306.307,175.1h12.441a2.707,2.707,0,0,1,0,5.415H306.307a2.707,2.707,0,0,1,0-5.415Z" transform="translate(-274.028 -73.09)" fill="#95baf9"/>
+        <path id="Path_243716" data-name="Path 243716" d="M381.615,105.207v12.441a2.707,2.707,0,0,1-5.415,0V105.207a2.707,2.707,0,0,1,5.415,0Z" transform="translate(-340.408 -6.71)" fill="#2c5ede"/>
+      </g>
+    </g>
+  </g>
+</svg>
+                </div>
+                <div class="mega-menu-cont">
+                  <div class="mega-menu-tittle">REGISTER</div>
+                </div>
+              </a>
+            </li>
+            <li class="hdr_tp_menu_li">
+              <a class="dropdown-item" title="Sign in" id="login_page_home" class="dropdown-item" href="{{url('/login')}}">
+                <div class="mega-menu-icon"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.211" height="55" viewBox="0 0 49.211 55">
+                    <defs>
+                      <linearGradient id="linear-gradient-lgn-1" x1="-0.385" y1="-0.409" x2="1.936" y2="1.975" gradientUnits="objectBoundingBox">
+                        <stop offset="0.184" stop-color="#29abe2"/>
+                        <stop offset="0.821" stop-color="#6200d2"/>
+                      </linearGradient>
+                      <linearGradient id="linear-gradient-lgn-2" x1="-0.385" y1="-0.409" x2="1.936" y2="1.975" gradientUnits="objectBoundingBox">
+                        <stop offset="0.184" stop-color="#3838ff"/>
+                        <stop offset="0.821" stop-color="#f8f8ff"/>
+                      </linearGradient>
+                      <linearGradient id="lgb-icon-2" x1="-0.302" y1="-0.907" x2="0.927" y2="1.477" xlink:href="#linear-gradient"/>
+                    </defs>
+                    <g id="Group_169750" data-name="Group 169750" transform="translate(-7.5 -2.5)">
+                      <g id="Group_169749" data-name="Group 169749" transform="translate(7.5 2.5)">
+                        <circle id="Ellipse_640" data-name="Ellipse 640" cx="13.026" cy="13.026" r="13.026" transform="translate(11.579)" fill="url(#linear-gradient-lgn-1)"/>
+                        <path id="Path_243717" data-name="Path 243717" d="M53.816,78.553a2.9,2.9,0,0,0,2.895-2.895V68.421A15.921,15.921,0,0,0,40.789,52.5H23.421A15.921,15.921,0,0,0,7.5,68.421v7.237a2.9,2.9,0,0,0,2.895,2.895Z" transform="translate(-7.5 -23.553)" fill-rule="evenodd" fill="url(#linear-gradient-lgn-2)"/>
+                      </g>
+                    </g>
+                  </svg>  
+              </div>
+                <div class="mega-menu-cont">
+                  <div class="mega-menu-tittle">LOGIN</div>
+                </div>
+              </a>
+            </li>
+            <li class="hdr_tp_menu_li">
+              <a class="dropdown-item" title="Client Area" id="login_page_home" class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php">
+                <div class="mega-menu-icon"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="43.197" height="56.192" viewBox="0 0 43.197 56.192">
+                    <g id="Group_169752" data-name="Group 169752" transform="translate(-59.2)">
+                      <path id="Path_243718" data-name="Path 243718" d="M144,18.162v-3.03a10.777,10.777,0,0,0-21.554,0v17.26H118.09V15.132a15.133,15.133,0,0,1,30.266,0v3.03A1.138,1.138,0,0,1,147.22,19.3h-2.084A1.138,1.138,0,0,1,144,18.162Z" transform="translate(-52.427)" fill="#2f5274"/>
+                      <g id="Group_169751" data-name="Group 169751" transform="translate(59.2 23.712)">
+                        <path id="Path_243719" data-name="Path 243719" d="M63.72,216.06H97.873a4.538,4.538,0,0,1,4.524,4.524v23.434a4.537,4.537,0,0,1-4.524,4.52H63.72a4.534,4.534,0,0,1-4.52-4.52V220.584A4.535,4.535,0,0,1,63.72,216.06Z" transform="translate(-59.2 -216.06)" fill="#fea832" fill-rule="evenodd"/>
+                        <path id="Path_243720" data-name="Path 243720" d="M169.965,267.4a10.6,10.6,0,1,1-10.6,10.6A10.6,10.6,0,0,1,169.965,267.4Z" transform="translate(-148.368 -261.766)" fill="#ebf5fc" fill-rule="evenodd"/>
+                        <path id="Path_243721" data-name="Path 243721" d="M203.57,328.3a5.253,5.253,0,0,0-5.124-4.163h-4.492a5.258,5.258,0,0,0-5.124,4.163,10.61,10.61,0,0,0,14.74,0ZM196.2,315.33a3.695,3.695,0,1,1-3.7,3.693A3.694,3.694,0,0,1,196.2,315.33Z" transform="translate(-174.603 -304.435)" fill="#0593fc" fill-rule="evenodd"/>
+                        <path id="Path_243722" data-name="Path 243722" d="M169.956,267.4c.348,0,.69.019,1.026.049a10.606,10.606,0,0,0-7.737,16.529,5.287,5.287,0,0,0-.66,1.655,10.607,10.607,0,0,1,7.371-18.233Z" transform="translate(-148.359 -261.766)" fill="#d4dde3" fill-rule="evenodd"/>
+                        <path id="Path_243723" data-name="Path 243723" d="M189.5,418.45a10.593,10.593,0,0,0,7.737,4.582,10.178,10.178,0,0,1-1.026.049,10.585,10.585,0,0,1-7.37-2.977A5.327,5.327,0,0,1,189.5,418.45Z" transform="translate(-174.612 -396.238)" fill="#0584e3" fill-rule="evenodd"/>
+                        <path id="Path_243724" data-name="Path 243724" d="M61.7,244.027V220.593a4.54,4.54,0,0,1,3.966-4.489,4.663,4.663,0,0,1,.556-.034h-2.5a4.535,4.535,0,0,0-4.52,4.524v23.434a4.534,4.534,0,0,0,4.52,4.521h2.5A4.537,4.537,0,0,1,61.7,244.027Z" transform="translate(-59.2 -216.069)" fill="#e5972d" fill-rule="evenodd"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="mega-menu-cont">
+                  <div class="mega-menu-tittle">Client Area</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+
+
+@endunless
+        @if(session()->has('frontlogin'))
+
+        <li class="nav-item dropdown header-megamenu-li">
+          <a class="nav-link mega-nav" href="" id="dropdown05" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="My Account">My Account <i class="arrow fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-menu header-megamenu account-dropdown-megamenu" aria-labelledby="dropdown05">
+            <ul class="mega-box-clm">
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item top-menu-myacc" href="javascript:void(0)" title="Host IT Smart">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle">
+                      <p> Host IT Smart</p>
+                      <p>
+                        @if(Session::has('useremail'))
+                        {{ Session::get('useremail') }}
+                        @endif
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php" title="My Profile">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle"><i class="fa-solid fa-user"></i> My Profile</div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php?action=invoices" title="Invoices">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle"><i class="fa-solid fa-file-invoice"></i> Invoices</div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item"href="https://manage.hostitsmart.com/clientarea.php?action=services" title="Products">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle"><i class="fa-solid fa-share-nodes"></i> Products/Services</div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item" href="https://manage.hostitsmart.com/clientarea.php?action=domains" title="Domain">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle"><i class="fa-solid fa-globe"></i> Domain</div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                <a class="dropdown-item" href="https://manage.hostitsmart.com/supporttickets.php" title="Support">
+                  <div class="mega-menu-cont">
+                    <div class="mega-menu-tittle"><i class="fa-solid fa-ticket"></i> Support</div>
+                  </div>
+                </a>
+              </li>
+              <li class="hdr_tp_menu_li">
+                
+            <div class="my-acc-log-out-btn">
+              <a href="javascript:void(0)" id="logoutlink" onclick="do_logout();" title="Logout">LOGOUT</a>
+            </div>
+              </li>
+              
+
+            </ul>
+          </div>
+        </li>
+
+   @endif
+
+   
+   <li class="nav-item dropdown header-megamenu-li">
+    <a class="nav-link mega-nav" href="" id="dropdown06" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><img src="../assets/images/new_img/india_flag.webp" alt="india_flag_icon" loading="lazy">
+      <span class="cntry-list-in"> India <i class="arrow fa-solid fa-angle-down"></i></span> </a>
+    <div class="dropdown-menu header-megamenu contry-dropdown-megamenu" aria-labelledby="dropdown06">
+      <ul class="mega-box-clm">
+        <li class="hdr_tp_menu_li">
+          <a class="dropdown-item" title="Canada" class="dropdown-item" href="https://www.hostitsmart.ca/"><img src="../assets/images/new_img/canada_flag.webp" alt="canada_flag_icon" loading="lazy">
+            Canada</a>
+        </li>
+        <li class="hdr_tp_menu_li">
+          <a class="dropdown-item" title="Global" class="dropdown-item" href="https://global.hostitsmart.com/"><img src="../assets/images/new_img/global_icon.webp" alt="global_icon" loading="lazy">
+            Global</a>
+        </li>
+        <li class="hdr_tp_menu_li">
+          <a class="dropdown-item" title="Caribbean" class="dropdown-item" href="https://carib.hostitsmart.com/"><img src="../assets/images/new_img/Caribbean.webp" alt="caribbean_icon" loading="lazy">
+            Caribbean</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+          
           <?php
          $url ="javascript:void(0);"; ?>
           @if (session()->has('cart'))
@@ -377,8 +967,14 @@
     <a class="nav-link cart-icon-hdr-tp" href="{{$url}}" title="Cart">
         <i class="fa-solid fa-cart-shopping"></i>
     </a>
-    <span class="counter" id="cart_cout"></span>
+    <span class="counter" id="cart_cout" style="display:none;"></span>
 </li>
+
+         {{--  <li class="nav-item header-megamenu-li cart-megamenu-li">
+            <a class="nav-link cart-icon-hdr-tp" href="{{url('/cart/signin')}}" title="Cart">
+              <i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="counter" id="cart_cout"></span>
+          </li> --}}
         </ul>
       </div>
     </nav>
@@ -386,73 +982,10 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  function do_logout() {
-    $.get("{{ config('app.api_url') }}/hits_logout.php", function() {
-        window.location.href = "{{ url('/user-logout') }}";
-    });
-}
-  @if(isset($uagent) && $uagent == 'mobile')
-  //To add sub menus items in mobile view
-  var webhosting_mobile_menu = '<li class="dropdown"><a href="/hosting/linux-hosting" title="Linux Hosting" class="dropdown-toggle" data-toggle="dropdown">Linux Hosting</a></li><li class="dropdown"><a href="/hosting/windows-hosting" title="Windows Hosting" class="dropdown-toggle" data-toggle="dropdown">Windows Hosting</a></li>';
-  var resellerhosting_mobile_menu = '<li class="dropdown"><a href="/hosting/linux-reseller-hosting" title="Linux Reseller Hosting" class="dropdown-toggle" data-toggle="dropdown">Linux Reseller Hosting</a></li><li class="dropdown"><a href="/hosting/windows-reseller-hosting" title="Windows Reseller Hosting" class="dropdown-toggle" data-toggle="dropdown">Windows Reseller Hosting</a></li>';
-  var vpshosting_mobile_menu = '<li class="dropdown"><a href="/servers/linux-vps-hosting" title="Linux VPS Hosting" class="dropdown-toggle" data-toggle="dropdown">Linux VPS Hosting</a></li><li class="dropdown"><a href="/servers/windows-vps-hosting" title="Windows VPS Hosting" class="dropdown-toggle" data-toggle="dropdown">Windows VPS Hosting</a></li>';
-
-  $(webhosting_mobile_menu).insertAfter($('#webhostingmenu').parent());
-  $(resellerhosting_mobile_menu).insertAfter($('#resellerhostingmenu').parent());
-  $(vpshosting_mobile_menu).insertAfter($('#vpshostingmenu').parent());
-  @endif
-</script>
-
-<!-- bfs-23-popup-S -->
-<!-- <script>
-    // Function to show the modal
-    function showModal() {
-      var modal = document.getElementById('modal_offers_bfs_23');
-      if (modal) {
-        var modalInstance = new bootstrap.Modal(modal);
-        modalInstance.show();
-      }
-    }
-
-    // Event listener for mouseover on the top edge
-    document.addEventListener('mouseover', function (event) {
-      // Check if the mouse is near the top edge (adjust the threshold as needed)
-      var threshold = 10; // Adjust this value as needed
-      if (event.clientY <= threshold) {
-        // Show the modal
-        showModal();
-
-        // Remove the event listener after showing the modal if you want it to show only once
-        document.removeEventListener('mouseover', arguments.callee);
-      }
-    });
-  </script> -->
-
-
-
-<!-- header-scroll-S -->
-
-
-
-<div class="cntc-tglr-box">
-  <button type="button" class="cntc-tglr-btn-dropdown" name="toggle-dropdown" id="toggle-dropdown" title="Support">
-    <i class="fa-solid fa-angle-left"></i>
-  </button>
-  
-  <div class="cntc-tglr-dropdown-menu" id="dropdown-menu">
-  <div class="drop-head">Stuck? Don’t worry <span><a id="cntc-tglr-close-dropdown">x</a></span></div>
-  <ul class="cntc-tglr-dropdown-menu-ul">
-    <li><a href="javascript:void(Tawk_API.toggle())" id="cntc-tglr-chat" title="Chat with us"><span class="cnt-icon-box"><i class="fa-solid fa-comment-dots"></i></span>Chat with us</a></li>
-    <li><a href="tel:079-3507-9700" title="Call us" id="cntc-tglr-call"><span class="cnt-icon-box"><i class="fa-solid fa-phone-volume"></i></span>079-3507-9700</a></li>
-  </ul>
-</div>
-</div>
 
 
 
 
-<!-- cntc-tglr-dropdown-box-s -->
 
 <script>
 // Flag to track if the dropdown has been manually closed
@@ -513,29 +1046,51 @@ window.addEventListener('scroll', function () {
   }
 });
 
+
 </script>
 
-<!-- cntc-tglr-dropdown-box-s -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
 
+<script type="text/javascript">
+    function do_logout() {
+    $.get("{{url('https://manage.hostitsmart.com/hits_logout.php')}}", function() {
+      window.location.href = "{{ url('/user-logout') }}";
+    });
+  }
+  @if(isset($uagent) && $uagent == 'mobile')
+  //To add sub menus items in mobile view
+  var webhosting_mobile_menu = '<li class="dropdown"><a href="/hosting/linux-hosting" title="Linux Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Linux Hosting</a></li><li class="dropdown"><a href="/hosting/windows-hosting" title="Windows Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Windows Hosting</a></li>';
+  var resellerhosting_mobile_menu = '<li class="dropdown"><a href="/hosting/linux-reseller-hosting" title="Linux Reseller Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Linux Reseller Hosting</a></li><li class="dropdown"><a href="/hosting/windows-reseller-hosting" title="Windows Reseller Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Windows Reseller Hosting</a></li>';
+  var vpshosting_mobile_menu = '<li class="dropdown"><a href="/servers/linux-vps-hosting" title="Linux VPS Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Linux VPS Hosting</a></li><li class="dropdown"><a href="/servers/windows-vps-hosting" title="Windows VPS Hosting" class="dropdown-toggle" data-bs-toggle="dropdown">Windows VPS Hosting</a></li>';
 
+  $(webhosting_mobile_menu).insertAfter($('#webhostingmenu').parent());
+  $(resellerhosting_mobile_menu).insertAfter($('#resellerhostingmenu').parent());
+  $(vpshosting_mobile_menu).insertAfter($('#vpshostingmenu').parent());
+  @endif
+</script>
+
+<!-- header-scroll-S -->
 <script>
-    {
-  const header = document.querySelector(".main_navbar_megamenu");
-  const toggleClass = "is-sticky";
+  {
+    const header = document.querySelector(".main_navbar_megamenu");
+    const toggleClass = "is-sticky";
 
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll > 400) {
-      header.classList.add(toggleClass);
-    } else {
-      header.classList.remove(toggleClass);
-    }
-  });
-}
-
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 400) {
+        header.classList.add(toggleClass);
+      } else {
+        header.classList.remove(toggleClass);
+      }
+    });
+  }
 </script>
 <!-- header-scroll-E -->
+
 <!-- toggle-icon-S -->
 <script>
   function toggleIcon() {
@@ -551,7 +1106,23 @@ window.addEventListener('scroll', function () {
     }
   }
 </script>
-<!-- toggle-icon-E -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.getElementById('navbar');
+    const mainNavbar = document.querySelector('.main_navbar_megamenu');
+
+    // When navbar is expanded
+    navbar.addEventListener('shown.bs.collapse', function () {
+      mainNavbar.classList.add('nav-expanded');
+    });
+
+    // When navbar is collapsed
+    navbar.addEventListener('hidden.bs.collapse', function () {
+      mainNavbar.classList.remove('nav-expanded');
+    });
+  });
+</script>
 
 <!-- customer-delight-S -->
 <script>
@@ -577,52 +1148,4 @@ window.addEventListener('scroll', function () {
     });
 </script>
 <!-- customer-delight-E -->
-<!-- login-page-carousel-s -->
-<script>
-    $(document).ready(function() {
-        $('.innr-page-login-02').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true, // Enable autoplay
-            autoplayTimeout: 2000, // Autoplay interval in milliseconds (5 seconds in this example)
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-    });
-</script>
-<!-- login-page-carousel-e -->
-<!-- <whatsapp-icon-hide-s> -->
-<script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Function to check if the element is close to the bottom
-            function checkScroll() {
-                var element = document.querySelector('.wa-float');
-                if (element) {
-                    var distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
 
-                    // If the element is less than 100px from the bottom, add the 'hidden' class
-                    if (distanceFromBottom < 100) {
-                        element.classList.add('hidden');
-                    } else {
-                        element.classList.remove('hidden');
-                    }
-                }
-            }
-
-            // Add event listener for scroll events
-            window.addEventListener('scroll', checkScroll);
-            // Call it once to set initial state
-            checkScroll();
-        });
-    </script>
-<!-- </whatsapp-icon-hide-s> -->

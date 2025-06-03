@@ -5,6 +5,7 @@ $META_KEYWORD = $ProductData['META_KEYWORD'];
 $META_DESCRIPTION = $ProductData['META_DESCRIPTION'];
 ?>
 @php 
+$ProductId = $ProductData['ProductId'];
 $bannerData =  $ProductData['bannerData'];
 $FaqData = $ProductData['FaqData'];
 @endphp
@@ -90,7 +91,7 @@ $FaqData = $ProductData['FaqData'];
                     <div class="col-lg-12">
                         <div class="dy-money-back-grnt-box text-center">
                             <h2 class="text_head text-center">Need Workspace for 20+ Users?</h2>
-                            <p>Empower your team of 20+ with the perfect workspace</p>
+                            <p>Get the best Google Workspace pricing in India!</p>
                             <a href="#google_contact_form" title="Request your quote">Request Your Quote</a>
                         </div>
                     </div>
@@ -135,9 +136,9 @@ $FaqData = $ProductData['FaqData'];
                         <thead>
                             <tr>
                                 <th scope="col">Features</th>
-                                <th class="text-center" scope="col">Business Starter <span>INR 1642.8* / User / Year</span></th>
-                                <th class="text-center" scope="col">Business Standard <span>INR 8832* / User / Year</span></th>
-                                <th class="text-center" scope="col">Business Plus <span>INR 16560* / User / Year</span></th>
+                                <th class="text-center" scope="col">Business Starter <span>INR 1920.00* / User / Year</span></th>
+                                <th class="text-center" scope="col">Business Standard <span>INR 10260.00* / User / Year</span></th>
+                                <th class="text-center" scope="col">Business Plus <span>INR 20100.00* / User / Year</span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -509,6 +510,7 @@ $FaqData = $ProductData['FaqData'];
     <div class="container">
         <div class="section-heading">
             <h2 class="text_head text-center">Why Google Workspace?</h2>
+            <p class="text-center">Know how Google Workspace makes your life easier with amazing tools to manage your business smoothly.</p>
         </div>
         <div class="row align-items-center">
             <div class="col-12 col-sm-4 col-lg-4">
@@ -526,40 +528,38 @@ $FaqData = $ProductData['FaqData'];
                         <div class="gapps-pnl-ul">
                             <p class="gapps-pnl-cnt">
                                 <span>Get professional with Gmail</span>
-                                Enhance your email communication by switching to a domain-based, professional-looking Gmail address that strengthens trust and credibility amongst your clients.
+                                Just ditch the old @gmail.com and use your domain, like you@yourcompany.com, to create a strong first impression and add credibility to your communication amongst your clients.
                             </p>
                             <p class="gapps-pnl-cnt">
-                                <span>Communicate on the Go</span>
-                                Never overlook an important message or meeting while away from your office. Staying connected from any location with mobile applications for Gmail, Meet, and Chat helps you communicate seamlessly on the go.
+                                <span>Smarter Communication on the Go</span>
+                                Gmail lets you chat and mail on the move, but Google Workspace makes you smarter. With this, you will get a custom email ID, and all tools (Gmail, Meet, Chat) will work smoothly under your brand.
                             </p>
                             <p class="gapps-pnl-cnt">
-                                <span>Collaboration Tools</span>
-                                Google Docs, Sheets, and Slides are the best tools to collaborate seamlessly with your team and peers. Easily share and edit your documents in real-time & work as a team to enhance your productivity and purpose.
+                                <span>Collaboration Made Easy</span>
+                                Google Workspace gives you everything Gmail has with amazing advanced tools made for teams. You will get Shared Drives that belong to the team (not just one person), so files stay even if someone leaves. You can also use smart suggestions in Docs with workspace. 
                             </p>
                             <p class="gapps-pnl-cnt">
-                                <span>Boost Productivity</span>
-                                Become proficient at work using integrated tools and intelligent suggestions from Google Workspace Plans in India. Achieve better output with less time and effort. Build a superior team and streamline your workflow for exceptional results.
+                                <span>For Boosting Productivity</span>
+                                Google Workspace takes productivity to the next level by providing you with professional tools like custom email domains, enhanced storage, and seamless collaboration to work together on Docs, Sheets, and Slides in real time, making teamwork smoother.
                             </p>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
                         <div class="gapps-pnl-ul">
                             <p class="gapps-pnl-cnt">
-                                <span>Accessibility</span>
-                                Purchasing Google Workspace allows easy access to your files and emails from any device anytime within a few clicks. Enjoy smooth and uninterrupted operations while at the office or on the go.
+                                <span>Easy Accessibility</span>
+                                As mentioned above, purchasing Google Workspace takes it a step further by giving you easy access to a whole suite of tools, including Google Drive, Docs, Sheets, Meet, and Calendar, all in one place to help teams collaborate smoothly.
                             </p>
                             <p class="gapps-pnl-cnt">
-                                <span>Security</span>
-                                Protect your data with Google's robust security features, and enjoy peace of mind with advanced threat protection and encryption.
-                                Advanced threat protection and encryption technology assure your peace of mind. Discover the value of enhanced security with competitive Google Workspace pricing in India & safeguard your data with Google’s robust security features.
+                                <span>For Better Security</span>
+                                Google Workspace ensures your data is always protected with advanced security features like 2-factor authentication and encryption. These features lock your information behind strong security measures, keeping it safe from unauthorized access and giving you peace of mind. 
+                            <p class="gapps-pnl-cnt">
+                                <span>AI-Powered Workflow Optimization</span>
+                                Google Workspace allows you to use the latest AI and machine learning tools, like Gemini AI, to improve your work processes, which helps you stay ahead by adapting to your needs and evolving with time to make your workflow smarter and more efficient.
                             </p>
                             <p class="gapps-pnl-cnt">
-                                <span>Innovation</span>
-                                Improve your work processes with the most recent advancements in AI and machine learning platforms (Gemini AI). Achieve an edge over competitors with tools that help you adapt and evolve with time to attend to your requirements.
-                            </p>
-                            <p class="gapps-pnl-cnt">
-                                <span>Streamline Storage Management</span>
-                                Google Drive offers an organized storage structure to effortlessly manage and store all your important files in a single and secure location with Google Workspace India.
+                                <span>More Storage Management</span>
+                                Google Workspace plans offer more storage, so you don’t have to worry about space running out. All your emails, files, and data stay safely stored and are easy to access, helping your team stay organized and work without limits.
                             </p>
                         </div>
                     </div>
@@ -567,20 +567,19 @@ $FaqData = $ProductData['FaqData'];
                         <div class="gapps-pnl-ul">
                             <p class="gapps-pnl-cnt">
                                 <span>Scalability</span>
-                                Easily scale your services as your business grows. Add new users and resources without hassle.<br>
-                                Scale your services with ease as your business expands. Add new users and resources seamlessly with Google Workspace.
+                                Whether you are a team of 5 or 500, with Google Workspace plans, you can grow. You can start small and add users, storage, or features anytime without switching platforms to keep your workflow smoother. 
                             </p>
                             <p class="gapps-pnl-cnt">
                                 <span>Smart Search</span>
-                                Locating important information shouldn't be an issue with Google's powerful search capabilities. Grab your emails, files, calendar schedules, notes, and contacts with a few clicks. You can enjoy all these feature-packed apps when you buy Google Workspace email solutions.
+                                Locating important information shouldn't be an issue with Google's powerful search capabilities. You can grab your emails, files, calendar schedules, notes, and contacts with a few clicks with feature-packed apps when you buy Google Workspace email solutions.
                             </p>
                             <p class="gapps-pnl-cnt">
                                 <span>Eco-friendly</span>
-                                Google provides eco-friendly and sustainable data center solutions. Use Google's environmentally conscious solutions to minimize your carbon footprint and support your business's commitment to sustainability.
+                                Google Workspace runs on Google’s energy-efficient cloud, which uses renewable energy to power its data centers, which means every email you send or file you save creates less carbon impact than traditional IT systems.
                             </p>
                             <p class="gapps-pnl-cnt">
                                 <span>Easy Administration</span>
-                                Google presents a convenient admin console that helps streamline your IT operations. The admin console facilitates overseeing user accounts, settings, and security from a single location. Explore the various Google Workspace Plans in India to enhance your organizational and technical efficiency.
+                                Google presents a convenient admin console that helps streamline your IT operations by overseeing user accounts, settings, and security from a single location. Explore the various Google Workspace Plans in India to enhance your organizational and technical efficiency.
                             </p>
                         </div>
                     </div>
@@ -593,42 +592,45 @@ $FaqData = $ProductData['FaqData'];
     <div class="container">
         <div class="section-heading">
             <h2 class="text_head text-center">
-                A Suite of Powerful Apps from Google Workspace
+                Check Out a Suite of Powerful Apps From Google Workspace
             </h2>
             <p class="text-center">
-                From Easy document creation to efficient communication, Discover a comprehensive suite of powerful apps within Google Workspace for businesses. This suite is designed for seamless collaboration and productivity with teams across devices.
+                From Easy document creation to efficient communication, discover a comprehensive suite of powerful apps within Google workspace designed for seamless collaboration and productivity for businesses.
             </p>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="powerfull-apps-img">
-                    <img src="/assets/img/google_workspace/powerfull-apps-img.png" alt="powerfull-apps-img">
+                    <img src="/assets/img/google_workspace/powerfull-apps-img.webp" alt="powerfull-apps-img">
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <section class="disc-full-power head-tb-p-40">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="disc-full-power-img">
-                    <img loading="lazy" src="/assets/img/google_workspace/g-apps-wrk-accrdn-2.png" alt="When_to_Choose_Windows_VPS">
+                    <img loading="lazy" src="/assets/img/google_workspace/g-apps-wrk-accrdn-2.webp" alt="When_to_Choose_Windows_VPS">
                 </div>
             </div>
             <div class="col-lg-5">
                 <div id="accordion-container" class="accordion why-g-apps-workspace">
                     <div class="section-heading disc-power-head">
-                        <h2 class="text_head">Why Host IT Smart For Workspace?</h2>
+                        <h2 class="text_head">Why Host IT Smart For Google Workspace?</h2>
+                        <p class="text-center">Apart from the best Google Workspace pricing in India, know what else you can expect from us!</p>
                     </div>
                     <div id="accordion-box" class="accordion why-g-apps-workspace">
                         <div class="card mb-3 g-apps-wrk-card">
                             <a class="card-header collapsed" data-bs-toggle="collapse" href="#box0" aria-expanded="false">
-                                <h3 class="mb-0 d-inline-block faqs-span">Expert Guidance From Team to Boost Your Business</h3>
+                                <h3 class="mb-0 d-inline-block faqs-span">Expert Guidance From Team to Boost Your Business </h3>
                             </a>
                             <div id="box0" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>Unlock the full potential of Google Workspace with our expert guidance. Our team provides solutions tailored to enhance collaboration, productivity, and efficiency within the teams, ensuring your business flourishes in this digital space.</p>
+                                    <p>At Host IT Smart, our team of Google Workspace experts is always available to guide you. We can help you set up and optimize your tools, ensuring that everything runs smoothly so you can focus on growing your business.</p>
                                 </div>
                             </div>
                         </div>
@@ -638,7 +640,7 @@ $FaqData = $ProductData['FaqData'];
                             </a>
                             <div id="box1" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>If you are frustrated with far-away tech support, Host-IT-Smart has the answer. With our India-based support team to serve your business needs, we promptly resolve your issues and deliver the performance necessary for your business growth.</p>
+                                    <p>At Host IT Smart, you will get reliable tech support from our dedicated team based right here in India. So whether you are facing a minor glitch or need detailed assistance, we are just a call away! Our team ensures you understand everything clearly, offering help in your local language for a smooth experience.</p>
                                 </div>
                             </div>
                         </div>
@@ -648,7 +650,7 @@ $FaqData = $ProductData['FaqData'];
                             </a>
                             <div id="box2" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>Host IT Smart offers round-the-clock support to its clients. Our team of support experts ensures seamless operations and immediate assistance to resolve issues and enhance your technical experience.</p>
+                                    <p>At Host IT Smart, we are always here for you, day or night. Our team is ready 24/7 to assist you with any questions or issues related to Google Workspace. So, you can count on us to ensure everything runs smoothly, no matter what!</p>
                                 </div>
                             </div>
                         </div>
@@ -658,7 +660,7 @@ $FaqData = $ProductData['FaqData'];
                             </a>
                             <div id="box3" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>With minimal disruption and enhanced productivity, our experts have successfully migrated 500+ companies to Google Workspace Globally, delivering a smooth and memorable experience.</p>
+                                    <p>At Host IT Smart, we have helped over 500 companies worldwide migrate to Google Workspace smoothly and effortlessly. So, whether you are a small startup or a growing enterprise, our expert team ensures a flawless migration process.</p>
                                 </div>
                             </div>
                         </div>
@@ -668,7 +670,7 @@ $FaqData = $ProductData['FaqData'];
                             </a>
                             <div id="box4" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>Host-IT-Smart makes owning Google Workspace affordable and accessible. Enjoy top-notch collaboration tools at competitive prices while we empower your business for growth.
+                                    <p>At Host IT Smart, great tools shouldn’t have a hefty price tag. That’s why our Google Workspace plans in india are priced to fit every budget without cutting corners on features or support. Whether a small startup or a growing business, you’ll get top-notch value at a smart price.
                                     </p>
                                 </div>
                             </div>
@@ -679,17 +681,17 @@ $FaqData = $ProductData['FaqData'];
                             </a>
                             <div id="box5" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>Seamlessly move your emails and data with Host IT Smart’s On-Demand Migration! Our paid service ensures a smooth transition to Google Workspace without any downtime. Experience hassle-free migration tailored to your needs!</p>
+                                    <p>If you are switching to Google Workspace, we move your email and data easily with no stress and no downtime. Just tell us when, and we will handle the migration smoothly while you continue working.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-3 g-apps-wrk-card">
                             <a class="card-header collapsed" data-bs-toggle="collapse" href="#box6" aria-expanded="false">
-                                <h3 class="mb-0 d-inline-block faqs-span">Enhanced Security - Peace of Mind Assured</h3>
+                                <h3 class="mb-0 d-inline-block faqs-span">Enhanced Security For Peace of Mind</h3>
                             </a>
                             <div id="box6" class="collapse" data-bs-parent="#accordion-box">
                                 <div class="card-body white-bg">
-                                    <p>Are you worried about security threats? An enhanced security for Google Workspace gives you peace of mind so you can focus on your business while we safeguard your data.</p>
+                                    <p>Host IT Smart provides strong security features and advanced tools with Google Workspace, which offers you full control and protection to protect your data.</p>
                                 </div>
                             </div>
                         </div>
@@ -699,7 +701,10 @@ $FaqData = $ProductData['FaqData'];
         </div>
     </div>
 </section>
-<div class="g-apps-cont-us head-tb-p-40" id="google_contact_form">
+
+@include('template.'.$themeversion.'.support_section_home')
+
+ <div class="g-apps-cont-us head-tb-p-40" id="google_contact_form">
     <div class="container">
         <div class="g-apps-cont-main">
             <div class="row">
@@ -710,11 +715,11 @@ $FaqData = $ProductData['FaqData'];
                             <p>Say Hello to Smarter Workdays!</p>
                         </div>
                         <div class="cont-us-cnt-img">
-                            <img src="/assets/img/google_workspace/cont-us-img.png" alt="cont-us-img">
+                            <img src="/assets/img/google_workspace/cont-us-img.webp" alt="cont-us-img">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8"> 
                     <div class="cont-us-cnt-rgt">
                         {!! Form::open(['method' => 'post','class'=>'contact-us-form123']) !!}
                             {!! Form::hidden('varRefURL',URL::previous(),null) !!}
@@ -790,22 +795,61 @@ $FaqData = $ProductData['FaqData'];
                                     <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                                     {!! Form::textarea('message', old('message') , array( 'class' => 'form-control', 'cols' => '40', 'rows' => '3', 'id' => 'message', 'spellcheck' => 'true' )) !!}
                                 </div>
+                                <div class="col-sm-12 form-group mt-2">
+                                    <div id="gform" class="g-recaptchas" data-sitekey="{{ Config::get('Constant.GOOGLE_CAPCHA_KEY') }}" data-callback="check_captcha_g"></div>                                    
+                                </div>
+                                   @if ($errors->has('g-recaptcha-response'))
+                                    <span class="error">
+                                        {{ $errors->first('g-recaptcha-response') }}
+                                    </span>
+                                   @endif
                                 <div class="col-12 text-center">
                                     <button class="g-apps-submit-btn" type="submit">Submit</button>
                                 </div>
                             </div>
                         {!! Form::close() !!}
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> 
+
 @include('template.'.$themeversion.'.faq-section')
+
+@if(isset($ProductData['FeaturedProductsData']))
+@php $FeaturedProductsData = $ProductData['FeaturedProductsData'];  @endphp
+
+@include('template.'.$themeversion.'.two-hosting-add')
+@endif
 
 <script>
 
+     var contactCaptchaWidgetId;
+var onloadCallbackGoogleContactForm = function() {
+    contactCaptchaWidgetId = grecaptcha.render('gform', {
+        'sitekey': '{{Config::get("Constant.GOOGLE_CAPCHA_KEY")}}',
+        'callback': check_captcha_g
+    });
+};
+
+        function check_captcha_g() { $('.contact-us-form123').valid(); }
+
+        setTimeout(function() { $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallbackGoogleContactForm&render=explicit"); },5000);    
+            
+        function loadRecaptchaScriptG() {
+            var script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js?onload=onloadCallbackGoogleContactForm&render=explicit';
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        // Load the reCAPTCHA script immediately
+        loadRecaptchaScriptG(); 
+
     document.addEventListener("DOMContentLoaded", function () {
+
         // Select the form
         const form = document.querySelector('.contact-us-form123');
 
@@ -816,12 +860,25 @@ $FaqData = $ProductData['FaqData'];
             
             let isValid = true;
 
+              const captchaResponse = grecaptcha.getResponse(contactCaptchaWidgetId);
+        if (captchaResponse === '') {
+            console.log(123);
+            displayError(document.getElementById('gform'), "Captcha is required.");
+            isValid = false;
+        } else {
+            removeError(document.getElementById('gform'));
+        }
+
             // Validate Name
             const name = document.getElementById("name");
+            const namePattern = /^[a-zA-Z\s'-]{2,50}$/;
             if (name.value.trim() === "") {
                 displayError(name, "Name is required.");
                 isValid = false;
-            } else {
+            } else if (!namePattern.test(name.value.trim())) {
+                displayError(name, "Enter valid input.");
+                isValid = false;
+            }else {
                 removeError(name);
             }
 
@@ -840,11 +897,25 @@ $FaqData = $ProductData['FaqData'];
 
             // Validate Company Name
             const companyname = document.getElementById("companyname");
+            const companyNamePattern = /^[a-zA-Z0-9&\s'-]{2,100}$/; //letters, numbers, spaces, hyphens, and ampersands
             if (companyname.value.trim() === "") {
                 displayError(companyname, "Company name is required.");
                 isValid = false;
+            }  else if (!companyNamePattern.test(companyname.value.trim())) {
+                displayError(companyname, "Enter valid input.");
+                isValid = false;
             } else {
                 removeError(companyname);
+            }
+
+            // Validate Message
+            const message = document.getElementById("message");
+            const messagePattern = /^[a-zA-Z0-9\s.,_'!?;:@#%&()\-\*]*$/;
+           if (!messagePattern.test(message.value.trim())) {
+                displayError(message, "Enter valid input.");
+                isValid = false;
+            } else {
+                removeError(message);
             }
 
             // Validate Domain
@@ -863,8 +934,7 @@ $FaqData = $ProductData['FaqData'];
             // Validate Phone Number
               const phoneNumber = document.getElementById("phoneNumber");
             const phoneError = document.getElementById("phoneError"); // Get the error span
-            const phonePattern = /^[0-9]{7,20}$/;
-
+            const phonePattern = /^\+?[1-9][0-9\s-]{6,19}$/;
             if (!phonePattern.test(phoneNumber.value)) {
                 phoneError.style.display = 'block'; // Show the error message
                 phoneError.className = "error phone_error"; // Set the error class
@@ -877,8 +947,12 @@ $FaqData = $ProductData['FaqData'];
 
             // Validate Licenses Number
             const licensesNo = document.getElementById("licenses_no");
+            const licensesPattern = /^[1-9][0-9]*$/;
             if (licensesNo.value.trim() === "" || isNaN(licensesNo.value) || licensesNo.value <= 0) {
                 displayError(licensesNo, "Enter a valid number of licenses.");
+                isValid = false;
+            } else if (!licensesPattern.test(licensesNo.value.trim())) {
+                displayError(licensesNo, "Enter a valid positive number of licenses.");
                 isValid = false;
             } else {
                 removeError(licensesNo);
@@ -890,12 +964,20 @@ $FaqData = $ProductData['FaqData'];
             }
         });
 
-        // Function to display error
+    // Function to display error
         function displayError(element, message) {
             let errorSpan = element.parentNode.querySelector(".error");
             if (!errorSpan) {
                 errorSpan = document.createElement("span");
                 errorSpan.className = "error";
+                if (element.id === 'gform') {
+             errorSpan.classList.add("mt-1");
+            }
+            if (element.id === 'message') {
+             errorSpan.classList.add("mt-1");
+             var captchaBox = document.getElementById('gform');
+             captchaBox.classList.add('mt-4');
+            }
                 element.parentNode.appendChild(errorSpan);
             }
             errorSpan.textContent = message;

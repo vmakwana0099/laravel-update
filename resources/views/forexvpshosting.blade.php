@@ -123,6 +123,7 @@
     </div>
     @endif
 </div>
+@include('template.'.$themeversion.'.testimonial_section')
     @include('template.'.$themeversion.'.30-day-moneyback') 
 
 <section class="hw-ds-wrk head-tb-p-40">
@@ -137,7 +138,7 @@
                         </div>
                         <div class="hw-ds-data">
                             <h3>Select your plan</h3>
-                            <p>Choosing the perfect plan for your Forex VPS Server is crucial for optimal performance. Select from our tailored plans for a seamless trading experience.</p>
+                            <p>Choosing the perfect plan for your Forex VPS Server is crucial for optimal performance. Just select from our tailored plans for a seamless trading experience.</p>
                         </div>
                     </div>
                     <div class="hw-ds-wrk-box plc-th-order">
@@ -146,7 +147,7 @@
                         </div>
                         <div class="hw-ds-data">
                             <h3>Place the order</h3>
-                            <p>Once you've selected your plan, proceed to place your order securely through our website.</p>
+                            <p>Once you have selected your desired plan, it’s time to place your order for that plan securely through our website.</p>
                         </div>
                     </div>
                     <div class="hw-ds-wrk-box dwn-trd-soft">
@@ -155,7 +156,7 @@
                         </div>
                         <div class="hw-ds-data">
                             <h3>Download Trading Software</h3>
-                            <p>Download and install your favourite trading software on your Forex VPS Server. Connect to the server through a RDP in a few clicks and enhance your trading experience.</p>
+                            <p>Download and install your favourite trading software quickly on your Forex VPS Server by connecting to the server through an RDP in just a few clicks.</p>
                         </div>
                     </div>
                     <div class="hw-ds-wrk-box conn-trd-soft">
@@ -164,7 +165,7 @@
                         </div>
                         <div class="hw-ds-data">
                             <h3>Connect your trading account to the software</h3>
-                            <p>Seamlessly integrate your trading account with your Forex VPS Server software to streamline your trading process. Connect to ensure swift and efficient execution of trades.</p>
+                            <p>It’s time to integrate your trading account with your software to streamline your trading process & stay connected to ensure swift and efficient execution of trades.</p>
                         </div>
                     </div>
                     <div class="hw-ds-wrk-box strt-trd">
@@ -173,7 +174,7 @@
                         </div>
                         <div class="hw-ds-data">
                             <h3>Start Trading</h3>
-                            <p>The final step is to embark on your trading journey from your Forex VPS Server & harness the power of advanced technology and real-time data to make strategic moves. </p>
+                            <p>The final step is to start your trading journey from our Forex VPS Server & enjoy the smooth trading experience with the aim of maximum gains.</p>
                         </div>
                     </div>
             </div>
@@ -182,7 +183,7 @@
 <section class="forex-vps-idl-trd head-tb-p-40">
     <div class="container">
         <div class="section-heading">
-            <h2 class="text_head text-center">What makes Host IT Smart’s Forex VPS ideal for trading?</h2>
+            <h2 class="text_head text-center">What makes Host IT Smart’s Forex VPS ideal for your trading?</h2>
         </div>
         <div class="row align-items-center">
             <div class="col-sm-6 col-lg-4 col-xl-4 justify-content-center d-flex">
@@ -232,7 +233,7 @@
                             <img loading="lazy" src="../assets/images/forex_vps_hosting/Auto_Startup_Trading_Platforms.webp" alt="Auto_Startup_Trading_Platforms">
                         </div>
                         <div class="idl-box-tittle">
-                            <p>800+ Forex VPS Clients</p>
+                            <p>Auto-Startup Trading Platforms</p>
                         </div>
                     </div>
                 </div>
@@ -301,7 +302,8 @@
         <div class="container">
             <div class="section-heading">
                 <h2 class="text_head text-center">Some Popular Trading Brokers Our Forex VPS Supports</h2>
-                <p class="text-center">Discover some of the popular trading brokers our Forex VPS supports,<br> empowering you to trade easily and efficiently. </p>
+                <p class="text-center">Discover some well-known trading brokers our Forex VPS supports to trade efficiently.
+                </p>
             </div>
             <div class="popl-trd-brokr-main">
                 <div class="trd-brokr-box-ol">
@@ -369,7 +371,8 @@
 </div> 
 @endif
 <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
-@include('template.'.$themeversion.'.testimonial_section') 
+{{-- @include('template.'.$themeversion.'.help_section')  --}}
+@include('template.'.$themeversion.'.support_section_home') 
 @include('template.'.$themeversion.'.faq-section')
 @include('template.'.$themeversion.'.two-hosting-add')
 @endsection

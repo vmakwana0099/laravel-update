@@ -8,14 +8,14 @@
                     <table class="table-plan-vps">
                         <tr>
                             <th class="title bg-none"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/logo.png" class="hostitsmart-logo" alt="logo"></th> 
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/bigrock_logo.png" alt="bigrock_logo"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hoster-gator.png" alt="hoster-gator"></th> 
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/ideastack.png" alt="ideastack"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/go-hosting.png" alt="go-hosting"></th> 
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/b4uindia.png" alt="b4uindia"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hostripple.png" alt="hostripple"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/resellerclub-logo.png" alt="resellerclub-logo"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/logo.webp" class="hostitsmart-logo" alt="logo"></th> 
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/bigrock_logo.webp" alt="bigrock_logo"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hoster-gator.webp" alt="hoster-gator"></th> 
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/ideastack.webp" alt="ideastack"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/go-hosting.webp" alt="go-hosting"></th> 
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/b4uindia.webp" alt="b4uindia"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hostripple.webp" alt="hostripple"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/resellerclub-logo.webp" alt="resellerclub-logo"></th>
                         </tr>
                         <tr>
                             <td class="boldfonts">Plan</td>

@@ -18,7 +18,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
  <div class="web-pln-box head-tb-p-40" id="pricing">
         <div class="container">
             <div class="section-heading">
-                <h2 class="text_head text-center">Perfect & Cheap WordPress Hosting Plans</h2>
+                <h2 class="text_head text-center">Perfect & Fastest WordPress Hosting Plans</h2>
+                <p class="text-center">Go Local or Global with Cheap WordPress Hosting in India & Canada!</p>
             </div>
             <div class="row justify-content-center">
 
@@ -65,10 +66,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 <button class="nav-link" id="loc2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
                                     <img loading="eager" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons" > Canada</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            {{-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="loc3" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
                                     <img loading="eager" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button >
-                            </li>
+                            </li> --}}
                         </ul>
 
 
@@ -130,13 +131,20 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
                                             <ul class="shared-plan-features shared-plan-tooltip">
                                                 @foreach($SpecificationData as $Specification)
-                                                <div class="slide-toggle">
+                                                
                                                     @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain' || strtolower(trim($Specification)) == 'free backup' || strtolower(trim($Specification)) == 'website builder' || strtolower(trim($Specification)) == 'supports python' )
                                                     <li class="cross_free_domain"><span>{{$Specification}}</span></li>
                                                     @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
                                                     <li>
                                                         <div class="free_domain">{{$Specification}}
                                                             <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
                                                             </span>
                                                         </div>
                                                     </li>
@@ -171,12 +179,11 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @else
                                                     <li><span>{{$Specification}}</span></li>
                                                     @endif
-                                                </div>
                                                 @endforeach
                                             </ul>
 
 
-                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See More Features</a>
+                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
 
                                             @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
                                             <div class="plan-text-slider">
@@ -263,7 +270,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                             <ul class="shared-plan-features shared-plan-tooltip">
                                                 @foreach($SpecificationData as $Specification)
 
-                                                <div class="slide-toggle">
                                                    @if($ProductsPackageData[1]->varTitle == 'ESSENTIAL' && strtolower(trim($Specification)) == 'free domain')
                                                    <li class="cross_free_domain"><span>{{$Specification}}</span></li>
                                                     {{-- @if(strtolower(trim($Specification)) == 'free domain')
@@ -283,6 +289,13 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '25,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "10 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -323,7 +336,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
-                                        </div>
+                                      
                                         @endforeach
                                         </ul>
 
@@ -408,7 +421,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                         @php $SpecificationData = explode("\n",$ProductsPackageData[2]->txtSpecification); @endphp
                                         <ul class="shared-plan-features shared-plan-tooltip">
                                             @foreach($SpecificationData as $Specification)
-                                            <div class="slide-toggle">
                                                 @if(strtolower(trim($Specification)) == 'free domain')
                                                 <li>
                                                     
@@ -427,6 +439,13 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '50,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "20 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -467,7 +486,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
-                                            </div>
+
                                             @endforeach
                                         </ul>
 
@@ -550,7 +569,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                         @php $SpecificationData = explode("\n",$ProductsPackageData[3]->txtSpecification); @endphp
                                         <ul class="shared-plan-features shared-plan-tooltip">
                                             @foreach($SpecificationData as $Specification)
-                                            <div class="slide-toggle">
                                                 @if(strtolower(trim($Specification)) == 'free domain')
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
@@ -568,6 +586,13 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                         </span>
                                                     </div>
                                                 </li>
+                                                @elseif(strtolower(trim($Specification)) == '1,00,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
                                                 @elseif(strtolower(trim($Specification)) == "20 mysql db's")
                                                 <li>
                                                     <div class="free_domain free_domain_black">{{$Specification}}
@@ -608,7 +633,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
-                                            </div>
                                             @endforeach
                                         </ul>
 
@@ -642,6 +666,19 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
  <!--See More Features section start-->
  @include('template.'.$theme.'.more_hosting_features')
  <!--See More Features section end-->
+ <div class="dy-money-back-grnt head-tb-p-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="dy-money-back-grnt-box text-center">
+                    <h2>Have Big Traffic or Bigger Ambitions?</h2>
+                    <p>VPS Hosting has your back to power it like a pro!</p>
+                    <a href="{{url('/servers/vps-hosting-india')}}" title="Discover Google Workspace">Get Indian VPS Hosting</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section class="luanchpad-wp-web head-tb-p-40">
     <div class="container-fluid">
         <div class="section-heading">
@@ -661,7 +698,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-frnt-cnt">
                             <img src="../assets/img/wordpress/domain_icon.svg" alt="domain_icon">
-                            <h2>Register Your Domain</h2>
+                            <div class="launchpad-wp-tittle">Register Your Domain</div>
                         </div>
                     </div>
                     <div class="launchpad-wp-box-back">
@@ -676,7 +713,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-box-cnt">
                             <span>Register Your Domain</span>
-                            <p>The first step in launching your WordPress site is to register a domain name. Your domain name is your website's address, which should be unique and easy to remember. Choose a domain name that is relevant to your site's topic.</p>
+                            <p>The first step in launching your WordPress website is registering a perfect domain name that becomes your identity. It will be your website's address, which should be unique, easy to remember, and fully relevant to your website's topic.</p>
                         </div>
                     </div>
                     <div class="lnch_btm_icon"></div>
@@ -690,7 +727,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-frnt-cnt">
                             <img src="../assets/img/wordpress/hosting_plan_icon.svg" alt="hosting_plan_icon">
-                            <h2>Choose Your Hosting Plan</h2>
+                            <div class="launchpad-wp-tittle">Choose Your Hosting Plan</div>
                         </div>
                     </div>
                     <div class="launchpad-wp-box-back">
@@ -705,7 +742,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-box-cnt">
                             <span>Choose Your Hosting Plan</span>
-                            <p>Once you’ve registered your domain name, the next step is to choose your hosting plan. Host IT Smart offers premium WordPress hosting plans in India that help to bring your vision to life. Anticipate your site's traffic and resource needs, and choose a plan that supports optimal performance and scalability.</p>
+                            <p>Once you have registered your domain name, the next step is to choose your hosting plan. Host IT Smart offers you the fastest WordPress hosting plans in India that help bring your vision to life by offering optimal performance and scalability.</p>
                         </div>
                     </div>
                     <div class="lnch_btm_icon"></div>
@@ -719,8 +756,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-frnt-cnt">
                             <img src="../assets/img/wordpress/wordpress_icon.svg" alt="wordpress_icon">
-                            {{-- <h2 style="">Install WordPress</h2> --}}
-                            <h2>Install <br>WordPress</h2>
+                            {{-- <div class="launchpad-wp-tittle" style="">Install WordPress</div> --}}
+                            <div class="launchpad-wp-tittle">Install <br>WordPress</div>
                         </div>
                     </div>
                     <div class="launchpad-wp-box-back">
@@ -735,7 +772,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-box-cnt">
                             <span>Install WordPress</span>
-                            <p>We made installing WordPress easy! Our user-friendly 1-click installer in the panel lets you set up your WordPress website in just a few minutes. With a simple click, you can install your WordPress, and your website is ready to go live.</p>
+                            <p>We made your WordPress platform installation easy! Our user-friendly 1-click installer in the panel lets you set up your WordPress website in just a few minutes, and your website will be ready to go live & rule the internet.</p>
                         </div>
                     </div>
                     <div class="lnch_btm_icon"></div>
@@ -749,7 +786,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-frnt-cnt">
                             <img src="../assets/img/wordpress/theme_icon.svg" alt="theme_icon">
-                            <h2>Pick a <br>Theme</h2>
+                            <div class="launchpad-wp-tittle">Pick a <br>Theme</div>
                         </div>
                     </div>
                     <div class="launchpad-wp-box-back">
@@ -764,7 +801,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-box-cnt">
                             <span>Pick a Theme</span>
-                            <p>WordPress has a great collection of free and premium themes. Select the theme that enhances the overall look, feel, and aesthetic of your WordPress site. With our fastest WordPress hosting in India, your chosen theme will load quickly and provide a seamless user experience.</p>
+                            <p>We made your WordPress platform installation easy! Our user-friendly 1-click installer in the panel lets you set up your WordPress website in just a few minutes, and your website will be ready to go live & rule the internet.</p>
                         </div>
                     </div>
                     <div class="lnch_btm_icon"></div>
@@ -778,7 +815,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-frnt-cnt">
                             <img src="../assets/img/wordpress/publish_icon.svg" alt="publish_icon">
-                            <h2>Start <br>Publishing</h2>
+                            <div class="launchpad-wp-tittle">Start <br>Publishing</div>
                         </div>
                     </div>
                     <div class="launchpad-wp-box-back">
@@ -793,7 +830,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                         <div class="lnch-box-cnt">
                             <span>Start Publishing</span>
-                            <p>Once you’ve installed WordPress and chosen a theme, it’s time to start creating your site content. Use WordPress's intuitive editor to write posts, add images, and format your content. Invest time in researching and drafting content that provides value to your audience, ensuring it aligns with their needs and interests.</p>
+                            <p>Once WordPress has been installed and a theme has been chosen, it’s time to start creating your site content with WordPress's easy-to-use editor for writing posts, adding images, and formatting your content that provides value to your audience.</p>
                         </div>
                     </div>
                     <div class="lnch_btm_icon"></div>
@@ -812,7 +849,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             <h2 class="text_head">
             Ensure Your SEO Success with Optimized WordPress Hosting
             </h2>
-            <p>Our WordPress hosting plans are designed to enhance your website's speed, security, and performance, delivering improved search engine rankings. With fast loading times and seamless integration, you can attract and engage more visitors.</p>
+            <p>Our best & cheap WordPress hosting plans are designed to enhance your website's speed, security, and performance, delivering improved search engine rankings to attract and engage more visitors.</p>
         </div>
         <div class="row">
             <div class="col-lg-3 col-sm-6">
@@ -822,7 +859,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     </div>
                     <div class="optmz-box-cnt">
                         <h3>Faster Load Times</h3>
-                        <p>Search engines appreciate websites that have fast load times. Host IT Smart offers optimized WordPress hosting plans in India, Canada & Germany to help your website load quickly. Direct more visitors to your website with faster load times and engage with them for enhanced SEO performance!</p>
+                        <p>Search engines love websites with fast load times. Host IT Smart offers the Fastest WordPress hosting plans in India & Canada to help your website load quickly & direct more visitors for enhanced SEO performance!</p>
                     </div>
                 </div>
             </div>
@@ -833,7 +870,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     </div>
                     <div class="optmz-box-cnt">
                         <h3>Guaranteed Uptime and Reliability</h3>
-                        <p>Search engines don't love websites that frequently face downtime. With our WordPress hosting, we offer a 99.9% uptime guarantee. We make sure that your website is always available to visitors. Consistent uptime will help you build trust and elevate your brand image!</p>
+                        <p>Search engines hate websites that are frequently down. With our amazing WordPress hosting in India & Canada, we offer a 99.9% uptime guarantee that ensures your website is always available to visitors, which helps build trust and elevates your brand image!</p>
                     </div>
                 </div>
             </div>
@@ -844,7 +881,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     </div>
                     <div class="optmz-box-cnt">
                         <h3>Optimized Server Location</h3>
-                        <p>The physical location of your hosting server is a crucial factor that impedes your website's loading speed for visitors in different regions. We have placed our WordPress hosting servers in strategic data centers to help your website load quickly and enhance your SEO efforts!</p>
+                        <p>The physical location of your server is a crucial factor that impacts your website’s loading speed for visitors in different regions. Therefore, we have placed our WordPress hosting servers in strategic data centers like India & Canada to help your website load quickly and enhance your SEO!</p>
                     </div>
                 </div>
             </div>
@@ -855,7 +892,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     </div>
                     <div class="optmz-box-cnt">
                         <h3>Free SSL Certificates for HTTPS</h3>
-                        <p>Search engines consider HTTPS to be a ranking factor. Our WordPress hosting plans include free SSL certificates that enable HTTPS on your site and improve your SEO & provide a secure browsing experience for your visitors.</p>
+                        <p>Search engines take security seriously & that’s why they consider HTTPS a ranking factor. Our cheap WordPress hosting plans include free SSL certificates that enable HTTPS on your site, improve your SEO performance & offer secure browsing for your visitors.</p>
                     </div>
                 </div>
             </div>
@@ -874,33 +911,45 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             <div class="col-lg-12">
                 <div class="web-sec-top">
                     <div class="web-sec-top-1">
-                        <img src="../assets/img/wordpress/agile_securities.png" alt="agile_securities">
+                        <img src="../assets/img/wordpress/agile_securities.webp" alt="agile_securities">
                     </div>
                     <div class="web-sec-top-2">
-                        <h3>Agile Security Scans</h3>
-                        <p>We use Agile security scanning techniques to identify and address potential vulnerabilities present in your WordPress website. Our advanced security tools continuously monitor your site for traces of malicious activity, such as hacking attempts, malware infections, and SQL injection attacks.</p>
+                        <h3>Agile security scans</h3>
+                        <p>We believe security is not a one-time task!</p>
+                        <p>It’s a continuous process & that’s why we use Agile security scanning techniques to stay one step ahead of threats.</p>
+                        <p>What does that mean for your website? This means your WordPress hosting is constantly monitored for suspicious activity, as if a virtual security guard watches it 24/7.</p>
+                        <p><b>Our advanced security tools scan your website for:</b>
+                            <ul>
+                                <li>Malware infections that could harm your site or your visitors</li>
+                                <li>Hacking attempts that try to break into your system</li>
+                                <li>SQL injection attacks and other code-level threats that could steal data or bring your site down</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="web-sec-cnt">
                     <div class="web-sec-cnt-img">
-                        <img src="../assets/img/wordpress/DDOS_protection.png" alt="DDOS_protection">
+                        <img src="../assets/img/wordpress/DDOS_protection.webp" alt="DDOS_protection">
                     </div>
                     <div class="web-sec-dt">
                         <h3>DDoS Protection</h3>
-                        <p>DDoS, also known as Distributed Denial of Service, attacks your website with malicious traffic, rendering it inaccessible to genuine visitors. Our WordPress hosting solutions incorporate robust DDoS protection measures to safeguard your website from these attacks. We use advanced technologies and monitoring systems to mitigate DDoS threats effectively. This is to ensure your website remains online and accessible to genuine visitors, even during peak traffic or targeted attacks.</p>
+                        <p>Imagine your website as a store, and suddenly, one day, a massive crowd shows up not to shop but just to block the entrance! That’s what a DDoS attack does. It floods your website with fake traffic.</p>
+                        <p><b>But don’t worry—we have got you covered!</b></p>
+                        <p>Our cheapest WordPress hosting has built-in DDoS protection that watches traffic 24/7 with advanced technologies & monitoring systems and blocks suspicious activity before it becomes problematic.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="web-sec-cnt">
                     <div class="web-sec-cnt-img">
-                        <img src="../assets/img/wordpress/web_app_firewall.png" alt="web_app_firewall">
+                        <img src="../assets/img/wordpress/web_app_firewall.webp" alt="web_app_firewall">
                     </div>
                     <div class="web-sec-dt">
                         <h3>Advanced Web Application Firewall</h3>
-                        <p>Our cheap WordPress hosting solutions come with an advanced web application firewall (WAF) to safeguard your website from various cyber threats. The WAF acts as a security shield. It analyzes incoming traffic and blocks malicious requests before they can reach your website. Our WAF continuously monitors the traffic for vulnerabilities and potential attacks. Our WAF helps prevent unauthorized access, data breaches, and other security incidents, ensuring the safety and integrity of your online presence.</p>
+                        <p>With WordPress hosting, we have got your back with an Advanced Web Application Firewall. Whenever someone tries to visit your site, it checks their request and blocks them immediately if it looks suspicious. It protects your website from common online threats like unauthorized access, data breaches, malware injections & other shady activities.</p>
+                        <p>And the best part? Our WAF keeps learning and updating itself to tackle the latest threats. So, even while you are sleeping, your website is safe and sound!</p>
                     </div>
                 </div>
             </div>
@@ -912,27 +961,27 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
     <div class="container">
         <div class="section-heading text-center">
             <h2 class="text_head">Sell Smarter With Our WordPress Hosting for eCommerce.</h2>
-            <p>Sell smarter with our eCommerce-optimized WordPress hosting. It ensures a smooth online shopping experience with advanced security features.</p>
+            <p>Sell smarter with our eCommerce-optimized Fastest WordPress hosting. It ensures a smooth online shopping experience with advanced security features.</p>
         </div>
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="wp-ecom-img">
-                    <img src="../assets/img/wordpress/wordpress_hosting_ecomm.png" alt="wordpress_hosting_ecomm">
+                    <img src="../assets/img/wordpress/wordpress_hosting_ecomm.webp" alt="wordpress_hosting_ecomm">
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="wp-ecom-cnt">
                     <div class="wp-ecom-box">
                         <h3>WooCommerce Optimized</h3>
-                        <p>We have tailored our WordPress hosting plans for WooCommerce, the leading eCommerce plugin. We provide the necessary resources to set up a smooth and efficient online store. Our hosting solution is fast and integrates well. It meets the unique needs of online stores, which helps you maximize sales and allows your customers to enjoy a memorable shopping experience.</p>
+                        <p>We have tailored our WordPress hosting plans in India & Canada for WooCommerce, the leading eCommerce plugin. We provide the necessary resources to set up a smooth and efficient online store. Our hosting solution is fast and integrates well to meet the unique needs of online stores, which helps you maximize sales and allows your customers to enjoy a memorable shopping experience.</p>
                     </div>
                     <div class="wp-ecom-box">
-                        <h3>High-speed Servers</h3>
-                        <p>High speed is the key to a successful eCommerce business. Our WordPress hosting uses high-performance servers for busy online stores. It provides quick load times and a seamless customer experience that reduces cart abandonment and boosts conversions.</p>
+                        <h3>High-speed servers</h3>
+                        <p>We understand that high speed is the key to a successful eCommerce business. Our cheapest WordPress hosting plans use high-performance servers for busy online stores that offer quick load times and a seamless customer experience, reducing the chances of cart abandonment and boosting conversions.</p>
                     </div>
                     <div class="wp-ecom-box">
                         <h3>World-Class Security</h3>
-                        <p>Security is crucial for any website. Our WordPress hosting offers strong protection for your store and customer data. We offer SSL certificates, malware scanning, and intrusion detection as part of our security services. Our advanced technologies guard your site against threats. Create a safe shopping environment with Host IT Smart!</p>
+                        <p>Our WordPress hosting provides strong protection for your store and customer data by offering you SSL certificates, malware scanning, and intrusion detection as part of our security services. Our advanced technologies guard your website against threats & create a safe shopping environment with Host IT Smart!</p>
                     </div>
                 </div>
             </div>
@@ -945,11 +994,11 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 <section class="one-click-wp head-tb-p-40">
     <div class="container">
         <div class="section-heading text-center">
-            <h2 class="text_head">One-Click Install: Your Effortless Strategy to Instant Setup</h2>
-            <p>Start building your online presence today with our convenient one-click installation!</p>
+            <h2 class="text_head">1-Click Install: Your Effortless Way For Instant Setup</h2>
+            <p>We make things convenient with 1-click installation feature with WordPress hosting!</p>
         </div>
         <div class="one-click-wp-main">
-            <img src="../assets/img/wordpress/one_click_install.png" alt="one_click_install">
+            <img src="../assets/img/wordpress/one_click_install.webp" alt="one_click_install">
         </div>
     </div>
 </section>
@@ -960,7 +1009,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="disc-wp-img">
-                    <img loading="lazy" src="/assets/img/wordpress/hits_wp.png" alt="hits_wp">
+                    <img loading="lazy" src="/assets/img/wordpress/hits_wp.webp" alt="hits_wp">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -969,94 +1018,94 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         <h2 class="text_head">Why Choose Host IT Smart For Your WordPress Website?</h2>
                     </div>
                     <div id="accordion-box" class="accordion disc-wp-box">
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box0" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box0" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">11+ Years of Experience</h3>
                             </a>
-                            <div id="box0" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>With over 11 years of experience, Host IT Smart has established itself as a fast & cheap WordPress hosting provider in India. Through our robust infrastructure, we offer reliable, secure, and high-performance hosting services customized to match your unique needs for WordPress websites.</p>
+                            <div id="box0" class="collapse show" data-bs-parent="#accordion-box">
+                                <div class="accordion-body white-bg">
+                                    <p>With over 11 years of experience, Host IT Smart has established itself as a fast & cheap WordPress hosting provider in India. Through our robust infrastructure, we offer reliable, secure, and high-performance hosting services to match your unique needs for WordPress websites.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box1" aria-expanded="false">
-                                <h3 class="mb-0 d-inline-block faqs-span">SSD Based Servers</h3>
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box1" aria-expanded="false">
+                                <h3 class="mb-0 d-inline-block faqs-span">NVMe Based Servers</h3>
                             </a>
                             <div id="box1" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>Host IT Smart is committed to providing exceptional performance to its users. We use solid-state drives (SSDs) for our servers to achieve faster data transfer speeds. These SSDs boost the WordPress site’s SEO rankings and allow our users to enjoy a smooth digital experience.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>Host IT Smart is committed to providing exceptional performance to its users by using NVMe for our servers to achieve faster data transfer speeds & boosting the WordPress site’s SEO rankings.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box2" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box2" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">Enterprise Hardware</h3>
                             </a>
                             <div id="box2" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>With Host IT Smart, invest in enterprise-grade hardware for optimal WordPress performance. This gives your website all the resources necessary to handle even the heaviest traffic loads. From powerful processors and ample memory to robust infrastructure, we deliver exceptional performance and reliability to your growing business.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>At Host IT Smart, we invest in enterprise-grade hardware like powerful processors & ample memory for optimal WordPress performance that gives your website all the resources necessary to handle even the heaviest traffic loads and delivers exceptional performance and reliability to your growing business.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box3" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box3" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">99.9% Uptime Guarantee</h3>
                             </a>
                             <div id="box3" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>Host IT Smart guarantees a 99.9% uptime when you buy WordPress hosting from us. We ascertain your website remains accessible to visitors around the clock. With Host IT Smart, you can trust that your WordPress website will stay available consistently and serve your audience.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>Host IT Smart guarantees a 99.9% uptime when you buy WordPress hosting from us, which ensures that your website remains accessible to visitors around the clock. With us, you can trust that your WordPress website will stay available consistently and serve your audience.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box4" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box4" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">24/7 Expert Support</h3>
                             </a>
                             <div id="box4" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>At Host IT Smart, we understand that website support is crucial at all times. Hence, we offer 24/7 expert support to assist you with solving your WordPress-related concerns. With Host IT Smart's classique support, experience the fastest & cheapest web hosting for WordPress and see your business grow to the next level.
+                                <div class="accordion-body white-bg">
+                                    <p>At Host IT Smart, we understand that website support is crucial at all times. Hence, we offer 24/7 expert support via chat, phone, WhatsApp & ticket to assist you with solving your WordPress-related concerns. With such classique support, experience the fastest & cheapest WordPress hosting and see your business grow to the next level.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box5" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box5" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">30-Day Money-Back Guarantee</h3>
                             </a>
                             <div id="box5" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>We leave no stone unturned to satisfy our users with our cheapest WordPress hosting. We offer a 30-day money-back guarantee - no questions asked. If you're not completely happy with your purchase, you may request a refund within the first 30 days.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>We want you to love it when you buy our WordPress hosting, but if, for any reason, you are not completely satisfied, we have got you covered! With our 30-Day Money-Back Guarantee, you can shop with confidence. Contact our support team, and we will take care of the rest!</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box6" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box6" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">No Overselling</h3>
                             </a>
                             <div id="box6" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>Host IT Smart safeguards its users against performance issues with its no overselling policy. At Host IT Smart, we strictly adhere to a no overselling policy, which means we allocate only a reasonable number of accounts per server. It ensures that each website receives the resources it needs to perform optimally. Choose Host IT Smart to avoid slow load times and performance issues.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>At Host IT Smart, you won’t have to worry about overselling, even in your dreams. We never oversell servers to hike sales, which means you will get the full power of your plan, ensuring a smooth and reliable experience.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box7" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box7" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">Built-In Speed and Performance Enhancements</h3>
                             </a>
                             <div id="box7" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>Host IT Smart's premium WordPress hosting in india is designed to deliver exceptional speed and high performance. Our cheap WordPress hosting platform comes with a range of built-in optimization features, like caching mechanisms and server-side performance enhancements, to ensure the quick and efficient loading of your WordPress website and a seamless user experience.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>Host IT Smart's Fastest WordPress hosting in india is designed to deliver exceptional speed and high performance that comes with a range of built-in optimization features, like caching mechanisms and server-side performance enhancements, to ensure the quick and efficient loading of your WordPress website and a seamless user experience.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3 disc-wp-card">
-                            <a class="card-header collapsed" data-bs-toggle="collapse" href="#box8" aria-expanded="false">
+                        <div class="mb-3 disc-wp-card accordion-item">
+                            <a class="accordion-header collapsed" data-bs-toggle="collapse" href="#box8" aria-expanded="false">
                                 <h3 class="mb-0 d-inline-block faqs-span">Free .COM Domain</h3>
                             </a>
                             <div id="box8" class="collapse" data-bs-parent="#accordion-box">
-                                <div class="card-body white-bg">
-                                    <p>When you choose Host IT Smart as your WordPress hosting service partner, you will receive a Free .COM domain name for the 1st year. This valuable addition will help you establish a professional online presence and help users find your website easily.</p>
+                                <div class="accordion-body white-bg">
+                                    <p>When you choose our WordPress Hosting, we offer you a free .COM domain, the most recognized domain extension in the world. This means you don’t need to buy your domain name separately.</p>
                                 </div>
                             </div>
                         </div>
@@ -1065,13 +1114,16 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             </div>
         </div>
     </div>
+
+
+    
 </section>
 
  <script>
 document.addEventListener('DOMContentLoaded', function () {
     // Get references to the buttons and the div to be hidden
     const canadaButton = document.getElementById('loc2');
-    const germanyButton = document.getElementById('loc3');
+    // const germanyButton = document.getElementById('loc3');
     const indiaButton = document.getElementById('loc1');
         const vpsPlanDiv = document.getElementById('basic_three_div');
 
@@ -1088,7 +1140,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Add event listeners to the buttons
     canadaButton.addEventListener('click', hideVpsPlanDiv);
-    germanyButton.addEventListener('click', hideVpsPlanDiv);
+    // germanyButton.addEventListener('click', hideVpsPlanDiv);
     indiaButton.addEventListener('click', showVpsPlanDiv);
 });
 
@@ -1097,8 +1149,131 @@ document.addEventListener('DOMContentLoaded', function () {
  
  <!--testimonial section start-->
  @include('template.'.$theme.'.testimonial_section')
+ @include('template.'.$theme.'.support_section_home')
  <!--testimonial section end-->
 
+ <div class="dy-money-back-grnt head-tb-p-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dy-money-back-grnt-box text-center">
+                            <h2>Need a Professional Email Solution?</h2>
+                            <p>Google Workspace makes your inbox smarter and more organized!</p>
+                            <a href="https://www.hostitsmart.com/email/google-workspace-india" title="Explore Google Workspace">Explore Google Workspace</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 @include('template.'.$theme.'.faq-section')
+
+<section class="most-power-plans head-tb-p-40">
+    <div class="container">
+        <div class="section-heading">
+           
+            <h2 class="text_head text-center">Looking For Something Else?</h2>
+                  
+        </div>
+        <div class="row justify-content-center">
+                        <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="most-power-card">
+                    <div class="power-card-tittle">
+                        <h2 class="text-white">Linux Hosting</h2>
+                        <p>Built for Linux-powered performance</p>
+                        <div class="most-power-circle-ol">
+                            <div class="most-power-circle">
+                                <div class="frnt-cnt">
+                                    Starting @
+                                </div>
+                                <div class="price-cnt">
+                                                                        ₹<span>45</span>/mo*
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="power-card-data">
+                        <div class="power-card-cnt">
+                            <ul>
+                                <li>
+                                    Host 1 Website
+                                </li>
+                                <li>
+                                    5 GB NVMe Disk Space
+                                </li>
+                                <li>
+                                    50GB Bandwidth
+                                </li>
+                                <li>
+                                    5 Email Accounts
+                                </li>
+                                <li>
+                                    5 subdomains
+                                </li>
+                                <li>
+                                    5 FTP users
+                                </li>
+                                <li>
+                                    Free SSL
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-plans-btn">
+                            <a href="https://www.hostitsmart.com/hosting/linux-hosting" class="buy-now-btn" title="Buy Now">Discover Linux Hosting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="most-power-card">
+                    <div class="power-card-tittle">
+                        <h2 class="text-white">Windows Hosting</h2>
+                        <p>Hosting crafted for Windows users</p>
+                        <div class="most-power-circle-ol">
+                            <div class="most-power-circle">
+                                <div class="frnt-cnt">
+                                    Starting @
+                                </div>
+                                <div class="price-cnt">
+                                                                        ₹<span>90</span>/mo*
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="power-card-data">
+                        <div class="power-card-cnt">
+                            <ul>
+                                <li>
+                                5GB Webspace (NVMe)
+                                </li>
+                                <li>
+                                50 GB Bandwidth
+                                </li>
+                                <li>
+                                1 Website
+                                </li>
+                                <li>
+                                1 Subdomain
+                                </li>
+                                <li>
+                                1 MSSQL/MYSQL Space
+                                </li>
+                                <li>
+                                25 E-Mail IDs
+                                </li>
+                                <li>
+                                FREE SSL
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-plans-btn">
+                            <a href="https://www.hostitsmart.com/hosting/windows-hosting" class="buy-now-btn" title="Buy Now">Discover Windows Hosting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</section>
 
 @endsection

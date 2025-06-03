@@ -60,7 +60,7 @@
             			                    <div class="card">
             			                        <div class="card-header" id="heading{{$i}}">
             			                            <h5 class="mb-0" title="{{$career['varTitle']??""}} - {{$career['txtShortDescription']??""}}">
-            			                                <button class="btn btn-link {{$class2}}" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="{{$class}}" aria-controls="collapse{{$i}}">
+            			                                <button class="btn btn-link {{$class2}}" data-bs-toggle="collapse" data-bs-target="#collapse{{$i}}" aria-expanded="{{$class}}" aria-controls="collapse{{$i}}">
             			                                	{{$career['varTitle']??""}} - {{$career['txtShortDescription']??""}}
             			                                </button>
             			                            </h5>
@@ -120,7 +120,7 @@
                                 <div class="col-md-4 d-flex">
                                     <div class="csi_main">
                                         <span></span>
-                                        <img alt="Telephonic/Skype" src="../assets/images/themecall.png">
+                                        <img alt="Telephonic/Skype" src="../assets/images/themecall.webp">
                                         <h5 title="Telephonic/Skype">Telephonic/Skype</h5>
                                         <p>Our HR Team member will screen your profile by asking a few general questions related to your current job, expected salary, notice period, etc.</p>
                                     </div>
@@ -129,7 +129,7 @@
                                 <div class="col-md-4 d-flex">
                                     <div class="csi_main">
                                         <span></span>
-                                        <img alt="Technical Round" src="../assets/images/themelaptop1.png">
+                                        <img alt="Technical Round" src="../assets/images/themelaptop1.webp">
                                         <h5 title="Technical Round">Technical Round</h5>
                                         <p>In this round, we will ask you technical questions to gauge your technical capabilities.</p>
                                     </div>
@@ -137,7 +137,7 @@
                             
                                 <div class="col-md-4 d-flex">
                                     <div class="csi_main">
-                                        <img alt="HR (Negotiation)" src="../assets/images/themehr.png">
+                                        <img alt="HR (Negotiation)" src="../assets/images/themehr.webp">
                                         <h5 title="HR (Negotiation)">HR (Negotiation)</h5>
                                         <p>We give our best offer and familiarise you with our company policies. Upon accepting our offer, you will receive a written offer letter the same day.</p>
                                     </div>

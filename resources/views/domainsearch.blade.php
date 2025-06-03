@@ -84,16 +84,17 @@ if (session()->has('cart')) {
 }
 $Cart = 0; //make cart counter 0 by default on page load.
 ?>
+{{-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#" title="Single Search">Single Search</a></li> --}}
 <div class="banner-inner domanilist-banner">
     <div class="container">     
         <div class="banner-content d-flex justify-content-center">
             <div class="doamin_search_div">
                 <div class="form-group aos-init" data-aos="fade-up" data-aos-easing="ease-out-back">
                     <div class="dropdown dropdown-bulk">
-                        <button class="btn btn-default dropdown-toggle d-md-block d-none" type="button" id="menu1" data-toggle="dropdown">Single Search
+                        <button class="btn btn-default  d-md-block d-none" type="button" id="menu1" data-toggle="dropdown">
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" title="Single Search">Single Search</a></li>
+                            
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#" title="Bulk Search" onclick="window.location.href ='{{url('/domain/bulk-domain-search')}}'">Bulk Search</a></li>
                         </ul>
                     </div>
@@ -216,7 +217,7 @@ $Cart = 0; //make cart counter 0 by default on page load.
                             </form>
 
                             @else
-                            <a href = "javascript:void(0);" class = "btn"  onclick="setdomainname(this);" data-toggle="modal" data-target="#commonPopup" title="Inquiry of {{$Full_Domain}}">Inquire Now</a>
+                            <a href = "javascript:void(0);" class = "btn"  onclick="setdomainname(this);" data-bs-toggle="modal" data-bs-target="#commonPopup" title="Inquiry of {{$Full_Domain}}">Inquire Now</a>
                             <a href = "{{url('/domain/domain-transfer')}}" target="_blank" class = "btn" title = "Transfer">Transfer</a>
                             @endif
 
@@ -330,7 +331,7 @@ $Cart = 0; //make cart counter 0 by default on page load.
                             </form>
 
                             @else
-                            <a href = "javascript:void(0);" class = "btn"  onclick="setdomainname(this);" data-toggle="modal" data-target="#commonPopup" title="Inquiry of {{$Full_Domain}}">Inquire Now</a>
+                            <a href = "javascript:void(0);" class = "btn"  onclick="setdomainname(this);" data-bs-toggle="modal" data-bs-target="#commonPopup" title="Inquiry of {{$Full_Domain}}">Inquire Now</a>
                             <a href = "{{url('/domain/domain-transfer')}}" target="_blank" class = "btn" title = "Transfer">Transfer</a>
                             @endif
 
@@ -371,7 +372,7 @@ $Cart = 0; //make cart counter 0 by default on page load.
                 <div class = "domain_list_table aos-init" data-aos = "fade-left" data-aos-easing = "ease-out-back">
 
 
-                    <form id="suggestedDomainFrm" name="suggestedDomainFrm" action="javascript:void(0);">
+                    <form class="table-responsive" id="suggestedDomainFrm" name="suggestedDomainFrm" action="javascript:void(0);">
                         <input type="hidden" name="ext_domain" id="ext_domain" value="<?= remove_all_special_char_with_dot($ExpDomain[0]) ?>" /> 
                         <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}"/>
                         <!--<input type="hidden" id="producttype" name="producttype[]" value="domain"/>-->
@@ -533,7 +534,7 @@ $Cart = 0; //make cart counter 0 by default on page load.
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                    <button type="button" class="close close-popup" data-bs-dismiss="modal"></button>
                     <h2 class="modal-title">How Can We Help?</h2>
                 </div>
                 <div class="modal-body">
@@ -723,6 +724,10 @@ if (session()->has('cart')) {
                                 $("#ajax_replace_total").click();
                                 $.each(response, function (i, item) {
 
+                                if(response[i]["pricing"]["available"] <= 0){
+                                    return;
+                                }
+
                                 total_search++;
                                 $("#total_search").html(total_search);
                                 var loader_id = response[i]["domainname"].replace(/\./g, "_");
@@ -784,7 +789,7 @@ if (session()->has('cart')) {
                     appned_data += '<label class="custom-radio">' + response[i]["domainname"] + '</label>';
                     }
 
-                    appned_data += '</div><span class="mobile_price d-md-none d-block"><i class="rupees_icon" id="var_price_mobile' + counter + '"><?= $currency_symbol ?></i></span></td>';
+                    appned_data += '</div><span class="mobile_price d-none"><i class="rupees_icon" id="var_price_mobile' + counter + '"><?= $currency_symbol ?></i></span></td>';
                             appned_data += '<td class="m-hide sort_status"><span class="status ' + dclass + '" id="var_available_' + counter + '"></span></td>';
                             appned_data += '<td class="text-center m-hide price_option"><span class="price" id="filter_price"><i class="rupees_icon" id="var_price_' + counter + '"><?= $currency_symbol ?></i></span></td>';
                             if (domain_key >= '0') {
@@ -797,7 +802,7 @@ if (session()->has('cart')) {
                     }
                     else {
                     var transfer_link = SITE_URL + '/domain/domain-transfer';
-                            appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" onclick="setdomainname(this);" data-toggle="modal" data-target="#commonPopup" class="btn inquiry_btn"  title="Inquiry of ' + response[i]["domainname"] + '"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" target="_blank" class="btn transfer_btn" title="Transfer">Transfer</a> </td>';
+                            appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" onclick="setdomainname(this);" data-bs-toggle="modal" data-bs-target="#commonPopup" class="btn inquiry_btn"  title="Inquiry of ' + response[i]["domainname"] + '"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" target="_blank" class="btn transfer_btn" title="Transfer">Transfer</a> </td>';
                     }
 //                    appned_data += '</tr>';
                     $("#loader_" + loader_id).html(appned_data);
@@ -944,7 +949,7 @@ if (session()->has('cart')) {
                     }
                     else {
                     var transfer_link = SITE_URL + '/domain/domain-transfer';
-                            appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" onclick="setdomainname(this);" data-toggle="modal" data-target="#commonPopup" class="btn inquiry_btn"  title="Inquiry of ' + full_domain + '"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" target="_blank" class="btn transfer_btn" title="Transfer">Transfer</a> </td>';
+                            appned_data += '<td class="text-right" id="transfer_' + counter + '"><a href="javascript:void(0);" onclick="setdomainname(this);" data-bs-toggle="modal" data-bs-target="#commonPopup" class="btn inquiry_btn"  title="Inquiry of ' + full_domain + '"><i class="info_icon"></i><span class="">Inquiry</span></a><a href="' + transfer_link + '" target="_blank" class="btn transfer_btn" title="Transfer">Transfer</a> </td>';
                     }
 //                    appned_data += '</tr>';
                     $("#loader_" + loader_id).html(appned_data);
@@ -1960,7 +1965,7 @@ $("#checkout_total").click(function(){
                    }
                    
                     for(let i = cart_array_items1; i <= limit; i++) {
-                        $("#auto_id").html('<button id="idprotection" onclick="addAddonsDomainNew(\'idprotection\',\'0\',\'idprotection\',\'idprotection\',\'idprotection\',this,'+i+',\'5\',\'add\',\'1\');">123</button>');
+                        $("#auto_id").html('<button id="idprotection" style="display:none" onclick="addAddonsDomainNew(\'idprotection\',\'0\',\'idprotection\',\'idprotection\',\'idprotection\',this,'+i+',\'5\',\'add\',\'1\');">123</button>');
                         $("#idprotection").click();
                     }
                 window.location='{{url("/cart/signin")}}';

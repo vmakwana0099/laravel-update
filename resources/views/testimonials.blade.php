@@ -220,7 +220,7 @@
 
 <br />
 
-            <div class="col-sm-12">
+            <div class="col-sm-12 d-flex justify-content-center">
 
                 <div class="text-center">
 

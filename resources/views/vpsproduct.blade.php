@@ -32,8 +32,8 @@
     @endif
     <section class="linux_vps_plan head-tb-p-40" id="vps-hosting">
         <div class="section-heading">
-            <h2 class="text_head text-center">Powerful VPS Hosting Solutions For You</h2>
-            <p class="text_cnt text-center"> Choose Our Cheap VPS with KVM Virtualization for Ultimate Performance!</p>
+            <h2 class="text_head text-center">Powerful VPS Hosting Solutions in India For You</h2>
+            <p class="text_cnt text-center"> Choose Our Cheap VPS in India with KVM Virtualization for Ultimate Performance!</p>
         </div>
         <div class="container">
             <div class="row">
@@ -56,11 +56,26 @@ $class_best_seller = ' ';
             @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
           <div class="plan-cut-price">
     <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
-        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+       @if(isset($element->productpricing['monthly_renewal']))
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
+                                        @else
+                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+                                        @endif
     </span> 
-    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+    @php
+                                    if(isset($element->productpricing['monthly_renewal'])){
+                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly_renewal']) * 100), 0);
+                                    }else{
+                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
+                                    }
+
+                                    @endphp
+                                    <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+                                        Save {{$percentageOff}}%
+                                    </span>
+    {{-- <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
    Save {{$percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0)}}%
-    </span>
+    </span> --}}
           </div>
             <div class="plan-price-main" id="oneyear-price{{str_replace(' ', '', $planName)}}">
                 
@@ -68,7 +83,9 @@ $class_best_seller = ' ';
             @endif
              {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
             <div class="vps-plan-conf-btn" id="oneyear-btn{{str_replace(' ', '', $planName)}}">
+                @if(isset($element->ButtonTextannually) && !empty($element->ButtonTextannually))
            {!! $element->ButtonTextannually !!}
+           @endif
         </div>
             @elseif(Config::get('Constant.sys_currency') == 'USD')
             @if (isset($element->productpricing['monthly']))
@@ -100,61 +117,22 @@ $class_best_seller = ' ';
         </div>
     </section>
 
-    <!-- feature points section start -->
-    <div class="dl-features-points">
-        <div class="container">
-            <div class="feature-start">
-                <div class="section-heading">
-                <h2 class="text-center text_head">Discover What You Can Expect With Our VPS Hosting</h2>
-                </div>
-                <div class="fp-list">
-                    <div class="row">
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>Enjoy Full Root Access</li>
-                                <li>Secured data with Advanced Firewall Protection</li>                                
-                                <li>Shield your systems with DDoS Protection</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>Connect seamlessly through a Private Network</li>
-                                <li>1-Click Software Installations</li>
-                                <li>Security using Custom Firewall Rules</li>
-                                <li>Ensure reliability with Built-in Redundancy</li>                                
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>Boost performance with Optimized Storage</li>
-                                <li>Experience Ultra Low Latency</li>
-                                <li>Operations with Enterprise-Grade Hardware</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- feature points section end -->
-
-    @include('template.'.$themeversion.'.30-day-moneyback') 
+    @include('template.'.$themeversion.'.30-day-moneyback')
 
     <div class="g-suite-lists head-tb-p-40">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="section-heading">
-                                <h2 class="text_head text-center">Why VPS Hosting is the Perfect Choice <br> For Your Business Needs? </h2>
+                                <h2 class="text_head text-center">What Can You Do with Our VPS Server Hosting? </h2>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-12">
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">1</span>
-                                        <h4>Exclusive Resources, Just for You:</h4>
-                                        <span>With VPS hosting, you will get exclusive access to your allocated RAM, CPU, and storage for optimal performance without sharing with others.</span>
+                                        <h3>For Hosting High-Traffic Websites</h3>
+                                        <span>Shared hosting isn’t enough when too many visitors land on your website. Hosting high-traffic sites on a VPS ensures speed, reliability, and no downtime, even on the busiest days of your website.</span>
                                     </div>
                                 </div>
                             </div>
@@ -163,8 +141,9 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">2</span>
-                                        <h4>Shielded with Rock-Solid Security:</h4>
-                                        <span>The VPS server offers advanced security features that help to protect your data from unauthorized access. </span>
+                                        <h3>For Forex Trading</h3>
+                                        <span>Looking for a speedy space to host your trading platform so that a slight delay doesn’t become a huge loss? The high-speed VPS can be your go-to solution. Join 630+ traders who are trading smart with our <a href="../servers/forex-vps-hosting"><u>Forex VPS</u></a> </span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -173,8 +152,8 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">3</span>
-                                        <h4>Grow Without Limits:</h4>
-                                        <span>With VPS hosting, you can easily scale resources like memory and bandwidth as your business grows without interruptions. </span>
+                                        <h3>For Running Web Applications</h3>
+                                        <span>To host CRM or any SaaS platform, a reliable VPS with dedicated resources can help you offer stability, customization, and scalability to improve your app's performance. In such cases, businesses prefer hosting on <a href="../servers/managed-vps-hosting"><u>Windows VPS</u></a> </span>
                                     </div>
                                 </div>
                             </div>
@@ -183,8 +162,8 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">4</span>
-                                        <h4>Premium Performance, Affordable Price:</h4>
-                                        <span>VPS offers the benefits of a dedicated server at a fraction of the cost, making it budget-friendly. </span>
+                                        <h3>As Personal Email Server</h3>
+                                        <span>Need complete control over your emails? A VPS can be your perfect control room for managing emails and setting up your email server free from spam filters and provider restrictions. Today, over 170 clients manage their emails smartly from our amazing VPS. </span>
                                     </div>
                                 </div>
                             </div>
@@ -193,8 +172,8 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">5</span>
-                                        <h4>Stay Reliable, Always Online:</h4>
-                                        <span>The VPS server has isolated environments, so other users’ activities won’t affect your website's uptime or speed. </span>
+                                        <h3>As Personal Database Server</h3>
+                                        <span>If you want to manage large business data, like customer records or financial transactions, a VPS can be the best & affordable solution that offers you the most secured storage as per your requirement, along with reliability. </span>
                                     </div>
                                 </div>
                             </div>
@@ -203,9 +182,10 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                    <div class="g-list-box">
                                         <span class="list-num">6</span>
-                                        <h4>Tailored for Your Business Needs:</h4>
-                                        <span>With a VPS, you will have complete root access, allowing you to customize the server settings and install software according to your business requirements.
-                                        </span>
+                                        
+                                        <h3>For Developing an API</h3>
+                                        <span>Building an API requires a reliable and fast server to handle requests. For that, VPS is the best choice to host your API, ensuring high availability, fast responses, full customization, and robust security for your API endpoints.</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -214,8 +194,9 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">7</span>
-                                        <h4>Blazing-Fast Performance: </h4>
-                                        <span>With VPS hosting, you will experience faster load times and smoother operation, even for high-traffic websites.</span>
+                                        <h3>As Personal Web Server</h3>
+                                        <span>If you are an agency or a freelancer who is looking to host multiple client projects on your server, VPS can be helpful where you will get all dedicated resources with complete control to manage your projects securely at a low cost.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -223,15 +204,144 @@ $class_best_seller = ' ';
                                 <div class="g_s_l-box">
                                     <div class="g-list-box">
                                         <span class="list-num">8</span>
-                                        <h4>The Perfect Fit for Growth-Ready Businesses:</h4>
-                                        <span>It is perfect for businesses that need more resources than shared hosting but don’t require a dedicated server. </span>
+                                        <h3>For Web Scraping or Running Bots</h3>
+                                        <span>If you often collect data from websites, monitor any changes, or run automated scripts, VPS can easily automate tasks like web scraping, data collection, or running chatbots without worrying about downtime. Over 65+ clients are using our VPS for web scraping.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">9</span>
+                                        <h3>For Development & Testing</h3>
+                                        <span>A developer needs a safe space to test their code before deploying it to a live website or application. A VPS can help you by offering a dedicated testing environment with full control for experimenting with new codes.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">10</span>
+                                        <h3>For Running an Online Store</h3>
+                                        <span>Slow & steady will not win the race while running an online store. A high-speed VPS makes your store smooth & ready for peak sales hours! We are proud to help 35+ events & eCommerce websites get powerful performance.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">11</span>
+                                        
+                                        <h3>Using VPS as Image Server</h3>
+                                        <span>If you are a graphic designer or a photographer and working with a large number of images, whether for backups or sharing, a VPS as an Image Server can make your life easier to access and serve images instantly from anywhere.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">12</span>
+                                        <h3>For Training & Deploying AI Models</h3>
+                                        <span>AI & ML models take too much computing power, and training them on a PC can be slow, and it may even crash. VPS can help you by offering dedicated resources to train such models. Till now, our VPS has helped 10 clients deploy AI models.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">13</span>
+                                        <h3>For Backup Storage</h3>
+                                        <span>You know that data loss can happen due to hardware failure, cyberattacks, accidental deletions, or system crashes. A VPS can help you as a backup solution where you can store and restore your data securely whenever required and prevent disruptions.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">14</span>
+                                        <h3>As Personal Cloud Storage</h3>
+                                        <span>If you are tired of relying on third-party cloud services like Google Drive or Dropbox and looking for complete control over your files, a VPS server can be a great storage solution for keeping your sensitive data fully secured & encrypted.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">15</span>
+                                        <h3>For Full Root Access</h3>
+                                        <span>In shared hosting, we understand you are limited in what you can do, like no custom software, advanced settings, or deep system access. By hosting on a VPS, you will get full root access, which means complete control over your hosting environment.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="g_s_l-box">
+                                    <div class="g-list-box">
+                                        <span class="list-num">16</span>
+                                        <h3>To Get Remote Access</h3>
+                                        <span>By using VPS, your data isn’t tied to one device. Your data is stored on a remote server that you can access from anywhere in the world. You can easily log in and manage your files, applications, or website like your personal system.</span>
                                     </div>
                                 </div>
                             </div>
                             </div>
                     </div>
+                </div> 
+
+    @include('template.'.$themeversion.'.testimonial_section')
+
+    <!-- feature points section start -->
+    <div class="dl-features-points">
+        <div class="container">
+            <div class="feature-start">
+                <div class="section-heading">
+                <h2 class="text-center text_head">Here’s What Our Amazing Indian VPS Server Offers You With Best Pricing!</h2>
+                <p class="text_cnt text-center">Our Cheap VPS offering doesn’t mean that you have to sacrifice the quality!</p>
                 </div>
-    
+                <div class="fp-list">
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Value that’s truly worth it!</h3></li>
+                                <li><h3>India-Based Datacenter</h3></li>                                
+                                <li><h3>Enterprise-Grade Hardware</h3></li>
+                                <li><h3>Low latency with 2X faster speed</h3></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Full root access on server</h3></li>
+                                <li><h3>Secured with DDoS protection</h3></li>
+                                <li><h3>High security using custom firewall rules</h3></li>
+                                <li><h3>Built-in network redundancy</h3></li>                                
+                                <li><h3>99.9% uptime guarantee</h3></li>                                
+                                {{-- <li style="list-style-type: none;">View Detailed Features</li>                                 --}}
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Secured private network</h3></li>
+                                <li><h3>Install any software with 1-click</h3></li>
+                                <li><h3>Optimized storage for better performance</h3></li>
+                                <li><h3>24/7 expert support whenever you need</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#features" title="See More Features" class="more-features shared_plan_more_btn text-dark">View Detailed Features</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="tech_exprt_main head-tb-p-40">
         <div class="container">
             <div class="tech_exprt_box">
@@ -249,181 +359,21 @@ $class_best_seller = ' ';
                     </div>
                     <div class="col-xl-3 col-lg-4">
                         <div class="tech_exprt_right">
-                             <a href="../servers/managed-vps-hosting" title="Check Our Plans">Check Our Plans</a>                            
+                             <a href="../servers/managed-vps-hosting" title="Explore Managed VPS">Explore Managed VPS</a>                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="web_panel_avail_main head-tb-p-40">
+
+    <!-- feature points section end -->     
+
+     <section class="manage-vps-comp-main head-tb-p-40">
         <div class="container">
             <div class="section-heading">
-                <h2 class="text_head text-center">Enhanced VPS Hosting through powerful Web Panels</h2>
-                <p class="text_cnt text-center">Enjoy unmatched control, security, and efficiency with our revolutionary Web Panels that elevate your VPS hosting experience.</p>
-            </div>
-            <div class="wb-panel-avail-box">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-lg-12">
-                        <div class="wb-pnl-avl-left">
-                            <div class="nav flex-row nav-pills justify-content-between" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link wb-pnl-btn active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home"  role="tab" aria-controls="v-pills-home" aria-selected="true"><img class="img-fluid" src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-admin-tab" data-toggle="pill" data-target="#v-pills-admin"  role="tab" aria-controls="v-pills-admin" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile"  role="tab" aria-controls="v-pills-profile" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
-                                <a class="nav-link wb-pnl-btn" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages"  role="tab" aria-controls="v-pills-messages" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-lg-12">
-                        <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                <div class="wb-pnl-ul">
-                                    <div class="wb-pnl-img">
-                                        <img src="../assets/images/vps_hosting/webuzo_icon_sm.webp" alt="webuzo_icon_sm">
-                                    </div>
-                                    <p class="wb-pnl-cnt">
-                                        With Webuzo, web application management becomes easier. Webuzo's intuitive interface simplifies applications' installation, configuration, and management. Webuzo easily manages domains and hosting servers, automates backups, and enhances security. Webuzo provides a hassle-free experience that helps you grow.
-                                    </p>
-                                    <ul>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports CentOS, AlmaLinux & Ubuntu.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Compatibility with various web applications.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Softaculous Integration.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹220/mo*.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
-                                <div class="wb-pnl-ul">
-                                    <div class="wb-pnl-img">
-                                        <img src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo">
-                                    </div>
-                                    <p class="wb-pnl-cnt">
-                                    DirectAdmin is a cPanel owned by a company called JBMC Software and works specifically with Linux-based servers where you can easily control things like creating websites, managing email accounts, and keeping track of how much of their server's resources they're using. It is designed to be user-friendly and is often used by hosting providers to offer customers an intuitive interface for managing their hosting services.
-                                    </p>
-                                    <ul>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports CentOS, AlmaLinux, Ubuntu, and Debian.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Consumes fewer resources, making it more lightweight</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Easy-to-use interface, ideal for beginners.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting at ₹450/month*.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                                <div class="wb-pnl-ul">
-                                    <div class="wb-pnl-img">
-                                        <img src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon">
-                                    </div>
-                                    <p class="wb-pnl-cnt">
-                                        cPanel simplifies server administration and management. Web administrators can use an intuitive graphical interface to manage web hosting, domains, emails, files, and databases. You can easily manage websites efficiently with features like one-click installations, advanced metrics, and analytics.
-                                    </p>
-                                    <ul>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports Ubuntu 20.x, AlmaLinux 8.x & 9.x.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Free Backup Management facility.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Advanced File management system.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹1660/mo*.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                                <div class="wb-pnl-ul">
-                                    <div class="wb-pnl-img">
-                                        <img src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon">
-                                    </div>
-                                    <p class="wb-pnl-cnt">
-                                        Plesk simplifies server and website management with its intuitive interface. Plesk manages domains, email, databases, and file systems efficiently. It’s extremely helpful for web hosting companies and tech teams because it manages multiple servers. Plesk comes with tools for building websites, monitoring, and ensuring security.
-                                    </p>
-                                    <ul>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports Almalinux, CentOS, Debian.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports multiple programming languages.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Offers Multi-Server Management.</li>
-                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹1150/mo*.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sup-vps-hstg-main head-tb-p-40">
-        <div class="container">
-            <div class="section-heading">
-            <h2 class="text_head text-center">We Have Superior VPS Hosting For You!</h2>
-            </div>
-            <div class="sup-vps-hstg-box">
-                <div class="row justify-content-center">
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/Budget-Friendly-icon.webp" alt="Budget-Friendly-icon">
-                            <h3>Pocket-Friendly</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/Powerful-Security-icon.webp" alt="Powerful-Security-icon">
-                            <h3>Robust Security</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/Uptime-icon.webp" alt="Uptime-icon">
-                            <h3>99.9% Uptime</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/24-7-Support-icon.webp" alt="24-7-Support-icon">
-                            <h3>24/7 Support</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/Datacenter-icon.webp" alt="Datacenter-icon">
-                            <h3>India Datacenter</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="sup_vps_box_cnt">
-                            <img src="../assets/images/vps_hosting/2X-Faster-Speed-icon.webp" alt="2X-Faster-Speed-icon">
-                            <h3>2X Faster Speed</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec-dt-acr-bkp win-vps-pd-40">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="sec-dt-acr-img">
-                    <img class="img-fluid" src="../assets/images/windows_vps_hosting/Acronis_Backup_Solution.webp" alt="Acronis_Backup_Solution">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="sec-dt-acr-cnt">
-                    <div class="section-heading">
-                        <h2 class="text_head">Secure Your Data with Acronis Backup Solution</h2>
-                        <p>Enjoy peace of mind knowing your valuable data is securely backed up with our world-class backup solution tailored to suit your needs.</p>
-                    </div>
-                    <div class="sec-dt-acr-price">
-                        <div class="sec-dt-prc-one">
-                            For Just
-                        </div>
-                        <div class="sec-dt-prc-two">
-                            ₹100/mo <span>(For 10GB Data)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section> 
-    <section class="manage-vps-comp-main head-tb-p-40">
-        <div class="container">
-            <div class="section-heading">
-                <h2 class="text_head text-center">Self-Managed VPS vs Fully Managed VPS</h2>
+                <h2 class="text_head text-center">Self-Managed VPS or Fully Managed VPS</h2>
+                <p class="text_cnt text-center">Get a clear breakdown of support & responsibilities before you choose!</p>
             </div>
             <div class="manage-vps-comp-box">
                 <div class="row justify-content-center">
@@ -531,12 +481,134 @@ $class_best_seller = ' ';
             </div>
         </div>
     </section>
+
+    
+
+    <section class="web_panel_avail_main head-tb-p-40">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="text_head text-center">Pick Your Favorite Control Panel & Stay in Charge</h2>
+                <p class="text_cnt text-center">Pick the control panel that fits your style and take full control, so managing your VPS server becomes easy and never a headache!</p>
+            </div>
+            <div class="wb-panel-avail-box">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12">
+                        <div class="wb-pnl-avl-left">
+                            <div class="nav flex-row nav-pills justify-content-between" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link wb-pnl-btn active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"  role="tab" aria-controls="v-pills-home" aria-selected="true"><img class="img-fluid" src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-admin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-admin"  role="tab" aria-controls="v-pills-admin" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"  role="tab" aria-controls="v-pills-profile" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
+                                <a class="nav-link wb-pnl-btn" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"  role="tab" aria-controls="v-pills-messages" aria-selected="false"><img class="img-fluid" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-12">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="wb-pnl-ul">
+                                    <div class="wb-pnl-img">
+                                        <img src="../assets/images/vps_hosting/webuzo_icon_sm.webp" alt="webuzo_icon_sm">
+                                    </div>
+                                    <p class="wb-pnl-cnt">
+                                        Webuzo makes web application management super-duper easy! You can install, set up, and manage apps without any trouble. It also helps you handle domains, automate backups, and secure your server. In short, with the Webuzo panel, everything is simple, so you can focus on GROWING!
+                                    </p>
+                                    <ul>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports CentOS, AlmaLinux & Ubuntu.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Compatibility with various web applications.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Softaculous Integration.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹220/mo*.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
+                                <div class="wb-pnl-ul">
+                                    <div class="wb-pnl-img">
+                                        <img src="../assets/images/vps_hosting/DirectAdminLogo.webp" alt="DirectAdminLogo">
+                                    </div>
+                                    <p class="wb-pnl-cnt">
+                                    DirectAdmin is a control panel developed by JBMC Software that is specially designed for Linux-based servers. It lets you easily create websites, manage email accounts, and monitor server resource usage. It’s a popular choice among VPS hosting providers because it offers customers an easy-to-use interface for managing their hosting services.
+                                    </p>
+                                    <ul>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports CentOS, AlmaLinux, Ubuntu, and Debian.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Consumes fewer resources, making it more lightweight</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Easy-to-use interface, ideal for beginners.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting at ₹450/month*.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="wb-pnl-ul">
+                                    <div class="wb-pnl-img">
+                                        <img src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon">
+                                    </div>
+                                    <p class="wb-pnl-cnt">
+                                        With cPanel, managing things is quite simple and stress-free! You can easily control hosting, domains, emails, and more from one of the simplest dashboards. 1-click installs and advanced metrics make everything smoother for you!
+                                    </p>
+                                    <ul>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports Ubuntu 20.x, AlmaLinux 8.x & 9.x.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Free Backup Management facility.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Advanced File management system.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹1660/mo*.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class="wb-pnl-ul">
+                                    <div class="wb-pnl-img">
+                                        <img src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon">
+                                    </div>
+                                    <p class="wb-pnl-cnt">
+                                        Plesk panel is one of the best control panels for managing servers and websites super easily with its simple interface. You can easily handle domains, emails, databases, and files in one place, which makes it a great choice for web hosting companies and tech teams to manage multiple servers smoothly.
+                                    </p>
+                                    <ul>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports Almalinux, CentOS, Debian.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Supports multiple programming languages.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Offers Multi-Server Management.</li>
+                                        <li><span class="wb-pnl-cnt-icon"><i class="fa-regular fa-circle-check"></i></span> Starting @ ₹1150/mo*.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="sec-dt-acr-bkp win-vps-pd-40">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="sec-dt-acr-img">
+                    <img class="img-fluid" src="../assets/images/windows_vps_hosting/Acronis_Backup_Solution.webp" alt="Acronis_Backup_Solution">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="sec-dt-acr-cnt">
+                    <div class="section-heading">
+                        <h2 class="text_head">Secure Your Data with Acronis Backup Solution</h2>
+                        <p>Enjoy peace of mind knowing your valuable data is securely backed up with our world-class backup solution tailored to suit your needs.</p>
+                    </div>
+                    <div class="sec-dt-acr-price">
+                        <div class="sec-dt-prc-one">
+                            For Just
+                        </div>
+                        <div class="sec-dt-prc-two">
+                            ₹100/mo <span>(For 10GB Data)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section> 
+   
     
     <section class="vps-features  head-tb-p-40" id="features">
         @if(!empty($FeaturesData) && count($FeaturesData) >0)
             <div class="container">
                 <div class="section-heading text-center">
-                    <h2 class="text_head">VPS Hosting Features That Will Capture Your Admiration</h2>
+                    <h2 class="text_head">VPS Features That Might Be Your Sole Requirements</h2>
                     <p class="text_cnt">Powerful VPS Servers + Cutting-Edge Features = Performance Guaranteed</p>
                 </div>
                 <div class="row">
@@ -551,13 +623,13 @@ $class_best_seller = ' ';
                         <div class="{{$featureMainDivClass}}">
                             
                                 <div class="row">
-                                    <div class="feature-ul d-flex flex-wrap">
+                                    <div class="feature-ul d-flex flex-wrap" id="vps-all-features">
                                         @foreach($FeaturesData as $Features)
                                         
                                             <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
                                                 <div class="content-main align-self-start" @if ($uagent !="mobile" )data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100" @endif>
                                                     <div class="{{$featureIconDivClass}}"><i class="{{$Features->varIconClass}}"></i></div>
-                                                    <h3>{{$Features->varTitle}}</h3>
+                                                    <span>{{$Features->varTitle}}</span>
                                                     <div class="content">{!! $Features->varShortDescription !!}</div>
                                                 </div>
                                             </div>
@@ -585,48 +657,49 @@ $class_best_seller = ' ';
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/logo.webp" alt="logo"></th>
-                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-bluehost.webp" alt="providers-bluehost"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-godaddy.webp" alt="providers-godaddy"></th>
+                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-bluehost.webp" alt="providers-bluehost"></th>
+                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-hostinger.webp" alt="providers-hostinger"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-br.webp" alt="providers-br"></th>
                                     <th scope="col"><img src="../assets/images/vps_hosting/providers-hostgator.webp" alt="providers-hostgator"></th>
-                                    <th scope="col"><img src="../assets/images/vps_hosting/providers-hostinger.webp" alt="providers-hostinger"></th>
+                                    
                                 </tr>
                             </thead>
                             <tbody class="vps-hstg-prv-body">
                                 <tr>
                                     <td>Monthly Pricing</td>
-                                    <td>₹720/mo</td>
-                                    <td>₹1049/mo</td>
-                                    <td>₹1699/mo</td>
-                                    <td>₹999/mo</td>
+                                    <td>₹420/mo</td>
                                     <td>₹649/mo</td>
-                                    <td>₹999/mo</td>
+                                    <td>₹1749/mo</td>
+                                    <td>₹439/mo</td>
+                                    <td>₹449/mo</td>
+                                    <td>₹699/mo</td>
                                 </tr>
                                 <tr>
                                     <td>CPU</td>
-                                    <td>2vCPU</td>
+                                    <td>1vCPU</td>
                                     <td>1vCPU</td>
                                     <td>2 CPU</td>
                                     <td>1 vCPU</td>
-                                    <td>1 CPU</td>
+                                    <td>2 CPU</td>
                                     <td>2 CPU</td>
                                 </tr>
                                 <tr>
                                     <td>RAM</td>
-                                    <td>2 GB</td>
+                                    <td>4 GB</td>
                                     <td>2 GB</td>
                                     <td>2 GB</td>
                                     <td>4 GB</td>
-                                    <td>1 GB</td>
+                                    <td>2 GB</td>
                                     <td>2 GB</td>
                                 </tr>
                                 <tr>
                                     <td>Storage</td>
-                                    <td>40GB SSD</td>
+                                    <td>50GB SSD</td>
                                     <td>40GB NVMe SSD</td>
                                     <td>30GB SSD</td>
                                     <td>50GB NVME SSD</td>
-                                    <td>15GB</td>
+                                    <td>20GB</td>
                                     <td>20GB</td>
                                 </tr>
                                 <tr>
@@ -655,7 +728,25 @@ $class_best_seller = ' ';
         </div>
     </section>
      <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
- @include('template.'.$themeversion.'.testimonial_section') 
+ {{-- @include('template.'.$themeversion.'.help_section')
+   --}}
+ @include('template.'.$themeversion.'.support_section_home') 
+
+
+<div class="dy-money-back-grnt head-tb-p-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dy-money-back-grnt-box text-center">
+                            <h2>Your Business Needs More Than Just an Email!</h2>
+                            <p>Google Workspace gives you a professional, branded inbox.</p>
+                            <a href="https://www.hostitsmart.com/email/google-workspace-india" title="I Need Google Workspace">I Need Google Workspace</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
 @include('template.'.$themeversion.'.faq-section')
 @include('template.'.$themeversion.'.two-hosting-add')
         <script>

@@ -2,12 +2,12 @@
 <?php
 // echo '<pre>'; print_r(Request::segment(1));exit;
 ?>
-<section class="gray-light-bg win-vps-faq">
+<section class="win-vps-faq">
     <section id="faq" class="head-tb-p-40">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="section-heading text-center mb-5">
+                    <div class="section-heading text-center">
                        @if(Request::segment(1) =='contact')
                         <h2 class="text_head">Got a Question? We've the Answer!</h2>
                         @elseif((Request::segment(1) == 'domain-registration'))
@@ -21,7 +21,7 @@
                         @elseif((Request::segment(2) == 'linux-hosting'))
                         <h2 class="text_head">Still Have Questions?<br> Linux Hosting : Frequently Asked Questions</h2>
                         @elseif((Request::segment(2) == 'wordpress-hosting'))
-                        <h2 class="text_head">WordPress Hosting: Frequently Asked Questions</h2>
+                        <h2 class="text_head">Frequently Asked Questions About WordPress Hosting</h2>
                         @elseif((Request::segment(2) == 'linux-reseller-hosting'))
                         <h2 class="text_head">Linux Reseller Hosting: Frequently Asked Questions</h2>
                         @elseif((Request::segment(2) == 'windows-hosting'))
@@ -37,11 +37,11 @@
                         @elseif((Request::segment(2) == 'managed-vps-hosting'))
                         <h2 class="text_head">Frequently Asked Questions About Managed VPS</h2>
                          @elseif((Request::segment(2) == 'forex-vps-hosting'))
-                        <h2 class="text_head">FAQs for Forex VPS</h2>
+                        <h2 class="text_head">Frequently Asked Questions For Forex VPS Hosting</h2>
                          @elseif((Request::segment(2) == 'website-builder'))
                         <h2 class="text_head">Website Builder : Frequently Asked Questions!</h2>
                          @elseif((Request::segment(2) == 'google-workspace-india'))
-                        <h2 class="text_head">Got a Question? We've the Answer!</h2>
+                        <h2 class="text_head">Frequently Asked Questions For Google Workspace</h2>
                          @elseif((Request::segment(2) == 'microsoft-office-365-suite'))
                         <h2 class="text_head">Got a Question? We've the Answer!</h2>
                          @elseif((Request::segment(1) == 'ssl-certificates'))
@@ -77,12 +77,12 @@
                         @endphp
 
                         <div class="accordion-item mb-3 faqs-card">
-                            <a class="accordion-header collapsed" data-toggle="collapse" href="#collapse{{ $i }}" aria-expanded="false">
-                                <h3 class="mb-0 d-inline-block faqs-span">
+                            <button class="accordion-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse{{ $i }}" aria-expanded="false">
+                                <div class="mb-0 d-inline-block faqs-span">
                                     {!! isset($Faq->varTitle) && !empty($Faq->varTitle) ? str_replace("@sitename", Config::get('Constant.SITE_NAME'), $Faq->varTitle) : "" !!}
-                                </h3>
-                            </a>
-                            <div id="collapse{{ $i }}" class="collapse {{ $class }}" data-parent="#accordion">
+                                </div>
+                            </button>
+                            <div id="collapse{{ $i }}" class="collapse {{ $class }}" data-bs-parent="#accordion">
                                 <div class="card-body white-bg">
                                     {!! isset($Faq->txtDescription) && !empty($Faq->txtDescription) ? str_replace('@sitename', Config::get('Constant.SITE_NAME'), str_replace('@siteurl', url('/'), str_replace('@sys_currency_symbol', Config::get('Constant.sys_currency_symbol'), $Faq->txtDescription))) : "" !!}
                                 </div>

@@ -14,13 +14,13 @@
 		<div class="width_set">
 			@if(Session::has('message'))
 				<div class="alert alert-info fade in">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+					<button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true"></button>
 					{{ Session::get('message') }}
 				</div>
 			@endif
 			@if(isset($expiredToken))
 				<div class="alert alert-danger fade in">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+					<button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true"></button>
 					{{ $expiredToken }}
 				</div>
 			@endif

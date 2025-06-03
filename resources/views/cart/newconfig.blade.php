@@ -1,4 +1,5 @@
 <?php //echo "<pre>"; print_r($INRMinPrice); exit; ?>
+{{-- {{dd($productData['pricing'])}} --}}
 @php
 if (isset($productData['producttype']) && $productData['producttype']=="dedicatedserver" || $productData['producttype']=="vps") {
   if (isset($productData['billingcycle']) && !empty($productData['billingcycle'])) {
@@ -92,6 +93,11 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             '488' => [1797,1796,1798,1802,1807,1803], //WIN E6
             '489' => [1810,1809,1811,1815,1820,1816], //WIN E7
             '490' => [1823,1822,1824,1828,1834,1829], //WIN E8
+            //Windows-vps 2025 plans
+            '512' => [1946,1945,1947,1951,1957,1958], 
+            '513' => [1960,1959,1961,1965,1971,1972], 
+            '514' => [1974,1973,1975,1979,1985,1986], 
+            '515' => [1988,1987,1989,1993,1999,2000], 
             // Linux-self managed
             '465' => [1550,1549,1551,1555,1561,1835], //LIN VPS - SM 1
             '466' => [1563,1562,1564,1568,1574,1836], //LIN VPS - SM 2
@@ -101,6 +107,11 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             '468' => [1589,1588,1590,1594,1600,1840], //LIN VPS - SM 6
             '469' => [1602,1601,1603,1607,1613,1841], //LIN VPS - SM 7
             '470' => [1615,1614,1616,1620,1626,1842], //LIN VPS - SM 8
+            //Linux-self managed 2025 plans
+            '508' => [1890,1902,1889,1891,1895,1901], 
+            '509' => [1904,1903,1905,1909,1915,1916], 
+            '510' => [1918,1917,1919,1923,1929,1930], 
+            '511' => [1932,1931,1933,1937,1943,1944], 
             //Linux-managed
             '471' => [1628,1627,1629,1633,1639,1843], //LIN VPS - M 1
             '472' => [1641,1640,1642,1646,1652,1844], //LIN VPS - M 2
@@ -110,6 +121,12 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             '476' => [1693,1692,1694,1698,1704,1848], //LIN VPS - M 6
             '477' => [1706,1705,1707,1711,1717,1849], //LIN VPS - M 7
             '478' => [1719,1718,1720,1724,1730,1850], //LIN VPS - M 8
+             //Linux managed 2025 plans
+            '516' => [2002,2001,2003,2007,2013,2014], 
+            '518' => [2016,2015,2017,2021,2027,2028], 
+            '519' => [2030,2029,2031,2035,2041,2042], 
+            '520' => [2044,2043,2045,2049,2055,2056], 
+
         ],
     ];
     $productBaseconfigArr = $plansMapping[$productType][$productData['pid']] ?? [];
@@ -119,7 +136,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
 @section('content')
 @include('layouts.inner_banner')
 @include('cart.cartscripts')
-<div class="checkout-main">
+<!-- <div class="checkout-main">
     <div class="checkout-nav">
         <div class="container">
             <div class="row">
@@ -144,7 +161,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="cart-configuration">
     <div class="container">
         <?php 
@@ -165,11 +182,12 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                 <h3 class="c_c_title">Your Selected Plan: {{$productData['planname']}}</h3>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
                 <div class="field-container selectBillingCycle" id="inputBillingcycle">
                     <div class="dedi-red-note-cart-oneline">
-                        <label for="inputBillingcycle" class="billingcycle">Choose Billing Cycle</label>
+                        <label for="inputBillingcycle" class="billingcycle">Choose Billing Cycle.</label>
                             @if ($productData['producttype'] == 'dedicatedserver')
                                 <p class="dedi-red-note-cart">*(Servers are subject to availability)</p>
                             @endif
@@ -181,6 +199,13 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
                             @php $ArrayMaxKey=0; $SelectedKey=0;$_oneMonthPlanPrice=0; $_selectedSave=0;$_maxSelectedSave=0;$_maxDuration=0;
                             @endphp
+                            @php
+                            if(isset($productData['extra_renewal_data'])){                                
+                                $a = ($productData['renewal_monthly_price'] * 12) - $productData['pricing'][4]->price;
+                            }else{
+                                $a = '';
+                            }
+                            @endphp
                             @foreach($productData['pricing'] as $prokey => $pricing)
                             @if($pricing->price > 0)
                             @php
@@ -191,13 +216,21 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             $_basicPercentage='100';
                             $_currentPlanDuration=$pricing->duration;
                             $_oneMonthPlanPrice=reset($productData['pricing'])->price;
-                            $_basicPlanPrice=reset($productData['pricing'])->price*$_currentPlanDuration;
+                            if(isset($productData['extra_renewal_data'])){
+                                $_basicPlanPrice=$productData['renewal_monthly_price']*$_currentPlanDuration;
+                            }else{
+                                $_basicPlanPrice=reset($productData['pricing'])->price*$_currentPlanDuration;
+                            }
                             $_currentPlanPrice=$pricing->price;
                             if ($productData['billingcycle'] == $pricing->durationame) {
+                                // dd($_basicPlanPrice,$_currentPlanPrice);
                             $_selectedSave=round($_basicPlanPrice - $_currentPlanPrice,2);
+
+                            // dd($_selectedSave);
                             }
                             $_maxSelectedSave=round($_basicPlanPrice - $_currentPlanPrice,2);
                             $_maxDuration=$pricing->duration;
+                            $_duration = $pricing->durationame;
                             @endphp
                             @endif
                             @endforeach
@@ -210,6 +243,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             }
                             @endphp
                             @foreach($productData['pricing'] as $prokey => $pricing)
+
                             @if($pricing->price > 0)
                             @php
                             if ($ArrayMaxKey==$prokey){ $featchPlansParam="true"; }else{ $featchPlansParam="false"; }
@@ -218,17 +252,20 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             $_basicPercentage='100';
                             $_currentPlanDuration=$pricing->duration;
                             $_basicPlanPrice=reset($productData['pricing'])->price*$_currentPlanDuration;
+                            // dd($_basicPlanPrice);
                             $_currentPlanPrice=$pricing->price;
                             @endphp
                             <div class="col-sm-3 mb-4 col-6">
                                 <div class="radio-cycle-box rcb-billing {{ ($productData['billingcycle'] == $pricing->durationame)?'rcb-active':'' }} ">
                                     <label class="styled-checkbox-1 styled-checkbox-cstm" for="sel_hostingregister_{{$key}}_{{$prokey}}">
                                         @if($productData['billingcycle'] == $pricing->durationame)
+
                                         @php $selectedPlansPrice=$pricing; @endphp
-                                        <input type="radio" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" checked value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
+                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" checked value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
                                         @else
-                                        <input type="radio" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
+                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
                                         @endif
+
                                         <span class="checkmark"></span>
                                         <div class="radio-content text-center cpbm-main">
                                             <h6>
@@ -240,23 +277,58 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                     @endif
                                                 </div>
                                                 <br>
-                                                @if($pricing->duration == 1)
+                                                @if($pricing->duration == 1 && !isset($productData['renewal_monthly_price']))
                                                 <br>
                                                 @endif
-                                                @if($pricing->duration > 1)
+                                                {{-- @if($pricing->duration > 1) --}}
                                                 @if($_oneMonthPlanPrice > 0)
-                                                <span class="linethrough cpbm-mp-cut">{!! Config::get('Constant.sys_currency_symbol') !!}{{ round(str_replace(".00", "", $_oneMonthPlanPrice),2) }}</span>
+                                                @php
+                                                $cut_price = '';
+                                                $symbol = '';
+                                                    if(isset($productData['renewal_monthly_price'])){
+                                                        $cut_price = round($productData['renewal_monthly_price'],2);
+                                                        $symbol = Config::get('Constant.sys_currency_symbol');
+                                                    }
+
+                                                    elseif($pricing->duration > 1){
+                                                        $cut_price = round(str_replace(".00", "", $_oneMonthPlanPrice),2);  
+                                                        $symbol = Config::get('Constant.sys_currency_symbol');
+
+                                                    }
+                                                   
+                                                @endphp
+                                                <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
+
+                                                @elseif($productData['producttype'] == 'email')
+                                                @php
+                                                $cut_price = '';
+                                                $symbol = '';
+                                                    if(isset($productData['renewal_monthly_price'])){
+                                                        $cut_price = round($productData['renewal_monthly_price'],2);
+                                                        $symbol = Config::get('Constant.sys_currency_symbol');
+                                                    }
+
+                                                    elseif($pricing->duration > 1){
+                                                        $cut_price = round(str_replace(".00", "", $_oneMonthPlanPrice),2);  
+                                                        $symbol = Config::get('Constant.sys_currency_symbol');
+
+                                                    }                                                                                                       
+                                                @endphp
+                                                @if($cut_price > 0)
+                                                <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
                                                 @endif
+                                                
                                                 @endif
+                                                {{-- @endif --}}
                                                 <?php 
-                                                    $_pr = $pricing->price; 
+                                                    $_pr = $pricing->price;                                                     
                                                     $strM = "";
                                                     if(isset($productData['producttype']) && $productData['producttype'] == 'ssl'){ 
                                                         $_pr = $pricing->price;  $strM = "year";
                                                     }
                                                     else if(isset($productData['producttype']) && $productData['producttype'] != 'ssl'){ 
                                                         if(!empty($pricing->price) && !empty($pricing->duration)){ 
-                                                            $_pr = $pricing->price / $pricing->duration; $strM = "months"; 
+                                                            $_pr = $pricing->price / $pricing->duration; $strM = "mo"; 
                                                         }   
                                                     }
                                                 ?>
@@ -270,28 +342,72 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                $discount = 100 - round($_currentPlanPrice * $_basicPercentage / $_basicPlanPrice);
                                                // echo '<pre>'; print_r($discount);
                                                 ?>
-                                                @if ($pricing->duration != 1 && isset($productData['producttype']) && $productData['producttype'] != 'ssl' && $productData['producttype'] != 'email')
-                                                <span class="cpbm-save {{ ($prokey != $ArrayMaxKey)?'cpbms-cc':'' }}">Save {{ (100 - round($_currentPlanPrice * $_basicPercentage / $_basicPlanPrice)) }}% </span>
+                                                {{-- $pricing->duration != 1 && --}}
+                                                @if (isset($productData['producttype']) && $productData['producttype'] != 'ssl' && $productData['producttype'] != 'email')
+
+                                                @php
+                                                if(isset($productData['renewal_monthly_price'])){
+                                                     $per_off = round((100-($_pr / $productData['renewal_monthly_price']) * 100), 0);                                                    
+                                                }else{
+                                                    $per_off = (100 - round($_currentPlanPrice * $_basicPercentage / $_basicPlanPrice));
+                                                }
+                                                @endphp
+                                                @if(isset($productData['extra_renewal_data']))                                                
+                                                <span class="cpbm-save {{ ($prokey != $ArrayMaxKey)?'cpbms-cc':'' }}">Save {{ $per_off }}% </span>
+                                                @endif
+
+                                                @if(!isset($productData['extra_renewal_data']) && $pricing->duration != 1)
+                                                    <span class="cpbm-save {{ ($prokey != $ArrayMaxKey)?'cpbms-cc':'' }}">Save {{ $per_off }}% </span>
+                                                @endif
                                                 @endif
                                                 <br>
                                             </span>
                                             <div class="cpbm-stotal">
+                                            @if($productData['producttype'] == 'vps' || $productData['producttype'] == 'email')
+                                                
+                                            @if(isset($productData['extra_renewal_data']))
+                                                @if(isset($pricing->renewal_price))
+                                                <span class="subtotal">Renews at:&nbsp;<strong>{!! Config::get('Constant.sys_currency_symbol') !!}
+                                                    {{round($pricing->renewal_price,2)}}/mo</strong></span>
+                                                @else
+                                                <span class="subtotal">Renews at:&nbsp;<strong>{!! Config::get('Constant.sys_currency_symbol') !!}
+                                                    {{round($pricing->price,2)}}/mo</strong></span>
+                                                @endif
+                                                                                            
+                                                    
+                                            @elseif(!isset($productData['extra_renewal_data']))
+                                            <span class="subtotal">Subtotal:&nbsp;<strong>{!! Config::get('Constant.sys_currency_symbol') !!}
+                                                {{ round($_currentPlanPrice,2) }}</strong></span>
+
+                                            @endif
+                                            @else
                                                 <span class="subtotal">Subtotal:&nbsp;<strong>{!! Config::get('Constant.sys_currency_symbol') !!}{{ round($_currentPlanPrice,2) }}</strong></span>
+                                            @endif
+
+                                        
+                                            
+                                                
                                             </div>
                                         </div>
                                     </label>
                                 </div>
+
                                 @if($pricing->duration > 1)
-                                <div class="cpbm-usv text-center">
+                                {{-- <div class="cpbm-usv text-center">
                                     @if($_basicPlanPrice > 0)
                                     <span class="">You&nbsp;save:&nbsp;<strong>{!! Config::get('Constant.sys_currency_symbol') !!}{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}</strong></span><br>
                                     @endif
-                                </div>
+                                </div> --}}
                                 @endif
                             </div>
                             @endif
                             @endforeach
                             @if (isset($productData['producttype']) && $productData['producttype'] != 'ssl' && $productData['producttype'] != 'email')
+                            @if ($productData['producttype'] == 'vps')
+                            {{-- <div class="renew_price" id="renew_price_date">Renews at
+                            <span class="rupee"> {!! Config::get('Constant.sys_currency_symbol') !!}</span>{{round(($selectedPlansPrice->price/$selectedPlansPrice->duration),2)}}/month 
+                        </div> --}}
+                        @endif
                             <div class="col-sm-12" id="plansAlertMessage">
                             </div>
                             @endif
@@ -356,7 +472,9 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                         </div>
                                     </div>
                                     <span id="serarchdomain" class="not_for_deskp serarchdomain"></span>
-                                    <button class="btn" title="Use This" id="searchdomainbtn" name="searchdomainbtn">Search</button>
+                                    <button class="btn" title="Use This" id="searchdomainbtn" name="searchdomainbtn">
+                                       <div class="search-dmn-desk">Search</div>
+                                       <div class="search-dmn-mo"><i class="fa-solid fa-magnifying-glass"></i></div></button>
                                 </div>
                                 <span id="serarchdomain" class="not_for_mob serarchdomain"></span>
                                 <div class="last-step-checkout" style="display:none;" id="domainavailmsg">
@@ -379,15 +497,41 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                     <div class="c_c_plan_features">
                         <ul class="base_config" id="vps_configuration_html">
                             <li>
-                                <div class="plan_name_price">
+                                <div class="plan_name_price plan-nm-line">
                                     <span>
+                                        {{-- if start for extra_renewal_data is available --}}
+                                        @if(isset($productData['extra_renewal_data']))
+                                                @php
+                                                    $m_renewal = $productData['renewal_monthly_price'];
+                                                    $total_cut_price = $productData['billingcycle'] == 'annually' ? $m_renewal * 12 : $m_renewal;
+
+                                                    // dd($productData['pricing'][1]->price);
+                                                    $curr_plan_price = 0;
+                                                    if($productData['billingcycle'] == 'annually'){
+                                                        $curr_plan_price = $productData['pricing'][4]->price / 12;
+                                                    }elseif($productData['billingcycle'] == 'monthly'){
+                                                        $curr_plan_price = $productData['pricing'][1]->price / 1;
+                                                    }                                                
+
+                                                    // $new_discount = 100 - round($_currentPlanPrice * 100 / $m_renewal);
+                                                    $new_discount = round((100-($curr_plan_price / $m_renewal) * 100), 0);
+                                                    
+                                                @endphp                                                
+                                                    {{-- {{dd($pricing->duration)}} --}}
+                                                    <span class="linethrough cpbm-mp-cut"><span class="rupee"> {!! Config::get('Constant.sys_currency_symbol') !!}</span>{{round($total_cut_price,2)}}</span>
+                                            @endif
+                                        {{-- if end for extra_renewal_data is available --}}
+
                                         <strong>
                                             <span class="rupee"> {!! Config::get('Constant.sys_currency_symbol') !!}</span>{{round($selectedPlansPrice->price,2)}}
                                         </strong>
                                     </span>
-                                    <strong>{{$productData['groupname']}} - {{$productData['planname']}}</strong>
+                                    <strong>{{$productData['planname']}}</strong>
                                 </div>
                             </li>
+                            @if(isset($new_discount) && $new_discount > 0)                      
+                            <li><span><strong>Discount: -{{$new_discount}}% <span class="text-danger float-end">-{!! Config::get('Constant.sys_currency_symbol') !!}{{round($total_cut_price - $selectedPlansPrice->price,2)}}</span></strong></span></li>
+                            @endif
                             @php
                             $productDataDomain='';
                             foreach($productData['customfields'] as $_customfield){
@@ -399,16 +543,32 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             @if(isset($productDataDomain) && !empty($productDataDomain))
                             <div class="ost_product-name">{{$productDataDomain}}</div>
                             @else
-                            <div class="ost_product-name host_{{$_REQUEST['id']}}">
+                            {{-- <div class="ost_product-name host_{{$_REQUEST['id']}}">
                                 <span class="red">Please provide Hostname.
                                 </span>&nbsp;
                                 <a class="carterr hostclick" data-id="{{$_REQUEST['id']}}" data-toggle="modal" data-target="#domainModel" title="Update Hostname" href="">Update Hostname</a>
-                            </div>
+                            </div> --}}
                             @endif
                         </ul>
-                        <div class="renew_price" id="renew_price">Renews at
-                            <span class="rupee"> {!! Config::get('Constant.sys_currency_symbol') !!}</span>{{round(($selectedPlansPrice->price/$selectedPlansPrice->duration),2)}}/mo.
-                        </div>
+
+                        {{-- {{dd($selectedPlansPrice->price,$selectedPlansPrice->duration)}} --}}
+                        {{-- <div class="renew_price @if($productData['producttype'] != 'dedicatedserver') renew_price_date @endif" id="renew_price" style="font-size:small">Will renew at
+                            <span class="rupee"> {!! Config::get('Constant.sys_currency_symbol') !!}</span>
+
+                            @if(!isset($productData['extra_renewal_data']))
+                            {{round(($selectedPlansPrice->price/$selectedPlansPrice->duration),2)}}/mo
+
+                            @elseif(isset($productData['extra_renewal_data']))
+                                @if($productData['billingcycle'] == 'annually')
+                                 {{round($productData['renewal_yearlyPrice_perMonth'],2)}}/mo                                
+                                @endif
+
+                                @if($productData['billingcycle'] == 'monthly')
+                                 {{round($productData['renewal_monthly_price'],2)}}/mo
+                                @endif
+                            @endif
+                           
+                        </div> --}}
                         <hr>
                         <input type="hidden" name="month" id="month" value="{{$months}}">
                         <div class="cc_sub" id="cc_sub">
@@ -478,6 +638,11 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                     </div>
                     @endif
                 </div>
+                @if ($productData['producttype'] == 'vps')
+                    <div class="text-center"><strong>You’re not alone! 5000+ SMBs trust Host IT Smart for VPS</strong></div>
+
+                @endif
+
             </div>
 
             <!--display cut price start-->
@@ -1118,7 +1283,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                    <div class="continue-checkout-portion">
                       <div class="c_c_p_top">
                          <div class="c_c_p_links">
-                            <a title="View offer disclaimers" href="javascript:void(0)" data-toggle="modal" data-target="#disclaimer-popup">View offer disclaimers</a>
+                            <a title="View offer disclaimers" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#disclaimer-popup">View offer disclaimers</a>
                             <a href="javascript:void(0);" onclick="emptycart();" title="Empty Cart">Empty Cart</a>
                          </div>
                          @if($productData['producttype']=='hosting' || $productData['producttype']=='vps' || $productData['producttype']=='dedicatedserver' || $productData['producttype']=='email' || $productData['producttype']=='ssl')
@@ -1156,7 +1321,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                           
                         @else
                          <div class="c_c_p_btn">
-                            <a href="javascript:void(0);" onclick="performCheckout();" class="btn primary-btn" title="Continue to Checkout">Continue to Checkout</a>
+                            <a href="javascript:void(0);" onclick="performCheckout();" class="btn primary-btn" title="Continue to Checkout">CONTINUE TO CHECKOUT</a>
                          </div>
                         @endif
                       </div>
@@ -1193,7 +1358,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
       $('#sidemenu').affix({
               offset:{
               top: 450,
-              bottom: 1288
+              bottom: 1318
           }
       });
   });
@@ -1447,6 +1612,118 @@ function defaultSelectOptionValue(fieldid) {
 
                 },
             }, 
+
+        1893: { //VPS SM 1 2025
+      1892: { 8458: [8437,8438,8439,8440, 8448, 8453,8449,8450],  
+             8457:  [8437,8448, 8453,8449,8450],                                  
+             8469: [8437,8438,8439,8440, 8448, 8453,8449,8450,8451,8436,8452,8443,8444],
+             8471: [8437,8451,8436,8452,8443,8444, 8448, 8453,8449,8450],
+             8460: [8437,8438,8439,8440, 8448, 8453,8449,8450],
+             8464: [8437,8438,8439,8440, 8448, 8453,8449,8450,8451,8436,8452,8443,8444],
+             8466: [8437,8438,8439,8440, 8448, 8453,8449,8450],
+             8461: [8437,8438,8439,8440],
+             8467: [8437,8438,8439,8440],
+
+              },
+        },
+
+    1907: { //VPS SM 2 2025
+      1906: { 8542:[8521,8524,8523,8522, 8534, 8533,8537,8532],  
+             8541: [8521,8534, 8533,8537,8532],                                  
+             8544: [8521,8524,8523,8522, 8534, 8533,8537,8532],
+             8548: [8521,8524,8523,8522, 8534, 8533,8537,8532,8535,8520,8536,8527,8528],
+             8550: [8521,8524,8523,8522, 8534, 8533,8537,8532],
+             8545: [8521,8524,8523,8522],
+             8551: [8521,8524,8523,8522],
+             8553: [8521,8524,8523,8522, 8534, 8533,8537,8532,8535,8520,8536,8527,8528],
+             8555: [8521,8534, 8533,8537,8532,8535,8520,8536,8527,8528],
+
+              },
+        },
+
+    1921: { //VPS SM 3 2025
+      1920: { 8630:[8609,8620,8625,8621,8622,8610,8611,8612],  
+             8629: [8609,8620,8625,8621,8622,],                                  
+             8641: [8609,8620,8625,8621,8622,8610,8611,8612,8623,8608,8624,8615,8616],
+             8643: [8609,8620,8625,8621,8622,8623,8608,8624,8615,8616],
+             8632: [8609,8620,8625,8621,8622,8610,8611,8612],
+             8636: [8609,8620,8625,8621,8622,8610,8611,8612,8623,8608,8624,8615,8616],
+             8633: [8609,8620,8625,8621,8622,8610,8611,8612],
+             8638: [8609,8610,8611,8612],
+             8639: [8609,8610,8611,8612],
+
+              },
+        },
+
+    1935: { //VPS SM 4 2025
+      1934: { 8715:[8694,8695,8696,8697,8705,8710,8706,8707],  
+             8714: [8694,8705,8710,8706,8707],                                  
+             8726: [8694,8695,8696,8697,8705,8710,8706,8707,8708,8693,8709,8700,8701],
+             8728: [8694,8705,8710,8706,8707,8708,8693,8709,8700,8701],
+             8717: [8694,8695,8696,8697,8705,8710,8706,8707],
+             8721: [8694,8695,8696,8697,8705,8710,8706,8707,8708,8693,8709,8700,8701],
+             8718: [8694,8695,8696,8697,8705,8710,8706,8707],
+             8723: [8694,8695,8696,8697],
+             8724: [8694,8695,8696,8697],
+              },
+        },
+
+
+        2005: { //VPS M1 2025
+            2004: { 9148:[9128,9129,9130,9138,9143,9139,9140],  
+                 9147: [9138,9143,9139,9140],                                  
+                 9159: [9128,9129,9130,9138,9143,9139,9140,9141,9126,9142,9133,9134],
+                 9161: [9138,9143,9139,9140,9141,9126,9142,9133,9134],
+                 9150: [9128,9129,9130,9138,9143,9139,9140],
+                 9154: [9128,9129,9130,9138,9143,9139,9140,9141,9126,9142,9133,9134],
+                 9156: [9128,9129,9130,9138,9143,9139,9140],
+                 9151: [9128,9129,9130],
+                 9157: [9128,9129,9130],
+                  },
+            },
+
+        2019: { //VPS M2 2025
+            2018: { 9233:[9213,9214,9215,9228,9224,9225,9223],  
+                 9232: [9228,9224,9225,9223],                                  
+                 9244: [9213,9214,9215,9228,9224,9225,9223,9226,9211,9227,9218,9219],
+                 9246: [9228,9224,9225,9223,9226,9211,9227,9218,9219],
+                 9235: [9213,9214,9215,9228,9224,9225,9223],
+                 9239: [9213,9214,9215,9228,9224,9225,9223,9226,9211,9227,9218,9219],
+                 9241: [9213,9214,9215,9228,9224,9225,9223],
+                 9242: [9213,9214,9215],
+                 9236: [9213,9214,9215],
+                  },
+            },
+
+        2033: { //VPS M3 2025
+            2032: { 9318:[9298,9299,9300,9308,9313,9309,9310],  
+                 9317: [9308,9313,9309,9310],                                  
+                 9329: [9298,9299,9300,9308,9313,9309,9310,9311,9296,9312,9303,9304],
+                 9331: [9308,9313,9309,9310,9311,9296,9312,9303,9304],
+                 9320: [9298,9299,9300,9308,9313,9309,9310],
+                 9324: [9298,9299,9300,9308,9313,9309,9310,9311,9296,9312,9303,9304],
+                 9321: [9298,9299,9300,9308,9313,9309,9310],
+                 9326: [9298,9299,9300],
+                 9327: [9298,9299,9300],
+                  },
+            },
+
+        2047: { //VPS M4 2025
+            2046: { 9405:[9385,9386,9387,9395,9400,9396,9397],  
+                 9404: [9395,9400,9396,9397],                                  
+                 9416: [9385,9386,9387,9395,9400,9396,9397,9398,9383,9399,9390,9391],
+                 9418: [9395,9400,9396,9397,9398,9383,9399,9390,9391],
+                 9407: [9385,9386,9387,9395,9400,9396,9397],
+                 9411: [9385,9386,9387,9395,9400,9396,9397,9398,9383,9399,9390,9391],
+                 9408: [9385,9386,9387,9395,9400,9396,9397],
+                 9413: [9385,9386,9387],
+                 9414: [9385,9386,9387],
+                  },
+            },
+
+
+
+
         1188: {  // DS2
             1192: { 4860: [4881,6209,6210,6211,4884,4885,4886],
                 },
@@ -1755,13 +2032,19 @@ function showAllCPValues(id) {
         $("#bookdomaintxt").val('');
         $("#domainavailmsg").html('');
         var dname = $("#ihavedomain").val();
+
+        dname = dname.replace("https://", "");
+        dname = dname.replace("http://", "");
+        dname = dname.replace("www.", "");
+        dname = dname.replace("/", "");
+        
         if(dname == ''){
           // alert("Please enter your domain name.");
           $(".hiddenProductId").html("Please enter your domain name").css({"color":"red"});;
           return false;
         }
         
-        var formData = {"_token":"{{ csrf_token() }}","productid":'{{$_REQUEST['id']}}',"domainname":$("#ihavedomain").val()}
+        var formData = {"_token":"{{ csrf_token() }}","productid":'{{$_REQUEST['id']}}',"domainname":dname}
         
         $.ajax({
               async:true,
@@ -1962,7 +2245,7 @@ $("#addconfigdomainbtn").click(function(){
             <!-- Modal Header -->
             <div class="modal-header">
               <h4 class="modal-title">Host IT Smart Says</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
             </div>
             
             <!-- Modal body -->
@@ -1974,7 +2257,7 @@ $("#addconfigdomainbtn").click(function(){
             
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="hostpopup">Ok</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="hostpopup">Ok</button>
             </div>
             
           </div>
@@ -2061,7 +2344,8 @@ $("#addconfigdomainbtn").click(function(){
         setTimeout(function(){
             $('#domain_combo').find(".dropdown-toggle").addClass('form-control');
         }, 1000);
-        var featchPlansData={ "selectedMax":'{{ $_maxSelected }}',"saveamount":'{{ $_selectedSave }}',"maxselectedsave":{{ $_maxSelectedSave }},'maxDuration':'{{ $_maxDuration }}' };
+        var renew_price = $("input[name='sel_hostingregister_0']:checked").val();
+        var featchPlansData={ "a":'{{$a}}',"selectedMax":'{{ $_maxSelected }}',"saveamount":'{{ $_selectedSave }}',"maxselectedsave":{{ $_maxSelectedSave }},'maxDuration':'{{ $_maxDuration }}' };
         /*console.log(featchPlansData);*/
         featchPlansMessage(featchPlansData);
     })
@@ -2073,8 +2357,8 @@ $("#addconfigdomainbtn").click(function(){
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close close-popup" data-dismiss="modal"></button>
                 <h2 class="modal-title" title="Disclaimers">Disclaimers</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="deal-body">

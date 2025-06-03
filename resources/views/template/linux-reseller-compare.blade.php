@@ -8,13 +8,13 @@
                     <table class="table-plan-vps">
                         <tr>
                             <th class="title bg-none"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/logo.png" class="hostitsmart-logo" alt="logo"></th> 
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/bigrock_logo.png" alt="bigrock"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hoster-gator.png" alt="hoster-gator"></th> 
-                            <?php /*<th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/milesweb.png" alt="milesweb"></th> */?>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/ideastack.png" alt="ideastack"></th> 
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/go-hosting.png" alt="go-hosting"></th>
-                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hostingraja.png" alt="hostingraja"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/logo.webp" class="hostitsmart-logo" alt="logo"></th> 
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/bigrock_logo.webp" alt="bigrock"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hoster-gator.webp" alt="hoster-gator"></th> 
+                            <?php /*<th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/milesweb.webp" alt="milesweb"></th> */?>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/ideastack.webp" alt="ideastack"></th> 
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/go-hosting.webp" alt="go-hosting"></th>
+                            <th class="title"><img src="{{ url('/') }}/assets/images/vps_hosting/hostingraja.webp" alt="hostingraja"></th>
                         </tr>
                         <tr>
                             <td class="boldfonts">Plan</td>

@@ -795,7 +795,7 @@
                     /*$("#taxesSpan").html('<span class="rupee">' + '{!! Config::get('Constant.sys_currency_symbol') !!}' + '</span>' + taxTotal);*/
                     var taxTotal = parseFloat(taxtotal1) + parseFloat(taxtotal2);
                     var g_total = subtotal - rawdiscount;
-                    $("#grandtotalSpan").html('<span class="rupee grand_total_rupee">' + _currency + '</span>' + g_total);
+                    $("#grandtotalSpan").html('<span class="rupee grand_total_rupee">' + _currency + '</span>' + g_total.toFixed(2));
                     $("#taxesSpan").html('<span class="rupee">' +  _currency + '</span>' + taxTotal);
                     /*$("#subtotalSpan").html('<span class="rupee">' + '{!! Config::get('Constant.sys_currency_symbol') !!}' + '</span>' + parseFloat(subtotal));*/
                     $("#subtotalSpan").html('<span class="rupee">' + _currency + '</span>' + parseFloat(subtotal));

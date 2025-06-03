@@ -369,7 +369,41 @@
 
 @if(Request::segment(1)!='cart')
 <!-- Vk 2/12/2019 Start -->
-
+<?php /*<div class="lading_bottom domain_offer_bottom dmnofer">
+	<a class="close_btn" href="javascript:void(0)" id='combo_offer_closed' title="Close"><i class="fa fa-close"></i></a>
+	<div class="limited-offer-section" style="background:#f3002e !important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="limited-title" style="font-size:18px !important;color:#000 !important;">4 Days of Must-Shop Deals. Save 80% on our most popular products <i class="fa fa-chevron-right"></i> Web Hosting Sale.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <style>
+	 .wrapper {text-align: center;}
+     .time {color: #f3002e !important;font-size: 35px;}
+     .label {font-size: 15px;display: block;color: #aaa;}
+     #days,#hours,#minutes,#seconds{display:inline-block;}
+     @media (max-width:479px){.lading_bottom.domain_offer_bottom .promotion_div .new_customer .offer > div{ width:auto !important;padding:5px !important;}}
+	 </style>
+	<div class="promotion_div" style="background:#000;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-12 padding-0">
+					<div class="new_customer" style="display:block;max-width:550px;margin:auto;width:auto;">
+					    <div class="row">
+						    <div class="col-md-8"><span class="offer" id="countdown-add-options" style="font-size:0px !important;"></span></div>
+						    <div class="btn-section col-md-2"><a href="https://www.hostitsmart.com/web-hosting" class="btn align-self-center" data-aos="fade-left" title="Get Now" style="color:#FFF !important;background:#f3002e !important;">Get Now</a></div>
+					    </div>
+					</div>
+					
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+*/ ?>
 <!-- Vk 2/12/2019 End -->
 @endif
 <div class="modal fade loginPopup" id="loginModal"  tabindex='-1'>
@@ -526,7 +560,7 @@
                                                         </div>  
                                                         <div class="col-7 col-sm-6">
                                                             <a href="javascript:;" tabindex="5" class="forgot-password">Forgot Password ?</a>
-                                                           
+                                                            <?php /*<a href="https://www.hostitsmart.com/manage/pwreset.php" tabindex="5" class="forgot-password">Forgot Password ?</a>*/?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -937,10 +971,12 @@ if (session()->has('whmsc_url')) {
         alert("<?= session()->get('email_not_found') ?>");
 <?php } ?>
 </script>
-
+<?php /*<script type="text/javascript">
+   function hidetopdeals(){$(".top-header").hide()}function getcurrency(cur){var id=1;if(cur=='INR'){id=1}else{id=10}var varconfirm=false;var items=$("#cart_cout").text();var itemsCounter=parseInt(items);if(itemsCounter>0){varconfirm=confirm('If you will change currency then added items from the cart will be removed, Still want to change?');(cur=='INR')?$("#currency").val('USD'):$("#currency").val('INR')}else{varconfirm=true}if(varconfirm==true){$.ajax({async:false,type:"get",beforeSend:function(){showLoader()},url:'{{url("cart/empty")}}',data:"cur="+cur+"&cur_id="+id,success:function(){}});$.ajax({async:false,beforeSend:function(){showLoader()},url:"https://www.hostitsmart.com/manage"+"/hits_cart.php?a=view",data:{"token":"87923d3b1f6aa46ff269fe89c69822f564a7aea7","currency":id},type:"post",success:function(response){window.location.href=APP_URL+"/currency/"+cur}})}$('#currency').selectpicker('refresh')}$(".forgot-password").click(function(){$("#reset-form").show();$("#signin-form").hide();$(".sign-with").hide()});$(".already-member,.signinusr").click(function(){$("#reset-form").hide();$("#signup-form").hide();$("#signin-form").show();$(".signup-btn").removeClass("active");$(".signin-btn").addClass("active");$(".sign-with").show()});$("#signin-form-link,#signup-form-link").click(function(){$("#reset-form").hide()});$("#signup-form-link").click(function(){$("#one").hide();$("#two").show()});$("#signin-form-link").click(function(){$("#one").show();$("#two").hide()});
+</script>*/?>
 <script src="{{Config::get('Constant.CDNURL')}}/assets/js/common_v9.js" type="text/javascript"></script>
 <script type="text/javascript">
-  var baseUrl = "{{ url('/') }}";
+  
 $("#signup-form-link").click(function(){
     
         $(".signin-btn").text("Create Account");
@@ -948,7 +984,7 @@ $("#signup-form-link").click(function(){
         $("#signup-form").show();
 });
 
-  function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==i?confirm("Are you sure? You wants to move to india location website.")?window.location= baseUrl:($("#currency").val("USD"),$("#currency").selectpicker("refresh")):confirm("Are you sure? You wants to move to Global location website.")?window.location="https://global.hostitsmart.com":($("#currency").val("INR"),$("#currency").selectpicker("refresh")),$("#currency").selectpicker("refresh")}$(".forgot-password").click(function(){$("#reset-form").show(),$("#signin-form").hide(),$(".sign-with").hide()}),$(".already-member,.signinusr").click(function(){$(".signin-btn").text("Login"),$("#reset-form").hide(),$("#signup-form").hide(),$("#otp-verification-form").hide(),$("#signin-form").show(),$(".signup-btn").removeClass("active"),$(".signin-btn").addClass("active"),$(".sign-with").show()}),$("#signin-form-link").click(function(){$("#signin-form-link").text("Login"),$("#otp-verification-form2,#reset-form, #signup-form,.sign-with").hide(),$("#signin-form").show(); return false;}),$("#signup-form-link").click(function(){ $("#reset-form, #signin-form, .sign-with").hide(),$(".signin-btn").removeClass('active'),$(".signup-btn").addClass('active'); return false;}),$("#signup-form-link").click(function(){$("#fullname").focus(); $("#one").hide(),$("#two").show()}),$("#signin-form-link").click(function(){$("#one").show(),$("#two").hide()});
+  function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==i?confirm("Are you sure? You wants to move to india location website.")?window.location="https://www.hostitsmart.com":($("#currency").val("USD"),$("#currency").selectpicker("refresh")):confirm("Are you sure? You wants to move to Global location website.")?window.location="https://global.hostitsmart.com":($("#currency").val("INR"),$("#currency").selectpicker("refresh")),$("#currency").selectpicker("refresh")}$(".forgot-password").click(function(){$("#reset-form").show(),$("#signin-form").hide(),$(".sign-with").hide()}),$(".already-member,.signinusr").click(function(){$(".signin-btn").text("Login"),$("#reset-form").hide(),$("#signup-form").hide(),$("#otp-verification-form").hide(),$("#signin-form").show(),$(".signup-btn").removeClass("active"),$(".signin-btn").addClass("active"),$(".sign-with").show()}),$("#signin-form-link").click(function(){$("#signin-form-link").text("Login"),$("#otp-verification-form2,#reset-form, #signup-form,.sign-with").hide(),$("#signin-form").show(); return false;}),$("#signup-form-link").click(function(){ $("#reset-form, #signin-form, .sign-with").hide(),$(".signin-btn").removeClass('active'),$(".signup-btn").addClass('active'); return false;}),$("#signup-form-link").click(function(){$("#fullname").focus(); $("#one").hide(),$("#two").show()}),$("#signin-form-link").click(function(){$("#one").show(),$("#two").hide()});
 
   $( document ).ready(function() {
 
@@ -1017,7 +1053,96 @@ $("#signup-form-link").click(function(){
     });
   
   
-   
+    /*$("#signup-form").validate({
+        ignore:".ignore",errorElement:"span",errorClass:"error",
+        rules:{ 
+            otpcountry:{required:!0},
+            phone_number:{required:!0,noSpace:!0,xssProtection:!0,maxlength:15,minlength:10},
+            email:{required:!0,emailFormat:!0,remote:{url:"https://new.hostitsmart.com/user-email-exit",type:"get"},maxlength:50},
+            password:{required:!0,noSpace:!0,minlength:6,regex1:/^(?=.*?[A-Z])(?=.*?[a-z])/,regex2:/^(?=.*?[0-9])/,regex3:/^(?=.*?[#?!@$%^&*-])/,xssProtection:!0,no_url:!0},
+            tc:{required:!0}},
+        messages:{
+                otpcountry:{required:"Please select country"},
+                phone_number:{required:"Please enter Phone no.",xssProtection:"Please enter valid Input."},
+                email:{required:"Please enter your email.",remote:"Email already in use!"},
+                password:{required:"Please enter your password.",xssProtection:"Please enter valid Input."},
+                tc:{required:"Please click on checkbox to agree terms & condition."}},
+              
+        errorPlacement: function(error, element) {
+         if (element.attr("id") == "otpcountry") {
+            error.insertAfter($("#country_error_msg"));
+         }
+         else
+         {
+            error.insertAfter(element);
+         }
+        },
+        submitHandler:function(){
+           
+            $("#sendotpbtn").text("Sending...");
+            var formData = $("#signup-form").serialize();
+            $.ajax({
+                url: "{{url('/otp-send')}}",
+                data: formData,
+                type: "post",
+                success: function(response) {
+                    $("#sendotpbtn").text("Send OTP");
+                    if (response) {
+                        if(eval(response) == 1){
+
+                            $("#signin-form, #signup-form, #otp-verification-form, #otp-verification-form2, #reset-form").hide();
+                            $("#otp-verification-form2").show();
+                        }
+                        else {
+                            $("#sendotpbtn").text("Send OTP");
+                            $("#sendotpalert").show();
+                        }
+                    }
+                }
+            });
+        }
+    });*/
+  
+  <?php
+   /* $("#otp-verification-form").validate({
+        rules:{ "otpcountry": { "required":true }, "phone_number": { "required":true,"minlength":10,"maxlength":15 }},
+        messages:{ "otpcountry": { "required":"Please select country." }, "phone_number": { "required":"Please enter Phone no."}},
+        errorPlacement: function(error, element) {
+         if (element.attr("id") == "otpcountry") {
+            error.insertAfter($("#country_error_msg"));
+         }
+         else
+         {
+            error.insertAfter(element);
+         }
+        },
+        submitHandler:function(){
+           
+            $("#sendotpbtn").text("Sending...");
+            var formData = $("#otp-verification-form").serialize();
+            $.ajax({
+                url: "{{url('/otp-send')}}",
+                data: formData,
+                type: "post",
+                success: function(response) {
+                    $("#sendotpbtn").text("Send OTP");
+                    if (response) {
+                        if(eval(response) == 1){
+
+                            $("#signin-form, #signup-form, #otp-verification-form, #otp-verification-form2, #reset-form").hide();
+                            $("#otp-verification-form2").show();
+                        }
+                        else {
+                            $("#sendotpbtn").text("Send OTP");
+                            $("#sendotpalert").show();
+                        }
+                    }
+                }
+            });
+        }
+    });*/
+    
+    ?>
     
    
     $("#otp-verification-form2").validate({

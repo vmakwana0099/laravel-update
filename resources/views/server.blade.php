@@ -6,7 +6,7 @@
 <div class="server_landing_div">
     @if(!empty($ProductData) && count($ProductData) >0)
     <div class="lading_bottom">
-        <div class="hostingtype_div">
+        <div class="hostingtype_div head-tb-p-40">
             <div class="container-fluid">
                 <div class="row">
                     @php $p = 0; $class = ''; $color = ''; $info = ''; @endphp

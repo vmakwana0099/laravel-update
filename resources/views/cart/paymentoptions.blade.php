@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @include('layouts.inner_banner')
-<div class="checkout-main">
+<!-- <div class="checkout-main">
    <div class="checkout-nav">
       <div class="container">
          <div class="row">
@@ -26,7 +26,7 @@
          </div>
       </div>
    </div>
-</div>
+</div> -->
 
 <div class="cart-paymentinfo-main">
     <div class="container">
@@ -230,13 +230,13 @@
            <div class="continue-checkout-portion">
               <div class="c_c_p_top">
                  <div class="c_c_p_links">
-                    <a title="View offer disclaimers" href="javascript:void(0)" data-toggle="modal" data-target="#disclaimer-popup">View offer disclaimers</a>
+                    <a title="View offer disclaimers" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#disclaimer-popup">View offer disclaimers</a>
                     <a href="javascript:void(0);" onclick="emptycart();" title="Empty Cart">Empty Cart</a>
                  </div>
                  <div class="c_c_p_total" id="finalPricesinSignin">
                   </div>
                  <div class="c_c_p_btn">
-                    <a href="javascript:void(0);" onclick="performCheckout();" class="btn primary-btn" title="Continue to Checkout">Continue to Checkout</a>
+                    <a href="javascript:void(0);" onclick="performCheckout();" class="btn primary-btn" title="Continue to Checkout">CONTINUE TO CHECKOUT</a>
                  </div>
               </div>
               <div class="c_c_p_terms">

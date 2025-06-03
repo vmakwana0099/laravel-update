@@ -201,7 +201,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             <h2 class="modal-title">Sale Activated!</h2>
                                         </div>
                                         <div class="modal-body">
@@ -410,7 +410,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             <h2 class="modal-title">Sale Activated!</h2>
                                         </div>
                                         <div class="modal-body">
@@ -615,7 +615,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             <h2 class="modal-title">Sale Activated!</h2>
                                         </div>
                                         <div class="modal-body">
@@ -818,7 +818,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             <h2 class="modal-title">Sale Activated!</h2>
                                         </div>
                                         <div class="modal-body">
@@ -983,7 +983,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             <h2 class="modal-title">Sale Activated!</h2>
                                         </div>
                                         <div class="modal-body">
@@ -1131,7 +1131,7 @@
 <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="close close-popup" data-dismiss="modal"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
             <div class="deal-body">

@@ -4,11 +4,11 @@
 <div class="banner-inner aws-banner" style="background-image:url({{url('/assets/images/aws_banner_bg.jpg')}})">
     <div class="container">
         <div class="banner-content">
-            <h1 class="banner-title aos-init" data-aos="fade-up" data-aos-delay="100">Amazon Web Service Support Provider</h1>
+            <h2 class="text_head text-light" data-aos="fade-up" data-aos-delay="100">Amazon Web Service Support Provider</h2>
             <span class="banner-subtitle aos-init" data-aos="fade-up" data-aos-delay="200">Secure, Dynamic, and Cost-effective Solution</span>
             <span class="banner-subtitle aos-init" data-aos="fade-up" data-aos-delay="200">Focus on results while we administer your AWS efficiently to soar your business to the clouds. Quite literally!
-</span>
-            <a href="javascript:void(0)" class="btn-primary btn-lets-talk aos-init" data-aos="fade-up" data-aos-delay="600" title="Let's Talk" data-toggle="modal" data-target="#all-offer">Let's Talk</a>
+            </span>
+            <a href="javascript:void(0)" class="btn-primary btn-lets-talk aos-init" data-aos="fade-up" data-aos-delay="600" title="Let's Talk" data-bs-toggle="modal" data-bs-target="#all-offer">Let's Talk</a>
 
         </div>
     </div>
@@ -16,133 +16,132 @@
 
 <div class="inner_container">
     <div class="aws-content">
-        <div class="aws-managed-services">
+        <div class="aws-managed-services head-tb-p-40">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="cms">
-                        <h2 class="text-center aos-init" data-aos="fade-up" data-aos-delay="100">AWS Support & Managed Services</h2>
-                        <div class="aws-para aos-init" data-aos="fade-up" data-aos-delay="200">
-                            <p>Amazon Web Service is a secure, dynamic, cost-effective, and highly-complex solution. Hence,  deploying the application on this is a bit worrisome for most of the organizations but take it easy with us. We are here to help you with our competence by assisting you in configuring various instances. Whether you want AWS business support or customer support, you can rely on our expertise complemented with affordable AWS support pricing structure to overpower the technicalities involved. </p>
+                        <div class="section-heading">
+                            <h2 class="text-center text_head">AWS Support & Managed Services</h2>
+                            <p>Amazon Web Service is a secure, dynamic, cost-effective, and highly-complex solution. Hence, deploying the application on this is a bit worrisome for most of the organizations but take it easy with us. We are here to help you with our competence by assisting you in configuring various instances. Whether you want AWS business support or customer support, you can rely on our expertise complemented with affordable AWS support pricing structure to overpower the technicalities involved. </p>
                             <p>We are thrilled to bring our expertise to you in cloud design and management. We are an authorized partner of AWS. With this partnership, we aim to provide various type of AWS Cloud support services. We have a dedicated team for Solution Architect, DevOps, Migration to provide you with AWS premium support. It is a one-stop AWS Cloud Solution organization.</p>
                         </div>
-                    </div>
                     </div>
                     <div class="col-sm-8 col-12">
                         <div class="left aos-init" data-aos="fade-left" data-aos-delay="600">
                             <div class="points">
                                 <ul>
-                                    <li><h5>AWS Migration & Strategy</h5></li>
-                                    <li><h5>AWS Technical Support & Monitoring</h5></li>
-                                    <li><h5>AWS Security & Compliance Management</h5></li>
-                                    <li><h5>AWS DevOps Automation</h5></li>
-                                    <li><h5>Database Migration And Management</h5></li>
-                                    <li><h5>AWS Cost Optimization</h5></li>
+                                    <li>AWS Migration & Strategy</li>
+                                    <li>AWS Technical Support & Monitoring</li>
+                                    <li>AWS Security & Compliance Management</li>
+                                    <li>AWS DevOps Automation</li>
+                                    <li>Database Migration And Management</li>
+                                    <li>AWS Cost Optimization</li>
                                 </ul>
                             </div>
-                            @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                            @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
                             {{--<div class="price">
                                 <p class="false-price">
                                     <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
                                     <span class="overline">{{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_INR_WRONG') }}*</span>
-                                    /Hour
-                                </p>
-                                <p>
-                                    <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
-                                    {{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_INR') }}*/Hour
-                                </p>
-                            </div>--}}
-                            @php } else { @endphp 
-                            {{--<div class="price">
+                            /Hour
+                            </p>
+                            <p>
+                                <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
+                                {{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_INR') }}*/Hour
+                            </p>
+                        </div>--}}
+                        @php } else { @endphp
+                        {{--<div class="price">
                                 <p class="false-price">
                                     <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
                                     <span class="overline">{{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_USD_WRONG') }}*</span>
-                                    /Hour
-                                </p>
-                                <p>
-                                    <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
-                                    {{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_USD') }}*/Hour
-                                </p>
-                            </div>--}}
-                            @php } @endphp 
-                            <div class="start-now">
-                                <a class="btn-primary btn-start-now aos-init" data-aos="fade-up" data-aos-delay="500" title="Let's Talk" data-toggle="modal" data-target="#all-offer">Start Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-12">
-                        <div class="right aos-init" data-aos="fade-right" data-aos-delay="600">
-                            <img src="{{url('/')}}/assets/images/aws-support.png" alt="AWS Services"/>
-                        </div>
+                        /Hour
+                        </p>
+                        <p>
+                            <span class="rupee-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
+                            {{ Config::get('Constant.PRODUCT_AWS_SUPPORT_PRICE_USD') }}*/Hour
+                        </p>
+                    </div>--}}
+                    @php } @endphp
+                    <div class="start-now">
+                        <a class="btn-primary btn-start-now aos-init" data-aos="fade-up" data-aos-delay="500" title="Let's Talk" data-bs-toggle="modal" data-bs-target="#all-offer">Start Now</a>
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4 col-12">
+                <div class="right aos-init" data-aos="fade-right" data-aos-delay="600">
+                    <img src="{{url('/')}}/assets/images/aws-support.webp" alt="AWS Services" />
+                </div>
+            </div>
         </div>
-        <div class="vps-features vps-plan-features" id="PerformanceOneMonthFeatures">
-            <div class="container">
-                <div class="row">
-                    <div class="features-main">
-                        <h2 class="features-title aos-init" data-aos="fade-up">{{ Config::get('Constant.SITE_NAME') }} Helps You in Following Ways:</h2>
-                        <div class="features-start d-md-block d-none">
-                            <div class="row">
-                                <div class="feature-ul d-flex flex-wrap">
-                                    <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
-                                            <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon savings"></i></div>
-                                            <h3>Optimization to save cost</h3>
-                                            <div class="content">Reducing cost is likely your need which may have influenced you to move towards the cloud technology. But it requires someone to analyze your AWS configuration regularly, looking for options to reduce cost and give the best performance needed.
-                                        </div>
+    </div>
+</div>
+<div class="vps-features head-tb-p-40 vps-plan-features" id="PerformanceOneMonthFeatures">
+    <div class="container">
+        <div class="row">
+            <div class="features-main">
+                <div class="section-heading">
+                    <h2 class="text_head text-center">{{ Config::get('Constant.SITE_NAME') }} Helps You in Following Ways:</h2>
+                </div>
+                <div class="features-start">
+                    <div class="row">
+                        <div class="feature-ul d-flex flex-wrap">
+                            <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+                                    <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon savings"></i></div>
+                                    <h3>Optimization to save cost</h3>
+                                    <div class="content">Reducing cost is likely your need which may have influenced you to move towards the cloud technology. But it requires someone to analyze your AWS configuration regularly, looking for options to reduce cost and give the best performance needed.
                                     </div>
+                                </div>
+                            </div>
+                            <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+                                    <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon migration"></i></div>
+                                    <h3>Migration to AWS</h3>
+                                    <div class="content">AWS is one of the best cloud platforms you can find in the market but without experience, it's intimidating and overwhelming to move from any other platform to AWS. As you take the critical first step into the cloud we can help you with our experience and standard AWS support services to mitigate any interruption or risk in the deployment process.
                                     </div>
-                                    <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
-                                            <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon migration"></i></div>
-                                            <h3>Migration to AWS</h3>
-                                            <div class="content">AWS is one of the best cloud platforms you can find in the market but without experience, it's intimidating and overwhelming to move from any other platform to AWS. As you take the critical first step into the cloud we can help you with our experience and standard AWS support services to mitigate any interruption or risk in the deployment process.
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
-                                            <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon expert"></i></div>
-                                            <h3>Expertise</h3>
-                                            <div class="content">It's really a challenge to get someone in-house with expertise on AWS who can set up the infrastructure you need without risk. We have AWS technical experts who work with you like your extended team.
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+                                    <div class="feature-icon d-flex justify-content-center align-items-center"><i class="vps-features-icon expert"></i></div>
+                                    <h3>Expertise</h3>
+                                    <div class="content">It's really a challenge to get someone in-house with expertise on AWS who can set up the infrastructure you need without risk. We have AWS technical experts who work with you like your extended team.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="features-start features-start-mob d-md-none d-block">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item">
-                                    <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start">
-                                            <div class="feature-icon"><i class="vps-features-icon savings"></i></div>
-                                            <h3>Optimization to save cost</h3>
-                                            <div class="content">Reducing cost is likely your need which may have influenced you to move towards the cloud technology. But it requires someone to analyze your AWS configuration regularly, looking for options to reduce cost and give the best performance needed.
-                                        </div>
+                <div class="features-start features-start-mob d-md-none d-block">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start">
+                                    <div class="feature-icon"><i class="vps-features-icon savings"></i></div>
+                                    <h3>Optimization to save cost</h3>
+                                    <div class="content">Reducing cost is likely your need which may have influenced you to move towards the cloud technology. But it requires someone to analyze your AWS configuration regularly, looking for options to reduce cost and give the best performance needed.
                                     </div>
                                 </div>
-                                </div>
-                                <div class="item">
-                                    <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start">
-                                            <div class="feature-icon"><i class="vps-features-icon migration"></i></div>
-                                            <h3>Migrating to AWS</h3>
-                                            <div class="content">AWS is one of the best cloud platforms you can find in the market but without experience, it's intimidating and overwhelming to move from any other platform to AWS. As you take the critical first step into the cloud we can help you with our experience and standard AWS support services to mitigate any interruption or risk in the deployment process.
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start">
+                                    <div class="feature-icon"><i class="vps-features-icon migration"></i></div>
+                                    <h3>Migrating to AWS</h3>
+                                    <div class="content">AWS is one of the best cloud platforms you can find in the market but without experience, it's intimidating and overwhelming to move from any other platform to AWS. As you take the critical first step into the cloud we can help you with our experience and standard AWS support services to mitigate any interruption or risk in the deployment process.
                                     </div>
                                 </div>
-                                </div>
-                                <div class="item">
-                                    <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
-                                        <div class="content-main align-self-start">
-                                            <div class="feature-icon"><i class="vps-features-icon expert"></i></div>
-                                            <h3>Expertise</h3>
-                                            <div class="content">It's really a challenge to get someone in-house with expertise on AWS who can set up the infrastructure you need without risk. We have AWS technical experts who work with you like your extended team.
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feature-box col-xs-12 col-sm-12 col-md-4 d-flex flex-wrap justify-content-center">
+                                <div class="content-main align-self-start">
+                                    <div class="feature-icon"><i class="vps-features-icon expert"></i></div>
+                                    <h3>Expertise</h3>
+                                    <div class="content">It's really a challenge to get someone in-house with expertise on AWS who can set up the infrastructure you need without risk. We have AWS technical experts who work with you like your extended team.
                                     </div>
                                 </div>
                             </div>
@@ -151,56 +150,109 @@
                 </div>
             </div>
         </div>
-        </div>
-        <div class="what-we-do cms">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2 class="text-center aos-init" data-aos="fade-up" data-aos-delay="100">What we do?</h2>
-                        <p class="sub-title aos-init" data-aos="fade-up" data-aos-delay="200">We assist neoteric as well as mature businesses of all sizes in managing the below listed Amazon Web Services:
-</p>
-                    </div>
-                    <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
-                        <ul class="aws-list">
-                            <li><h6>Deployment of ongoing products</h6></li>
-                            <li><h6>AWS EC2 Instance management</h6></li>
-                            <li><h6>AWS ELB/ALB management</h6></li>
-                            <li><h6>AWS Auto Scaling management</h6></li>
-                            <li><h6>AWS Elastic IP</h6></li>
-                            <li><h6>AWS Security Group management</h6></li>
-                            <li><h6>AWS VPC management</h6></li>
-                            <li><h6>AWS Route53 management</h6></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
-                        <ul class="aws-list">                            
-                            <li><h6>AWS S3 management</h6></li>
-                            <li><h6>AWS RDS management</h6></li>
-                            <li><h6>AWS EBS management</h6></li>
-                            <li><h6>AWS Glacier management</h6></li>
-                            <li><h6>AWS Lambda management</h6></li>
-                            <li><h6>AWS IAM management</h6></li>
-                            <li><h6>AWS Elastic Cache management</h6></li>
-                            <li><h6>AWS Cloud Watch management</h6></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
-                        <ul class="aws-list">                            
-                            <li><h6>AWS Beanstalk management</h6></li>
-                            <li><h6>AWS Elastic Container Service (ECS)</h6></li>
-                            <li><h6>AWS Amazon Elastic Container Registry</h6></li>
-                            <li><h6>AWS CloudFront</h6></li></br>
-                            <li><h6>AWS CodeCommit</h6></li>
-                            <li><h6>AWS CodeBuild</h6></li>
-                            <li><h6>AWS CodePipeline (CI/CD)</h6></li>
-                            <li><h6>AWS WAF and Shield</h6></li>
-                            <li><h6>AWS SNS</h6></li>
-                        </ul>
-                    </div>
+    </div>
+</div>
+<div class="what-we-do cms head-tb-p-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-heading">
+                <h2 class="text-center text_head text-light">What we do?</h2>
+                <p class="text-center text-light">We assist neoteric as well as mature businesses of all sizes in managing the below listed Amazon Web Services:
+                </p>
                 </div>
             </div>
-        </div>        
-        <!--        <div class="what-we-do cms">
+            <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
+                <ul class="aws-list">
+                    <li>
+                        Deployment of ongoing products
+                    </li>
+                    <li>
+                        AWS EC2 Instance management
+                    </li>
+                    <li>
+                        AWS ELB/ALB management
+                    </li>
+                    <li>
+                        AWS Auto Scaling management
+                    </li>
+                    <li>
+                        AWS Elastic IP
+                    </li>
+                    <li>
+                        AWS Security Group management
+                    </li>
+                    <li>
+                        AWS VPC management
+                    </li>
+                    <li>
+                        AWS Route53 management
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
+                <ul class="aws-list">
+                    <li>
+                        AWS S3 management
+                    </li>
+                    <li>
+                        AWS RDS management
+                    </li>
+                    <li>
+                        AWS EBS management
+                    </li>
+                    <li>
+                        AWS Glacier management
+                    </li>
+                    <li>
+                        AWS Lambda management
+                    </li>
+                    <li>
+                        AWS IAM management
+                    </li>
+                    <li>
+                        AWS Elastic Cache management
+                    </li>
+                    <li>
+                        AWS Cloud Watch management
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-4 aos-init" data-aos="fade-up" data-aos-delay="300">
+                <ul class="aws-list">
+                    <li>
+                        AWS Beanstalk management
+                    </li>
+                    <li>
+                        AWS Elastic Container Service (ECS)
+                    </li>
+                    <li>
+                        AWS Amazon Elastic Container Registry
+                    </li>
+                    <li>
+                        AWS CloudFront
+                    </li></br>
+                    <li>
+                        AWS CodeCommit
+                    </li>
+                    <li>
+                        AWS CodeBuild
+                    </li>
+                    <li>
+                        AWS CodePipeline (CI/CD)
+                    </li>
+                    <li>
+                        AWS WAF and Shield
+                    </li>
+                    <li>
+                        AWS SNS
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--        <div class="what-we-do cms">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -217,7 +269,7 @@
                         </div>
                     </div>
                 </div>-->
-        <?php /*<div class="aws-services-faq">
+<?php /*<div class="aws-services-faq">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -228,7 +280,7 @@
                         <div id="accordion">
                             <div class="card" data-aos="fade-up">
                                 <h4 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         Build Containers with Docker
                                     </button>
                                 </h4>
@@ -248,7 +300,7 @@
                             </div>
                             <div class="card" data-aos="fade-up">
                                 <h4 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         Incident-based Solutions
                                     </button>
                                 </h4>
@@ -260,7 +312,7 @@
                             </div>
                             <div class="card" data-aos="fade-up">
                                 <h4 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         Configuration for Small-to-Medium Business
                                     </button>
                                 </h4>
@@ -272,7 +324,7 @@
                             </div>
                             <div class="card" data-aos="fade-up">
                                 <h4 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
                                         Dedicated Technical Assistance
                                     </button>
                                 </h4>
@@ -287,46 +339,46 @@
                 </div>
             </div>
         </div>*/ ?>
-        <div class="why-choose-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-12">
-                        <div class="left aos-init" data-aos="fade-left" data-aos-delay="100">
-                            <div class="left-in">
-                                <h2>Why Choose us as your AWS Managed Services provider?</h2>
-                                <div class="points">
-                                    <ul>
-                                        <li>24*7 Support</li>
-                                        <li>Certified Technical Expertise</li>
-                                        <li>Affordable and Constructive Solutions</li>
-                                        <li>Proactive Approach</li>
-                                        <li>Scalable Results</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>  
+<div class="why-choose-us head-tb-p-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="left aos-init" data-aos="fade-left" data-aos-delay="100">
+                    <div class="left-in">
+                        <h2>Why Choose us as your AWS Managed Services provider?</h2>
+                        <div class="points">
+                            <ul>
+                                <li>24*7 Support</li>
+                                <li>Certified Technical Expertise</li>
+                                <li>Affordable and Constructive Solutions</li>
+                                <li>Proactive Approach</li>
+                                <li>Scalable Results</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-sm-5 col-12 right-start aos-init" data-aos="fade-left" data-aos-delay="800">
-                        <div class="right">
-                            <div class="right-in">
-                                <h2>Partner with {{ Config::get('Constant.SITE_NAME') }} to make AWS work for you!</h2>   
-                                <div class="work">
-                                    <ul>
-                                        <li>
-                                            <img title="Big Bang" alt="Big Bang {{ Config::get('Constant.SITE_NAME') }} AWS Work" src="{{url('/')}}/assets/images/partner1.png">
-                                        </li>
-                                        <li>
-                                            <img title="COSMONAUT" alt="COSMONAUT {{ Config::get('Constant.SITE_NAME') }} AWS Work" src="{{url('/')}}/assets/images/partner2.png">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-12 right-start aos-init" data-aos="fade-left" data-aos-delay="800">
+                <div class="right">
+                    <div class="right-in">
+                        <h2>Partner with {{ Config::get('Constant.SITE_NAME') }} to make AWS work for you!</h2>
+                        <div class="work">
+                            <ul>
+                                <li>
+                                    <img title="Big Bang" alt="Big Bang {{ Config::get('Constant.SITE_NAME') }} AWS Work" src="{{url('/')}}/assets/images/partner1.webp">
+                                </li>
+                                <li>
+                                    <img title="COSMONAUT" alt="COSMONAUT {{ Config::get('Constant.SITE_NAME') }} AWS Work" src="{{url('/')}}/assets/images/partner2.webp">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <?php /*<div class="plans-services">
+    </div>
+</div>
+<?php /*<div class="plans-services">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -410,33 +462,33 @@
                                     @php } @endphp 
 
 
-                                    <a class="btn-primary btn-start-now aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" title="Let's Talk" data-toggle="modal" data-target="#all-offer">Start Now</a></td>
-                                <td align="left" valign="middle"><a class="req-qoute-btn" href="javascript:void(0);" data-toggle="modal" data-target="#all-offer">Request a Quote</a></td>
-                                <td align="left" valign="middle"><a class="req-qoute-btn" href="javascript:void(0);" data-toggle="modal" data-target="#all-offer">Request a Quote</a></td>
+                                    <a class="btn-primary btn-start-now aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" title="Let's Talk" data-bs-toggle="modal" data-bs-target="#all-offer">Start Now</a></td>
+                                <td align="left" valign="middle"><a class="req-qoute-btn" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#all-offer">Request a Quote</a></td>
+                                <td align="left" valign="middle"><a class="req-qoute-btn" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#all-offer">Request a Quote</a></td>
                             </tr>-->
                         </table>
                     </div>
                 </div>
             </div>
-        </div>*/?>
-        <div class="lets-talk">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="title aos-init" data-aos="fade-left" data-aos-delay="100">Got a Project?</p>
-                        <a class="btn-primary btn-lets-talk aos-init" data-aos="fade-right" data-aos-delay="200" title="Let's Talk" data-toggle="modal"  data-target="#all-offer">Let's Talk</a>
-                    </div>
-                </div>
+        </div>*/ ?>
+<div class="lets-talk">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <p class="title aos-init" data-aos="fade-left" data-aos-delay="100">Got a Project?</p>
+                <a class="btn-primary btn-lets-talk aos-init" data-aos="fade-right" data-aos-delay="200" title="Let's Talk" data-bs-toggle="modal" data-bs-target="#all-offer">Let's Talk</a>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 <div class="modal fade common-popup" id="all-offer" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close close-popup" data-dismiss="modal"></button>
                 <h2 class="modal-title">AWS Support</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="common-body">
@@ -448,7 +500,7 @@
                             <!--<form id="common-form" action="" method="post" role="form" style="display: block;">-->
                             <div class="form-group">
                                 <label for="comname">First Name <span class="required">*</span></label>
-                                {!! Form::text('var_Fname',  old('var_Fname') , array('maxlength' => 40, 'id' => 'var_Fname','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off','class' => 'form-control', 'placeholder' => 'Enter your first name')) !!}
+                                {!! Form::text('var_Fname', old('var_Fname') , array('maxlength' => 40, 'id' => 'var_Fname','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off','class' => 'form-control', 'placeholder' => 'Enter your first name')) !!}
                                 @if ($errors->has('var_Fname'))
                                 <span class="help-block">
                                     {{ $errors->first('var_Fname') }}
@@ -457,7 +509,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="comname">Last Name <span class="required">*</span></label>
-                                {!! Form::text('var_Lname',  old('var_Lname') , array('maxlength' => 40, 'id' => 'var_Lname', 'pattern'=>'[a-zA-Z\s]+','autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your last name')) !!}
+                                {!! Form::text('var_Lname', old('var_Lname') , array('maxlength' => 40, 'id' => 'var_Lname', 'pattern'=>'[a-zA-Z\s]+','autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your last name')) !!}
                                 @if ($errors->has('var_Lname'))
                                 <span class="help-block">
                                     {{ $errors->first('var_Lname') }}
@@ -466,7 +518,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="comemail">EMAIL <span class="required">*</span></label>
-                                {!! Form::text('var_email',  old('var_email') , array('maxlength' => 50, 'id' => 'var_email', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your email address')) !!}
+                                {!! Form::text('var_email', old('var_email') , array('maxlength' => 50, 'id' => 'var_email', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your email address')) !!}
                                 @if ($errors->has('var_email'))
                                 <span class="help-block">
                                     {{ $errors->first('var_email') }}
@@ -475,7 +527,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="comphone">Phone <span class="required">*</span></label>
-                                {!! Form::tel('var_phone',  old('var_phone') , array('maxlength' => 15, 'id' => 'var_phone', 'autocomplete' => 'off', 'class' => 'form-control', 'maxlength'=>"20", 'placeholder' => 'Enter your phone #' , 'onpaste'=>'return false;','ondrop'=>'return false;', 'onkeypress'=>'javascript: return KeycheckOnlyPhonenumber(event);')) !!}
+                                {!! Form::tel('var_phone', old('var_phone') , array('maxlength' => 15, 'id' => 'var_phone', 'autocomplete' => 'off', 'class' => 'form-control', 'maxlength'=>"20", 'placeholder' => 'Enter your phone #' , 'onpaste'=>'return false;','ondrop'=>'return false;', 'onkeypress'=>'javascript: return KeycheckOnlyPhonenumber(event);')) !!}
                                 @if ($errors->has('var_phone'))
                                 <span class="help-block">
                                     {{ $errors->first('var_phone') }}
@@ -484,26 +536,26 @@
                             </div>
                             <div class="form-group">
                                 <label for="comphone">Company</label>
-                                {!! Form::text('var_company',  old('var_company') , array('maxlength' => 80, 'id' => 'var_company','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your company')) !!}
+                                {!! Form::text('var_company', old('var_company') , array('maxlength' => 80, 'id' => 'var_company','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your company')) !!}
                             </div>
                             <div class="form-group">
                                 <label for="comphone">State</label>
-                                {!! Form::text('var_state',  old('var_state') , array('maxlength' => 50, 'id' => 'var_state','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your state/region')) !!}
+                                {!! Form::text('var_state', old('var_state') , array('maxlength' => 50, 'id' => 'var_state','pattern'=>'[a-zA-Z\s]+', 'autocomplete' => 'off', 'class' => 'form-control', 'placeholder' => 'Enter your state/region')) !!}
                             </div>
                             @if ($errors->has('var_state'))
-                                <span class="help-block">
-                                    {{ $errors->first('var_state') }}
-                                </span>
-                                @endif
-                                
+                            <span class="help-block">
+                                {{ $errors->first('var_state') }}
+                            </span>
+                            @endif
+
                             <div class="form-group">
                                 <label for="commessage">Message <span class="required">*</span></label>
-                                {!! Form::textarea('var_message', old('var_message') , array('maxlength' => 1000,  'class' => 'form-control', 'autocomplete' => 'off', 'placeholder' => 'Enter your message here...','cols' => '40', 'rows' => '3', 'id' => 'var_message', 'spellcheck' => 'true' )) !!}
+                                {!! Form::textarea('var_message', old('var_message') , array('maxlength' => 1000, 'class' => 'form-control', 'autocomplete' => 'off', 'placeholder' => 'Enter your message here...','cols' => '40', 'rows' => '3', 'id' => 'var_message', 'spellcheck' => 'true' )) !!}
                                 @if ($errors->has('var_message'))
                                 <span class="help-block">
                                     {{ $errors->first('var_message') }}
                                 </span>
-                                @endif   
+                                @endif
                             </div>
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
@@ -518,12 +570,17 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                            	<div class="form-group text-center">        
-                            		By clicking "Submit", you agree to our <a target="_blank" title="Privacy Policy" href="{{url('privacy-policy')}}">Privacy Policy</a>.
-                            	</div>
+                                <div class="form-group text-center">
+                                    {{-- <form action=""> --}}
+                                {{-- <input type="checkbox" id="" name="terms" required> --}}
+                                <label for="">By clicking "Submit", you agree to our <a target="_blank" title="Privacy Policy" href="{{url('privacy-policy')}}">Privacy Policy</a>.</label> 
+                                {{-- </form> --}}
+                                </div>
                             </div>
-                            <div class="form-group submit-btn-part">
-                                <input type="submit" name="Submit" id="Submit" tabindex="7" class="btn" value="Submit">
+                            <div class="aws-form-sub-btn text-center">
+                            <div class="form-group submit-btn-part primary-btn-round">
+                                <input type="submit" name="Submit" id="Submit" tabindex="7" class="btn text-white" value="Submit">
+                            </div>
                             </div>
                             {!! Form::close() !!}
                         </div>
@@ -536,10 +593,11 @@
     </div>
 </div>
 <script type="text/javascript">
-var onloadCallback = function() {
-    grecaptcha.render('html_element', {
-        'sitekey': '{{Config::get("Constant.GOOGLE_CAPCHA_KEY")}}'
-    });
-};</script>
+    var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+            'sitekey': '{{Config::get("Constant.GOOGLE_CAPCHA_KEY")}}'
+        });
+    };
+</script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 @endsection

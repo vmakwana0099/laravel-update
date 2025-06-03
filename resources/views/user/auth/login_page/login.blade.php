@@ -8,7 +8,7 @@
                 <div class="login-box-flex">
                     <div class="login-box-right">
                         <div class="login-box-right-head">
-                            <h3>Our Clients Speak for Us!</h3>
+                            <div class="clnt-rvw-hd">Our Clients Speak for Us!</div>
                         </div>
                         <div class="login-box-ratings">
                             <div class="login-box-ratings-box">
@@ -18,13 +18,13 @@
                                         <span class="cir-span-2"></span>
                                         <span class="cir-span-3"></span>
                                     </div>
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <ol class="carousel-indicators login-box-carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
                                         </ol>
                                         <div class="carousel-inner">
                                             <div class="login-box-carousel-item carousel-item active">
@@ -36,7 +36,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Shivang Kareliya</h2>
+                                                <div class="login-box-rtng-tittle">Shivang Kareliya</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>Exceptional help center! Quick and effective solutions provided with a friendly and knowledgeable team. They made my experience smooth and hassle-free. Definitely my go-to for assistance.</p>
@@ -47,7 +47,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>s2 TECH INDIA</h2>
+                                                <div class="login-box-rtng-tittle">s2 TECH INDIA</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>Considering hosting services, Host IT Smart stands out with its excellent quality, competitive pricing, and reliable support. When compared to Big Rock, Host IT Smart consistently delivers top-notch service at the best prices. Experience unmatched hosting with Host IT Smart for a seamless and cost-effective online presence.</p>
@@ -58,7 +58,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Laxmi Ayyavari</h2>
+                                                <div class="login-box-rtng-tittle">Laxmi Ayyavari</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>One of the best service providers. Extremely satisfied with their customer service and cost effectiveness. Using their services for quite a long and have never faced any delays in taking action against issues. Thanks much!! </p>
@@ -69,7 +69,7 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Urvashi Shrivastava</h2>
+                                                <div class="login-box-rtng-tittle">Urvashi Shrivastava</div>
                                             </div>
                                             <div class="login-box-carousel-item carousel-item">
                                                 <p>I have been using their services quite a lot for the last 6 months. I like the ease of use they provided while working with VPS. Also, In case of any issues, the resolution is quite fast.</p>
@@ -80,17 +80,10 @@
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                     <img src="../assets/images/new_img/star-rating-g.webp" alt="star-rating-g">
                                                 </div>
-                                                <h2>Divyanshu Agarwal</h2>
+                                                <div class="login-box-rtng-tittle">Divyanshu Agarwal</div>
                                             </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                        
                                     </div>
                                 </div>
 
@@ -136,7 +129,7 @@
                                     <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                     <img src="../assets/images/new_img/star-rating.webp" alt="star-rating">
                                 </div>
-                                <p>4.4 Ratings</p>
+                                <p>4.5 Ratings</p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +145,7 @@
                         <p class="mb-5">Log in to Your Account</p>
                     </div>
                   
-                    <form id="signin-form" action="{{ url('/front-login') }}" method="post" role="form" class="login-box-form">
+                    <form id="signin-form-page" action="{{ url('/front-login') }}" method="post" role="form" class="login-box-form">
                     {!! csrf_field() !!}  
 
                      <?php
@@ -254,7 +247,7 @@
                              <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-primary my-3" value=" Sign in">
                         </div> 
                         <div class="forgot-password-box">
-                            <a href="/forgot-password">Forgot Password?</a>
+                            <a href="https://manage.hostitsmart.com/password/reset">Forgot Password?</a>
                              {{-- <a href="javascript:;" tabindex="5" class="forgot-password">Forgot Password ?</a> --}}
                         </div>
                     </form>
@@ -287,7 +280,7 @@
 <!-- capthca-box-s -->
 <script>
   function check_captchaSignin() {
-        $('#signin-form').valid();
+        $('#signin-form-page').valid();
     }
 </script>
  <script>

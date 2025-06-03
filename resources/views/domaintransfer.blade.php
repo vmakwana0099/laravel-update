@@ -13,22 +13,22 @@ $currency_symbol = Config::get('Constant.sys_currency_symbol');
             <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active slide-3"> 
-                        <div class="banner-inner hosting-banner" style="background-image:url('{{ asset('caches/1920x494/2018-07-21-15-22-53-domain-transfer-bg.jpg') }}')">
-                            <div class="container">
-                                <div class="banner-content">
-            			            <div class="banner-image" data-aos="zoom-in" data-aos-delay="100"></div>
-            			            <h1 class="banner-title" data-aos="fade-up" data-aos-delay="200">Domain Transfer</h1>
-            			            <span class="banner-subtitle" data-aos="fade-up" data-aos-delay="300">The best domain prices and registrar service quality ever!  </span>
-            			            <span class="banner-text" data-aos="fade-up" data-aos-delay="400">Domain management draining you out of time and money? We offer cheap domain transfer and renewal Hassles at bay with the best domain deals and a round the clock support.</span>
-            
-            			            <div class="banner-button" data-aos="fade-up" data-aos-delay="500"> 
-            			                <a class="btn-primary" title="Web Hosting" href="{{ url('/web-hosting') }}">Web Hosting</a> 
-            			                <a class="btn-primary Click-to-Bottom" title="Validation SSL" href="{{ url('/ssl-certificates') }}">Validation SSL</a>
-            			            </div>
+                        <div class="banner-inner hosting-banner" style="background-image:url('https://www.hostitsmart.com/caches/1920x494/2018-07-21-15-22-53-domain-transfer-bg.jpg')">
+        			    <div class="container">
+        			        <div class="banner-content">
+        			            <div class="banner-image" data-aos="zoom-in" data-aos-delay="100"></div>
+        			            <h1 class="banner-title" data-aos="fade-up" data-aos-delay="200">Domain Transfer</h1>
+        			            <span class="banner-subtitle" data-aos="fade-up" data-aos-delay="300">The best domain prices and registrar service quality ever!  </span>
+        			            <span class="banner-text" data-aos="fade-up" data-aos-delay="400">Domain management draining you out of time and money? We offer cheap domain transfer and renewal Hassles at bay with the best domain deals and a round the clock support.</span>
         
+        			            <div class="banner-button" data-aos="fade-up" data-aos-delay="500"> 
+        			                <a class="btn-primary" title="Web Hosting" href="https://www.hostitsmart.com/web-hosting">Web Hosting</a> 
+        			                <a class="btn-primary Click-to-Bottom" title="Validation SSL" href="https://www.hostitsmart.com/ssl-certificates">Validation SSL</a>
         			            </div>
+        
         			        </div>
         			    </div>
+        			</div>
                     </div>
                     <div class="carousel-item slide1"> 
                         <video id="video" muted="" autoplay="autoplay" loop="loop" style="width:100%;" preload="auto">
@@ -486,7 +486,7 @@ $currency_symbol = Config::get('Constant.sys_currency_symbol');
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/web-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/web-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>

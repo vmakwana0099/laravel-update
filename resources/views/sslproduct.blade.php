@@ -499,7 +499,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[0]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="Pro1" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="Pro1" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -601,7 +601,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[1]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="pro2" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="pro2" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[1]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -697,7 +697,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[2]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="pro3" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="pro3" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[2]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -1175,7 +1175,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[0]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="pro7" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="pro7" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -1276,7 +1276,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[1]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="pro8" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="pro8" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[1]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -1375,7 +1375,7 @@
                                                     </span>
                                                     <span class="price-save">({{$ProductsPackageData[2]->varAdditionalOffer}})</span>
                                                 </div>
-                                                <div class="plan-logo-2"><img title="pro9" src="assets/images/comodo-PS.png" alt="comodo" /></div>
+                                                <div class="plan-logo-2"><img title="pro9" src="assets/images/comodo-PS.webp" alt="comodo" /></div>
                                             </div>
                                             @php $SpecificationData = explode("\n",$ProductsPackageData[2]->txtSpecification); @endphp
                                             <ul class="vps-plan-features">
@@ -1650,8 +1650,76 @@ $imageclass = '';
 </div>
 
 </div>
+<?php
+/*<div class="common-div cms">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cms">
+                <h4 class="common-title">And it does not cost a lot!</h4>
+                <p class="text-center"> We offer cheap ssl certificates in India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*/
+?>
+<?php /*
+<div class="what-we-offer" data-type="background" data-speed="7">
+    <div class="container">
+        @if(session()->has('frontlogin'))
+        @php
+        $renew_link = url('https://manage.hostitsmart.com/clientarea.php?action=domains');
+        $login_attr = '';
+        $target = 'target="_blank"';
+        @endphp
+        @else
+        @php
+        $login_attr = 'data-toggle="modal" data-target="#loginModal"';
+        $renew_link = 'javascript:;';
+        $target ='';
+        @endphp
+        @endif
 
-
+        <div class="offer-tabbing">
+            <h5 class="" data-aos="fade-up">What We Offer</h5>
+            <ul class="nav nav-pills nav-offer justify-content-center" data-aos="fade-up">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="Dedicated IP"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">Dedicated IP</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="SSL"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">SSL</span></a></li>
+                @else
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="CodeGuard"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">CodeGuard</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="Site Lock"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">Site Lock</span></a></li>
+                @endif
+            </ul>
+            <div class="tab-content aos-init" data-aos="fade-up" data-aos-delay="250">
+                 @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Dedicated IP</h3>
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at 1300/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>SSL</h3>
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at 730.88/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                </div>
+                @else
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>CodeGuard</h3>
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at 730/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Site Lock</h3>
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at 730/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div> */ ?>
 @endif
 @if($ProductBanner->id == 7)
 @include('template.vps-compare')
@@ -1712,14 +1780,16 @@ $imageclass = '';
     <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
     @include('template.'.$themeversion.'.faq-section')
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
-    <div class="hostingtype_div">
+    <div class="hostingtype_div head-tb-p-40">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     @if($ProductBanner->id == 4)
-                    <h3 class="title">Need to know something more? See if you find your answer here</h3>
+                    <h3 class="text_head text-center">Need to know something more? See if you find your answer here</h3>
                     @else
-                    <h3 class="title">Didn't hit your sweet spot?</h3>
+                    <div class="section-heading">
+                    <h3 class="text_head text-center">Didn't hit your sweet spot?</h3>
+                </div>
                     @endif
                 </div>
                 @php $p = 0; $class = ''; $color = ''; $info = ''; @endphp
@@ -1781,7 +1851,7 @@ $imageclass = '';
                             </div>
                         </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/web-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/web-hosting">Click to Host Today</a>
                         </div>
 
                     </div>

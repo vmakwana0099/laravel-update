@@ -270,9 +270,9 @@
                                                             <div class="col-12 col-sm-12 col-lg-3">
                                                                 <div class="ds-control-panel-left">
                                                                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                                        <a class="nav-link ds-control-panel-btn active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><img src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon" loading="eager"></a>
-                                                                        <a class="nav-link ds-control-panel-btn" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><img loading="eager" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
-                                                                        <a class="nav-link ds-control-panel-btn" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><img loading="eager" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
+                                                                        <a class="nav-link ds-control-panel-btn active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><img src="../assets/images/vps_hosting/webuzo_icon.webp" alt="webuzo_icon" loading="eager"></a>
+                                                                        <a class="nav-link ds-control-panel-btn" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><img loading="eager" src="../assets/images/vps_hosting/cpanel_icon.webp" alt="cpanel_icon"></a>
+                                                                        <a class="nav-link ds-control-panel-btn" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><img loading="eager" src="../assets/images/vps_hosting/plesk_icon.webp" alt="plesk_icon"></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -359,7 +359,7 @@
                                                                         <div id="accordion-box" class="accordion faq-wrap">
 
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box0" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box0" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Website Hosting</h3>
                                                                                 </a>
                                                                                 <div id="box0" class="collapse" data-parent="#accordion-box">
@@ -369,7 +369,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box1" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box1" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Running eCommerce Platforms</h3>
                                                                                 </a>
                                                                                 <div id="box1" class="collapse" data-parent="#accordion-box">
@@ -379,7 +379,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box2" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box2" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Database Management</h3>
                                                                                 </a>
                                                                                 <div id="box2" class="collapse" data-parent="#accordion-box">
@@ -389,7 +389,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box3" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box3" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For ERP Management</h3>
                                                                                 </a>
                                                                                 <div id="box3" class="collapse" data-parent="#accordion-box">
@@ -399,7 +399,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box4" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box4" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Application Hosting</h3>
                                                                                 </a>
                                                                                 <div id="box4" class="collapse" data-parent="#accordion-box">
@@ -409,7 +409,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box5" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box5" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Running Media Streaming</h3>
                                                                                 </a>
                                                                                 <div id="box5" class="collapse" data-parent="#accordion-box">
@@ -419,7 +419,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box6" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box6" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Data Analytics Software</h3>
                                                                                 </a>
                                                                                 <div id="box6" class="collapse" data-parent="#accordion-box">
@@ -429,7 +429,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box7" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box7" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Managing Data Storage</h3>
                                                                                 </a>
                                                                                 <div id="box7" class="collapse" data-parent="#accordion-box">
@@ -439,7 +439,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box8" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box8" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Managing IoT Backend Infrastructure</h3>
                                                                                 </a>
                                                                                 <div id="box8" class="collapse" data-parent="#accordion-box">
@@ -449,7 +449,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="card mb-3 faqs-card">
-                                                                                <a class="card-header collapsed" data-toggle="collapse" href="#box9" aria-expanded="false">
+                                                                                <a class="card-header collapsed" data-bs-toggle="collapse" href="#box9" aria-expanded="false">
                                                                                     <h3 class="mb-0 d-inline-block faqs-span">For Machine Learning</h3>
                                                                                 </a>
                                                                                 <div id="box9" class="collapse" data-parent="#accordion-box">
@@ -589,6 +589,21 @@
 <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
 @include('template.'.$themeversion.'.testimonial_section') 
 @include('template.'.$themeversion.'.faq-section')
+
+<div class="dy-money-back-grnt head-tb-p-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dy-money-back-grnt-box text-center">
+                            <h2>Your Email, Your Brand!</h2>
+                            <p>Get a professional email with Google Workspace for your business.</p>
+                            <a href="https://www.hostitsmart.com/email/google-workspace-india" title="I Want Google Workspace">I Want Google Workspace</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 @include('template.'.$themeversion.'.two-hosting-add')
 
 

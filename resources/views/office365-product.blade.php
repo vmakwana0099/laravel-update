@@ -1755,7 +1755,80 @@
         </div>
     </div>
 </div>
+<?php /*@if($ProductBanner->id != 8)
+<div class="what-we-offer" data-type="background" data-speed="7">
+    <div class="container">
+        @if(session()->has('frontlogin'))
+        @php
+        $renew_link = url('https://manage.hostitsmart.com/clientarea.php?action=domains');
+        $login_attr = '';
+        $target = 'target="_blank"';
+        @endphp
+        @else
+        @php
+        $login_attr = 'data-toggle="modal" data-target="#loginModal"';
+        $renew_link = 'javascript:;';
+        $target ='';
+        @endphp
+        @endif
 
+        <div class="offer-tabbing">
+            <h5 class="" data-aos="fade-up">What We Offer</h5>
+            <ul class="nav nav-pills nav-offer justify-content-center" data-aos="fade-up">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="Dedicated IP"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">Dedicated IP</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="SSL"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">SSL</span></a></li>
+                @else
+                <li><a data-toggle="pill" href="#offer1" class="justify-content-center active" title="CodeGuard"><span class="bg-white-tab"><i class="offer-1-icon align-self-center"></i></span><span class="offer-tabbing-name">CodeGuard</span></a></li>
+                <li><a data-toggle="pill" href="#offer2" class="justify-content-center" title="Site Lock"><span class="bg-white-tab"><i class="offer-1-icon offer-2-icon align-self-center"></i></span><span class="offer-tabbing-name">Site Lock</span></a></li>
+                @endif
+            </ul>
+            <div class="tab-content aos-init" data-aos="fade-up" data-aos-delay="250">
+                @if($ProductBanner->id == 15 || $ProductBanner->id == 12)
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Dedicated IP</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p>Account will be deployed on an IP which are not shared among other users.</p><span>Get a dedicated IP for stronger brand recognition at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.DEDICATED_IP_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>SSL</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SSL certificate encrytps the data between user and web-server, making it imposible to trace back user's sensitive information</p><span>Get the security of Positive SSL for single domain at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SSL_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } @endphp
+                </div>
+                @else
+                <div id="offer1" class="tab-pane active show">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>CodeGuard</h3>
+                         @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } else { @endphp 
+                        <p> Code guard monitors your website and gives you an option to restore in case you get something deleted accidently.</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.CODEGAURD_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                         @php } @endphp
+                </div>
+                <div id="offer2" class="tab-pane">
+                    <div class="offer-tab-text" data-aos="fade-up">
+                        <h3>Site Lock</h3>
+                        @php if(Config::get('Constant.sys_currency') == 'INR'){  @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_INR') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        @php } else { @endphp 
+                        <p>SiteLock automatically scans your website for malware 24x7 to ensure they are not being blocked or spammed</p><span>Get the protection of code guard at {!! Config::get('Constant.sys_currency_symbol') !!} {{ Config::get('Constant.SITELOCK_PRICE_USD') }}/yr</span> <a href="<?= $renew_link ?>" <?= $login_attr ?> <?= $target ?> class="btn-primary" title="Checkout" data-aos="fade-up" data-aos-delay="250">Checkout</a></div>
+                        
+                         @php } @endphp
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+@endif */?>
 @endif
 @if($ProductBanner->id == 7)
 @include('template.vps-compare')
@@ -2250,7 +2323,7 @@
                         </div>
                     </div>
                         <div class="product_offers_btn">
-                            <a href="{{ url('/web-hosting') }}">Click to Host Today</a>
+                            <a href="https://www.hostitsmart.com/web-hosting">Click to Host Today</a>
                         </div>
                     
                 </div>

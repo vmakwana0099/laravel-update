@@ -66,9 +66,10 @@
 
                         </div>                        
                     <div class="text-center">
-                      <a class="package-title text-center" href="{{url($value->productCatAlias.'/'.$value->productAlias)}}">  <h5 class="package-title text-center"> <span> {{ explode(' ', $value->varTitle)[0] }} </span>{{ explode(' ', $value->varTitle)[1] }} @isset(explode(' ', $value->varTitle)[2])
+                      <a class="package-title text-center" href="{{url($value->productCatAlias.'/'.$value->productAlias)}}"> 
+                    <div class="package-title-fw text-center"> <span> {{ explode(' ', $value->varTitle)[0] }} </span>{{ explode(' ', $value->varTitle)[1] }} @isset(explode(' ', $value->varTitle)[2])
     {{ explode(' ', $value->varTitle)[2] }}
-@endisset</h5></a>
+@endisset</div></a>
                     </div>
                        {!! $value->txtHomePageDesc !!}
                         {{-- <p class="small mb-2"> Economical</p>

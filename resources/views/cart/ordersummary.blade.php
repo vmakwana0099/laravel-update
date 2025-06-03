@@ -11,12 +11,89 @@
     
     <div class="card-right order-section">
             @foreach($cartData as $proKey => $item)   
+             {{-- @if(is_array($item) && isset($item['pid']) && !empty($item['pid']) && in_array($item['pid'], [495, 496, 497, 498, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 186, 187, 188]))
+                <script>
+                    function copyPromoCode() {
+                        var promoCodeInput = document.getElementById("promoCodeInput");
+                        promoCodeInput.select();
+                        document.execCommand("copy");
+                        var copyStatus = document.getElementById("copyStatus");
+                        copyStatus.innerHTML = "Promo code copied!";
+                        promoCodeInput.blur();
+                        setTimeout(() => copyStatus.innerHTML = '', 5000);
+                    }
+
+                    function closePopup() {
+                        if (!localStorage.getItem('modal_offers_bfs_23_closed')) {
+                            $('#modal_offers_bfs_23').modal('hide');
+                            localStorage.setItem('modal_offers_bfs_23_closed', 'true');
+                        }
+                    }
+
+                    function shouldShowPopup() {
+                        return localStorage.getItem('modal_offers_bfs_23_closed') !== 'true';
+                    }
+
+                    function showPopup() {
+                        if (shouldShowPopup()) {
+                            $('#modal_offers_bfs_23').modal('show');
+                        }
+                    }
+
+                    $(document).ready(function() {
+                        setTimeout(function() {
+                            var allowedURLs = ["https://www.hostitsmart.com/cart/billinginfo"];
+                            if (allowedURLs.includes(window.location.href.trim())) {
+                                showPopup();
+                            }
+                        }, 5000);
+                    });
+                </script>
+   
+            @endif  --}} 
                 @if(isset($item['producttype']))
                     @if($item['producttype'] == 'hosting')
                         <?php $h_domain = $item['domain']; ?> 
                     @endif
                 @endif       
-              
+
+                {{-- Determine promocode based on conditions --}}
+
+
+{{-- @php
+    $sharedPlans = ['495', '496', '497', '498', '421', '422', '423', '424', '186', '187', '188', '425', '426', '427', '428', '429', '430', '431', '432'];
+    $vpsPlans = ['465', '466', '463', '464', '467', '468', '469', '470', '471', '472', '473', '474', '475', '476', '477', '478', '483', '484', '485', '486', '487', '488', '489', '490', '479', '480', '481', '482'];
+    
+
+    
+    if (isset($item['producttype']) && !empty($item['producttype'])) {
+        if (isset($item['pid']) && !empty($item['pid']) && in_array($item['pid'], $sharedPlans)) {
+            $promocode = ($item['billingcycle'] == 'annually' || $item['billingcycle'] == 'biennially' || $item['billingcycle'] == 'triennially') ? 'BFSALE10' : '';
+        }
+    }
+@endphp
+
+@if(isset($promocode) && !empty($promocode))
+    <script type="text/javascript">
+        $('#txtpromo').val('{{ $promocode }}');
+        applyPromocode();
+    </script>
+@else
+    <script type="text/javascript">
+        removePromocode();
+    </script>
+@endif --}}
+
+  
+
+                {{-- @if(isset($h_domain))
+                    @if(isset($item['producttype']) && !empty($item['producttype']) && $item['producttype'] == 'domain' && $item['domain'] != $h_domain)
+                        <script type="text/javascript">
+                            $('#txtpromo').val('BFDEAL22');
+                            applyPromocode();
+                        </script>  
+                    @endif
+                @endif --}}
                 @if(isset($item['producttype']) && $item['producttype']=='hosting')
                     @php $requiredpromo="hosting"; @endphp
                 @endif
@@ -261,7 +338,7 @@
                             <?php
                             //<div class="ost_product-name red">Please provide Hostname.&nbsp;<a class="carterr" href="{{url('cart/newconfig?id=')}}{{$proKey}}&hostname=1">Click Here</a></div>    
                             ?>
-                            <div class="ost_product-name host_{{$proKey}}"><span class="red">Please provide Hostname.</span>&nbsp;@if($item['producttype'] == 'vps' || $item['producttype'] == 'dedicatedserver')<a class="carterr hostclick" data-id="{{$proKey}}" data-toggle="modal" data-target="#domainModel" title="Update Hostname" href="">Update Hostname</a>@endif</div>    
+                            <div class="ost_product-name host_{{$proKey}}"><span class="red">Please provide Hostname.</span>&nbsp;@if($item['producttype'] == 'vps' || $item['producttype'] == 'dedicatedserver')<a class="carterr hostclick" data-id="{{$proKey}}" data-bs-toggle="modal" data-bs-target="#domainModel" title="Update Hostname" href="">Update Hostname</a>@endif</div>    
                             @endif
                             <?php
                             /*@if(in_array($item['producttype'],$requiredHostFor) && empty($item['domain']))
@@ -289,6 +366,10 @@
                                                     
                                                     if(!empty($price->price) && $price->durationame == $item['billingcycle']){
                                                         $currPlanPrice = ($price->price / $price->duration);
+                                                    }
+
+                                                     if(isset($price->renewal_price) && $price->durationame == $item['billingcycle']){
+                                                        $renewalPrice = $price->renewal_price;
                                                     }
                                                 ?>
                                                     @if($price->price > 0)
@@ -350,7 +431,7 @@
                                 @php $newArrProductCycleForDiwali = [ 'annually', 'biennially', 'triennially']; @endphp --}}
                                 {{-- Diwali offer End --}}
 
-                           <div class="renew_price">Renews at <span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
+                           <div class="renew_price text-danger">Renews at <span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>
                            <?php /* {{round($currPlanPrice,2)}}/mo */ ?>
                            @if( $item['pid'] == 236 || $item['pid'] == 238 )
                                 {{round( $priceStr / $item['pricing'][$item['regperiod']]->duration,2 )}}/mo
@@ -360,8 +441,32 @@
                             {{-- Diwali offer End --}}
 
                            @else
-                                {{round($currPlanPrice,2)}}/mo
+                           @php 
+                                    $currentDate = new DateTime(); // Get the current date
+                                    $newDate = clone $currentDate; // Clone to avoid modifying the original object
+
+                                    if ($item['billingcycle'] == 'monthly') {
+                                        $newDate->modify('+1 month');
+                                    } elseif ($item['billingcycle'] == 'annually') {
+                                        $newDate->modify('+1 year');
+                                    }
+                                @endphp
+                                {{-- {{dd($renewalPrice,123)}} --}}
+                            @if(isset($renewalPrice))
+                            @php 
+                            // dd($item['pid']);
+                                $google_apps_product_id = array(117,116,206);
+                            @endphp
+                               @if($item['producttype'] == 'vps' || (in_array($item['pid'], $google_apps_product_id)))
+                                {{ round($renewalPrice, 2) }}/mo on {{ $newDate->format('d-m-Y') }}
+                                @else
+                                {{ round($renewalPrice, 2) }}/mo
+                                @endif 
+                            @else
+                                {{ round($currPlanPrice, 2) }}/mo 
+                            @endif
                            @endif
+                       
                            </div> 
                            @endif
                         </div>
@@ -410,7 +515,7 @@
                                         {
                                             $serverconfigHtmlStr .= '<div class="cart-box-1 row">
                                             <div class="reminder_div col-sm-9 col-9">
-                                                <span class="reminder_title">'.$field['name'].'</span> '.$opt['name'].' @ FREE 
+                                                <span class="reminder_title">'.$field['name'].'</span> '.$opt['name'].' 
                                             </div>
                                         </div>';        
                                         }
@@ -432,7 +537,7 @@
                 <div class="empty_cart_section">
                     <div class="row">
                         <div class="disclaimers_link col-sm-6 col-6">
-                            <a title="View offer disclaimers" href="javascript:void(0)" data-toggle="modal" data-target="#disclaimer-popup" title="View offer disclaimers">View offer disclaimers</a>
+                            <a title="View offer disclaimers" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#disclaimer-popup" title="View offer disclaimers">View offer disclaimers</a>
                         </div>
                         <div class="empty_cart_btn col-sm-6 col-6">
                             <a onclick="emptycart();" title="Empty Cart" class="delete_btn"><i class="delete-i sprite-image"></i> Empty Cart</a>
@@ -656,7 +761,7 @@
                             <div class="tax-cart d-flex">
                                 <span class="taxes">
                                 Taxes &amp; Fees
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
                                     <i class="notify sprite-image" title="18% GST will be applicable."></i>
                                     <ul class="dropdown-menu tooltip-link-show">
                                         <li>18% GST will be applicable.</li>
@@ -695,8 +800,8 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close close-popup" data-dismiss="modal"></button>
                 <h2 class="modal-title" title="Disclaimers">Disclaimers</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="deal-body">
@@ -717,7 +822,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">HostITsmart Says</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
@@ -729,7 +834,7 @@
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="hostpopup">Ok</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="hostpopup">Ok</button>
         </div>
         
       </div>
@@ -742,7 +847,7 @@
             <div class="modal-content">
 
                 <div class="ofads-cross_btn">
-                    <button type="button" class="close" data-dismiss="modal" onclick="closePopup()" aria-label="Close" id="closeButton" title="close">
+                    <button type="button" class="close" data-bs-dismiss="modal" onclick="closePopup()" aria-label="Close" id="closeButton" title="close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
