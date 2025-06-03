@@ -1,0 +1,499 @@
+.payment-banner {
+    background-position: top 0 left 0;
+}
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/domain_search/banner-bg-hosting.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content{
+    text-align: center;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.inner_container {
+    padding-top: 25px;
+}
+.tld-content .registration .title {
+    background-color: #125baa;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    padding: 10px 50px;
+}
+.tld-content .registration .title h3{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    padding: 0;
+    margin: 0;
+}
+.tld-content .registration .title h3 .domain-reg{
+    height: 45px;
+    width: 45px;
+    background-position: -100px 5px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.tld-content .tld-sprite {
+    background-image: url(../images/tld_sprite.png);
+    background-repeat: no-repeat;
+}
+.tld-content .content-box {
+    border: 1px solid rgba(204, 204, 204, .21);
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, .34);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.tld-content .inner-title-common h4 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #18b35c;
+    padding: 0 32px 10px;
+    position: relative;
+    margin: 0;
+}
+.tld-content .inner-title-common h4 .domain-reg2 {
+    height: 40px;
+    width: 30px;
+    background-position: -10px 4px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+}
+
+.tld-content .tld-sprite {
+    background-image: url(../images/tld_sprite.png);
+    background-repeat: no-repeat;
+}
+.tld-content .inner-title-common h4 .domain-name{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    color: #03305d;
+}
+.tld-content .instruction {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: #262626;
+}
+.tld-content .registration .registration-content .search-domain-main{
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0 5px;
+}
+.tld-content .registration .registration-content .search-domain-main .url-starting {
+    position: absolute;
+    background: #c1c1c1;
+    color: #262626;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    padding: 8px 12px;
+}
+.tld-content .registration .registration-content .search-domain-main input {
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: #262626;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    line-height: 25px;
+    padding: 10px 90px;
+}
+.tld-content .registration .registration-content .search-domain-main .url-ending {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: #262626;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 8px 12px;
+}
+.tld-content .pre-register {
+    margin: 30px 0;
+}
+.tld-content .pre-register .pre-register-btn {
+    text-align: center;
+    width: 100%;
+    background-color: #18b35c;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    display: block;
+    border-radius: 5px;
+    color: #fff;
+    transition: all .6s ease;
+    line-height: 150%;
+    padding: 6px;
+    border: none;
+}
+.tld-content .registration .registration-content .text-content {
+    margin: 0 0 20px;
+}
+.tld-content .registration .registration-content .text-content .info-tip {
+    display: inline-block;
+    border: 1px solid #666;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    color: #262626;
+}
+.tld-content .registration .registration-content .text-content .info-text{
+    font-size: 14px;
+    color: #262626;
+    letter-spacing: .5px;
+    display: inline;
+    padding-left: 28px;
+}
+.tld-content .registration .registration-content .text-content .info-text a {
+    color: #03305d;
+}
+.tld-content .registration .registration-content .more-domains a {
+    padding: 0 28px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .6px;
+    color: #03305d;
+    transition: all .6s ease;
+}
+.tld-content .registration .registration-content .more-domains a:before {
+    content: '\f1de';
+    font-family: "fontawesome";
+    color: grey;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.tld-content .registration_price {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #e4e4e4;
+}
+
+.tld-content .mb-20 {
+    margin-bottom: 20px;
+}
+.tld-content .registration_price h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    background: #03305d;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+}
+.tld-content .registration_price .info{
+    background: url(../images/wp_hosting_deal.png) 0 113px no-repeat #F8FBFE;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.tld-content .registration_price .info .selected-domain {
+    background: url(../images/domain-name-bg.png) center center no-repeat;
+    width: 120px;
+    height: 121px;
+    position: relative;
+    margin: 0 auto;
+}
+.tld-content .registration_price .info .selected-domain .sd-name {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    padding: 48px 0;
+    display: flex;
+    justify-content: center;
+}
+.tld-content .registration_price .info .price {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.tld-content .registration_price .info .price .rupees_ico{
+    font-style: normal;
+    font-family: " Rubik";
+    color: #18b35c;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+}
+.tld-content .registration_price .info .price .num {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 100%;
+    display: inline-block;
+    color: #18b35c;
+    vertical-align: bottom;
+}
+.tld-content .registration_price .info .price .year {
+    font-size: 14px;
+    font-weight: 400;
+    color: #18b35c;
+}
+.tld-content .registration_price .info .border_btn {
+    color: #262626;
+    border: 1px solid #18b35c;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto;
+    display: table;
+    padding: 10px 25px;
+}
+
+.tld-content .bulk-domain-section {
+    padding-top: 40px;
+}
+.tld-content .inner-title-common h4 .domain-reg4 {
+    height: 40px;
+    width: 30px;
+    background-position: -63px 4px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+}
+
+.tld-content .tld-sprite {
+    background-image: url(../images/tld_sprite.png);
+    background-repeat: no-repeat;
+}
+.tld-content .domain-info-section .instruction {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: #262626;
+    display: block;
+}
+.tld-content .bulk-domain-section .search-bulk-domain-main textarea{
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    display: block;
+    margin: 30px 0;
+    width: 100%;
+    height: 150px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    padding: 6px;
+}
+.tld-content .left_panel .extension_part{
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8fbfe;
+    padding-bottom: 5px;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+}
+.tld-content .left_panel .extension_part h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    background: #f0f0f0;
+    margin: 0;
+    color: #262626;
+    padding: 15px;
+}
+.tld-content .left_panel .extension_part .extension_list {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    height: 250px;
+}
+.cms ul, .cms ul li {
+    position: relative;
+}
+.cms ul li {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.cms ol li, .cms strong, .cms ul li {
+    color: #262626;
+}
+.cms .f_weight_500, .cms ol li, .cms ul li {
+    font-weight: 500;
+}
+.tld-content .left_panel .extension_part .extension_list ul li:before {
+    position: absolute;
+    content: "\f145";
+    font-family: "fontawesome";
+    width: 15px;
+    height: 14px;
+    background: unset;
+    left: 0;
+    top: 2px;
+    color: #01254b;
+    font-weight: 800;
+}
+.cms a {
+    color: #18b35c;
+    font-size: 16px;
+}
+.cms a, .cms p{
+    font-weight: 500;
+}
+.tld-content .left_panel .all_domain_div {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8fbfe;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+}
+.tld-content .left_panel .all_domain_div h3{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    background: #f0f0f0;
+    margin: 0;
+    color: #262626;
+    padding: 15px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list {
+    padding: 20px 15px !important;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li {
+    padding-left: 40px;
+    margin-top: 0;
+    margin-bottom: 23px;
+    position: relative;
+    color: #4d4d4d;
+    font-size: 13px .5;
+    font-weight: 500;
+    line-height: 150%;
+    display: block;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.domainforward_icon {
+    width: 27px;
+    height: 28px;
+    background-position: 0 -1px;
+}
+
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite {
+    background-image: url(../images/domain_sprite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.urlmasking_icon{
+    width: 28px;
+    height: 27px;
+    background-position: -39px -1px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.dns_icon {
+    width: 28px;
+    height: 27px;
+    background-position: -80px -2px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.protection_icon {
+    width: 28px;
+    height: 27px;
+    background-position: -120px -1px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.bulk_icon {
+    width: 28px;
+    height: 28px;
+    background-position: -161px -1px;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.controlpanel_icon {
+    width: 27px;
+    height: 28px;
+    background-position: -200px 0;
+}
+.tld-content .left_panel .all_domain_div ul.domain_list li .domain_sprite.support_icon {
+    width: 27px;
+    height: 28px;
+    background-position: -240px -1px;
+}
+.tld-content .left_panel .payment-method-bar {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8fbfe;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+}
+.tld-content .left_panel .payment-method-bar h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    background: #f0f0f0;
+    margin: 0;
+    color: #262626;
+    padding: 15px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain {
+    display: block;
+    margin: 20px auto 10px;
+    text-align: center;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list {
+    display: block;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon1 {
+    background-position: -5px -6px;
+}
+
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons {
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    background: url(../images/payment-methods-icons-sidebar.png) no-repeat;
+    margin: 0 10px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon2{
+    background-position: -70px -4px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon3{
+    background-position: -138px -4px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon4{
+    background-position: 0 -40px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon5 {
+    background-position: -70px -40px;
+}
+.tld-content .left_panel .payment-method-bar .pm-listmain .payment-icons-list .payment-icons.pay-icon6 {
+    background-position: -140px -40px;
+}

@@ -1,0 +1,336 @@
+
+.cstmr-rtg-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.hm-bnnr-cstmr-rtg {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px 0 20px
+}
+
+.cst-rtg-star img {
+    max-width: 25px;
+    margin: 12px 0
+}
+
+.cst-rtg-data p {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: #28282a
+}
+
+#slider,
+.vps_main vps_hosting_banner .carousel-inner {
+    height: inherit
+}
+
+.btn-started {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0;
+    background-color: #115baa;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: .6s;
+    display: inline-block
+}
+
+.btn-started:hover {
+    background-color: #007aff;
+    color: #fff
+}
+
+.vps_bnnr {
+    padding: 0 4rem;
+    background-color: #F0F9FF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner_left_s h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3838ff;
+    text-align: left;
+    background: #eaeaff;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 25px;
+}
+
+.banner_left_s h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #28282a;
+    margin: 10px 0 10px;
+}
+
+p.banner_data_txt {
+    font-size: 18px;
+    font-weight: 400;
+    color: #28282a;
+}
+
+.banner-left-s-features {
+    margin: 30px 0;
+}
+
+.banner-left-features-title {
+    font-size: 18px;
+    color: #28282a;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.banner-left-s-features p,
+.banner-pricing-box {
+    font-weight: 400;
+    color: #28282a;
+    font-size: 18px;
+}
+
+.banner-left-s-features p {
+    margin-bottom: 10px;
+}
+
+.banner-left-s-features p i {
+    margin-right: 10px;
+    color: #28282a;
+}
+
+.banner-pricing-box {
+    margin: 10px 0
+}
+
+.banner-pricing-box span.price {
+    font-size: 55px;
+    color: #115baa;
+    font-weight: 700
+}
+
+.banner-pricing-box span.r-icon {
+    font-size: 22px;
+    color: #115baa;
+    font-weight: 600
+}
+
+.banner-pricing-box span.free-offer {
+    font-weight: 600;
+    color: #28282a
+}
+
+
+.banner-left-s-features p span {
+    font-size: 18px;
+    font-weight: 900;
+    color: #28282a
+}
+
+p.banner-tooltip .free_domain_bnner_tltp {
+    font-weight: 700 !important
+}
+
+p.banner-tooltip {
+    position: relative
+}
+
+.free_domain_bnner_tltp {
+    z-index: 1;
+    cursor: pointer;
+    color: #000 !important;
+    font-weight: 600 !important;
+    display: inline-block;
+    position: relative
+}
+
+span.domain_tooltip_bnnr {
+    position: absolute;
+    background: #444;
+    color: #fff;
+    font-size: 14px !important;
+    padding: 15px 20px;
+    text-align: center;
+    bottom: 30px;
+    border-radius: 10px;
+    margin: auto;
+    visibility: hidden;
+    height: auto;
+    font-weight: 400 !important;
+    left: -20px;
+    z-index: 1;
+    width: 580px
+}
+
+.free_domain_bnner_tltp:hover span.domain_tooltip_bnnr {
+    visibility: visible;
+    color: #fff !important
+}
+
+span.domain-tltp-price {
+    color: #fff !important;
+    display: block;
+    font-size: 16px !important;
+    font-weight: 700 !important
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+    padding-top: 30px
+}
+
+
+.bnnr-wbh-right.bnnr-wbh-cstm {
+  position: absolute;
+  bottom: 0;
+}
+
+.price-box-bnr {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.price-box-bnr span {
+  font-size: 32px;
+  color: #3838ff;
+  font-weight: 700;
+}
+
+
+
+
+
+/* new-review-s */
+.review-top-main {
+    background: #2a5691;
+    text-align: center;
+}
+.review-top-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+}
+.review-star-icon {
+    margin: 0 10px;
+}
+.review-star-icon img {
+    margin: 0px 3px;
+}
+
+/* new-review-e */
+
+@media only screen and (max-width:1600px) {
+    .banner-left-s-features p {
+        font-size: 16px;
+        margin: 8px 0
+    }
+    .banner-left-s-features p span,
+    .banner-pricing-box {
+        font-size: 16px
+    }
+    .banner-pricing-box span.price {
+        font-size: 40px;
+        font-weight: 800
+    }
+    .vps_bnnr {
+        padding: 40px 60px
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .banner_left_s h2{
+        font-size: 28px;
+    }
+    .bnnr-wbh-right.bnnr-wbh-cstm img{
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width:1099px) {
+    .btn-started,
+    .chat-box-btn {
+        font-size: 16px;
+        padding: 10px 20px
+    }
+}
+
+
+@media only screen and (max-width:992px) {
+    .banner-black-friday-offer-23-hp-main {
+        padding: 3rem 4rem
+    }
+    .bnnr-wbh-right {
+        padding-top: 40px
+    }
+    .bnnr-wbh-right.bnnr-wbh-cstm {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .vps_bnnr {
+        background-position: top
+    }
+    span.domain_tooltip_bnnr {
+        width: 280px;
+        font-size: 12px !important;
+        top: 30px;
+        bottom: inherit
+    }
+    
+    .banner_left_s h1, p.banner_data_txt{
+        font-size: 16px;
+    }
+    .banner_left_s h2{
+        font-size: 28px;
+    }
+    .banner-left-s-features{
+        margin: 10px 0 20px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .home_page_wbh_bnnr {
+        padding: 0
+    }
+    .vps_bnnr {
+        padding: 40px 10px 0;
+    }
+    .cst-rtg-tittle {
+        min-height: 40px !important
+    }
+    .cst-rtg-tittle img {
+        width: 100px !important
+    }
+    .cst-rtg-star img {
+        width: 16px !important
+    }
+    .hm-bnnr-cstmr-rtg {
+        padding: 40px 0 20px
+    }
+    
+    .review-top-main{
+        display: none;
+    }
+}

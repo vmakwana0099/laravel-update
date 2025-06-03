@@ -1,0 +1,449 @@
+
+
+
+.cstmr-rtg-main {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column
+
+}
+
+
+
+.hm-bnnr-cstmr-rtg {
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    flex-direction: row;
+
+    padding: 60px 0 40px
+
+}
+
+
+
+.cst-rtg-star img {
+
+    max-width: 25px;
+
+    margin: 12px 0
+
+}
+
+
+
+.cst-rtg-data p {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    letter-spacing: .4px;
+
+    color: #080808;
+
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+.black_friday_bnnr {
+
+    padding: 0 4rem;
+
+    background-image: url(/assets/images/Homepage/home-banner-bg.webp);
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center
+
+}
+
+
+
+.banner_left_s h1 {
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #3838ff;
+    text-align: left;
+    background: #eaeaff;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+}
+
+
+
+.banner_left_s h2 {
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    color: #080808;
+
+    margin: 10px 0 10px;
+
+}
+
+.bnnr-wbh-right.bnnr-wbh-cstm img {
+
+    max-width: 100%;
+
+    width: 650px;
+
+}
+
+p.banner_data_txt {
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #080808
+
+}
+
+
+
+.banner-left-s-features {
+
+    margin: 30px 0
+
+}
+
+
+
+.banner-left-s-features h3 {
+
+    font-size: 18px;
+
+    color: #080808;
+
+    font-weight: 600;
+
+    margin-bottom: 25px
+
+}
+
+
+
+.banner-left-s-features p,
+
+.banner-pricing-box {
+
+    font-weight: 400;
+
+    color: #080808;
+
+    font-size: 18px;
+
+}
+
+
+
+.banner-left-s-features p {
+
+    margin-bottom: 20px
+
+}
+
+.bl-fr-offr p {
+
+    color: #fff;
+
+    font-size: 18px;
+
+}
+
+.bl-fr-offr p span {
+
+    font-weight: 700;
+
+    font-size: 32px;
+
+}
+
+.banner-left-s-features p i {
+
+    margin-right: 10px;
+
+    color: #080808;
+
+}
+
+
+
+.banner-pricing-box {
+
+    margin: 10px 0
+
+}
+
+
+
+.banner-pricing-box span.price {
+
+    font-size: 55px;
+
+    color: #115baa;
+
+    font-weight: 700
+
+}
+
+
+
+.banner-pricing-box span.r-icon {
+
+    font-size: 22px;
+
+    color: #115baa;
+
+    font-weight: 600
+
+}
+
+
+
+.banner-pricing-box span.free-offer {
+
+    font-weight: 600;
+
+    color: #080808
+
+}
+
+
+
+
+.banner-left-s-features p span {
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    color: #080808
+
+}
+
+
+
+
+
+/* new-review-s */
+.review-top-main {
+    background: #2a5691;
+    text-align: center;
+}
+.review-top-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+}
+.review-star-icon {
+    margin: 0 10px;
+}
+.review-star-icon img {
+    margin: 0px 3px;
+}
+
+/* new-review-e */
+
+
+
+
+@media only screen and (max-width:1600px) {
+
+    .banner-left-s-features p {
+
+        font-size: 16px;
+
+        margin: 8px 0
+
+    }
+
+    .banner-left-s-features p span,
+
+    .banner-pricing-box {
+
+        font-size: 16px
+
+    }
+
+    .banner-pricing-box span.price {
+
+        font-size: 40px;
+
+        font-weight: 800
+
+    }
+
+    .black_friday_bnnr {
+
+        padding: 40px 60px
+
+    }
+
+}
+@media only screen and (max-width: 1399px) {
+    .banner_left_s h2{
+        font-size: 28px;
+    }
+    .bnnr-wbh-right.bnnr-wbh-cstm img{
+        width: 450px;
+    }
+}
+
+
+
+@media only screen and (max-width:1099px) {
+
+    .btn-started,
+
+    .chat-box-btn {
+
+        font-size: 16px;
+
+        padding: 10px 20px
+
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:992px) {
+
+    .banner-black-friday-offer-23-hp-main {
+
+        padding: 3rem 4rem
+
+    }
+
+    .bnnr-wbh-right {
+
+        padding-top: 0px
+
+    }
+
+}
+
+
+
+@media only screen and (max-width:768px) {
+
+    .black_friday_bnnr {
+
+        background-position: top
+
+    }
+
+    span.domain_tooltip_bnnr {
+
+        width: 280px;
+
+        font-size: 12px !important;
+
+        top: 30px;
+
+        bottom: inherit
+
+    }
+
+}
+
+
+
+@media only screen and (max-width:767px) {
+
+    .home_page_wbh_bnnr {
+
+        padding: 0
+
+    }
+
+    .black_friday_bnnr {
+
+        padding: 20px
+
+    }
+
+    .cst-rtg-tittle {
+
+        min-height: 40px !important
+
+    }
+
+    .cst-rtg-tittle img {
+
+        width: 100px !important
+
+    }
+
+    .cst-rtg-star img {
+
+        width: 16px !important
+
+    }
+
+    .bnnr-wbh-right {
+
+        display: block
+
+    }
+
+    .hm-bnnr-cstmr-rtg {
+
+        padding: 40px 0 20px
+
+    }
+
+    .banner_left_s h2{
+
+        font-size: 26px;
+
+    }
+    .review-top-main{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width:567px) {
+
+    .banner-left-s-features{
+
+        display: none;
+
+    }
+
+}

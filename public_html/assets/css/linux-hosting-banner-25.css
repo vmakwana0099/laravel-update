@@ -1,0 +1,284 @@
+
+
+
+.cstmr-rtg-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.hm-bnnr-cstmr-rtg {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px 0 40px
+}
+
+.cst-rtg-star img {
+    max-width: 25px;
+    margin: 12px 0
+}
+
+.cst-rtg-data p {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #28282a;
+    margin-bottom: 0;
+}
+
+.black_friday_bnnr {
+    padding: 0 4rem;
+    background-image: url(/assets/images/linux-hosting/lnx-htng-bnr-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.banner_left_s h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #080808;
+    text-align: left;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 24px;
+}
+
+.banner_left_s h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 10px 0 10px;
+}
+.bnnr-wbh-right.bnnr-wbh-cstm img {
+    max-width: 100%;
+    width: 650px;
+}
+p.banner_data_txt {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000
+}
+
+.banner-left-s-features {
+    margin: 30px 0
+}
+
+.banner-left-s-features h3 {
+    font-size: 18px;
+    color: #28282a;
+    font-weight: 600;
+    margin-bottom: 25px
+}
+
+.banner-left-s-features p,
+.banner-pricing-box {
+    font-weight: 400;
+    color: #000;
+    font-size: 18px;
+}
+
+.banner-left-s-features p {
+    margin-bottom: 10px
+}
+.bl-fr-offr p {
+    color: #fff;
+    font-size: 18px;
+}
+.bl-fr-offr p span {
+    font-weight: 700;
+    font-size: 32px;
+}
+.banner-left-s-features p i {
+    margin-right: 10px;
+    color: #000;
+}
+
+.banner-pricing-box {
+    margin: 10px 0
+}
+
+.banner-pricing-box span.price {
+    font-size: 55px;
+    color: #115baa;
+    font-weight: 700
+}
+
+.banner-pricing-box span.r-icon {
+    font-size: 22px;
+    color: #115baa;
+    font-weight: 600
+}
+
+.banner-pricing-box span.free-offer {
+    font-weight: 600;
+    color: #28282a
+}
+
+
+.banner-left-s-features p span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+.lnx-bnnr-tltp-rlt:hover .lnx-bnnr-tooltip {
+    visibility: visible;
+    color: #28282a !important;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.lnx-bnnr-tltp-rlt{
+    z-index: 1;
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 1px dashed #28282a;
+    position: relative;
+}
+span.lnx-bnnr-tooltip {
+    bottom: -50px;
+    visibility: hidden;
+    height: auto;
+    right: -320px;
+    width: 300px;
+    position: absolute;
+    background: #fff;
+    color: #fff;
+    font-size: 14px !important;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: auto;
+    font-weight: 400;
+    z-index: 1;
+    opacity: 0;
+    transition: .4sease-in-out;
+    transform: translate3d(0, -10px, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+span.lnx-bnnr-tooltip img {
+    margin-bottom: 10px;
+}
+span.lnx-bnnr-tooltip::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    left: -8px;
+    bottom: 54px;
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+
+/* new-review-s */
+.review-top-main {
+    background: #2a5691;
+    text-align: center;
+}
+.review-top-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 0;
+}
+.review-star-icon {
+    margin: 0 10px;
+}
+.review-star-icon img {
+    margin: 0px 3px;
+}
+
+/* new-review-e */
+@media only screen and (max-width:1600px) {
+    .banner-left-s-features p {
+        font-size: 16px;
+        margin: 8px 0
+    }
+    .banner-left-s-features p span,
+    .banner-pricing-box {
+        font-size: 16px
+    }
+    .banner-pricing-box span.price {
+        font-size: 40px;
+        font-weight: 800
+    }
+    .black_friday_bnnr {
+        padding: 40px 60px
+    }
+}
+@media only screen and (max-width: 1399px) {
+    .banner_left_s h2{
+        font-size: 28px;
+    }
+    .bnnr-wbh-right.bnnr-wbh-cstm img{
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .banner-black-friday-offer-23-hp-main {
+        padding: 3rem 4rem
+    }
+    .bnnr-wbh-right {
+        padding-top: 0px
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .black_friday_bnnr {
+        background-position: top
+    }
+    span.domain_tooltip_bnnr {
+        width: 280px;
+        font-size: 12px !important;
+        top: 30px;
+        bottom: inherit
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .home_page_wbh_bnnr {
+        padding: 0
+    }
+    .black_friday_bnnr {
+        padding: 30px 10px;
+    }
+    .cst-rtg-tittle {
+        min-height: 40px !important
+    }
+    .cst-rtg-tittle img {
+        width: 100px !important
+    }
+    .cst-rtg-star img {
+        width: 16px !important
+    }
+    .bnnr-wbh-right {
+        display: block
+    }
+    .hm-bnnr-cstmr-rtg {
+        padding: 40px 0 20px
+    }
+   
+    .banner_left_s h2{
+        font-size: 26px;
+    }
+    
+    .review-top-main{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:567px) {
+    .banner-left-s-features{
+        display: none;
+    }
+}

@@ -1,0 +1,263 @@
+.hosting-features-icon {
+    width: 56px;
+    height: 56px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    transition: all .3s ease-in-out;
+    -webkit-transform: rotateY(0);
+    -khtml-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+    transition-duration: .8s;
+    background-image: url(../images/hosting-features-sprite-image.png);
+    margin: 0 auto;
+}
+.hosting-features-icon.cpanel {
+    background-position: -1130px 0;
+    width: 56px;
+}
+.hosting-features-icon.support24 {
+    background-position: -994px 0;
+    width: 56px;
+}
+.hosting-features-icon.backups {
+    background-position: -206px 0;
+    width: 56px;
+}
+.hosting-features-icon.infrastructure {
+    background-position: -798px 0;
+    width: 55px;
+}
+.hosting-features-icon.scanning {
+    background-position: -1060px 0;
+    width: 60px;
+}
+.hosting-features-icon.email {
+    background-position: -402px 0;
+    width: 56px;
+}
+.web-builder-websites-icon {
+    
+    background: url("{{url('/')}}/assets/images/hosting-sprite.png") 0 6px no-repeat;
+    width: 66px;
+    margin: auto;
+    height: 60px;
+    display: block;
+}
+
+.i_app_image {
+    margin: 30px 0;
+}
+
+.vps-plan-main .plan-second-title {
+    display: table;
+    color: #333;
+    font-size: 16px;
+    margin: 10px auto 26px;
+}
+.la {
+    font: normal normal normal 16px / 1 LineAwesome;
+    font-size: inherit;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+.ac-switch.ac-switch__icon input:empty~span:after, .la {
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+}
+.fa, .fa-stack, .la, .la-stack {
+    display: inline-block;
+}
+.fa, .la {
+    -moz-osx-font-smoothing: grayscale;
+}
+.vps-plan-main .table-relative {
+    width: 100%;
+}
+.vps-plan-main .table-relative .table-plan-vps {
+    border: none;
+    width: 99.99%;
+}
+.vps-plan-main .table-relative .table-plan-vps tr:nth-of-type(odd) {
+    background: 0 0;
+}
+
+body table tr th, body table tr:nth-of-type(odd) {
+    background-color: #f0f0f0;
+}
+.vps-plan-main .table-relative .table-plan-vps tr th {
+    background: #e8f4ff;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+body table tr th {
+    border-bottom: 1px solid #e0e0e0;
+    color: #000;
+}
+body table tr td, body table tr th {
+    font-size: 16px;
+    line-height: 150%;
+    color: #a6a6a6;
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body table tr td, body table tr th {
+    font-weight: 400;
+    font-style: normal;
+}
+body table tr th, body table tr:nth-of-type(odd) {
+    background-color: #f0f0f0;
+}
+.vps-plan-main .table-relative .table-plan-vps tr th img.hostitsmart-logo {
+    width: 110px;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.vps-plan-main .table-relative .table-plan-vps tr th img {
+    height: auto;
+    vertical-align: middle;
+    filter: grayscale(100%);
+}
+.business_section .business-image img, .vps-plan-main .table-relative .table-plan-vps tr th img {
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.vps-plan-main .table-relative .table-plan-vps tr td.boldfonts {
+    font-weight: 600;
+    text-align: left;
+    padding-left: 27px;
+    font-size: 15px;
+    color: #333;
+}
+
+.vps-plan-main.compare-high .table-relative .table-plan-vps tr td {
+    font-size: 15px;
+}
+.vps-plan-main .table-relative .table-plan-vps tr td {
+    border: none;
+    border-bottom: 1px solid #f0f8ff;
+    height: 76px;
+    vertical-align: middle;
+    color: #333;
+    font-size: 16px;
+    border-right: 1px solid #f0f8ff;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+}
+.vps-plan-main .table-relative .table-plan-vps tr td.bg_blue {
+    background: #115baa;
+    color: #fff;
+    border: none;
+}
+.vps-plan-main .table-relative .table-plan-vps tr td.bg_blue i {
+    color: #fff;
+}
+
+.vps-plan-main .table-relative .table-plan-vps tr td i {
+    font-size: 30px;
+    color: #18b35c;
+}
+.fa {
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-check-circle:before {
+    content: "";
+}
+.vps-plan-main .table-relative .table-plan-vps tr td span.cancel-ic {
+    width: 22px;
+    height: 22px;
+    background-position: -132px -40px;
+    position: absolute;
+    left: 41%;
+    top: 36%;
+}
+
+.vps-plan-main .table-relative .table-plan-vps tr td span {
+    color: inherit;
+    font-size: inherit;
+}
+.sprite-image {
+    background-image: url(../images/sprite-image.png);
+    background-repeat: no-repeat;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td {
+    font-size: 14px;
+    max-width: 85px;
+    height: 58px;
+    border: none;
+    padding: 12px 0;
+}
+.vps-plan-main .table-relative .table-plan-vps tr td.boldfonts {
+    font-weight: 600;
+    text-align: left;
+    padding-left: 27px;
+    font-size: 15px;
+    color: #333;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td a {
+    color: #333;
+    border: 1px solid #18b35c;
+    display: block;
+    font-size: 14px;
+    border-right: none;
+    min-width: 115px;
+    font-weight: 500;
+    padding: 3px 9px;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td.border-radius a {
+    background: #18b35c;
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+    padding: 14px 15px;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td:last-child a {
+    border-radius: 0 3px 3px 0;
+    border-right: 1px solid #18b35c;
+}
+.vps-plan-main .table-relative .table-plan-vps tr:hover {
+    background: #e8f4ff;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td.border-radius a:hover {
+    background: #03305d;
+    border: 1px solid #03305d;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td a:hover {
+    background: #18b35c;
+    color: #fff;
+}
+.vps-plan-main .table-relative .table-plan-vps tr.last-row td a:hover {
+    background: #18b35c;
+    color: #fff;
+}
+@media screen and (min-width: 1366px) {
+    .vps-plan-main .table-relative .table-plan-vps tr.last-row td a {
+        height: 51px;
+    }
+}
+
+
+
+
+
+
+
+

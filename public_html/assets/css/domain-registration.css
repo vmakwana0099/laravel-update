@@ -1,0 +1,1118 @@
+.domain-reg-banner-main {
+  background-image: url(/assets/images/domain_registration/domain-reg-box.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.domain-reg-box h2 {
+  color: #3838ff;
+}
+
+.domain-reg-input-box {
+  display: flex;
+  margin: 30px 0;
+  position: relative;
+}
+
+.domain-reg-input-box input::placeholder {
+  font-size: 22px;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.domain-reg-input-box button {
+  position: absolute;
+  right: 12px;
+  padding: 10px 40px;
+  top: 0;
+  height: 60px;
+  bottom: 0;
+  margin: auto;
+}
+
+.domain-reg-input-box input {
+  height: 80px;
+  text-indent: 30px;
+  box-shadow: 0px 3px 6px #00000029;
+  font-size: 28px;
+}
+
+.domain-reg-input-box button .search-icon-desk {
+  display: block;
+}
+
+.domain-reg-input-box button .search-icon-mo {
+  display: none;
+}
+
+.domain-reg-input-box input:focus {
+  box-shadow: none;
+}
+
+.domain-reg-dmn-sq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.domain-reg-dmn-box {
+  background: #fff;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #080808;
+}
+
+.domain-reg-dmn-box span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.domain-reg-dmn-sq .box-1 span {
+  color: #3838ff;
+}
+
+.domain-reg-dmn-sq .box-2 span {
+  color: #18b362;
+}
+
+.domain-reg-dmn-sq .box-3 span {
+  color: #d32a2d;
+}
+
+.domain-reg-dmn-sq .box-4 span {
+  color: #115baa;
+}
+
+.domain-reg-dmn-sq .box-5 span {
+  color: #ff8000;
+}
+
+.domain-reg-extn-box {
+  border: 1px solid #d4d4ff;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 10px 0;
+}
+
+.domain-reg-extn-title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.domain-reg-extn-cut-price {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  margin: 12px 0;
+}
+
+.domain-reg-extn-cut-price span {
+  background: #f8f8ff;
+  padding: 6px;
+  color: #3838ff;
+  border-radius: 6px;
+  margin-left: 5px;
+}
+
+.domain-reg-extn-price {
+  font-size: 28px;
+  font-weight: 600;
+  color: #080808;
+  margin: 10px 0 15px;
+}
+
+.domain-reg-extn-price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #080808;
+}
+
+.domain-reg-extn-btn a {
+  display: block;
+  text-align: center;
+}
+
+.domain-reg-extn-box.box-1 .domain-reg-extn-title {
+  color: #3838ff;
+}
+
+.domain-reg-extn-box.box-2 .domain-reg-extn-title {
+  color: #18b362;
+}
+
+.domain-reg-extn-box.box-3 .domain-reg-extn-title {
+  color: #d32a2d;
+}
+
+.domain-reg-extn-box.box-4 .domain-reg-extn-title {
+  color: #ff8000;
+}
+
+.perf-dmn-main {
+  background-image: url(/assets/images/domain_registration/domain-perfct-bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.perf-dmn-title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.perf-dmn-title span {
+  color: #3838ff;
+}
+
+.perf-dmn-txt {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.perf-dmn-btn a {
+  font-size: 20px;
+  padding: 15px 40px;
+}
+
+.ag-toggle_title {
+  line-height: 1.2;
+  margin: 0 0 50px;
+  font-weight: bold;
+  font-size: 60px;
+  color: #fff;
+}
+
+.ag-toggle_tagline {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+.cd-words-wrapper {
+  color: #3838ff;
+}
+
+.dmn-ext-busi-box {
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px 40px 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dmn-ext-busi-box.box-1 {
+  background: #fff6e9;
+}
+
+.dmn-ext-busi-box.box-2 {
+  background: #ebfff4;
+}
+
+.dmn-ext-busi-box.box-3 {
+  background: #ffefef;
+}
+
+.dmn-ext-busi-box.box-4 {
+  background: #f2f3ff;
+}
+
+.dmn-ext-busi-box.box-5 {
+  background: #eff7ff;
+}
+
+.dmn-ext-busi-box.box-6 {
+  background: #fcffde;
+}
+
+.dmn-ext-busi-cnt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #080808;
+  margin-bottom: 10px;
+}
+
+.dmn-ext-busi-txt {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dmn-ext-busi-box::after {
+  position: absolute;
+  content: url('data:image/svg+xml,<svg id="Group_169793" data-name="Group 169793" xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021"><path id="Path_239800" data-name="Path 239800" d="M16,9.414,7.4,18.021,5.983,16.607,14.589,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="%23fff"/></svg>');
+  color: #fff;
+  right: 0;
+  bottom: 0;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px 0 0 0;
+}
+
+.dmn-ext-busi-box.box-1::after {
+  background: #ff9700;
+}
+
+.dmn-ext-busi-box.box-2::after {
+  background: #18b362;
+}
+
+.dmn-ext-busi-box.box-3::after {
+  background: #d32a2d;
+}
+
+.dmn-ext-busi-box.box-4::after {
+  background: #115baa;
+}
+
+.dmn-ext-busi-box.box-5::after {
+  background: #007aff;
+}
+
+.dmn-ext-busi-box.box-6::after {
+  background: #aebf00;
+}
+
+.domain-nm-prc-cnt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3838ff;
+  margin-bottom: 6px;
+}
+
+.domain-nm-prc-txt {
+  font-size: 14px;
+  font-weight: 400;
+  color: #080808;
+}
+
+.domain-nm-prc-box {
+  margin-bottom: 20px;
+}
+
+.why-dmn-wth-main {
+  background-color: #f2f2ff;
+}
+
+.why-dmn-box {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.why-dmn-cnt {
+  font-size: 16px;
+  font-weight: 500;
+  color: #080808;
+  margin: 10px 0;
+}
+
+.dmn-prvcy-bg .section-heading h2,
+.dmn-prvcy-bg .section-heading p {
+  color: #fff;
+}
+
+.domain-privacy-nav ul li .nav-link {
+  border: none;
+  background-color: inherit !important;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.domain-privacy-nav ul li .nav-link.active {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  width: 100%;
+  text-align: left;
+}
+
+.domain-privacy-nav ul li .nav-link svg {
+  margin-right: 12px;
+}
+
+.domain-privacy-nav ul {
+  border: none;
+  display: inline-block;
+}
+
+.domain-privacy-protct-main {
+  background: transparent linear-gradient(113deg, #3838ff 0%, #1010ab 100%);
+}
+
+.dmn-prvcy-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1923' height='874.262' viewBox='0 0 1923 874.262'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_23760' data-name='Rectangle 23760' width='1923' height='874.262' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_169765' data-name='Group 169765' transform='translate(0 0.002)' opacity='0.2'%3E%3Cg id='Group_169764' data-name='Group 169764' transform='translate(0 -0.002)' clip-path='url(%23clip-path)'%3E%3Cpath id='Path_243737' data-name='Path 243737' d='M0,889.015C121.6,822.6,278.539,659.726,439.152,493.024c57.716-59.9,115.9-120.3,173.1-176.891C839.607,91.2,1051.236-73.558,1154.966,91.853,1553.5,727.378,1787.15,885.872,1923,867.877v.373c-135.97,17.958-369.723-140.616-768.274-776.161-103.568-165.152-315.06-.464-542.282,224.345-57.188,56.581-115.38,116.979-173.1,176.885C278.677,660.079,121.683,823.006,0,889.417Z' transform='translate(0 -15.155)'/%3E%3Cpath id='Path_243738' data-name='Path 243738' d='M0,882.86c119.843-63.891,273.38-218.806,430.771-377.621,285.712-288.3,584.1-589.383,716.9-382.074v0c405.28,642.94,640.071,778.68,775.326,743.076v.471c-135.364,35.55-370.258-100.328-775.564-743.309C1014.826-83.607,716.558,217.356,430.962,505.537,273.515,664.407,119.924,819.378,0,883.262Z' transform='translate(0 -33.515)'/%3E%3Cpath id='Path_243739' data-name='Path 243739' d='M0,876.642C118.075,815.307,268.245,668.2,422.439,517.129,706.7,238.623,1004.591-53.234,1140.381,154.354l0,0C1552.2,804.165,1788.227,915.469,1923,862.538V863c-134.884,52.882-371.014-58.561-782.856-708.407-135.6-207.3-433.372,84.442-717.519,362.836C268.376,668.556,118.153,815.714,0,877.043Z' transform='translate(0 -51.749)'/%3E%3Cpath id='Path_243740' data-name='Path 243740' d='M0,870.407c116.291-58.76,263.142-198.261,414.153-341.725C696.942,260.029,994.3-22.46,1133.09,185.405l0,0c418.275,656.316,655.5,740.953,789.909,671.039v.466c-134.523,69.865-371.855-14.928-790.144-671.264h0C994.248-21.936,697.013,260.441,414.337,528.988,263.271,672.5,116.367,812.054,0,870.808Z' transform='translate(0 -69.847)'/%3E%3Cpath id='Path_243741' data-name='Path 243741' d='M1125.566,216.56h0M0,864.095c114.5-56.161,258.06-188.2,405.913-324.2C687.206,281.158,983.985,8.174,1125.8,216.312l0,0C1550.281,878.5,1788.8,934.559,1923,848.389v.43c-134.338,86.115-372.976,29.887-797.434-632.26C983.936,8.691,687.274,281.568,406.093,540.206,258.186,676.254,114.57,808.339,0,864.495Z' transform='translate(0 -87.801)'/%3E%3Cpath id='Path_243742' data-name='Path 243742' d='M0,857.724c112.687-53.545,253-178.289,397.715-306.963C677.491,301.994,973.659,38.651,1118.5,247.06l0,.005C1548.924,914.442,1788.8,939.823,1923,838.356v.45c-134.332,101.413-374.341,75.829-804.725-591.5C973.609,39.163,677.557,302.4,397.89,551.072,253.125,679.793,112.759,804.582,0,858.122Z' transform='translate(0 -105.595)'/%3E%3Cpath id='Path_243743' data-name='Path 243743' d='M0,851.3c110.863-50.915,247.97-168.554,389.556-290.038C667.8,322.522,963.317,68.955,1111.213,277.634l0,.007C1547.279,949.5,1788.605,942.07,1923,826.544v.462c-134.532,115.481-375.988,122.686-812.014-549.118h0C963.268,69.461,667.86,322.929,389.728,561.574,248.09,683.1,110.933,800.785,0,851.7Z' transform='translate(0 -123.216)'/%3E%3Cpath id='Path_243744' data-name='Path 243744' d='M0,844.747c109.029-48.266,242.951-158.922,381.436-273.365C658.118,342.731,952.96,99.074,1103.921,308.02l.005.007c441.293,675.44,684.232,633.282,819.074,505.3v.481c-134.982,127.948-378.055,169.841-819.3-505.529C952.909,99.572,658.18,343.137,381.6,571.7,243.068,686.186,109.1,796.881,0,845.144Z' transform='translate(0 -140.648)'/%3E%3Cpath id='Path_243745' data-name='Path 243745' d='M0,838.124c107.178-45.61,237.957-149.475,373.35-257.014C648.457,362.6,942.584,128.985,1096.629,338.2l.006.007c446.091,678.08,690.812,599.264,826.365,460.7v.493c-135.693,138.55-380.552,217.07-826.6-460.945h0C942.526,129.483,648.512,363.008,373.511,581.434,238.07,689.011,107.243,792.914,0,838.521Z' transform='translate(0 -157.874)'/%3E%3Cpath id='Path_243746' data-name='Path 243746' d='M0,831.366c105.313-42.943,232.975-140.159,365.295-240.937,273.516-208.315,566.9-431.76,724.043-222.277l.006.009c444.1,670.187,690.214,565.55,827.911,421.593q2.905-3.037,5.746-6.1v.5q-2.746,2.952-5.552,5.886c-137.8,144.06-384.067,248.8-828.332-421.633-156.977-209.259-450.249,14.1-723.664,222.341C233.084,691.57,105.376,788.821,0,831.762Z' transform='translate(0 -174.873)'/%3E%3Cpath id='Path_243747' data-name='Path 243747' d='M0,824.472c103.432-40.27,228.007-131,357.269-225.159C629.176,401.245,921.781,188.1,1082.045,397.854l.007.01C1536.1,1077.894,1785.129,920.731,1923,767.815v.514c-137.993,152.95-387.148,309.788-841.178-370.215-160.1-209.527-452.6,3.537-724.4,201.531C228.113,693.837,103.494,784.6,0,824.867Z' transform='translate(0 -191.622)'/%3E%3Cpath id='Path_243748' data-name='Path 243748' d='M0,817.43c101.536-37.594,223.054-122.008,349.269-209.691C619.552,419.97,911.35,217.254,1074.753,427.281l.007.009C1531.888,1106.518,1783.507,907.951,1923,751.752v.51c-139.615,156.263-391.355,354.484-848.468-324.72C911.291,217.733,619.6,420.374,349.416,608.074,223.155,695.788,101.594,780.232,0,817.824Z' transform='translate(0 -208.095)'/%3E%3Cpath id='Path_243749' data-name='Path 243749' d='M0,810.181c99.624-34.914,218.105-113.146,341.29-194.5C609.936,438.261,900.9,246.1,1067.462,456.4l.008.01c459.555,677.166,714.1,435.95,855.53,279.324v.509c-141.556,156.723-396.219,397.557-855.757-279.579-166.4-210.1-457.263-18-725.811,159.351C218.2,697.4,99.681,775.661,0,810.574Z' transform='translate(0 -224.263)'/%3E%3Cpath id='Path_243750' data-name='Path 243750' d='M0,802.743C97.693,770.5,213.17,698.267,333.329,623.1c266.994-167.02,557.1-348.5,726.84-137.916l.008.012C1518.192,1154.2,1775.67,878.06,1919.962,723.31l3.038-3.258v.5l-2.841,3.046c-144.373,154.838-402,431.136-860.206-238.149-169.587-210.383-459.589-28.97-726.488,137.991C213.263,698.635,97.746,770.9,0,803.135Z' transform='translate(0 -240.091)'/%3E%3Cpath id='Path_243751' data-name='Path 243751' d='M0,795.019c95.748-29.566,208.231-95.929,325.382-165.06,265.331-156.573,554.552-327.243,727.5-116.374l.009.012c439.812,636.523,697.979,369.324,848.007,214.048,7.646-7.914,15.011-15.536,22.106-22.734v.49c-7.035,7.141-14.336,14.7-21.913,22.539-150.11,155.362-408.421,422.709-848.424-214.084C879.869,303.176,590.749,473.786,325.51,630.3,208.32,699.459,95.8,765.844,0,795.409Z' transform='translate(0 -255.539)'/%3E%3Cpath id='Path_243752' data-name='Path 243752' d='M0,787.025c93.779-26.9,203.3-87.576,317.442-150.816C581.1,490.132,869.414,330.4,1045.585,541.558l0,0,.006.009c422.308,605.278,680.587,345.787,835.855,189.792,14.763-14.832,28.595-28.728,41.55-40.859v.475c-12.9,12.087-26.668,25.921-41.361,40.682-155.352,156.08-413.771,415.711-836.265-189.827-176.025-210.984-464.241-51.3-727.809,94.726C203.383,699.82,93.827,760.513,0,787.415Z' transform='translate(0 -270.559)'/%3E%3Cpath id='Path_243753' data-name='Path 243753' d='M0,778.668C91.793,754.42,198.358,699.3,309.506,641.8c261.975-135.533,549.363-284.213,728.788-72.746l0,0,.007.01c405.436,575.164,663.308,322.331,823.345,165.421,22.3-21.868,42.708-41.87,61.352-57.517v.457c-18.587,15.618-38.931,35.561-61.165,57.361-160.122,156.993-418.131,409.96-823.751-165.458C858.8,358.033,571.51,506.664,309.622,642.152,198.437,699.672,91.838,754.809,0,779.057Z' transform='translate(0 -285.099)'/%3E%3Cpath id='Path_243754' data-name='Path 243754' d='M0,769.921c89.782-21.611,193.413-71.35,301.566-123.265C561.851,521.715,848.295,384.217,1031,596l0,0,.007.01c389.141,546.094,646.135,299.019,810.494,141,30.208-29.042,57.289-55.075,81.494-72.635v.439c-24.146,17.544-51.169,43.523-81.309,72.5-164.444,158.1-421.573,405.3-810.9-141.043-182.568-211.618-468.919-74.165-729.12,50.736C193.488,698.945,89.825,748.7,0,770.309Z' transform='translate(0 -299.092)'/%3E%3Cpath id='Path_243755' data-name='Path 243755' d='M0,760.683c87.75-18.99,188.454-63.494,293.615-109.977,258.59-114.3,544.075-240.494,730.1-28.384l0,0,.008.012c373.377,517.989,629.062,275.905,797.313,116.6,38.422-36.379,72.287-68.438,101.966-86.164v.421c-29.616,17.723-63.427,49.732-101.783,86.048C1652.879,898.629,1397.063,1140.836,1023.5,622.6c-185.886-211.955-471.281-85.8-729.789,28.463C188.524,697.564,87.789,742.08,0,761.069Z' transform='translate(0 -312.462)'/%3E%3Cpath id='Path_243756' data-name='Path 243756' d='M0,750.892c85.689-16.393,183.48-55.832,285.644-97.04,256.891-103.618,541.406-218.377,730.773-5.922l.005.005.006.008c358.1,490.787,612.081,253.039,783.814,92.279,46.9-43.9,87.661-82.056,122.758-98.1v.406c-35.028,16.048-75.743,54.158-122.576,98-171.82,160.842-425.926,398.71-784.212-92.319-189.238-212.3-473.663-97.58-730.474,6.005C183.544,695.435,85.726,734.885,0,751.278Z' transform='translate(0 -325.115)'/%3E%3Cpath id='Path_243757' data-name='Path 243757' d='M0,740.416c83.6-13.823,178.479-48.347,277.645-84.441,255.191-92.886,538.727-196.088,731.481,16.732l0,0,.007.009c343.288,464.431,595.185,230.458,770,68.082,55.582-51.626,103.375-96.016,143.863-108.457v.393c-40.409,12.45-88.156,56.8-143.681,108.371-174.9,162.458-426.928,396.549-770.4-68.118C816.293,460.313,532.844,563.484,277.729,656.341,178.538,692.445,83.635,726.978,0,740.8Z' transform='translate(0 -336.938)'/%3E%3Cpath id='Path_243758' data-name='Path 243758' d='M0,729.145c81.479-11.285,173.45-41.071,269.606-72.215,253.493-82.106,536.046-173.623,732.229,39.583l.007.008,0,.005c328.9,438.87,578.369,208.2,755.88,44.064C1822.168,681,1877.13,630.191,1923,623.312v.385c-45.782,6.888-100.7,57.663-165.094,117.2-177.6,164.217-427.2,395-756.276-44.1C805.567,483.728,523.1,575.218,269.68,657.3,173.5,688.451,81.51,718.244,0,729.528Z' transform='translate(0 -347.791)'/%3E%3Cpath id='Path_243759' data-name='Path 243759' d='M0,716.878C79.324,708.1,168.377,682.9,261.511,656.533c251.8-71.277,533.373-150.982,733.032,62.641l.007.007.005.006c314.9,414.063,561.624,186.292,741.456,20.274,70.62-65.2,130.929-120.873,181.039-124.469,2-.144,3.981-.174,5.951-.149v.382c-1.964-.025-3.938,0-5.934.148-50.019,3.589-110.3,59.237-180.876,124.4-179.92,166.1-426.766,393.985-741.85-20.311C794.8,505.966,513.3,585.649,261.578,656.905,168.424,683.274,79.352,708.478,0,717.261Z' transform='translate(0 -357.498)'/%3E%3Cpath id='Path_243760' data-name='Path 243760' d='M0,703.432c77.126-6.327,163.257-27.124,253.346-48.879,250.114-60.4,530.715-128.161,733.9,85.911l0,0,.007.01c301.284,389.975,544.948,164.77,726.73-3.239,74.161-68.543,138.029-127.572,191.345-131.478a70.539,70.539,0,0,1,17.664.867v.387a70.24,70.24,0,0,0-17.647-.873c-53.225,3.9-117.06,62.9-191.182,131.4-181.871,168.093-425.654,393.407-727.119,3.208C783.974,526.8,503.449,594.545,253.4,654.928,163.3,676.687,77.15,697.488,0,703.815Z' transform='translate(0 -365.835)'/%3E%3Cpath id='Path_243761' data-name='Path 243761' d='M0,671.151c74.884-3.92,158.069-20.477,245.09-37.8,248.442-49.47,528.087-105.153,734.869,109.407l0,0,.008.01c288.018,366.571,528.33,143.661,711.7-26.43,77.749-72.119,145.267-134.747,201.882-138.974a72.2,72.2,0,0,1,29.449,3.7v.4a71.963,71.963,0,0,0-29.432-3.71c-56.525,4.22-124.009,66.817-201.719,138.9-183.459,170.174-423.888,393.192-712.087,26.4C773.086,528.6,493.515,584.267,245.137,633.724,158.1,651.054,74.9,667.614,0,671.533Z' transform='translate(0 -355.171)'/%3E%3Cpath id='Path_243762' data-name='Path 243762' d='M0,621.074C72.586,619.5,152.8,607,236.719,593.909c246.788-38.488,525.5-81.955,735.948,133.144l.007.006.005.006c275.088,343.824,511.766,122.991,696.365-49.25,81.383-75.935,152.65-142.43,212.662-146.991A75.452,75.452,0,0,1,1923,539.007v.41a75.234,75.234,0,0,0-41.276-8.21c-59.922,4.553-131.155,71.018-212.5,146.916-184.69,172.326-421.484,393.267-696.755,49.222C762.123,512.355,483.482,555.811,236.755,594.289,152.831,607.378,72.6,619.884,0,621.456Z' transform='translate(0 -326.516)'/%3E%3Cpath id='Path_243763' data-name='Path 243763' d='M0,570.975c70.225.707,147.439-7.937,228.2-16.979,245.16-27.45,522.975-58.556,737.175,157.14l.005.005,0,.007c262.477,321.712,495.25,102.788,680.726-71.653,85.065-80,160.187-150.657,223.7-155.562A80.113,80.113,0,0,1,1923,498.252v.433a79.919,79.919,0,0,0-53.169-14.371c-63.424,4.9-138.511,75.518-223.537,155.486-185.567,174.526-418.454,393.557-681.114,71.629-214.1-215.6-491.852-184.5-736.954-157.053C147.459,563.419,70.238,572.063,0,571.357Z' transform='translate(0 -297.645)'/%3E%3Cpath id='Path_243764' data-name='Path 243764' d='M0,520.867c67.79,2.906,141.947-2.066,219.5-7.272C463.061,497.243,740.03,478.65,958.083,695.016l.009.009,0,0c250.168,300.213,478.775,83.076,664.773-93.591,88.795-84.341,167.885-159.462,235.014-164.725,23.167-1.816,44.9,4.7,65.118,22.009v.457c-20.208-17.362-41.938-23.9-65.1-22.084-67.037,5.256-146.092,80.345-234.849,164.649-186.09,176.754-414.81,394-665.164,93.566C739.926,479.039,463.02,497.628,219.512,513.976,141.96,519.182,67.8,524.155,0,521.249Z' transform='translate(0 -268.57)'/%3E%3Cpath id='Path_243765' data-name='Path 243765' d='M0,470.785c65.264,5.012,136.3,3.494,210.555,1.9,242.015-5.186,518.207-11.1,740.236,206.021l.007.007,0,0c238.151,279.311,462.336,63.883,648.5-115.014,92.574-88.957,175.751-168.886,246.614-174.52,27.63-2.2,53.381,6.909,77.08,31.163v.473c-23.691-24.324-49.436-33.452-77.061-31.256-70.771,5.628-153.914,85.523-246.448,174.443C1413.231,742.993,1188.935,958.526,950.6,679,728.655,461.967,452.522,467.884,210.56,473.069,136.3,474.66,65.27,476.178,0,471.167Z' transform='translate(0 -239.309)'/%3E%3Cpath id='Path_243766' data-name='Path 243766' d='M0,420.751c62.627,7.006,130.45,8.714,201.311,10.5C441.833,437.3,717.344,444.232,943.5,662.229l.01.011c226.412,258.99,445.927,45.236,631.911-135.869,96.4-93.869,183.793-178.97,258.516-184.99,32.14-2.59,61.922,9.493,89.064,41.751v.5c-27.133-32.347-56.91-44.462-89.045-41.874-74.63,6.013-161.989,91.08-258.348,184.911-186.076,181.193-405.7,395.052-632.3,135.855-226.076-217.917-501.531-224.849-742-230.9C130.448,429.846,62.629,428.138,0,421.134Z' transform='translate(0 -209.876)'/%3E%3Cpath id='Path_243767' data-name='Path 243767' d='M0,370.776c59.851,8.867,124.341,13.554,191.675,18.447C430.782,406.6,705.737,426.575,936.208,645.589l.009.01c214.942,239.24,429.541,27.163,614.985-156.1,100.268-99.089,192.017-189.76,270.735-196.181,36.681-2.992,70.518,12.359,101.064,53.619v.538c-30.537-41.372-64.367-56.767-101.045-53.775-78.623,6.413-170.336,97.049-270.566,196.1-185.534,183.354-400.237,395.533-615.365,156.1h0c-230.4-218.944-505.3-238.92-744.366-256.29C124.332,384.712,59.85,380.025,0,371.161Z' transform='translate(0 -180.282)'/%3E%3Cpath id='Path_243768' data-name='Path 243768' d='M0,320.888c56.9,10.565,117.893,17.953,181.524,25.658C419.318,375.339,693.89,408.587,928.916,628.8l.008.008c203.731,220.053,413.171,9.7,597.715-175.655,104.18-104.636,200.43-201.307,283.286-208.144,41.247-3.4,79.162,15.477,113.075,66.686v.561c-33.9-51.344-71.812-70.268-113.056-66.865-82.762,6.829-178.975,103.463-283.116,208.059-184.634,185.441-394.176,395.9-598.094,175.656h0C693.774,408.956,419.249,375.714,181.5,346.925c-63.619-7.7-124.6-15.09-181.5-25.651Z' transform='translate(0 -150.542)'/%3E%3Cpath id='Path_243769' data-name='Path 243769' d='M0,271.11c53.714,12.058,111,21.824,170.685,32C407.3,343.441,681.727,390.218,921.623,611.883l.007.008c192.769,201.418,396.811-7.137,580.089-194.468C1609.85,306.9,1710.757,203.761,1797.908,196.491c45.833-3.823,87.845,18.922,125.092,80.988v.6c-37.237-62.226-79.242-85.031-125.073-81.208-87.053,7.262-187.924,110.363-296.015,220.846C1318.545,605.141,1114.4,813.8,921.444,612.191h0c-239.835-221.61-514.218-268.379-750.8-308.7C110.971,293.316,53.7,283.552,0,271.5Z' transform='translate(0 -120.669)'/%3E%3Cpath id='Path_243770' data-name='Path 243770' d='M0,221.458c50.218,13.29,103.482,25.049,158.9,37.285C394.532,310.76,669.14,371.384,914.332,594.836l.006.006c182.051,183.336,380.456-23.3,562.092-212.473,112.117-116.768,217.848-226.887,309.458-234.607,50.43-4.25,96.561,22.584,137.111,96.353v.627c-40.538-73.952-86.664-100.848-137.092-96.6-91.511,7.712-197.206,117.792-309.284,234.52C1294.9,571.93,1096.4,778.666,914.154,595.145h0c-245.136-223.4-519.705-284.016-755.3-336.026C103.45,246.889,50.2,235.133,0,221.849Z' transform='translate(0 -90.667)'/%3E%3Cpath id='Path_243771' data-name='Path 243771' d='M0,171.949c46.285,14.172,95.1,27.451,145.793,41.241,234.9,63.9,510.167,138.77,761.246,364.482l.005,0c171.571,165.8,364.1-38.753,543.71-229.593,116.132-123.39,226.869-241.048,323.115-249.238,55.03-4.683,105.308,26.423,149.13,112.687v.657c-43.809-86.472-94.082-117.645-149.109-112.962-96.146,8.181-206.846,125.8-322.939,249.148-179.7,190.934-372.323,395.592-544.088,229.608C655.836,352.317,380.6,277.451,145.729,213.563,95.058,199.781,46.267,186.507,0,172.342Z' transform='translate(0 -60.548)'/%3E%3Cpath id='Path_243772' data-name='Path 243772' d='M0,122.609c41.715,14.567,85.437,28.74,130.728,43.422,234.559,76.033,511.191,165.7,769.02,394.37l0,0c161.322,148.825,347.726-53.457,524.924-245.75,120.17-130.406,236.108-256.221,337.182-264.9C1821.492,44.632,1875.934,80.329,1923,179.86v.7C1875.947,80.8,1821.511,45.014,1761.877,50.134,1660.9,58.8,1545,184.578,1424.874,314.942c-177.288,192.39-363.785,394.774-525.3,245.769C641.786,332.087,365.185,242.425,130.653,166.4,85.389,151.728,41.693,137.563,0,123.005Z' transform='translate(0 -30.324)'/%3E%3Cpath id='Path_243773' data-name='Path 243773' d='M0,73.451c36.16,14.237,73.794,28.429,112.642,43.079,234.793,88.544,513.9,193.8,779.815,426.5,151.3,132.4,331.337-67.368,505.712-260.855C1522.39,144.338,1643.74,9.688,1749.85.5c64.237-5.564,122.866,34.917,173.15,148.424v.735C1872.731,35.888,1814.107-4.685,1749.87.879c-106.007,9.182-227.318,143.789-351.5,281.582-174.464,193.585-354.591,393.454-506.087,260.883C626.406,310.679,347.326,205.433,112.555,116.9,73.739,102.259,36.134,88.077,0,73.852Z' transform='translate(0 0.001)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dmn-prvcy-rgt-box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dmn-prvcy-cnt span {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.dmn-prvcy-cnt {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.dmn-prvcy-icon {
+  background: #fff;
+  min-width: 50px !important;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.domain-privacy-prtc-box {
+  position: relative;
+}
+
+.dmn-prvcy-data {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 0 10px;
+}
+
+.dmn-prvcy-data ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #080808;
+  border-bottom: 1px solid #e5e5ff;
+  padding: 18px 40px;
+  margin: 0;
+}
+
+.dmn-prvcy-data-cnt span {
+  display: block;
+  font-weight: 500;
+  color: #3838ff;
+  font-style: normal;
+}
+
+.dmn-prvcy-data-cnt {
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.dmn-prvcy-data ul li:last-child {
+  border-bottom: 0;
+}
+
+
+
+.dmn-prvcy-cnt-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.switch {
+  display: inline-block;
+  position: absolute;
+  right: -30px;
+  bottom: -20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch small {
+  display: flex;
+  width: 160px;
+  height: 54px;
+  background: #D32A2D;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: inset 5px 5px 10px #0000001A, 0px 0px 50px #00000029;
+}
+
+.switch small:after {
+  content: "PRIVACY OFF";
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  right: 8px;
+  text-align: right;
+  padding: 0 6px;
+  box-sizing: border-box;
+  line-height: 18px;
+}
+
+.switch small:before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  border-radius: 50%;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
+  left: 8px;
+  transition: .3s;
+  box-shadow: 0px 0px 20px #00000029;
+}
+
+.switch input:checked~small {
+  background: #22a21c;
+  transition: .3s;
+}
+
+.switch input:checked~small:before {
+  transform: translate(107px, 0px);
+  transition: .3s;
+}
+
+.switch input:checked~small:after {
+  content: "PRIVACY ON";
+  text-align: left;
+  left: 12px;
+}
+
+
+
+
+
+.dmn-reg-mmbr-box-carousel .items {
+  width: 140px;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: 0.6s;
+}
+
+.dmn-reg-mmbr-box-carousel .item:hover {
+  filter: grayscale(0);
+}
+
+
+
+
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.dmn-reg-mmbr-box-carousel {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.dmn-reg-mmbr-box-carousel:before,
+.dmn-reg-mmbr-box-carousel:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+/* .dmn-reg-mmbr-box-carousel:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+
+.dmn-reg-mmbr-box-carousel:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+} */
+
+.dmn-reg-mmbr-box-items {
+  display: inline-block;
+  animation: 20s slides linear;
+  animation-iteration-count: infinite;
+}
+
+.dmn-reg-mmbr-box-carousel:hover .dmn-reg-mmbr-box-items {
+  animation-play-state: paused;
+}
+
+.dmn-reg-mmbr-box-items img {
+  margin: 0 30px;
+}
+
+
+
+
+.add-services-box {
+  display: flex;
+}
+
+.add-services-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+}
+
+.add-services-box.box-1 .add-services-img {
+  background-image: url(/assets/images/domain_registration/website_design.webp);
+}
+
+.add-services-box.box-2 .add-services-img {
+  background-image: url(/assets/images/domain_registration/shared_hosting.webp);
+}
+
+.add-services-box.box-3 .add-services-img {
+  background-image: url(/assets/images/domain_registration/VPS_hosting.webp);
+}
+
+.add-services-box.box-4 .add-services-img {
+  background-image: url(/assets/images/domain_registration/dedicated_server.webp);
+}
+
+.add-services-box.box-5 .add-services-img {
+  background-image: url(/assets/images/domain_registration/SSL_certificate.webp);
+}
+
+.add-services-box.box-6 .add-services-img {
+  background-image: url(/assets/images/domain_registration/google_workspace.webp);
+}
+
+.add-services-box {
+  display: flex;
+  flex: 1;
+  position: relative;
+  transition: 0.6s ease;
+}
+
+.add-service-box-cnt {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 290px;
+  height: auto;
+  left: -80px;
+  bottom: 92px;
+  transition: all 0.4s;
+  opacity: 1;
+  font-size: 34px;
+  color: #3838ff;
+}
+
+.add-services-box:hover {
+  flex: 3;
+}
+
+.add-services-box:hover .add-service-box-cnt {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.add-service-box-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  transition: 0.4s;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.add-services-box:hover .add-service-box-title,
+.add-services-box.active .add-service-box-title {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.add-service-box-main .active {
+  flex: 3;
+}
+
+.add-services-box.active .add-service-box-cnt {
+  display: none;
+}
+
+.add-services-box.active .add-service-box-title {
+  display: block;
+}
+
+.domain-reg-input-box form {
+  width: 100%;
+}
+
+
+
+
+
+
+
+.add-service-box-main {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.add-services-box {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  transition: flex 0.5s ease, transform 0.5s ease;
+  background: #f4f4f4;
+  /* Add your background */
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-service-box-cnt,
+.add-service-box-title {
+  padding: 10px;
+}
+
+.add-service-box-cnt p,
+.add-service-box-title p {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+
+
+.cust-revw-img img {
+  border-radius: 15px;
+}
+
+.cust-revw-cnt-box {
+  background-color: #f5f5f5;
+
+  padding: 20px;
+
+  color: #28282a;
+
+  border-radius: 10px;
+
+  transition: 0.6s;
+}
+
+.cust-revw-cnt-box:hover {
+  background-color: #000c66;
+
+  color: #fff;
+}
+
+.cust-revw-cnt-box:hover .cust-revw-cnt-p,
+.cust-revw-cnt-box:hover .cust-revw-user {
+  color: #fff;
+}
+
+.cust-revw-cnt-card {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.cust-revw-cnt-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 40px;
+
+  height: 40px;
+
+  background: transparent;
+
+  bottom: 70px;
+
+  right: 0;
+
+  border-radius: 0 0 20px 0;
+
+  z-index: 1;
+
+  box-shadow: 5px 5px #fff;
+}
+
+.cust-revw-cnt-box::after {
+  content: "";
+
+  position: absolute;
+
+  width: 40px;
+
+  height: 40px;
+
+  background: transparent;
+
+  bottom: 0;
+
+  right: 70px;
+
+  border-radius: 0 0 20px 0;
+
+  z-index: 1;
+
+  box-shadow: 5px 5px #fff;
+}
+
+.cust-revw-cnt-card::after {
+  position: absolute;
+
+  content: "";
+
+  width: 70px;
+
+  height: 70px;
+
+  background-color: #fff;
+
+  bottom: 0;
+
+  right: 0;
+
+  border-radius: 40px 0 0 0;
+}
+
+.cust-revw-name {
+  display: flex;
+
+  margin: 10px 0 0;
+
+  align-items: center;
+}
+
+.cust-revw-icon {
+  background-color: #e6e6e6;
+
+  padding: 6px 12px;
+
+  border-radius: 40px;
+
+  margin-right: 10px;
+}
+
+.cust-revw-icon i {
+  color: #000;
+
+  font-weight: 500;
+}
+
+.cust-revw-cnt-p {
+  font-size: 14px;
+
+  font-weight: 400;
+
+  color: #fff;
+
+  padding-right: 70px;
+
+  color: #28282a;
+}
+
+.cust-revw-user {
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #28282a;
+}
+
+.cust-revw-cnt .owl-dots {
+  display: block;
+}
+
+.cust-revw-cnt .owl-theme .owl-dots .owl-dot span {
+  background-color: #7ec8e3;
+}
+
+.cust-revw-cnt .owl-theme .owl-dots .owl-dot.active span,
+.cust-revw-cnt .owl-theme .owl-dots .owl-dot:hover span {
+  background: #000c66;
+}
+
+
+
+.tsrt-box {
+  background-color: #fff6e9;
+
+  padding: 30px;
+
+  border-radius: 10px;
+}
+
+.tsrt-box-icon-f {
+  background-color: #fff;
+
+  border-radius: 50px;
+
+  font-weight: 400;
+
+  font-size: 24px;
+
+  height: 60px;
+
+  width: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.tsrt-box-1 .tsrt-box-icon-f {
+  color: #3838ff;
+}
+
+.tsrt-box-2 .tsrt-box-icon-f {
+  color: #000c66;
+}
+
+.tsrt-box-3 .tsrt-box-icon-f {
+  color: #3838ff;
+}
+
+.tsrt-box-4 .tsrt-box-icon-f {
+  color: #050a30;
+}
+
+.tsrt-box-title {
+  font-size: 20px;
+
+  font-weight: 500;
+
+  margin: 10px 0;
+}
+
+.tsrt-box-p {
+  font-size: 14px;
+
+  font-weight: 400;
+
+  color: #28282a;
+}
+
+.tsrt-box-icon-b {
+  color: #fff;
+
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 40px;
+
+  transform: rotate(-45deg);
+
+  margin-top: 10px;
+}
+
+.tsrt-box-1 .tsrt-box-icon-b {
+  background-color: #3838ff;
+}
+
+.tsrt-box-2 .tsrt-box-icon-b {
+  background-color: #000c66;
+}
+
+.tsrt-box-3 .tsrt-box-icon-b {
+  background-color: #3838ff;
+}
+
+.tsrt-box-4 .tsrt-box-icon-b {
+  background-color: #050a30;
+}
+
+.tsrt-box-1 {
+  background-color: #fff6e9;
+}
+
+.tsrt-box-2 {
+  background-color: #ebfff4;
+}
+
+.tsrt-box-3 {
+  background-color: #ffefef;
+}
+
+.tsrt-box-4 {
+  background-color: #f2f3ff;
+}
+
+.error {
+  color: #ff0000;
+  position: absolute;
+  left: 20px;
+  bottom: -25px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+
+  .domain-privacy-nav ul li .nav-link,
+  .why-dmn-cnt {
+    font-size: 14px;
+  }
+
+  .dmn-prvcy-data ul li {
+    padding: 18px 20px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .perf-dmn-title {
+    font-size: 28px;
+  }
+
+  .perf-dmn-btn a {
+    font-size: 14px;
+  }
+
+  .perf-dmn-txt {
+    font-size: 14px;
+  }
+
+  .add-service-box-cnt {
+    left: -110px;
+  }
+
+  .add-service-box-cnt p,
+  .add-service-box-title p {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .domain-reg-input-box button .search-icon-desk {
+    display: none;
+  }
+
+  .domain-reg-input-box button .search-icon-mo {
+    display: block;
+  }
+
+  .domain-reg-input-box input::placeholder {
+    text-indent: 0px;
+    font-size: 14px;
+  }
+
+  .domain-reg-input-box button {
+    padding: 10px 30px;
+  }
+
+  .domain-reg-input-box {
+    margin: 10px 0;
+  }
+
+  .switch {
+    right: 28%;
+    bottom: -33px;
+  }
+
+  .dmn-prvcy-data {
+    margin-bottom: 40px;
+  }
+
+  .perf-dmn-btn {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .perf-dmn-title {
+    font-size: 26px;
+  }
+
+  .tsrt-box {
+    margin: 10px 0;
+  }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .add-service-box-main {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .add-service-box-main .active,
+  .add-services-box:hover {
+    flex: inherit;
+  }
+
+  .add-services-img {
+    height: 200px;
+  }
+
+  .add-services-box {
+    text-align: left;
+  }
+
+  .add-service-box-title,
+  .add-services-box.active .add-service-box-title {
+    display: none;
+  }
+
+  .add-services-box.active .add-service-box-cnt {
+    display: block;
+  }
+
+  .add-services-box:hover .add-service-box-cnt {
+    opacity: 1;
+  }
+
+  .add-service-box-cnt p {
+    font-size: 14px;
+  }
+
+  .add-service-box-cnt {
+    transform: rotate(0deg);
+    bottom: 0;
+    left: 10px;
+  }
+
+  .domain-reg-input-box input {
+    font-size: 18px;
+  }
+
+  .domain-reg-input-box input {
+    text-indent: 0;
+  }
+}

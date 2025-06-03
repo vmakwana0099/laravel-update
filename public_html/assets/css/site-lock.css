@@ -1,0 +1,246 @@
+.vps_main .banner-inner {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.banner-inner {
+    width: 100%;
+    height: auto;
+    background-image: url(https://www.hostitsmart.com/caches/1920x494/2019-02-27-12-43-50-site-lock-banner.jpg);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.banner-inner, .banner-inner .banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-inner .banner-content {
+    text-align: center;
+}
+.vps_main .banner-inner .banner-image {
+    background-image: url(../images/vps_hosting/VPS-Hosting-icon.svg);
+}
+
+.banner-inner .banner-image {
+    width: 68px;
+    height: 68px;
+    background-image: none;
+    margin: 0 auto 10px;
+}
+.banner-inner .banner-content .banner-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.banner-inner .banner-content .banner-subtitle {
+    color: #fff;
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .7px;
+    display: block;
+    margin: 11px auto;
+}
+.banner-inner .banner-content .banner-text {
+    max-width: 1000px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    margin: 19px auto;
+}
+
+
+
+.gsuite-intro {
+    background-color: #f0f8ff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.gsuite-intro .intro-title {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #03305d;
+    padding-bottom: 30px;
+    margin: 0;
+}
+.gsuite-intro .intro-title span {
+    color: #18b35c;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+}
+.gsuite-intro .left {
+    padding-left: 0;
+}
+.gsuite-intro .left p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #262626;
+}
+
+
+.vps_main .vps-plan-main-div {
+    width: 100%;
+    height: auto;
+    background: url(../images/domain_search/vps-plan-bg.png) center bottom no-repeat #f6f6f6;
+    padding: 40px 0;
+}
+.vps-features {
+    background-color: #e8f4ff;
+    height: auto;
+    overflow: hidden;
+    padding: 56px 0;
+}
+.vps-features .features-main h2.features-title {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: .45px;
+    color: #115baa;
+    padding-bottom: 50px;
+    margin: 0;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.immediate-response {
+    background-position: 0 0;
+    width: 50px;
+    display: block;
+}
+
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon {
+    background-image: url(../images/sitelock-features-sprite.png);
+    height: 100%;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.priority {
+    background-position: -60px 0;
+    width: 61px;
+    display: block;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.realtime-updates {
+    background-position: -131px 0;
+    width: 68px;
+    display: block;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.malware-removal {
+    background-position: -209px 0;
+    width: 56px;
+    display: block;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.aftercare {
+    background-position: -276px 0;
+    width: 56px;
+    display: block;
+}
+.vps-features .features-main .features-start .content-main .feature-icon .vps-features-icon.sitelock-features-icon.one-off-payment {
+    background-position: -339px 0;
+    width: 56px;
+    display: block;
+}
+
+
+
+.g-suite-lists {
+    padding: 50px 0;
+}
+.g-suite-lists .g_s_l-title {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: .45px;
+    text-transform: capitalize;
+    color: #115baa;
+    padding-bottom: 50px;
+    text-align: center;
+    margin: 0;
+}
+.g-suite-lists .g_s_l-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+.site-lock-lists .s-icons.malware-scan {
+    background-position: 0 0;
+    width: 40px;
+}
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0;
+    position: absolute;
+    top: 4px;
+    left: 15px;
+}
+.g-suite-lists .g-list-box {
+    display: inline-block;
+    position: relative;
+    padding-left: 70px;
+}
+.g-suite-lists .g-list-box h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #4d4d4d;
+    font-weight: 500;
+}
+.g-suite-lists .g-list-box span {
+    color: #262626;
+    font-weight: 400;
+}
+.site-lock-lists .s-icons.vul-scan {
+    background-position: -50px 0;
+    width: 40px;
+}
+
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+}
+
+.site-lock-lists .s-icons.sitelock-seal {
+    background-position: -100px 0;
+    width: 49px;
+}
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+}
+.site-lock-lists .s-icons.protect {
+    background-position: -158px 0;
+    width: 42px;
+}
+
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+}
+
+.site-lock-lists .s-icons.cdn {
+    background-position: -211px 0;
+    width: 44px;
+}
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+}
+
+.site-lock-lists .s-icons.malware-removal {
+    background-position: -264px 0;
+    width: 40px;
+}
+.site-lock-lists .s-icons {
+    background-image: url(../images/site-lock-sprite.png);
+    height: 40px;
+}
