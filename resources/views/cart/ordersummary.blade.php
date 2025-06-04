@@ -360,7 +360,7 @@
                                         onchange="updateHostingItemNew({{$proKey}},this.value);
                                     @endif   
                                     ">         
-                                     <?php $currPlanPrice = ""; ?>
+                                     <?php $currPlanPrice = ""; $renewalPrice?>
                                      @foreach($item['pricing'] as $optKey => $price)
                                                 <?php 
                                                     
@@ -452,7 +452,7 @@
                                     }
                                 @endphp
                                 {{-- {{dd($renewalPrice,123)}} --}}
-                            @if(isset($renewalPrice))
+                            @if(isset($renewalPrice) && !empty($renewalPrice))
                             @php 
                             // dd($item['pid']);
                                 $google_apps_product_id = array(117,116,206);
