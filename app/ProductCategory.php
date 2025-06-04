@@ -346,7 +346,7 @@ class ProductCategory extends Model {
     }
 
      public static function getTLDAdRecords() {
-        $tldArr=['com','in','co.in','org','net','co'];
+        $tldArr=['com','in','co.in','net.in','net','co'];
 
         $response = DB::table('tld')
                 ->select(['alias.varAlias', 'alias.id', 'tld.varTitle', 'tld.varIcon', 'tld.intAliasId', 'tld.fkIntImgId', 'tld.chrIsFeatured', 'tld.varWHMCSFieldName'])
@@ -808,7 +808,7 @@ class ProductCategory extends Model {
                     ->join('whmcs_tlds_price', 'whmcs_tlds_price.fk_tldname', '=', 'tld.id')
                     ->where(['whmcs_tlds_price.currency' => $currency])
                     ->where(function($query) {
-                        $query->where(['whmcs_tlds_price.type' => "domaintransfer"])/*->orWhere(['whmcs_tlds_price.type' => 'domainregister'])*/;
+                        $query->where(['whmcs_tlds_price.type' => "domainregister"])/*->orWhere(['whmcs_tlds_price.type' => 'domainregister'])*/;
                     })
                     ->whereIn('tld.varTitle', $Tld)
                     /*->where(['tld.varTitle' => $Tld])*/

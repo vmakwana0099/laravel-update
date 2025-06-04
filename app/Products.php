@@ -561,7 +561,7 @@ class Products extends Model {
             if ($whmcsproid == 416) {
                 // $returnHtml .= "<button class='free-button' id ='".$button_id."' title='Buy Now'>Get 7 Days free</button>";
                 $returnHtml .= "<button class='free-button' id ='".$button_id."' title='".$buttonText."'>Configure</button>";
-            }elseif(in_array($whmcsproid, [465, 466, 463, 464, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478])){
+            }elseif(in_array($whmcsproid, [465, 466, 463, 464, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478,509,510,511,508,516,518,519,520])){
 
                 $returnHtml .= "<button class='vps_managed_btn' id ='".$button_id."' title='Add to Cart'>Add to Cart</button>";
             }

@@ -11,6 +11,8 @@
  */
 
 namespace App;
+use Config;
+use DB;
 
 //use Illuminate\Database\Eloquent\Model;
 //use Config;
@@ -176,7 +178,7 @@ class Whmcs {
             //Live Credentials API User 3 ---------------------------------------------
             
         $postfields['responsetype'] = "JSON";
-        
+        $apiDomain = 'https://www.hostitsmart.com';
         $WHMCSUrl = config('app.api_url');
         if (!in_array($apiname, $customAPIs)) {
             $apiurl = $WHMCSUrl . '/includes/api.php';
@@ -204,6 +206,9 @@ class Whmcs {
             die('Unable to connect (callapi): ' . curl_errno($ch) . ' - ' . curl_error($ch));
         }
         curl_close($ch);
+        if ($postfields['action'] == 'AddOrder') {
+            // echo '<pre>';print_r($response);exit;
+        }
         $jsonData = json_decode($response, true);
 
         return $jsonData;
@@ -1019,7 +1024,7 @@ class Whmcs {
         //Live Credentials API User 3 ---------------------------------------------
             
         $postfields['responsetype'] = "JSON";
-        
+        $apiDomain = 'https://www.hostitsmart.com';
         /*$apiDomain = Config::get('Constant.API_DOMAIN');*/
         $WHMCSUrl = config('app.api_url');
         $apiurl = $WHMCSUrl.'/includes/api/' . $apiname . '.php';

@@ -29,7 +29,7 @@ class CartController extends FrontController {
         Config::set('user.currency', Config::get('Constant.sys_currency_code'));
         Config::set('user.currencycode', Config::get('Constant.sys_currency'));
         Config::set('user.suggestedtlds', "com,net,ca,in,info"); //suggested tlds.
-        $dname = url('/');
+        $dname = "https://www.hostitsmart.com";
         Config::set('apiurl', $dname . "/checkdomain.php?"); //suggested tlds.
         $apiUrl = config('app.api_url');
         Config::set('hitsupdatecart', $apiUrl);
@@ -1329,6 +1329,7 @@ class CartController extends FrontController {
         $orderId = Cart::createorder($request);
         echo '<pre>Order Id:';
         print_r($orderId);
+        // echo '<a target="_blank" href="https://new.hostitsmart.com/manage/admin/orders.php?action=view&id=' . $orderId['orderid'] . '">View Order</a>';
         exit;
         //return redirect('cart');
     }
@@ -2371,5 +2372,18 @@ class CartController extends FrontController {
         else{ return 0; }
     }
 
+     public function testapi() {
+        $tldparams = [];
+        $tldparams['currencycode'] = Config::get('Constant.sys_currency');
+        $tldparams['productid'] = "179";
+        $Tld_array = Cart::getProductPricing($tldparams);
+        echo '<pre>Product Details of id 179:</br> https://www.hostitsmart.com/manage/cart.php?a=add&pid=179  </br>';print_r($Tld_array);
+        
+        $data['email'] = 'demo1.netclues@gmail.com';
+        $data['name'] = 'demo1.netclues';
+        Email_sender::testingemail($data);
+        
+        
+    }
 
 }

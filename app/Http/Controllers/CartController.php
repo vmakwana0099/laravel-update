@@ -28,10 +28,9 @@ class CartController extends FrontController {
         Config::set('user.currency', Config::get('Constant.sys_currency_code'));
         Config::set('user.currencycode', Config::get('Constant.sys_currency'));
         Config::set('user.suggestedtlds', "com,net,ca,in,info"); //suggested tlds.
-        $dname = url('/');
+        $dname = "https://www.hostitsmart.com";
         Config::set('apiurl', $dname . "/checkdomain.php?"); //suggested tlds.
-        $WHMCSUrl = config('app.api_url');
-        Config::set('hitsupdatecart', $WHMCSUrl );
+        Config::set('hitsupdatecart', "https://manage.hostitsmart.com" );
         $addonServices = array();
         
         //Linux web hosting -> Dedicated Server
@@ -781,6 +780,14 @@ class CartController extends FrontController {
                 }
             }*/
                
+               /*if($countd>0)
+                {       
+                return view('cart.domainconfig', ['tlds'=>$tldarray,'additionalfields'=>$additionalfields]);
+                }
+                else
+                {
+                return header('Location: https://beta.hostitsmart.com/cart');
+                }*/
                 if ($requestData->domaintype == 'transfer') {
                     $item['pricing'] = Cart::getDomainPricing(['tlds' => "." . $transfer_tld[1], 'currency' => Config::get('user.currency')]);  //check for Dot in tlds. ".com"
                 } else {
@@ -796,14 +803,11 @@ class CartController extends FrontController {
                         $item['groupname'] = $productData_groupname[$item['pid']]->groupname;
                     }else{
                         // dd($_SERVER['HTTP_REFERER']);
-                        $referer = $_SERVER['HTTP_REFERER'];
-                        $domain = config('app.url');
-                        if ($referer == $domain . '/web-hosting') {
+                        if ($_SERVER['HTTP_REFERER'] == 'https://www.hostitsmart.com/web-hosting') {
                             $item['groupname'] = "Web Hosting";
                         } else {
                             $item['groupname'] = $productData[$item['pid']]->groupname;
                         }
-
                         
                     }
                 }
@@ -1105,7 +1109,7 @@ class CartController extends FrontController {
         'description' => '',
         'required' => '',
         'fieldtype' => 'dropdown',
-        'fieldoptions' => 'India,Germany,Canada',
+        'fieldoptions' => 'India,Canada',
         'selectedOption' => $requestData->location,
     ];
 
@@ -1434,6 +1438,7 @@ class CartController extends FrontController {
         $orderId = Cart::createorder($request);
         echo '<pre>Order Id:';
         print_r($orderId);
+        // echo '<a target="_blank" href="https://new.hostitsmart.com/manage/admin/orders.php?action=view&id=' . $orderId['orderid'] . '">View Order</a>';
         exit;
         //return redirect('cart');
     }
@@ -1597,7 +1602,7 @@ class CartController extends FrontController {
             }
             else
             {
-                   header('Location: ' . config('app.url') . '/cart');exit;
+                   return header('Location: https://www.hostitsmart.com/cart');
             }
              
         
@@ -1952,7 +1957,85 @@ class CartController extends FrontController {
                 $Tlds[] = $value->varTitle;
             }
         }
-        
+
+        // dd($productData['pid']);
+        if($productData['producttype'] == 'vps'){
+
+               if(Config::get('Constant.sys_currency') == "INR"){
+
+                $renewal_price = DB::table('renewal_price')
+                                ->where('product_package_id', $productData['pid'])
+                                ->first(['renewal_monthly_INR', 'renewal_yearly_permonth_INR']);
+
+            }elseif(Config::get('Constant.sys_currency') == "USD"){
+                $renewal_price = DB::table('renewal_price')
+                                ->where('product_package_id', $productData['pid'])
+                                ->first(['renewal_monthly_USD', 'renewal_yearly_permonth_USD']);
+            }
+
+                                
+
+            if($renewal_price){
+                $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_INR;
+                $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_INR;
+                $productData['extra_renewal_data'] = true;
+
+                foreach ($productData['pricing'] as $key => $price) {
+
+        if ($price->durationame === 'monthly') {
+            $price->renewal_price = $productData['renewal_monthly_price']; 
+        }
+
+        if ($price->durationame === 'annually') {
+            $price->renewal_price = $productData['renewal_yearlyPrice_perMonth']; 
+        }
+
+        }
+            }         
+
+           
+        }
+
+        if($productData['producttype'] == 'email')
+        {
+            $google_apps_product_id = array(117,116,206);
+
+            if(in_array($productData['pid'], $google_apps_product_id)){
+
+                if(Config::get('Constant.sys_currency') == "INR"){
+
+                $renewal_price = DB::table('renewal_price')
+                                ->where('product_package_id', $productData['pid'])
+                                ->first(['renewal_monthly_INR','renewal_yearly_permonth_INR']);
+
+            }elseif(Config::get('Constant.sys_currency') == "USD"){
+                $renewal_price = DB::table('renewal_price')
+                                ->where('product_package_id', $productData['pid'])
+                                ->first(['renewal_monthly_USD','renewal_yearly_permonth_USD']);
+            }
+
+            if($renewal_price){
+                $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_INR;
+                $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_INR;
+                $productData['extra_renewal_data'] = true;
+
+                foreach ($productData['pricing'] as $key => $price) {
+
+                    if ($price->durationame === 'monthly') {
+                        $price->renewal_price = $productData['renewal_monthly_price']; 
+                    }
+
+                    if ($price->durationame === 'annually') {
+                        $price->renewal_price = $productData['renewal_yearlyPrice_perMonth']; 
+                    }
+
+                }
+            }  
+
+            }
+
+        }
+        // dd($productData);
         $reqData = $request->all();
         $viewData = ['productData' => $productData, "key" => $id, "tlds" => $Tlds,"products"=>$products,'suggestPro'=>$suggestPro];
         
@@ -2371,9 +2454,12 @@ class CartController extends FrontController {
         $cartData = Cart::createOrderSummary($request);
         
 
-        if(array_key_exists('userid',$cartData))        { unset($cartData['userid']); }
-        if(array_key_exists('paymentmethod',$cartData)) { unset($cartData['paymentmethod']); }
-        if(array_key_exists('recommndation',$cartData)) { unset($cartData['recommndation']); }  
+        // if(array_key_exists('userid',$cartData))        { unset($cartData['userid']); }
+        if (is_array($cartData) && array_key_exists('userid', $cartData)) {
+            unset($cartData['userid']);
+        }
+        if(is_array($cartData) && array_key_exists('paymentmethod',$cartData)) { unset($cartData['paymentmethod']); }
+        if(is_array($cartData) && array_key_exists('recommndation',$cartData)) { unset($cartData['recommndation']); }  
         $addonProducts = [];
         foreach ($cartData as $item) {
             if (isset($item['relatedpro'])) {
@@ -2476,6 +2562,7 @@ class CartController extends FrontController {
         }
     }
     public function billinginfo(Request $request) {
+        
         $cartData = $request->session()->all();
         
         //Update spinwheel start ------------------------------------
@@ -2736,7 +2823,6 @@ class CartController extends FrontController {
                 }
             }
             if ($order_staus != 'active') {
-                $AFFILIATES_URL = Config::get('Constant.AFFILIATES_URL');
                 ?>
                     <script language="JavaScript" type="text/javascript" src="<?php echo 'https://affiliates.hostitsmart.com/sale.php?profile=72198&idev_saleamt=' . $order_details['orders']['order']['0']['amount'] . '&idev_ordernum=' . $order_details['orders']['order']['0']['id']; ?>"></script>
                 <?php
@@ -3002,7 +3088,15 @@ class CartController extends FrontController {
         else{ return 0; }
     }
      public function testapi() {
+        $tldparams = [];
+        $tldparams['currencycode'] = Config::get('Constant.sys_currency');
+        $tldparams['productid'] = "179";
+        $Tld_array = Cart::getProductPricing($tldparams);
+        echo '<pre>Product Details of id 179:</br> https://manage.hostitsmart.com/cart.php?a=add&pid=179  </br>';print_r($Tld_array);
         
+        $data['email'] = 'demo1.netclues@gmail.com';
+        $data['name'] = 'demo1.netclues';
+        Email_sender::testingemail($data);
     }
     public function check_terms(Request $request){
         // return $request['ischeck_term'];

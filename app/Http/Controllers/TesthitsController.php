@@ -138,6 +138,11 @@ $linksArr['496'] = array("link" => "web-hosting","name" => "web Hosting", "type"
 $linksArr['497'] = array("link" => "web-hosting","name" => "web Hosting", "type" => "<span style='color:green'>Business</span>");
 $linksArr['498'] = array("link" => "web-hosting","name" => "web Hosting", "type" => "<span style='color:green'>Business</span>");
 
+$linksArr['499'] = array("link" => "servers/vps-hosting-india","name" => "VPS Hosting", "type" => "<span style='color:pink'>Starter</span>");
+$linksArr['500'] = array("link" => "servers/vps-hosting-india","name" => "VPS Hosting", "type" => "<span style='color:blue'>Performance</span>");
+$linksArr['501'] = array("link" => "servers/vps-hosting-india","name" => "VPS Hosting", "type" => "<span style='color:blue'>Performance</span>");
+$linksArr['502'] = array("link" => "servers/vps-hosting-india","name" => "VPS Hosting", "type" => "<span style='color:blue'>Performance</span>");
+$linksArr['503'] = array("link" => "servers/vps-hosting-india","name" => "VPS Hosting", "type" => "<span style='color:green'>Business</span>");
 
         $pid = isset($request->pid)?$request->pid:'';
         $cid = isset($request->curr)?$request->curr:'';
@@ -293,7 +298,7 @@ $linksArr['498'] = array("link" => "web-hosting","name" => "web Hosting", "type"
  public function whmcspdata(){
             $params['action'] = "getactiveproductsids";
             $activePIDs = Whmcs::callapi($params);
-            echo '<pre>';print_r($activePIDs);exit;
+            // echo '<pre>';print_r($activePIDs);exit;
             $pids = '';
             foreach ($activePIDs as $key => $value) {
                 $pids .= $value['id'] . ','; 
@@ -339,5 +344,25 @@ $linksArr['498'] = array("link" => "web-hosting","name" => "web Hosting", "type"
             /*echo '2 => <pre>';print_r($res);exit;*/
             echo json_encode($res);exit;
         }
+    }
+    public function testapi(){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://manage.hostitsmart.com/includes/api.php');
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,
+            http_build_query(
+                array(
+                    'action' => 'GetAdminDetails',
+                    // See https://developers.whmcs.com/api/authentication
+                    'username' => 'ZyjSSPOuTToAmyLZXN13BCaCQTSjvP8I',
+                    'password' => 'plgLV63LlubL4MRig6LgNDigMvKRH4EB',
+                    'responsetype' => 'json',
+                )
+            )
+        );
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($ch);
+echo '<pre>';print_r($response);exit;
+        curl_close($ch);
     }
 }

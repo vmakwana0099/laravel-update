@@ -51,20 +51,26 @@ class FrontController extends Controller {
                 if(isset($_SERVER['HTTP_X_REAL_IP']) && !empty($_SERVER['HTTP_X_REAL_IP'])){
                    $IP = $_SERVER['HTTP_X_REAL_IP'];
                    $ipx = $_SERVER['HTTP_X_REAL_IP']; 
+
+
                 }
                 else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
                    $IP = $_SERVER['HTTP_X_FORWARDED_FOR']; 
                    $ipf = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+
                 }
                 else if(isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])){
                    $IP = $_SERVER['REMOTE_ADDR']; 
                    $ipr = $_SERVER['REMOTE_ADDR']; 
+
+
                 }
                 $sess_ip = $request->session()->has('user_ses_ip')?$request->session()->get('user_ses_ip'):"";
-                
-                if($IP != $sess_ip){ 
+                if(explode(',', $IP)[0] != explode(',', $sess_ip)[0]){ 
+                    // dd(1);
                 file_put_contents("ipconflict.txt", "\n Date: ".date("Y-m-d H:i:s")." IP: ".$IP." ipx: ".$ipx." ipf: ".$ipf." ipr: ".$ipr." - SessIP: ".$sess_ip." - User: ".$request->session()->get('UserID'), FILE_APPEND); 
-                redirect('/user-logout'); exit; 
+                return redirect('/user-logout');  
                 }
             }
             //Session validation for user---------------------------
@@ -105,7 +111,11 @@ class FrontController extends Controller {
                             else if(isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])){
                                $IP = $_SERVER['REMOTE_ADDR']; 
                             }
-                           $position = Location::get($IP);
+                           // $position = Location::get($IP);
+                           $position = new \stdClass(); // Add backslash (\) to refer to global namespace
+                           $position->countryCode = 'IN';
+                           // dd($position->countryCode);
+                           // dd(Location::get($IP));
                            //echo $IP;
                            //echo '<pre>';print_r($position); echo '</pre>'; 
                            if(isset($position->countryCode) && !empty($position->countryCode))
@@ -130,7 +140,7 @@ class FrontController extends Controller {
                         //echo "123"; 
                         if(isset($_REQUEST['location']) && !empty($_REQUEST['location'])){
                             setcookie("sys_countryloc", "IN", time() + (86400 * 30), "/"); // 86400 = 1 day
-                            echo '<script type="text/javascript">window.location="' . url('/') . '";</script>';exit;
+                            echo '<script type="text/javascript">window.location="https://www.hostitsmart.com"</script>';exit;
                         }
                         
                         if(isset($_COOKIE["sys_countryloc"]) && !empty($_COOKIE["sys_countryloc"])){

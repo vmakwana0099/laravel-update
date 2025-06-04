@@ -12,10 +12,9 @@ use Session;
 
 class Cart {
     public function __construct() {
-        $dname = config('app.url');
+        $dname = "https://www.hostitsmart.com";
         Config::set('apiurl', $dname."/checkdomain.php?"); //suggested tlds.
-        $WHMCSUrl = config('app.api_url');
-        Config::set('hitsupdatecart', $WHMCSUrl);
+        Config::set('hitsupdatecart', "https://manage.hostitsmart.com");
     }
 
     public static function addtocart($request, $itemData, $User_ID = '') {
@@ -745,6 +744,7 @@ class Cart {
     public static function checkDomainAvailability($data) {
         $urlstr = Config::get('apiurl'); 
         // $url = str_replace('checkdomain.php','manage/checkdomain.php',$urlstr);
+        // $url = 'https://manage.hostitsmart.com/checkdomain.php?';
         $WHMCSUrl = config('app.api_url');
         $url = $WHMCSUrl. '/checkdomain.php?';
 

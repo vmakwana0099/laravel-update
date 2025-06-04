@@ -15,6 +15,7 @@ use Config;
 use Illuminate\Http\Request;
 use App\Whmcs;
 use DB;
+use Session;
 
 class MyLibrary {
 
@@ -433,49 +434,143 @@ class MyLibrary {
         return $output;
     }
 
-    public static function getStaticArrayOfPrice()
-    {   
-        //$myfile = Config::get('Constant.CDNURL')."/hits_price/pricing.js";
-        if(Config::get('Constant.sys_currency') == "INR")
-        { $myfile = Config::get('Constant.SITE_URL')."/hits_price2/pricingINR.js"; }
-        elseif(Config::get('Constant.sys_currency') == "USD")
-        { $myfile = Config::get('Constant.SITE_URL')."/hits_price2/pricingUSD.js"; }
+    // public static function getStaticArrayOfPrice()
+    // {   
+    //     //$myfile = Config::get('Constant.CDNURL')."/hits_price/pricing.js";
+    //     if(Config::get('Constant.sys_currency') == "INR")
+    //     { $myfile = Config::get('Constant.SITE_URL')."/hits_price2/pricingINR.js"; }
+    //     elseif(Config::get('Constant.sys_currency') == "USD")
+    //     { $myfile = Config::get('Constant.SITE_URL')."/hits_price2/pricingUSD.js"; }
 
-        /*
-        $ar = file_get_contents($myfile);
-        $result = json_decode($ar, true);
-        return $result;
-        */
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $myfile);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        //echo '<pre>';print_r($result);echo '</pre>';exit;
-        curl_close($ch);
-        return json_decode( $result, true );
+    //     /*
+    //     $ar = file_get_contents($myfile);
+    //     $result = json_decode($ar, true);
+    //     return $result;
+    //     */
+    //     $ch = curl_init();
+    //     curl_setopt($ch, CURLOPT_URL, $myfile);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //     $result = curl_exec($ch);
+    //     //echo '<pre>';print_r($result);echo '</pre>';exit;
+    //     curl_close($ch);
+    //     return json_decode( $result, true );
+    // }
+
+
+     public static function getStaticArrayOfPrice()
+    {
+        // Get the system currency
+        $currency = Config::get('Constant.sys_currency');
+        
+        if($currency == "INR"){
+             $prices = DB::table('pricing_27125')
+            ->where('currency', 'INR') // Assuming there's a column named 'currency'
+            ->value('price_value');            
+        }else if($currency == "USD"){
+            $prices = DB::table('pricing_27125')
+            ->where('currency', 'USD') // Assuming there's a column named 'currency'
+            ->value('price_value'); 
+        }
+        // Query the database based on the currency
+        // dd(json_decode( $prices));       
+               return json_decode( $prices, true );
+
     }
 
+//     public static function getStaticArrayOfPrice()
+// {
+//     // Determine the file URL based on the system currency
+//     $currency = Config::get('Constant.sys_currency');
+//     $baseURL = Config::get('Constant.SITE_URL');
+    
+//     if ($currency === "INR") {
+//         $fileURL = $baseURL . "/hits_price2/pricingINR.js";
+//     } elseif ($currency === "USD") {
+//         $fileURL = $baseURL . "/hits_price2/pricingUSD.js";
+//     } else {
+//         // Fallback or error handling if the currency is unsupported
+//         throw new \Exception("Unsupported currency: " . $currency);
+//     }
 
-     public static function laravelcallvalidatelogin($action, $postfields) {
-        $WHMCSUrl = config('app.api_url');
-        $apiurl = $WHMCSUrl."/validatelogin.php";
+//     // Initialize cURL session
+//     $ch = curl_init();
+//     curl_setopt($ch, CURLOPT_URL, $fileURL);
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+//     // Execute cURL and handle response
+//     $response = curl_exec($ch);
+//     $error = curl_error($ch);
+//     curl_close($ch);
+
+//     // Check for cURL errors
+//     if ($response === false) {
+//         throw new \Exception("cURL error: " . $error);
+//     }
+
+//     // Decode JSON response
+//     $data = json_decode($response, true);
+    
+//     // Check if JSON decoding was successful
+//     if (json_last_error() !== JSON_ERROR_NONE) {
+//         throw new \Exception("JSON decode error: " . json_last_error_msg());
+//     }
+
+//     return $data;
+// }
+
+
+
+    //  public static function laravelcallvalidatelogin($action, $postfields) {
+    //     $WHMCSUrl = config('app.api_url');
+    //     $apiurl = $WHMCSUrl."/validatelogin.php";
         
-        $fields = http_build_query($postfields);
-        $ch = curl_init($apiurl);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 900);
-        $result = curl_exec($ch);
-        if (curl_error($ch)) {
-            $strContent = date("m-d-Y H:i:s")." Url: ".$apiurl. " ErrorNo: ".curl_errno($ch) . ' - ' . curl_error($ch);
-            file_put_contents('curlerror_log.txt', "\n".$strContent, FILE_APPEND);
-            die('Unable to connect (laravelcallvalidatelogin): ' . curl_errno($ch) . ' - ' . curl_error($ch));
-        }
+    //     $fields = http_build_query($postfields);
+    //     $ch = curl_init($apiurl);
+    //     curl_setopt($ch, CURLOPT_POST, true);
+    //     curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    //     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    //     curl_setopt($ch, CURLOPT_TIMEOUT, 900);
+    //     $result = curl_exec($ch);
+    //     if (curl_error($ch)) {
+    //         $strContent = date("m-d-Y H:i:s")." Url: ".$apiurl. " ErrorNo: ".curl_errno($ch) . ' - ' . curl_error($ch);
+    //         file_put_contents('curlerror_log.txt', "\n".$strContent, FILE_APPEND);
+    //         die('Unable to connect (laravelcallvalidatelogin): ' . curl_errno($ch) . ' - ' . curl_error($ch));
+    //     }
+    //     curl_close($ch);
+    //    return $result;
+    // }
+
+    public static function laravelcallvalidatelogin($action, $postfields) {
+        // dd($postfields);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://manage.hostitsmart.com/includes/api.php');
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,
+            http_build_query(
+                array(
+                    'action' => 'ValidateLogin',
+                    // See https://developers.whmcs.com/api/authentication
+                    'username' => 'ZyjSSPOuTToAmyLZXN13BCaCQTSjvP8I',
+                    'password' => 'plgLV63LlubL4MRig6LgNDigMvKRH4EB',
+                    'email' => $postfields['email'],
+                    'password2' => $postfields['password2'],
+                    'responsetype' => 'json',
+                )
+            )
+        );
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($ch);
         curl_close($ch);
-       return $result;
+
+        $result = json_decode($response);
+        if($result->result == 'error'){
+            return '';
+        }else{
+            return $result->passwordhash;
+        }
+        // echo "<pre>"; print_r($result->passwordhash); exit;
     }
 
     // New function to call whmcs api------------------------------
@@ -1029,6 +1124,7 @@ if($action == 'orderratingupdate'){
     public static function laravelcallapiOld($action, $postfields) {
         
         $siteurl = url('/');
+        // $siteurl = 'https://www.hostitsmart.com';
         $apiurl = $siteurl . "/api/" . $action;
         //echo $apiurl;exit;
         //Logic: Call to whmcs external api
@@ -3397,6 +3493,9 @@ return (!empty($id))?$countries[$id]:$countries;
             file_put_contents('curlerror_log.txt', "\n".$strContent, FILE_APPEND);
             die('Unable to connect (sendOTP): ' . curl_errno($ch) . ' - ' . curl_error($ch));
         }
+        $currentTime = now(); // Current timestamp
+        Session::put('otp_time', $currentTime);
+
         curl_close($ch);
         $jsonData = json_decode($result,true);
         return $jsonData;

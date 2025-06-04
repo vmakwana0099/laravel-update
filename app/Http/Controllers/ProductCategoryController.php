@@ -29,8 +29,7 @@ class ProductCategoryController extends FrontController {
      */
     public function __construct() {
         //Config::set('apiurl', Config::get('Constant.API_URL')."/checkdomain.php?"); //suggested tlds.
-        $WHMCSUrl = config('app.api_url');
-        Config::set('apiurl', $WHMCSUrl . "/checkdomain.php?");
+        Config::set('apiurl', "https://manage.hostitsmart.com/checkdomain.php?"); 
         parent::__construct();
 //        $this->currency = Config::get('Constant.sys_currency');
 //        $this->currency_code = Config::get('Constant.sys_currency_code');
@@ -332,6 +331,10 @@ class ProductCategoryController extends FrontController {
         $DomainName = str_replace("https://","",$request->domainname);
         $DomainName = str_replace("http://","",$DomainName);
         $DomainName = str_replace("www.","",$DomainName);
+
+        if($request->is_banner_form && $request->is_banner_form == 'y'){
+            $DomainName = $DomainName.".".$request->selcetlds;
+        }
 
         $DomainName = $this->remove_all_special_char($DomainName);
 

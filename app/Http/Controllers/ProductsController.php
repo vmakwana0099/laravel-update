@@ -118,6 +118,9 @@ class ProductsController extends FrontController {
             else if($ProId->id == "28"){
                 $protext = "vps"; //For Managed VPS Hosting
             }
+            else if($ProId->id == "32"){
+                $protext = "vps"; //For VPS Hosting India
+            }
             else if($ProId->id == "21"){
                 $protext = "email"; //For Google Apps
             }
@@ -144,7 +147,7 @@ class ProductsController extends FrontController {
                 $protext = "";
             }
 
-            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" ) {
+            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32" ) {
                 $yearsArr = ["monthly","quarterly","semi-annually","annually","biennially","triennially"]; 
                 $i=0;
                 foreach ($ProductData['ProductsPackageData'] as $pkey => $pval){
@@ -154,6 +157,7 @@ class ProductsController extends FrontController {
                     $pval->productpricing = Cart::getProductPricing($paramsPriceArr);
                     /*echo '<pre>';print_r($pval->productpricing);exit;break;*/
                     $divideVal = 1;
+                    // dd($pval->productpricing);
                     foreach ($pval->productpricing as $priskey => $prisval) {
 
                         if ($priskey == 'monthly' || $priskey == 'quarterly' || $priskey == 'semiannually' || $priskey == 'annually' || $priskey == 'biennially' || $priskey == 'triennially') {
@@ -242,6 +246,11 @@ class ProductsController extends FrontController {
             else if ($ProId->id == "23") { //for linux vps hosting product
                 return view("linuxvpshosting", $ProductData);
             }
+            else if ($ProId->id == "32") { //for linux vps hosting India
+                // echo "<pre>";print_r($ProductData);exit;
+                return view("vps-product-india", $ProductData);
+                // return view("vpsproduct", $ProductData);
+            }
              else if ($ProId->id == "24") { //for windows vps hosting product
                 return view("windowsvpshosting", $ProductData);
             }
@@ -274,6 +283,8 @@ class ProductsController extends FrontController {
             else if ($ProId->id == "4") { //web hosting Ahm
                 return view("wordpress", $ProductData);
 
+            }elseif($ProId->id == "1"){
+                return view("product_linux", $ProductData);
             }
             else {
                 return view("product", $ProductData);   

@@ -106,27 +106,36 @@ class GoogleContactController extends FrontController {
         $data = request()->all(); // Use request helper
 
         // Validation rules
+        // handle_xss
         $rules = array(
-            'name' => 'required|handle_xss',  // Ensure 'handle_xss' is defined as a custom validation rule
+            'name' => 'required|regex:/^[a-zA-Z\s\'-]{2,50}$/',  // Ensure 'handle_xss' is defined as a custom validation rule
             'email' => 'required|email',
-            'phone_number' => 'required',
-            'companyname' => 'required',
-            'domain' => 'required',
-            'licenses_no' => 'required'
+            'phone_number' => 'required|regex:/^\+?[0-9\s-]{7,20}$/',
+            'companyname' => "required|regex:/^[a-zA-Z0-9&\s\'-]{2,100}$/",
+            'domain' => 'required|regex:/^(?!:\/\/)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/',
+            'licenses_no' => 'required|regex:/^[1-9][0-9]*$/',
+            'message' => "regex:/^[a-zA-Z0-9\s.,_'!?;:@#%&()-*]*$/",
+            'g-recaptcha-response' => 'required'
         );
 
         // Custom error messages
         $messages = array(
             'name.required' => 'Name field is required',
-            'name.handle_xss' => 'Please enter valid input.',
+            'name.regex' => 'Enter valid input.',
             'email.required' => 'Email is required',
             'email.email' => 'Please provide a valid email address.',
             'phone_number.required' => 'Phone number is required',
+            'phone_number.regex' => 'Enter a valid phone number.',
             'companyname.required' => 'Company name is required',
+            'companyname.regex' => 'Enter valid input.',
             'domain.required' => 'Domain is required',
-            'licenses_no.required' => 'Number of licenses is required'
+            'domain.regex' => 'Enter a valid domain (e.g., xyz.com or xyz.co.in).',
+            'licenses_no.required' => 'Number of licenses is required',
+            'licenses_no.regex' => 'Enter a valid positive number of licenses.',
+            'message.regex' => 'Enter a valid message.',
+            'g-recaptcha-response.required' => 'Captcha is required',
         );
-
+                    // 'name.handle_xss' => 'Please enter valid input.',
 
         // Perform validation
         $validator = Validator::make($data, $rules, $messages);

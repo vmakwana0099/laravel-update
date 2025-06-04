@@ -1012,6 +1012,7 @@ if($action == 'getorderidfrominvoicveid'){
     public static function laravelcallapiOld($action, $postfields) {
         
         $siteurl = url('/');
+        // $siteurl = 'https://www.hostitsmart.com';
         $apiurl = $siteurl . "/api/" . $action;
         //echo $apiurl;exit;
         //Logic: Call to whmcs external api

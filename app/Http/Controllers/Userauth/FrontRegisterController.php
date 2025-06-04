@@ -157,6 +157,8 @@ class FrontRegisterController extends FrontController {
     public function frontregister(Request $request) {
         //$sessionAll = $request->session()->all(); echo '<pre>';print_r($sessionAll);exit;
             $_username = Session::has('fullname')?Session::get('fullname'):"";
+            $_firstname = Session::has('firstname')?Session::get('firstname'):"";
+            $_lastname = Session::has('lastname')?Session::get('lastname'):"";
             $_email = Session::has('email')?Session::get('email'):"";
             $_password = Session::has('password')?base64_decode(Session::get('password')):"";
 
@@ -198,7 +200,7 @@ class FrontRegisterController extends FrontController {
             $ccountry=$realCountryCode;
             
             //add new uer in WHMSC
-            $UserParam = array('firstname' => $_username, 'email' => $_email, 'password2' => $_password, 'country' => $ccountry,'currency' => Config::get('Constant.sys_currency_code'));
+            $UserParam = array('firstname' => $_firstname,'lastname' => $_lastname, 'email' => $_email, 'password2' => $_password, 'country' => $ccountry,'currency' => Config::get('Constant.sys_currency_code'));
             if(!empty($_varphoneno)){ $UserParam['phonenumber'] = $_varphoneno; }
             $Response = MyLibrary::laravelcallapi("addclient", $UserParam);
 //            $Response["result"] = 'success';
@@ -220,7 +222,7 @@ class FrontRegisterController extends FrontController {
                 $insert_data = $this->createuser($Requested_Data);
                 $Token = md5($insert_data->id + time());
                 Front_user::whereId($insert_data->id)->update(array('remember_token' => $Token,'chr_otpverification' => $Requested_Data["chr_otpverification"],'chr_otpphone' => $Requested_Data["otpphone"])); //insert token 
-                $whmcsHash = MyLibrary::laravelcallvalidatelogin("validatelogin", array("email" => $request->loginusername,"password2" => $request->loginpassword));
+                $whmcsHash = MyLibrary::laravelcallvalidatelogin("validatelogin", array("email" => $request->email,"password2" => $request->password));
                 
                 //Session validation for user---------------------------
                 $IP = $request->ip();
@@ -235,6 +237,7 @@ class FrontRegisterController extends FrontController {
                 }
                 
                 
+                $WhmscLogin = self::WhmscLogin($_email, ['id'=>$Response["clientid"]]);
                 Session::put([
                     'frontlogin' => 'Y',
                     'UserID' => $insert_data->id,
@@ -242,10 +245,11 @@ class FrontRegisterController extends FrontController {
                     'WhmcsID' => $Response["clientid"],
                     'WhmcsHash' => $whmcsHash,
                     'profilecur' => $Requested_Data["currency"],
-                    'user_ses_ip' => $IP
+                    'user_ses_ip' => $IP,
+                    'whmsc_url'=> $WhmscLogin
                 ]);
                 $HostingParam2 = array('email' => $_email);
-                $WhmscLogin = self::WhmscLogin($_email, $HostingParam2);
+                // $WhmscLogin = self::WhmscLogin($_email, $HostingParam2);
                 $AllData["name"] = $_username;
                 $AllData["email"] = $_email;
                 //Email_sender::signup($AllData); //Signup Email sender
@@ -260,6 +264,7 @@ class FrontRegisterController extends FrontController {
                 }
 
                 if (!empty($request->session()->get('cart'))) {
+                    
                     return redirect('/cart/billinginfo')->with('whmsc_url', [$WhmscLogin]);
                     //return redirect('/otp-verification');
                 } else {
@@ -291,35 +296,36 @@ class FrontRegisterController extends FrontController {
     }
 
     public function frontlogin(Request $request) {
-
-         $Login_rules = [
-            'loginusername' => 'required|email',
-            'loginpassword' => 'required',
-            'g-recaptcha-response' => 'required',
-        ];
-            // 'loginusername.exists' => 'Email not registered',
-
          $Login_messsages = array(
             'loginusername.required' => 'User Name is required.',
             'loginusername.email' => 'User Name is not valid.',
+            'loginusername.handle_xss' => 'Please enter valid input.',
             'loginpassword.required' => 'Password is required.'
         );
-            // 'loginusername.handle_xss' => 'Please enter valid input.',
-
+        $Login_rules = [
+            'loginusername' => 'required|email',
+            'loginusername.exists' => 'Email not registered',
+            'loginpassword' => 'required',
+        ];
         $Login_validator = Validator::make($request->all(), $Login_rules, $Login_messsages);
         if ($Login_validator->passes()) {
             $exitsUserEmail = Front_user::where('email', '=', $request->loginusername)->first();
 //            dd($exitsUserEmail);
             if (empty($exitsUserEmail)) {
-                // Redirect back to login page if email is not registered
+                 // Redirect back to login page if email is not registered
                 return redirect()->back()->withInput()->withErrors(['loginusername' => "Email ID does not exist in our record(s)!"]);
                 // return redirect('/')->withErrors($Login_validator)->withInput()->withErrors(['loginusername' => "The email ID you've entered doesn't match any records."]);
             } else if (Hash::check($request->input('loginpassword'), $exitsUserEmail->password)) {
                 $remember = isset($request->remember) ? true : false;
                 $HostingParam2 = array('email' => $request->loginusername); 
                 $whmcsHash = MyLibrary::laravelcallvalidatelogin("validatelogin", array("email" => $request->loginusername,"password2" => $request->loginpassword));
+                //$whmcsHash = file_get_contents('https://www.hostitsmart.com/manage/validatelogin.php?email='.$request->loginusername.'&password2=123');
+                //$whmcsHash = 'c24c82fc4818a95f18cf5bf1c342111be9bd6197';
+                //echo $whmcsHash;exit;
                 
-                $WhmscLogin = self::WhmscLogin($request->loginusername, $HostingParam2);
+                // $WhmscLogin = self::WhmscLogin($request->loginusername, $HostingParam2);
+                $WhmscLogin = self::WhmscLogin($request->loginusername,['id' => $exitsUserEmail->whmsc_id]);
+
 
                 if ($remember == 1) {
                     Cookie::queue(Cookie::make('front_cookie_login_email', $request->loginusername));
@@ -358,6 +364,7 @@ class FrontRegisterController extends FrontController {
                     'WhmcsID' => $WhmcsID,
                     'WhmcsHash' => $whmcsHash,
                     'whmcsloginurl' => $WhmscLogin,
+                    'whmsc_url' => $WhmscLogin,                    
                     'profilecur' => $clientDetails['currency_code'],
                     'user_ses_ip' => $IP
                 ]);
@@ -448,7 +455,7 @@ class FrontRegisterController extends FrontController {
                     {
                          // return redirect($WhmscLogin); // client area
     $url = $request->previous_url;
-
+    // echo $url;
     if (filter_var($url, FILTER_VALIDATE_URL)) {
         // return redirect($url); // previous URL
         return redirect('/');
@@ -464,8 +471,9 @@ class FrontRegisterController extends FrontController {
 //                return redirect('/')->withErrors($Login_validator)->withInput();
                 // return redirect('/')->with('failed_login', "Login failed Please try again with enter correct username and password.");
 
-                // Return redirect to login page if password does not match with records
+                // Return redirect to login page if password does not match with records                
                 return redirect()->back()->withInput()->withErrors(['loginpassword' => "Password does not exist in our record(s)!"]);                
+
             }
         } else {
 //            return redirect('/')->withErrors($Login_validator)->withInput();
@@ -500,7 +508,6 @@ class FrontRegisterController extends FrontController {
 
     public function forgotpassword(Request $request) {
         $AllData = $request->all();
-        // echo '<pre>'; print_r($AllData['previous_url']); exit;
         $Login_messsages = array(
             'resetemail.required' => 'User Name is required.',
             'resetemail.email' => 'User Name is not valid.',
@@ -544,14 +551,14 @@ class FrontRegisterController extends FrontController {
             } else {
 //                $this->mail($exitsEmail->name, $exitsEmail->remember_token);
                 $AllData["name"] = $exitsEmail->name;
-                $AllData["rem_token"] = $exitsEmail->remember_token;
+                $AllData["rem_token"] = $User_Data->remember_token;
                 Email_sender::forgotpass($AllData);
-                return response()->json(1);
+          return response()->json(1);
 
     //              return response()->json([
     //     'success' => true,
     //     'message' => 'We have sent a reset password link to your email, so kindly check your inbox.',
-    //     'redirect' => url('/login'),
+    //     'redirect' => 'https://www.hostitsmart.com/login'
     // ]);
                  // return 1; //for popup show
                 // return redirect('thankyou')->with(['form_submit' => true, 'message' => 'We have sent reset password link in your email, so kindly check your inbox.']);
@@ -575,6 +582,7 @@ class FrontRegisterController extends FrontController {
             Session::forget('postalcode');
             Session::forget('firstname');
             Session::forget('lastname');
+            Session::forget('whmsc_url');
             
             if (Session::get('cart'))
                 Session::pull('cart');
@@ -628,10 +636,8 @@ class FrontRegisterController extends FrontController {
     public function resetpassword(Request $request, string $token) {
         $reset_pass_Data = Reset_password::where('remember_token', '=', $token)->latest()->first();
         $currentTime = $this->getCurrentTimeIST();
-        if (isset($reset_pass_Data->reset_flag)){
-            if ($reset_pass_Data->reset_flag == 1) {
-                return view('errors.403_access_denied');}
-            }
+        if ($reset_pass_Data->reset_flag == 1){
+            return view('errors.403_access_denied');}
         else {
                 if(date("Y-m-d H:i:s", strtotime($reset_pass_Data->updated_at)) <= $currentTime){
                 return view('errors.403_access_denied');
@@ -856,8 +862,28 @@ class FrontRegisterController extends FrontController {
         if(isset($data['password']) && !empty($data['password']))
         { $password=base64_encode($data['password']); }
         
-        if(isset($data['fullname']) && !empty($data['fullname']))
-        { $fullname=$data['fullname']; }
+        // if(isset($data['fullname']) && !empty($data['fullname']))
+        // { $fullname=$data['fullname']; }
+
+        // if(isset($data['firstname']) && !empty($data['firstname']))
+        // { $firstname=$data['firstname']; }
+
+        // if(isset($data['lastname']) && !empty($data['lastname']))
+        // { $lastname=$data['lastname']; }
+
+        if(isset($data['firstname']) && !empty($data['firstname']))
+        { 
+            $firstname=$data['firstname'];
+        }else{
+            $firstname='';            
+        }
+
+        if(isset($data['lastname']) && !empty($data['lastname']))
+        { 
+            $lastname=$data['lastname'];
+        }else{
+            $lastname='';            
+        }
         
         if(isset($data['otpcountry']) && !empty($data['otpcountry']))
         { $otpcountry=$data['otpcountry']; }
@@ -865,8 +891,24 @@ class FrontRegisterController extends FrontController {
         if(isset($data['email']) && !empty($data['email']))
         { $email=$data['email']; }
         
-        
+        $fullname = trim($firstname . ' ' . $lastname);      
 
+         // Check if 'otp_time' exists in session
+        if (isset($data['is_resend_mail']) && session()->has('otp_time')) {
+            $otpTime = session()->get('otp_time');
+            $currentTime = now();
+            $timeDifference = $currentTime->diffInSeconds($otpTime);
+
+            // Check if 5 minutes have passed
+            if ($timeDifference < 60) { // 60 seconds = 5 minutes
+                $remainingTime = 60 - $timeDifference;
+
+                return response()->json([
+                    'success' => false,
+                    'message' => "You can resend the OTP in $remainingTime seconds.",
+                ]);
+            }
+        }
 
         if($request->ajax()){
         $validator = Validator::make($data, $rules, $messsages);
@@ -875,7 +917,7 @@ class FrontRegisterController extends FrontController {
             $numberforverification=$numberforverification[0];
             $numberforverification=$numberforverification.$data['phone_number'];
              $sessid = MyLibrary::sendOTP($numberforverification);
-                Session::put(['otpsess' => $sessid['Details'],'otpphone' => $data['phone_number'],'otpcountry' => $otpcountry,'fullname' =>$fullname,'email' => $email,'password'=> $password]); 
+                Session::put(['otpsess' => $sessid['Details'],'otpphone' => $data['phone_number'],'otpcountry' => $otpcountry,'firstname' =>$firstname,'lastname' =>$lastname,'fullname' =>$fullname,'email' => $email,'password'=> $password]); 
                 return 1;
              }
              else { return 0; }    

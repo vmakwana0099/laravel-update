@@ -38,11 +38,12 @@ class Email_sender {
         $settings['sender'] = $settings['SMTP_SENDER_NAME'];
         $settings['receiver'] = $settings['SMTP_SENDER_NAME'];
         $settings['txtBody'] = view('emails.default', $settings)->render();
-        $settings['attachmentUrl'] = "../backups/Invoice-209514.pdf";
+        $settings['attachmentUrl'] = "https://www.hostitsmart.com/backups/Invoice-209514.pdf";
         $logId = Self::recodLog($settings);
         unset($settings['txtBody']);
         //echo '<pre>';print_r($settings);exit;
         Self::sendEmail('emails.default', $settings, $logId);
+        
     }
 
     /**
@@ -93,7 +94,7 @@ class Email_sender {
         }
     }
 
-    public static function googlecontactUs($data = null) {
+     public static function googlecontactUs($data = null) {
         if ($data != null) {
 //            echo "<pre>";
 //            print_r($data); exit;
@@ -113,7 +114,7 @@ class Email_sender {
             $settings["subject"] = "New Google Contact Enquiry Received - " . $settings['SITE_NAME'];
             $settings['emailType'] = EmailType::getRecords()->checkEmailType('Google Contact Us Lead')->first()->id;
             $settings['from'] = $settings['DEFAULT_EMAIL'];
-            $settings['to'] = $settings['DEFAULT_CONTACTUS_EMAIL'];
+            $settings['to'] = $settings['DEFAULT_EMAIL'];
             $settings['sender'] = $settings['SMTP_SENDER_NAME'];
             $settings['receiver'] = $settings['SMTP_SENDER_NAME'];
             $settings['txtBody'] = view('emails.googlecontactmail', $settings)->render();

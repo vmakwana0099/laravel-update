@@ -759,7 +759,7 @@ class CmsPage extends Model {
                 ->where('t.chrPublish', 'Y')
                 ->orderby('t.intDisplayOrder', 'ASC')
                 ->offset(0)
-                ->limit(4)
+                ->limit(5)
                 ->get();
         return $response;
     }
