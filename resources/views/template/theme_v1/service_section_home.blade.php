@@ -145,7 +145,7 @@
 
             <div class="section-heading">
 
-                <h2 class="text_head text-center">Begin Your Online Journey With Endless Possibilities...</h2>
+                <h2 class="text_head text-center">Begin Your Online Journey With Endless Possibilities...a23</h2>
 
                 {{-- <p class="text-center">Check out our host of services!</p> --}}
 
