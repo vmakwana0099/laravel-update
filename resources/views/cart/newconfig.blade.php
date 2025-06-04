@@ -710,6 +710,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                         </div>
                     </div>
                 </div>
+                {{-- {{dd($productData['pid'])}} --}}
                 @if ($productData['groupname'] != 'Forex VPS')
                 <div class="c_c_box">
                     <h5 class="c_c_title c_c_blue-title">Configurable Options</h5><br>
@@ -1340,6 +1341,20 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
           </div>
         </div>
 
+        <div class="modal fade cartfull-popup" id="cartfull-popups" role="dialog" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close close-popup" id="close-cartfull-popups" data-bs-dismiss="modal">X</button>
+                      <h2 class="modal-title">Cart alert!</h2>
+                  </div>
+                  <div class="modal-body">
+                    <h2 class="modal-title">This product is not in your cart</h2>
+                    <a href="{{url('/')}}">Click Here</a>
+                  </div>
+              </div>
+          </div>
+        </div>
    @include('cart.cart-about-support')
 
  
@@ -1778,6 +1793,9 @@ function showAllCPValues(id) {
 
 
         function setConfigurationFieldValue(proid,fieldid,val){
+            console.log("1",proid)
+            console.log("2",fieldid)
+            console.log("3",val)
             setServersVPSConfiguration(fieldid);
 
         var harddisk=0;
@@ -1886,6 +1904,10 @@ function showAllCPValues(id) {
             type:"post",
             dataType: "json",
             success:function(response){
+                if (response.status === 'redirect') {
+                    $(function(){ $('#cartfull-popups').modal('show'); });
+                    {{-- window.location.href = response.url; --}}
+                }
               /*console.log("hello");*/
               var baseConfigration=''; var checkConfigaval=false;
               $.each(response.divHtml, function (i,v){
@@ -1929,7 +1951,7 @@ function showAllCPValues(id) {
               // vikram vps plans changes S 10/3/2022
 
               hideLoader();
-            }
+            }            
         });
       }
 

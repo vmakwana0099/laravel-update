@@ -2072,10 +2072,23 @@ class CartController extends FrontController {
     }
     public function setconfigoptionvalue(Request $request) {
         Self::getconstants();
+        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
+        if (!$cartData || !array_key_exists($request->productid, $cartData)) {
+           return response()->json([
+            'status' => 'redirect',            
+        ]);
+        }
+
+        $productData = $cartData[$request->productid];
+
+        if (!isset($productData['pid']) || empty($productData['pid'])) {
+            return response()->json([
+            'status' => 'redirect',            
+        ]);
+        }
         Cart::updateConfig($request);
         $configHtmlStr = "";
-        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
-        $productData = $cartData[$request->productid];
+        
         $finalPrice = 0;
         $finalPrice += $productData['pricing'][$productData['regperiod']]->price;
         if (!empty($productData['configfields'])) {
