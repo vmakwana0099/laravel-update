@@ -20,7 +20,7 @@
             <div class="col-lg-6 col-sm-7">
                 <div class="encrg-offers-cnt">
                     <div class="encrg-offr-tittle">Get Encouraged by Our Offers</div>
-                    <form id="ic_signupform" method="POST" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=176&cid=487250&lid=59438" captcha-key="6LeCZCcUAAAAALhxcQ5fN80W6Wa2K3GqRQK6WRjA" captcha-theme="light" new-captcha="true">
+                    {{-- <form id="ic_signupform" method="POST" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=176&cid=487250&lid=59438" captcha-key="6LeCZCcUAAAAALhxcQ5fN80W6Wa2K3GqRQK6WRjA" captcha-theme="light" new-captcha="true">
                         <div class="encrg-box-email" id="encrg-box-email">
                             <input type="email" class="email" id="email" name="data[email]" aria-describedby="emailHelp" placeholder="Enter email">
                             <div class="submit-container"></div>
@@ -35,6 +35,20 @@
                             <label for="subs-checkbox">By clicking “Subscribe,” you agree to Host IT Smart's privacy policy and consent to Host IT Smart using your contact data for newsletter purposes.</label><br>
                         </div>
                         <span id="checkbox-message" style="color: red;"></span> <!-- Span for checkbox error messages -->
+                    </form> --}}
+
+                    <form id="ic_signupforms" method="POST" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=0&cid=487250&lid=59596" target="_blank">
+                        <div class="encrg-box-email" id="encrg-box-email">
+                            <input type="email" class="email" id="email" name="data[email]" placeholder="Enter your email" required maxlength="70">
+                            <button type="submit" class="btn-submit" value="Subscribe" name="subscribe" title="Subscribe"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <span id="error-message" style="color: red;"></span> <!-- Span for email error messages -->
+                        <div class="encrg-offers-box" id="encrg-offers-box">
+                            <input type="checkbox" id="subs-checkbox" name="data[listGroups][]" value="138098">
+                            <label for="subs-checkbox">By clicking “Subscribe,” you agree to Host IT Smart's privacy policy and consent to Host IT Smart using your contact data for newsletter purposes.</label><br>
+                        </div>
+                        <span id="checkbox-message" style="color: red;"></span> <!-- Span for checkbox error messages -->
+                            {{-- <input type="submit" value="Subscribe" class="btn btn-submit"> --}}
                     </form>
 
                     
