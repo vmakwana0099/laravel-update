@@ -173,148 +173,141 @@
                 }
 
                 @endphp
-
-                                <div class="{{$box_plan_class}}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
-                                    <div class="shared-plan-box">
-                                        <div class="shared_plan_price">
-                                            <div class="shared-plan-head">{{$ProductsPackageData[0]->varTitle}}
-                                                {{-- <div class="plan-icon-right"></div> --}}
+                                <div class="col-lg-3">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
                                             </div>
-                                            <div class="shared-plan-cut-price">
-
-                                                @if(Config::get('Constant.sys_currency') == 'INR')
-
-                                                @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearINR))
-                                                <span class="shared-cut-price" id="BasicThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
-                                                @endif
-                                                @else
-
-                                                @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearUSD))
-                                                <span class="shared-cut-price" id="BasicThreeYearUSD">{{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}</span>
-                                                @endif
-
-                                                @endif
-                                                @php
-                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[0]->varAdditionalOffer));
-                                                @endphp
-
-
-                                                <span class="shared-offer-discount" id="BasicThreeYearOffer">
-                                                    @if (count($blackfridayOffArr) > 1)
-                                                    {{$blackfridayOffArr[4]}}% OFF
-                                                    @else
-                                                    ({{$ProductsPackageData[4]->varAdditionalOffer}})
-                                                    @endif
-
-
-                                                </span>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>420.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
                                         </div>
-                                        <div class="shared-price-padding">
-                                            <div class="shared-main-price clearfix">
-
-                                                @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
-
-                                                <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsINR">
-                                                    <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
-                                                </span>
-                                                @php } else { @endphp
-
-                                                <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsUSD">
-                                                    <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
-                                                </span>
-                                                @php } @endphp
-                                            </div>
-
-                                            <div class="shared-plan-btm" id="StarterThreeYearButtonText">
-                                                {!!$BasicThreeYearButtonText!!}
-                                            </div>
-                                            @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
-                                            <ul class="shared-plan-features shared-plan-tooltip">
-                                                @foreach($SpecificationData as $Specification)
-                                                <div class="slide-toggle">
-                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain' || strtolower(trim($Specification)) == 'free backup' || strtolower(trim($Specification)) == 'website builder' || strtolower(trim($Specification)) == 'supports python' || strtolower(trim($Specification)) == 'terminal access')
-                                                    <li class="cross_free_domain"><span>{{$Specification}}</span></li>
-                                                    @elseif(strtolower(trim($Specification)) == "litespeed")
-                                                    <li class="cross_free_domain feature-litespeed"><span>{{$Specification}}</span></li>
-                                                    @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
-                                                    <li>
-                                                        <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
-                                                    <li>
-                                                        <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                     @elseif(strtolower(trim($Specification)) == 'plesk')
-                                                    <li>
-                                                        <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">Our basic web hosting package includes a Plesk panel for managing your websites, domains, emails, and more.
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == "2 mysql db's")
-                                                    <li>
-                                                        <div class="free_domain free_domain_black">{{$Specification}}
-                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                                @if($ProductBanner->id == 2)
-                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                                @endif
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == "1 mssql/mysql space")
-                                                    <li>
-                                                        <div class="free_domain_black free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                                @if($ProductBanner->id == 2)
-                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                                @endif
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == "supports node.js")
-                                                    <li>
-                                                        <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">21.7.3 & 20.15.0
-                                                            </span>
-
-                                                        </div>
-                                                    </li>                                                    
-                                                    @else
-                                                    <li><span>{{$Specification}}</span></li>
-                                                    @endif
-                                                </div>
-                                                @endforeach
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <li>Host 1 Website</li>
+                                                <li>5 GB SSD Disk Space</li>
+                                                <li class="cross-icon-li">Free Domain</li>
+                                                <li>Linux Technology</li>
+                                                <li>Free SSL</li>
+                                                <li class="cross-icon-li">Free Backup</li>
+                                                <li>Plesk</li>
+                                                <li class="cross-icon-li">Terminal Access</li>
+                                                <li class="cross-icon-li">Website Builder</li>
                                             </ul>
-
-
-                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
-
-                                            @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
-                                            <div class="plan-text-slider">
-                                                <div class="owl-carousel owl-theme">
-                                                    @foreach($AdditionalNote as $Additional)
-                                                    <div class="item">
-                                                        <span class="plan-ssl">
-                                                            {{$Additional}}
-                                                        </span>
-                                                    </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                            @php if($ProductBanner->id == '7') { @endphp
-                                            <div class="v-f_link">
-                                                <a onclick="VPSFeatures('StarterOneMonthFeatures')" href="javascript:;" data-scroll-to="#StarterOneMonthFeatures">View Features <i class="fa fa-angle-down bounce"></i></a>
-                                            </div>
-                                            @php } @endphp
                                         </div>
                                     </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>420.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <li>Host 1 Website</li>
+                                                <li>5 GB SSD Disk Space</li>
+                                                <li class="cross-icon-li">Free Domain</li>
+                                                <li>Linux Technology</li>
+                                                <li>Free SSL</li>
+                                                <li class="cross-icon-li">Free Backup</li>
+                                                <li>Plesk</li>
+                                                <li class="cross-icon-li">Terminal Access</li>
+                                                <li class="cross-icon-li">Website Builder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>420.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <li>Host 1 Website</li>
+                                                <li>5 GB SSD Disk Space</li>
+                                                <li class="cross-icon-li">Free Domain</li>
+                                                <li>Linux Technology</li>
+                                                <li>Free SSL</li>
+                                                <li class="cross-icon-li">Free Backup</li>
+                                                <li>Plesk</li>
+                                                <li class="cross-icon-li">Terminal Access</li>
+                                                <li class="cross-icon-li">Website Builder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>420.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <li>Host 1 Website</li>
+                                                <li>5 GB SSD Disk Space</li>
+                                                <li class="cross-icon-li">Free Domain</li>
+                                                <li>Linux Technology</li>
+                                                <li>Free SSL</li>
+                                                <li class="cross-icon-li">Free Backup</li>
+                                                <li>Plesk</li>
+                                                <li class="cross-icon-li">Terminal Access</li>
+                                                <li class="cross-icon-li">Website Builder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
                                 @php
                                 $class = ''; $class1 = '';
