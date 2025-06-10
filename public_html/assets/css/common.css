@@ -425,10 +425,47 @@ li{
 
 
 
+
+
+
+
+.wh-server-location-tab .nav {
+    justify-content: center;
+}
+.wh-server-location-tab ul li {
+    width: 180px;
+    text-align: center;
+    display: grid;
+    margin: 10px;
+}
+.wh-server-location-tab .nav-pills .nav-link.active {
+    background-color: #3838FF;
+    color: #fff;
+    border: 1px solid #3838FF;
+    box-shadow: rgba(0, 0, 0, .1) 0 4px 12px;
+}
+
+.wh-server-location-tab .nav-pills .nav-link {
+    padding: 12px;
+    background: 0 0;
+    border: 1px solid #7EC8E3;
+    color: #080808;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.wh-server-location-tab .nav-pills .nav-link img {
+    margin-right: 8px;
+}
+
+
 .shared-plan-box-main {
     border: 1px solid #7EC8E3;
-    padding: 20px;
     border-radius: 20px;
+    margin-top: 40px;
 }
 .shared-plan-nm {
     font-size: 22px;
@@ -437,6 +474,7 @@ li{
 }
 .shared-plan-price {
     text-align: left;
+    padding: 20px;
 }
 span.cut-price {
     font-size: 18px;
@@ -467,7 +505,7 @@ span.cut-prc-disc {
     margin-bottom: 12px;
 }
 .shared-main-price span {
-    font-size: 50px;
+    font-size: 44px;
     font-weight: 600;
     color: #3838ff;
     display: inline-block;
@@ -499,5 +537,29 @@ span.cut-prc-disc {
     color: #ff0000;
 }
 .shared-plan-cnt {
-    margin: 30px 0 0;
+    margin: 30px 20px 0;
+}
+.shared-plan-renew {
+    font-size: 12px;
+    font-weight: 400;
+    color: #808080;
+    margin-top: 10px;
+}
+.shared-plan-most-popular{
+    border: 1px solid #3838ff;
+    margin-top: 0;
+    overflow: hidden;
+}
+.shared-most-popular-cnt {
+    background: #3838ff;
+    color: #fff;
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
 }

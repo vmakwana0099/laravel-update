@@ -47,7 +47,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="wh-server-location-tab">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button title="India" class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="lazy" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
@@ -190,6 +190,51 @@
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
+
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <li>Host 1 Website</li>
+                                                <li>5 GB SSD Disk Space</li>
+                                                <li class="cross-icon-li">Free Domain</li>
+                                                <li>Linux Technology</li>
+                                                <li>Free SSL</li>
+                                                <li class="cross-icon-li">Free Backup</li>
+                                                <li>Plesk</li>
+                                                <li class="cross-icon-li">Terminal Access</li>
+                                                <li class="cross-icon-li">Website Builder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3">
+                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-most-popular-cnt">
+                                            MOST POPULAR
+                                        </div>
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹980.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>880.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a>
+                                            </div>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
@@ -215,14 +260,18 @@
                                                 VPS - SM 1
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-price">₹1280.00</span>
                                                 <span class="cut-prc-disc">Save 50%</span>
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>420.00</span>/mo*
+                                                ₹<span>1820.00</span>/mo*
                                             </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
                                             </div>
                                         </div>
                                         <div class="shared-plan-cnt">
@@ -249,48 +298,18 @@
                                                 VPS - SM 1
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-price">₹1880.00</span>
                                                 <span class="cut-prc-disc">Save 50%</span>
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>420.00</span>/mo*
+                                                ₹<span>1480.00</span>/mo*
                                             </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
-                                        </div>
-                                        <div class="shared-plan-cnt">
-                                            <ul>
-                                                <li>Host 1 Website</li>
-                                                <li>5 GB SSD Disk Space</li>
-                                                <li class="cross-icon-li">Free Domain</li>
-                                                <li>Linux Technology</li>
-                                                <li>Free SSL</li>
-                                                <li class="cross-icon-li">Free Backup</li>
-                                                <li>Plesk</li>
-                                                <li class="cross-icon-li">Terminal Access</li>
-                                                <li class="cross-icon-li">Website Builder</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="col-lg-3">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
-                                    <div class="shared-pln-box">
-                                        <div class="shared-plan-price">
-                                            <div class="shared-plan-nm">
-                                                VPS - SM 1
-                                            </div>
-                                            <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹840.00</span>
-                                                <span class="cut-prc-disc">Save 50%</span>
-                                            </div>
-                                            <div class="shared-main-price">
-                                                ₹<span>420.00</span>/mo*
-                                            </div>
-                                            <div class="shared-plan-btn">
-                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
                                             </div>
                                         </div>
                                         <div class="shared-plan-cnt">
