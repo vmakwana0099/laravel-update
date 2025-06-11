@@ -39,7 +39,8 @@
     @endif
 
     <div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
-        <div class="container">
+        <div class="container-fluid">
+            <div class="shared-plan-bx-pd">
             <div class="section-heading">
                 <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
                 <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
@@ -824,6 +825,7 @@
 
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
