@@ -1959,6 +1959,69 @@ class CartController extends FrontController {
         }
 
         // dd($productData['pid']);
+
+        if($productData["producttype"] != "domain"){
+
+            $products_with_renewal_data = array(534,535,536,537,522,523,524,525);
+
+            if(in_array($productData['pid'], $products_with_renewal_data)){
+
+                if(Config::get('Constant.sys_currency') == "INR"){
+
+                    $renewal_price = DB::table('renewal_price')
+                                    ->where('product_package_id', $productData['pid'])
+                                    ->first(['renewal_monthly_INR', 'renewal_yearly_permonth_INR','renewal_biennially_permonth_INR','renewal_triennially_permonth_INR']);
+
+                    if($renewal_price){
+                        $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_INR;
+                        $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_INR;
+                        $productData['renewal_biennially_permonth'] = $renewal_price->renewal_biennially_permonth_INR;
+                        $productData['renewal_triennially_permonth'] = $renewal_price->renewal_triennially_permonth_INR;
+
+                        $productData['extra_renewal_data'] = true;
+                    }                    
+
+                }elseif(Config::get('Constant.sys_currency') == "USD"){
+
+                    $renewal_price = DB::table('renewal_price')
+                                    ->where('product_package_id', $productData['pid'])
+                                    ->first(['renewal_monthly_USD', 'renewal_yearly_permonth_USD','renewal_biennially_permonth_USD','renewal_triennially_permonth_USD']);
+
+                    if($renewal_price){
+                        $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_USD;
+                        $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_USD;
+                        $productData['renewal_biennially_permonth'] = $renewal_price->renewal_biennially_permonth_USD;
+                        $productData['renewal_triennially_permonth'] = $renewal_price->renewal_triennially_permonth_USD;
+
+                        $productData['extra_renewal_data'] = true;
+                    }
+
+                }
+
+                
+
+                foreach ($productData['pricing'] as $key => $price) {
+
+                    if ($price->durationame === 'monthly') {
+                        $price->renewal_price = $productData['renewal_monthly_price']; 
+                    }
+
+                    if ($price->durationame === 'annually') {
+                        $price->renewal_price = $productData['renewal_yearlyPrice_perMonth']; 
+                    }
+
+                    if ($price->durationame === 'biennially') {
+                        $price->renewal_price = $productData['renewal_biennially_permonth']; 
+                    }
+
+                    if ($price->durationame === 'triennially') {
+                        $price->renewal_price = $productData['renewal_triennially_permonth']; 
+                    }
+
+                }
+            }
+        }
+
         if($productData['producttype'] == 'vps'){
 
                if(Config::get('Constant.sys_currency') == "INR"){
@@ -2179,6 +2242,13 @@ class CartController extends FrontController {
         $eleStr = 'sel_hostingregister_' . $request->ele_key;
         if (isset($request->$eleStr)) {
             $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
+
+            if (!$cartData || !array_key_exists($request->ele_key, $cartData)) {
+               return response()->json([
+                'status' => 'redirect',            
+                ]);
+            }
+
             $cartData[$request->ele_key]['billingcycle'] = $request->$eleStr;
             $cartData[$request->ele_key]['regperiod'] = Cart::getRegistrationPeriodByName($request->$eleStr);
             //set free domain details ------------------------------------- 
@@ -2216,7 +2286,7 @@ class CartController extends FrontController {
         return $finalPrice; //Retunr final price of product
         //return view('cart.dedicatedserver', ['cartItem' => $cartData[$request->ele_key], 'key' => $request->ele_key]);
     }
-    public function view(Request $request) {
+    public function view(Request $request) {        
         $companyIp=['27.54.170.98','103.226.184.100'];
         $IP='';
         if(isset($_SERVER['HTTP_X_REAL_IP']) && !empty($_SERVER['HTTP_X_REAL_IP'])){

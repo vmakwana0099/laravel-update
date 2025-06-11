@@ -233,10 +233,9 @@
                                             <ul class="shared-plan-features shared-plan-tooltip">
                                                 @foreach($SpecificationData as $Specification)
                                                 <div class="slide-toggle">
-                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain' || strtolower(trim($Specification)) == 'free backup' || strtolower(trim($Specification)) == 'website builder' || strtolower(trim($Specification)) == 'supports python' || strtolower(trim($Specification)) == 'terminal access')
+                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain')
                                                     <li class="cross_free_domain"><span>{{$Specification}}</span></li>
-                                                    @elseif(strtolower(trim($Specification)) == "litespeed")
-                                                    <li class="cross_free_domain feature-litespeed"><span>{{$Specification}}</span></li>
+                                                    
                                                     @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
                                                     <li>
                                                         <div class="free_domain">{{$Specification}}
@@ -251,37 +250,28 @@
                                                             </span>
                                                         </div>
                                                     </li>
-                                                     @elseif(strtolower(trim($Specification)) == 'plesk')
-                                                    <li>
-                                                        <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">Our basic web hosting package includes a Plesk panel for managing your websites, domains, emails, and more.
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == "2 mysql db's")
-                                                    <li>
-                                                        <div class="free_domain free_domain_black">{{$Specification}}
-                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                                @if($ProductBanner->id == 2)
-                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                                @endif
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    @elseif(strtolower(trim($Specification)) == "1 mssql/mysql space")
-                                                    <li>
-                                                        <div class="free_domain_black free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                                @if($ProductBanner->id == 2)
-                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                                @endif
-                                                            </span>
-                                                        </div>
-                                                    </li>
+                                                     
+                                                    
                                                     @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                     <li>
                                                         <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">21.7.3 & 20.15.0
+                                                            <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == "supports python")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == "10 databases")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
                                                             </span>
 
                                                         </div>
@@ -2190,9 +2180,9 @@ $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){s
         }
 
         // Add event listeners to the buttons
-        canadaButton.addEventListener('click', hideVpsPlanDiv);
+        {{-- canadaButton.addEventListener('click', hideVpsPlanDiv); --}}
         // germanyButton.addEventListener('click', hideVpsPlanDiv);
-        indiaButton.addEventListener('click', showVpsPlanDiv);
+        {{-- indiaButton.addEventListener('click', showVpsPlanDiv); --}}
     });
 </script>
 @endsection

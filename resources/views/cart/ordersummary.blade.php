@@ -449,13 +449,17 @@
                                         $newDate->modify('+1 month');
                                     } elseif ($item['billingcycle'] == 'annually') {
                                         $newDate->modify('+1 year');
+                                    }elseif ($item['billingcycle'] == 'biennially') {
+                                        $newDate->modify('+2 year');
+                                    }elseif ($item['billingcycle'] == 'triennially') {
+                                        $newDate->modify('+3 year');
                                     }
                                 @endphp
                                 {{-- {{dd($renewalPrice,123)}} --}}
                             @if(isset($renewalPrice) && !empty($renewalPrice))
                             @php 
                             // dd($item['pid']);
-                                $google_apps_product_id = array(117,116,206);
+                                $google_apps_product_id = array(117,116,206,534,535,536,537,522,523,524,525);
                             @endphp
                                @if($item['producttype'] == 'vps' || (in_array($item['pid'], $google_apps_product_id)))
                                 {{ round($renewalPrice, 2) }}/mo on {{ $newDate->format('d-m-Y') }}

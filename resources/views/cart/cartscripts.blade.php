@@ -359,6 +359,13 @@
                     data:formData,
                     type:"post",
                     success:function(response){
+
+                        if (response.status === 'redirect') {
+                            hideLoader();
+                            $(function(){ $('#cartfull-popups').modal('show'); });
+                            {{-- window.location.href = response.url; --}}
+                        }
+
                         $("#finalPrice").html('Total: <span class="low-price"><span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>' + response + '</span>');
                         $("#finalPrices").html('Total: <span class="total-price"><span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>' + response + '</span>');
                     //hideLoader();
