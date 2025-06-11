@@ -84,7 +84,7 @@ u,
 ul,
 var,
 video {
-    font-family: Rubik, sans-serif !important
+    font-family: "DM Sans", sans-serif;
 }
 img{
     max-width: 100%;
@@ -465,13 +465,14 @@ li{
 .shared-plan-box-main {
     border: 1px solid #a8e8ff;
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: #F8FBFF;
+    padding-bottom: 30px;
 }
 .shared-plan-nm {
     font-size: 22px;
-    font-weight: 500;
-    color: #1A1A1A;
+    font-weight: 600;
+    color: #000c66;
 }
 .shared-plan-price {
     text-align: left;
@@ -493,12 +494,12 @@ span.cut-prc-disc {
     background: #E1E1FF;
     padding: 8px 16px;
     border-radius: 30px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
-    color: #1A1A1A;
+    color: #000c66;
 }
 .shared-main-price {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     color: #3838ff;
 }
@@ -506,8 +507,8 @@ span.cut-prc-disc {
     margin-bottom: 12px;
 }
 .shared-main-price span {
-    font-size: 44px;
-    font-weight: 600;
+    font-size: 48px;
+    font-weight: 700;
     color: #3838ff;
     display: inline-block;
 }
@@ -520,7 +521,7 @@ span.cut-prc-disc {
     position: relative;
     font-size: 14px;
     font-weight: 400;
-    color: #1a1a1a;
+    color: #000c66;
     margin: 15px 0;
 }
 .shared-plan-cnt li:before {
@@ -534,21 +535,24 @@ span.cut-prc-disc {
     font-family: "Font Awesome 6 Free";
 }
 .shared-plan-cnt li.cross-icon-li:before {
-    content: "\f00d";
-    color: #ff0000;
+    content: "\f068";
+    color: #808080;
 }
-.shared-plan-cnt {
-    margin: 30px 0 30px 30px;
+.shared-plan-cnt ul {
+    margin: 0px 0 30px 30px;
 }
 .shared-plan-renew {
     font-size: 12px;
     font-weight: 400;
-    color: #808080;
+    color: #444;
     margin-top: 10px;
+}
+li.cross-icon-li {
+    color: #808080 !important;
 }
 .shared-plan-most-popular{
     border: 2px solid #3838ff;
-    margin-top: 0;
+    margin-top: 20px;
     overflow: hidden;
 }
 .shared-most-popular-cnt {
@@ -566,4 +570,71 @@ span.cut-prc-disc {
 }
 .shared-plan-bx-pd{
     padding: 0 80px;
+}
+.free-domain {
+    z-index: 1;
+    cursor: pointer;
+    color: #000c66 !important;
+    font-weight: 500 !important;
+    display: inline-block;
+    border-bottom: 1px dashed #000c66;
+    position: relative;
+    font-size: 14px;
+}
+span.domain-tooltip {
+    bottom: 30px;
+    visibility: hidden;
+    height: auto;
+    left: -20px;
+    width: 320px;
+    position: absolute;
+    background: #000c66;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: 400;
+    z-index: 1;
+    opacity: 0;
+    transition: .4s ease-in-out;
+    transform: translate3d(0, -10px, 0);
+}
+.free-domain span.domain-tooltip:after {
+    content: "";
+    background-color: #000c66;
+    width: 15px;
+    height: 15px;
+    bottom: -5px;
+    left: 10%;
+    position: absolute;
+    transform: rotate(45deg);
+    border-radius: 3px;
+}
+.free-domain:hover span.domain-tooltip {
+    visibility: visible;
+    color: #fff !important;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+span.price-domain {
+    display: block;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+a.shared-plan-more-btn {
+    color: #3838ff;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+a.shared-plan-more-btn:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 16px;
+    margin-left: 5px;
 }

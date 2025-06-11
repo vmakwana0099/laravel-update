@@ -198,16 +198,28 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <li>Host 1 Website</li>
-                                                <li>5 GB SSD Disk Space</li>
-                                                <li class="cross-icon-li">Free Domain</li>
-                                                <li>Linux Technology</li>
-                                                <li>Free SSL</li>
-                                                <li class="cross-icon-li">Free Backup</li>
-                                                <li>Plesk</li>
-                                                <li class="cross-icon-li">Terminal Access</li>
-                                                <li class="cross-icon-li">Website Builder</li>
+                                                <div class="slide-toggle"><li> <span> Host 1 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 10 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">10,000 Visits Monthly <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li  class="cross-icon-li"> <span> Free Domain</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">10 Databases <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 10,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 2,00,000 INODES</span></li></div>
                                             </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
@@ -239,16 +251,33 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <li>Host 1 Website</li>
-                                                <li>5 GB SSD Disk Space</li>
-                                                <li class="cross-icon-li">Free Domain</li>
-                                                <li>Linux Technology</li>
-                                                <li>Free SSL</li>
-                                                <li class="cross-icon-li">Free Backup</li>
-                                                <li>Plesk</li>
-                                                <li class="cross-icon-li">Terminal Access</li>
-                                                <li class="cross-icon-li">Website Builder</li>
+                                                <div class="slide-toggle"><li> <span> Host 5 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">25,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">50 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 4,00,000 INODES</span></li></div>
                                             </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
@@ -277,16 +306,33 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <li>Host 1 Website</li>
-                                                <li>5 GB SSD Disk Space</li>
-                                                <li class="cross-icon-li">Free Domain</li>
-                                                <li>Linux Technology</li>
-                                                <li>Free SSL</li>
-                                                <li class="cross-icon-li">Free Backup</li>
-                                                <li>Plesk</li>
-                                                <li class="cross-icon-li">Terminal Access</li>
-                                                <li class="cross-icon-li">Website Builder</li>
+                                                <div class="slide-toggle"><li> <span> Host 25 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 50 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">50,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">250 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 60 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 1,00,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 6,00,000 INODES</span></li></div>
                                             </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
@@ -315,16 +361,33 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <li>Host 1 Website</li>
-                                                <li>5 GB SSD Disk Space</li>
-                                                <li class="cross-icon-li">Free Domain</li>
-                                                <li>Linux Technology</li>
-                                                <li>Free SSL</li>
-                                                <li class="cross-icon-li">Free Backup</li>
-                                                <li>Plesk</li>
-                                                <li class="cross-icon-li">Terminal Access</li>
-                                                <li class="cross-icon-li">Website Builder</li>
+                                                <div class="slide-toggle"><li> <span> Host 50 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 100 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">1,00,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">500 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 100 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 2,00,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 8,00,000 INODES</span></li></div>
                                             </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
