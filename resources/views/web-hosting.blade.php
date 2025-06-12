@@ -174,7 +174,7 @@
                 }
 
                 @endphp
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
@@ -188,6 +188,9 @@
                                             <div class="shared-main-price">
                                                 ₹<span>420.00</span>/mo*
                                             </div>
+                                            <div class="shared-plan-fr-mnth invisible">
+                                                +0 month free
+                                            </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
@@ -198,9 +201,9 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <div class="slide-toggle"><li> <span> Host 1 Website</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 10 GB NVMe SSD</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">10,000 Visits Monthly <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Host <b>1</b> Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>10 GB</b> NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain"><b>10,000</b> Visits Monthly <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
                                                 <div class="slide-toggle"><li  class="cross-icon-li"> <span> Free Domain</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
@@ -212,19 +215,19 @@
                                                     3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
                                                 <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">10 Databases <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
-                                                <div class="slide-toggle"><li> <span> 5 subdomains</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 5 FTP users</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 5 Email Accounts</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 10,000 GB Bandwidth</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 2,00,000 INODES</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain"><b>10</b> Databases <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>5</b> subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>5</b> FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>5 Email</b> Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>10,000 GB</b> Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>2,00,000</b> INODES</span></li></div>
                                             </ul>
                                             <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-pln-box">
                                         <div class="shared-most-popular-cnt">
@@ -241,6 +244,9 @@
                                             <div class="shared-main-price">
                                                 ₹<span>880.00</span>/mo*
                                             </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a>
                                             </div>
@@ -251,9 +257,9 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <div class="slide-toggle"><li> <span> Host 5 Website</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 25 GB NVMe SSD</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">25,000 Visits Monthly 
+                                                <div class="slide-toggle"><li> <span> Host <b>5</b> Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>25 GB</b> NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain"> <b>25,000</b> Visits Monthly 
                                                     <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
                                                 <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
                                                     <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
@@ -269,20 +275,20 @@
                                                     3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
                                                 <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">50 Databases 
+                                                <div class="slide-toggle"><li> <div class="free-domain"> <b>50</b> Databases 
                                                     <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 25 Email Accounts</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 25,000 GB Bandwidth</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 4,00,000 INODES</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>Unlimited</b> Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>Unlimited</b> FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span>  <b> 25 Email</b> Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> 25,000 GB</b> Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> 4,00,000</b> INODES</span></li></div>
                                             </ul>
                                             <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
@@ -296,6 +302,9 @@
                                             <div class="shared-main-price">
                                                 ₹<span>1820.00</span>/mo*
                                             </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
@@ -306,8 +315,8 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <div class="slide-toggle"><li> <span> Host 25 Website</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 50 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Host <b>25</b> Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>50 GB</b> NVMe SSD</span></li></div>
                                                 <div class="slide-toggle"><li> <div class="free-domain">50,000 Visits Monthly 
                                                     <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
                                                 <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
@@ -324,20 +333,20 @@
                                                     3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
                                                 <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">250 Databases 
+                                                <div class="slide-toggle"><li> <div class="free-domain"> <b>250</b> Databases 
                                                     <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 60 Email Accounts</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 1,00,000 GB Bandwidth</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 6,00,000 INODES</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> Unlimited </b> Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> Unlimited </b> FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> 60 Email </b> Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> 1,00,000 GB </b> Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b> 6,00,000</b> INODES</span></li></div>
                                             </ul>
                                             <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
@@ -351,6 +360,9 @@
                                             <div class="shared-main-price">
                                                 ₹<span>1480.00</span>/mo*
                                             </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
                                             <div class="shared-plan-btn">
                                                 <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
                                             </div>
@@ -361,9 +373,9 @@
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
-                                                <div class="slide-toggle"><li> <span> Host 50 Website</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 100 GB NVMe SSD</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">1,00,000 Visits Monthly 
+                                                <div class="slide-toggle"><li> <span> Host <b>50</b> Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>100 GB</b> NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain"><b>1,00,000</b> Visits Monthly 
                                                     <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
                                                 <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
                                                     <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
@@ -379,18 +391,177 @@
                                                     3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
                                                 <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
                                                 <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
-                                                <div class="slide-toggle"><li> <div class="free-domain">500 Databases 
+                                                <div class="slide-toggle"><li> <div class="free-domain"><b>500</b> Databases 
                                                     <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
-                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 100 Email Accounts</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 2,00,000 GB Bandwidth</span></li></div>
-                                                <div class="slide-toggle"><li> <span> 8,00,000 INODES</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>Unlimited</b> Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>Unlimited</b> FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>100 Email</b> Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>2,00,000 GB</b> Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> <b>8,00,000</b> INODES</span></li></div>
                                             </ul>
                                             <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
                                 </div>
+                                </div>
+                                <div class="{{$box_plan_class}}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-plan-box">
+                                        <div class="shared_plan_price">
+                                            <div class="shared-plan-head">{{$ProductsPackageData[0]->varTitle}}
+                                                {{-- <div class="plan-icon-right"></div> --}}
+                                            </div>
+                                            <div class="shared-plan-cut-price">
+
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+
+                                                @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearINR))
+                                                <span class="shared-cut-price" id="BasicThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
+                                                @endif
+                                                @else
+
+                                                @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearUSD))
+                                                <span class="shared-cut-price" id="BasicThreeYearUSD">{{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}</span>
+                                                @endif
+
+                                                @endif
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[0]->varAdditionalOffer));
+                                                @endphp
+
+
+                                                <span class="shared-offer-discount" id="BasicThreeYearOffer">
+                                                    @if (count($blackfridayOffArr) > 1)
+                                                    {{$blackfridayOffArr[4]}}% OFF
+                                                    @else
+                                                    ({{$ProductsPackageData[4]->varAdditionalOffer}})
+                                                    @endif
+
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="shared-price-padding">
+                                            <div class="shared-main-price clearfix">
+
+                                                @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
+
+                                                <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsINR">
+                                                    <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
+                                                </span>
+                                                @php } else { @endphp
+
+                                                <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsUSD">
+                                                    <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
+                                                </span>
+                                                @php } @endphp
+                                            </div>
+
+                                            <div class="shared-plan-btm" id="StarterThreeYearButtonText">
+                                                {!!$BasicThreeYearButtonText!!}
+                                            </div>
+                                            @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
+                                            <ul class="shared-plan-features shared-plan-tooltip">
+                                                @foreach($SpecificationData as $Specification)
+                                                <div class="slide-toggle">
+                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain')
+                                                    <li class="cross_free_domain"><span>{{$Specification}}</span></li>
+                                                   
+                                                    @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                     @elseif(strtolower(trim($Specification)) == 'plesk')
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">Our basic web hosting package includes a Plesk panel for managing your websites, domains, emails, and more.
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == "2 mysql db's")
+                                                    <li>
+                                                        <div class="free_domain free_domain_black">{{$Specification}}
+                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                                @if($ProductBanner->id == 2)
+                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
+                                                                @endif
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == "1 mssql/mysql space")
+                                                    <li>
+                                                        <div class="free_domain_black free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                                @if($ProductBanner->id == 2)
+                                                                <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
+                                                                @endif
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    @elseif(strtolower(trim($Specification)) == "supports node.js")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+
+                                                    @elseif(strtolower(trim($Specification)) == "10 databases")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+
+                                                    @elseif(strtolower(trim($Specification)) == "supports python")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
+                                                            </span>
+
+                                                        </div>
+                                                    </li>                                                    
+                                                    @else
+                                                    <li><span>{{$Specification}}</span></li>
+                                                    @endif
+                                                </div>
+                                                @endforeach
+                                            </ul>
+
+
+                                            <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+
+                                            @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
+                                            <div class="plan-text-slider">
+                                                <div class="owl-carousel owl-theme">
+                                                    @foreach($AdditionalNote as $Additional)
+                                                    <div class="item">
+                                                        <span class="plan-ssl">
+                                                            {{$Additional}}
+                                                        </span>
+                                                    </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                            @php if($ProductBanner->id == '7') { @endphp
+                                            <div class="v-f_link">
+                                                <a onclick="VPSFeatures('StarterOneMonthFeatures')" href="javascript:;" data-scroll-to="#StarterOneMonthFeatures">View Features <i class="fa fa-angle-down bounce"></i></a>
+                                            </div>
+                                            @php } @endphp
+                                        </div>
+                                    </div>
                                 </div>
                                 @php
                                 $class = ''; $class1 = '';
@@ -468,9 +639,8 @@
                                                 @foreach($SpecificationData as $Specification)
 
                                                 <div class="slide-toggle">
-                                                    @if($ProductsPackageData[1]->varTitle == 'ESSENTIAL' && strtolower(trim($Specification)) == 'free domain')
-                                                    <li class="cross_free_domain"><span>{{$Specification}}</span></li>
-                                                    {{-- @if(strtolower(trim($Specification)) == 'free domain')
+                                                   
+                                                    @if(strtolower(trim($Specification)) == 'free domain')
                                                         <li> <div class="free_domain">{{$Specification}}
                                                     <span class="domain_tooltip">
                                                         Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.
@@ -478,7 +648,7 @@
                                                         </span>
                                                     </span>
                                                 </div>
-                                                </li> --}}
+                                                </li>
 
                                                 @elseif(strtolower(trim($Specification)) == 'free ssl certificate' || strtolower(trim($Specification)) == 'free ssl')
                                                 <li>
@@ -514,28 +684,30 @@
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x 18.x.
                                                         </span>
                                                     </div>
                                                 </li>
+
+                                                @elseif(strtolower(trim($Specification)) == "50 databases")
+                                                <li>
+                                                    <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
+                                                    </div>
+                                                </li>
+
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
-                                                 @elseif(strtolower(trim($Specification)) == "cpanel + 1 click installer")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
+                                                
+                                                
                                                 @elseif(strtolower(trim($Specification)) == "litespeed")
                                                 <li class="feature-litespeed"><span>{{$Specification}}</span></li>
                                                 @else
@@ -680,28 +852,30 @@
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x 18.x.
                                                         </span>
                                                     </div>
                                                 </li>
+
+                                                @elseif(strtolower(trim($Specification)) == "250 databases")
+                                                <li>
+                                                    <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
+                                                    </div>
+                                                </li>
+
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
-                                                 @elseif(strtolower(trim($Specification)) == "cpanel + 1 click installer")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
+                                                
+                                                 
                                                 @elseif(strtolower(trim($Specification)) == "litespeed")
                                                 <li class="feature-litespeed"><span>{{$Specification}}</span></li>
                                                 @else
@@ -831,28 +1005,30 @@
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x 18.x.
                                                         </span>
                                                     </div>
                                                 </li>
+
+                                                @elseif(strtolower(trim($Specification)) == "500 databases")
+                                                <li>
+                                                    <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
+                                                    </div>
+                                                </li>
+
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
-                                                 @elseif(strtolower(trim($Specification)) == "cpanel + 1 click installer")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                    </div>
-                                                </li>
+                                                
+                                                 
                                                 @elseif(strtolower(trim($Specification)) == "litespeed")
                                                 <li class="feature-litespeed"><span>{{$Specification}}<span></li>
                                                 @else
@@ -2267,9 +2443,9 @@ $(document).ready(function(){$('#exampleModal').on('shown.bs.modal',function(){s
         }
 
         // Add event listeners to the buttons
-        canadaButton.addEventListener('click', hideVpsPlanDiv);
+        // canadaButton.addEventListener('click', hideVpsPlanDiv);
         // germanyButton.addEventListener('click', hideVpsPlanDiv);
-        indiaButton.addEventListener('click', showVpsPlanDiv);
+        // indiaButton.addEventListener('click', showVpsPlanDiv);
     });
 </script>
 @endsection
