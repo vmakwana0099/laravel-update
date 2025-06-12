@@ -1962,7 +1962,7 @@ class CartController extends FrontController {
 
         if($productData["producttype"] != "domain"){
 
-            $products_with_renewal_data = array(534,535,536,537,522,523,524,525);
+            $products_with_renewal_data = array(534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529);
 
             if(in_array($productData['pid'], $products_with_renewal_data)){
 
@@ -2021,7 +2021,7 @@ class CartController extends FrontController {
                 }
             }
         }
-
+        
         if($productData['producttype'] == 'vps'){
 
                if(Config::get('Constant.sys_currency') == "INR"){
@@ -2135,23 +2135,10 @@ class CartController extends FrontController {
     }
     public function setconfigoptionvalue(Request $request) {
         Self::getconstants();
-        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
-        if (!$cartData || !array_key_exists($request->productid, $cartData)) {
-           return response()->json([
-            'status' => 'redirect',            
-        ]);
-        }
-
-        $productData = $cartData[$request->productid];
-
-        if (!isset($productData['pid']) || empty($productData['pid'])) {
-            return response()->json([
-            'status' => 'redirect',            
-        ]);
-        }
         Cart::updateConfig($request);
         $configHtmlStr = "";
-        
+        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
+        $productData = $cartData[$request->productid];
         $finalPrice = 0;
         $finalPrice += $productData['pricing'][$productData['regperiod']]->price;
         if (!empty($productData['configfields'])) {
@@ -2242,13 +2229,6 @@ class CartController extends FrontController {
         $eleStr = 'sel_hostingregister_' . $request->ele_key;
         if (isset($request->$eleStr)) {
             $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
-
-            if (!$cartData || !array_key_exists($request->ele_key, $cartData)) {
-               return response()->json([
-                'status' => 'redirect',            
-                ]);
-            }
-
             $cartData[$request->ele_key]['billingcycle'] = $request->$eleStr;
             $cartData[$request->ele_key]['regperiod'] = Cart::getRegistrationPeriodByName($request->$eleStr);
             //set free domain details ------------------------------------- 
@@ -2286,7 +2266,7 @@ class CartController extends FrontController {
         return $finalPrice; //Retunr final price of product
         //return view('cart.dedicatedserver', ['cartItem' => $cartData[$request->ele_key], 'key' => $request->ele_key]);
     }
-    public function view(Request $request) {        
+    public function view(Request $request) {
         $companyIp=['27.54.170.98','103.226.184.100'];
         $IP='';
         if(isset($_SERVER['HTTP_X_REAL_IP']) && !empty($_SERVER['HTTP_X_REAL_IP'])){

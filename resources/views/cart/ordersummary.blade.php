@@ -360,7 +360,7 @@
                                         onchange="updateHostingItemNew({{$proKey}},this.value);
                                     @endif   
                                     ">         
-                                     <?php $currPlanPrice = ""; $renewalPrice?>
+                                     <?php $currPlanPrice = ""; $renewalPrice = "" ?>
                                      @foreach($item['pricing'] as $optKey => $price)
                                                 <?php 
                                                     
@@ -459,7 +459,7 @@
                             @if(isset($renewalPrice) && !empty($renewalPrice))
                             @php 
                             // dd($item['pid']);
-                                $google_apps_product_id = array(117,116,206,534,535,536,537,522,523,524,525);
+                                $google_apps_product_id = array(117,116,206,534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529);
                             @endphp
                                @if($item['producttype'] == 'vps' || (in_array($item['pid'], $google_apps_product_id)))
                                 {{ round($renewalPrice, 2) }}/mo on {{ $newDate->format('d-m-Y') }}
@@ -826,7 +826,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">HostITsmart Says</h4>
-          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         
         <!-- Modal body -->

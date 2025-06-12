@@ -221,6 +221,23 @@ li{
     color: #fff;
     border: 1px solid #080808;
 }
+.primary-btn-sq-bdr{
+    background-color: #fff;
+    color: #3838ff;
+    transition: 0.6s;
+    border: 1px solid #3838ff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.primary-btn-sq-bdr:hover{
+    background-color: #3838ff;
+    color: #fff;
+    border: 1px solid #3838ff;
+}
 .blk-btn-sq{
     background-color: #080808;
     color: #fff;
@@ -405,3 +422,148 @@ li{
     }
 }
 /* footer-sticky-section-E */
+
+
+
+
+
+
+
+.wh-server-location-tab .nav {
+    justify-content: center;
+}
+.wh-server-location-tab ul li {
+    width: 180px;
+    text-align: center;
+    display: grid;
+    margin: 10px;
+}
+.wh-server-location-tab .nav-pills .nav-link.active {
+    background-color: #3838FF;
+    color: #fff;
+    border: 1px solid #3838FF;
+    box-shadow: rgba(0, 0, 0, .1) 0 4px 12px;
+}
+
+.wh-server-location-tab .nav-pills .nav-link {
+    padding: 12px;
+    background: 0 0;
+    border: 1px solid #7EC8E3;
+    color: #080808;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.wh-server-location-tab .nav-pills .nav-link img {
+    margin-right: 8px;
+}
+
+
+.shared-plan-box-main {
+    border: 1px solid #a8e8ff;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: #F8FBFF;
+}
+.shared-plan-nm {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+.shared-plan-price {
+    text-align: left;
+    padding: 20px;
+}
+span.cut-price {
+    font-size: 18px;
+    font-weight: 400;
+    color: #808080;
+    padding: 10px 0;
+    display: inline-block;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.shared-plan-cut-prc {
+    margin: 12px 0;
+}
+span.cut-prc-disc {
+    background: #E1E1FF;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1A1A1A;
+}
+.shared-main-price {
+    font-size: 26px;
+    font-weight: 400;
+    color: #3838ff;
+}
+.shared-main-price{
+    margin-bottom: 12px;
+}
+.shared-main-price span {
+    font-size: 44px;
+    font-weight: 600;
+    color: #3838ff;
+    display: inline-block;
+}
+.shared-plan-btn a {
+    text-align: center;
+    width: 100%;
+}
+.shared-plan-cnt ul li {
+    padding-left: 30px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin: 15px 0;
+}
+.shared-plan-cnt li:before {
+    content: "\f00c";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: #18b35c;
+    font-size: 16px;
+    font-weight: 600 !important;
+    font-family: "Font Awesome 6 Free";
+}
+.shared-plan-cnt li.cross-icon-li:before {
+    content: "\f00d";
+    color: #ff0000;
+}
+.shared-plan-cnt {
+    margin: 30px 0 30px 30px;
+}
+.shared-plan-renew {
+    font-size: 12px;
+    font-weight: 400;
+    color: #808080;
+    margin-top: 10px;
+}
+.shared-plan-most-popular{
+    border: 2px solid #3838ff;
+    margin-top: 0;
+    overflow: hidden;
+}
+.shared-most-popular-cnt {
+    background: #3838ff;
+    color: #fff;
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.shared-plan-bx-pd{
+    padding: 0 80px;
+}
