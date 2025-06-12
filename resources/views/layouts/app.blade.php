@@ -22,9 +22,7 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{-- font cdn  St--}}
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"></noscript>
-<script>WebFontConfig={google:{families:["Rubik:300,400,500,700,900:latin"]}},function(){var e=document.createElement("script");e.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",e.type="text/javascript",e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
    {{-- font cdn end--}}
 <meta name="msvalidate.01" content="1FF75C85A9329C6232704ED8A37D9260" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
