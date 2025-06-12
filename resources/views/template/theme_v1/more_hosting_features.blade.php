@@ -31,20 +31,20 @@
             <td>Host Website  </td>
             <td>1</td>
             <td>5</td>
-            <td>20</td>
-            <td>Unlimited</td>
+            <td>25</td>
+            <td>50</td>
         </tr>
         <tr>
-            <td>SSD Disk Space </td>
-            <td>5</td>
-            <td>20</td>
-            <td>50</td>
-            <td>Unlimited</td>
+            <td>NVMe Disk Space </td>
+            <td>10 GB</td>
+            <td>25 GB</td>
+            <td>50 GB</td>
+            <td>100 GB</td>
         </tr>
         <tr>
             <td>Free Domain </td>
             <td> <i class="more-features-no-icon"></i></td>
-            <td> <i class="more-features-no-icon"></i></td>
+            <td> <i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
         </tr>
@@ -57,21 +57,21 @@
         </tr>
         <tr>
             <td>Free Backup </td>
-            <td><i class="more-features-no-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
         </tr>
         <tr>
             <td>Control Panel</td>
-            <td>Plesk</i></td>
+            <td>cPanel</i></td>
             <td>cPanel</i></td>
             <td>cPanel</td>
             <td>cPanel</td>
         </tr>
         <tr>
             <td>Website Builder </td>
-            <td><i class="more-features-no-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
@@ -92,27 +92,27 @@
         </tr>
         <tr>
             <td>Bandwidth </td>
-            <td>50GB</td>
-            <td>Unlimited</td>
-            <td>Unlimited</td>
-            <td>Unlimited</td>
+            <td>10,000 GB</td>
+            <td>25,000 GB</td>
+            <td>1,00,000 GB</td>
+            <td>2,00,000 GB</td>
         </tr>
         <tr>
             <td>Email Accounts</td>
             <td>5</td>
-            <td>10</td>
+            <td>25</td>
             <td>60</td>
-            <td>Unlimited</td>
+            <td>100</td>
         </tr>
         <tr>
             <td>MySQL DB's </td>
-            <td>2</td>
             <td>10</td>
-            <td>20</td>
-            <td>Unlimited</td>
+            <td>50</td>
+            <td>250</td>
+            <td>500</td>
         </tr>
         <tr>
-            <td>SSD Disk Space </td>
+            <td>NVMe Disk Space </td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
@@ -141,7 +141,7 @@
                             </tr>
                             <tr>
                                 <td id="see_more_features">Supports Python</td>
-                                <td><i class="more-features-no-icon"></i></td>
+                                <td><i class="more-features-yes-icon"></i></td>
                                 <td><i class="more-features-yes-icon"></i></td>
                                 <td><i class="more-features-yes-icon"></i></td>
                                 <td><i class="more-features-yes-icon"></i></td>
@@ -155,7 +155,7 @@
         </tr>
         <tr>
             <td>Apache with LiteSpeed </td>
-            <td><i class="more-features-no-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
@@ -168,15 +168,15 @@
             <td><i class="more-features-yes-icon"></i></td>
         </tr>
         <tr>
-            <td>PHP 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 ,8.1</td>
-            <td>(7.1,7.2,7.3,7.4,8.0,8.1)</i></td>
+            <td>PHP 8.0, 8.1, 8.2, 8.3</td>
+            <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
         </tr>
         <tr>
-            <td>MySQL 8.x.x </td>
-            <td>(Mariadb 10.x)</i></td>
+            <td>MySQL (Mariadb 10.x) </td>
+            <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
             <td><i class="more-features-yes-icon"></i></td>
@@ -408,10 +408,10 @@
         </tr>
         <tr>
             <td>File (Inode) Limit </td>
-            <td>50000</td>
-            <td>75000</td>
-            <td>100000</td>
-            <td>200000</td>
+            <td>2,00,000</td>
+            <td>4,00,000</td>
+            <td>6,00,000</td>
+            <td>8,00,000</td>
         </tr>
        
     </tbody>
