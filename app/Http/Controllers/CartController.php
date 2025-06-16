@@ -1959,6 +1959,69 @@ class CartController extends FrontController {
         }
 
         // dd($productData['pid']);
+
+        if($productData["producttype"] != "domain"){
+
+            $products_with_renewal_data = array(534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529);
+
+            if(in_array($productData['pid'], $products_with_renewal_data)){
+
+                if(Config::get('Constant.sys_currency') == "INR"){
+
+                    $renewal_price = DB::table('renewal_price')
+                                    ->where('product_package_id', $productData['pid'])
+                                    ->first(['renewal_monthly_INR', 'renewal_yearly_permonth_INR','renewal_biennially_permonth_INR','renewal_triennially_permonth_INR']);
+
+                    if($renewal_price){
+                        $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_INR;
+                        $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_INR;
+                        $productData['renewal_biennially_permonth'] = $renewal_price->renewal_biennially_permonth_INR;
+                        $productData['renewal_triennially_permonth'] = $renewal_price->renewal_triennially_permonth_INR;
+
+                        $productData['extra_renewal_data'] = true;
+                    }                    
+
+                }elseif(Config::get('Constant.sys_currency') == "USD"){
+
+                    $renewal_price = DB::table('renewal_price')
+                                    ->where('product_package_id', $productData['pid'])
+                                    ->first(['renewal_monthly_USD', 'renewal_yearly_permonth_USD','renewal_biennially_permonth_USD','renewal_triennially_permonth_USD']);
+
+                    if($renewal_price){
+                        $productData['renewal_monthly_price'] = $renewal_price->renewal_monthly_USD;
+                        $productData['renewal_yearlyPrice_perMonth'] = $renewal_price->renewal_yearly_permonth_USD;
+                        $productData['renewal_biennially_permonth'] = $renewal_price->renewal_biennially_permonth_USD;
+                        $productData['renewal_triennially_permonth'] = $renewal_price->renewal_triennially_permonth_USD;
+
+                        $productData['extra_renewal_data'] = true;
+                    }
+
+                }
+
+                
+
+                foreach ($productData['pricing'] as $key => $price) {
+
+                    if ($price->durationame === 'monthly') {
+                        $price->renewal_price = $productData['renewal_monthly_price']; 
+                    }
+
+                    if ($price->durationame === 'annually') {
+                        $price->renewal_price = $productData['renewal_yearlyPrice_perMonth']; 
+                    }
+
+                    if ($price->durationame === 'biennially') {
+                        $price->renewal_price = $productData['renewal_biennially_permonth']; 
+                    }
+
+                    if ($price->durationame === 'triennially') {
+                        $price->renewal_price = $productData['renewal_triennially_permonth']; 
+                    }
+
+                }
+            }
+        }
+        
         if($productData['producttype'] == 'vps'){
 
                if(Config::get('Constant.sys_currency') == "INR"){
@@ -2072,23 +2135,10 @@ class CartController extends FrontController {
     }
     public function setconfigoptionvalue(Request $request) {
         Self::getconstants();
-        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
-        if (!$cartData || !array_key_exists($request->productid, $cartData)) {
-           return response()->json([
-            'status' => 'redirect',            
-        ]);
-        }
-
-        $productData = $cartData[$request->productid];
-
-        if (!isset($productData['pid']) || empty($productData['pid'])) {
-            return response()->json([
-            'status' => 'redirect',            
-        ]);
-        }
         Cart::updateConfig($request);
         $configHtmlStr = "";
-        
+        $cartData = $request->session()->has('cart') ? (array) $request->session()->get('cart') : null;
+        $productData = $cartData[$request->productid];
         $finalPrice = 0;
         $finalPrice += $productData['pricing'][$productData['regperiod']]->price;
         if (!empty($productData['configfields'])) {

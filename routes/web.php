@@ -495,10 +495,10 @@ Route::get('/secure/whmcs-products', function () {
     ]);
 });
 
-// Route::get('/clear-cache', function(){ 
-//     // Artisan::call('config:clear');
-//     // Artisan::call('route:clear');
-//     // Artisan::call('cache:clear');
-//     Cache::flush();
-//     return redirect('/');
-// });
+Route::get('/clear-cache', function(){ 
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('cache:clear');
+    Cache::flush();
+    return redirect('/');
+});

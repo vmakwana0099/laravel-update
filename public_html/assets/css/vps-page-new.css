@@ -113,3 +113,160 @@
         margin: 10px 0;
     }
 }
+
+
+
+
+.VPS-OS-main{
+
+    background-image: url(/assets/images/vps_hosting/VPS-OS-BG.webp);
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.VPS-OS-bx{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.VPS-OS-bx svg{
+
+  max-width: 800px;
+
+}
+
+.vps-os-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.vps-os-dt {
+    color: #e8e8ff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#Group_172993 {
+
+  /* width: 10px;
+
+  height: 10px;
+
+  background-color: red;
+
+  border-radius: 50%; */
+
+  /* transform: translate(260px, 80px); */
+
+  animation: red-ball 1s linear infinite;
+
+  transition: 0.6s;
+
+}
+
+
+
+@keyframes red-ball {
+
+  from {
+
+    transform: translate(200px, 200px);
+
+  }
+
+  to {
+
+    transform: translate(0px, 0px);
+
+  }
+
+}
+
+#Group_172994-2{
+
+  animation: red-ball2 1s linear infinite;
+
+  transition: 0.6s;
+
+}
+
+@keyframes red-ball2 {
+
+  from {
+
+    transform: translate(-30px, 200px);
+
+  }
+
+  to {
+
+    transform: translate(180px, -15px);
+
+  }
+
+}
+
+#Group_172994-3{
+
+  animation: red-ball3 1s linear infinite;
+
+  transition: 0.6s;
+
+}
+
+@keyframes red-ball3 {
+
+  from {
+
+    transform: translate(200px, -34px);
+
+  }
+
+  to {
+
+    transform: translate(-34px, 200px);
+
+  }
+
+}
+
+#Group_172994-4{
+
+  animation: red-ball4 1s linear infinite;
+
+  transition: 0.6s;
+
+}
+
+@keyframes red-ball4 {
+
+   from {
+
+    transform: translate(0px, 0px);
+
+  }
+
+  to {
+
+    transform: translate(200px, 200px);
+
+  }
+
+}

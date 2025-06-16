@@ -201,7 +201,11 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             @endphp
                             @php
                             if(isset($productData['extra_renewal_data'])){                                
-                                $a = ($productData['renewal_monthly_price'] * 12) - $productData['pricing'][4]->price;
+                                if($productData['producttype'] == 'hosting'){
+                                    $a = ($productData['renewal_monthly_price'] * 36) - $productData['pricing'][6]->price;
+                                }else{
+                                    $a = ($productData['renewal_monthly_price'] * 12) - $productData['pricing'][4]->price;
+                                }
                             }else{
                                 $a = '';
                             }
@@ -297,7 +301,16 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                     }
                                                    
                                                 @endphp
-                                                <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
+
+                                                @if($productData['producttype'] == 'hosting')
+                                                    @if($pricing->duration > 1)
+                                                    <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
+                                                    @elseif(in_array($productData['pid'],[534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529]))
+                                                    <br>                                                
+                                                    @endif
+                                                @else
+                                                    <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
+                                                @endif
 
                                                 @elseif($productData['producttype'] == 'email')
                                                 @php
@@ -352,8 +365,10 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                     $per_off = (100 - round($_currentPlanPrice * $_basicPercentage / $_basicPlanPrice));
                                                 }
                                                 @endphp
-                                                @if(isset($productData['extra_renewal_data']))                                                
+                                                @if(isset($productData['extra_renewal_data']))
+                                                @if($per_off>0)         
                                                 <span class="cpbm-save {{ ($prokey != $ArrayMaxKey)?'cpbms-cc':'' }}">Save {{ $per_off }}% </span>
+                                                @endif
                                                 @endif
 
                                                 @if(!isset($productData['extra_renewal_data']) && $pricing->duration != 1)
@@ -363,7 +378,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                 <br>
                                             </span>
                                             <div class="cpbm-stotal">
-                                            @if($productData['producttype'] == 'vps' || $productData['producttype'] == 'email')
+                                            @if($productData['producttype'] == 'vps' || $productData['producttype'] == 'email' || $productData['producttype'] == 'hosting' && in_array($productData['pid'],[534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529]))
                                                 
                                             @if(isset($productData['extra_renewal_data']))
                                                 @if(isset($pricing->renewal_price))
@@ -710,7 +725,6 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                         </div>
                     </div>
                 </div>
-                {{-- {{dd($productData['pid'])}} --}}
                 @if ($productData['groupname'] != 'Forex VPS')
                 <div class="c_c_box">
                     <h5 class="c_c_title c_c_blue-title">Configurable Options</h5><br>
@@ -1341,20 +1355,6 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
           </div>
         </div>
 
-        <div class="modal fade cartfull-popup" id="cartfull-popups" role="dialog" style="display: none;">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close close-popup" id="close-cartfull-popups" data-bs-dismiss="modal">X</button>
-                      <h2 class="modal-title">Cart alert!</h2>
-                  </div>
-                  <div class="modal-body">
-                    <h2 class="modal-title">This product is not in your cart</h2>
-                    <a href="{{url('/')}}">Click Here</a>
-                  </div>
-              </div>
-          </div>
-        </div>
    @include('cart.cart-about-support')
 
  
@@ -1793,9 +1793,6 @@ function showAllCPValues(id) {
 
 
         function setConfigurationFieldValue(proid,fieldid,val){
-            console.log("1",proid)
-            console.log("2",fieldid)
-            console.log("3",val)
             setServersVPSConfiguration(fieldid);
 
         var harddisk=0;
@@ -1904,10 +1901,6 @@ function showAllCPValues(id) {
             type:"post",
             dataType: "json",
             success:function(response){
-                if (response.status === 'redirect') {
-                    $(function(){ $('#cartfull-popups').modal('show'); });
-                    {{-- window.location.href = response.url; --}}
-                }
               /*console.log("hello");*/
               var baseConfigration=''; var checkConfigaval=false;
               $.each(response.divHtml, function (i,v){
@@ -1951,7 +1944,7 @@ function showAllCPValues(id) {
               // vikram vps plans changes S 10/3/2022
 
               hideLoader();
-            }            
+            }
         });
       }
 

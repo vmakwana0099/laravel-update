@@ -132,7 +132,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                             <ul class="shared-plan-features shared-plan-tooltip">
                                                 @foreach($SpecificationData as $Specification)
                                                 
-                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain' || strtolower(trim($Specification)) == 'free backup' || strtolower(trim($Specification)) == 'website builder' || strtolower(trim($Specification)) == 'supports python' )
+                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain')
                                                     <li class="cross_free_domain"><span>{{$Specification}}</span></li>
                                                     @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
                                                     <li>
@@ -171,7 +171,25 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                     <li>
                                                         <div class="free_domain">{{$Specification}}
-                                                            <span class="domain_tooltip">21.7.3 & 20.15.0
+                                                            <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+
+                                                    @elseif(strtolower(trim($Specification)) == "supports python")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
+                                                            </span>
+
+                                                        </div>
+                                                    </li>
+
+                                                    @elseif(strtolower(trim($Specification)) == "10 databases")
+                                                    <li>
+                                                        <div class="free_domain">{{$Specification}}
+                                                            <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
                                                             </span>
 
                                                         </div>
@@ -270,9 +288,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                             <ul class="shared-plan-features shared-plan-tooltip">
                                                 @foreach($SpecificationData as $Specification)
 
-                                                   @if($ProductsPackageData[1]->varTitle == 'ESSENTIAL' && strtolower(trim($Specification)) == 'free domain')
-                                                   <li class="cross_free_domain"><span>{{$Specification}}</span></li>
-                                                    {{-- @if(strtolower(trim($Specification)) == 'free domain')
+                                                   
+                                                    @if(strtolower(trim($Specification)) == 'free domain')
                                                         <li> <div class="free_domain">{{$Specification}}
                                                     <span class="domain_tooltip">
                                                         Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.                                                       
@@ -280,7 +297,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                             </span>
                                                     </span>
                                                 </div>
-                                                </li> --}}
+                                                </li>
 
                                                 @elseif(strtolower(trim($Specification)) == 'free ssl certificate' || strtolower(trim($Specification)) == 'free ssl')
                                                 <li>
@@ -316,23 +333,27 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
                                                         </span>
                                                     </div>
                                                 </li>
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
+                                                @elseif(strtolower(trim($Specification)) == "50 databases")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
                                                     </div>
                                                 </li>
+                                                
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
@@ -466,23 +487,27 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
                                                         </span>
                                                     </div>
                                                 </li>
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
+                                                @elseif(strtolower(trim($Specification)) == "250 databases")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
                                                     </div>
                                                 </li>
+                                                
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
@@ -613,23 +638,27 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 @elseif(strtolower(trim($Specification)) == "supports node.js")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">6.x, 8.x, 9.x, 10.x, 11.x, 12.x, 14.x, 16.x, 18.x.
+                                                        <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
                                                         </span>
                                                     </div>
                                                 </li>
                                                 @elseif(strtolower(trim($Specification)) == "supports python")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11.
+                                                        <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
                                                         </span>
                                                     </div>
                                                 </li>
-                                                @elseif(strtolower(trim($Specification)) == "website builder")
+                                                @elseif(strtolower(trim($Specification)) == "500 databases")
                                                 <li>
                                                     <div class="free_domain">{{$Specification}}
+                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
+                                                        </span>
+
                                                     </div>
                                                 </li>
+                                               
                                                 @else
                                                 <li><span>{{$Specification}}</span></li>
                                                 @endif
@@ -1139,9 +1168,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     // Add event listeners to the buttons
-    canadaButton.addEventListener('click', hideVpsPlanDiv);
+    {{-- canadaButton.addEventListener('click', hideVpsPlanDiv); --}}
     // germanyButton.addEventListener('click', hideVpsPlanDiv);
-    indiaButton.addEventListener('click', showVpsPlanDiv);
+    {{-- indiaButton.addEventListener('click', showVpsPlanDiv); --}}
 });
 
 </script>

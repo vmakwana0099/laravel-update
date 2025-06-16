@@ -578,15 +578,14 @@ li.cross-icon-li {
     font-weight: 500 !important;
     display: inline-block;
     border-bottom: 1px dashed #080808;
-    position: relative;
     font-size: 14px;
 }
 span.domain-tooltip {
-    bottom: 30px;
+    top: 30px;
     visibility: hidden;
     height: auto;
-    left: -20px;
-    width: 280px;
+    left: -10px;
+    width: 100%;
     position: absolute;
     background: #000c66;
     color: #fff;
@@ -600,17 +599,6 @@ span.domain-tooltip {
     opacity: 0;
     transition: .4s ease-in-out;
     transform: translate3d(0, -10px, 0);
-}
-.free-domain span.domain-tooltip:after {
-    content: "";
-    background-color: #000c66;
-    width: 15px;
-    height: 15px;
-    bottom: -5px;
-    left: 10%;
-    position: absolute;
-    transform: rotate(45deg);
-    border-radius: 3px;
 }
 .free-domain:hover span.domain-tooltip {
     visibility: visible;
