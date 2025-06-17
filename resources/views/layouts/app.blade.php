@@ -16,7 +16,7 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
             $testimonial = array("abhishek-dutta","arnav-trivedi","artos-bible-quiz","aryan-ahuja","dheeraj-balpathak","kamlesh-gawali-2","mayank-goswami","muclix-systems","mute-break","pulkit-shah","zayka-grains","buy-io-domain-names","forex-vps-hosting","nirmal-paradkar","ivaylo-nikolov","divyanshu-agarwal","sameer-shaikh","shatrughan-saravagi","s2-tech-india","nikhil-jain","shivang-kareliya","learntez","prahlad-shukla");
             $canada_domain = "https://www.hostitsmart.ca";
             $canada_urls = array("{$canada_domain}/domain-registration","{$canada_domain}/domain/domain-transfer","{$canada_domain}/whois-checker","{$canada_domain}/hosting/shared-hosting","{$canada_domain}/hosting/wordpress-hosting","{$canada_domain}/hosting/windows-hosting","{$canada_domain}/servers/vps-hosting","{$canada_domain}/servers/windows-vps-hosting","{$canada_domain}/servers/dedicated-servers","{$canada_domain}/ssl-certificates","{$canada_domain}/web-hosting","{$canada_domain}/tld","{$canada_domain}/about-us","{$canada_domain}/why-hits","{$canada_domain}/contact","{$canada_domain}/faqs","{$canada_domain}/domain-policy","{$canada_domain}/terms","{$canada_domain}/payment-options","{$canada_domain}/privacy-policy","{$canada_domain}/deals","{$canada_domain}/servers/linux-vps-hosting");?>
-            
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{-- font cdn  St--}}
