@@ -326,7 +326,7 @@ $linksArr['503'] = array("link" => "servers/vps-hosting-india","name" => "VPS Ho
             // Save the content to the file
             File::put($filePath, $jsContent);
 
-            Log::info('WHMCS API response successfully stored in whmcs_response.js');
+            // Log::info('WHMCS API response successfully stored in whmcs_response.js');
             return 0;
         
  }  

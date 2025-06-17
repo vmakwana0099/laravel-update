@@ -39,7 +39,8 @@
     @endif
 
     <div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
-        <div class="container">
+        <div class="container-fluid">
+            <div class="shared-plan-bx-pd">
             <div class="section-heading">
                 <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
                 <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
@@ -47,7 +48,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="wh-server-location-tab">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button title="India" class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="lazy" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
@@ -173,7 +174,224 @@
                 }
 
                 @endphp
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹840.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>420.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
 
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <div class="slide-toggle"><li> <span> Host 1 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 10 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">10,000 Visits Monthly <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li  class="cross-icon-li"> <span> Free Domain</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">10 Databases <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 5 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 10,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 2,00,000 INODES</span></li></div>
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-most-popular-cnt">
+                                            MOST POPULAR
+                                        </div>
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹980.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>880.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a>
+                                            </div>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <div class="slide-toggle"><li> <span> Host 5 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">25,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">50 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 25,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 4,00,000 INODES</span></li></div>
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹1280.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>1820.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <div class="slide-toggle"><li> <span> Host 25 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 50 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">50,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">250 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 60 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 1,00,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 6,00,000 INODES</span></li></div>
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                VPS - SM 1
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                <span class="cut-price">₹1880.00</span>
+                                                <span class="cut-prc-disc">Save 50%</span>
+                                            </div>
+                                            <div class="shared-main-price">
+                                                ₹<span>1480.00</span>/mo*
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                            </div>
+                                            
+                                            <div class="shared-plan-renew">
+                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                            </div>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                <div class="slide-toggle"><li> <span> Host 50 Website</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 100 GB NVMe SSD</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">1,00,000 Visits Monthly 
+                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Free Domain 
+                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Linux Technology</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Free Backup</span></li></div>
+                                                <div class="slide-toggle"><li> <span> cPanel + 1 Click Installer</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Terminal Access</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Website Builder</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Node.js 
+                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x </span></div></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">Supports Python 
+                                                    <span class="domain-tooltip">
+                                                    3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> WordPress Optimized</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Litespeed</span></li></div>
+                                                <div class="slide-toggle"><li> <div class="free-domain">500 Databases 
+                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance. </span></div></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited Subdomains</span></li></div>
+                                                <div class="slide-toggle"><li> <span> Unlimited FTP users</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 100 Email Accounts</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 2,00,000 GB Bandwidth</span></li></div>
+                                                <div class="slide-toggle"><li> <span> 8,00,000 INODES</span></li></div>
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
                                 <div class="{{$box_plan_class}}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-plan-box">
                                         <div class="shared_plan_price">
@@ -835,6 +1053,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1356,9 +1575,755 @@
     </div>
 </section>
 
- @include('template.'.$themeversion.'.more_hosting_features')
+
+<div class="modal fade more_feature" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content more_feature_modal">
+            <h2 class="htwo-prime1 plntbl-hdrttl">Host IT Smart Shared Hosting Features</h2>
+            <div class="table-responsive">
+                <div class="more-features-close-icon" data-bs-dismiss="modal" title="Close">x</div>
+                <table class="w-100">
+                    <thead>
+                    </thead>
+
+                    <tbody>
+                        <tr class="more-features-shadow">
+                            <th class=""></th>
+                            <th>BASIC</th>
+                            <th>ESSENTIAL</th>
+                            <th>PROFESSIONAL</th>
+                            <th>ENTERPRISE</th>
+                        </tr>
+                        <tr>
+                            <td>Host Website </td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>20</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>SSD Disk Space </td>
+                            <td>5</td>
+                            <td>20</td>
+                            <td>50</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Free Domain </td>
+                            <td> <i class="more-features-no-icon"></i></td>
+                            <td> <i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Free SSL </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Free Backup </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Control Panel</td>
+                            <td>Plesk</i></td>
+                            <td>cPanel</i></td>
+                            <td>cPanel</td>
+                            <td>cPanel</td>
+                        </tr>
+                        <tr>
+                            <td>Website Builder </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>1-Click Installer </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>WordPress Optimized </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Bandwidth </td>
+                            <td>50GB</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Email Accounts </td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>60</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>MySQL DB's </td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>SSD Disk Space </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Subdomains </td>
+                            <td>5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                       {{--  <tr>
+                            <td>Parked domains </td>
+                            <td>5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr> --}}
+                        <tr>
+                            <td>FTP users </td>
+                            <td>5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Supports Node.js</td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td id="see_more_features">Supports Python</td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr class="more-features-plan-features" id="see_more_features">
+                            <td colspan="5">Server Features</td>
+                        </tr>
+                        <tr>
+                            <td>Apache with LiteSpeed </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>HTTP/2 </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>PHP 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 ,8.1</td>
+                            <td>(7.1,7.2,7.3,7.4,8.0,8.1)</i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>MySQL 8.x.x </td>
+                            <td>(Mariadb 10.x)</i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>CGI </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Javascript </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Leverage Browser Caching </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Gzip Compression </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>KeepAlive </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+
+                    </tbody>
 
 
+                    <tbody>
+                        <tr class="more-features-plan-features">
+                            <td colspan="5">cPanel Features</td>
+                        </tr>
+                        <tr>
+                            <td>FTP Account Management </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Virus Scanner </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>IP Deny Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Index Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Leech Protect </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mailman List Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>MIME Types Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Network Tools </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Redirect Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Change Language </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Multiple PHP Support </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Customizable php.ini </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cron Jobs </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Simple DNS Zone Editor </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Advanced DNS Zone Editor </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Backup Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Git Version Control </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Resource Usage Monitoring </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>User Manager </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Style and Preferences Management </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Error Pages </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>PHP MyAdmin </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent connections (EP) </td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Number of processes (nPROC) </td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>80</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>IO Limit </td>
+                            <td>1 MBPS</td>
+                            <td>1 MBPS</td>
+                            <td>1 MBPS</td>
+                            <td>1 MBPS</td>
+                        </tr>
+                        <tr>
+                            <td>File (Inode) Limit </td>
+                            <td>50000</td>
+                            <td>75000</td>
+                            <td>100000</td>
+                            <td>200000</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tbody>
+                        <tr class="more-features-plan-features">
+                            <td colspan="5">Security Solutions</td>
+                        </tr>
+                        <tr>
+                            <td>Network Firewall </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Web Application Firewall </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Brute-force Protection </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Exploits and Malware Protect </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Malware Scan and Reports </td>
+                            <td><i class="more-features-no-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Two-Factor Authentication (2FA </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        {{-- <tr>
+            <td>BitNinja Server Security </td>
+            <td><i class="more-features-yes-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
+            <td><i class="more-features-yes-icon"></i></td>
+        </tr> --}}
+                        <tr>
+                            <td>Account Isolation </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>CageFS Security </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>CloudLinux Servers </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Power / Network / Hardware Redundancy </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+
+                    </tbody>
+
+                    <tbody>
+                        <tr class="more-features-plan-features">
+                            <td colspan="5">Install Popular Software with 1-Click</td>
+                        </tr>
+                        <tr>
+                            <td>WordPress </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Joomla </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>phpBB </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>SMF </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Drupal </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Blogs </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Portals </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Content Management System </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Discussion Boards </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>eCommerce </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Site Builders </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+
+                    </tbody>
+
+                    <tbody>
+                        <tr class="more-features-plan-features">
+                            <td colspan="5">Email Features</td>
+                        </tr>
+                        <tr>
+                            <td>Email Accounts </td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>60</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Email Forwarders </td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Email Autoresponders </td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Attachment Limit </td>
+                            <td>25 MB</td>
+                            <td>25 MB</td>
+                            <td>25 MB</td>
+                            <td>25 MB</td>
+                        </tr>
+                        <tr>
+                            <td>Webmail (Horde & RoundCube) </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>SMTP, POP3, IMAP </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>SpamAssassin </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mailing Lists </td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Catch-all Emails </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Email Aliases </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>SPF and DKIM Support </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Domain Keys </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>BoxTrapper </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Individual Mailbox Storage </td>
+                            <td>250 MB</td>
+                            <td>250 MB</td>
+                            <td>250 MB</td>
+                            <td>250 MB</td>
+                        </tr>
+                        <tr>
+                            <td>Overall Mailbox Storage </td>
+                            <td>1 GB</td>
+                            <td>2 GB</td>
+                            <td>10 GB</td>
+                            <td>50 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Email Sends Per Hour </td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>CSV Import (Email & Forwarders) </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Compatibility </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Email Calendar </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Webmail in Gmail </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Outlook / Thunderbird / Mac Mail </td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                            <td><i class="more-features-yes-icon"></i></td>
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="vps-features head-tb-p-40" id="features">
     <div class="container">
         <div class="row">

@@ -11,7 +11,7 @@ if (!empty(Request::segment(1)) && Request::segment(1) != "powerpanel") {
 
     Route::get('googlecontact/thankyou', ['as' => 'googlecontact/thankyou', 'uses' => 'ThankyouController@index']);
                 // Route::get('/email/google-apps',  ['as' => 'contact', 'uses' => 'GoogleContactController@create']);
-                Route::post('/email/google-apps', ['as' => 'contact', 'uses' => 'GoogleContactController@store']);
+                Route::post('/email/google-workspace-india', ['as' => 'contact', 'uses' => 'GoogleContactController@store']);
 
     $slug = Request::segment(1);
     $arrModule = MyLibrary::setFrontRoutes($slug);
@@ -195,7 +195,9 @@ Route::get('/cart/vpsExtraOffer26FebChangeCounters', 'TesthitsController@vpsExtr
 /*------------------------ Spin Wheel End -----------------------------------------------------*/
 
 Route::post('front-login', 'Userauth\FrontRegisterController@frontlogin');
-Route::get('otp-verification', 'Userauth\FrontRegisterController@optverification');
+Route::get('front-login', function () {
+    return view('errors.404');
+});Route::get('otp-verification', 'Userauth\FrontRegisterController@optverification');
 Route::post('otp-send', 'Userauth\FrontRegisterController@otpsend');
 Route::get('otp-verify', 'Userauth\FrontRegisterController@otpverify');
 Route::post('otp-doverification', 'Userauth\FrontRegisterController@otpdoverification');
@@ -428,8 +430,7 @@ Route::post('/cart/configdomain', ['as' => 'cart.configdomain', 'uses' => 'CartC
 Route::post('/cart/checkconfigdomainname', ['as' => 'cart.checkconfigdomainname', 'uses' => 'CartController@checkconfigdomainname']);
 Route::get('/cart/signin', ['as' => 'cart.cartsignin', 'uses' => 'CartController@cartsignin']);
 Route::get('/cart/thankyou', function(){ return view("errors.404"); });
-Route::post('/cart/thankyou', ['as' => 'cart.thankyou', 'uses' => 'CartController@thankyou']); 
-Route::get('/cart/thankyou1', ['as' => 'cart.thankyou', 'uses' => 'TesthitsController@thankyoutest']); 
+Route::post('/cart/thankyou', ['as' => 'cart.thankyou', 'uses' => 'CartController@thankyou']);
 Route::get('/contact/thankyou', ['as' => 'contact/thankyou', 'uses' => 'ThankyouController@index']);
 Route::post('/cart/paymentfail', ['as' => 'cart.paymentfail', 'uses' => 'CartController@paymentfail']);
 Route::get('/cart/paymentfail', ['as' => 'cart.paymentfail', 'uses' => 'CartController@paymentfail']);
@@ -458,6 +459,7 @@ Route::get('/cart/newconfig', ['as' => 'cart.config', 'uses' => 'CartController@
 Route::get('/testhits/removeclient', ['as' => 'testhits.removeclient', 'uses' => 'TesthitsController@removeclient']);
 Route::get('/testhits/whmcspricing', ['as' => 'testhits.whmcspricing', 'uses' => 'TesthitsController@whmcspricing']);
 Route::get('/testhits/testaction', ['as' => 'testhits.testaction', 'uses' => 'TesthitsController@testaction']);
+Route::get('/testhits/testapi', ['as' => 'testhits.testaction', 'uses' => 'TesthitsController@testapi']);
 
 
 
@@ -480,6 +482,7 @@ Route::post('/career/details','CareersController@careerDetails')->name('careerDe
 Route::post('/career/details-store','CareersController@careerDetailsStore')->name('careerDetailsStore');
 Route::post('/career/details-fileupload','CareersController@careerDetailsFileupload')->name('careerDetailsFileupload');
 Route::get('/careers/thankyou', ['as' => 'career/thankyou', 'uses' => 'CareersController@thankyou']);
+Route::get('/whmcsdata', ['as' => 'whmcsdata', 'uses' => 'TesthitsController@whmcspdata']);
 
 
 Route::get('/secure/whmcs-products', function () {
@@ -495,10 +498,26 @@ Route::get('/secure/whmcs-products', function () {
     ]);
 });
 
-Route::get('/clear-cache', function(){ 
-    Artisan::call('config:clear');
-    Artisan::call('route:clear');
-    Artisan::call('cache:clear');
-    Cache::flush();
-    return redirect('/');
+
+
+// Route::get('/clear-cache', function() {
+//     \Artisan::call('config:clear');
+//     \Artisan::call('cache:clear');
+//     \Artisan::call('view:clear');
+//     \Artisan::call('route:clear');
+    
+//     return "Cache cleared successfully!";
+// });
+
+
+use Illuminate\Support\Facades\Response;
+
+Route::get('/robots.txt', function () {
+    $content = file_get_contents(public_path('robots.txt'));
+    return Response::make($content, 200, [
+        'Content-Type' => 'text/plain',
+        'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
+        'Pragma' => 'no-cache',
+        'Expires' => 'Thu, 01 Jan 1970 00:00:00 GMT',
+    ]);
 });

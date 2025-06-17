@@ -118,7 +118,7 @@
         
                 <h2 class="sumary-title">Order Summary</h2>
                 @php 
-                    $combooffer_domain=""; 
+                    $combooffer_domain= array(); 
                 @endphp
                 @foreach($cartData as $proKey => $item)
                 
@@ -126,12 +126,12 @@
                     @if($item['pid']=='218')
                        @php $combooffer_domain=$item['domain']; @endphp
                     @endif
-                        @if( $item['pid'] == '497' || $item['pid'] == '498' || $item['pid'] == '423' || $item['pid'] == '424'  || $item['pid'] == '427' || $item['pid'] == '428' || $item['pid'] == '431' || $item['pid'] == '432')
+                        @if( $item['pid'] == '534' || $item['pid'] == '535' || $item['pid'] == '536' || $item['pid'] == '537'  || $item['pid'] == '522' || $item['pid'] == '523' || $item['pid'] == '524' || $item['pid'] == '525' || $item['pid'] == '530' || $item['pid'] == '531' || $item['pid'] == '532' || $item['pid'] == '533' || $item['pid'] == '526' || $item['pid'] == '527' || $item['pid'] == '528' || $item['pid'] == '529')
                                 @if($item['billingcycle'] == 'triennially' || $item['billingcycle'] == 'biennially' || $item['billingcycle'] == 'annually')
                                     <?php
                                         $tld = substr($item['domain'], -3);
                                         if($tld == 'com'){
-                                            $combooffer_domain=$item['domain'];
+                                            $combooffer_domain[]=$item['domain'];
                                         }
                                     ?>
                                 @endif
@@ -143,10 +143,10 @@
                     
                     @if(isset($item['producttype']) && $item['producttype'] == 'domain')
                     <?php $priceStr = "";
-                    if($item['domain']==$combooffer_domain)
+                    if(in_array($item['domain'],$combooffer_domain))
                         {
                             foreach($item['pricing'] as $pr){ 
-                            if($pr->duration == 1) {
+                            if($pr->duration == $item['regperiod']) {
                                 $priceStr=0;
                                 
                               // echo 'yes: '; print_r($hideyeardiv);
