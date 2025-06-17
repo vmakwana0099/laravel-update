@@ -537,7 +537,8 @@ class Products extends Model {
             }
         }
         
-        $buttonText = "Buy Now";
+        $buttonText = "Choose Plan";
+        // $buttonText = "Buy Now";
         $vpsclass = '';
         if(!empty($category) && ($category == 'vps' || $category == 'dedicatedserver')){ $buttonText = "Configure"; }
         
@@ -572,8 +573,8 @@ class Products extends Model {
             }
         }
         elseif(!empty($category) && ($category == 'hosting') ){
-          $returnHtml .= "<button class='shared-hstg-plan-btn " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 
-
+          $returnHtml .= "<button class='primary-btn-sq " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 
+          // <button class='shared-hstg-plan-btn " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>
         }
         elseif(Request::segment(2) == 'dedicated-servers'){
                 $returnHtml .= "<button class='vps_managed_btn'  title='".$buttonText."'>".$buttonText."</button>";

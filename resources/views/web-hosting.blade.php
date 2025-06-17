@@ -179,24 +179,42 @@
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
-                                                VPS - SM 1
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[0]->varTitle}}
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹840.00</span>
-                                                <span class="cut-prc-disc">Save 50%</span>
+                                                {{-- <span class="cut-price">₹840.00</span> --}}
+                                                <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
+
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[0]->varAdditionalOffer));
+                                                @endphp
+
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span>{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span>({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>420.00</span>/mo*
+                                                {{-- ₹<span>420.00</span>/mo* --}}
+                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
                                             </div>
                                             <div class="shared-plan-fr-mnth invisible">
                                                 +0 month free
                                             </div>
                                             <div class="shared-plan-btn">
-                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$BasicThreeYearButtonText!!}
                                             </div>
-                                            <div class="shared-plan-renew">
-                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+
+                                            @if(isset($ProductsPackageData[0]->intOldPriceThreeYearINR))
+                                            <div class="shared-plan-renew">                                                
+                                                Renews at ₹{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
                                             </div>
+                                            @endif
 
                                         </div>
                                         <div class="shared-plan-cnt">
@@ -235,25 +253,44 @@
                                         </div>
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
-                                                VPS - SM 1
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[1]->varTitle}}
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹980.00</span>
-                                                <span class="cut-prc-disc">Save 50%</span>
+                                                {{-- <span class="cut-price">₹980.00</span> --}}
+                                                <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[1]->intOldPriceThreeYearINR}}</span>
+
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[1]->varAdditionalOffer));
+                                                @endphp
+
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span>{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span>({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
+
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>880.00</span>/mo*
+                                                {{-- ₹<span>880.00</span>/mo* --}}
+                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}</span>/mo*
                                             </div>
                                             <div class="shared-plan-fr-mnth">
                                                 +3 month free
                                             </div>
                                             <div class="shared-plan-btn">
-                                                <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a>
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a> --}}
+                                                {!!$EssentialThreeYearButtonText!!}
+
                                             </div>
                                             
-                                            <div class="shared-plan-renew">
-                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                             @if(isset($ProductsPackageData[1]->intOldPriceThreeYearINR))
+                                            <div class="shared-plan-renew">                                                
+                                                Renews at ₹{{$ProductsPackageData[1]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
                                             </div>
+                                            @endif
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
@@ -293,25 +330,42 @@
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
-                                                VPS - SM 1
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[2]->varTitle}}
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹1280.00</span>
-                                                <span class="cut-prc-disc">Save 50%</span>
+                                                {{-- <span class="cut-price">₹1280.00</span> --}}
+                                                <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeYearINR}}</span>
+
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[2]->varAdditionalOffer));
+                                                @endphp
+
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span>{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span>({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>1820.00</span>/mo*
+                                                {{-- ₹<span>1820.00</span>/mo* --}}
+                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}</span>/mo*
                                             </div>
                                             <div class="shared-plan-fr-mnth">
                                                 +3 month free
                                             </div>
                                             <div class="shared-plan-btn">
-                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$EnterpriseThreeYearButtonText!!}
                                             </div>
                                             
-                                            <div class="shared-plan-renew">
-                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                             @if(isset($ProductsPackageData[2]->intOldPriceThreeYearINR))
+                                            <div class="shared-plan-renew">                                                
+                                                Renews at ₹{{$ProductsPackageData[2]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
                                             </div>
+                                            @endif
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
@@ -351,25 +405,43 @@
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
-                                                VPS - SM 1
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[3]->varTitle}}
                                             </div>
                                             <div class="shared-plan-cut-prc">
-                                                <span class="cut-price">₹1880.00</span>
-                                                <span class="cut-prc-disc">Save 50%</span>
+                                                {{-- <span class="cut-price">₹1880.00</span> --}}
+                                                <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[3]->intOldPriceThreeYearINR}}</span>
+
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[3]->varAdditionalOffer));
+                                                @endphp
+
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span>{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span>({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
                                             </div>
                                             <div class="shared-main-price">
-                                                ₹<span>1480.00</span>/mo*
+                                                {{-- ₹<span>1480.00</span>/mo* --}}
+                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
                                             </div>
                                             <div class="shared-plan-fr-mnth">
                                                 +3 month free
                                             </div>
                                             <div class="shared-plan-btn">
-                                                <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$EnterpriseThreeYearButtonText!!}
+
                                             </div>
                                             
-                                            <div class="shared-plan-renew">
-                                                Renews at ₹128/mo after 3 years. Cancel anytime.
+                                             @if(isset($ProductsPackageData[3]->intOldPriceThreeYearINR))
+                                            <div class="shared-plan-renew">                                                
+                                                Renews at ₹{{$ProductsPackageData[3]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
                                             </div>
+                                            @endif
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
