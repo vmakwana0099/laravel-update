@@ -16,9 +16,7 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
             $testimonial = array("abhishek-dutta","arnav-trivedi","artos-bible-quiz","aryan-ahuja","dheeraj-balpathak","kamlesh-gawali-2","mayank-goswami","muclix-systems","mute-break","pulkit-shah","zayka-grains","buy-io-domain-names","forex-vps-hosting","nirmal-paradkar","ivaylo-nikolov","divyanshu-agarwal","sameer-shaikh","shatrughan-saravagi","s2-tech-india","nikhil-jain","shivang-kareliya","learntez","prahlad-shukla");
             $canada_domain = "https://www.hostitsmart.ca";
             $canada_urls = array("{$canada_domain}/domain-registration","{$canada_domain}/domain/domain-transfer","{$canada_domain}/whois-checker","{$canada_domain}/hosting/shared-hosting","{$canada_domain}/hosting/wordpress-hosting","{$canada_domain}/hosting/windows-hosting","{$canada_domain}/servers/vps-hosting","{$canada_domain}/servers/windows-vps-hosting","{$canada_domain}/servers/dedicated-servers","{$canada_domain}/ssl-certificates","{$canada_domain}/web-hosting","{$canada_domain}/tld","{$canada_domain}/about-us","{$canada_domain}/why-hits","{$canada_domain}/contact","{$canada_domain}/faqs","{$canada_domain}/domain-policy","{$canada_domain}/terms","{$canada_domain}/payment-options","{$canada_domain}/privacy-policy","{$canada_domain}/deals","{$canada_domain}/servers/linux-vps-hosting");?>
-        <!-- Google Tag Manager -->
-<script>setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P39GJB');}, 6000);</script>
-        <!-- End Google Tag Manager -->
+      
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{-- font cdn  St--}}
