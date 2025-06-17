@@ -370,6 +370,9 @@ li{
     .blk-btn-round, .blk-btn-round-bdr{
         font-size: 14px;
     }
+    .section-heading{
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 380px) {
@@ -463,7 +466,7 @@ li{
 
 
 .shared-plan-box-main {
-    border: 1px solid #a8e8ff;
+    border: 1px solid #d8e8ff;
     border-radius: 20px;
     margin-top: 60px;
     background-color: #F8FBFF;
@@ -472,7 +475,7 @@ li{
 .shared-plan-nm {
     font-size: 22px;
     font-weight: 600;
-    color: #000c66;
+    color: #080808;
 }
 .shared-plan-price {
     text-align: left;
@@ -503,9 +506,6 @@ span.cut-prc-disc {
     font-weight: 400;
     color: #3838ff;
 }
-.shared-main-price{
-    margin-bottom: 12px;
-}
 .shared-main-price span {
     font-size: 48px;
     font-weight: 700;
@@ -521,7 +521,7 @@ span.cut-prc-disc {
     position: relative;
     font-size: 14px;
     font-weight: 400;
-    color: #000c66;
+    color: #080808;
     margin: 15px 0;
 }
 .shared-plan-cnt li:before {
@@ -574,19 +574,18 @@ li.cross-icon-li {
 .free-domain {
     z-index: 1;
     cursor: pointer;
-    color: #000c66 !important;
+    color: #080808 !important;
     font-weight: 500 !important;
     display: inline-block;
-    border-bottom: 1px dashed #000c66;
-    position: relative;
+    border-bottom: 1px dashed #080808;
     font-size: 14px;
 }
 span.domain-tooltip {
-    bottom: 30px;
+    top: 30px;
     visibility: hidden;
     height: auto;
-    left: -20px;
-    width: 320px;
+    left: -10px;
+    width: 100%;
     position: absolute;
     background: #000c66;
     color: #fff;
@@ -600,17 +599,6 @@ span.domain-tooltip {
     opacity: 0;
     transition: .4s ease-in-out;
     transform: translate3d(0, -10px, 0);
-}
-.free-domain span.domain-tooltip:after {
-    content: "";
-    background-color: #000c66;
-    width: 15px;
-    height: 15px;
-    bottom: -5px;
-    left: 10%;
-    position: absolute;
-    transform: rotate(45deg);
-    border-radius: 3px;
 }
 .free-domain:hover span.domain-tooltip {
     visibility: visible;
@@ -637,4 +625,67 @@ a.shared-plan-more-btn:after {
     font-family: FontAwesome;
     font-size: 16px;
     margin-left: 5px;
+}
+.shared-plan-fr-mnth {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000c66;
+}
+
+
+
+
+
+@media only screen and (max-width: 1499px) {
+    .shared-main-price span{
+        font-size: 42px;
+    }
+    .shared-plan-bx-pd {
+       padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .shared-plan-box-main{
+        overflow: hidden;
+    }
+    .shared-plan-bx-pd {
+        padding: 0 20px;
+    }
+    .shared-plan-price{
+        padding: 20px;
+    }
+    .shared-plan-nm{
+        font-size: 20px;
+    }
+    span.cut-price, span.cut-prc-disc{
+        font-size: 14px;
+    }
+    .shared-main-price{
+        font-size: 16px;
+    }
+    .shared-main-price span{
+        font-size: 32px;
+    }
+    .shared-plan-cnt ul {
+       margin: 0px 0 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .shared-plan-bx-pd {
+        padding: 0 0px;
+    }
+    .shared-plan-box-main{
+        margin-top: 20px;
+    }    
+    .wh-server-location-tab ul li{
+        width: 40%;
+        flex-wrap: wrap;
+        margin: 0 10px;
+    }
+    .wh-server-location-tab .nav{
+        margin-bottom: 10px !important;
+    }
 }
