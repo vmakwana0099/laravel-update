@@ -30,6 +30,209 @@
     </div>
     @endif
     @endif
+
+<section class="web-pln-box head-tb-p-40">
+  <div class="container-fluid">
+    <div class="shared-plan-bx-pd">
+      <div class="section-heading">
+        <h2 class="text_head text-center">Choose &amp; Buy Your Desired Web Hosting Package</h2>
+        <p class="text-center">Go Local or Global with Cheap Web Hosting in India &amp; Canada!</p>
+        </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  VPS - SM 1
+                </div>
+                <div class="shared-plan-cut-prc">
+                  <span class="cut-price">₹840.00</span>
+                  <span class="cut-prc-disc">Save 50%</span>
+                </div>
+                <div class="shared-main-price">
+                  ₹<span>420.00</span>/mo*
+                </div>
+                
+                <div class="shared-plan-btn">
+                  <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                </div>
+                
+                <div class="shared-plan-renew">
+                  Renews at ₹128/mo after 3 years. Cancel anytime.
+                </div>
+              </div>
+              <div class="shared-plan-cnt">
+                <ul>
+                  <div class="slide-toggle">
+                    <li> <span><b>1</b> vCPU core</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>4 GB</b> RAM</span></li>
+                  </div>
+                  
+                  <div class="slide-toggle">
+                    <li> <span><b>50GB</b> SSD</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>4 TB</b> Bandwidth</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>1</b> Dedicated IP</span></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left"
+            data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              <div class="shared-most-popular-cnt">
+                MOST POPULAR
+              </div>
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  VPS - SM 2
+                </div>
+                <div class="shared-plan-cut-prc">
+                  <span class="cut-price">₹980.00</span>
+                  <span class="cut-prc-disc">Save 50%</span>
+                </div>
+                <div class="shared-main-price">
+                  ₹<span>880.00</span>/mo*
+                </div>
+                <div class="shared-plan-btn">
+                  <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a>
+                </div>
+
+                <div class="shared-plan-renew">
+                  Renews at ₹128/mo after 3 years. Cancel anytime.
+                </div>
+              </div>
+              <div class="shared-plan-cnt">
+                 <ul>
+                  <div class="slide-toggle">
+                    <li> <span><b>2</b> vCPU core</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>8 GB</b> RAM</span></li>
+                  </div>
+                  
+                  <div class="slide-toggle">
+                    <li> <span><b>100GB</b> SSD</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>8 TB</b> Bandwidth</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>1</b> Dedicated IP</span></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  VPS - SM 3
+                </div>
+                <div class="shared-plan-cut-prc">
+                  <span class="cut-price">₹1280.00</span>
+                  <span class="cut-prc-disc">Save 50%</span>
+                </div>
+                <div class="shared-main-price">
+                  ₹<span>1820.00</span>/mo*
+                </div>
+                <div class="shared-plan-btn">
+                  <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                </div>
+
+                <div class="shared-plan-renew">
+                  Renews at ₹128/mo after 3 years. Cancel anytime.
+                </div>
+              </div>
+              <div class="shared-plan-cnt">
+                 <ul>
+                  <div class="slide-toggle">
+                    <li> <span><b>4</b> vCPU core</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>16 GB</b> RAM</span></li>
+                  </div>
+                  
+                  <div class="slide-toggle">
+                    <li> <span><b>200GB</b> SSD</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>16 TB</b> Bandwidth</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>1</b> Dedicated IP</span></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  VPS - SM 4
+                </div>
+                <div class="shared-plan-cut-prc">
+                  <span class="cut-price">₹1880.00</span>
+                  <span class="cut-prc-disc">Save 50%</span>
+                </div>
+                <div class="shared-main-price">
+                  ₹<span>1480.00</span>/mo*
+                </div>
+                <div class="shared-plan-btn">
+                  <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a>
+                </div>
+
+                <div class="shared-plan-renew">
+                  Renews at ₹128/mo after 3 years. Cancel anytime.
+                </div>
+              </div>
+              <div class="shared-plan-cnt">
+                 <ul>
+                  <div class="slide-toggle">
+                    <li> <span><b>8</b> vCPU core</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>32 GB</b> RAM</span></li>
+                  </div>
+                  
+                  <div class="slide-toggle">
+                    <li> <span><b>400GB</b> SSD</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>32 TB</b> Bandwidth</span></li>
+                  </div>
+                  <div class="slide-toggle">
+                    <li> <span><b>1</b> Dedicated IP</span></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
     <section class="linux_vps_plan head-tb-p-40" id="vps-hosting">
         <div class="section-heading">
             <h2 class="text_head text-center">Powerful VPS Hosting Solutions in India For You</h2>
@@ -48,6 +251,10 @@ $class_best_seller = 'best-seller-div';
 $class_best_seller = ' ';
 }
 @endphp
+
+
+
+
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
     <div class="vps-plan-box" >
         <div class="vps_plan_price">
