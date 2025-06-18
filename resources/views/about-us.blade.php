@@ -239,6 +239,65 @@
         </div>
     </div>
 </section>
+<?php 
+$theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
+ 
+<section class="trst-tg-main head-tb-p-40">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="text_head text-center">Trusted by Industry Leaders. We Redefine Success Together</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="trst-tg-box">
+                    <div class="trst-tg-box-carousel">
+                        <div class="tsrt-tg-box-items">
+                            <img src="{{url('assets/images/Homepage/partners_acronis.webp')}}" alt="partners_acronis" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_amazonwebservice.webp')}}" alt="partners_amazonwebservice" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_cpanel.webp')}}" alt="partners_cpanel" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_cwp.webp')}}" alt="partners_cwp" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_googlegsuite.webp')}}" alt="partners_googlegsuite" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_microsoft.webp')}}" alt="partners_microsoft" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_plesk.webp')}}" alt="partners_plesk" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_softaculous.webp')}}" alt="partners_softaculous" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_webuzo.webp')}}" alt="partners_webuzo" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_icann.webp')}}" alt="partners_icann" loading="lazy">
+                       
+                            <img src="{{url('assets/images/Homepage/partners_acronis.webp')}}" alt="partners_acronis" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_amazonwebservice.webp')}}" alt="partners_amazonwebservice" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_cpanel.webp')}}" alt="partners_cpanel" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_cwp.webp')}}" alt="partners_cwp" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_googlegsuite.webp')}}" alt="partners_googlegsuite" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_microsoft.webp')}}" alt="partners_microsoft" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_plesk.webp')}}" alt="partners_plesk" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_softaculous.webp')}}" alt="partners_softaculous" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_webuzo.webp')}}" alt="partners_webuzo" loading="lazy">
+
+                            <img src="{{url('assets/images/Homepage/partners_icann.webp')}}" alt="partners_icann" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="our-achievement head-tb-p-40">
         <div class="container">
@@ -269,6 +328,8 @@
             </div>
         </div>
 </section>
+
+@include('template.'.$theme.'.testimonial_section')
 
 <section class="about-features head-tb-p-40">
     <div class="container">
@@ -425,6 +486,8 @@
         </div>
     </div>
 </section>
+
+@include('template.'.$theme.'.support_section_home')
 
 
 
