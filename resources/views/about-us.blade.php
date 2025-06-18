@@ -26,18 +26,43 @@
 
 <section class="who_we_are head-tb-p-40">
     <div class="container">
-<div class="row">
-    <div class="col-lg-6">
-        
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <div class="who_we_are_img">
+                    <img src="../assets/images/about_us/who_we_are.webp" alt="who_we_are">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2 class="text_head">Who We Are</h2>
+                    <p>We’re not just a web hosting company; we’re your friendly tech partner in the online world!
+                        Whether you are starting a blog or running an online store, we ensure that your website is fast,
+                        secure, and always up and running. </p>
+                       <p>We believe hosting should be simple, reliable, and budget-friendly, which helps you grow your
+                        online presence stress-free because every business deserves a stable web home, and we are
+                        excited to support you throughout the journey!
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-6">        <div class="section-heading">
-        <h2 class="text_head">Who We Are</h2>
-        <p>We’re not just a web hosting company; we’re your friendly tech partner in the online world! Whether you are starting a blog or running an online store, we ensure that your website is fast, secure, and always up and running.
-
-We believe hosting should be simple, reliable, and budget-friendly, which helps you grow your online presence stress-free because every business deserves a stable web home, and we are excited to support you throughout the journey!
-</p>
-        </div></div>
-</div>
+</section>
+<section class="globally_img head-tb-p-40">
+    <div class="container">
+        <div class="section-heading text-center">
+            <h2 class="text_head">Started in India, Now Present Overseas</h2>
+            <p>
+                We began in one corner of the world, but now we help businesses launch far and wide. From small startups
+                in India to large enterprises worldwide, our hosting solutions power numerous websites!
+            </p>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12">
+                <div class="globally_img_img text-center">
+                    <img src="../assets/images/about_us/map.webp" alt="map">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
