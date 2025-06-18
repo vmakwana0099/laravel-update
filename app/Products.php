@@ -574,7 +574,7 @@ class Products extends Model {
         }
         elseif(!empty($category) && ($category == 'hosting') ){
           $hostingClass = 'primary-btn-sq-bdr';
-          if($whmcsproid == 535 || $whmcsproid == 523){
+          if($whmcsproid == 535 || $whmcsproid == 523 || $whmcsproid == 527){
             $hostingClass = 'primary-btn-sq';
           }
           $returnHtml .= "<button class=' ". $hostingClass ." " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 

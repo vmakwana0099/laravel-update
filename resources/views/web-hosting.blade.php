@@ -565,7 +565,7 @@
                                             </div>
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
-                                                {!!$EnterpriseThreeYearButtonText!!}
+                                                {!!$ProfessionalThreeYearButtonText!!}
                                             </div>
                                             
                                              @if(Config::get('Constant.sys_currency') == 'INR')
