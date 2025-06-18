@@ -38,46 +38,44 @@
     @endif
     @endif
 
-    <div class="vps-plan-main-div head-tb-p-40" id="web_hosting_plan">
-        <div class="container">
+    <div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
+        <div class="container-fluid">
+            <div class="shared-plan-bx-pd">
             <div class="section-heading">
                 <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
+                <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12">
-                    <br />
                     <div class="wh-server-location-tab">
-                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button title="India" class="nav-link active" id="loc1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="changeLocation('India');">
                                     <img loading="lazy" src="../assets/images/web_hosting/india-icons.webp" alt="india-icons"> India</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button title="Canada" class="nav-link" id="loc2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="changeLocation('Canada');">
-                                    <img loading="lazy" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons" > Canada</button>
+                                    <img loading="lazy" src="../assets/images/web_hosting/canada-icons.webp" alt="canada-icons"> Canada</button>
                             </li>
-                            {{-- <li class="nav-item" role="presentation">
+                           {{--  <li class="nav-item" role="presentation">
                                 <button title="Germany" class="nav-link" id="loc3" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="changeLocation('Germany');">
-                                    <img loading="lazy" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button >
+                                    <img loading="lazy" src="../assets/images/web_hosting/germany-icons.webp" alt="germany-icons"> Germany</button>
                             </li> --}}
                         </ul>
-                        <!-- <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Start your business journey using Host IT Smart's world-class web hosting services. Even beginners can use our services easily and experience reliable performance & top-notch support.
-
-                                Perfect for Simple Business Websites
-                                Use Host IT Smart's web hosting, specially designed to empower simple business websites. Enjoy reliable performance and secured infrastructure with essential features to boost your online presence.</div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Say goodbye to unexpected price hikes and hello to predictable, budget-friendly renewal rates. By choosing our hosting plans, you can rest assured knowing that you are getting the best value for your money.
-
-                                Ideal Hosting Offering Top-Notch Support
-                                Experience Host IT Smart's unparalleled support with web hosting services. We pride ourselves on delivering top-notch support to our customers, ensuring their online journey is smooth and worry-free.</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Strengthen your brand visibility with Host IT Smart's specialized web hosting services, focused on Asian and European websites. Leverage optimized performance and support for your region.
-
-                                Unbeatable Introductory Pricing
-                                Kickstart your online business journey with Host IT Smart's unbeatable web hosting introductory pricing. Don't rush for long-term commitments when you can experience exceptional value and performance at a discounted price. Give it a try today.</div>
-                        </div> -->
+                        <script type="text/javascript">
+                            function changeLocation(locstr) {
+                                if(locstr == "Canada" || locstr == "Germany"){
+                                    $('.feature-litespeed').hide();
+                                }else{
+                                    $('.feature-litespeed').show();                            
+                                }
+                                // console.log("locstr"+ locstr);
+                                $('input[id^="location"]').each(function(i, ele) {
+                                    $(this).val(locstr);
+                                });
+                            }
+                        </script>
                     </div>
-                   
-                    
                 </div>
                 <script type="text/javascript">
                     function changeLocation(locstr) {
@@ -194,674 +192,693 @@
                 }
 
                 @endphp
-                <div class="tab-content {{$mainclassssl}}">
-           
-            <!--This Code for Three Year-->
-            <div id="vps-plan3" class="tab-pane active show">
-                <div class="plan-main-div">
+                
                     <div class="row {{ $plan_row}}">
-                        {{-- basic --}}
-                        <div class="{{$box_plan_class}}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
-                            <div class="shared-plan-box">
-                                <div class="shared_plan_price">
-                                    <div class="shared-plan-head">{{$ProductsPackageData[0]->varTitle}}
-                                        {{-- <div class="plan-icon-right"></div> --}}
-                                    </div>
-                                    <div class="shared-plan-cut-price">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[0]->varTitle}}
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                {{-- <span class="cut-price">₹840.00</span> --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
+                                                    @endif
+                                                @else
+                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearUSD))
+                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}</span>
+                                                    @endif
+                                                @endif
+                                                
 
-                                        @if(Config::get('Constant.sys_currency') == 'INR')
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[0]->varAdditionalOffer));
+                                                @endphp
 
-                                        @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearINR))
-                                        <span class="shared-cut-price" id="BasicThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
-                                        @endif
-                                        @else
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
 
-                                        @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearUSD))
-                                        <span class="shared-cut-price" id="BasicThreeYearUSD">{{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}</span>
-                                        @endif
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span class="cut-prc-disc">{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span class="cut-prc-disc">({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
+                                            </div>
+                                            <div class="shared-main-price">
+                                                {{-- ₹<span>420.00</span>/mo* --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
+                                                @else
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
+                                                @endif
+                                                
+                                            </div>
+                                            <div class="shared-plan-fr-mnth invisible">
+                                                +0 month free
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$BasicThreeYearButtonText!!}
+                                            </div>
 
-                                        @endif
-                                        @php
-                                        $blackfridayOffArr = (explode(",",$ProductsPackageData[0]->varAdditionalOffer));
-                                        @endphp
-
-
-                                        <span class="shared-offer-discount" id="BasicThreeYearOffer">
-                                            @if (count($blackfridayOffArr) > 1)
-                                            {{$blackfridayOffArr[4]}}% OFF
+                                            @if(Config::get('Constant.sys_currency') == 'INR')
+                                                @if(isset($ProductsPackageData[0]->intOldPriceThreeYearINR))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
                                             @else
-                                            ({{$ProductsPackageData[4]->varAdditionalOffer}})
+                                                @if(isset($ProductsPackageData[0]->intOldPriceThreeYearUSD))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
                                             @endif
 
-
-                                        </span>
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
+                                                @foreach($SpecificationData as $Specification)
+                                                    @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain')
+                                                        <div class="slide-toggle">                                         
+                                                            <li class="cross-icon-li"> <span> {{$Specification}}</span></li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>10,000</b> visits monthly
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports node.js')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports python')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '10 databases')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>10</b> Databases
+                                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance.</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'host 1 website')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                Host <b>1</b> Website
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '10 gb nvme ssd')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>10 GB</b> NVMe SSD
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '5 subdomains')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>5</b> subdomains
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '5 ftp users')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>5</b> FTP users
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '5 email accounts')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>5 Email</b> Accounts
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '10,000 gb bandwidth')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>10,000 GB</b> Bandwidth
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '2,00,000 inodes')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>2,00,000</b> INODES
+                                                            </li>   
+                                                        </div>
+                                                    @else
+                                                        <div class="slide-toggle"><li> <span> {{$Specification}}</span></li></div>
+                                                    @endif
+                                                @endforeach                                                
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="shared-price-padding">
-                                    <div class="shared-main-price clearfix">
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-most-popular-cnt">
+                                            MOST POPULAR
+                                        </div>
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[1]->varTitle}}
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                {{-- <span class="cut-price">₹980.00</span> --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[1]->intOldPriceThreeYearINR}}</span>
+                                                    @endif
+                                                @else
+                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearUSD))
+                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearUSD}}</span>
+                                                    @endif
+                                                @endif
 
-                                        @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[1]->varAdditionalOffer));
+                                                @endphp
 
-                                        <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsINR">
-                                            <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
-                                        </span>
-                                        @php } else { @endphp
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
 
-                                        <span class="shared-main-price-tittle" id="StarterThreeYearWhmcsUSD">
-                                            <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
-                                        </span>
-                                        @php } @endphp
-                                    </div>
-                                    {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
-                                    <div class="shared-plan-btm" id="StarterThreeYearButtonText">
-                                        {!!$BasicThreeYearButtonText!!}
-                                    </div>
-                                    @php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); @endphp
-                                    <ul class="shared-plan-features shared-plan-tooltip">
-                                        @foreach($SpecificationData as $Specification)
-                                        <div class="slide-toggle">
-                                            @if($ProductsPackageData[0]->varTitle == 'BASIC' && strtolower(trim($Specification)) == 'free domain')
-                                            <li class="cross_free_domain"><span>{{$Specification}}</span></li>
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span class="cut-prc-disc">{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span class="cut-prc-disc">({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
+
+                                            </div>
+                                            <div class="shared-main-price">
+                                                {{-- ₹<span>880.00</span>/mo* --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}</span>/mo*
+                                                @else
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_USD') }}</span>/mo*
+                                                @endif
+                                                
+                                            </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a> --}}
+                                                {!!$EssentialThreeYearButtonText!!}
+
+                                            </div>
                                             
-                                            @elseif(strtolower(trim($Specification)) == 'free ssl' || strtolower(trim($Specification)) == 'free ssl certificate')
-                                            <li>
-                                                <div class="free_domain">{{$Specification}}
-                                                    <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            @elseif(strtolower(trim($Specification)) == 'plesk')
-                                            <li>
-                                                <div class="free_domain">{{$Specification}}
-                                                    <span class="domain_tooltip">Our basic web hosting package includes a Plesk panel for managing your websites, domains, emails, and more.
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            @elseif(strtolower(trim($Specification)) == "2 mysql db's")
-                                            <li>
-                                                <div class="free_domain free_domain_black">{{$Specification}}
-                                                    <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                        @if($ProductBanner->id == 2)
-                                                        <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                        @endif
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            @elseif(strtolower(trim($Specification)) == "1 mssql/mysql space")
-                                                <li>
-                                                    <div class="free_domain_black free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                            @if($ProductBanner->id == 2)
-                                                            <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                            @endif
-                                                        </span>
+                                             @if(Config::get('Constant.sys_currency') == 'INR')
+                                                @if(isset($ProductsPackageData[1]->intOldPriceThreeYearINR))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
                                                     </div>
-                                                </li>
-                                             @elseif(strtolower(trim($Specification)) == "supports node.js")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">21.7.3 & 20.15.0
-                                                            </span>
-
-                                                    </div>
-                                                </li>
-
-                                            @elseif(strtolower(trim($Specification)) == "10 databases")
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                            @elseif(strtolower(trim($Specification)) == '10,000 visits monthly')
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "supports python")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-                                                   
-                                                </span>
-                                            </div>
-                                        </li>
-
+                                                @endif
                                             @else
-                                            <li><span>{{$Specification}}</span></li>
+                                                @if(isset($ProductsPackageData[1]->intOldPriceThreeYearUSD))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
+                                            @endif
+                                            
+                                        </div>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                @php $SpecificationData = explode("\n",$ProductsPackageData[1]->txtSpecification); @endphp
+                                                @foreach($SpecificationData as $Specification)                              
+                                                    @if(strtolower(trim($Specification)) == '25,000 visits monthly')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>25,000</b> visits monthly
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports node.js')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'free domain')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports python')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '50 databases')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>50</b> Databases
+                                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance.</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'host 5 websites')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                Host <b>5</b> Websites
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '25 gb nvme ssd')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>25 GB</b> NVMe SSD
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited subdomains')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> subdomains
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited ftp users')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> FTP users
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '25 email accounts')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>25 Email</b> Accounts
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '25,000 gb bandwidth')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>25,000 GB</b> Bandwidth
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '4,00,000 inodes')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>4,00,000</b> INODES
+                                                            </li>   
+                                                        </div>
+                                                    @else
+                                                        <div class="slide-toggle"><li> <span> {{$Specification}}</span></li></div>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[2]->varTitle}}
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                {{-- <span class="cut-price">₹1280.00</span> --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeYearINR}}</span>
+                                                    @endif
+                                                @else
+                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearUSD))
+                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearUSD}}</span>
+                                                    @endif
+                                                @endif
+
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[2]->varAdditionalOffer));
+                                                @endphp
+
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span class="cut-prc-disc">{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span class="cut-prc-disc">({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
+                                            </div>
+                                            <div class="shared-main-price">
+                                                {{-- ₹<span>1820.00</span>/mo* --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}</span>/mo*
+                                                @else
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_USD') }}</span>/mo*
+                                                @endif
+                                                
+                                            </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$ProfessionalThreeYearButtonText!!}
+                                            </div>
+                                            
+                                             @if(Config::get('Constant.sys_currency') == 'INR')
+                                                @if(isset($ProductsPackageData[2]->intOldPriceThreeYearINR))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
+                                            @else
+                                                @if(isset($ProductsPackageData[2]->intOldPriceThreeYearUSD))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
                                             @endif
                                         </div>
-                                        @endforeach
-                                    </ul>
-
-
-                                    <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
-
-                                    @php $AdditionalNote = explode("\n",$ProductsPackageData[0]->txtShortDescription); @endphp
-                                    <div class="plan-text-slider">
-                                        <div class="owl-carousel owl-theme">
-                                            @foreach($AdditionalNote as $Additional)
-                                            <div class="item">
-                                                <span class="plan-ssl">
-                                                    {{$Additional}}
-                                                </span>
-                                            </div>
-                                            @endforeach
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                @php $SpecificationData = explode("\n",$ProductsPackageData[2]->txtSpecification); @endphp
+                                                @foreach($SpecificationData as $Specification)                              
+                                                    @if(strtolower(trim($Specification)) == '50,000 visits monthly')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>50,000</b> visits monthly
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports node.js')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'free domain')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports python')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '250 databases')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>250</b> Databases
+                                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance.</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'host 25 websites')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                Host <b>25</b> Websites
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '50 gb nvme ssd')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>50 GB</b> NVMe SSD
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited subdomains')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> subdomains
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited ftp users')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> FTP users
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '60 email accounts')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>60 Email</b> Accounts
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '1,00,000 gb bandwidth')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>1,00,000 GB</b> Bandwidth
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '6,00,000 inodes')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>6,00,000</b> INODES
+                                                            </li>   
+                                                        </div>
+                                                    @else
+                                                        <div class="slide-toggle"><li> <span> {{$Specification}}</span></li></div>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
                                     </div>
-                                    @php if($ProductBanner->id == '7') { @endphp
-                                    <div class="v-f_link">
-                                        <a onclick="VPSFeatures('StarterOneMonthFeatures')" href="javascript:;" data-scroll-to="#StarterOneMonthFeatures">View Features <i class="fa fa-angle-down bounce"></i></a>
-                                    </div>
-                                    @php } @endphp
                                 </div>
-                            </div>
-                        </div>
-                        @php
-                        $class = ''; $class1 = '';
-                        if($ProductsPackageData[2]->chrDisplayontop == 'Y'){
-                        $class = 'recommanded-main';
-                        $class1 = 'recommanded-main-icon';
-                        } @endphp
-                        {{-- Essi --}}
-                        <div class="{{$box_plan_class}}">
-                            @php $class = ''; $class1 = '';
-                            if($ProductsPackageData[1]->chrDisplayontop == 'Y'){
-                            $class = 'recommanded-main';
-                            $class1 = 'recommanded-main-icon';
-                            } @endphp
-                            <div class="shared-plan-box {{$class}} vps-plan-recommanded-main">
-                                <div class="shared_plan_price">
-                                    <div class="shared-plan-head">{{$ProductsPackageData[1]->varTitle}}
-                                        {{-- <div class="plan-icon-right"></div> --}}
-                                        <div class="{{$class1}}"></div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                    <div class="shared-pln-box">
+                                        <div class="shared-plan-price">
+                                            <div class="shared-plan-nm">
+                                                {{-- VPS - SM 1 --}}
+                                                {{$ProductsPackageData[3]->varTitle}}
+                                            </div>
+                                            <div class="shared-plan-cut-prc">
+                                                {{-- <span class="cut-price">₹1880.00</span> --}}
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[3]->intOldPriceThreeYearINR}}</span>
+                                                    @endif
+                                                @else
+                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearUSD))
+                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        {{$ProductsPackageData[3]->intOldPriceThreeYearUSD}}</span>
+                                                    @endif
+                                                @endif
 
-                                    </div>
-                                    <div class="shared-plan-cut-price">
+                                                @php
+                                                $blackfridayOffArr = (explode(",",$ProductsPackageData[3]->varAdditionalOffer));
+                                                @endphp
 
-                                        @if(Config::get('Constant.sys_currency') == 'INR')
+                                                {{-- <span class="cut-prc-disc">Save 50%</span> --}}
 
-                                        @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearINR))
-                                        <span class="shared-cut-price" id="PerformThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[1]->intOldPriceThreeYearINR}}</span>
-                                        @endif
-                                        @else
+                                                @if (count($blackfridayOffArr) > 1)
+                                                    <span class="cut-prc-disc">{{$blackfridayOffArr[4]}}% OFF</span>
+                                                @else
+                                                    <span class="cut-prc-disc">({{$ProductsPackageData[4]->varAdditionalOffer}})</span>
+                                                @endif
+                                            </div> 
+                                            <div class="shared-main-price">
+                                                {{-- ₹<span>1480.00</span>/mo* --}}
+                                                
+                                                @if(Config::get('Constant.sys_currency') == 'INR')
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
+                                                @else
+                                                    {!! Config::get('Constant.sys_currency_symbol') !!}<span>
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
+                                                @endif
+                                            </div>
+                                            <div class="shared-plan-fr-mnth">
+                                                +3 month free
+                                            </div>
+                                            <div class="shared-plan-btn">
+                                                {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                                                {!!$EnterpriseThreeYearButtonText!!}
 
-                                        @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearINR))
-                                        <span class="shared-cut-price" id="PerformThreeYearUSD">{{$ProductsPackageData[1]->intOldPriceThreeYearUSD}}</span>
-                                        @endif
-                                        @endif
-
-                                        @php
-                                        $blackfridayOffArr = (explode(",",$ProductsPackageData[1]->varAdditionalOffer));
-                                        @endphp
-
-
-                                        <span class="shared-offer-discount" id="EssentialThreeYearOffer">
-                                            @if (count($blackfridayOffArr) > 1)
-                                            {{$blackfridayOffArr[4]}}% OFF
+                                            </div>
+                                            
+                                             @if(Config::get('Constant.sys_currency') == 'INR')
+                                                @if(isset($ProductsPackageData[3]->intOldPriceThreeYearINR))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[3]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
                                             @else
-                                            ({{$ProductsPackageData[4]->varAdditionalOffer}})
+                                                @if(isset($ProductsPackageData[3]->intOldPriceThreeYearUSD))
+                                                    <div class="shared-plan-renew">                                                
+                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
+                                                        {{$ProductsPackageData[3]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
+                                                    </div>
+                                                @endif
                                             @endif
-
-
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="shared-price-padding">
-                                    <div class="shared-main-price clearfix">
-
-                                        @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
-
-                                        <span class="shared-main-price-tittle" id="PerformThreeYearWhmcsINR">
-                                            <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}</span>/mo*
-                                        </span>
-                                        @php } else { @endphp
-
-                                        <span class="shared-main-price-tittle" id="PerformThreeYearWhmcsUSD">
-                                            <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_USD') }}</span>/mo*
-                                        </span>
-                                        @php } @endphp
-
-
-                                    </div>
-                                    {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
-                                    <div class="shared-plan-btm" id="PerformanceThreeYearButtonText">
-                                        {!!$EssentialThreeYearButtonText!!}
-                                    </div>
-                                    @php $SpecificationData = explode("\n",$ProductsPackageData[1]->txtSpecification); @endphp
-                                    <ul class="shared-plan-features shared-plan-tooltip">
-                                        @foreach($SpecificationData as $Specification)
-                                        <div class="slide-toggle">
-                                           
-                                            @if(strtolower(trim($Specification)) == 'free domain')
-                                                        <li> <div class="free_domain">{{$Specification}}
-                                            <span class="domain_tooltip">
-                                                Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.
-                                                <span class="price_domain">Your Domain Renewal Charges:<br>{!! Config::get('Constant.sys_currency_symbol') !!} {!! Config::get('Constant.MEGAMENU_RENEW_PRICE_INR') !!}/Yr*
-                                                </span>
-                                            </span>
                                         </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == 'free ssl certificate' || strtolower(trim($Specification)) == 'free ssl')
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == "10 mysql db's")
-                                        <li>
-                                            <div class="free_domain free_domain_black">{{$Specification}}
-                                                <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == "10 mssql/mysql space")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                    @if($ProductBanner->id == 2)
-                                                    <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
+                                        <div class="shared-plan-cnt">
+                                            <ul>
+                                                @php $SpecificationData = explode("\n",$ProductsPackageData[3]->txtSpecification); @endphp
+                                                @foreach($SpecificationData as $Specification)                              
+                                                    @if(strtolower(trim($Specification)) == '1,00,000 visits monthly')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>1,00,000</b> visits monthly
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance. </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports node.js')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'free domain')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    </span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'supports python')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    {{$Specification}}
+                                                                    <span class="domain-tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '500 databases')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>
+                                                                <div class="free-domain">
+                                                                    <b>500</b> Databases
+                                                                    <span class="domain-tooltip">You will be provided with Mariadb 10.x Version for faster performance.</span>
+                                                                </div>
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'host 50 websites')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                Host <b>50</b> Websites
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '100 gb nvme ssd')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>100 GB</b> NVMe SSD
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited subdomains')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> subdomains
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == 'unlimited ftp users')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>Unlimited</b> FTP users
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '100 email accounts')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>100 Email</b> Accounts
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '2,00,000 gb bandwidth')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>2,00,000 GB</b> Bandwidth
+                                                            </li>   
+                                                        </div>
+                                                    @elseif(strtolower(trim($Specification)) == '8,00,000 inodes')
+                                                        <div class="slide-toggle">                                         
+                                                            <li>                                                                
+                                                                <b>8,00,000</b> INODES
+                                                            </li>   
+                                                        </div>
+                                                    @else
+                                                        <div class="slide-toggle"><li> <span> {{$Specification}}</span></li></div>
                                                     @endif
-                                                </span>
-                                            </div>
-                                        </li>
-                                         @elseif(strtolower(trim($Specification)) == "supports node.js")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "50 databases")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == '25,000 visits monthly')
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "supports python")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-                                                   
-                                                </span>
-                                            </div>
-                                        </li>
-                                        
-                                        
-                                        @elseif(strtolower(trim($Specification)) == "litespeed")
-                                        <li class="feature-litespeed"><span>{{$Specification}}</span></li>
-                                        @else
-                                        <li><span>{{$Specification}}</span></li>
-                                        @endif
-                                </div>
-                                @endforeach
-                                </ul>
-
-
-                                <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
-
-                                @php $AdditionalNote = explode("\n",$ProductsPackageData[1]->txtShortDescription); @endphp
-                                <div class="plan-text-slider">
-                                    <div class="owl-carousel owl-theme">
-                                        @foreach($AdditionalNote as $Additional)
-                                        <div class="item">
-                                            <span class="plan-ssl">
-                                                {{$Additional}}
-                                            </span>
+                                                @endforeach
+                                            </ul>
+                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
                                         </div>
-                                        @endforeach
                                     </div>
                                 </div>
-                                @php if($ProductBanner->id == '7') { @endphp
-                                <div class="v-f_link">
-                                    <a onclick="VPSFeatures('PerformanceOneMonthFeatures')" href="javascript:;" data-scroll-to="#PerformanceOneMonthFeatures">View Features <i class="fa fa-angle-down bounce"></i></a>
                                 </div>
-                                @php } @endphp
-                            </div>
-                        </div>
-                    </div>
-                    {{-- prof --}}
-                    <div class="{{$box_plan_class}}">
-                        @php $class = ''; $class1 = '';
-                        if($ProductsPackageData[2]->chrDisplayontop == 'Y'){
-                        $class = 'recommanded-main';
-                        $class1 = 'recommanded-main-icon';
-                        } @endphp
-                        <div class="shared-plan-box {{$class}} vps-plan-recommanded-main">
-                            <div class="shared_plan_price">
 
-                                <div class="shared-plan-head">{{$ProductsPackageData[2]->varTitle}}</div>
-                                <div class="{{$class1}}"></div>
-                                <div class="shared-plan-cut-price">
-
-                                    @if(Config::get('Constant.sys_currency') == 'INR')
-
-                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearINR))
-                                    <span class="shared-cut-price" id="BusinessThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeYearINR}}</span>
-                                    @endif
-                                    @else
-
-                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearINR))
-                                    <span class="shared-cut-price" id="BusinessThreeYearUSD">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeYearUSD}}</span>
-                                    @endif
-                                    @endif
-
-                                    @php
-                                    $blackfridayOffArr = (explode(",",$ProductsPackageData[2]->varAdditionalOffer));
-                                    @endphp
-
-
-                                    <span class="shared-offer-discount" id="ProfessionalThreeYearOffer">
-                                        @if (count($blackfridayOffArr) > 1)
-                                        {{$blackfridayOffArr[4]}}% OFF
-                                        @else
-                                        ({{$ProductsPackageData[4]->varAdditionalOffer}})
-                                        @endif
-
-
-                                    </span>
-                                </div>
-                                {{-- <div class="plan-icon-right"></div> --}}
-
-                            </div>
-                            <div class="shared-price-padding">
-                                <div class="shared-main-price clearfix">
-                                    @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
-
-                                    <span class="shared-main-price-tittle" id="BusinessThreeYearWhmcsINR">
-                                        <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}</span>/mo*
-                                    </span>
-                                    @php } else { @endphp
-
-                                    <span class="shared-main-price-tittle" id="BusinessThreeYearWhmcsUSD">
-                                        <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_USD') }}</span>/mo*
-                                    </span>
-                                    @php } @endphp
-
-
-                                </div>
-                                {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
-                                <div class="shared-plan-btm" id="BusinessThreeYearButtonText">
-                                    {!!$ProfessionalThreeYearButtonText!!}
-                                </div>
-                                @php $SpecificationData = explode("\n",$ProductsPackageData[2]->txtSpecification); @endphp
-                                <ul class="shared-plan-features shared-plan-tooltip">
-                                    @foreach($SpecificationData as $Specification)
-                                    <div class="slide-toggle">
-                                        @if(strtolower(trim($Specification)) == 'free domain')
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">
-                                                    Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.
-                                                    <span class="price_domain">Your Domain Renewal Charges:<br>{!! Config::get('Constant.sys_currency_symbol') !!} {!! Config::get('Constant.MEGAMENU_RENEW_PRICE_INR') !!}/Yr*
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == 'free ssl certificate' || strtolower(trim($Specification)) == 'free ssl')
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == "20 mysql db's")
-                                        <li>
-                                            <div class="free_domain free_domain_black">{{$Specification}}
-                                                <span class="domain_tooltip">Get the benefit of the latest MySQL 8.x.x Version for higher efficiency.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == "20 mssql/mysql space")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                    @if($ProductBanner->id == 2)
-                                                    <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                    @endif
-                                                </span>
-                                            </div>
-                                        </li>
-                                         @elseif(strtolower(trim($Specification)) == "supports node.js")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "250 databases")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == '50,000 visits monthly')
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "supports python")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-                                                   
-                                                </span>
-                                            </div>
-                                        </li>
-                                       
-                                        
-                                        @elseif(strtolower(trim($Specification)) == "litespeed")
-                                        <li class="feature-litespeed"><span>{{$Specification}}</span></li>
-                                        @else
-                                        <li><span>{{$Specification}}</span></li>
-                                        @endif
-                                    </div>
-                                    @endforeach
-                                </ul>
-
-
-                                <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
-
-                                @php $AdditionalNote = explode("\n",$ProductsPackageData[2]->txtShortDescription); @endphp
-                                <div class="plan-text-slider">
-                                    <div class="owl-carousel owl-theme">
-                                        @foreach($AdditionalNote as $Additional)
-                                        <div class="item">
-                                            <span class="plan-ssl">
-                                                {{$Additional}}
-                                            </span>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                @php if($ProductBanner->id == '7') { @endphp
-                                <div class="v-f_link">
-                                    <a onclick="VPSFeatures('BusinessOneMonthFeatures')" href="javascript:;" data-scroll-to="#BusinessOneMonthFeatures">View Features <i class="fa fa-angle-down bounce bounce"></i></a>
-                                </div>
-                                @php } @endphp
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ente --}}
-                    <div class="{{$box_plan_class}}">
-                        <div class="shared-plan-box">
-                            <div class="shared_plan_price">
-                                <div class="shared-plan-head">{{$ProductsPackageData[3]->varTitle}}
-                                    {{-- <div class="plan-icon-right"></div> --}}
-                                </div>
-                                <div class="shared-plan-cut-price">
-
-                                    @if(Config::get('Constant.sys_currency') == 'INR')
-
-                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearINR))
-                                    <span class="shared-cut-price" id="EnterpriseThreeYearINR">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[3]->intOldPriceThreeYearINR}}</span>
-                                    @endif
-                                    @else
-
-                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearINR))
-                                    <span class="shared-cut-price" id="EnterpriseThreeYearUSD">{{$ProductsPackageData[3]->intOldPriceThreeYearUSD}}</span>
-                                    @endif
-
-                                    @endif
-                                    @php
-                                    $blackfridayOffArr = (explode(",",$ProductsPackageData[3]->varAdditionalOffer));
-                                    @endphp
-
-
-                                    <span class="shared-offer-discount" id="EnterpriseThreeYearOffer">
-                                        @if (count($blackfridayOffArr) > 1)
-                                        {{$blackfridayOffArr[4]}}% OFF
-                                        @else
-                                        ({{$ProductsPackageData[4]->varAdditionalOffer}})
-                                        @endif
-
-
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="shared-price-padding">
-                                <div class="shared-main-price clearfix">
-
-                                    @php if(Config::get('Constant.sys_currency') == 'INR'){ @endphp
-
-                                    <span class="shared-main-price-tittle" id="EnterpriseThreeYearWhmcsINR">
-                                        <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
-                                    </span>
-                                    @php } else { @endphp
-
-                                    <span class="shared-main-price-tittle" id="EnterpriseThreeYearWhmcsUSD">
-                                        <span class="shared-price-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span><span class="shared-price-main">{{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
-                                    </span>
-                                    @php } @endphp
-                                </div>
-                                {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
-                                <div class="shared-plan-btm" id="EnterpriseThreeYearButtonText">
-                                    {!!$EnterpriseThreeYearButtonText!!}
-                                </div>
-                                @php $SpecificationData = explode("\n",$ProductsPackageData[3]->txtSpecification); @endphp
-                                <ul class="shared-plan-features shared-plan-tooltip">
-                                    @foreach($SpecificationData as $Specification)
-                                    <div class="slide-toggle">
-                                        @if(strtolower(trim($Specification)) == 'free domain')
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">
-                                                    Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.
-                                                    <span class="price_domain">Your Domain Renewal Charges:<br>{!! Config::get('Constant.sys_currency_symbol') !!} {!! Config::get('Constant.MEGAMENU_RENEW_PRICE_INR') !!}/Yr*
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == 'free ssl certificate' || strtolower(trim($Specification)) == 'free ssl')
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">Don’t Compromise with your website’s security! Keep your website protected with a Let’s Encrypt SSL Shield to gain search engine & users' trust & protect your site’s sensitive information.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        @elseif(strtolower(trim($Specification)) == "unlimited mysql db's" || strtolower(trim($Specification)) =="20 mysql db's")
-                                        <li>
-                                            <div class="free_domain free_domain_black">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                    @if($ProductBanner->id == 2)
-                                                    <span class="price_domain">Note: Per SQL Databases Size Limit = 1GB</span>
-                                                    @endif
-                                                </span>
-                                            </div>
-                                        </li>
-                                         @elseif(strtolower(trim($Specification)) == "supports node.js")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">12.x, 14.x, 16.x, 18.x, 19.x, 20.x, 22.x
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "500 databases")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">You will be provided with Mariadb 10.x Version for faster performance.
-                                                </span>
-                                            </div>
-                                        </li>
-
-                                        @elseif(strtolower(trim($Specification)) == '1,00,000 visits monthly')
-                                                <li>
-                                                    <div class="free_domain">{{$Specification}}
-                                                        <span class="domain_tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                        @elseif(strtolower(trim($Specification)) == "supports python")
-                                        <li>
-                                            <div class="free_domain">{{$Specification}}
-                                                <span class="domain_tooltip">3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-                                                   
-                                                </span>
-                                            </div>
-                                        </li>
-                                       
-                                        
-                                        @elseif(strtolower(trim($Specification)) == "litespeed")
-                                        <li class="feature-litespeed"><span>{{$Specification}}</span></li>
-                                        @else
-                                        <li><span>{{$Specification}}</span></li>
-                                        @endif
-                                    </div>
-                                    @endforeach
-                                </ul>
-
-
-                                <a href="" title="See More Features" class="shared_plan_more_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
-
-                                @php $AdditionalNote = explode("\n",$ProductsPackageData[3]->txtShortDescription); @endphp
-                                <div class="plan-text-slider">
-                                    <div class="owl-carousel owl-theme">
-                                        @foreach($AdditionalNote as $Additional)
-                                        <div class="item">
-                                            <span class="plan-ssl">
-                                                {{$Additional}}
-                                            </span>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                @php if($ProductBanner->id == '7') { @endphp
-                                <div class="v-f_link">
-                                    <a onclick="VPSFeatures('BusinessOneMonthFeatures')" href="javascript:;" data-scroll-to="#BusinessOneMonthFeatures">View Features <i class="fa fa-angle-down bounce"></i></a>
-                                </div>
-                                @php } @endphp
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+                
     </div>
 </div>
 </div>

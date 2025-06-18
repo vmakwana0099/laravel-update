@@ -42,14 +42,14 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 }
 
                 @endphp
-<div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
+<div class="web-pln-box head-tb-p-40" id="pricing">
         <div class="container-fluid">
             <div class="shared-plan-bx-pd">
                 <div class="section-heading">
                     <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
                     <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
                 </div>  
-                
+
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="wh-server-location-tab">
@@ -121,10 +121,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 {{-- ₹<span>420.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BASIC_PRICE_36_INR) }}</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BASIC_PRICE_36_USD) }}</span>/mo*
                                                 @endif
                                                 
                                             </div>
@@ -292,10 +292,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 {{-- ₹<span>880.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_ESSENTIAL_PRICE_36_INR) }}</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_USD') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_ESSENTIAL_PRICE_36_USD) }}</span>/mo*
                                                 @endif
                                                 
                                             </div>
@@ -466,10 +466,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 {{-- ₹<span>1820.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PROFESSIONAL_PRICE_36_INR) }}</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_USD') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PROFESSIONAL_PRICE_36_USD) }}</span>/mo*
                                                 @endif
                                                 
                                             </div>
@@ -638,10 +638,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                 
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
                                                 @endif
                                             </div>
                                             <div class="shared-plan-fr-mnth">

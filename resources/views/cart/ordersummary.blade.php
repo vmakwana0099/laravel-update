@@ -460,8 +460,14 @@
                             @php 
                             // dd($item['pid']);
                                 $google_apps_product_id = array(117,116,206,534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529);
+                                $free_three_months_offer_products = array(523,524,525,527,528,529,531,532,533,535,536,537);                                
                             @endphp
                                @if($item['producttype'] == 'vps' || (in_array($item['pid'], $google_apps_product_id)))
+                                    @if($item['billingcycle'] == 'triennially' && in_array($item['pid'],$free_three_months_offer_products))
+                                        @php 
+                                            $newDate->modify('+3 month');
+                                        @endphp
+                                    @endif
                                 {{ round($renewalPrice, 2) }}/mo on {{ $newDate->format('d-m-Y') }}
                                 @else
                                 {{ round($renewalPrice, 2) }}/mo
