@@ -512,7 +512,7 @@ span.cut-prc-disc {
     color: #3838ff;
     display: inline-block;
 }
-.shared-plan-btn a {
+.shared-plan-btn button {
     text-align: center;
     width: 100%;
 }

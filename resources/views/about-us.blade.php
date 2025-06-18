@@ -24,6 +24,23 @@
 
 </div>
 
+<section class="who_we_are head-tb-p-40">
+    <div class="container">
+<div class="row">
+    <div class="col-lg-6">
+        
+    </div>
+    <div class="col-lg-6">        <div class="section-heading">
+        <h2 class="text_head">Who We Are</h2>
+        <p>We’re not just a web hosting company; we’re your friendly tech partner in the online world! Whether you are starting a blog or running an online store, we ensure that your website is fast, secure, and always up and running.
+
+We believe hosting should be simple, reliable, and budget-friendly, which helps you grow your online presence stress-free because every business deserves a stable web home, and we are excited to support you throughout the journey!
+</p>
+        </div></div>
+</div>
+    </div>
+</section>
+
 <div class="about-main-div">
 
     <div class="container">
