@@ -573,7 +573,11 @@ class Products extends Model {
             }
         }
         elseif(!empty($category) && ($category == 'hosting') ){
-          $returnHtml .= "<button class='primary-btn-sq " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 
+          $hostingClass = 'primary-btn-sq-bdr';
+          if($whmcsproid == 535 || $whmcsproid == 523){
+            $hostingClass = 'primary-btn-sq';
+          }
+          $returnHtml .= "<button class=' ". $hostingClass ." " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 
           // <button class='shared-hstg-plan-btn " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>
         }
         elseif(Request::segment(2) == 'dedicated-servers'){
