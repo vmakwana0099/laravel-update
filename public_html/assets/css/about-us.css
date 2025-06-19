@@ -1,3 +1,37 @@
+.about-us-banner-main {
+    background: #3838ff;
+    position: relative;
+}
+.about-us-banner-main:after {
+    position: absolute;
+    background-image: url(/assets/images/about_us/bnnr_ptrn.webp);
+    top: 0;
+    right: 0;
+    width: 100%;
+    content: "";
+    z-index: 1111;
+    height: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.about-us-banner-tittle {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+}
+.about-us-banner-txt {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.about-us-banner-img img {
+    width: 500px;
+    text-align: end;
+}
+
+
 .value-do-offr-ul span {
     margin-right: 10px;
 }
@@ -228,6 +262,7 @@
 .tsrt-box-4 {
   background-color: #f2f3ff;
 }
+
 
 
 
