@@ -97,7 +97,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 {{-- ₹<span>420.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BASIC_PRICE_36_INR) }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BASIC_PRICE_36_INR) }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BASIC_PRICE_36_USD) }}</span>/mo*
@@ -268,7 +268,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 {{-- ₹<span>880.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_ESSENTIAL_PRICE_36_INR) }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_ESSENTIAL_PRICE_36_INR) }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_ESSENTIAL_PRICE_36_USD) }}</span>/mo*
@@ -442,7 +442,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 {{-- ₹<span>1820.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PROFESSIONAL_PRICE_36_INR) }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PROFESSIONAL_PRICE_36_INR) }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PROFESSIONAL_PRICE_36_USD) }}</span>/mo*
@@ -614,7 +614,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_INR') }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_USD') }}</span>/mo*

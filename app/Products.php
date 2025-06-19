@@ -563,8 +563,12 @@ class Products extends Model {
                 // $returnHtml .= "<button class='free-button' id ='".$button_id."' title='Buy Now'>Get 7 Days free</button>";
                 $returnHtml .= "<button class='free-button' id ='".$button_id."' title='".$buttonText."'>Configure</button>";
             }elseif(in_array($whmcsproid, [465, 466, 463, 464, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478,509,510,511,508,516,518,519,520])){
-
-                $returnHtml .= "<button class='vps_managed_btn' id ='".$button_id."' title='Add to Cart'>Add to Cart</button>";
+                $newVPSClass = 'primary-btn-sq-bdr';
+                if($whmcsproid == 509 || $whmcsproid == 518){
+                    $newVPSClass = 'primary-btn-sq';
+                }
+                // $returnHtml .= "<button class='vps_managed_btn' id ='".$button_id."' title='Add to Cart'>Add to Cart</button>";
+                $returnHtml .= "<button class='".$newVPSClass."' id ='".$button_id."' title='Add to Cart'>Choose Plan</button>";
             }
 
             else{
@@ -574,7 +578,7 @@ class Products extends Model {
         }
         elseif(!empty($category) && ($category == 'hosting') ){
           $hostingClass = 'primary-btn-sq-bdr';
-          if($whmcsproid == 535 || $whmcsproid == 523 || $whmcsproid == 527){
+          if($whmcsproid == 535 || $whmcsproid == 523 || $whmcsproid == 527 || $whmcsproid == 531){
             $hostingClass = 'primary-btn-sq';
           }
           $returnHtml .= "<button class=' ". $hostingClass ." " . $vpsclass . "' title='".$buttonText."'>".$buttonText."</button>"; 

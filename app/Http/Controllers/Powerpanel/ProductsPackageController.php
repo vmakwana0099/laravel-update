@@ -307,6 +307,8 @@ class ProductsPackageController extends PowerpanelController {
         $ProductName = '';
         $selCategory = ProductCategory::getCategoriesData($value->fkProductCategories);
 
+        // echo "<pre>"; print_r($selCategory->varTitle); exit;
+
         $Product = Products::getProductData($value->fkProduct);
         $ProductName = $Product->varTitle;
         $category .= $selCategory->varTitle;

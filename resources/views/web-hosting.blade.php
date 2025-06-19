@@ -212,7 +212,7 @@
                                                 {{-- ₹<span>420.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_INR') }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.'WEB_HOSTING_BASIC_PRICE_36_USD') }}</span>/mo*
@@ -381,7 +381,7 @@
                                                 {{-- ₹<span>880.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_INR') }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.'WEB_HOSTING_ESSENTIAL_PRICE_36_USD') }}</span>/mo*
@@ -553,7 +553,7 @@
                                                 {{-- ₹<span>1820.00</span>/mo* --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_INR') }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.'WEB_HOSTING_PROFESSIONAL_PRICE_36_USD') }}</span>/mo*
@@ -724,7 +724,7 @@
                                                 
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
-                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}</span>/mo*
+                                                    {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_INR') }}.00</span>/mo*
                                                 @else
                                                     {!! Config::get('Constant.sys_currency_symbol') !!}<span>
                                                     {{ Config::get('Constant.'.'WEB_HOSTING_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
