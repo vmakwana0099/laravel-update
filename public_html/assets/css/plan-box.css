@@ -1,0 +1,225 @@
+
+.shared-plan-box-main {
+    border: 1px solid #d8e8ff;
+    border-radius: 20px;
+    margin-top: 60px;
+    background-color: #F8FBFF;
+    padding-bottom: 30px;
+}
+.shared-plan-nm {
+    font-size: 22px;
+    font-weight: 600;
+    color: #080808;
+}
+.shared-plan-price {
+    text-align: left;
+    padding: 30px;
+}
+span.cut-price {
+    font-size: 18px;
+    font-weight: 400;
+    color: #808080;
+    padding: 10px 0;
+    display: inline-block;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.shared-plan-cut-prc {
+    margin: 12px 0;
+}
+span.cut-prc-disc {
+    background: #E1E1FF;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000c66;
+}
+.shared-main-price {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3838ff;
+}
+.shared-main-price span {
+    font-size: 48px;
+    font-weight: 700;
+    color: #3838ff;
+    display: inline-block;
+}
+.shared-plan-btn button {
+    text-align: center;
+    width: 100%;
+}
+.shared-plan-cnt ul li {
+    padding-left: 30px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #080808;
+    margin: 15px 0;
+}
+.shared-plan-cnt li:before {
+    content: "\f00c";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: #18b35c;
+    font-size: 16px;
+    font-weight: 600 !important;
+    font-family: "Font Awesome 6 Free";
+}
+.shared-plan-cnt li.cross-icon-li:before {
+    content: "\f068";
+    color: #808080;
+}
+.shared-plan-cnt ul {
+    margin: 0px 0 30px 30px;
+}
+.shared-plan-renew {
+    font-size: 12px;
+    font-weight: 400;
+    color: #444;
+    margin-top: 10px;
+}
+li.cross-icon-li {
+    color: #808080 !important;
+}
+.shared-plan-most-popular{
+    border: 2px solid #3838ff;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.shared-most-popular-cnt {
+    background: #3838ff;
+    color: #fff;
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.shared-plan-bx-pd{
+    padding: 0 80px;
+}
+.free-domain {
+    z-index: 1;
+    cursor: pointer;
+    color: #080808 !important;
+    font-weight: 500 !important;
+    display: inline-block;
+    border-bottom: 1px dashed #080808;
+    font-size: 14px;
+}
+span.domain-tooltip {
+    top: 30px;
+    visibility: hidden;
+    height: auto;
+    left: -10px;
+    width: 100%;
+    position: absolute;
+    background: #000c66;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: 400;
+    z-index: 1;
+    opacity: 0;
+    transition: .4s ease-in-out;
+    transform: translate3d(0, -10px, 0);
+}
+.free-domain:hover span.domain-tooltip {
+    visibility: visible;
+    color: #fff !important;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+span.price-domain {
+    display: block;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+a.shared-plan-more-btn {
+    color: #3838ff;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+a.shared-plan-more-btn:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.shared-plan-fr-mnth {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000c66;
+}
+
+
+
+
+
+@media only screen and (max-width: 1499px) {
+    .shared-main-price span{
+        font-size: 42px;
+    }
+    .shared-plan-bx-pd {
+       padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .shared-plan-box-main{
+        overflow: hidden;
+    }
+    .shared-plan-bx-pd {
+        padding: 0 20px;
+    }
+    .shared-plan-price{
+        padding: 20px;
+    }
+    .shared-plan-nm{
+        font-size: 20px;
+    }
+    span.cut-price, span.cut-prc-disc{
+        font-size: 14px;
+    }
+    .shared-main-price{
+        font-size: 16px;
+    }
+    .shared-main-price span{
+        font-size: 32px;
+    }
+    .shared-plan-cnt ul {
+       margin: 0px 0 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .shared-plan-bx-pd {
+        padding: 0 0px;
+    }
+    .shared-plan-box-main{
+        margin-top: 20px;
+    }    
+    .wh-server-location-tab ul li{
+        width: 40%;
+        flex-wrap: wrap;
+        margin: 0 10px;
+    }
+    .wh-server-location-tab .nav{
+        margin-bottom: 10px !important;
+    }
+}

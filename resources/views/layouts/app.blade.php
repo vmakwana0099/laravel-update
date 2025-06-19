@@ -128,6 +128,10 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/custom.css?v={{date('YmdHi')}}" media="all" />
 <link rel="stylesheet" href="/assets/css/common.css?v={{date('YmdHi')}}" media="all" />
 
+@if(Request::segment(1) == 'hosting' || Request::segment(1) == 'servers' || Request::segment(1) == 'web-hosting' || Request::segment(1) == 'web-hosting-ahmedabad' && Request::segment(2) != 'dedicated-servers')
+<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/plan-box.css?v={{date('YmdHi')}}" media="all" />
+@endif
+
 @if(Request::segment(2)=='website-builder')
 <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/website-builder.css?v={{date('YmdHi')}}" media="all" />
 
