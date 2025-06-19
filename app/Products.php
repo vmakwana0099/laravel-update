@@ -547,7 +547,7 @@ class Products extends Model {
         }
          if (Request::segment(2) == 'windows-vps-hosting' || Request::segment(2) == 'forex-vps-hosting') {
                 $vpsclass = "windows-vps-managed-btn";
-                $buttonText = "Add to Cart";
+                $buttonText = "Choose Plan";
                 // echo'<pre>123: ';print_r($vpsclass);exit;
                 }
 
@@ -572,8 +572,12 @@ class Products extends Model {
             }
 
             else{
-                
-                $returnHtml .= "<button class='btn-primary " . $vpsclass . "' id ='".$button_id."' title='".$buttonText."'>".$buttonText."</button>";
+                $newVPSClass = 'primary-btn-sq-bdr';
+                if($whmcsproid == 513 || $whmcsproid == 480){
+                    $newVPSClass = 'primary-btn-sq';
+                }
+                // $returnHtml .= "<button class='btn-primary " . $vpsclass . "' id ='".$button_id."' title='".$buttonText."'>".$buttonText."</button>";
+                $returnHtml .= "<button class=' ".$newVPSClass."' " . $vpsclass . "' id ='".$button_id."' title='".$buttonText."'>".$buttonText."</button>";
             }
         }
         elseif(!empty($category) && ($category == 'hosting') ){

@@ -6,11 +6,6 @@
 $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
 @include('template.'.$theme.'.banner')
 
-
-
-
-
-
 <section class="who_we_are head-tb-p-40">
     <div class="container">
         <div class="row justify-content-center align-items-center">
