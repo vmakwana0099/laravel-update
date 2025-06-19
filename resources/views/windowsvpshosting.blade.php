@@ -31,97 +31,126 @@
     @endif
     @endif
     @if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-    <div class="head-tb-p-40 win-vps-hstg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div id="linuxEnterpriseBtncontent" class="clearfix col-12 Plan_table_Nheading section-heading">
-                        <h2 class="big_title text_head text-center " title="India Based Windows VPS Hosting" id="windows-vps-hosting">India’s Affordable Windows VPS Server Plans</h2>
-                        <p class="fw-5 text-center">Strong, Swift, & Highly Secured Servers</p>
-                    </div>
-                    <div class="main-plan-add main-plan-windows-vps">
-                        <div class="row">
-                            @foreach ($ProductsPackageData as $elkey => $element)
-                            @php
-                            $planName = $element->varTitle;
-                            $SpecificationData = explode("\n",$element->txtSpecification);
-                            if ($element->txtShortDescription == 'BEST SELLER') {
-                            $class_best_seller = 'best-seller-div';
-                            }else{
-                            $class_best_seller = ' ';
-                            }
-                            @endphp
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="vps-plan-box">
-                            <div class="vps_plan_price">
-                                <div class="plan-head">{{$planName}}</div>
-                                @if(Config::get('Constant.sys_currency') == 'INR')
-                                @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
-                                <div class="plan-cut-price">
-                                    <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
-                                         @if(isset($element->productpricing['monthly_renewal']))
-                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
-                                        @else
-                                        {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
-                                        @endif
-                                    </span>
-                                    @php
-                                    if(isset($element->productpricing['monthly_renewal'])){
-                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly_renewal']) * 100), 0);
-                                    }else{
-                                        $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
-                                    }
-
-                                    @endphp
-                                     <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
-                                        Save {{$percentageOff}}%
-                                    </span>
-                                   {{--  <span class="offer-discount" id="offer-discount-{{str_replace(' ', '', $planName)}}">
-                                        Save {{$percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0)}}%
-                                    </span> --}}
-                                </div>
-                                <div class="plan-price-main" id="oneyear-price{{str_replace(' ', '', $planName)}}">
-                                    <span class="plan-price-r-icon">{!! Config::get('Constant.sys_currency_symbol') !!}</span>{{$element->productpricing['annually']}}<span class="vps-prc-mo">/mo</span>
-                                </div>
-                                @endif
-                                 {{-- <div class="freedom-sale-offer">+15 Days Free</div> --}}
-                                <div class="vps-plan-conf-btn" id="oneyear-btn{{str_replace(' ', '', $planName)}}">
-                                    {!! $element->ButtonTextannually !!}
-                                </div>
-                                @elseif(Config::get('Constant.sys_currency') == 'USD')
-                                @if (isset($element->productpricing['monthly']))
-                                <h2>{!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}<span class="vps-prc-mo">/Mo</span></h2>
-                                @endif
-                                @endif
-                            </div>
-                            <div class="vps-plan-desc">
-                                <ul>
-                                    @foreach ($SpecificationData as $key => $Specifica)
-                                    @php
-                                    $Specification = (trim($Specifica));
-                                    @endphp
-
-                                    @if(strtolower(trim($Specification)) == "control panel")
-                                    <li class="free_domain"><span class="vps-desc-icon"><i class="fa-solid fa-circle-check"></i></span>Control Panel <i class="fa-solid fa-circle-question"></i>
-                                        <span class="domain_tooltip">Select your preferred control panel from cPanel, Webuzo, or Plesk. Choose the ideal panel for your specific operating system needs!</span>
-                                    </li>
-                                    @else
-                                    <li><span class="vps-desc-icon"><i class="fa-solid fa-circle-check"></i></span>{!!($Specification)!!}</li>
-                                    @endif
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
+    <section class="web-pln-box head-tb-p-40">
+  <div class="container-fluid">
+    <div class="shared-plan-bx-pd">
+      <div class="section-heading">
+        <h2 class="text_head text-center">Powerful VPS Hosting Solutions in India For You</h2>
+        <p class="text-center">Choose Our Cheap VPS in India with KVM Virtualization for Ultimate Performance!</p>
         </div>
+      <div class="row justify-content-center">
+        @foreach ($ProductsPackageData as $elkey => $element)
+
+          @php
+            $popular_div_class = '';
+            if($elkey == 1){
+              $popular_div_class = 'shared-plan-most-popular';
+            }
+            $planName = $element->varTitle;
+            $SpecificationData = explode("\n",$element->txtSpecification);
+            if ($element->txtShortDescription == 'BEST SELLER') {
+              $class_best_seller = 'best-seller-div';
+            }else{
+              $class_best_seller = ' ';
+            }
+          @endphp
+
+        
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main {{ $popular_div_class }}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              @if($elkey == 1)
+                <div class="shared-most-popular-cnt">
+                  MOST POPULAR
+                </div>
+              @endif
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  {{$planName}}
+                </div>
+                <div class="shared-plan-cut-prc">
+                  {{-- <span class="cut-price">₹840.00</span> --}}                  
+                  @if(Config::get('Constant.sys_currency') == 'INR')
+                    @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
+                      <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
+                        @if(isset($element->productpricing['monthly_renewal']))
+                          {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
+                        @else
+                          {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+                        @endif
+                      </span>
+                    @endif
+                  @endif
+                  {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+                  <span class="cut-prc-disc" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+                    @php
+                      if(isset($element->productpricing['monthly_renewal'])){
+                          $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly_renewal']) * 100), 0);
+                      }else{
+                          $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
+                      }
+                    @endphp
+                    Save {{$percentageOff}}%
+                  </span>
+                </div>
+                <div class="shared-main-price">
+                  {{-- ₹<span>420.00</span>/mo* --}}
+                  ₹<span>{{$element->productpricing['annually'] + 220}}.00</span>/mo*
+                </div>
+                
+                <div class="shared-plan-btn">
+                  {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                  @if(isset($element->ButtonTextannually) && !empty($element->ButtonTextannually))
+                   {!! $element->ButtonTextannually !!}
+                  @endif
+                </div>
+                
+                @if(isset($element->productpricing['monthly_renewal']))
+                <div class="shared-plan-renew">
+                  Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 3 years. Cancel anytime.
+                </div>
+                @endif
+              </div>
+              <div class="shared-plan-cnt">
+                <ul>
+                  @foreach ($SpecificationData as $key => $Specifica)
+                    @php
+                      $Specification = (trim($Specifica));
+                    @endphp
+
+                    @if(strtolower(trim($Specification)) == "1 vcpu core")
+                      <div class="slide-toggle">
+                        <li> <span><b>1</b> vCPU core</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "4 gb ram")
+                      <div class="slide-toggle">
+                        <li> <span><b>4 GB</b> RAM</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "50 gb ssd")
+                      <div class="slide-toggle">
+                        <li> <span><b>50GB</b> SSD</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "1 dedicated ip")
+                    <div class="slide-toggle">
+                      <li> <span><b>1</b> Dedicated IP</span></li>
+                    </div>
+                    @else
+                    <div class="slide-toggle">
+                      <li> <span>{{$Specification}}</span></li>
+                    </div>
+                    @endif
+                  @endforeach
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
     </div>
-</div>
-</div>
+  </div>
+
+</section>
 @endif
 </div>
     @include('template.'.$themeversion.'.30-day-moneyback') 

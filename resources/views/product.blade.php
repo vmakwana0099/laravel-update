@@ -2565,6 +2565,7 @@
                                     </div>
                                 </div>
                                 </div>
+                                @if(Request::segment(2) == "ecommerce-hosting")
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
                                     <div class="shared-pln-box">
@@ -2736,6 +2737,7 @@
                                     </div>
                                 </div>
                                 </div>  
+                                @endif
                             </div>
                         {{-- </div>
                     </div> --}}
