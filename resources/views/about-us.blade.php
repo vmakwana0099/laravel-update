@@ -355,7 +355,76 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             <div class="col-lg-12">
                 <div class="our-cust-rev">
                     <div class="owl-carousel owl-theme our-rating-cr">
-                        <div class="item"><h4>1</h4></div>
+                        <div class="our-cust-rev-box">
+                            <div class="our-cust-rev-tittle">
+                                Review Tittle
+                            </div>
+                            <div class="our-cust-rev-cnt">
+                                Switching to HOST IT SMART was the best decision for our online business. Our website now loads faster, uptime is consistent, and their customer support is responsive 24/7. Highly recommend for businesses that can't afford downtime.
+                            </div>
+                            <div class="our-cust-rev-user">
+                                <div class="our-cust-rev-pro">
+                                    <img src="/assets/images/about_us/rating-user.png" alt="rating-user">
+                                </div>
+                                <div class="our-cust-rev-info">
+                                    <div class="our-cust-rev-name">
+                                        Yashpalsinh Vaghela
+                                    </div>
+                                    <div class="our-cust-rev-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26.328" height="25.107" viewBox="0 0 26.328 25.107">
+                                            <g id="Group_18921" data-name="Group 18921" transform="translate(0 0)">
+                                                <path id="Path_72728" data-name="Path 72728"
+                                                    d="M25.707,20.947l-8.528-.791L13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l7.364-4.373,7.364,4.373a.683.683,0,0,0,1.016-.738L19.66,27.793l6.434-5.652A.683.683,0,0,0,25.707,20.947Z"
+                                                    transform="translate(0 -11.877)" fill="#ffdc64" />
+                                                <path id="Path_72729" data-name="Path 72729"
+                                                    d="M13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l1.644-.976a30.14,30.14,0,0,1,8.023-19.73Z"
+                                                    transform="translate(0 -11.877)" fill="#ffc850" />
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26.328" height="25.107" viewBox="0 0 26.328 25.107">
+                                            <g id="Group_18921" data-name="Group 18921" transform="translate(0 0)">
+                                                <path id="Path_72728" data-name="Path 72728"
+                                                    d="M25.707,20.947l-8.528-.791L13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l7.364-4.373,7.364,4.373a.683.683,0,0,0,1.016-.738L19.66,27.793l6.434-5.652A.683.683,0,0,0,25.707,20.947Z"
+                                                    transform="translate(0 -11.877)" fill="#ffdc64" />
+                                                <path id="Path_72729" data-name="Path 72729"
+                                                    d="M13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l1.644-.976a30.14,30.14,0,0,1,8.023-19.73Z"
+                                                    transform="translate(0 -11.877)" fill="#ffc850" />
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26.328" height="25.107" viewBox="0 0 26.328 25.107">
+                                            <g id="Group_18921" data-name="Group 18921" transform="translate(0 0)">
+                                                <path id="Path_72728" data-name="Path 72728"
+                                                    d="M25.707,20.947l-8.528-.791L13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l7.364-4.373,7.364,4.373a.683.683,0,0,0,1.016-.738L19.66,27.793l6.434-5.652A.683.683,0,0,0,25.707,20.947Z"
+                                                    transform="translate(0 -11.877)" fill="#ffdc64" />
+                                                <path id="Path_72729" data-name="Path 72729"
+                                                    d="M13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l1.644-.976a30.14,30.14,0,0,1,8.023-19.73Z"
+                                                    transform="translate(0 -11.877)" fill="#ffc850" />
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26.328" height="25.107" viewBox="0 0 26.328 25.107">
+                                            <g id="Group_18921" data-name="Group 18921" transform="translate(0 0)">
+                                                <path id="Path_72728" data-name="Path 72728"
+                                                    d="M25.707,20.947l-8.528-.791L13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l7.364-4.373,7.364,4.373a.683.683,0,0,0,1.016-.738L19.66,27.793l6.434-5.652A.683.683,0,0,0,25.707,20.947Z"
+                                                    transform="translate(0 -11.877)" fill="#ffdc64" />
+                                                <path id="Path_72729" data-name="Path 72729"
+                                                    d="M13.791,12.29a.683.683,0,0,0-1.255,0L9.149,20.156l-8.528.791a.683.683,0,0,0-.388,1.194l6.434,5.652L4.784,36.148a.683.683,0,0,0,1.016.738l1.644-.976a30.14,30.14,0,0,1,8.023-19.73Z"
+                                                    transform="translate(0 -11.877)" fill="#ffc850" />
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18.158" height="17.315" viewBox="0 0 18.158 17.315">
+                                            <g id="Group_171609" data-name="Group 171609" transform="translate(0 0)">
+                                                <path id="Path_72728" data-name="Path 72728"
+                                                    d="M17.729,18.132l-5.881-.545L9.511,12.162a.471.471,0,0,0-.866,0L6.31,17.587l-5.881.545a.471.471,0,0,0-.268.823l4.438,3.9L3.3,28.616a.471.471,0,0,0,.7.509l5.079-3.016,5.079,3.016a.471.471,0,0,0,.7-.509l-1.3-5.762L18,18.955A.471.471,0,0,0,17.729,18.132Z"
+                                                    transform="translate(0 -11.877)" fill="#f2f2f2" />
+                                                <path id="Path_72729" data-name="Path 72729"
+                                                    d="M9.511,12.162a.471.471,0,0,0-.866,0L6.31,17.587l-5.881.545a.471.471,0,0,0-.268.823l4.438,3.9L3.3,28.616a.471.471,0,0,0,.7.509l1.134-.673a20.787,20.787,0,0,1,5.533-13.608Z"
+                                                    transform="translate(0 -11.877)" fill="#ffc850" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="item"><h4>2</h4></div>
                         <div class="item"><h4>3</h4></div>
                         <div class="item"><h4>4</h4></div>
