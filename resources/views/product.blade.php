@@ -295,14 +295,14 @@
                     </ul>
                 </div> -->
                  @if($ProductBanner->id == 2) 
-                <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='yearshow'>
+                {{-- <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='yearshow'>
                     <ul class="nav nav-pills nav-vps-hosting d-flex justify-content-center mb-4 @if($ProductBanner->id == 7) pb-10 @endif">
                         <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
                         <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
                         <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
                         <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
                     </ul>
-                </div>
+                </div> --}}
                 @endif
                 @php if($ProductBanner->id == '10'){
                 $mainclassssl = 'ssl-small';
@@ -2264,9 +2264,14 @@
                                                 @endif
                                                 
                                             </div>
-                                            <div class="shared-plan-fr-mnth">
-                                                +3 month free
+                                            @if(Request::segment(2) == "ecommerce-hosting")
+                                                <div class="shared-plan-fr-mnth">
+                                                    +3 month free
+                                                </div>
+                                            @else <div class="shared-plan-fr-mnth invisible">
+                                                +0 month free
                                             </div>
+                                            @endif
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a> --}}
                                                 {{-- {!!$EssentialThreeYearButtonText!!} --}}
@@ -2438,9 +2443,13 @@
                                                 @endif
                                                 
                                             </div>
+                                            @if(Request::segment(2) == "ecommerce-hosting")
                                             <div class="shared-plan-fr-mnth">
                                                 +3 month free
+                                            </div>@else <div class="shared-plan-fr-mnth invisible">
+                                                +0 month free
                                             </div>
+                                            @endif
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
                                                 {!!$BusinessThreeYearButtonText!!}
@@ -2610,9 +2619,11 @@
                                                     {{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.'_ENTERPRISE_PRICE_36_USD') }}</span>/mo*
                                                 @endif
                                             </div>
+                                            @if(Request::segment(2) == "ecommerce-hosting")
                                             <div class="shared-plan-fr-mnth">
                                                 +3 month free
                                             </div>
+                                            @endif
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
                                                 {!!$EnterpriseThreeYearButtonText!!}
