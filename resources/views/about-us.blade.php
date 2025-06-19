@@ -2,6 +2,11 @@
 
 @section('content')
 
+<?php 
+$theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
+@include('template.'.$theme.'.banner')
+
+
 
 
 
@@ -260,8 +265,7 @@
         </div>
     </div>
 </section>
-<?php 
-$theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
+
  
 <section class="trst-tg-main head-tb-p-40">
     <div class="container">
