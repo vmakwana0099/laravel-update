@@ -171,6 +171,197 @@ a.shared-plan-more-btn:after {
 
 
 
+
+  .web-pln-box .nav-vps-hosting li a.active{
+
+
+
+    border-right: none !important;
+
+    background-color: #3838FF;
+
+    color: #fff;
+
+}
+
+  .web-pln-box .nav-vps-hosting li a{
+
+    color: #3838FF;
+
+}
+.web-pln-box .nav-vps-hosting li a,
+
+
+
+.web-pln-box .nav-vps-hosting li a {
+
+
+
+    border: 2px solid #3838FF !important;
+
+
+
+    border-right: none !important;
+
+
+
+    border-radius: 0;
+
+
+
+}
+ 
+    
+  .web-pln-box .nav-vps-hosting li:nth-child(3) a {
+
+
+
+    border-radius: 0;
+
+
+
+    border-right: 0
+
+
+
+}
+
+
+
+
+
+
+
+  .web-pln-box .nav-vps-hosting li:nth-child(1) a {
+
+
+
+    border-radius: 20px 0 0 20px;
+
+
+
+}
+
+
+
+  .web-pln-box .nav-vps-hosting li:nth-child(4) a {
+
+
+
+    border-radius: 0 20px 20px 0;
+
+
+
+    border-right: 2px solid #3838FF !important;
+
+}
+
+
+
+
+.web-pln-box .nav-vps-hosting li a.active:before {
+
+
+
+    color: #3838FF !important
+
+
+
+}
+
+
+
+.web-pln-box .nav-vps-hosting li:nth-child(4) a{
+
+
+
+    border-right: 2px solid #3838FF !important;
+
+
+
+}
+
+
+
+   .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li:first-child,
+
+
+
+   .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li:nth-child(2) {
+
+
+
+    border-bottom-left-radius: 0 !important
+
+
+
+}
+
+
+
+
+
+
+
+   .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li:first-child a,
+
+
+
+   .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li:nth-child(2) a {
+
+
+
+    border-bottom: 2px solid #ccc !important;
+
+
+
+    border-radius: 0 !important;
+
+
+
+    color: #b78888;
+
+
+
+    padding: 10px 200px;
+
+
+
+    font-size: 22px;
+
+
+
+    font-weight: 600
+
+
+
+}
+
+
+
+
+
+
+
+   .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li a.active {
+
+
+
+    color: #115baa;
+
+
+
+    border-bottom: 2px solid #115baa !important
+
+
+
+}
+
+
+
+
+
+
 @media only screen and (max-width: 1499px) {
     .shared-main-price span{
         font-size: 42px;
@@ -222,4 +413,45 @@ a.shared-plan-more-btn:after {
     .wh-server-location-tab .nav{
         margin-bottom: 10px !important;
     }
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .web-pln-box .nav-vps-hosting li a {
+        font-size: 12px !important;
+    }
+}
+@media only screen and (max-width: 576px) {
+    
+      .web-pln-box #yearshow .nav-vps-hosting li:first-child a {
+
+
+
+        padding-left: 30px !important
+
+
+
+    }
+    
+
+       .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li: first-child a,
+
+
+
+       .new-vps-hosting.vps-page-new-desg .nav-vps-hosting.nav-vps-hosting-wl li:nth-child(2) a {
+
+
+
+        padding: 10px 25px !important;
+
+
+
+        font-size: 20px
+
+
+
+    }
+
 }
