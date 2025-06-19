@@ -2,7 +2,6 @@
 
 @section('content')
 
-@include('layouts.inner_banner')
 
 
 
@@ -30,6 +29,28 @@
         </div>
     </div>
 </section>
+
+<!-- <section class="know-our-story head-tb-p-40">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="text_head">Know Our Story</h2>
+            <span class="know-story-sub-tittle">Every business has its own story - and ours began back in 2012!</span>
+            <p>It began with a simple mission: To make web hosting better, faster, and easier for everyone. At the time, we saw too many people struggling with slow servers, clunky dashboards, and support teams that didn’t quite solve problems. We knew things could be different and set out to make it happen.</p>
+            <p>What started as a small team with a big vision has now grown into a trusted hosting provider serving thousands of websites across industries. Over the years, we have listened, learned, and leveled up, constantly evolving to meet the changing needs of our customers.</p>
+            <p>From 2012 to now, the journey has been incredible, and we are not done yet. We are still growing, still improving, and still just getting started.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="know-our-story-img">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
 <section class="globally_img head-tb-p-40">
     <div class="container">
         <div class="section-heading text-center">
