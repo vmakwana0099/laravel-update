@@ -13,9 +13,9 @@
         {{-- <strong>You have saved {!! Config::get('Constant.sys_currency_symbol') !!}<span id="save_amount">{{ $youCanSavePrice }}</span></strong>. --}}
         {{-- <strong> saved <span id="save_amount">Max</strong> by choosing</span> --}}
     {{-- @else --}}
-        <strong> saved <span id="save_amount">{!! Config::get('Constant.sys_currency_symbol') !!}{{ $data['maxselectedsave'] }}</strong> by choosing</span>
+        <strong> saved <span id="save_amount">{!! Config::get('Constant.sys_currency_symbol') !!}{{ $data['maxselectedsave'] }}</strong> @if($data['is_three_months_free'] == 1) and got 3 Months Free @endif by choosing</span>
     {{-- @endif --}}
-    <span id="produdct_billing_period">{{ $data['maxDuration']??"" }}</span> Months plan.
+    <span id="produdct_billing_period">{{ $data['maxDuration']??"" }}</span> Months plan. @if($data['is_three_months_free'] == 1) Smart Choice! @endif
 </div>
 @else
 <div class="alert-info savings bc-alertmess">

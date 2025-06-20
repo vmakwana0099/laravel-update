@@ -286,7 +286,10 @@ class ProductsController extends FrontController {
             }elseif($ProId->id == "1"){
                 return view("product_linux", $ProductData);
             }
-            else {
+            elseif($ProId->id == "6"){
+                return view("ecommerce-product", $ProductData);
+            }
+            else {        
                 return view("product", $ProductData);   
             }
         } else if (!empty($TLDId)) {

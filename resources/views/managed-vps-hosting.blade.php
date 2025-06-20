@@ -32,14 +32,12 @@
     </div>
     @endif
     @endif
-    {{-- Managed VPS Hosting Plans
-    Choose Our VPS with KVM Virtualization for Ultimate Performance! --}}
-    <section class="web-pln-box head-tb-p-40">
+    <section class="web-pln-box head-tb-p-40" id="managed-vps-hosting">
   <div class="container-fluid">
     <div class="shared-plan-bx-pd">
       <div class="section-heading">
-        <h2 class="text_head text-center">Powerful VPS Hosting Solutions in India For You</h2>
-        <p class="text-center">Choose Our Cheap VPS in India with KVM Virtualization for Ultimate Performance!</p>
+        <h2 class="text_head text-center">Managed VPS Hosting Plans</h2>
+        <p class="text-center">Choose Our VPS with KVM Virtualization for Ultimate Performance!</p>
         </div>
       <div class="row justify-content-center">
         @foreach ($ProductsPackageData as $elkey => $element)
@@ -110,7 +108,9 @@
                 
                 @if(isset($element->productpricing['monthly_renewal']))
                 <div class="shared-plan-renew">
-                  Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 3 years. Cancel anytime.
+                  {{-- Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 1 year. Cancel anytime. --}}
+                  Renews at ₹{{ rtrim(rtrim(number_format($element->productpricing['yearly_renewal_permonth'], 2, '.', ''), '0'), '.') }}/mo after 1 year. Cancel anytime.
+
                 </div>
                 @endif
               </div>
@@ -139,7 +139,7 @@
                     </div>
                     @else
                     <div class="slide-toggle">
-                      <li> <span>{{$Specification}}</span></li>
+                      <li> <span>{!!$Specification!!}</span></li>
                     </div>
                     @endif
                   @endforeach
@@ -418,7 +418,7 @@
                                         <td><i class="fa-solid fa-check"></i></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Security Firewall Setup & Configuration</th>
+                                        <th scope="row">Security Firewall Configuration & Management</th>
                                         <td><i class="fa-solid fa-xmark"></i></td>
                                         <td><i class="fa-solid fa-check"></i></td>
                                     </tr>

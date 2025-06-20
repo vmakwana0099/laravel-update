@@ -13,12 +13,12 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                 $_PROFESSIONAL_PRICE_36_INR='_PROFESSIONAL_PRICE_36_INR';
 
 @endphp
-<div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
+<div class="web-pln-box head-tb-p-40" id="check_linux_plan">
         <div class="container-fluid">
             <div class="shared-plan-bx-pd">
                 <div class="section-heading">
-                    <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package</h2>
-                    <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
+                    <h2 class="text_head text-center">Go with the Linux Web Hosting Plan that Best Fits</h2>
+                    <p class="text-center">Our plans are designed to serve both startups and enterprises alike. Choose a plan that supports your needs!</p>
                 </div>  
 
 
@@ -70,13 +70,13 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                             <div class="shared-plan-cut-prc">
                                                 {{-- <span class="cut-price">₹840.00</span> --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
-                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearINR))
-                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeYearINR}}</span>
+                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeMonthINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[0]->intOldPriceThreeMonthINR}}</span>
                                                     @endif
                                                 @else
-                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeYearUSD))
+                                                    @if(!empty($ProductsPackageData[0]->intOldPriceThreeMonthUSD))
                                                         <span class="cut-price" id="BasicThreeYearUSD">
-                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}</span>
+                                                        {{$ProductsPackageData[0]->intOldPriceThreemonthUSD}}</span>
                                                     @endif
                                                 @endif
                                                 
@@ -241,13 +241,13 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                             <div class="shared-plan-cut-prc">
                                                 {{-- <span class="cut-price">₹980.00</span> --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
-                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearINR))
-                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[1]->intOldPriceThreeYearINR}}</span>
+                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeMonthINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[1]->intOldPriceThreeMonthINR}}</span>
                                                     @endif
                                                 @else
-                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeYearUSD))
+                                                    @if(!empty($ProductsPackageData[1]->intOldPriceThreeMonthUSD))
                                                         <span class="cut-price" id="BasicThreeYearUSD">
-                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearUSD}}</span>
+                                                        {{$ProductsPackageData[1]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
 
@@ -276,7 +276,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 
                                             </div>
                                             <div class="shared-plan-fr-mnth">
-                                                +3 month free
+                                                +3 months free
                                             </div>
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq">Choose Plan</a> --}}
@@ -416,13 +416,13 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                             <div class="shared-plan-cut-prc">
                                                 {{-- <span class="cut-price">₹1280.00</span> --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
-                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearINR))
-                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeYearINR}}</span>
+                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeMonthINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[2]->intOldPriceThreeMonthINR}}</span>
                                                     @endif
                                                 @else
-                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeYearUSD))
+                                                    @if(!empty($ProductsPackageData[2]->intOldPriceThreeMonthUSD))
                                                         <span class="cut-price" id="BasicThreeYearUSD">
-                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearUSD}}</span>
+                                                        {{$ProductsPackageData[2]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
 
@@ -450,7 +450,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 
                                             </div>
                                             <div class="shared-plan-fr-mnth">
-                                                +3 month free
+                                                +3 months free
                                             </div>
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
@@ -587,13 +587,13 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                             <div class="shared-plan-cut-prc">
                                                 {{-- <span class="cut-price">₹1880.00</span> --}}
                                                 @if(Config::get('Constant.sys_currency') == 'INR')
-                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearINR))
-                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[3]->intOldPriceThreeYearINR}}</span>
+                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeMonthINR))
+                                                        <span class="cut-price">{!! Config::get('Constant.sys_currency_symbol') !!}{{$ProductsPackageData[3]->intOldPriceThreeMonthINR}}</span>
                                                     @endif
                                                 @else
-                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeYearUSD))
+                                                    @if(!empty($ProductsPackageData[3]->intOldPriceThreeMonthUSD))
                                                         <span class="cut-price" id="BasicThreeYearUSD">
-                                                        {{$ProductsPackageData[3]->intOldPriceThreeYearUSD}}</span>
+                                                        {{$ProductsPackageData[3]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
 
@@ -621,7 +621,7 @@ $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAUL
                                                 @endif
                                             </div>
                                             <div class="shared-plan-fr-mnth">
-                                                +3 month free
+                                                +3 months free
                                             </div>
                                             <div class="shared-plan-btn">
                                                 {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}

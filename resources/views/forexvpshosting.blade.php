@@ -40,7 +40,7 @@
         @endif
     @endif
     @if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-        <section class="web-pln-box head-tb-p-40">
+    <section class="web-pln-box head-tb-p-40" id="forex-vps-hosting">
   <div class="container-fluid">
     <div class="shared-plan-bx-pd">
       <div class="section-heading">
@@ -105,7 +105,8 @@
                 </div>
                 <div class="shared-main-price">
                   {{-- ₹<span>420.00</span>/mo* --}}
-                  ₹<span>{{$element->productpricing['annually']}}</span>/mo*
+                  {{-- ₹<span>{{$element->productpricing['annually']}}</span>/mo* --}}
+                  ₹<span>{{ number_format($element->productpricing['annually'], 2, '.', '') }}</span>/mo*
                 </div>
                 
                 <div class="shared-plan-btn">
@@ -117,7 +118,9 @@
                 
                 @if(isset($element->productpricing['monthly_renewal']))
                 <div class="shared-plan-renew">
-                  Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 3 years. Cancel anytime.
+                  {{-- Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 1 years. Cancel anytime. --}}
+                  Renews at ₹{{ rtrim(rtrim(number_format($element->productpricing['yearly_renewal_permonth'], 2, '.', ''), '0'), '.') }}/mo after 1 year. Cancel anytime.
+
                 </div>
                 @endif
               </div>
@@ -146,7 +149,7 @@
                     </div>
                     @else
                     <div class="slide-toggle">
-                      <li> <span>{{$Specification}}</span></li>
+                      <li> <span>{!!$Specification!!}</span></li>
                     </div>
                     @endif
                   @endforeach

@@ -31,12 +31,12 @@
     @endif
     @endif
     @if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-    <section class="web-pln-box head-tb-p-40">
+    <section class="web-pln-box head-tb-p-40" id="windows-vps-hosting">
   <div class="container-fluid">
     <div class="shared-plan-bx-pd">
       <div class="section-heading">
-        <h2 class="text_head text-center">Powerful VPS Hosting Solutions in India For You</h2>
-        <p class="text-center">Choose Our Cheap VPS in India with KVM Virtualization for Ultimate Performance!</p>
+        <h2 class="text_head text-center">India’s Affordable Windows VPS Server Plans</h2>
+        <p class="text-center">Strong, Swift, & Highly Secured Servers</p>
         </div>
       <div class="row justify-content-center">
         @foreach ($ProductsPackageData as $elkey => $element)
@@ -107,7 +107,9 @@
                 
                 @if(isset($element->productpricing['monthly_renewal']))
                 <div class="shared-plan-renew">
-                  Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 3 years. Cancel anytime.
+                  {{-- Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 1 year. Cancel anytime. --}}
+                  Renews at ₹{{ rtrim(rtrim(number_format($element->productpricing['yearly_renewal_permonth'], 2, '.', ''), '0'), '.') }}/mo after 1 year. Cancel anytime.
+
                 </div>
                 @endif
               </div>
@@ -136,7 +138,7 @@
                     </div>
                     @else
                     <div class="slide-toggle">
-                      <li> <span>{{$Specification}}</span></li>
+                      <li> <span>{!!$Specification!!}</span></li>
                     </div>
                     @endif
                   @endforeach
@@ -189,7 +191,7 @@
                                     <div class="g-list-box">
                                         <span class="list-num">3</span>
                                         <h3>Perfect Match for Windows Apps</h3>
-                                        <span>Do you have a website or software that runs on .NET, MSSQL, or other Microsoft tools? Windows VPS is made just for that, which ensures your apps run without hiccups.</span>
+                                        <span>Do you have a website or software that runs on .NET, MSSQL, or other Microsoft tools? A cheap Windows VPS is made just for that, which ensures your apps run without hiccups.</span>
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +211,7 @@
                                     <div class="g-list-box">
                                         <span class="list-num">5</span>
                                         <h3>Works Great with Other Microsoft Tools</h3>
-                                        <span>Need to use Microsoft Office, Outlook, or other Microsoft tools? With Windows VPS, you are already in the Microsoft ecosystem, which gives you seamless access to all your favorite apps.</span>
+                                        <span>Need to use Microsoft Office, Outlook, or other Microsoft tools? Windows VPS server, you are already in the Microsoft ecosystem, which gives you seamless access to all your favorite apps.</span>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +267,7 @@
                                     </a>
                                     <div id="box0" class="collapse" data-parent="#accordion-box">
                                         <div class="card-body white-bg">
-                                            <p>Hosting your website is one of the most common and smartest ways to use Windows VPS. It is a solid choice for a personal blog or a business website. At Host IT Smart, over 750+ clients host their websites on our Windows server.</p>
+                                            <p>Hosting your website is one of the most common and smartest ways to use Windows VPS hosting. It is a solid choice for a personal blog or a business website. At Host IT Smart, over 750+ clients host their websites on our Windows server.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -305,7 +307,7 @@
                                     </a>
                                     <div id="box4" class="collapse" data-parent="#accordion-box">
                                         <div class="card-body white-bg">
-                                            <p>You can use your Windows VPS as your personal locker in the cloud, which would be more powerful to store all your important files, documents, and software setups. The best part is that it is accessible from anywhere in the world.</p>
+                                            <p>You can use your Windows VPS server as your personal locker in the cloud, which would be more powerful to store all your important files, documents, and software setups. The best part is that it is accessible from anywhere in the world.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -315,7 +317,7 @@
                                     </a>
                                     <div id="box5" class="collapse" data-parent="#accordion-box">
                                         <div class="card-body white-bg">
-                                            <p>Do you have a team that works from different locations? With Windows VPS, you can run tools like Microsoft Teams, Zoom, Slack, or any project management software for better team communication and work coordination.</p>
+                                            <p>Do you have a team that works from different locations? With Windows VPS server in India, you can run tools like Microsoft Teams, Zoom, Slack, or any project management software for better team communication and work coordination.</p>
                                         </div>
                                     </div>
                                 </div>

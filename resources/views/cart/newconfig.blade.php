@@ -239,6 +239,13 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                             @endif
                             @endforeach
                             @php
+                            $free_offer_products = array(523,524,525,527,528,529,531,532,533,535,536,537);  
+                            $is_three_months_free = false;
+                            if($productData['billingcycle'] == 'triennially' && in_array($productData['pid'],$free_offer_products)){
+                                $is_three_months_free = true;
+                            }else{
+                                $is_three_months_free = false;
+                            }
                             $_maxSelected='false';
                             if ($productData['pricing'][$ArrayMaxKey]->duration == $productData['pricing'][$SelectedKey]->duration) {
                             $_maxSelected='true';
@@ -265,9 +272,9 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                         @if($productData['billingcycle'] == $pricing->durationame)
 
                                         @php $selectedPlansPrice=$pricing; @endphp
-                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" checked value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
+                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" checked value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'is_three_months_free':'{{$is_three_months_free}}','selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'is_three_months_free':'{{$is_three_months_free}}','selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
                                         @else
-                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
+                                        <input type="radio" class="billing_cycle_input" name="sel_hostingregister_{{$key}}" id="sel_hostingregister_{{$key}}_{{$prokey}}" value="{{$pricing->durationame}}" @if($productData['producttype']=='vps' ) onclick="updateServerItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'is_three_months_free':'{{$is_three_months_free}}','selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @else($productData['producttype']=='hosting' ) onclick="updateHostingItem('{{$key}}','{{$prokey}}');addRemoveSelectedClass('{{$key}}','{{$prokey}}');featchPlansMessage({'is_three_months_free':'{{$is_three_months_free}}','selectedMax':'{{ $featchPlansParam }}','saveamount':'{{ round($_basicPlanPrice - $_currentPlanPrice,2) }}','maxselectedsave':'{{ $_maxSelectedSave }}','maxDuration':'{{ $_maxDuration }}'});" @endif>
                                         @endif
 
                                         <span class="checkmark"></span>
@@ -2360,7 +2367,7 @@ $("#addconfigdomainbtn").click(function(){
             $('#domain_combo').find(".dropdown-toggle").addClass('form-control');
         }, 1000);
         var renew_price = $("input[name='sel_hostingregister_0']:checked").val();
-        var featchPlansData={ "a":'{{$a}}',"selectedMax":'{{ $_maxSelected }}',"saveamount":'{{ $_selectedSave }}',"maxselectedsave":{{ $_maxSelectedSave }},'maxDuration':'{{ $_maxDuration }}' };
+        var featchPlansData={"is_three_months_free":'{{$is_three_months_free}}', "a":'{{$a}}',"selectedMax":'{{ $_maxSelected }}',"saveamount":'{{ $_selectedSave }}',"maxselectedsave":{{ $_maxSelectedSave }},'maxDuration':'{{ $_maxDuration }}' };
         /*console.log(featchPlansData);*/
         featchPlansMessage(featchPlansData);
     })
