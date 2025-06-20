@@ -2049,7 +2049,7 @@
                         <div class="plan-main-div" id="plans"> --}}
                             <div class="row {{ $plan_row}}">
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
@@ -2064,7 +2064,7 @@
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[0]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price" >
                                                         {{$ProductsPackageData[0]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -2217,7 +2217,7 @@
                                 </div>
 
                                   <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-most-popular-cnt">
                                             MOST POPULAR
@@ -2235,7 +2235,7 @@
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[1]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price" >
                                                         {{$ProductsPackageData[1]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -2400,7 +2400,7 @@
                                 </div>
                                          
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
@@ -2415,7 +2415,7 @@
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[2]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price" >
                                                         {{$ProductsPackageData[2]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -2576,7 +2576,7 @@
                                 </div>
                                 @if(Request::segment(2) == "ecommerce-hosting")
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
@@ -2591,7 +2591,7 @@
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[3]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price" >
                                                         {{$ProductsPackageData[3]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
