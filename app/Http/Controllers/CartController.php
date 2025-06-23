@@ -1358,7 +1358,7 @@ class CartController extends FrontController {
     public function emptycart(Request $request) {
         Self::getconstants();
         Cart::emptyCart($request);
-        Session::flush();
+        // Session::flush();
         return redirect('/');
     }
     public function removecart(Request $request) {

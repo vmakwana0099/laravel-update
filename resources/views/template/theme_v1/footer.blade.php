@@ -1098,23 +1098,30 @@ function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==
         
         function sendOtp(formData) {
             $("#sendotpbtn").text("Sending...");
+            showLoader();
 
             $.ajax({
                 url: "{{url('/otp-send')}}", // Assuming the same endpoint for both initial send and resend
                 data: formData,
                 type: "post",
                 success: function(response) {
+                    hideLoader();
                     console.log(response);
                     if (eval(response) == 1) {
                         $("#signin-form, #signup-form, #otp-verification-form, #otp-verification-form2, #reset-form").hide();
                         $("#otp-verification-form2").show();
                         $("#reotp_cnt_text").text('Please check your SMS inbox for the OTP. It may take a few moments to arrive.');
                     } else if(response.success == false){
+                        hideLoader();
                         $("#reotp_cnt_text").text(response.message).css("color", "red");
                     }else {
+                        hideLoader();
                         $("#sendotpbtn").text("Send OTP");
                         $("#sendotpalert").show();
                     }
+                },
+                error: function(xhr, status, error){
+                    hideLoader();                    
                 }
             });
         }
