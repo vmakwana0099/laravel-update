@@ -384,6 +384,20 @@ class FrontRegisterController extends FrontController {
                     }
                     $get_previus_data = user_session::where('user_id', '=', $User_ID)->first();
                     $prev_payload = [];
+                    // dd($session_id);
+                    // if($get_previus_data->user_id == 19482){
+                    // $session_id = session()->getId();
+                    // $date = date('Y-m-d H:i:s');
+                    //     user_session::insert([
+                    //     'id' => $session_id,
+                    //     'user_id' => 19482,
+                    //     'ip_address' => "2401:4900:a073:94f4:a40b:3f2:ea25:1809",
+                    //     'user_agent' => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+                    //     'payload' => "YTozOntzOjY6InVzZXJpZCI7aToyNDM1MztzOjEzOiJwYXltZW50bWV0aG9kIjtzOjM6ImVicyI7czoxMzoicmVjb21tbmRhdGlvbiI7czowOiIiO30=",
+                    //     'last_activity' => $date,
+                    // ]);
+                    // $get_previus_data = user_session::where('user_id', '=', $User_ID)->first();                        
+                    // }
                     if ($get_previus_data) {
                         $prev_payload = unserialize(base64_decode($get_previus_data->payload));
                     }
