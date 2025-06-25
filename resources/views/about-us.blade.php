@@ -459,7 +459,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="about-features-img">
+                <div class="about-features-img d-flex justify-content-center justify-content-lg-end">
                     <img src="../assets//images/about_us/innovation.webp" alt="innovation">
                 </div>
             </div>
@@ -484,9 +484,9 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 <div class="about-features-cnt">
                     <div class="section-heading">
                         <h2 class="text_head">Our Future Goals</h2>
-                        <p>We’re dreaming big, and we’re pouring our hearts into making it happen!</p>
                     </div>
                     <div class="about-features-ul">
+                        <p>We’re dreaming big, and we’re pouring our hearts into making it happen!</p>
                         <ul>
                             <li> <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
                                         height="29.942" viewBox="0 0 30 29.942">
@@ -598,7 +598,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="about-features-img">
+                <div class="about-features-img d-flex justify-content-center justify-content-lg-end">
                     <img src="../assets//images/about_us/future_goals.webp" alt="future_goals">
                 </div>
             </div>

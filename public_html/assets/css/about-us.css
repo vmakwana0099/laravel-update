@@ -1,5 +1,5 @@
 .about-us-banner-main {
-    background: #3838ff;
+    background: #544BED;
     position: relative;
 }
 .about-us-banner-main:after {
@@ -22,9 +22,14 @@
 }
 .about-us-banner-txt {
     color: #fff;
-    font-size: 36px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-us-banner-sub-txt {
+    font-size: 16px;
     font-weight: 400;
-    letter-spacing: 1px;
+    color: #fff;
 }
 .about-us-banner-img img {
     width: 500px;
@@ -80,7 +85,17 @@
 
 
 .value-do-offr-ul li{
-  display: flex;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-features-ul ul li  {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-features-ul li span{
+  margin-right: 8px;
 }
 
 
@@ -326,7 +341,7 @@
     .about-us-banner-main:after{
       background-position: bottom;
     }
-    .about-us-banner-cnt, .who_we_are_img, .about-features-img  {
+    .about-us-banner-cnt, .who_we_are_img, .about-features-img, .value-do-we-offr_img  {
       margin-bottom: 30px;
     }
     .tsrt-box{
