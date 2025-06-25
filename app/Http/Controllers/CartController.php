@@ -1072,34 +1072,27 @@ class CartController extends FrontController {
             } //if domain is free with other plan
              if((!empty($item['producttype']) && $item['producttype'] == 'hosting') && (isset($requestData->location) && !empty($requestData->location))){
                  $customfielids = [
-        // '155' => 366, // WordPress -> Starter
-        // '156' => 367, // WordPress -> Performance
-        // '157' => 368, // WordPress -> Business
-        // '158' => 360, // Java Hosting -> Starter
-        // '159' => 361, // Java Hosting -> Performance
-        // '160' => 362, // Java Hosting -> Business
-        // '161' => 363, // Ecommerce -> Starter
-        // '162' => 364, // Ecommerce -> Performance
-        // '163' => 365, // Ecommerce -> Business
-        '495' => 1132, // web hosting -> BASIC
-        '496' => 1133, // web hosting -> ESSENTIAL
-        '497' => 1134, // web hosting -> PROFESSIONAL
-        '498' => 1135, // web hosting -> ENTERPRISE
 
-        '421' => 1136, // Linux hosting -> BASIC
-        '422' => 1137, // Linux hosting -> ESSENTIAL
-        '423' => 1138, // Linux hosting -> PROFESSIONAL
-        '424' => 1139, // Linux hosting -> ENTERPRISE
+        '534' => 1165, // web hosting -> BASIC
+        '535' => 1167, // web hosting -> ESSENTIAL
+        '536' => 1169, // web hosting -> PROFESSIONAL
+        '537' => 1171, // web hosting -> ENTERPRISE
 
-        '425' => 1140, // wordpress hosting -> BASIC
-        '426' => 1141, // wordpress hosting -> ESSENTIAL
-        '427' => 1142, // wordpress hosting -> PROFESSIONAL
-        '428' => 1143, // wordpress hosting -> ENTERPRISE
+        '522' => 1164, // Linux hosting -> BASIC
+        '523' => 1166, // Linux hosting -> ESSENTIAL
+        '524' => 1170, // Linux hosting -> PROFESSIONAL
+        '525' => 1168, // Linux hosting -> ENTERPRISE
 
-        '429' => 1144, // ecommerce hosting -> BASIC
-        '430' => 1145, // ecommerce hosting -> ESSENTIAL
-        '431' => 1146, // ecommerce hosting -> PROFESSIONAL
-        '432' => 1147, // ecommerce hosting -> ENTERPRISE
+        '530' => 1172, // ecommerce hosting -> BASIC
+        '531' => 1173, // ecommerce hosting -> ESSENTIAL
+        '532' => 1175, // ecommerce hosting -> PROFESSIONAL
+        '533' => 1174, // ecommerce hosting -> ENTERPRISE
+
+        '526' => 1160, // wordpress hosting -> BASIC
+        '527' => 1161, // wordpress hosting -> ESSENTIAL
+        '528' => 1163, // wordpress hosting -> PROFESSIONAL
+        '529' => 1162, // wordpress hosting -> ENTERPRISE
+
     ];
 
     // Set the custom field array
@@ -2219,6 +2212,7 @@ class CartController extends FrontController {
         return $finalPrice;
     }    
     public function setcustomoptionvalue(Request $request) {
+        // echo "<pre>"; print_r($request->all()); exit();
         Self::getconstants();
         
         Cart::updateCustom($request);

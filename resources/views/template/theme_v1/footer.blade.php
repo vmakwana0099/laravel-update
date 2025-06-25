@@ -774,6 +774,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="resend-otp-cnt" id="otp-count-down-div">
+                                        <span id="otp-count-down-span"></span>
+                                    </div>
                                     <div class="form-group login-btn-part" id="verifyotpalert" style="display:none;">
                                         <div class="row">
                                             <div class="col-12">
@@ -1078,6 +1081,36 @@ function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==
             }*/
             
           });
+
+               function startOtpCountdown() {
+                console.log("Shadab...");
+        var duration = 60; // 60 seconds
+        var display = $("#otp-count-down-span");
+        var resendBtn = $("#resendotplink");
+
+        // Disable resend button during countdown
+        {{-- resendBtn.prop("disabled", true); --}}
+        document.getElementById("resendotplink").style.display = "none";
+        document.getElementById("otp-count-down-span").style.display = "inline";
+
+
+
+        var timer = setInterval(function () {
+            var minutes = Math.floor(duration / 60);
+            var seconds = duration % 60;
+            display.text("You can resend OTP in "+minutes + ":" + (seconds < 10 ? "0" : "") + seconds + " Seconds");
+
+            if (--duration < 0) {
+                clearInterval(timer);
+                display.text("00:00");
+                {{-- display.prop("disabled", false); --}}
+        document.getElementById("otp-count-down-span").style.display = "none";
+        document.getElementById("resendotplink").style.display = "inline";
+
+                {{-- resendBtn.prop("disabled", false); // Re-enable resend button --}}
+            }
+        }, 1000);
+    }
           
           $("#otp-verification-form").submit(function(e) {
               var arr= $("#otpcountry").val().split('_');
@@ -1099,7 +1132,7 @@ function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==
         function sendOtp(formData) {
             $("#sendotpbtn").text("Sending...");
             showLoader();
-
+            {{-- return false; --}}
             $.ajax({
                 url: "{{url('/otp-send')}}", // Assuming the same endpoint for both initial send and resend
                 data: formData,
@@ -1111,6 +1144,8 @@ function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==
                         $("#signin-form, #signup-form, #otp-verification-form, #otp-verification-form2, #reset-form").hide();
                         $("#otp-verification-form2").show();
                         $("#reotp_cnt_text").text('Please check your SMS inbox for the OTP. It may take a few moments to arrive.');
+                        $("#verifyotpalert").hide();
+                        startOtpCountdown();
                     } else if(response.success == false){
                         hideLoader();
                         $("#reotp_cnt_text").text(response.message).css("color", "red");
@@ -1265,7 +1300,7 @@ $("#resendotplink").click(function() {
                 } else {
                     // OTP is incorrect, show alert and reset button text
                     $("#verifyotpalert").show();  // Show wrong OTP alert message
-                    $("#resendotplink").show(); // Show resend OTP button
+                    {{-- $("#resendotplink").show(); // Show resend OTP button --}}
                     $("#verifyotpbtn").text("Verify OTP");  // Revert button text
                 }
             },

@@ -59,6 +59,13 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             '339' => [1040,1041,1033,1029,1026], //DS-20
             '448' => [1504,1505,1497,1493,1490], //ds21
             '452' => [1520,1521,1513,1509,1506], //ds22
+            '382' => [469,459,455,461,458], //DSS25
+            '383' => [808,795,799,796,800], //DSS26
+            '384' => [823,810,814,811,815], //DSS27
+            '385' => [838,825,829,826,830], //DSS28
+            '386' => [853,840,844,841,845], //DSS29
+            '387' => [868,855,859,856,860], //DSS30
+            '389' => [484,471,475,472,476], //DSS32
         ],
         'vps' => [
             //Forex
@@ -437,25 +444,27 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                     </form>
                 </div>
 
-                @if(in_array($productData['pid'], [495, 496, 497, 498,421,421,422,423,424,425,426,427,428,429,430,431,432]))
+                {{-- @if(in_array($productData['pid'], [495, 496, 497, 498,421,421,422,423,424,425,426,427,428,429,430,431,432])) --}}
+                @if(in_array($productData['pid'], [534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529]))
                
     <div class="server-location-box">
         <h3 class="c_c_title">Choose Server Location</h3>
+        {{-- @php echo"<pre>"; print_r($productData['customfields']); exit;@endphp --}}
         <div class="c_c_box">
          @if(isset($productData['customfields']) && !empty($productData['customfields']))
 
             @foreach($productData['customfields'] as $field)
                 @if($field['fieldtype'] == 'dropdown' && $field['name'] == 'Location')
                     <select name="customField[{{ $field['id'] }}]" id="customField{{ $field['id'] }}" class="c_c_box_arrow" onchange="setCustomFieldValue('{{$_REQUEST['id']}}','{{$field['id']}}',this.value);">
-                        @if($productData['pid'] == 495 || $productData['pid'] == 421 || $productData['pid'] == 425 || $productData['pid'] == 429)
+                       {{--  @if($productData['pid'] == 534 || $productData['pid'] == 522 || $productData['pid'] == 530 || $productData['pid'] == 526)
                             <option value="India" {{ 'India' == $field['selectedOption'] ? 'selected' : '' }}>India</option>
-                        @else
+                        @else --}}
                             @foreach(explode(',', $field['fieldoptions']) as $option)
                                 <option value="{{ $option }}" {{ $option == $field['selectedOption'] ? 'selected' : '' }}>
                                     {{ $option }}
                                 </option>
                             @endforeach
-                        @endif
+                        {{-- @endif --}}
                     </select>
                 @endif
             @endforeach
