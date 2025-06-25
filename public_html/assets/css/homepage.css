@@ -1139,7 +1139,7 @@ button.accord-btn {
 .dot {
       fill: #3838ff;
       r: 4;
-      offset-path: path("M0,0 h48.975 v195.659 h39.606 v217.374 h40.042 v223.094 h41.95");
+      offset-path: path("M-5191.146-2265h48.975v195.659h39.606v217.374h40.042v223.094h41.95");
       offset-rotate: auto;
       animation: moveAlong 5s linear infinite;
     }

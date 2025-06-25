@@ -7,11 +7,11 @@
     background-image: url(/assets/images/about_us/bnnr_ptrn.webp);
     top: 0;
     right: 0;
-    width: 100%;
+    width: 600px;
     content: "";
     z-index: 1111;
     height: 100%;
-    background-position: right;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -31,7 +31,22 @@
     text-align: end;
 }
 
-
+.who_we_are{
+  position: relative;
+  overflow: hidden;
+}
+.who_we_are::after{
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/about_us/who_we_are_pttern.webp);
+  top: 50px;
+  right: -80px;
+  width: 250px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
 .value-do-offr-ul span {
     margin-right: 10px;
 }
@@ -63,6 +78,10 @@
     padding-bottom: 60px;
 }
 
+
+.value-do-offr-ul li{
+  display: flex;
+}
 
 
 
@@ -264,10 +283,61 @@
 }
 
 
+/* 
+.our-cust-rev-box {
+    background: #F9FAFB;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+}
+.our-rating-cr .owl-item {
+    margin: 20px;
+}
+.our-cust-rev-tittle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #080808;
+}
+.our-cust-rev-cnt {
+    font-size: 14px;
+    font-weight: 400;
+    color: #080808;
+    margin: 10px 0;
+}
+.our-cust-rev-user {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+.our-cust-rev-pro img {
+    width: 50px !important;
+    height: auto;
+    margin-right: 20px;
+} */
 
 
 
 
 
+@media only screen and (max-width: 992px) {
+    .who_we_are::after{
+      display: none;
+    }
+    .about-us-banner-main:after{
+      background-position: bottom;
+    }
+    .about-us-banner-cnt, .who_we_are_img, .about-features-img  {
+      margin-bottom: 30px;
+    }
+    .tsrt-box{
+      margin: 10px 0;
+    }
+}
 
 
+@media only screen and (max-width: 767px) {
+  .our-achivmnt-box{
+    height: auto;
+    margin: 10px 0;
+  }
+}

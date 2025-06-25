@@ -10,7 +10,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-6">
-                <div class="who_we_are_img">
+                <div class="who_we_are_img d-flex justify-content-center justify-content-lg-start">
                     <img src="../assets/images/about_us/who_we_are.webp" alt="who_we_are">
                 </div>
             </div>
@@ -322,10 +322,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 <section class="our-achievement head-tb-p-40">
         <div class="container">
             <div class="section-heading">
-                <h2 class="text-head text-center">Our Astonishing Achievements</h2>
+                <h2 class="text_head text-center">Our Astonishing Achievements</h2>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="our-achivmnt-box">
                         <div class="our-achivmnt-tittle">
                             Host IT Smart Recognized With Rising Star Award
@@ -335,7 +335,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="our-achivmnt-box">
                         <div class="our-achivmnt-tittle">
                             Hallmark of Trust, Security & Performance
@@ -349,7 +349,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
         </div>
 </section>
 
-<section class="our-cust-rev-main">
+<!-- <section class="our-cust-rev-main">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -441,7 +441,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 @include('template.'.$theme.'.testimonial_section')
@@ -463,11 +463,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <img src="../assets//images/about_us/innovation.webp" alt="innovation">
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="about-features-img">
-                    <img src="../assets//images/about_us/commited_team.webp" alt="commited_team">
-                </div>
             </div>
+            <div class="row justify-content-center align-items-center flex-lg-row-reverse">
             <div class="col-lg-6">
                 <div class="about-features-cnt">
                     <div class="section-heading">
@@ -476,6 +473,13 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="about-features-img">
+                    <img src="../assets//images/about_us/commited_team.webp" alt="commited_team">
+                </div>
+            </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
             <div class="col-lg-6">
                 <div class="about-features-cnt">
                     <div class="section-heading">
