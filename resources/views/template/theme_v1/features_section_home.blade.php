@@ -1,12 +1,8 @@
 <section class="hits-prom-popup-main">
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
 
 <!-- Modal -->
-<div class="modal hits-prom-modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal hits-prom-modal fade" id="hits-prom-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="hits-prom-modalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
               <button type="button" class="hits-prom-close-btn" data-bs-dismiss="modal" aria-label="Close">
@@ -20,18 +16,15 @@
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-lg-5">
             <div class="hits-prom-popup-cnt">
-              <div class="hits-prom-popup-title">
-                Among the tons of hosting providers,
-              </div>
               <div class="hits-prom-popup-head">
-                Why 25000+ Clients Host with Host IT Smart?
+                Over 15000+ Clients Host with Host IT Smart!
               </div>
               <div class="hits-prom-popup-txt">
-                <p>Because we are built for businesses like yours!</p>
-                <p>Here, you will get <span>SSS Speed, Support, & Savings</span> that deliver real value, not just fancy claims</p>
+                <p><b>Still have doubts?</b></p>
+                <p>Our sales guy can help you, who doesn't just make fancy claims but guides you for better.</p>
               </div>
               <div class="hits-prom-popup-btn">
-                <button class="primary-btn-round">CONVINCE ME</button>
+                <button class="primary-btn-round">Chat With Sales</button>
               </div>
             </div>
           </div>
@@ -608,3 +601,18 @@
     </div>
 
 </section>
+
+
+<script>
+  // Trigger area: top 50px of the page (you can adjust this value)
+  document.addEventListener('mousemove', function (e) {
+    if (e.clientY < 50) {
+      const modalEl = document.getElementById('hits-prom-modal');
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+
+      // Remove listener so it only shows once
+      document.removeEventListener('mousemove', arguments.callee);
+    }
+  });
+</script>

@@ -723,6 +723,151 @@
 } @endphp
 
 @if($ProductBanner->id == 2)
+
+
+
+
+
+
+<section class="winds-supprt-vid-main head-tb-p-40">
+    <div class="container">
+        <div class="win-support-php head-tb-p-40">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Currently Supported PHP Versions
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/01.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="win-support-dot-net head-tb-p-40">
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Available .NET Core Versions
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/02.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="win-support-database head-tb-p-40">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Database Servers
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/03.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-dvlp-busi head-tb-p-40">
+    <div class="section-heading">
+    <h2 class="text-center text_head " id="landingloc linux-hosting-plan">Who Should Use Windows Hosting?</h2>  
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="why-dvlp-img">
+                    <img src="../assets/images/windows_hosting/why_shld_win.webp" alt="why_shld_win">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-cards">
+                    <ul>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>ASP.NET & .NET Core Developers</h3>
+                            </div>
+                            <p>If your website or app is built using ASP.NET or .NET Core, Windows hosting should be your go-to solution. It offers native support and will lead to fewer compatibility issues, stability, and a performance-driven environment.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>MSSQL Database Users</h3>
+                            </div>
+                            <p>If you rely on Microsoft SQL Server (MSSQL) databases for your websites, Windows web hosting will simplify your work. It runs most efficiently on a Windows environment as a Microsoft product, offering smooth performance and seamless compatibility.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Businesses Using the Microsoft Ecosystem</h3>
+                            </div>
+                            <p>If you are part of a business that relies heavily on Microsoft technologies, Windows shared hosting is your first and perfect choice for a smooth connection and flawless performance. You don’t need to switch platforms or change the way you work. </p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Companies Running Enterprise-Level Applications</h3>
+                            </div>
+                            <p>If you run resource-intensive applications, you need a stable and powerful hosting environment to achieve your outcome. Windows hosting is a highly competent platform that can handle demanding workloads with ease and deliver high performance with Sureshot reliability.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Running on VBScript or Classic ASP Applications</h3>
+                            </div>
+                            <p>If you still use legacy applications like VBScript or Classic ASP, the Windows hosting environment can fully support them. Windows hosting not only keeps your legacy applications running smoothly but also saves you from rebuilding the application from scratch. </p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Users Requiring Full .NET Framework Support</h3>
+                            </div>
+                            <p>If your organization develops apps requiring the full .NET Framework for smooth functioning, Windows hosting has you covered. With the full support for all .NET components, everything runs exactly the way you want with seamless compatibility and optimized performance. </p>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
 <div class="g-suite-lists head-tb-p-40">
                     <div class="container">
                         <div class="row">
