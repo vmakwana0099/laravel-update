@@ -229,6 +229,7 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
      
 @endif
 @if(Request::segment(2)=='windows-hosting')
+<link rel="stylesheet" href="../assets/css/windows_hosting_banner.css?v={{date('YmdHi')}}"/>
 <link rel="stylesheet" href="../assets/css/windows_hosting.css?v={{date('YmdHi')}}"/>
 
 @endif

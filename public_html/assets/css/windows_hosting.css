@@ -146,6 +146,10 @@
     margin: 0 auto;
 }
 
+.hosting-features-icon.users {
+    background-position: -1262px 0;
+    background-image: url(../images/hosting-features-sprite-image.png);
+}
 .hosting-features-icon.cpanel {
     background-image: url(../images/windows_hosting/plesk.webp);
 
@@ -158,7 +162,37 @@
     background-image: url(../images/windows_hosting/1_click_script.webp);
 
 }
-.hosting-features-icon.users {
-    background-position: -1262px 0;
-    background-image: url(../images/hosting-features-sprite-image.png);
+.hosting-features-icon.ssl {
+    background-image: url(../images/windows_hosting/ssl_certificate.webp);
+
+}
+.hosting-features-icon.migration {
+    background-image: url(../images/windows_hosting/website_migration.webp);
+}
+.hosting-features-icon.intershield {
+    background-image: url(../images/windows_hosting/intershield_protection.webp);
+}
+.hosting-features-icon.IIS-SUPPORT {
+    background-image: url(../images/windows_hosting/support.webp);
+}
+.hosting-features-icon.latest-versions{
+    background-image: url(../images/windows_hosting/latest_versions.webp);
+}
+.hosting-features-icon.http-protocol{
+    background-image: url(../images/windows_hosting/http_protocol.webp);
+}
+.hosting-features-icon.ddos-protection{
+    background-image: url(../images/windows_hosting/ddos_protection.webp);
+}
+.hosting-features-icon.git-integration{
+    background-image: url(../images/windows_hosting/git_integration.webp);
+}
+.hosting-features-icon.uptime-guarantee{
+    background-image: url(../images/windows_hosting/uptime_guarantee.webp);
+}
+.hosting-features-icon.expert-support{
+    background-image: url(../images/windows_hosting/expert_support.webp);
+}
+.hosting-features-icon.moneyback-guarantee{
+    background-image: url(../images/windows_hosting/moneyback_guarantee.webp);
 }

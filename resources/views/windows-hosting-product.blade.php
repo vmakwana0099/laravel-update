@@ -29,7 +29,8 @@
                         @endif
                     </div>
                 </div>
-            </div>        
+            </div>    
+            </div>    
         @elseif($ProductBanner->id == 2)
             <div class="hosting_banner_main linux-hosting-banner-main windows-hosting-section">
                 <div class="container">
@@ -68,28 +69,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         @endif
     @endif
     @if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-        <div class="lin-plns-cntnr head-tb-p-40">
-    <div class="container">
-            <div class="row ">
-            
-            <div class="col-sm-12">
-                <div class="section-heading mb-0">
-                <h2 class="text-center text_head">
-                    High-Octane Windows Web Hosting in India
-                </h2>
-                <p class="text-center">Web Hosting providers generally provide both Windows and Linux operating system options. It can get challenging for the user to decide which one to opt for, owing to the individual benefits of either of these options. Windows Server Hosting tends to offer comparatively more options when referring to website technologies, has strong security backed by leading foreign corporations, and is often found easier to configure by beginners. Thus, it is considered the best hosting platform despite being the most expensive one.</p>
-                <p class="text-center">Windows web hosting is basically referred to the websites that are hosted through the means of the Windows Operating System. Ideally, Windows Web Hosting is the kind of service that should be adopted by you in case you plan to use certain specific Microsoft applications like Active Server Pages (ASP) or aim to develop your website with Microsoft FrontPage. Windows Web Hosting is widely popular for providing extremely powerful, end-to-end management, reliability, and scalability features along with its highlighting features of integrating the business with the internet and any Microsoft products to the website. Windows Hosting Plans are considerably the most preferred ones considering the highlighting features that they offer namely.
-</p>
-                 
-            </div>
-            </div>
-         
-            </div>
-            </div>
-     </div>
+      
 
     {{-- <div class="vps-plan-main-div win-pln-box head-tb-p-40">
         <div class="container">
@@ -868,56 +852,6 @@
 
 
 
-<div class="g-suite-lists head-tb-p-40">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="section-heading">
-                                <h2 class="text_head text-center">Why Choose Windows Web Hosting?</h2>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">1</i>
-                                        <div class="g-list-title">ASP.NET Hosting</div>
-                                        <span>This kind of hosting runs on the browser as well on the backend and thus is preferred by most and is available on Windows Web Hosting. </span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                   <div class="g-list-box">
-                                        <i class="list-num">2</i>
-                                        <div class="g-list-title">One-click Script Installs</div>
-                                        <span>Even the cheap Windows Hosting options available in the current scenario offer the option of one-click script installing, thus, minimalizing the entire process of configuration.
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                           <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">3</i>
-                                        <div class="g-list-title">MS Access and MS SQL </div>
-                                        <span>MS Access is the comparatively older database which is used for the smaller, more basic purposes whereas MS SQL is the newer, more recent version and both these versions are available on Windows Web Hosting options.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">4</i>
-                                        <div class="g-list-title">Fast & Best</div>
-                                        <span>Get the speed you desire with our full-line of fine-tuned options for cheap Windows hosting. Choose from our high-octane Windows hosting plans in India and give your business the functionality you want. </span>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                    </div>
-                </div>
 @endif
 
 <div class="vps-features {{$mainclass}} head-tb-p-40" id="features">
@@ -952,13 +886,9 @@
 </div>
 
 
- <!--See More Features section start-->
- @include('template.theme_v1.more_hosting_features')
- <!--See More Features section end-->
 
 @endif
 
-@include('template.hostadvice-award')
 
 <div class="lading_bottom">
       
@@ -966,52 +896,6 @@
 @include('template.'.$themeversion.'.faq-section')
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
    
-    <section class="most-power-plans head-tb-p-40">
-    <div class="container">
-        <div class="section-heading">
-            <h2 class="text_head text-center">Looking For Something Else?</h2>
-        </div>
-        <div class="row justify-content-center">
-            @foreach($FeaturedProductsData as $FeaturedProducts)
-            <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="most-power-card">
-                    <div class="power-card-tittle">
-                        <h2 class="text-light">{{$FeaturedProducts->varTitle}}</h2>
-                        <p>{{$FeaturedProducts->varShortDescription}}</p>
-                        <div class="most-power-circle-ol">
-                            <div class="most-power-circle">
-                                <div class="frnt-cnt">
-                                    Starting @
-                                </div>
-                                <div class="price-cnt">
-                                    @if(Config::get('Constant.sys_currency') == 'INR')
-                                    ₹<span></i>{{ Config::get('Constant.'.$FeaturedProducts->varWHMCSFieldName.'_INR') }}</span>/mo*
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="power-card-data">
-                        <div class="power-card-cnt">
-                            @php $FeaturedProductsDec = explode("\n",$FeaturedProducts->varFeature); @endphp
-                            <ul>
-                                @foreach($FeaturedProductsDec as $info)
-                                <li>
-                                    {{$info}}
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="power-plans-btn">
-                            <a href="{{$FeaturedProducts->varButtonLink}}" class="buy-now-btn" title="{{$FeaturedProducts->varButtonName}}">{{$FeaturedProducts->varButtonName}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
     @endif
     
 </div>
