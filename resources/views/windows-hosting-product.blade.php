@@ -31,44 +31,7 @@
                 </div>
             </div>    
             </div>    
-        @elseif($ProductBanner->id == 2)
-            <div class="hosting_banner_main linux-hosting-banner-main windows-hosting-section">
-                <div class="container">
-                    <div class="web-hosting-main-top">
-                        <div class="row  align-items-center">
-                            <div class="col-lg-6">
-                                <div class="web-hosting-banner-left">
-                                    <h1>India’s Best Windows Web Hosting</h1>
-                                    <h2>Most Compatible Solution for ASP.NET Websites</h2>
-                                    <div class="web-hosting-features">
-                                        <ul>
-                                            <li><i class="fa fa-check-circle web-hosting-features-icon" aria-hidden="true"></i>DDoS Protection</li>
-                                            <li><i class="fa fa-check-circle web-hosting-features-icon" aria-hidden="true"></i>99.95% Uptime Guarantee</li>
-                                            <li><i class="fa fa-check-circle web-hosting-features-icon" aria-hidden="true"></i>Fully Secured Emails</li>
-                                            <li><i class="fa fa-check-circle web-hosting-features-icon" aria-hidden="true"></i>Plesk For Data Management</li>
-                                        </ul>
-                                    </div>
-                                    <div class="web-hosting-plans">
-                                    <p class="linux-hosting_pricing">Starting @ <span> Rs 90/mo</span></p>
-                                        <a href="{{url('/hosting/linux-hosting#yearshow')}}">
-                                            <button>Get Started</button>
-                                        </a>
-                                    </div>
-                                    <div class="wind-h-banner-talk-to-exprt">
-                                        <p>Talk To Our Experts <span>24/7 Chat & Telephonic Support</span></p>
-                                    <img src="{{url('/assets/images/chat-icon-2.png')}}" / alt="Windows Hosting">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="web-hosting-banner-left">
-                                    <img src="{{url('/assets/images/Windows_Hosting-2.png')}}" / alt="Windows Hosting">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             </div>
         @endif
     @endif
