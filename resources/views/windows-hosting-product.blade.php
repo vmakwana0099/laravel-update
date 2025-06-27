@@ -88,59 +88,17 @@
                 </div>
                 {{-- </div> --}}
                 
-                 @if($ProductBanner->id == 2) 
-                <div class="aos-init clearfix col-12" data-aos="fade-up" data-aos-delay="600" id='yearshow'>
-                    <ul class="nav nav-pills nav-vps-hosting d-flex justify-content-center mb-4 @if($ProductBanner->id == 7) pb-10 @endif">
-                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan0" title="1 Month" id='onemonth'>1 Month @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan1" title="1 year" id='oneyear'>1 year @if(!empty($ProductBanner->varOfferTextOneYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextOneYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan2" title="2 years" id='twoyear'>2 years @if(!empty($ProductBanner->varOfferTextTwoYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextTwoYear}}</span></span>@endif</a></li>
-                        <li><a class="nav-link" data-bs-toggle="pill" href="#vps-plan3" title="3 years" id='threeyear' class="active show">3 years @if(!empty($ProductBanner->varOfferTextThreeYear)) <span><span class="bg-color">{{$ProductBanner->varOfferTextThreeYear}}</span></span>@endif</a></li>
-                    </ul>
-                </div>
-                @endif
-               
-                
                     @php
 
                             $plan_row = 'justify-content-center';
                             $box_plan_class = 'col-md-6 col-lg-3 col-xs-12';
-                            $_BASIC_PRICE_1_INR='_STARTER_PRICE_1_INR';
-                            $_BASIC_PRICE_12_INR='_STARTER_PRICE_12_INR';
-                            $_BASIC_PRICE_1_USD='_STARTER_PRICE_1_USD';
-                            $_BASIC_PRICE_12_USD='_STARTER_PRICE_12_USD';
-                            $_ESSENTIAL_PRICE_1_INR='_PERFORMANCE_PRICE_1_INR';
-                            $_ESSENTIAL_PRICE_12_INR='_PERFORMANCE_PRICE_12_INR';
-                            $_ESSENTIAL_PRICE_1_USD='_PERFORMANCE_PRICE_1_USD';
-                            $_ESSENTIAL_PRICE_12_USD='_PERFORMANCEL_PRICE_12_USD';
-                            $_PROFESSIONAL_PRICE_1_INR='_BUSINEESS_PRICE_1_INR';
-                            $_PROFESSIONAL_PRICE_12_INR='_BUSINEESS_PRICE_12_INR';
-                            $_PROFESSIONAL_PRICE_1_USD='_BUSINEESS_PRICE_1_USD';
-                            $_PROFESSIONAL_PRICE_12_USD='_BUSINEESS_PRICE_12_USD';
+                            
 
-                            $_BASIC_PRICE_3_INR='_STARTER_PRICE_3_INR';
-                            $_BASIC_PRICE_24_INR='_STARTER_PRICE_24_INR';
-                            $_BASIC_PRICE_3_USD='_STARTER_PRICE_3_USD';
-                            $_BASIC_PRICE_24_USD='_STARTER_PRICE_24_USD';
-                            $_ESSENTIAL_PRICE_3_INR='_PERFORMANCE_PRICE_3_INR';
-                            $_ESSENTIAL_PRICE_24_INR='_PERFORMANCE_PRICE_24_INR';
-                            $_ESSENTIAL_PRICE_3_USD='_PERFORMANCE_PRICE_3_USD';
-                            $_ESSENTIAL_PRICE_24_USD='_PERFORMANCE_PRICE_24_USD';
-                            $_PROFESSIONAL_PRICE_3_INR='_BUSINEESS_PRICE_3_INR';
-                            $_PROFESSIONAL_PRICE_24_INR='_BUSINEESS_PRICE_24_INR';
-                            $_PROFESSIONAL_PRICE_3_USD='_BUSINEESS_PRICE_3_USD';
-                            $_PROFESSIONAL_PRICE_24_USD='_BUSINEESS_PRICE_24_USD';
-
-                            $_BASIC_PRICE_6_INR='_STARTER_PRICE_6_INR';
                             $_BASIC_PRICE_36_INR='_STARTER_PRICE_36_INR';
-                            $_BASIC_PRICE_6_USD='_STARTER_PRICE_6_USD';
                             $_BASIC_PRICE_36_USD='_STARTER_PRICE_36_USD';
-                            $_ESSENTIAL_PRICE_6_INR='_PERFORMANCE_PRICE_6_INR';
                             $_ESSENTIAL_PRICE_36_INR='_PERFORMANCE_PRICE_36_INR';
-                            $_ESSENTIAL_PRICE_6_USD='_PERFORMANCE_PRICE_6_USD';
                             $_ESSENTIAL_PRICE_36_USD='_PERFORMANCE_PRICE_36_USD';
-                            $_PROFESSIONAL_PRICE_6_INR='_BUSINEESS_PRICE_6_INR';
                             $_PROFESSIONAL_PRICE_36_INR='_BUSINEESS_PRICE_36_INR';
-                            $_PROFESSIONAL_PRICE_6_USD='_BUSINEESS_PRICE_6_USD';
                             $_PROFESSIONAL_PRICE_36_USD='_BUSINEESS_PRICE_36_USD';
             
                     @endphp
@@ -203,22 +161,6 @@
                                                 {{-- {!!$BasicThreeYearButtonText!!} --}}
                                                 {!!$StarterThreeYearButtonText!!}
                                             </div>
-
-                                            @if(Config::get('Constant.sys_currency') == 'INR')
-                                                @if(isset($ProductsPackageData[0]->intOldPriceThreeYearINR))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @else
-                                                @if(isset($ProductsPackageData[0]->intOldPriceThreeYearUSD))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[0]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @endif
 
                                         </div>
                                         <div class="shared-plan-cnt">
@@ -312,7 +254,7 @@
                                                     @endif
                                                 @endforeach                                                
                                             </ul>
-                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -380,22 +322,6 @@
                                                 {!!$PerformanceThreeYearButtonText!!}
 
                                             </div>
-                                            
-                                             @if(Config::get('Constant.sys_currency') == 'INR')
-                                                @if(isset($ProductsPackageData[1]->intOldPriceThreeYearINR))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @else
-                                                @if(isset($ProductsPackageData[1]->intOldPriceThreeYearUSD))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[1]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @endif
                                             
                                         </div>
                                         <div class="shared-plan-cnt">
@@ -495,7 +421,7 @@
                                                     @endif
                                                 @endforeach
                                             </ul>
-                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -558,21 +484,6 @@
                                                 
                                             </div>
                                             
-                                             @if(Config::get('Constant.sys_currency') == 'INR')
-                                                @if(isset($ProductsPackageData[2]->intOldPriceThreeYearINR))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearINR}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @else
-                                                @if(isset($ProductsPackageData[2]->intOldPriceThreeYearUSD))
-                                                    <div class="shared-plan-renew">                                                
-                                                        Renews at {!! Config::get('Constant.sys_currency_symbol') !!}
-                                                        {{$ProductsPackageData[2]->intOldPriceThreeYearUSD}}/mo after 3 years. Cancel anytime.
-                                                    </div>
-                                                @endif
-                                            @endif
                                         </div>
                                         <div class="shared-plan-cnt">
                                             <ul>
@@ -671,7 +582,7 @@
                                                     @endif
                                                 @endforeach
                                             </ul>
-                                            <a href="" title="See More Features" class="shared-plan-more-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">See More Features</a>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -884,10 +795,10 @@
         </div>
     </div>
 </div>
-
-
-
 @endif
+
+@include('template.'.$themeversion.'.testimonial_section');
+@include('template.'.$themeversion.'.support_section_home');
 
 
 <div class="lading_bottom">
@@ -907,126 +818,7 @@
     }, '2000'); 
 </script>
 @endif
-<script>
-function LoadFeatures(fea, count) {
-//    var i;
-//            for (i = 5; i < count; i++) {
-//    $("#" + fea + i).show();
-//    }
-//    $("#" + fea).hide();
-}
-</script>
-   @php if($ProductBanner->id == '7') {  @endphp 
-<script src="{{ url('/') }}/assets/js/vps-range-jquery-ui.js?v={{date('YmdHi')}}"></script>
-<script>
-    function VPSFeatures(id){
-        if(id == 'StarterOneMonthFeatures'){
-              $('#StarterOneMonthFeatures').show();
-              $('#PerformanceOneMonthFeatures').hide();
-              $('#BusinessOneMonthFeatures').hide();
-        } else if (id == 'PerformanceOneMonthFeatures'){
-             $('#StarterOneMonthFeatures').hide();
-             $('#PerformanceOneMonthFeatures').show();
-             $('#BusinessOneMonthFeatures').hide();
-        } else if (id == 'BusinessOneMonthFeatures'){
-             $('#StarterOneMonthFeatures').hide();
-             $('#PerformanceOneMonthFeatures').hide();
-             $('#BusinessOneMonthFeatures').show();
-        }
-    }
-    
-    $("[data-scroll-to]").click(function() {
-        var $this = $(this),
-            $toElement      = $this.attr('data-scroll-to'),
-            $focusElement   = $this.attr('data-scroll-focus'),
-            $offset         = $this.attr('data-scroll-offset') * 1 || 0,
-            $speed          = $this.attr('data-scroll-speed') * 1 || 500;
 
-        $('html, body').animate({
-          scrollTop: $($toElement).offset().top + $offset
-        }, $speed);
-
-        if ($focusElement) $($focusElement).focus();
-      });
-      
-</script>
-<script>
-    $(document).ready(function() {   
-        $( ".planform" ).each(function( index ) {
-            var id = $( this ).attr('id');
-            var form_id = id.split('_');
-            $("#"+id).append("<input type='hidden' name='vps_cpu[]' id='vps_cpu"+form_id[3]+"' value='2' /> ");
-            $("#"+id).append("<input type='hidden' name='vps_ram[]' id='vps_ram"+form_id[3]+"' value='2' /> ");
-            $("#"+id).append("<input type='hidden' name='vps_hdd[]' id='vps_hdd"+form_id[3]+"' value='15' /> ");
-           });
-    });
-    
-     $( function() {
-    $( "#ghz-slider1" ).slider({
-      min: 2,
-      max: 6,
-      step: 2,
-      value: 2,
-      slide: function( event, ui ) {
-        $( ".planform" ).each(function( index ) {
-            var id = $( this ).attr('id');
-            var form_id = id.split('_');
-            $("#vps_cpu"+form_id[3]).val(ui.value);
-           });
-           $( "#ghz-value1" ).val( ui.value );
-      }
-    });
-    $( "#ghz-value1" ).val( $( "#ghz-slider1" ).slider( "value" ) );
-  });
-  
-   $( function() {
-    $( "#mb-slider1" ).slider({
-      min: 2,
-      max: 6,
-      step: 2,
-      value: 2,
-      slide: function( event, ui ) {
-           $( ".planform" ).each(function( index ) {
-            var id = $( this ).attr('id');
-            var form_id = id.split('_');
-            $("#vps_ram"+form_id[3]).val(ui.value);
-           });
-           $( "#mb-value1" ).val( ui.value );
-      }
-    });
-     $( "#mb-value1" ).val( $( "#mb-slider1" ).slider( "value" ) );
-  });
-  
-  $( function() {
-    $( "#gb-slider1" ).slider({
-      min: 15,
-      max: 50,
-      value: 15,
-      slide: function( event, ui ) {
-           $( ".planform" ).each(function( index ) {
-            var id = $( this ).attr('id');
-            var form_id = id.split('_');
-            $("#vps_hdd"+form_id[3]).val(ui.value);
-           });
-           $( "#gb-value1" ).val( ui.value );
-      }
-    });
-    $( "#gb-value1" ).val( $( "#gb-slider1" ).slider( "value" ) );
-  });
-  </script>
- @php }  @endphp 
- <script type="text/javascript">
-     $("#monthly").prop('checked', false);
-     setTimeout(function(){ $("#monthly").click(); $("#threeyear").click(); },1000); //set 3 year pricing
-     
-     $("#form_hosting_158_1,#form_hosting_159_2,#form_hosting_160_3,#form_hosting_158_5,#form_hosting_159_6,#form_hosting_160_7,#form_hosting_158_9,#form_hosting_159_10,#form_hosting_160_11,#form_hosting_158_13,#form_hosting_159_14,#form_hosting_160_15,#form_hosting_158_17,#form_hosting_159_18,#form_hosting_160_19,#form_hosting_158_21,#form_hosting_159_22,#form_hosting_160_23")
-    .find('.shared-hstg-plan-btn')
-    .css({"background":"gray"})
-    .text("Out of Stock")
-    .removeAttr("onclick")
-    .prop('title','Out of Stock')
-    .click(function(){ return false; });
- </script>
  <script>
     // const germanyButton=document.getElementById('loc3');
     // germanyButton.addEventListener('click',hideVpsPlanDiv);

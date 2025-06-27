@@ -827,7 +827,7 @@
                                             <input type="password" name="loginpassword" id="loginpassword" value="{{Cookie::get('front_cookie_login_password')}}" tabindex="2" class="form-control" placeholder="....." required="required" autocomplete=off>
                                             <span toggle="#loginpassword" class="" id="sign_in_pass"></span>
                                             @else
-                                            <input type="password" name="loginpassword" id="loginpassword" value="" tabindex="2" class="form-control" placeholder="....." required="required" autocomplete=off>
+                                            <input type="password" name="loginpassword" id="loginpassword" value="" tabindex="2" class="form-control" placeholder="....." required="required">
                                             <span toggle="#loginpassword" class="" id="sign_in_pass"></span>
                                             @endif
 
@@ -868,9 +868,9 @@
                                         <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-login my-3" value="Sign in">
 
                                     </div>
-                                   {{--  <div class="forgot-password-box">
-                                        <a href="javascript:;" tabindex="5" class="forgot-password">Forgot Password ?</a>
-                                    </div> --}}
+                                    <div class="forgot-password-box">
+                                        <a href="javascript:;" tabindex="" class="signup-form-link">Register</a>
+                                    </div>
                                 </form>
                                 <!-- sign-in-form-e -->
 
@@ -1040,7 +1040,7 @@
 
 <script type="text/javascript">
 $("#signup-form-link").click(function(){$(".signin-btn").text("Create Account"),$("#signup-form").show()});
-function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==i?confirm("Are you sure? You wants to move to india location website.")?window.location="https://www.hostitsmart.com":($("#currency").val("USD"),$("#currency").selectpicker("refresh")):confirm("Are you sure? You wants to move to Global location website.")?window.location="https://global.hostitsmart.com":($("#currency").val("INR"),$("#currency").selectpicker("refresh")),$("#currency").selectpicker("refresh")}$(".forgot-password").click(function(){$("#reset-form").show(),$("#signin-form").hide(),$(".sign-with").hide()}),$(".already-member,.signinusr").click(function(){$(".signin-btn").text("Login"),$("#reset-form").hide(),$("#signup-form").hide(),$("#otp-verification-form").hide(),$("#signin-form").show(),$(".signup-btn").removeClass("active"),$(".signin-btn").addClass("active"),$(".sign-with").show()}),$("#signin-form-link").click(function(){$("#signin-form-link").text("Login"),$("#otp-verification-form2,#reset-form, #signup-form,.sign-with").hide(),$("#signin-form").show(); return false;}),$("#signup-form-link").click(function(){ $("#reset-form, #signin-form, .sign-with").hide(),$(".signin-btn").removeClass('active'),$(".signup-btn").addClass('active'); return false;}),$("#signup-form-link").click(function(){$("#fullname").focus(); $("#one").hide(),$("#two").show()}),$("#signin-form-link").click(function(){$("#one").show(),$("#two").hide()});
+function hidetopdeals(){ $(".top-header").hide()}function getcurrency(i){"INR"==i?confirm("Are you sure? You wants to move to india location website.")?window.location="https://www.hostitsmart.com":($("#currency").val("USD"),$("#currency").selectpicker("refresh")):confirm("Are you sure? You wants to move to Global location website.")?window.location="https://global.hostitsmart.com":($("#currency").val("INR"),$("#currency").selectpicker("refresh")),$("#currency").selectpicker("refresh")}$(".forgot-password").click(function(){$("#reset-form").show(),$("#signin-form").hide(),$(".sign-with").hide()}),$(".already-member,.signinusr").click(function(){$(".signin-btn").text("Login"),$("#reset-form").hide(),$("#signup-form").hide(),$("#otp-verification-form").hide(),$("#signin-form").show(),$(".signup-btn").removeClass("active"),$(".signin-btn").addClass("active"),$(".sign-with").show()}),$("#signin-form-link").click(function(){$("#signin-form-link").text("Login"),$("#otp-verification-form2,#reset-form, #signup-form,.sign-with").hide(),$("#signin-form").show(); return false;}),$("#signup-form-link").click(function(){ $("#reset-form, #signin-form, .sign-with").hide(),$(".signin-btn").removeClass('active'),$(".signup-btn").addClass('active'); return false;}),$("#signup-form-link").click(function(){$("#fullname").focus(); $("#one").hide(),$("#two").show()}),$("#signin-form-link").click(function(){$("#one").show(),$("#two").hide()}),$(".signup-form-link").click(function(){ $("#reset-form, #signin-form, .sign-with").hide(),$(".signin-btn").removeClass('active'),$(".signup-btn").addClass('active'),$("#signup-form").show(); return false;});
         
         $( document ).ready(function() {
         //For more feature hide and show on product page.
