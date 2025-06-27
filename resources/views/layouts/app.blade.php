@@ -289,6 +289,16 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 @if(Request::segment(1)=='contact')
 <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/contact-us.css?v={{date('YmdHi')}}" media="all" />
 @endif
+@if(Request::segment(1)=='web-hosting')
+<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/Web_Hosting.css?v={{date('YmdHi')}}" media="all" />
+<link rel="stylesheet" href="../assets/css/web_hosting_banner_24.css?v={{date('YmdHi')}}"/>    
+
+@endif
+@if(Request::segment(1)=='web-hosting-ahmedabad')
+<link rel="stylesheet" href="../assets/css/web_hosting_ahmedabad_banner_24.css?v={{date('YmdHi')}}"/>    
+<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/Web_Hosting.css?v={{date('YmdHi')}}" media="all" />
+
+@endif
 @if(Request::segment(1)=='terms' || Request::segment(1)=='privacy-policy')
 <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/terms.css?v={{date('YmdHi')}}" media="all" />
 @endif
@@ -297,8 +307,6 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
     <link rel="stylesheet" href="../assets/css/buy-com-domain-names.css?v={{date('YmdHi')}}" />
     @endif
 @if(Request::segment(1)=='web-hosting' || Request::segment(1)=='web-hosting-ahmedabad')
-<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/Web_Hosting.css?v={{date('YmdHi')}}" media="all" />
-<link rel="stylesheet" href="../assets/css/web_hosting_banner_24.css?v={{date('YmdHi')}}"/>    
 <link rel="preload" as="image" href="../assets/images/new_img/black-friday-bnnr2.webp">
 <link rel="preload" as="image" href="../assets/images/new_img/black-friday-BG.webp">    
 @endif
