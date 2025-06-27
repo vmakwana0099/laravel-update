@@ -40,8 +40,8 @@ if(empty(Request::segment(1))){
     "@type": "AggregateOffer",
     "url": "https://www.hostitsmart.com",
     "priceCurrency": "INR",
-    "lowPrice": "45",
-    "highPrice": "3585"
+    "lowPrice": "49",
+    "highPrice": "399"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -51,52 +51,40 @@ if(empty(Request::segment(1))){
 }
 </script>';
 }
+if(Request::segment(1) == "domain-registration"){
+ //Domain registration page    
+  echo '<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "Domain Registration India",
+  "image": "https://www.hostitsmart.com/assets/images/domain_registration/domain-ext-busi.webp",
+  "description": "Looking to register a domain without breaking the bank? Our cheap domain registration service in India offers your perfect name at unbeatable prices.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://www.hostitsmart.com/domain-registration",
+    "priceCurrency": "INR",
+    "lowPrice": "643.28",
+    "highPrice": "2204.96",
+    "offerCount": "200"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "1500"
+  }
+}
+</script>';
+}
 if(isset($CatId) && !empty($CatId)){ 
-    //echo "cat id". $CatId;
     if($CatId == 1 || $CatId == 9){
-    //Domain Registration - https://www.hostitsmart.com/domain
-    //Domain Registration - https://www.hostitsmart.com/domain-registration
-    /*echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "Domain Registration",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Buy cheap domain names with us. Host IT Smart India`s Leading Domain Registration & Web hosting Company. 24/7 Phone & Chat Support",
-		  "sku": "Domain Registration",
-  	      "mpn": "Domain Registration",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
-       "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.8",
-      "bestRating": "5"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Host IT Smart"
-    }
-    },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.8",
-			"reviewCount": "395"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "349",
-        	"highprice": "650",
-       		"offercount": "4",								
-			"seller": {
-			 
-		 }}
-		}
-	</script>';*/
+    
   }
    else if($CatId == 10){
     //Web hosting - https://www.hostitsmart.com/web-hosting
@@ -106,7 +94,7 @@ if(isset($CatId) && !empty($CatId)){
   "@type": "Product", 
   "name": "Web Hosting",
   "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-  "description": "Get cheap web hosting plans in India start at Rs.45 per month and include a free SSL certificate, 99% uptime, 24*7 support, and a 30-day money-back guarantee.",
+  "description": "Get cheap web hosting plans in India start at Rs.49 per month and include a free SSL certificate, 99% uptime, 24*7 support, and a 30-day money-back guarantee.",
   "brand": {
     "@type": "Brand",
     "name": "Host IT Smart"
@@ -115,7 +103,7 @@ if(isset($CatId) && !empty($CatId)){
     "@type": "AggregateOffer",
     "url": "https://www.hostitsmart.com/web-hosting",
     "priceCurrency": "INR",
-    "lowPrice": "45",
+    "lowPrice": "49",
     "highPrice": "399"
   },
   "aggregateRating": {
@@ -161,18 +149,18 @@ if(isset($CatId) && !empty($CatId)){
    else if($CatId == 4){
     //SSL Certificate - https://www.hostitsmart.com/ssl
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "SSL Certificate",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Host IT Smart is one of the best SSL Certificate providers in India. Buy SSL certificates for your website in only Rs.60/ Month with Free Trust Logo from Comodo, GeoTrust, and Thawte.",
-		  "sku": "SSL Certificate",
-  	      "mpn": "SSL Certificate",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "SSL Certificate",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Host IT Smart is one of the best SSL Certificate providers in India. Buy SSL certificates for your website in only Rs.60/ Month with Free Trust Logo from Comodo, GeoTrust, and Thawte.",
+      "sku": "SSL Certificate",
+          "mpn": "SSL Certificate",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -185,22 +173,22 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.5",
-			"reviewCount": "286"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "720",
-        	"highprice": "7200",
-       		"offercount": "4",								
-			"seller": {
-			 
-		 }}
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "286"
+      },
+     "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowprice": "720",
+          "highprice": "7200",
+          "offercount": "4",                
+      "seller": {
+       
+     }}
+    }
+  </script>';
   }
 }
   if(isset($ProductId) && !empty($ProductId)){ 
@@ -213,7 +201,7 @@ if(isset($CatId) && !empty($CatId)){
   "@type": "Product", 
   "name": "Linux Hosting",
   "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-  "description": "Cheap Linux Web Hosting Services in India at Rs 45/month. We offer Linux Shared Hosting with cPanel. Get Free SSL, 99.9% uptime &amp; 30-day money-back guarantee.",
+  "description": "Cheap Linux Web Hosting Services in India at Rs 49/month. We offer Linux Shared Hosting with cPanel. Get Free SSL, 99.9% uptime &amp; 30-day money-back guarantee.",
   "brand": {
     "@type": "Brand",
     "name": "Host IT Smart"
@@ -222,7 +210,7 @@ if(isset($CatId) && !empty($CatId)){
     "@type": "AggregateOffer",
     "url": "https://www.hostitsmart.com/hosting/linux-hosting",
     "priceCurrency": "INR",
-    "lowPrice": "45",
+    "lowPrice": "49",
     "highPrice": "399"
   },
   "aggregateRating": {
@@ -254,7 +242,7 @@ if(isset($CatId) && !empty($CatId)){
     "@type": "AggregateOffer",
     "url": "https://www.hostitsmart.com/hosting/wordpress-hosting",
     "priceCurrency": "INR",
-    "lowPrice": "45",
+    "lowPrice": "49",
     "highPrice": "399"
   },
   "aggregateRating": {
@@ -273,7 +261,7 @@ if(isset($CatId) && !empty($CatId)){
   "@type": "Product", 
   "name": "eCommerce Hosting",
   "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-  "description": "Begin an online store with the cheapest eCommerce hosting provider in India. Get the Best eCommerce website hosting Plans Ever! Starting at just Rs.45/mo.",
+  "description": "Begin an online store with the cheapest eCommerce hosting provider in India. Get the Best eCommerce website hosting Plans Ever! Starting at just Rs.49/mo.",
   "brand": {
     "@type": "Brand",
     "name": "Host IT Smart"
@@ -284,7 +272,7 @@ if(isset($CatId) && !empty($CatId)){
     "@type": "AggregateOffer",
     "url": "https://www.hostitsmart.com/hosting/ecommerce-hosting",
     "priceCurrency": "INR",
-    "lowPrice": "45",
+    "lowPrice": "49",
     "highPrice": "399"
   }
 }
@@ -293,18 +281,18 @@ if(isset($CatId) && !empty($CatId)){
   // else if($ProductId == 13){
     //Java Hosting Page - https://www.hostitsmart.com/hosting/java-hosting
   //   echo '<script type="application/ld+json">
-	// 	{
-	// 	  "@context": "http://schema.org/",
-	// 	  "@type": "Product",
-	// 	  "name": "Java Hosting",
-	// 	  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-	// 	  "description": "Host IT Smart is one of the best Java Hosting Server Provider In India. Our Java Hosting plans starting at Rs.80/month with 24/7 Technical Support.",
-	// 	  "sku": "Java Hosting",
-  // 	      "mpn": "Java Hosting",
-	//       "brand": {
-	// 	"@type": "Brand",
-	// 	"name": "Host IT Smart"
-	//   },
+  //  {
+  //    "@context": "http://schema.org/",
+  //    "@type": "Product",
+  //    "name": "Java Hosting",
+  //    "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+  //    "description": "Host IT Smart is one of the best Java Hosting Server Provider In India. Our Java Hosting plans starting at Rs.80/month with 24/7 Technical Support.",
+  //    "sku": "Java Hosting",
+  //        "mpn": "Java Hosting",
+  //       "brand": {
+  //  "@type": "Brand",
+  //  "name": "Host IT Smart"
+  //   },
   //      "review": {
   //   "@type": "Review",
   //   "reviewRating": {
@@ -317,40 +305,40 @@ if(isset($CatId) && !empty($CatId)){
   //     "name": "Host IT Smart"
   //   }
   //   },
-	// 	  "aggregateRating": {
-	// 		"@type": "AggregateRating",
-	// 		"ratingValue": "4.4",
-	// 		"reviewCount": "297"
-	// 	  },
-	// 	 "offers": {
-	// 		"@type": "AggregateOffer",
-	// 		"priceCurrency": "INR",
-	// 		"lowprice": "80",
-  //       	"highprice": "320",
-  //      		"offercount": "4",								
-	// 		"seller": {
-	// 		  "@type": "Product",
-	// 		  "name": "Java Hosting"
-	// 	 }}
-	// 	}
-	// </script>';
+  //    "aggregateRating": {
+  //    "@type": "AggregateRating",
+  //    "ratingValue": "4.4",
+  //    "reviewCount": "297"
+  //    },
+  //   "offers": {
+  //    "@type": "AggregateOffer",
+  //    "priceCurrency": "INR",
+  //    "lowprice": "80",
+  //        "highprice": "320",
+  //          "offercount": "4",                
+  //    "seller": {
+  //      "@type": "Product",
+  //      "name": "Java Hosting"
+  //   }}
+  //  }
+  // </script>';
     
   // }
   else if($ProductId == 15){
     //Linux Reseller Hosting - https://www.hostitsmart.com/hosting/linux-reseller-hosting
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "Linux Reseller Hosting",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Are you looking for the cheapest Linux Reseller Hosting provider in India? Host IT Smart offers Best Reseller Hosting plan with unlimited websites. Start your hosting business only for Rs.1100/Month.",
-		  "sku": "Linux Reseller Hosting",
-  	      "mpn": "Linux Reseller Hosting",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "Linux Reseller Hosting",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Are you looking for the cheapest Linux Reseller Hosting provider in India? Host IT Smart offers Best Reseller Hosting plan with unlimited websites. Start your hosting business only for Rs.1100/Month.",
+      "sku": "Linux Reseller Hosting",
+          "mpn": "Linux Reseller Hosting",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -363,43 +351,43 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.7",
-			"reviewCount": "298"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "2500",
-        	"highprice": "4500",
-       		"offercount": "4",								
-			"seller": {
-			  
-		 }}
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "298"
+      },
+     "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowprice": "2500",
+          "highprice": "4500",
+          "offercount": "4",                
+      "seller": {
+        
+     }}
+    }
+  </script>';
     
   }
   else if($ProductId == 16){
-	  //Bulk Domain - https://www.hostitsmart.com/domain/bulk-domain-search
-	  echo '';
+    //Bulk Domain - https://www.hostitsmart.com/domain/bulk-domain-search
+    echo '';
   }
   else if($ProductId == 12){
     //Windows Reseller Hosting - https://www.hostitsmart.com/hosting/windows-reseller-hosting
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "Windows Reseller Hosting",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Choose your Windows Reseller hosting Plans at Host IT Smart. Get Unlimited Bandwidth, Website, Email or Subdomain in Business Plan. Starting Rs.1500/month.",
-		  "sku": "Windows Reseller Hosting",
-  	      "mpn": "Windows Reseller Hosting",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "Windows Reseller Hosting",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Choose your Windows Reseller hosting Plans at Host IT Smart. Get Unlimited Bandwidth, Website, Email or Subdomain in Business Plan. Starting Rs.1500/month.",
+      "sku": "Windows Reseller Hosting",
+          "mpn": "Windows Reseller Hosting",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -412,22 +400,22 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.8",
-			"reviewCount": "321"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "1500",
-        	"highprice": "2500",
-       		"offercount": "4",								
-			"seller": {
-			  
-		 }}
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "321"
+      },
+     "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowprice": "1500",
+          "highprice": "2500",
+          "offercount": "4",                
+      "seller": {
+        
+     }}
+    }
+  </script>';
   }
   else if($ProductId == 7){
     //VPS Hosting - https://www.hostitsmart.com/servers/vps-hosting
@@ -518,18 +506,18 @@ if(isset($CatId) && !empty($CatId)){
    else if($ProductId == 14){
     //Domain Transfer - https://www.hostitsmart.com/domain/domain-transfer
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "Domain Registration",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Are you looking to domain transfer & renewal? Host IT Smart one of the best place for you where you can transfer your registered domain with us in cheap rate.",
-		  "sku": "Domain Transfer",
-  	      "mpn": "Domain Transfer",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "Domain Registration",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Are you looking to domain transfer & renewal? Host IT Smart one of the best place for you where you can transfer your registered domain with us in cheap rate.",
+      "sku": "Domain Transfer",
+          "mpn": "Domain Transfer",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -542,31 +530,31 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.9",
-			"reviewCount": "427"
-		  }
-		 
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "427"
+      }
+     
+    }
+  </script>';
     
   }
      else if($ProductId == 20){
     //Sitelock - https://www.hostitsmart.com/hosting/site-lock
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "SiteLock",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Get High Security & Malware Protection for your website. Host IT Smart offers site lock only Rs. 125/mo with daily blacklist monitoring.",
-		  "sku": "SiteLock",
-  	      "mpn": "SiteLock",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "SiteLock",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Get High Security & Malware Protection for your website. Host IT Smart offers site lock only Rs. 125/mo with daily blacklist monitoring.",
+      "sku": "SiteLock",
+          "mpn": "SiteLock",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -579,39 +567,39 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.4",
-			"reviewCount": "297"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "125",
-        	"highprice": "1598",
-       		"offercount": "4",								
-			"seller": {
-			 
-		 }}
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "297"
+      },
+     "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowprice": "125",
+          "highprice": "1598",
+          "offercount": "4",                
+      "seller": {
+       
+     }}
+    }
+  </script>';
     
   }
   else if($ProductId == 21){
     //Google apps - https://www.hostitsmart.com/email/google-apps
     echo '<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org/",
-		  "@type": "Product",
-		  "name": "Google Apps",
-		  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-		  "description": "Host IT Smart offers Google Apps for work. Access your Work from Anywhere, So manage your work and store your data online.",
-		  "sku": "Google Apps",
-  	      "mpn": "Google Apps",
-	      "brand": {
-		"@type": "Brand",
-		"name": "Host IT Smart"
-	  },
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "Google Apps",
+      "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
+      "description": "Host IT Smart offers Google Apps for work. Access your Work from Anywhere, So manage your work and store your data online.",
+      "sku": "Google Apps",
+          "mpn": "Google Apps",
+        "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+    },
        "review": {
     "@type": "Review",
     "reviewRating": {
@@ -624,27 +612,27 @@ if(isset($CatId) && !empty($CatId)){
       "name": "Host IT Smart"
     }
     },
-		  "aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": "4.3",
-			"reviewCount": "263"
-		  },
-		 "offers": {
-			"@type": "AggregateOffer",
-			"priceCurrency": "INR",
-			"lowprice": "150",
-        	"highprice": "1520",
-       		"offercount": "4",								
-			"seller": {
-			  
-		 }}
-		}
-	</script>';
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "263"
+      },
+     "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowprice": "150",
+          "highprice": "1520",
+          "offercount": "4",                
+      "seller": {
+        
+     }}
+    }
+  </script>';
     
   }
   else if($ProductId == 22){
-  	//Office 365 - https://global.hostitsmart.com/email/microsoft-office-365-suite
-	  echo '';
+    //Office 365 - https://global.hostitsmart.com/email/microsoft-office-365-suite
+    echo '';
   }
   else if($ProductId == 23){
       //https://www.hostitsmart.com/servers/linux-vps-hosting
@@ -680,11 +668,11 @@ if(isset($CatId) && !empty($CatId)){
       //https://www.hostitsmart.com/servers/windows-vps-hosting
       echo '<script type="application/ld+json">
 {
-  "@context": "https://schema.org/", 
+  "@context": "https://schema.org/",
   "@type": "Product", 
   "name": "Windows VPS Hosting",
-  "image": "https://d1neo0gtmjcot5.cloudfront.net/assets/images/logo.png",
-  "description": "Host IT Smart offers cheap Windows VPS hosting server with 24X7 customer support at only Rs.1040/month. Free instant setup and flexible payment options.",
+  "image": "https://www.hostitsmart.com/assets/images/windows_vps_hosting/win-vps-bnnr.svg",
+  "description": "Host IT Smart offers pocket friendly Windows VPS hosting server in India at only ₹825/month based on KVM Virtualization.",
   "brand": {
     "@type": "Brand",
     "name": "Host IT Smart"
@@ -698,9 +686,234 @@ if(isset($CatId) && !empty($CatId)){
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "1500"
-  }
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "1500",
+    "reviewCount": "1500"
+  },
+  "review": [{
+    "@type": "Review",
+    "name": "Harish Nokhwaal",
+    "reviewBody": "I\'ve had a great experience with this hosting company! Their service is fast, reliable, and affordable. My website runs smoothly with zero downtime, and their customer support is always quick to help and very professional. Highly recommended for anyone looking for a solid hosting provider!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Anshu Bhardwaj",
+    "reviewBody": "I purchased a VPS server there. Everything seems fine so far. After the purchase, there were some errors with the VPS, but they fixed them. They even assisted me via call and AnyDesk. I really love their support.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Rizwan Raja",
+    "reviewBody": "One of the best and cheap hosting in India, I have been using their services for the last 5 years and have never faced any problem. If you need a hosting solution, HOSTITSMART is the best in their services. Their support team is awesome. They will help in going far better in their fields, and all are very supportive.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nikhil Jain",
+    "reviewBody": "I was searching for a good company for my domain name and Java web hosting after my previous company got bankrupt. Luckily I found Host IT Smart. And all the things have again came at their right places at a very good price. Thanks, Host IT Smart Team & Jackob Sir.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "s2 TECH INDIA",
+    "reviewBody": "Exceptional help center! Quick and effective solutions provided with a friendly and knowledgeable team. They made my experience smooth and hassle-free. Definitely my go-to for assistance.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Urvashi Shrivastava",
+    "reviewBody": "One of the best service providers. Extremely satisfied with their customer service and cost effectiveness. Using their services for quite a long and have never faced any delays in taking action against issues. Thanks much!!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Divyanshu Agarwal",
+    "reviewBody": "I have been using their services quite a lot for the last 6 months. I like the ease of use they provided while working with VPS. Also, In case of any issues, the resolution is quite fast.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nirmal Paradkar",
+    "reviewBody": "Very cooperative and very helpful person is Your employee, Mr. Mohan. He always behaves very nicely and is well-mannered. Solves all my problems quickly and has a good rapport with customers. He is also a technically sound person.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nilesh Mourya",
+    "reviewBody": "Dealing with Happy Service’s customer support was a breeze. They were courteous, quick to respond, and resolved my issue efficiently, leaving me with a positive impression of their commitment to customer satisfaction.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Selvakumar Baskaran",
+    "reviewBody": "The host Support team is easy to reach. Appreciate their efficiency of reaching out to them within seconds. Keep it up, guys. Mohsin was a smart guy to provide resolutions quickly.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Bhavesh Tarkhala",
+    "reviewBody": "I have been using servers from Host IT Smart since the last 3 years and I recommend the service of Host IT Smart. They were quick to respond to any queries or concerns. Service and support are awesome!!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Patel Rushil",
+    "reviewBody": "I\'ve been using Host IT Smart for over 2 years now, and I couldn\'t be happier! The server performance is fantastic, with almost no downtime, and the loading speeds are incredible. But what stands out the most is their customer support. Anytime I’ve had an issue, their team has been quick to respond and extremely helpful. Highly recommend it for anyone looking for reliable and top-notch hosting!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Ramdas Tambe",
+    "reviewBody": "I am very happy to be a customer of host it smart from a reputed company. Especially the immediate service was made available. We hope to continue to provide the same service....Ramdas Tambe Reporter today news channel.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Axone Infotech",
+    "reviewBody": "We have experienced exceptional server support and performance with this service. The team is highly responsive, professional, and always available to address any concerns or issues we encounter. Overall, we are highly satisfied with both the support and the server\'s performance.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Vasudev Doddipalle",
+    "reviewBody": "Jay Vagadiya was very helpful and quickly resolved one of the issues faced.. We have made the right moving to hostitsmart. Helpdesk, Sales and technical support teams are very easy to approach for help when needed.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Chandni Gupta",
+    "reviewBody": "Great Service!! I\'ve been using a Hosting service from Host IT Smart from the last few years. They provide a great service. You can reach them anytime for help or with queries. Their service is recommended. I didn\'t face any major issues while using their hosting plan. Everything works smoothly. Great service.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Milan Parmar",
+    "reviewBody": "I have purchased a dedicated server of 32 GB RAM. And I am very much satisfied with the service. Mr Jay is very helpful and supportive. I recommend to all of you who are willing to buy their service.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": ""},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  }]
 }
 </script>';
   }
