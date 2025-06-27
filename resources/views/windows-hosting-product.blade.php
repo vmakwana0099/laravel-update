@@ -29,7 +29,8 @@
                         @endif
                     </div>
                 </div>
-            </div>        
+            </div>    
+            </div>    
         @elseif($ProductBanner->id == 2)
             <div class="hosting_banner_main linux-hosting-banner-main windows-hosting-section">
                 <div class="container">
@@ -68,28 +69,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         @endif
     @endif
     @if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-        <div class="lin-plns-cntnr head-tb-p-40">
-    <div class="container">
-            <div class="row ">
-            
-            <div class="col-sm-12">
-                <div class="section-heading mb-0">
-                <h2 class="text-center text_head">
-                    High-Octane Windows Web Hosting in India
-                </h2>
-                <p class="text-center">Web Hosting providers generally provide both Windows and Linux operating system options. It can get challenging for the user to decide which one to opt for, owing to the individual benefits of either of these options. Windows Server Hosting tends to offer comparatively more options when referring to website technologies, has strong security backed by leading foreign corporations, and is often found easier to configure by beginners. Thus, it is considered the best hosting platform despite being the most expensive one.</p>
-                <p class="text-center">Windows web hosting is basically referred to the websites that are hosted through the means of the Windows Operating System. Ideally, Windows Web Hosting is the kind of service that should be adopted by you in case you plan to use certain specific Microsoft applications like Active Server Pages (ASP) or aim to develop your website with Microsoft FrontPage. Windows Web Hosting is widely popular for providing extremely powerful, end-to-end management, reliability, and scalability features along with its highlighting features of integrating the business with the internet and any Microsoft products to the website. Windows Hosting Plans are considerably the most preferred ones considering the highlighting features that they offer namely.
-</p>
-                 
-            </div>
-            </div>
-         
-            </div>
-            </div>
-     </div>
+      
 
     {{-- <div class="vps-plan-main-div win-pln-box head-tb-p-40">
         <div class="container">
@@ -723,56 +707,151 @@
 } @endphp
 
 @if($ProductBanner->id == 2)
-<div class="g-suite-lists head-tb-p-40">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="section-heading">
-                                <h2 class="text_head text-center">Why Choose Windows Web Hosting?</h2>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">1</i>
-                                        <div class="g-list-title">ASP.NET Hosting</div>
-                                        <span>This kind of hosting runs on the browser as well on the backend and thus is preferred by most and is available on Windows Web Hosting. </span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                   <div class="g-list-box">
-                                        <i class="list-num">2</i>
-                                        <div class="g-list-title">One-click Script Installs</div>
-                                        <span>Even the cheap Windows Hosting options available in the current scenario offer the option of one-click script installing, thus, minimalizing the entire process of configuration.
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                           <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">3</i>
-                                        <div class="g-list-title">MS Access and MS SQL </div>
-                                        <span>MS Access is the comparatively older database which is used for the smaller, more basic purposes whereas MS SQL is the newer, more recent version and both these versions are available on Windows Web Hosting options.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-12">
-                                <div class="g_s_l-box">
-                                    <div class="g-list-box">
-                                        <i class="list-num">4</i>
-                                        <div class="g-list-title">Fast & Best</div>
-                                        <span>Get the speed you desire with our full-line of fine-tuned options for cheap Windows hosting. Choose from our high-octane Windows hosting plans in India and give your business the functionality you want. </span>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
+
+
+
+
+
+
+<section class="winds-supprt-vid-main head-tb-p-40">
+    <div class="container">
+        <div class="win-support-php head-tb-p-40">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Currently Supported PHP Versions
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/01.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="win-support-dot-net head-tb-p-40">
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Available .NET Core Versions
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/02.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="win-support-database head-tb-p-40">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="win-supprt-vid-cnt">
+                    <div class="win-supprt-tittle">
+                        Database Servers
+                    </div>
+                    <div class="win-supprt-txt">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="win-support-video">
+                    <!-- <video autoplay muted playsinline>
+                        <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/03.webp" alt="01">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-dvlp-busi head-tb-p-40">
+    <div class="section-heading">
+    <h2 class="text-center text_head " id="landingloc linux-hosting-plan">Who Should Use Windows Hosting?</h2>  
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="why-dvlp-img">
+                    <img src="../assets/images/windows_hosting/why_shld_win.webp" alt="why_shld_win">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-cards">
+                    <ul>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>ASP.NET & .NET Core Developers</h3>
+                            </div>
+                            <p>If your website or app is built using ASP.NET or .NET Core, Windows hosting should be your go-to solution. It offers native support and will lead to fewer compatibility issues, stability, and a performance-driven environment.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>MSSQL Database Users</h3>
+                            </div>
+                            <p>If you rely on Microsoft SQL Server (MSSQL) databases for your websites, Windows web hosting will simplify your work. It runs most efficiently on a Windows environment as a Microsoft product, offering smooth performance and seamless compatibility.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Businesses Using the Microsoft Ecosystem</h3>
+                            </div>
+                            <p>If you are part of a business that relies heavily on Microsoft technologies, Windows shared hosting is your first and perfect choice for a smooth connection and flawless performance. You don’t need to switch platforms or change the way you work. </p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Companies Running Enterprise-Level Applications</h3>
+                            </div>
+                            <p>If you run resource-intensive applications, you need a stable and powerful hosting environment to achieve your outcome. Windows hosting is a highly competent platform that can handle demanding workloads with ease and deliver high performance with Sureshot reliability.</p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Running on VBScript or Classic ASP Applications</h3>
+                            </div>
+                            <p>If you still use legacy applications like VBScript or Classic ASP, the Windows hosting environment can fully support them. Windows hosting not only keeps your legacy applications running smoothly but also saves you from rebuilding the application from scratch. </p>
+                        </li>
+                        <li>
+                            <div class="service-tittle">
+                                <h3>Users Requiring Full .NET Framework Support</h3>
+                            </div>
+                            <p>If your organization develops apps requiring the full .NET Framework for smooth functioning, Windows hosting has you covered. With the full support for all .NET components, everything runs exactly the way you want with seamless compatibility and optimized performance. </p>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
 @endif
 
 <div class="vps-features {{$mainclass}} head-tb-p-40" id="features">
@@ -807,13 +886,9 @@
 </div>
 
 
- <!--See More Features section start-->
- @include('template.theme_v1.more_hosting_features')
- <!--See More Features section end-->
 
 @endif
 
-@include('template.hostadvice-award')
 
 <div class="lading_bottom">
       
@@ -821,52 +896,6 @@
 @include('template.'.$themeversion.'.faq-section')
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
    
-    <section class="most-power-plans head-tb-p-40">
-    <div class="container">
-        <div class="section-heading">
-            <h2 class="text_head text-center">Looking For Something Else?</h2>
-        </div>
-        <div class="row justify-content-center">
-            @foreach($FeaturedProductsData as $FeaturedProducts)
-            <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="most-power-card">
-                    <div class="power-card-tittle">
-                        <h2 class="text-light">{{$FeaturedProducts->varTitle}}</h2>
-                        <p>{{$FeaturedProducts->varShortDescription}}</p>
-                        <div class="most-power-circle-ol">
-                            <div class="most-power-circle">
-                                <div class="frnt-cnt">
-                                    Starting @
-                                </div>
-                                <div class="price-cnt">
-                                    @if(Config::get('Constant.sys_currency') == 'INR')
-                                    ₹<span></i>{{ Config::get('Constant.'.$FeaturedProducts->varWHMCSFieldName.'_INR') }}</span>/mo*
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="power-card-data">
-                        <div class="power-card-cnt">
-                            @php $FeaturedProductsDec = explode("\n",$FeaturedProducts->varFeature); @endphp
-                            <ul>
-                                @foreach($FeaturedProductsDec as $info)
-                                <li>
-                                    {{$info}}
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="power-plans-btn">
-                            <a href="{{$FeaturedProducts->varButtonLink}}" class="buy-now-btn" title="{{$FeaturedProducts->varButtonName}}">{{$FeaturedProducts->varButtonName}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
     @endif
     
 </div>

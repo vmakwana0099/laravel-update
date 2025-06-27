@@ -1139,7 +1139,7 @@ button.accord-btn {
 .dot {
       fill: #3838ff;
       r: 4;
-      offset-path: path("M0,0 h48.975 v195.659 h39.606 v217.374 h40.042 v223.094 h41.95");
+      offset-path: path("M-5191.146-2265h48.975v195.659h39.606v217.374h40.042v223.094h41.95");
       offset-rotate: auto;
       animation: moveAlong 5s linear infinite;
     }
@@ -1148,6 +1148,86 @@ button.accord-btn {
       0% { offset-distance: 0%; }
       100% { offset-distance: 100%; }
     }
+
+
+
+.hits-prom-modal .modal-dialog {
+    max-width: 880px;
+}
+.hits-prom-modal .modal-content{
+  overflow: hidden;
+  border: none;
+  border-radius: 18px;
+}    
+.hits-prom-modal .modal-body{
+  padding: 0;
+}
+.hits-prom-popup-cnt {
+    padding: 30px;
+}
+.hits-prom-popup-title {
+    color: #080808;
+    font-size: 16px;
+    font-weight: 500;
+}
+.hits-prom-popup-head {
+    font-size: 34px;
+    font-weight: 800;
+    color: #3838ff;
+    margin: 10px 0;
+    line-height: 45px;
+}
+.hits-prom-popup-txt p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #080808;
+    margin-bottom: 8px;
+}
+.hits-prom-popup-txt p span {
+    color: #3838ff;
+}
+.hits-prom-popup-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+.hits-prom-popup-img {
+    background: #3838ff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+.hits-prom-close-btn {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 11;
+    background: #fff;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+button.hits-prom-close-btn:hover {
+    background-color: #e8e8ff;
+}
+button.hits-prom-close-btn svg {
+    width: 11px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

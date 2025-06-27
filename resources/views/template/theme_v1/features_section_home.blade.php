@@ -1,3 +1,44 @@
+<section class="hits-prom-popup-main">
+
+
+<!-- Modal -->
+<div class="modal hits-prom-modal fade" id="hits-prom-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="hits-prom-modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+              <button type="button" class="hits-prom-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14.669" height="14.669" viewBox="0 0 14.669 14.669">
+  <g id="Group_169883" data-name="Group 169883" transform="translate(0 0)">
+    <path id="Path_244039" data-name="Path 244039" d="M8.679,7.471l5.712-5.712A.95.95,0,0,0,13.047.415L7.335,6.127,1.623.415A.95.95,0,0,0,.279,1.759L5.991,7.471.279,13.183a.95.95,0,1,0,1.344,1.344L7.335,8.815l5.712,5.712a.95.95,0,1,0,1.344-1.344Zm0,0" transform="translate(0 -0.136)"/>
+  </g>
+</svg>
+</button>
+      <div class="modal-body">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-lg-5">
+            <div class="hits-prom-popup-cnt">
+              <div class="hits-prom-popup-head">
+                Over 15000+ Clients Host with Host IT Smart!
+              </div>
+              <div class="hits-prom-popup-txt">
+                <p><b>Still have doubts?</b></p>
+                <p>Our sales guy can help you, who doesn't just make fancy claims but guides you for better.</p>
+              </div>
+              <div class="hits-prom-popup-btn">
+                <button class="primary-btn-round">Chat With Sales</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="hits-prom-popup-img">
+              <img src="../assets/images/popup/hits-prom-img.webp" alt="hits-prom-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <section class="client-trust-indust-main head-tb-p-40">
         <div class="container">
@@ -560,3 +601,18 @@
     </div>
 
 </section>
+
+
+<script>
+  // Trigger area: top 50px of the page (you can adjust this value)
+  document.addEventListener('mousemove', function (e) {
+    if (e.clientY < 50) {
+      const modalEl = document.getElementById('hits-prom-modal');
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+
+      // Remove listener so it only shows once
+      document.removeEventListener('mousemove', arguments.callee);
+    }
+  });
+</script>
