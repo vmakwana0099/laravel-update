@@ -292,6 +292,9 @@ class ProductsController extends FrontController {
             elseif($ProId->id == "2"){
                 return view("windows-hosting-product", $ProductData);
             }
+            elseif($ProId->id == "13"){
+                return view("java-product", $ProductData);
+            }
             else {    
                 return view("product", $ProductData);   
             }

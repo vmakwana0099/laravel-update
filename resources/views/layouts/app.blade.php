@@ -6,6 +6,9 @@
 $META_TITLE ='Host IT Smart Web Hosting Login';
 $META_DESCRIPTION ='Secure and easy login to Host IT Smart web hosting. Access your hosting account to manage domains, websites, and email. Login now for reliable hosting services.';
             ?>
+        <meta http-equiv="Cache-Control" content="no-store" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
          @endif
          <?php 
 $live_url = url()->current();
@@ -16,11 +19,15 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
             $testimonial = array("abhishek-dutta","arnav-trivedi","artos-bible-quiz","aryan-ahuja","dheeraj-balpathak","kamlesh-gawali-2","mayank-goswami","muclix-systems","mute-break","pulkit-shah","zayka-grains","buy-io-domain-names","forex-vps-hosting","nirmal-paradkar","ivaylo-nikolov","divyanshu-agarwal","sameer-shaikh","shatrughan-saravagi","s2-tech-india","nikhil-jain","shivang-kareliya","learntez","prahlad-shukla");
             $canada_domain = "https://www.hostitsmart.ca";
             $canada_urls = array("{$canada_domain}/domain-registration","{$canada_domain}/domain/domain-transfer","{$canada_domain}/whois-checker","{$canada_domain}/hosting/shared-hosting","{$canada_domain}/hosting/wordpress-hosting","{$canada_domain}/hosting/windows-hosting","{$canada_domain}/servers/vps-hosting","{$canada_domain}/servers/windows-vps-hosting","{$canada_domain}/servers/dedicated-servers","{$canada_domain}/ssl-certificates","{$canada_domain}/web-hosting","{$canada_domain}/tld","{$canada_domain}/about-us","{$canada_domain}/why-hits","{$canada_domain}/contact","{$canada_domain}/faqs","{$canada_domain}/domain-policy","{$canada_domain}/terms","{$canada_domain}/payment-options","{$canada_domain}/privacy-policy","{$canada_domain}/deals","{$canada_domain}/servers/linux-vps-hosting");?>
-
+        <!-- Google Tag Manager -->
+<script>setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P39GJB');}, 6000);</script>
+        <!-- End Google Tag Manager -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{-- font cdn  St--}}
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"></noscript>
+<script>WebFontConfig={google:{families:["Rubik:300,400,500,700,900:latin"]}},function(){var e=document.createElement("script");e.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",e.type="text/javascript",e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script>
    {{-- font cdn end--}}
 <meta name="msvalidate.01" content="1FF75C85A9329C6232704ED8A37D9260" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -129,7 +136,7 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 <link rel="stylesheet" href="/assets/css/common.css?v={{date('YmdHi')}}" media="all" />
 
 @if(Request::segment(1) == 'hosting' || Request::segment(1) == 'servers' || Request::segment(1) == 'web-hosting' || Request::segment(1) == 'web-hosting-ahmedabad' && Request::segment(2) != 'dedicated-servers')
-<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/plan-box.css?v={{date('YmdHi')}}" media="all" />
+<link rel="stylesheet" href="{{URL::to('/')}}/assets/css/plans-box.css?v={{date('YmdHi')}}" media="all" />
 @endif
 
 @if(Request::segment(2)=='website-builder')
@@ -229,7 +236,6 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
      
 @endif
 @if(Request::segment(2)=='windows-hosting')
-<link rel="stylesheet" href="../assets/css/windows_hosting_banner.css?v={{date('YmdHi')}}"/>
 <link rel="stylesheet" href="../assets/css/windows_hosting.css?v={{date('YmdHi')}}"/>
 
 @endif
@@ -343,6 +349,9 @@ var doc=document.documentElement;doc.setAttribute("data-useragent",navigator.use
 {{-- christmas-2021 end --}}
 <?php /*<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> */?><?php /*<link rel="stylesheet" href="{{Config::get('Constant.CDNURL')}}/assets/css/main_v28.css" media="all" />*/?>
 <?php /*<link rel="stylesheet" href="{{url('/')}}/assets/css/main_v3.css" media="all" />*/?>
+
+<link rel="preload" as="image" href="https://www.hostitsmart.com/assets/images/Homepage/home-bnnr-2.webp" type="image/webp" fetchpriority="high">
+
 </head>
     <?php 
         $bodyCls = "";
