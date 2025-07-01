@@ -17,6 +17,11 @@
                 <div id="vps-plan3" class="tab-pane active show">
                     <div class="plan-main-div" id="plans">
                         <div class="row justify-content-center">
+                        	@php
+                        		$_STARTER_PRICE_36_INR='_STARTER_PRICE_36_INR';
+                        		$_PERFORMANCE_PRICE_36_INR='_PERFORMANCE_PRICE_36_INR';
+                        		$_BUSINEESS_PRICE_36_INR='_BUSINEESS_PRICE_36_INR';
+                        	@endphp
                         	@if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
                         		@foreach($ProductsPackageData as $products)
 	                        		<div class="col-lg-3 col-md-6 col-sm-12">
@@ -36,13 +41,25 @@
 		                                            <div class="shared-plan-nm">
 		                                            	{{$products->varTitle}}
 		                                            </div>
+		                                            @php
+                                                    	$off_per = (explode(",",$products->varAdditionalOffer));
+                                                    @endphp
 		                                            <div class="shared-plan-cut-prc">
-		                                                <span class="cut-prc-disc">60% OFF</span>
+		                                                <span class="cut-prc-disc">{{$off_per[2]}}</span>
 		                                            </div>
-		                                            <div class="shared-main-price">
-		                                                ₹<span>
-		                                                    90.00</span>/mo*
-		                                            </div>
+		                                            @if($products->varTitle == 'Starter')
+			                                            <div class="shared-main-price">
+			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_STARTER_PRICE_36_INR) }}.00</span>/mo*
+			                                            </div>
+			                                        @elseif($products->varTitle == 'Performance')
+			                                        	<div class="shared-main-price">
+			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PERFORMANCE_PRICE_36_INR) }}.00</span>/mo*
+			                                            </div>
+			                                        @elseif($products->varTitle == 'Business')
+			                                        	<div class="shared-main-price">
+			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BUSINEESS_PRICE_36_INR) }}.00</span>/mo*
+			                                            </div>
+		                                            @endif
 		                                            <div class="shared-plan-btn">
 		                                            	@if($products->varTitle == 'Starter')
 		                                                	{!!$StarterThreeYearButtonText!!}
