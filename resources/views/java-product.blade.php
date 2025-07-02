@@ -401,5 +401,6 @@
     </div>
     @endif
 </section>
+@include('template.'.$themeversion.'.testimonial_section')
 @include('template.'.$themeversion.'.support_section_home')
 @endsection
