@@ -95,6 +95,107 @@
         </div>
     </div>
 </div>
+<section class="self-mng-jv-vps-main head-tb-p-40">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6">
+				<div class="self-mng-jv-vps-img">
+					<img src="/assets/images/java_hosting/self-managed-java-vps.webp" alt="self-managed-java-vps">
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="self-mng-vps-cnt">
+					<h2 class="text_head">Even With Our Self-Managed Java VPS, You Still Get These Extras!</h2>
+					<ul>
+						<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Hardware-Related Resolutions</li>
+								<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Server Resource Upgradation Support</li>
+						<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Pre-installed Free CWP Panel for Tomcat & Java</li>
+
+						
+						<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Security Firewall Setup</li>
+														<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Pre-installed Tomcat & Java via CWP Panel</li>
+						<li><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12.589" viewBox="0 0 18 12.589">
+									<g id="Group_20342" data-name="Group 20342" transform="translate(2.536 0.435)">
+										<path id="Path_72730" data-name="Path 72730"
+											d="M6.294,12.928a.881.881,0,0,1-.625-.259L.259,7.258A.883.883,0,0,1,1.508,6.009L6.294,10.8,16.492.6a.883.883,0,0,1,1.249,1.249L6.919,12.669A.881.881,0,0,1,6.294,12.928Zm0,0"
+											transform="translate(-2.536 -0.774)" />
+									</g>
+								</svg></span>Standard Support</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="dl-features-points">
+        <div class="container">
+            <div class="feature-start">
+                <div class="section-heading">
+                <h2 class="text-center text_head">Discover What You Can Expect With Our Java Hosting Server</h2>
+                </div>
+                <div class="fp-list">
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Value that’s truly worth it!</h3></li>
+                                <li><h3>India-Based Datacenter</h3></li>                                
+                                <li><h3>Enterprise-Grade Hardware</h3></li>
+                                <li><h3>Low latency with 2X faster speed</h3></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Full root access on server</h3></li>
+                                <li><h3>Secured with DDoS protection</h3></li>
+                                <li><h3>High security using custom firewall rules</h3></li>
+                                <li><h3>Built-in network redundancy</h3></li>                                
+                                <li><h3>99.9% uptime guarantee</h3></li>                                
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <ul>
+                                <li><h3>Secured private network</h3></li>
+                                <li><h3>Install any software with 1-click</h3></li>
+                                <li><h3>Optimized storage for better performance</h3></li>
+                                <li><h3>24/7 expert support whenever you need</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @include('template.'.$themeversion.'.30-day-moneyback')
 <section class="vps-features head-tb-p-40" id="features">
     @if(!empty($FeaturesData) && count($FeaturesData) >0)

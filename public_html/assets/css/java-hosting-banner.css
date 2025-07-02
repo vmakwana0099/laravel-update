@@ -26,28 +26,6 @@
     color: #28282a
 }
 
-#slider,
-.vps_main vps_hosting_banner .carousel-inner {
-    height: inherit
-}
-
-.btn-started {
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0;
-    background-color: #115baa;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: .6s;
-    display: inline-block
-}
-
-.btn-started:hover {
-    background-color: #007aff;
-    color: #fff
-}
 
 .vps_bnnr {
     padding: 0 4rem;
@@ -64,7 +42,7 @@
 .banner_left_s h1 {
     font-size: 18px;
     font-weight: 500;
-    color: #18B362;
+    color: #080808;
     text-align: left;
     display: inline-block;
     padding: 3px 8px;
