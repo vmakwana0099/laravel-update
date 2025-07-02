@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .win-supprt-tittle {
     font-size: 28px;
     font-weight: 600;
@@ -198,13 +203,28 @@
 }
 
 
-
-.win-support-video video {
-    max-width: 100%;
-    border-radius: 20px;
+.win-support-video {
+  max-width: 100%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-
-
-
-
+.win-support-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+}
+.win-support-video,
+.win-support-video video,
+.win-support-video iframe,
+.win-support-video img,
+.win-support-video table {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
