@@ -42,7 +42,7 @@
         <div class="container-fluid">
             <div class="shared-plan-bx-pd">
             <div class="section-heading">
-                <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package...1234</h2>
+                <h2 class="text_head text-center">Choose & Buy Your Desired Web Hosting Package... (Magaj phira dala)</h2>
                 <p class="text-center">Go Local or Global with Cheap Web Hosting in India & Canada!</p>
             </div>
             <div class="row justify-content-center">
