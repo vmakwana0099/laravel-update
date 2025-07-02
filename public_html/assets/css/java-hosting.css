@@ -218,4 +218,19 @@ img.win-vps-features-icon {
      .sec-dt-acr-price {
         margin-bottom: 40px
     }
+    .disc-full-power .accordion{
+        margin-bottom: 20px;
+    }
+    .sec-dt-acr-cnt {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .java-hstg-bnfts-main{
+        display: none;
+    }
+    .self-mng-vps-cnt ul li{
+        width: inherit;
+    }
 }

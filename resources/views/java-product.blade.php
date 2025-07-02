@@ -297,7 +297,7 @@
 			</h2>
 		</div>
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-md-6">
 				<div class="java-hstg-bnfts-cnt">
 					<ul>
 						<li>Web-based Tomcat manager</li>
@@ -314,12 +314,12 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-lg-5 d-none d-lg-block">
 				<div class="java-hstg-bnfts-img">
 					<img src="/assets/images/java_hosting/java-hosting-benefits.webp" alt="java-hosting-benefits">
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 col-md-6">
 				<div class="java-hstg-bnfts-cnt">
 					<ul>
 						<li>Control Panel to deploy your war files easily and quickly</li>
