@@ -322,8 +322,12 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                                                     @elseif(in_array($productData['pid'],[534,535,536,537,522,523,524,525,530,531,532,533,526,527,528,529]))
                                                     <br>                                                
                                                     @endif
-                                                @else
-                                                    <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>
+                                                @else                                                    
+                                                    @if($pricing->duration == 1 && in_array($productData['pid'],[508,509,510,511,512,513,514,515]))
+                                                    <br>
+                                                    @else
+                                                    <span class="linethrough cpbm-mp-cut">{!! $symbol !!}{{ $cut_price }}</span>                                                  
+                                                    @endif
                                                 @endif
 
                                                 @elseif($productData['producttype'] == 'email')
@@ -449,14 +453,13 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
                
     <div class="server-location-box">
         <h3 class="c_c_title">Choose Server Location</h3>
-        {{-- @php echo"<pre>"; print_r($productData['customfields']); exit;@endphp --}}
         <div class="c_c_box">
          @if(isset($productData['customfields']) && !empty($productData['customfields']))
 
             @foreach($productData['customfields'] as $field)
                 @if($field['fieldtype'] == 'dropdown' && $field['name'] == 'Location')
-                    <select name="customField[{{ $field['id'] }}]" id="customField{{ $field['id'] }}" class="c_c_box_arrow" onchange="setCustomFieldValue('{{$_REQUEST['id']}}','{{$field['id']}}',this.value);">
-                       {{--  @if($productData['pid'] == 534 || $productData['pid'] == 522 || $productData['pid'] == 530 || $productData['pid'] == 526)
+                    <select name="customField[{{ $field['id'] }}]" id="customField{{ $field['id'] }}" class="c_c_box_arrow form-select" onchange="setCustomFieldValue('{{$_REQUEST['id']}}','{{$field['id']}}',this.value);">
+                        {{-- @if($productData['pid'] == 495 || $productData['pid'] == 421 || $productData['pid'] == 425 || $productData['pid'] == 429)
                             <option value="India" {{ 'India' == $field['selectedOption'] ? 'selected' : '' }}>India</option>
                         @else --}}
                             @foreach(explode(',', $field['fieldoptions']) as $option)
@@ -2067,7 +2070,10 @@ function showAllCPValues(id) {
         dname = dname.replace("https://", "");
         dname = dname.replace("http://", "");
         dname = dname.replace("www.", "");
-        dname = dname.replace("/", "");
+        dname = dname.replaceAll("/", "");
+        dname = dname.replaceAll(" ", "");
+        dname = dname.replaceAll(",", ".");
+        dname = dname.replaceAll(/[\/\s,\u00A0]+/g, '');
         
         if(dname == ''){
           // alert("Please enter your domain name.");
