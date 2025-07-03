@@ -4,7 +4,7 @@
 	$themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; 
 ?>
 @if(isset($bannerData) && !empty($bannerData) && count($bannerData) > 0)
-    @include('template.'.$themeversion.'.banner');
+    @include('template.'.$themeversion.'.banner')
 @endif
 <div class="web-pln-box head-tb-p-40" id="web_hosting_plan">
     <div class="container-fluid">
