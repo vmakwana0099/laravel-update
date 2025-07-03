@@ -1127,7 +1127,7 @@ button.accord-btn {
 
 .client-trust-inudst-box{
   background: transparent linear-gradient(293deg, #E5E5FF 0%, #F2F2FF 100%);
-  padding: 80px;
+  padding: 0 40px;
   border-radius: 40px;
 }
 .client-trust-indust-img svg {
@@ -1272,5 +1272,11 @@ button.hits-prom-close-btn svg {
 @media only screen and (max-width: 992px) {
   .swiper {
       width: calc(100% + 168vw);
+  }
+  .client-trust-inudst-box{
+    padding: 40px;
+  }
+  .client-trust-indust-img svg {
+    height: 380px;
   }
 }
