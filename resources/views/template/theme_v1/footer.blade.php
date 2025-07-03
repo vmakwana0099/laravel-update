@@ -33,7 +33,7 @@
                                         <p>Our sales guy can help you, who doesn't just make fancy claims but guides you for better.</p>
                                     </div>
                                     <div class="hits-prom-popup-btn">
-                                        <a href="javascript:void(Tawk_API.toggle())" class="primary-btn-round">Chat With Sales</a>
+                                        <a href="javascript:void(Tawk_API.toggle())" class="primary-btn-round" id="hits-prom-chat-btn">Chat With Sales</a>
                                     </div>
                                 </div>
                             </div>
@@ -1636,6 +1636,7 @@
    *-----------------------------------------------------------*/
   // Exact‐match paths, e.g. '/hosting', '/contact-us'
   const ALLOWED_PATHS = [
+    '/',
     '/domain-registration',
     '/domain-transfer',
     '/web-hosting',
@@ -1711,4 +1712,11 @@
     sessionStorage.setItem(DISMISS_KEY, 'true');
   });
 })();
+// Chat‑with‑Sales button → hide modal + remember dismissal
+$(document).on('click', '#hits-prom-chat-btn', function () {
+  $('#hits-prom-modal').modal('hide');
+  sessionStorage.setItem('hitsPopupDismissed', 'true'); // same key as close‑btn
+  /* startChatWidget();   // ← call your chat code here if needed */
+});
+
 </script>
