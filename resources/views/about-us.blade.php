@@ -16,7 +16,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             </div>
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2 class="text_head">Who We Are i'm vinod</h2>
+                    <h2 class="text_head">Who We Are</h2>
                     <p>We’re not just a web hosting company; we’re your friendly tech partner in the online world!
                         Whether you are starting a blog or running an online store, we ensure that your website is fast,
                         secure, and always up and running. </p>
