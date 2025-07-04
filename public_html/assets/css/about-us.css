@@ -249,3 +249,125 @@
     margin: 10px 0;
   }
 }
+
+
+
+
+
+
+
+
+.our-story-wrapper {
+    display: flex;
+}
+.our-story-side-year {
+    width: 170px;
+    text-align: center;
+}
+.our-story-year-container {
+    height: 280px;
+    overflow: hidden;
+}
+.our-story-cnt-box-main {
+    padding-right: 20px;
+}
+.our-story-cnt-right {
+    max-width: calc(100% - 170px);
+}
+.our-story-cnt-slider {
+    display: flex;
+    flex: auto;
+    overflow: auto;
+}
+.our-story-box-container {
+    display: flex;
+    height: 380px;
+    gap: 10px;
+}
+.our-story-box-wrapper {
+    width: 390px;
+    min-width: 390px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.our-story-24 h3, .our-story-20 h3{
+  color: #795EF4;
+}
+.our-story-24 .our-story-box-wrapper, .our-story-20 .our-story-box-wrapper {
+    background: #F8F6FF;
+    border: 1px solid #E6E1F7;
+}
+.our-story-24 span.our-story-cnt-yr, .our-story-20 span.our-story-cnt-yr{
+  color: #3838ff;
+}
+
+
+.our-story-23 h3{
+  color: #DFA900;
+}
+.our-story-23 .our-story-box-wrapper {
+    background: #FFFAEC;
+    border: 1px solid #F2E9D0;
+}
+.our-story-23 span.our-story-cnt-yr{
+  color: #DFA900;
+}
+
+
+.our-story-22 h3{
+  color: #31A831;
+}
+.our-story-22 .our-story-box-wrapper {
+    background: #F6FDF4;
+    border: 1px solid #D4F0D4;
+}
+.our-story-22 span.our-story-cnt-yr{
+  color: #31A831;
+}
+
+
+.our-story-21 h3{
+  color: #1a741a;
+}
+.our-story-21 .our-story-box-wrapper {
+    background: #ffefef;
+    border: 1px solid #c0d7c0;
+}
+.our-story-21 span.our-story-cnt-yr{
+  color: #1a741a;
+}
+
+
+
+span.our-story-cnt-yr {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+span.our-story-box-img {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+span.our-story-cnt-tittle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #080808;
+    margin: 10px 0;
+    display: block;
+}
+span.our-story-cnt-dt {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    color: #080808;
+}

@@ -29,7 +29,129 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
         </div>
     </div>
 </section>
-
+<section class="our-story-wrapper-main head-tb-p-40">
+    <div class="container-fluid">
+        <div class="section-heading text-center">
+            <h2 class="text_head text-center">
+                Know Our Story
+            </h2>
+            <p>Every business has its own story, and ours began back in 2012!</p>
+            <p>It began with a simple mission: To make web hosting better, faster, and easier for everyone. At the time, we saw too
+                many people struggling with slow servers, clunky dashboards, and support teams that didn’t quite solve problems. We
+                knew things could be different and set out to make it happen.</p>
+            <p>What started as a small team with a big vision has now grown into a trusted hosting provider serving thousands of
+                websites across industries. Over the years, we have listened, learned, and leveled up, constantly evolving to meet
+                the changing needs of our customers.</p>
+            <p>From 2012 to now, the journey has been incredible, and we are not done yet.
+                We are still growing, still improving, and still just getting started.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="our-story-wrapper">
+                <div class="our-story-side-year">
+                    <span class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
+                    <div class="our-story-year-container">
+                        <ul class="our-story-year">
+                            <li><span>2012</span></li>
+                            <li><span>2013</span></li>
+                            <li><span>2014</span></li>
+                            <li><span>2015</span></li>
+                            <li><span>2016</span></li>
+                            <li><span>2017</span></li>
+                            <li><span>2018</span></li>
+                            <li><span>2019</span></li>
+                            <li><span>2020</span></li>
+                            <li><span>2021</span></li>
+                            <li><span>2022</span></li>
+                            <li><span>2023</span></li>
+                            <li><span>2024</span></li>
+                        </ul>
+                    </div>
+                    <span class="our-story-year-next"><i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+                <div class="our-story-cnt-right">
+                    <div class="our-story-cnt-slider">
+                        <div class="our-story-cnt-box-main our-story-24">
+                            <h3>2024</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/direct-admin.webp" alt="direct-admin"></span>
+                                        <span class="our-story-cnt-yr">October 2024</span>
+                                        <span class="our-story-cnt-tittle">Official Partnership with DirectAdmin</span>
+                                        <span class="our-story-cnt-dt">Another panel in the mix! DirectAdmin brought simplicity and speed to server management.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-23">
+                            <h3>2023</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/webuzo.webp" alt="webuzo"></span>
+                                        <span class="our-story-cnt-yr">January 2023</span>
+                                        <span class="our-story-cnt-tittle">Joined Hands with Webuzo</span>
+                                        <span class="our-story-cnt-dt">Webuzo joined the party! Our customers have more options to manage their servers.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-22">
+                            <h3>2022</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/acronis_cloud_backup.webp" alt="acronis_cloud_backup"></span>
+                                        <span class="our-story-cnt-yr">March 2022</span>
+                                        <span class="our-story-cnt-tittle">Partnered with Acronis for Data Backup Solutions</span>
+                                        <span class="our-story-cnt-dt">We take Backups seriously! Acronis helped us add a strong layer of data protection.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-21">
+                            <h3>2021</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/microsoft-spla.webp" alt="microsoft-spla"></span>
+                                        <span class="our-story-cnt-yr">February 2021</span>
+                                        <span class="our-story-cnt-tittle">Added Microsoft SPLA Partnership</span>
+                                        <span class="our-story-cnt-dt">Added another feather! With SPLA, we expanded our range of licensed Microsoft solutions.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-20">
+                            <h3>2020</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/softaculous.webp" alt="softaculous"></span>
+                                        <span class="our-story-cnt-yr">January 2020</span>
+                                        <span class="our-story-cnt-tittle">Partnered with Softaculous</span>
+                                        <span class="our-story-cnt-dt">We bought 1-click installs for everyone! With Softaculous, we made launching apps a breeze.</span>
+                                    </div>
+                                </div>
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/business-grow.webp" alt="business-grow"></span>
+                                        <span class="our-story-cnt-yr">July 2020</span>
+                                        <span class="our-story-cnt-tittle">Enabled 1500+ Businesses to Go Online During Lockdown</span>
+                                        <span class="our-story-cnt-dt">In the toughest times, we delivered solutions! We empowered over 1500 businesses to shift online and keep moving forward.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- <section class="know-our-story head-tb-p-40">
     <div class="container">
         <div class="section-heading">
