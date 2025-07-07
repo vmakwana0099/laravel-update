@@ -255,6 +255,12 @@
 
 
 
+.our-story-year li span.active-year {
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
 
 
 .our-story-wrapper {
@@ -263,6 +269,10 @@
 .our-story-side-year {
     width: 170px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .our-story-year-container {
     height: 280px;
@@ -296,50 +306,50 @@
     gap: 10px;
 }
 
-.our-story-24 h3, .our-story-20 h3{
+.our-story-24 h3, .our-story-20 h3, .our-story-16 h3, .our-story-12 h3{
   color: #795EF4;
 }
-.our-story-24 .our-story-box-wrapper, .our-story-20 .our-story-box-wrapper {
+.our-story-24 .our-story-box-wrapper, .our-story-20 .our-story-box-wrapper, .our-story-16 .our-story-box-wrapper, .our-story-12 .our-story-box-wrapper {
     background: #F8F6FF;
     border: 1px solid #E6E1F7;
 }
-.our-story-24 span.our-story-cnt-yr, .our-story-20 span.our-story-cnt-yr{
+.our-story-24 span.our-story-cnt-yr, .our-story-20 span.our-story-cnt-yr, .our-story-16 span.our-story-cnt-yr, .our-story-12 span.our-story-cnt-yr{
   color: #3838ff;
 }
 
 
-.our-story-23 h3{
+.our-story-23 h3, .our-story-19 h3, .our-story-15 h3{
   color: #DFA900;
 }
-.our-story-23 .our-story-box-wrapper {
+.our-story-23 .our-story-box-wrapper, .our-story-19 .our-story-box-wrapper, .our-story-15 .our-story-box-wrapper {
     background: #FFFAEC;
     border: 1px solid #F2E9D0;
 }
-.our-story-23 span.our-story-cnt-yr{
+.our-story-23 span.our-story-cnt-yr, .our-story-19 span.our-story-cnt-yr, .our-story-15 span.our-story-cnt-yr{
   color: #DFA900;
 }
 
 
-.our-story-22 h3{
+.our-story-22 h3, .our-story-18 h3, .our-story-14 h3{
   color: #31A831;
 }
-.our-story-22 .our-story-box-wrapper {
+.our-story-22 .our-story-box-wrapper, .our-story-18 .our-story-box-wrapper, .our-story-14 .our-story-box-wrapper {
     background: #F6FDF4;
     border: 1px solid #D4F0D4;
 }
-.our-story-22 span.our-story-cnt-yr{
+.our-story-22 span.our-story-cnt-yr, .our-story-18 span.our-story-cnt-yr, .our-story-14 span.our-story-cnt-yr{
   color: #31A831;
 }
 
 
-.our-story-21 h3{
+.our-story-21 h3, .our-story-17 h3, .our-story-13 h3{
   color: #1a741a;
 }
-.our-story-21 .our-story-box-wrapper {
+.our-story-21 .our-story-box-wrapper, .our-story-17 .our-story-box-wrapper, .our-story-13 .our-story-box-wrapper {
     background: #ffefef;
     border: 1px solid #c0d7c0;
 }
-.our-story-21 span.our-story-cnt-yr{
+.our-story-21 span.our-story-cnt-yr, .our-story-17 span.our-story-cnt-yr, .our-story-13 span.our-story-cnt-yr{
   color: #1a741a;
 }
 
@@ -371,3 +381,16 @@ span.our-story-cnt-dt {
     display: block;
     color: #080808;
 }
+
+.our-story-year li {
+    font-size: 20px;
+    font-weight: 400;
+    color: #080808;
+    padding: 6px;
+}
+
+
+
+
+
+

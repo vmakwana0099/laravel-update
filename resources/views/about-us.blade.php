@@ -145,6 +145,146 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="our-story-cnt-box-main our-story-19">
+                            <h3>2019</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/aws.webp" alt="aws"></span>
+                                        <span class="our-story-cnt-yr">February 2019</span>
+                                        <span class="our-story-cnt-tittle">Initiated AWS Support Services</span>
+                                        <span class="our-story-cnt-dt">The cloud was calling & we answered! We started helping businesses scale with AWS support.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="our-story-cnt-box-main our-story-18">
+                            <h3>2018</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/infrastructure.webp" alt="infrastructure"></span>
+                                        <span class="our-story-cnt-yr">January 2018</span>
+                                        <span class="our-story-cnt-tittle">Launched Our Own Hosting Infrastructure</span>
+                                        <span class="our-story-cnt-dt">It was time to take control! We built our own hosting infrastructure to offer faster, safer services.</span>
+                                    </div>
+                                </div>
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/cpanel.webp" alt="cpanel"></span>
+                                        <span class="our-story-cnt-yr">March 2018</span>
+                                        <span class="our-story-cnt-tittle">Official cPanel Partnership</span>
+                                        <span class="our-story-cnt-dt">With cPanel in our corner, managing websites became super easy for our customers.</span>
+                                    </div>
+                                </div>
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/plesk.webp" alt="plesk"></span>
+                                        <span class="our-story-cnt-yr">June 2018</span>
+                                        <span class="our-story-cnt-tittle">Became a Certified Plesk Partner</span>
+                                        <span class="our-story-cnt-dt">More choices of panels mean more power! We partnered with Plesk to give clients flexibility in control panels.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="our-story-cnt-box-main our-story-17">
+                            <h3>2017</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/cloudlinux-os.webp" alt="cloudlinux-os"></span>
+                                        <span class="our-story-cnt-yr">December 2017</span>
+                                        <span class="our-story-cnt-tittle"> Entered into Partnership with CloudLinux</span>
+                                        <span class="our-story-cnt-dt">We understand that strong servers need strong foundations, so we partnered with CloudLinux for better security and stability.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="our-story-cnt-box-main our-story-16">
+                            <h3>2016</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/ican.webp" alt="ican"></span>
+                                        <span class="our-story-cnt-yr">November 2016</span>
+                                        <span class="our-story-cnt-tittle"> Accredited as an ICANN Registrar</span>
+                                        <span class="our-story-cnt-dt">We got legit with domains! ICANN gave us the official nod to register domains globally.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="our-story-cnt-box-main our-story-15">
+                            <h3>2015</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/microsoft.webp" alt="microsoft"></span>
+                                        <span class="our-story-cnt-yr">December 2015</span>
+                                        <span class="our-story-cnt-tittle">Partnered with Microsoft as a Silver Application Developer</span>
+                                        <span class="our-story-cnt-dt">Silver from Microsoft? Oh yes! After that, we geared up to deliver more powerful hosting experiences.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-14">
+                            <h3>2014</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/inuagration_ahmedabad_office.webp" alt="inuagration_ahmedabad_office"></span>
+                                        <span class="our-story-cnt-yr">January 2014</span>
+                                        <span class="our-story-cnt-tittle">Inauguration of Ahmedabad Office</span>
+                                        <span class="our-story-cnt-dt">From digital to physical, our first real space in Ahmedabad felt like leveling up in real life.</span>
+                                    </div>
+                                </div>
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/hosted_website.webp" alt="hosted_website"></span>
+                                        <span class="our-story-cnt-yr">July 2014</span>
+                                        <span class="our-story-cnt-tittle"> Achieved 1000+ Hosted Websites Milestone</span>
+                                        <span class="our-story-cnt-dt">Our servers started getting crowded in a good way! Over 1000+ websites chose us as their home.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-13">
+                            <h3>2013</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/google.webp" alt="google"></span>
+                                        <span class="our-story-cnt-yr">November 2013</span>
+                                        <span class="our-story-cnt-tittle">Recognized as an Authorized Google Partner</span>
+                                        <span class="our-story-cnt-dt">We got Google’s stamp of approval! That gave us wings to offer smarter online solutions.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-story-cnt-box-main our-story-12">
+                            <h3>2012</h3>
+                            <div class="our-story-box-container">
+                                <div class="our-story-box-wrapper">
+                                    <div class="our-story-box-cnt">
+                                        <span class="our-story-box-img"><img src="/assets/images/about_us/hostitsmart.webp" alt="hostitsmart"></span>
+                                        <span class="our-story-cnt-yr">April 2012</span>
+                                        <span class="our-story-cnt-tittle">Establishment of Host IT Smart</span>
+                                        <span class="our-story-cnt-dt">It all started with a spark and a server! Host IT Smart was born to simplify and improve web hosting.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
                     </div>
                 </div>
             </div>
