@@ -607,7 +607,8 @@
                         <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video> -->
-                    <img src="/assets/images/windows_hosting/one.gif" alt="">
+                    <!-- <img src="/assets/images/windows_hosting/one.gif" alt=""> -->
+                    <img src="/assets/images/windows_hosting/php-versions.webp" alt="php-versions">
                 </div>
             </div>
         </div>
@@ -626,10 +627,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="win-support-video">
-                    <video autoplay muted playsinline>
+                    <!-- <video autoplay muted playsinline>
                         <source src="/assets/images/windows_hosting/dot-net-core-versions.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/dot-net-core-versions.webp" alt="dot-net-core-versions">
                 </div>
             </div>
         </div>
@@ -648,10 +650,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="win-support-video">
-                    <video autoplay muted playsinline>
+                    <!-- <video autoplay muted playsinline>
                         <source src="/assets/images/windows_hosting/database-servers.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/database-servers.webp" alt="database-servers">
                 </div>
             </div>
         </div>

@@ -53,19 +53,19 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <span class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
                     <div class="our-story-year-container">
                         <ul class="our-story-year">
-                            <li data-year="2012"><span>2012</span></li>
-                            <li data-year="2013"><span>2013</span></li>
-                            <li data-year="2014"><span>2014</span></li>
-                            <li data-year="2015"><span>2015</span></li>
-                            <li data-year="2016"><span>2016</span></li>
-                            <li data-year="2017"><span>2017</span></li>
-                            <li data-year="2018"><span>2018</span></li>
-                            <li data-year="2019"><span>2019</span></li>
-                            <li data-year="2020"><span>2020</span></li>
-                            <li data-year="2021"><span>2021</span></li>
-                            <li data-year="2022"><span>2022</span></li>
-                            <li data-year="2023"><span>2023</span></li>
                             <li data-year="2024"><span>2024</span></li>
+                            <li data-year="2023"><span>2023</span></li>
+                            <li data-year="2022"><span>2022</span></li>
+                            <li data-year="2021"><span>2021</span></li>
+                            <li data-year="2020"><span>2020</span></li>
+                            <li data-year="2019"><span>2019</span></li>
+                            <li data-year="2018"><span>2018</span></li>
+                            <li data-year="2017"><span>2017</span></li>
+                            <li data-year="2016"><span>2016</span></li>
+                            <li data-year="2015"><span>2015</span></li>
+                            <li data-year="2014"><span>2014</span></li>
+                            <li data-year="2013"><span>2013</span></li>
+                            <li data-year="2012"><span>2012</span></li>
                         </ul>
                     </div>
                     <span class="our-story-year-next"><i class="fa-solid fa-chevron-down"></i></span>
@@ -890,6 +890,82 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 </script>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".our-story-year-container");
+    const prevBtn = document.querySelector(".our-story-year-prev");
+    const nextBtn = document.querySelector(".our-story-year-next");
+
+    const scrollAmount = 100; // pixels per scroll
+
+    // Scroll down
+    nextBtn.addEventListener("click", () => {
+      container.scrollBy({
+        top: scrollAmount,
+        behavior: "smooth"
+      });
+    });
+
+    // Scroll up
+    prevBtn.addEventListener("click", () => {
+      container.scrollBy({
+        top: -scrollAmount,
+        behavior: "smooth"
+      });
+    });
+
+    // Function to check scroll position and show/hide arrows
+    function updateArrowVisibility() {
+      const scrollTop = container.scrollTop;
+      const scrollHeight = container.scrollHeight;
+      const clientHeight = container.clientHeight;
+
+      // Hide up arrow if at top
+      if (scrollTop <= 0) {
+        prevBtn.style.display = "none";
+      } else {
+        prevBtn.style.display = "inline-block";
+      }
+
+      // Hide down arrow if at bottom
+      if (scrollTop + clientHeight >= scrollHeight - 1) {
+        nextBtn.style.display = "none";
+      } else {
+        nextBtn.style.display = "inline-block";
+      }
+    }
+
+    // Check visibility on scroll and on load
+    container.addEventListener("scroll", updateArrowVisibility);
+    window.addEventListener("load", updateArrowVisibility);
+    updateArrowVisibility(); // initial check
+  });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const yearItems = document.querySelectorAll(".our-story-year li");
+
+    yearItems.forEach(item => {
+      item.addEventListener("click", () => {
+        // Remove active class from all
+        yearItems.forEach(el => el.classList.remove("active"));
+        
+        // Add active class to clicked item
+        item.classList.add("active");
+
+        const year = item.getAttribute("data-year");
+        const shortYear = year.slice(-2);
+
+        const target = document.querySelector(".our-story-" + shortYear);
+        if (target) {
+          // You can control visibility here or do something else
+        }
+      });
+    });
+  });
+
+</script>
+
+
+<script>
   document.querySelectorAll(".our-story-year li").forEach(item => {
     item.addEventListener("click", () => {
       const year = item.getAttribute("data-year");
@@ -907,6 +983,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
       }
     });
   });
+  
 </script>
 
 
