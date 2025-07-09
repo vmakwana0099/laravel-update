@@ -603,10 +603,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="win-support-video">
-                    <video autoplay muted playsinline>
+                    <!-- <video autoplay muted playsinline>
                         <source src="/assets/images/windows_hosting/php-versions.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
+                    </video> -->
+                    <img src="/assets/images/windows_hosting/one.gif" alt="">
                 </div>
             </div>
         </div>
