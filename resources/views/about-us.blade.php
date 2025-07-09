@@ -53,26 +53,26 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <span class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
                     <div class="our-story-year-container">
                         <ul class="our-story-year">
-                            <li><span>2012</span></li>
-                            <li><span>2013</span></li>
-                            <li><span>2014</span></li>
-                            <li><span>2015</span></li>
-                            <li><span>2016</span></li>
-                            <li><span>2017</span></li>
-                            <li><span>2018</span></li>
-                            <li><span>2019</span></li>
-                            <li><span>2020</span></li>
-                            <li><span>2021</span></li>
-                            <li><span>2022</span></li>
-                            <li><span>2023</span></li>
-                            <li><span>2024</span></li>
+                            <li data-year="2012"><span>2012</span></li>
+                            <li data-year="2013"><span>2013</span></li>
+                            <li data-year="2014"><span>2014</span></li>
+                            <li data-year="2015"><span>2015</span></li>
+                            <li data-year="2016"><span>2016</span></li>
+                            <li data-year="2017"><span>2017</span></li>
+                            <li data-year="2018"><span>2018</span></li>
+                            <li data-year="2019"><span>2019</span></li>
+                            <li data-year="2020"><span>2020</span></li>
+                            <li data-year="2021"><span>2021</span></li>
+                            <li data-year="2022"><span>2022</span></li>
+                            <li data-year="2023"><span>2023</span></li>
+                            <li data-year="2024"><span>2024</span></li>
                         </ul>
                     </div>
                     <span class="our-story-year-next"><i class="fa-solid fa-chevron-down"></i></span>
                 </div>
                 <div class="our-story-cnt-right">
                     <div class="our-story-cnt-slider">
-                        <div class="our-story-cnt-box-main our-story-24">
+                        <div class="our-story-cnt-box-main our-story-24" data-year="2014">
                             <h3>2024</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -85,7 +85,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-23">
+                        <div class="our-story-cnt-box-main our-story-23" data-year="2023">
                             <h3>2023</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -98,7 +98,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-22">
+                        <div class="our-story-cnt-box-main our-story-22" data-year="2022">
                             <h3>2022</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -111,7 +111,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-21">
+                        <div class="our-story-cnt-box-main our-story-21" data-year="2021">
                             <h3>2021</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -124,7 +124,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-20">
+                        <div class="our-story-cnt-box-main our-story-20" data-year="2020">
                             <h3>2020</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -146,7 +146,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                             </div>
                         </div>
                         
-                        <div class="our-story-cnt-box-main our-story-19">
+                        <div class="our-story-cnt-box-main our-story-19" data-year="2019">
                             <h3>2019</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -161,7 +161,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
 
                         
-                        <div class="our-story-cnt-box-main our-story-18">
+                        <div class="our-story-cnt-box-main our-story-18" data-year="2018">
                             <h3>2018</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -192,7 +192,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                         </div>
 
                         
-                        <div class="our-story-cnt-box-main our-story-17">
+                        <div class="our-story-cnt-box-main our-story-17" data-year="2017">
                             <h3>2017</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -206,7 +206,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                             </div>
                         </div>
                         
-                        <div class="our-story-cnt-box-main our-story-16">
+                        <div class="our-story-cnt-box-main our-story-16" data-year="2016">
                             <h3>2016</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -220,7 +220,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                             </div>
                         </div>
 
-                        <div class="our-story-cnt-box-main our-story-15">
+                        <div class="our-story-cnt-box-main our-story-15" data-year="2015">
                             <h3>2015</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -233,7 +233,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-14">
+                        <div class="our-story-cnt-box-main our-story-14" data-year="2014">
                             <h3>2014</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -254,7 +254,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-13">
+                        <div class="our-story-cnt-box-main our-story-13" data-year="2013">
                             <h3>2013</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -267,7 +267,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-12">
+                        <div class="our-story-cnt-box-main our-story-12" data-year="2012">
                             <h3>2012</h3>
                             <div class="our-story-box-container">
                                 <div class="our-story-box-wrapper">
@@ -888,6 +888,27 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
     }
 })
 </script>
+
+<script>
+  document.querySelectorAll(".our-story-year li").forEach(item => {
+    item.addEventListener("click", () => {
+      const year = item.getAttribute("data-year");
+
+      // Convert 2024 to '24' etc.
+      const shortYear = year.slice(-2);
+
+      const target = document.querySelector(".our-story-" + shortYear);
+      if (target) {
+        // Scroll smoothly to the content
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+</script>
+
 
 
 <script src="{{ url('/') }}/assets/js/counter.js?v={{date('YmdHi')}}"></script>

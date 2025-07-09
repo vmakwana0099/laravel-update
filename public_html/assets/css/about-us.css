@@ -266,6 +266,11 @@
 .our-story-wrapper {
     display: flex;
 }
+
+.our-story-year li span{
+  cursor: pointer;  
+}
+
 .our-story-side-year {
     width: 170px;
     text-align: center;
@@ -394,3 +399,22 @@ span.our-story-cnt-dt {
 
 
 
+.our-story-year li span.active-year {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.our-story-cnt-slider {
+  max-height: 600px; /* Or height as needed */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.our-story-year li {
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: background-color 0.3s;
+    user-select: none;
+  }
