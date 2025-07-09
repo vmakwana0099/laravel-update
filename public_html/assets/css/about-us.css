@@ -445,6 +445,202 @@ body.no-scroll {
 }
 
 
+ .journey-section {
+            max-width: 100vw;
+            min-height: 100vh;
+            background: #f6f8fa;
+            padding: 0;
+        }
+        .journey-header {
+            text-align: center;
+            padding: 48px 0 18px 0;
+        }
+        .journey-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+        .journey-header p {
+            font-size: 26px;
+            color: #444;
+            margin: 14px 0 0 0;
+            font-weight: 400;
+        }
+        .journey-main {
+            display: flex;
+            align-items: flex-start;
+            margin: 0 auto;
+            max-width: 100vw;
+            padding: 0 0 48px 0;
+        }
+        .journey-years {
+            width: 120px;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0 0 0 30px;
+            margin-top: 30px;
+        }
+        .years-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 420px;
+            overflow-y: auto;
+        }
+        .year-item {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #888;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: color 0.2s, font-weight 0.2s;
+            position: relative;
+            border-radius: 6px;
+            padding: 4px 12px 4px 0;
+        }
+        .year-item.active {
+            color: #0091d6;
+            font-weight: 600;
+            background: #eaf6fb;
+        }
+        .year-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            margin-right: 12px;
+            transition: background 0.2s;
+        }
+        .year-item.active .year-dot {
+            background: #ff2d55;
+        }
+        .year-arrow {
+            font-size: 18px;
+            color: #bbb;
+            margin: 10px 0;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .year-arrow.disabled {
+            color: #eee;
+            pointer-events: none;
+        }
+        .journey-content {
+            flex: 1;
+            padding-left: 40px;
+            min-width: 0;
+        }
+        .slider-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            scroll-behavior: smooth;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+        .year-slider-block {
+            display: inline-flex;
+            flex-direction: column;
+            /* padding: 32px 32px 32px 32px; */
+            margin-bottom: 8px;
+        }
+        .year-title {
+            font-size: 32px;
+            color: #0091d6;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            margin-left: 6px;
+        }
+        .milestones-row {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            flex-wrap: nowrap;
+            box-sizing: border-box;
+        }
+        .milestone-card {
+            background: #f4f8fb;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,145,214,0.06), 0 1px 2px rgba(0,0,0,0.03);
+            min-width: 320px;
+            max-width: 320px;
+            padding: 32px 22px 28px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: 1.5px solid #e6f3fa;
+            position: relative;
+        }
+        .milestone-card:hover {
+            box-shadow: 0 8px 32px rgba(0,145,214,0.13), 0 2px 8px rgba(0,0,0,0.04);
+            transform: translateY(-4px) scale(1.025);
+            border-color: #b6e6fa;
+        }
+        .milestone-icon {
+            margin-bottom: 18px;
+        }
+        .milestone-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #0a3c5e;
+        }
+        .milestone-desc {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 0;
+        }
+        @media (max-width: 900px) {
+            .journey-main {
+                flex-direction: column;
+            }
+            .journey-years {
+                flex-direction: row;
+                width: 100vw;
+                min-width: 0;
+                padding: 0 0 0 0;
+                margin: 0 0 20px 0;
+                justify-content: center;
+            }
+            .years-list {
+                display: flex;
+                flex-direction: row;
+                max-height: none;
+                overflow-x: auto;
+                width: 100vw;
+            }
+            .year-item {
+                margin: 0 16px 0 0;
+            }
+            .journey-content {
+                padding-left: 0;
+            }
+            .slider-row {
+                gap: 18px;
+            }
+            .year-slider-block {
+                min-width: unset !important;
+                max-width: unset !important;
+                flex: unset !important;
+                padding: 18px 4vw 18px 4vw;
+            }
+            .milestone-card {
+                min-width: 80vw;
+                max-width: 90vw;
+                padding: 18px 6vw 18px 6vw;
+            }
+            .year-title {
+                font-size: 24px;
+            }
+        }
 
 
 

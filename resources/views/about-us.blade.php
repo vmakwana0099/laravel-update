@@ -48,246 +48,66 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="our-story-wrapper">
-                <div class="our-story-side-year">
-                    <span class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
-                    <div class="our-story-year-container">
-                        <ul class="our-story-year">
-                            <li data-year="2024"><span>2024</span></li>
-                            <li data-year="2023"><span>2023</span></li>
-                            <li data-year="2022"><span>2022</span></li>
-                            <li data-year="2021"><span>2021</span></li>
-                            <li data-year="2020"><span>2020</span></li>
-                            <li data-year="2019"><span>2019</span></li>
-                            <li data-year="2018"><span>2018</span></li>
-                            <li data-year="2017"><span>2017</span></li>
-                            <li data-year="2016"><span>2016</span></li>
-                            <li data-year="2015"><span>2015</span></li>
-                            <li data-year="2014"><span>2014</span></li>
-                            <li data-year="2013"><span>2013</span></li>
-                            <li data-year="2012"><span>2012</span></li>
-                        </ul>
+               <div class="journey-section">
+        <div class="journey-header">
+            <h1>Zoho wasn't built in a day</h1>
+            <p>Explore our journey through the years.</p>
+        </div>
+        <div class="journey-main">
+            <div class="journey-years">
+                <div class="year-arrow disabled" id="year-up">▲</div>
+                <ul class="years-list" id="years-list">
+                    <li class="year-item active"><span class="year-dot"></span>a</li>
+                    <li class="year-item"><span class="year-dot"></span>b</li>
+                    <li class="year-item"><span class="year-dot"></span>c</li>
+                    <li class="year-item"><span class="year-dot"></span>d</li>
+                    <li class="year-item"><span class="year-dot"></span>e</li>
+                    <li class="year-item"><span class="year-dot"></span>f</li>
+                    <li class="year-item"><span class="year-dot"></span>g</li>
+                    <li class="year-item"><span class="year-dot"></span>h</li>
+                    <li class="year-item"><span class="year-dot"></span>i</li>
+                </ul>
+                <div class="year-arrow" id="year-down">▼</div>
+            </div>
+            <div class="journey-content">
+                <div class="slider-row" id="slider-row">
+                    <div class="year-slider-block" id="year-block-0">
+                        <div class="year-title">2025</div>
+                        <div class="milestones-row">
+                            <div class="milestone-card"><svg class="milestone-icon" width="48" height="48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="12" fill="#e6f3fa"></rect>
+                                    <path d="M16 24v-4a8 8 0 0116 0v4" stroke="#0091d6" stroke-width="2" fill="none"></path>
+                                    <rect x="18" y="28" width="12" height="4" rx="2" fill="#0091d6"></rect>
+                                </svg>
+                                <div class="milestone-title">Zoho Bookings</div>
+                                <div class="milestone-desc">Zoho Bookings marks 5 years of effortless appointment scheduling by
+                                    unveiling the all-new <b>Bookings 2.0</b>. The upgraded version refines scheduling
+                                    automation with new functionalities and AI-powered setup.</div>
+                            </div>
+                        </div>
                     </div>
-                    <span class="our-story-year-next"><i class="fa-solid fa-chevron-down"></i></span>
-                </div>
-                <div class="our-story-cnt-right">
-                    <div class="our-story-cnt-slider">
-                        <div class="our-story-cnt-box-main our-story-24" data-year="2014">
-                            <h3>2024</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/direct-admin.webp" alt="direct-admin"></span>
-                                        <span class="our-story-cnt-yr">October 2024</span>
-                                        <span class="our-story-cnt-tittle">Official Partnership with DirectAdmin</span>
-                                        <span class="our-story-cnt-dt">Another panel in the mix! DirectAdmin brought simplicity and speed to server management.</span>
-                                    </div>
-                                </div>
+                    <div class="year-slider-block" id="year-block-1">
+                        <div class="year-title">2024</div>
+                        <div class="milestones-row">
+                            <div class="milestone-card">
+                                <div class="milestone-title">Zoho Campaigns</div>
+                                <div class="milestone-desc">Zoho Campaigns launches new automation features.</div>
+                            </div>
+                            <div class="milestone-card">
+                                <div class="milestone-title">Zoho Books 2024</div>
+                                <div class="milestone-desc">Zoho Books introduces GST automation.</div>
+                            </div>
+                            <div class="milestone-card">
+                                <div class="milestone-title">Zoho CRM Update</div>
+                                <div class="milestone-desc">Major update to Zoho CRM with AI-powered analytics.</div>
                             </div>
                         </div>
-                        <div class="our-story-cnt-box-main our-story-23" data-year="2023">
-                            <h3>2023</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/webuzo.webp" alt="webuzo"></span>
-                                        <span class="our-story-cnt-yr">January 2023</span>
-                                        <span class="our-story-cnt-tittle">Joined Hands with Webuzo</span>
-                                        <span class="our-story-cnt-dt">Webuzo joined the party! Our customers have more options to manage their servers.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-22" data-year="2022">
-                            <h3>2022</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/acronis_cloud_backup.webp" alt="acronis_cloud_backup"></span>
-                                        <span class="our-story-cnt-yr">March 2022</span>
-                                        <span class="our-story-cnt-tittle">Partnered with Acronis for Data Backup Solutions</span>
-                                        <span class="our-story-cnt-dt">We take Backups seriously! Acronis helped us add a strong layer of data protection.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-21" data-year="2021">
-                            <h3>2021</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/microsoft-spla.webp" alt="microsoft-spla"></span>
-                                        <span class="our-story-cnt-yr">February 2021</span>
-                                        <span class="our-story-cnt-tittle">Added Microsoft SPLA Partnership</span>
-                                        <span class="our-story-cnt-dt">Added another feather! With SPLA, we expanded our range of licensed Microsoft solutions.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-20" data-year="2020">
-                            <h3>2020</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/softaculous.webp" alt="softaculous"></span>
-                                        <span class="our-story-cnt-yr">January 2020</span>
-                                        <span class="our-story-cnt-tittle">Partnered with Softaculous</span>
-                                        <span class="our-story-cnt-dt">We bought 1-click installs for everyone! With Softaculous, we made launching apps a breeze.</span>
-                                    </div>
-                                </div>
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/business-grow.webp" alt="business-grow"></span>
-                                        <span class="our-story-cnt-yr">July 2020</span>
-                                        <span class="our-story-cnt-tittle">Enabled 1500+ Businesses to Go Online During Lockdown</span>
-                                        <span class="our-story-cnt-dt">In the toughest times, we delivered solutions! We empowered over 1500 businesses to shift online and keep moving forward.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="our-story-cnt-box-main our-story-19" data-year="2019">
-                            <h3>2019</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/aws.webp" alt="aws"></span>
-                                        <span class="our-story-cnt-yr">February 2019</span>
-                                        <span class="our-story-cnt-tittle">Initiated AWS Support Services</span>
-                                        <span class="our-story-cnt-dt">The cloud was calling & we answered! We started helping businesses scale with AWS support.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="our-story-cnt-box-main our-story-18" data-year="2018">
-                            <h3>2018</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/infrastructure.webp" alt="infrastructure"></span>
-                                        <span class="our-story-cnt-yr">January 2018</span>
-                                        <span class="our-story-cnt-tittle">Launched Our Own Hosting Infrastructure</span>
-                                        <span class="our-story-cnt-dt">It was time to take control! We built our own hosting infrastructure to offer faster, safer services.</span>
-                                    </div>
-                                </div>
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/cpanel.webp" alt="cpanel"></span>
-                                        <span class="our-story-cnt-yr">March 2018</span>
-                                        <span class="our-story-cnt-tittle">Official cPanel Partnership</span>
-                                        <span class="our-story-cnt-dt">With cPanel in our corner, managing websites became super easy for our customers.</span>
-                                    </div>
-                                </div>
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/plesk.webp" alt="plesk"></span>
-                                        <span class="our-story-cnt-yr">June 2018</span>
-                                        <span class="our-story-cnt-tittle">Became a Certified Plesk Partner</span>
-                                        <span class="our-story-cnt-dt">More choices of panels mean more power! We partnered with Plesk to give clients flexibility in control panels.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="our-story-cnt-box-main our-story-17" data-year="2017">
-                            <h3>2017</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/cloudlinux-os.webp" alt="cloudlinux-os"></span>
-                                        <span class="our-story-cnt-yr">December 2017</span>
-                                        <span class="our-story-cnt-tittle"> Entered into Partnership with CloudLinux</span>
-                                        <span class="our-story-cnt-dt">We understand that strong servers need strong foundations, so we partnered with CloudLinux for better security and stability.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="our-story-cnt-box-main our-story-16" data-year="2016">
-                            <h3>2016</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/ican.webp" alt="ican"></span>
-                                        <span class="our-story-cnt-yr">November 2016</span>
-                                        <span class="our-story-cnt-tittle"> Accredited as an ICANN Registrar</span>
-                                        <span class="our-story-cnt-dt">We got legit with domains! ICANN gave us the official nod to register domains globally.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="our-story-cnt-box-main our-story-15" data-year="2015">
-                            <h3>2015</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/microsoft.webp" alt="microsoft"></span>
-                                        <span class="our-story-cnt-yr">December 2015</span>
-                                        <span class="our-story-cnt-tittle">Partnered with Microsoft as a Silver Application Developer</span>
-                                        <span class="our-story-cnt-dt">Silver from Microsoft? Oh yes! After that, we geared up to deliver more powerful hosting experiences.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-14" data-year="2014">
-                            <h3>2014</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/inuagration_ahmedabad_office.webp" alt="inuagration_ahmedabad_office"></span>
-                                        <span class="our-story-cnt-yr">January 2014</span>
-                                        <span class="our-story-cnt-tittle">Inauguration of Ahmedabad Office</span>
-                                        <span class="our-story-cnt-dt">From digital to physical, our first real space in Ahmedabad felt like leveling up in real life.</span>
-                                    </div>
-                                </div>
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/hosted_website.webp" alt="hosted_website"></span>
-                                        <span class="our-story-cnt-yr">July 2014</span>
-                                        <span class="our-story-cnt-tittle"> Achieved 1000+ Hosted Websites Milestone</span>
-                                        <span class="our-story-cnt-dt">Our servers started getting crowded in a good way! Over 1000+ websites chose us as their home.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-13" data-year="2013">
-                            <h3>2013</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/google.webp" alt="google"></span>
-                                        <span class="our-story-cnt-yr">November 2013</span>
-                                        <span class="our-story-cnt-tittle">Recognized as an Authorized Google Partner</span>
-                                        <span class="our-story-cnt-dt">We got Google’s stamp of approval! That gave us wings to offer smarter online solutions.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-story-cnt-box-main our-story-12" data-year="2012">
-                            <h3>2012</h3>
-                            <div class="our-story-box-container">
-                                <div class="our-story-box-wrapper">
-                                    <div class="our-story-box-cnt">
-                                        <span class="our-story-box-img"><img src="/assets/images/about_us/hostitsmart.webp" alt="hostitsmart"></span>
-                                        <span class="our-story-cnt-yr">April 2012</span>
-                                        <span class="our-story-cnt-tittle">Establishment of Host IT Smart</span>
-                                        <span class="our-story-cnt-dt">It all started with a spark and a server! Host IT Smart was born to simplify and improve web hosting.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
             </div>
         </div>
     </div>
@@ -896,103 +716,202 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 })
 </script>
 
+
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".our-story-year-container");
-    const prevBtn = document.querySelector(".our-story-year-prev");
-    const nextBtn = document.querySelector(".our-story-year-next");
-
-    const scrollAmount = 100; // pixels per scroll
-
-    // Scroll down
-    nextBtn.addEventListener("click", () => {
-      container.scrollBy({
-        top: scrollAmount,
-        behavior: "smooth"
-      });
-    });
-
-    // Scroll up
-    prevBtn.addEventListener("click", () => {
-      container.scrollBy({
-        top: -scrollAmount,
-        behavior: "smooth"
-      });
-    });
-
-    // Function to check scroll position and show/hide arrows
-    function updateArrowVisibility() {
-      const scrollTop = container.scrollTop;
-      const scrollHeight = container.scrollHeight;
-      const clientHeight = container.clientHeight;
-
-      // Hide up arrow if at top
-      if (scrollTop <= 0) {
-        prevBtn.style.display = "none";
-      } else {
-        prevBtn.style.display = "inline-block";
-      }
-
-      // Hide down arrow if at bottom
-      if (scrollTop + clientHeight >= scrollHeight - 1) {
-        nextBtn.style.display = "none";
-      } else {
-        nextBtn.style.display = "inline-block";
-      }
-    }
-
-    // Check visibility on scroll and on load
-    container.addEventListener("scroll", updateArrowVisibility);
-    window.addEventListener("load", updateArrowVisibility);
-    updateArrowVisibility(); // initial check
-  });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const yearItems = document.querySelectorAll(".our-story-year li");
-
-    yearItems.forEach(item => {
-      item.addEventListener("click", () => {
-        // Remove active class from all
-        yearItems.forEach(el => el.classList.remove("active"));
+// --- Milestone pool for each year ---
+const milestonePool = [
+    [
+        { icon: `<img src="/assets/images/about_us/direct-admin.webp" alt="direct-admin">`,date:'October 2024', title: 'Official Partnership with DirectAdmin', desc: `Another panel in the mix! DirectAdmin brought simplicity and speed to server management.` },
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/webuzo.webp" alt="webuzo">',date:'January 2023', title: 'Joined Hands with Webuzo', desc: 'Webuzo joined the party! Our customers have more options to manage their servers.' },
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/acronis_cloud_backup.webp" alt="acronis_cloud_backup">',date:'March 2022', title: 'Partnered with Acronis for Data Backup Solutions', desc: 'We take Backups seriously! Acronis helped us add a strong layer of data protection.' },
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/microsoft-spla.webp" alt="microsoft-spla">',date:'February 2021', title: 'Added Microsoft SPLA Partnership', desc: 'Added another feather! With SPLA, we expanded our range of licensed Microsoft solutions.' },
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/softaculous.webp" alt="softaculous">',date:'January 2020', title: 'Partnered with Softaculous', desc: 'We bought 1-click installs for everyone! With Softaculous, we made launching apps a breeze.' },
+        { icon: '<img src="/assets/images/about_us/business-grow.webp" alt="business-grow">',date:'July 2020', title: 'July 2020', desc: 'Enabled 1500+ Businesses to Go Online During Lockdown',desc2: 'In the toughest times, we delivered solutions! We empowered over 1500 businesses to shift online and keep moving forward.' },
         
-        // Add active class to clicked item
-        item.classList.add("active");
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/aws.webp" alt="aws">',date:'February 2019', title: 'Initiated AWS Support Services', desc: 'The cloud was calling & we answered! We started helping businesses scale with AWS support.' },
+       
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/infrastructure.webp" alt="infrastructure">',date:'January 2018', title: 'Launched Our Own Hosting Infrastructure', desc: 'It was time to take control! We built our own hosting infrastructure to offer faster, safer services.' },
+        { icon: '<img src="/assets/images/about_us/cpanel.webp" alt="cpanel">',date:'March 2018', title: 'Official cPanel Partnership', desc: 'With cPanel in our corner, managing websites became super easy for our customers.' },
+        { icon: '<img src="/assets/images/about_us/plesk.webp" alt="plesk">',date:'June 2018', title: 'Became a Certified Plesk Partner', desc: 'More choices of panels mean more power! We partnered with Plesk to give clients flexibility in control panels.' },
+       
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/cloudlinux-os.webp" alt="cloudlinux-os">',date:'December 2017', title: 'Entered into Partnership with CloudLinux', desc: 'We understand that strong servers need strong foundations, so we partnered with CloudLinux for better security and stability.' },        
+    ],
+    [
+        { icon: '<img src="/assets/images/about_us/ican.webp" alt="ican">',date:'November 2016', title: 'Accredited as an ICANN Registrar', desc: 'We got legit with domains! ICANN gave us the official nod to register domains globally.' },
+    ],
 
-        const year = item.getAttribute("data-year");
-        const shortYear = year.slice(-2);
+    [
+        { icon: '<img src="/assets/images/about_us/microsoft.webp" alt="microsoft">',date:'December 2015', title: 'Partnered with Microsoft as a Silver Application Developer', desc: 'Silver from Microsoft? Oh yes! After that, we geared up to deliver more powerful hosting experiences.' },
+    ],
 
-        const target = document.querySelector(".our-story-" + shortYear);
-        if (target) {
-          // You can control visibility here or do something else
-        }
-      });
+     [
+        { icon: '<img src="/assets/images/about_us/inuagration_ahmedabad_office.webp" alt="inuagration_ahmedabad_office">',date:'January 2014', title: 'Inauguration of Ahmedabad Office', desc: 'From digital to physical, our first real space in Ahmedabad felt like leveling up in real life.' },
+        { icon: '<img src="/assets/images/about_us/hosted_website.webp" alt="hosted_website">',date:'July 2014', title: 'Achieved 1000+ Hosted Websites Milestone', desc: 'Our servers started getting crowded in a good way! Over 1000+ websites chose us as their home.' },
+    ],
+
+    [
+        { icon: '<img src="/assets/images/about_us/google.webp" alt="google">',date:'November 2013', title: 'Recognized as an Authorized Google Partner', desc: 'We got Google’s stamp of approval! That gave us wings to offer smarter online solutions.' },
+    ],
+
+    [
+        { icon: '<img src="/assets/images/about_us/hostitsmart.webp" alt="hostitsmart">',date:'April 2012', title: 'Establishment of Host IT Smart', desc: 'It all started with a spark and a server! Host IT Smart was born to simplify and improve web hosting.' },
+    ]
+];
+
+// Create journeyData as a fixed array for each year 2025-2017
+const journeyData = [
+    { year: 2024, milestones: milestonePool[0] },
+    { year: 2023, milestones: milestonePool[1] },
+    { year: 2022, milestones: milestonePool[2] },
+    { year: 2021, milestones: milestonePool[3] },
+    { year: 2020, milestones: milestonePool[4] },
+    { year: 2019, milestones: milestonePool[5] },
+    { year: 2018, milestones: milestonePool[6] },
+    { year: 2017, milestones: milestonePool[7] },
+    { year: 2016, milestones: milestonePool[8] },
+    { year: 2015, milestones: milestonePool[9] },
+    { year: 2014, milestones: milestonePool[10] },
+    { year: 2013, milestones: milestonePool[11] },
+    { year: 2012, milestones: milestonePool[12] },
+];
+
+const yearsList = document.getElementById('years-list');
+const yearUp = document.getElementById('year-up');
+const yearDown = document.getElementById('year-down');
+const sliderRow = document.getElementById('slider-row');
+
+let selectedYearIdx = 0;
+
+function renderYears() {
+    yearsList.innerHTML = '';
+    journeyData.forEach((item, idx) => {
+        const li = document.createElement('li');
+        li.className = 'year-item' + (idx === selectedYearIdx ? ' active' : '');
+        li.innerHTML = `<span class='year-dot'></span>${item.year}`;
+        li.onclick = () => {
+            selectedYearIdx = idx;
+            renderYears();
+            scrollToYear(idx);
+        };
+        yearsList.appendChild(li);
     });
-  });
+    scrollYearNavToActive();
+}
 
-
-</script>
-
-
-<script>
-  document.querySelectorAll(".our-story-year li").forEach(item => {
-    item.addEventListener("click", () => {
-      const year = item.getAttribute("data-year");
-
-      // Convert 2024 to '24' etc.
-      const shortYear = year.slice(-2);
-
-      const target = document.querySelector(".our-story-" + shortYear);
-      if (target) {
-        // Scroll smoothly to the content
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+function renderSlider() {
+    sliderRow.innerHTML = '';
+    journeyData.forEach((yearData, idx) => {
+        const yearBlock = document.createElement('div');
+        yearBlock.className = 'year-slider-block';
+        yearBlock.id = `year-block-${idx}`;
+        yearBlock.innerHTML = `<div class='year-title'>${yearData.year}</div>`;
+        const milestonesRow = document.createElement('div');
+        milestonesRow.className = 'milestones-row';
+        yearData.milestones.forEach(milestone => {
+            const card = document.createElement('div');
+            card.className = 'milestone-card';
+            card.innerHTML =
+                (milestone.icon ? milestone.icon : '') +
+            `<div class='milestone-title'>${milestone.date}</div>` +
+                `<div class='milestone-title'>${milestone.title}</div>` +
+                `<div class='milestone-desc'>${milestone.desc}</div>`;
+            milestonesRow.appendChild(card);
         });
-      }
+        yearBlock.appendChild(milestonesRow);
+        sliderRow.appendChild(yearBlock);
     });
-  });
-  
+}
+
+function scrollToYear(idx) {
+    const block = document.getElementById(`year-block-${idx}`);
+    if (block) {
+        block.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+}
+
+function scrollYearNavToActive() {
+    const active = yearsList.querySelector('.active');
+    if (active) {
+        active.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    }
+}
+
+yearUp.onclick = () => {
+    if (selectedYearIdx > 0) {
+        selectedYearIdx--;
+        renderYears();
+        scrollToYear(selectedYearIdx);
+    }
+};
+yearDown.onclick = () => {
+    if (selectedYearIdx < journeyData.length - 1) {
+        selectedYearIdx++;
+        renderYears();
+        scrollToYear(selectedYearIdx);
+    }
+};
+
+function updateArrows() {
+    yearUp.classList.toggle('disabled', selectedYearIdx === 0);
+    yearDown.classList.toggle('disabled', selectedYearIdx === journeyData.length - 1);
+}
+
+function rerenderAll() {
+    renderYears();
+    renderSlider();
+    updateArrows();
+    setTimeout(() => scrollToYear(selectedYearIdx), 0);
+}
+
+// --- New: Sync year highlight with slider scroll ---
+sliderRow.addEventListener('scroll', function () {
+    // Find the year block closest to the left edge of the slider
+    const sliderRect = sliderRow.getBoundingClientRect();
+    let minDist = Infinity;
+    let closestIdx = 0;
+    journeyData.forEach((_, idx) => {
+        const block = document.getElementById(`year-block-${idx}`);
+        if (block) {
+            const blockRect = block.getBoundingClientRect();
+            // Distance from left edge of slider
+            const dist = Math.abs(blockRect.left - sliderRect.left);
+            if (dist < minDist) {
+                minDist = dist;
+                closestIdx = idx;
+            }
+        }
+    });
+    if (closestIdx !== selectedYearIdx) {
+        selectedYearIdx = closestIdx;
+        renderYears();
+        updateArrows();
+    }
+});
+// --- End new code ---
+
+// Initial render
+rerenderAll();
+
+// Update arrows on year change
+const observer = new MutationObserver(updateArrows);
+observer.observe(yearsList, { childList: true, subtree: true });
 </script>
+
 
 
 
