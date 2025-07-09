@@ -704,54 +704,54 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 // --- Milestone pool for each year ---
 const milestonePool = [
     [
-        { icon: `<img src="/assets/images/about_us/direct-admin.webp" alt="direct-admin">`,date:'October 2024', title: 'Official Partnership with DirectAdmin', desc: `Another panel in the mix! DirectAdmin brought simplicity and speed to server management.` },
+        { icon: ` <img src="/assets/images/about_us/direct-admin.webp" alt="direct-admin">`,date:'October 2024', title: 'Official Partnership with DirectAdmin', desc: `Another panel in the mix! DirectAdmin brought simplicity and speed to server management.` },
     ],
     [
-        { icon: '<img src="/assets/images/about_us/webuzo.webp" alt="webuzo">',date:'January 2023', title: 'Joined Hands with Webuzo', desc: 'Webuzo joined the party! Our customers have more options to manage their servers.' },
+        { icon: ' <img src="/assets/images/about_us/webuzo.webp" alt="webuzo">',date:'January 2023', title: 'Joined Hands with Webuzo', desc: 'Webuzo joined the party! Our customers have more options to manage their servers.' },
     ],
     [
-        { icon: '<img src="/assets/images/about_us/acronis_cloud_backup.webp" alt="acronis_cloud_backup">',date:'March 2022', title: 'Partnered with Acronis for Data Backup Solutions', desc: 'We take Backups seriously! Acronis helped us add a strong layer of data protection.' },
+        { icon: ' <img src="/assets/images/about_us/acronis_cloud_backup.webp" alt="acronis_cloud_backup">',date:'March 2022', title: 'Partnered with Acronis for Data Backup Solutions', desc: 'We take Backups seriously! Acronis helped us add a strong layer of data protection.' },
     ],
     [
-        { icon: '<img src="/assets/images/about_us/microsoft-spla.webp" alt="microsoft-spla">',date:'February 2021', title: 'Added Microsoft SPLA Partnership', desc: 'Added another feather! With SPLA, we expanded our range of licensed Microsoft solutions.' },
+        { icon: ' <img src="/assets/images/about_us/microsoft-spla.webp" alt="microsoft-spla">',date:'February 2021', title: 'Added Microsoft SPLA Partnership', desc: 'Added another feather! With SPLA, we expanded our range of licensed Microsoft solutions.' },
     ],
     [
-        { icon: '<img src="/assets/images/about_us/softaculous.webp" alt="softaculous">',date:'January 2020', title: 'Partnered with Softaculous', desc: 'We bought 1-click installs for everyone! With Softaculous, we made launching apps a breeze.' },
-        { icon: '<img src="/assets/images/about_us/business-grow.webp" alt="business-grow">',date:'July 2020', title: 'July 2020', desc: 'Enabled 1500+ Businesses to Go Online During Lockdown',desc2: 'In the toughest times, we delivered solutions! We empowered over 1500 businesses to shift online and keep moving forward.' },
+        { icon: ' <img src="/assets/images/about_us/softaculous.webp" alt="softaculous">',date:'January 2020', title: 'Partnered with Softaculous', desc: 'We bought 1-click installs for everyone! With Softaculous, we made launching apps a breeze.' },
+        { icon: ' <img src="/assets/images/about_us/business-grow.webp" alt="business-grow">',date:'July 2020', title: 'July 2020', desc: 'Enabled 1500+ Businesses to Go Online During Lockdown',desc2: 'In the toughest times, we delivered solutions! We empowered over 1500 businesses to shift online and keep moving forward.' },
         
     ],
     [
-        { icon: '<img src="/assets/images/about_us/aws.webp" alt="aws">',date:'February 2019', title: 'Initiated AWS Support Services', desc: 'The cloud was calling & we answered! We started helping businesses scale with AWS support.' },
+        { icon: ' <img src="/assets/images/about_us/aws.webp" alt="aws">',date:'February 2019', title: 'Initiated AWS Support Services', desc: 'The cloud was calling & we answered! We started helping businesses scale with AWS support.' },
        
     ],
     [
-        { icon: '<img src="/assets/images/about_us/infrastructure.webp" alt="infrastructure">',date:'January 2018', title: 'Launched Our Own Hosting Infrastructure', desc: 'It was time to take control! We built our own hosting infrastructure to offer faster, safer services.' },
-        { icon: '<img src="/assets/images/about_us/cpanel.webp" alt="cpanel">',date:'March 2018', title: 'Official cPanel Partnership', desc: 'With cPanel in our corner, managing websites became super easy for our customers.' },
-        { icon: '<img src="/assets/images/about_us/plesk.webp" alt="plesk">',date:'June 2018', title: 'Became a Certified Plesk Partner', desc: 'More choices of panels mean more power! We partnered with Plesk to give clients flexibility in control panels.' },
+        { icon: ' <img src="/assets/images/about_us/infrastructure.webp" alt="infrastructure">',date:'January 2018', title: 'Launched Our Own Hosting Infrastructure', desc: 'It was time to take control! We built our own hosting infrastructure to offer faster, safer services.' },
+        { icon: ' <img src="/assets/images/about_us/cpanel.webp" alt="cpanel">',date:'March 2018', title: 'Official cPanel Partnership', desc: 'With cPanel in our corner, managing websites became super easy for our customers.' },
+        { icon: ' <img src="/assets/images/about_us/plesk.webp" alt="plesk">',date:'June 2018', title: 'Became a Certified Plesk Partner', desc: 'More choices of panels mean more power! We partnered with Plesk to give clients flexibility in control panels.' },
        
     ],
     [
-        { icon: '<img src="/assets/images/about_us/cloudlinux-os.webp" alt="cloudlinux-os">',date:'December 2017', title: 'Entered into Partnership with CloudLinux', desc: 'We understand that strong servers need strong foundations, so we partnered with CloudLinux for better security and stability.' },        
+        { icon: ' <img src="/assets/images/about_us/cloudlinux-os.webp" alt="cloudlinux-os">',date:'December 2017', title: 'Entered into Partnership with CloudLinux', desc: 'We understand that strong servers need strong foundations, so we partnered with CloudLinux for better security and stability.' },        
     ],
     [
-        { icon: '<img src="/assets/images/about_us/ican.webp" alt="ican">',date:'November 2016', title: 'Accredited as an ICANN Registrar', desc: 'We got legit with domains! ICANN gave us the official nod to register domains globally.' },
+        { icon: ' <img src="/assets/images/about_us/ican.webp" alt="ican">',date:'November 2016', title: 'Accredited as an ICANN Registrar', desc: 'We got legit with domains! ICANN gave us the official nod to register domains globally.' },
     ],
 
     [
-        { icon: '<img src="/assets/images/about_us/microsoft.webp" alt="microsoft">',date:'December 2015', title: 'Partnered with Microsoft as a Silver Application Developer', desc: 'Silver from Microsoft? Oh yes! After that, we geared up to deliver more powerful hosting experiences.' },
+        { icon: ' <img src="/assets/images/about_us/microsoft.webp" alt="microsoft">',date:'December 2015', title: 'Partnered with Microsoft as a Silver Application Developer', desc: 'Silver from Microsoft? Oh yes! After that, we geared up to deliver more powerful hosting experiences.' },
     ],
 
      [
-        { icon: '<img src="/assets/images/about_us/inuagration_ahmedabad_office.webp" alt="inuagration_ahmedabad_office">',date:'January 2014', title: 'Inauguration of Ahmedabad Office', desc: 'From digital to physical, our first real space in Ahmedabad felt like leveling up in real life.' },
-        { icon: '<img src="/assets/images/about_us/hosted_website.webp" alt="hosted_website">',date:'July 2014', title: 'Achieved 1000+ Hosted Websites Milestone', desc: 'Our servers started getting crowded in a good way! Over 1000+ websites chose us as their home.' },
+        { icon: ' <img src="/assets/images/about_us/inuagration_ahmedabad_office.webp" alt="inuagration_ahmedabad_office">',date:'January 2014', title: 'Inauguration of Ahmedabad Office', desc: 'From digital to physical, our first real space in Ahmedabad felt like leveling up in real life.' },
+        { icon: ' <img src="/assets/images/about_us/hosted_website.webp" alt="hosted_website">',date:'July 2014', title: 'Achieved 1000+ Hosted Websites Milestone', desc: 'Our servers started getting crowded in a good way! Over 1000+ websites chose us as their home.' },
     ],
 
     [
-        { icon: '<img src="/assets/images/about_us/google.webp" alt="google">',date:'November 2013', title: 'Recognized as an Authorized Google Partner', desc: 'We got Google’s stamp of approval! That gave us wings to offer smarter online solutions.' },
+        { icon: ' <img src="/assets/images/about_us/google.webp" alt="google">',date:'November 2013', title: 'Recognized as an Authorized Google Partner', desc: 'We got Google’s stamp of approval! That gave us wings to offer smarter online solutions.' },
     ],
 
     [
-        { icon: '<img src="/assets/images/about_us/hostitsmart.webp" alt="hostitsmart">',date:'April 2012', title: 'Establishment of Host IT Smart', desc: 'It all started with a spark and a server! Host IT Smart was born to simplify and improve web hosting.' },
+        { icon: ' <img src="/assets/images/about_us/hostitsmart.webp" alt="hostitsmart">',date:'April 2012', title: 'Establishment of Host IT Smart', desc: 'It all started with a spark and a server! Host IT Smart was born to simplify and improve web hosting.' },
     ]
 ];
 
@@ -820,9 +820,10 @@ function renderSlider() {
         yearData.milestones.forEach(milestone => {
             const card = document.createElement('div');
             card.className = 'milestone-card';
+
             card.innerHTML =
-                (milestone.icon ? milestone.icon : '') +
-            `<div class='milestone-title'>${milestone.date}</div>` +
+               `<div class="our-story-box-img">${milestone.icon}</div>` +
+            `<div class='milestone-year'>${milestone.date}</div>` +
                 `<div class='milestone-title'>${milestone.title}</div>` +
                 `<div class='milestone-desc'>${milestone.desc}</div>`;
             milestonesRow.appendChild(card);

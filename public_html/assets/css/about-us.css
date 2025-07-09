@@ -366,7 +366,7 @@ span.our-story-cnt-yr {
     font-weight: 500;
     margin: 10px 0;
 }
-span.our-story-box-img {
+.our-story-box-img {
     vertical-align: middle;
     display: flex;
     align-items: center;
@@ -550,12 +550,10 @@ body.no-scroll {
             margin-bottom: 8px;
         }
         .year-title {
-            font-size: 32px;
-            color: #0091d6;
-            font-weight: 700;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
-            margin-left: 6px;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin-left: 8px;
         }
         .milestones-row {
             display: flex;
@@ -563,41 +561,125 @@ body.no-scroll {
             width: max-content;
             flex-wrap: nowrap;
             box-sizing: border-box;
+            height: 480px;
         }
         .milestone-card {
-            background: #f4f8fb;
-            border-radius: 14px;
-            box-shadow: 0 2px 8px rgba(0,145,214,0.06), 0 1px 2px rgba(0,0,0,0.03);
-            min-width: 320px;
-            max-width: 320px;
+            min-width: 390px;
+            max-width: 390px;
             padding: 32px 22px 28px 22px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             transition: box-shadow 0.2s, transform 0.2s;
-            border: 1.5px solid #e6f3fa;
             position: relative;
-        }
-        .milestone-card:hover {
-            box-shadow: 0 8px 32px rgba(0,145,214,0.13), 0 2px 8px rgba(0,0,0,0.04);
-            transform: translateY(-4px) scale(1.025);
-            border-color: #b6e6fa;
+            border-radius: 10px;
         }
         .milestone-icon {
             margin-bottom: 18px;
         }
         .milestone-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #0a3c5e;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 10px 0;
+            color: #080808;
+            display: block;
         }
         .milestone-desc {
-            font-size: 16px;
-            color: #222;
-            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+            color: rgb(8, 8, 8);
         }
+
+
+
+
+
+
+
+        
+.our-story-24 .year-title, .our-story-20 .year-title, .our-story-16 .year-title, .our-story-12 .year-title{
+  color: #795EF4;
+}
+.our-story-24 .milestone-card, .our-story-20 .milestone-card, .our-story-16 .milestone-card, .our-story-12 .milestone-card {
+    background: #F8F6FF;
+    border: 1px solid #E6E1F7;
+}
+.our-story-24 .milestone-year, .our-story-20 .milestone-year, .our-story-16 .milestone-year, .our-story-12 .milestone-year{
+  color: #3838ff;
+}
+
+
+.our-story-23 .year-title, .our-story-19 .year-title, .our-story-15 .year-title{
+  color: #DFA900;
+}
+.our-story-23 .milestone-card, .our-story-19 .milestone-card, .our-story-15 .milestone-card {
+    background: #FFFAEC;
+    border: 1px solid #F2E9D0;
+}
+.our-story-23 .milestone-year, .our-story-19 .milestone-year, .our-story-15 .milestone-year{
+  color: #DFA900;
+}
+
+
+.our-story-22 .year-title, .our-story-18 .year-title, .our-story-14 .year-title{
+  color: #31A831;
+}
+.our-story-22 .milestone-card, .our-story-18 .milestone-card, .our-story-14 .milestone-card {
+    background: #F6FDF4;
+    border: 1px solid #D4F0D4;
+}
+.our-story-22 .milestone-year, .our-story-18 .milestone-year, .our-story-14 .milestone-year{
+  color: #31A831;
+}
+
+
+.our-story-21 .year-title, .our-story-17 .year-title, .our-story-13 .year-title{
+  color: #1a741a;
+}
+.our-story-21 .milestone-card, .our-story-17 .milestone-card, .our-story-13 .milestone-card {
+    background: #ffefef;
+    border: 1px solid #c0d7c0;
+}
+.our-story-21 .milestone-year, .our-story-17 .milestone-year, .our-story-13 .milestone-year{
+  color: #1a741a;
+}
+
+
+.our-story-box-img {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.milestone-year {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         @media (max-width: 900px) {
             .journey-main {
                 flex-direction: column;
