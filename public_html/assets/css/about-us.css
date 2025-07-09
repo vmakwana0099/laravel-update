@@ -435,3 +435,19 @@ span.our-story-cnt-dt {
   opacity: 0;
   pointer-events: none;
 }
+
+
+
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+

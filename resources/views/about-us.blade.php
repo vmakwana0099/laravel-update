@@ -292,6 +292,13 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
 <!-- <section class="know-our-story head-tb-p-40">
     <div class="container">
         <div class="section-heading">
@@ -961,6 +968,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
       });
     });
   });
+
 
 </script>
 
