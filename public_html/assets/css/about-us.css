@@ -396,9 +396,6 @@ span.our-story-cnt-dt {
 
 
 
-
-
-
 .our-story-year li span.active-year {
     background-color: #007bff;
     color: #fff;
@@ -418,3 +415,23 @@ span.our-story-cnt-dt {
     transition: background-color 0.3s;
     user-select: none;
   }
+
+.our-story-year li.active {
+  background-color: #007BFF; /* You can use any color */
+  color: white;
+  border-radius: 4px;
+}
+
+.our-story-year-prev,
+.our-story-year-next {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.our-story-year-prev[style*="display: none"],
+.our-story-year-next[style*="display: none"] {
+  opacity: 0;
+  pointer-events: none;
+}
