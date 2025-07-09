@@ -74,17 +74,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <div class="year-slider-block" id="year-block-0">
                         <div class="year-title">2025</div>
                         <div class="milestones-row">
-                            <div class="milestone-card"><svg class="milestone-icon" width="48" height="48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="48" height="48" rx="12" fill="#e6f3fa"></rect>
-                                    <path d="M16 24v-4a8 8 0 0116 0v4" stroke="#0091d6" stroke-width="2" fill="none"></path>
-                                    <rect x="18" y="28" width="12" height="4" rx="2" fill="#0091d6"></rect>
-                                </svg>
-                                <div class="milestone-title">Zoho Bookings</div>
-                                <div class="milestone-desc">Zoho Bookings marks 5 years of effortless appointment scheduling by
-                                    unveiling the all-new <b>Bookings 2.0</b>. The upgraded version refines scheduling
-                                    automation with new functionalities and AI-powered setup.</div>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="year-slider-block" id="year-block-1">
@@ -93,14 +83,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                             <div class="milestone-card">
                                 <div class="milestone-title">Zoho Campaigns</div>
                                 <div class="milestone-desc">Zoho Campaigns launches new automation features.</div>
-                            </div>
-                            <div class="milestone-card">
-                                <div class="milestone-title">Zoho Books 2024</div>
-                                <div class="milestone-desc">Zoho Books introduces GST automation.</div>
-                            </div>
-                            <div class="milestone-card">
-                                <div class="milestone-title">Zoho CRM Update</div>
-                                <div class="milestone-desc">Major update to Zoho CRM with AI-powered analytics.</div>
                             </div>
                         </div>
                     </div>
@@ -817,7 +799,20 @@ function renderSlider() {
     sliderRow.innerHTML = '';
     journeyData.forEach((yearData, idx) => {
         const yearBlock = document.createElement('div');
-        yearBlock.className = 'year-slider-block';
+        
+        if(idx == 0 || idx == 4 || idx == 8 || idx == 12){
+            yearBlock.className = 'year-slider-block our-story-24';
+            
+        }else if(idx == 1 || idx == 5 || idx == 9){
+            yearBlock.className = 'year-slider-block our-story-23';
+         
+        }else if(idx == 2 || idx == 6 || idx == 10){
+            yearBlock.className = 'year-slider-block our-story-22';
+         
+        }else if(idx == 3 || idx == 7 || idx == 11){
+            yearBlock.className = 'year-slider-block our-story-21';
+        }
+        
         yearBlock.id = `year-block-${idx}`;
         yearBlock.innerHTML = `<div class='year-title'>${yearData.year}</div>`;
         const milestonesRow = document.createElement('div');
