@@ -879,7 +879,6 @@ class ProductCategory extends Model {
                     ->orderBy('tld.id')
                     ->get();
         }
-//        dd($response_data);
         return $response_data;
     }
 

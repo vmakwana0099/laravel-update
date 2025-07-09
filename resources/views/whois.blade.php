@@ -59,8 +59,12 @@
                 }
             });
 
-            jQuery.validator.addMethod("domainchecker", function(value, element) {
+            {{-- jQuery.validator.addMethod("domainchecker", function(value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/.test(value);
+            }, "Please enter correct domain name."); --}}
+
+            jQuery.validator.addMethod("domainchecker", function(value, element) {
+                return this.optional(element) || /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value) || /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/.test(value);
             }, "Please enter correct domain name.");
 
             $("[name^=domainwhois]").each(function() {

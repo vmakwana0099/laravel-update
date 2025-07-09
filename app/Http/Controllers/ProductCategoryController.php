@@ -368,6 +368,7 @@ class ProductCategoryController extends FrontController {
         $params['currency'] = Config::get('Constant.sys_currency');
         $params['tld'] = $tlddata[1];
         $params['domain_type'] = "all";
+        // dd($params);
         $Tld_Availibity = ProductCategory::GetTldData($params);
 
         foreach ($Tld_Availibity as $value) {
