@@ -51,6 +51,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                <div class="journey-section">
         <div class="journey-header">
             <h1>Zoho wasn't built in a day</h1>
+            
             <p>Explore our journey through the years.</p>
         </div>
         <div class="journey-main">
