@@ -30,10 +30,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
     </div>
 </section>
 <section class="our-story-wrapper-main head-tb-p-40">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-               <div class="journey-section">
+    <div class="container">
         
         <div class="section-heading text-center">
             <h2 class="text_head text-center">
@@ -50,6 +47,12 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 We are still growing, still improving, and still just getting started.
             </p>
         </div>
+        </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+               <div class="journey-section">
+        
         <div class="journey-main">
             <div class="journey-years">
                 <!-- <div class="year-arrow disabled" id="year-up">▲</div> -->
