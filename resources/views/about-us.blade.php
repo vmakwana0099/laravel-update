@@ -31,6 +31,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 </section>
 <section class="our-story-wrapper-main head-tb-p-40">
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+               <div class="journey-section">
+        
         <div class="section-heading text-center">
             <h2 class="text_head text-center">
                 Know Our Story
@@ -46,17 +50,10 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                 We are still growing, still improving, and still just getting started.
             </p>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-               <div class="journey-section">
-        <div class="journey-header">
-            <h1>Zoho wasn't built in a day</h1>
-            
-            <p>Explore our journey through the years.</p>
-        </div>
         <div class="journey-main">
             <div class="journey-years">
-                <div class="year-arrow disabled" id="year-up">▲</div>
+                <!-- <div class="year-arrow disabled" id="year-up">▲</div> -->
+                 <span id="scroll-up" class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
                 <ul class="years-list" id="years-list">
                     <li class="year-item active"><span class="year-dot"></span>a</li>
                     <li class="year-item"><span class="year-dot"></span>b</li>
@@ -68,7 +65,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <li class="year-item"><span class="year-dot"></span>h</li>
                     <li class="year-item"><span class="year-dot"></span>i</li>
                 </ul>
-                <div class="year-arrow" id="year-down">▼</div>
+                <span id="scroll-down" class="our-story-year-prev"><i class="fa-solid fa-chevron-down"></i></span>
+                <!-- <div class="year-arrow" id="year-down">▼</div> -->
             </div>
             <div class="journey-content">
                 <div class="slider-row" id="slider-row">
@@ -774,8 +772,8 @@ const journeyData = [
 ];
 
 const yearsList = document.getElementById('years-list');
-const yearUp = document.getElementById('year-up');
-const yearDown = document.getElementById('year-down');
+// const yearUp = document.getElementById('year-up');
+// const yearDown = document.getElementById('year-down');
 const sliderRow = document.getElementById('slider-row');
 
 let selectedYearIdx = 0;
@@ -848,20 +846,20 @@ function scrollYearNavToActive() {
     }
 }
 
-yearUp.onclick = () => {
-    if (selectedYearIdx > 0) {
-        selectedYearIdx--;
-        renderYears();
-        scrollToYear(selectedYearIdx);
-    }
-};
-yearDown.onclick = () => {
-    if (selectedYearIdx < journeyData.length - 1) {
-        selectedYearIdx++;
-        renderYears();
-        scrollToYear(selectedYearIdx);
-    }
-};
+// yearUp.onclick = () => {
+//     if (selectedYearIdx > 0) {
+//         selectedYearIdx--;
+//         renderYears();
+//         scrollToYear(selectedYearIdx);
+//     }
+// };
+// yearDown.onclick = () => {
+//     if (selectedYearIdx < journeyData.length - 1) {
+//         selectedYearIdx++;
+//         renderYears();
+//         scrollToYear(selectedYearIdx);
+//     }
+// };
 
 function updateArrows() {
     yearUp.classList.toggle('disabled', selectedYearIdx === 0);
@@ -910,6 +908,29 @@ observer.observe(yearsList, { childList: true, subtree: true });
 </script>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const scrollUp = document.getElementById("scroll-up");
+        const scrollDown = document.getElementById("scroll-down");
+        const yearsList = document.getElementById("years-list");
+
+        const scrollAmount = 50; // Adjust scroll step in px
+
+        scrollUp.addEventListener("click", () => {
+            yearsList.scrollBy({
+                top: -scrollAmount,
+                behavior: "smooth"
+            });
+        });
+
+        scrollDown.addEventListener("click", () => {
+            yearsList.scrollBy({
+                top: scrollAmount,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
 
 
 <script src="{{ url('/') }}/assets/js/counter.js?v={{date('YmdHi')}}"></script>
