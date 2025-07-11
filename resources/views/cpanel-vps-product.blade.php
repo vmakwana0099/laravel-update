@@ -5,5 +5,15 @@
     	<link rel="stylesheet" href="{{URL::to('/assets/css/full-width-inner-banner.css')}}">
     	<?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
     	@include('template.'.$themeversion.'.banner')
+
+
+
+
+
+
+
+
+
+        
 	@endif
 @endsection 
