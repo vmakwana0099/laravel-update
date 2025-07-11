@@ -42,7 +42,6 @@ class ProductsController extends FrontController {
         $ProId = Products::getProductId($aliasId, $ProCatId->id);
         $TLDId = Products::getTLDId($aliasId);
         
-        
         if (isset($ProId->id)) {
             if ($ProId->id == 14 && empty($TLDId->id)) {
                 $trasfer_data = self::domaintransfer($ProId->id);
@@ -121,6 +120,9 @@ class ProductsController extends FrontController {
             else if($ProId->id == "32"){
                 $protext = "vps"; //For VPS Hosting India
             }
+            else if($ProId->id == "34"){
+                $protext = "vps"; //For Cpanel VPS Hosting
+            }
             else if($ProId->id == "21"){
                 $protext = "email"; //For Google Apps
             }
@@ -147,7 +149,7 @@ class ProductsController extends FrontController {
                 $protext = "";
             }
 
-            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32" ) {
+            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32"  || $ProId->id == "34") {
                 $yearsArr = ["monthly","quarterly","semi-annually","annually","biennially","triennially"]; 
                 $i=0;
                 foreach ($ProductData['ProductsPackageData'] as $pkey => $pval){
@@ -250,6 +252,9 @@ class ProductsController extends FrontController {
                 // echo "<pre>";print_r($ProductData);exit;
                 return view("vps-product-india", $ProductData);
                 // return view("vpsproduct", $ProductData);
+            }
+            else if ($ProId->id == "34") {
+                return view("cpanel-vps-product", $ProductData);
             }
              else if ($ProId->id == "24") { //for windows vps hosting product
                 return view("windowsvpshosting", $ProductData);
