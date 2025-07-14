@@ -283,6 +283,48 @@
 
 
 
+	<section class="cpanel-sec-ftr-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="cpanel-sec-ftr-img">
+					<img src="/assets/images/cpanel_hosting/cpanel-security-features.webp" alt="cpanel-security-features">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="cpanel-sec-ftr-cnt">
+						<div class="cpanel-sec-ftr-box">
+							<div class="cpanel-sec-ftr-title">
+							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="29.942" viewBox="0 0 30 29.942">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#068c46"/>
+      <stop offset="1" stop-color="#068c46" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+      <g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+        <g id="_1" data-name="1">
+          <circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971" r="14.971" fill="#1dd882"/>
+          <path id="Path_248390" data-name="Path 248390" d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z" transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)"/>
+          <path id="Path_248391" data-name="Path 248391" d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z" transform="translate(-108.883 -141.084)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg></span>	Two-Factor Authentication
+							</div>
+							<div class="cpanel-sec-ftr-title">
+								You don’t have to worry about when you can add that extra layer of login security with a simple code received on your phone
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 
 
