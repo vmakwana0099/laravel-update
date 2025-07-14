@@ -35,11 +35,16 @@ class ProductsController extends FrontController {
     }
 
     public function index($product_category, $product) {
-         
         $cataliasId = slug::resolve_alias_for_routes($product_category);
+        
         $aliasId = slug::resolve_alias_for_routes($product);
+         if($product == 'java-hosting'){
+            $aliasId = 955;
+        }
+        // dd($aliasId);
         $ProCatId = Products::getProductCatId($cataliasId);
         $ProId = Products::getProductId($aliasId, $ProCatId->id);
+       
         $TLDId = Products::getTLDId($aliasId);
         
         if (isset($ProId->id)) {
@@ -93,6 +98,7 @@ class ProductsController extends FrontController {
             $ProductData['FaqData'] = Products::getFaqRecords($ProId->id);
             $ProductData['testimonialData'] = CmsPage::getHomeTestimonials();
             $ProductData['FeaturedProductsData'] = Products::getFeaturedProductsRecords($ProId->id);
+
             $ProductData['ProductsPackageData'] = Products::getProductsPackageRecords($ProId->id);
             $ProductData['PageHits'] = Products::PageHits($ProId->id);
             $ProductData['META_TITLE'] = $MetaData->varMetaTitle;
@@ -102,9 +108,10 @@ class ProductsController extends FrontController {
                 $protext = "dedicatedserver";
             } else if ($ProId->id == "7") {
                 $protext = "vps";
-            } else if ($ProId->id == "6" || $ProId->id == "4" || $ProId->id == "12" || $ProId->id == "9" || $ProId->id == "2" || $ProId->id == "1" || $ProId->id == "13" || $ProId->id == "15" || $ProId->id == "20" || $ProId->id == "27" || $ProId->id == "29" || $ProId->id == "30") {
+            } else if ($ProId->id == "6" || $ProId->id == "4" || $ProId->id == "12" || $ProId->id == "9" || $ProId->id == "2" || $ProId->id == "1" || $ProId->id == "15" || $ProId->id == "20" || $ProId->id == "27" || $ProId->id == "29" || $ProId->id == "30") {
                 $protext = "hosting";
             }
+             // $ProId->id == "13" ||
             else if($ProId->id == "23"){
                 $protext = "vps"; //For Linux VPS Hosting
             } 
@@ -119,6 +126,9 @@ class ProductsController extends FrontController {
             }
             else if($ProId->id == "32"){
                 $protext = "vps"; //For VPS Hosting India
+            }
+            else if($ProId->id == "33"){
+                $protext = "vps"; //For Java Hosting
             }
             else if($ProId->id == "34"){
                 $protext = "vps"; //For Cpanel VPS Hosting
@@ -149,7 +159,8 @@ class ProductsController extends FrontController {
                 $protext = "";
             }
 
-            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32"  || $ProId->id == "34") {
+
+            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32"  || $ProId->id == "34" || $ProId->id == "33") {
                 $yearsArr = ["monthly","quarterly","semi-annually","annually","biennially","triennially"]; 
                 $i=0;
                 foreach ($ProductData['ProductsPackageData'] as $pkey => $pval){
@@ -297,7 +308,7 @@ class ProductsController extends FrontController {
             elseif($ProId->id == "2"){
                 return view("windows-hosting-product", $ProductData);
             }
-            elseif($ProId->id == "13"){
+            elseif($ProId->id == "33"){
                 return view("java-product", $ProductData);
             }
             else {    

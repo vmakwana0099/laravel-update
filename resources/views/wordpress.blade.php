@@ -99,7 +99,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[0]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price">
                                                         {{$ProductsPackageData[0]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -252,7 +252,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
 
                                   <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main shared-plan-most-popular" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-most-popular-cnt">
                                             MOST POPULAR
@@ -270,7 +270,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[1]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price">
                                                         {{$ProductsPackageData[1]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -353,7 +353,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                             <li>
                                                                 <div class="free-domain">
                                                                     {{$Specification}}
-                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.Your Domain Renewal Charges:₹ 1049/Yr*
                                                                     </span>
                                                                 </div>
                                                             </li>   
@@ -430,7 +430,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                                          
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
@@ -445,7 +445,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[2]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price">
                                                         {{$ProductsPackageData[2]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -525,7 +525,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                             <li>
                                                                 <div class="free-domain">
                                                                     {{$Specification}}
-                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.Your Domain Renewal Charges:₹ 1049/Yr*
                                                                     </span>
                                                                 </div>
                                                             </li>   
@@ -601,7 +601,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                 </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+                                <div class="shared-plan-box-main" data-aos="fade-left" data-aos-easing="ease-out-back">
                                     <div class="shared-pln-box">
                                         <div class="shared-plan-price">
                                             <div class="shared-plan-nm">
@@ -616,7 +616,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                     @endif
                                                 @else
                                                     @if(!empty($ProductsPackageData[3]->intOldPriceThreeMonthUSD))
-                                                        <span class="cut-price" id="BasicThreeYearUSD">
+                                                        <span class="cut-price">
                                                         {{$ProductsPackageData[3]->intOldPriceThreeMonthUSD}}</span>
                                                     @endif
                                                 @endif
@@ -696,7 +696,7 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                                                             <li>
                                                                 <div class="free-domain">
                                                                     {{$Specification}}
-                                                                    <span class="domain-tooltip">The visitor capacity mentioned for each shared hosting plan is an approximate estimate. The actual number may vary based on factors like website optimization, caching, content type, traffic spikes, and resource usage. We recommend monitoring your site's resource consumption and upgrading when needed for best performance.
+                                                                    <span class="domain-tooltip">Get Free .COM domain for 1st Year with hosting plans on purchase of 1 or more years. After 1-year, Applicable charges will be applied on domain renewal.Your Domain Renewal Charges:₹ 1049/Yr*
                                                                     </span>
                                                                 </div>
                                                             </li>   
@@ -1299,7 +1299,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     Starting @
                                 </div>
                                 <div class="price-cnt">
-                                                                        ₹<span>45</span>/mo*
+                                                                        ₹<span>49</span>/mo*
                                                                     </div>
                             </div>
                         </div>
@@ -1311,10 +1311,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                     Host 1 Website
                                 </li>
                                 <li>
-                                    5 GB NVMe Disk Space
+                                    10 GB NVMe Disk Space
                                 </li>
                                 <li>
-                                    50GB Bandwidth
+                                    10000 GB Bandwidth
                                 </li>
                                 <li>
                                     5 Email Accounts

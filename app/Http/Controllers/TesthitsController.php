@@ -51,9 +51,10 @@ $linksArr['156'] = array("link" => "hosting/wordpress-hosting","name" => "Wordpr
 $linksArr['157'] = array("link" => "hosting/wordpress-hosting","name" => "Wordpress Hosting", "type" => "<span style='color:green'>Business</span>");
 
 		
-$linksArr['158'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:pink'>Starter</span>");
-$linksArr['159'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:blue'>Performance</span>");
-$linksArr['160'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
+$linksArr['539'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:pink'>Starter</span>");
+$linksArr['540'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:blue'>Performance</span>");
+$linksArr['541'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
+$linksArr['542'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
 
 		
 $linksArr['161'] = array("link" => "hosting/ecommerce-hosting","name" => "eCommerce Hosting", "type" => "<span style='color:pink'>Starter</span>");
@@ -82,6 +83,11 @@ $linksArr['190'] = array("link" => "servers/vps-hosting","name" => "VPS Hosting"
 $linksArr['220'] = array("link" => "servers/linux-vps-hosting","name" => "Linux VPS Hosting", "type" => "<span style='color:pink'>Starter</span>");
 $linksArr['221'] = array("link" => "servers/linux-vps-hosting","name" => "Linux VPS Hosting", "type" => "<span style='color:blue'>Performance</span>");
 $linksArr['227'] = array("link" => "servers/linux-vps-hosting","name" => "Linux VPS Hosting", "type" => "<span style='color:green'>Business</span>");
+
+$linksArr['543'] = array("link" => "servers/cpanel-vps-hosting","name" => "cpanel VPS Hosting", "type" => "<span style='color:pink'>SM-1</span>");
+$linksArr['544'] = array("link" => "servers/cpanel-vps-hosting","name" => "cpanel VPS Hosting", "type" => "<span style='color:blue'>SM-2</span>");
+$linksArr['545'] = array("link" => "servers/cpanel-vps-hosting","name" => "cpanel VPS Hosting", "type" => "<span style='color:green'>SM-3</span>");
+$linksArr['546'] = array("link" => "servers/cpanel-vps-hosting","name" => "cpanel VPS Hosting", "type" => "<span style='color:green'>SM-4</span>");
 		
 $linksArr['222'] = array("link" => "servers/windows-vps-hosting","name" => "Windows VPS Hosting", "type" => "<span style='color:pink'>Starter</span>");
 $linksArr['224'] = array("link" => "servers/windows-vps-hosting","name" => "Windows VPS Hosting", "type" => "<span style='color:blue'>Performance</span>");
