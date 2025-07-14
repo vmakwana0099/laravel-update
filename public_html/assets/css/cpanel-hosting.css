@@ -30,3 +30,19 @@
 .cpanel-mngmnt-cnt-row:nth-child(3) {
     border-bottom: 0 !important;
 }
+
+.cpanel-sec-ftr-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.cpanel-sec-ftr-box {
+    margin-bottom: 20px;
+}
+.cpanel-sec-ftr-data {
+    font-size: 16px;
+    font-weight: 400;
+}
+.cpanel-sec-ftr-title span {
+    margin-right: 7px;
+}
