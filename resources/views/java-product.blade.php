@@ -108,27 +108,9 @@
                       $Specification = (trim($Specifica));
                     @endphp
 
-                    @if(strtolower(trim($Specification)) == "1 vcpu core")
-                      <div class="slide-toggle">
-                        <li> <span><b>1</b> vCPU core</span></li>
-                      </div>
-                    @elseif(strtolower(trim($Specification)) == "4 gb ram")
-                      <div class="slide-toggle">
-                        <li> <span><b>4 GB</b> RAM</span></li>
-                      </div>
-                    @elseif(strtolower(trim($Specification)) == "50 gb ssd")
-                      <div class="slide-toggle">
-                        <li> <span><b>50GB</b> SSD</span></li>
-                      </div>
-                    @elseif(strtolower(trim($Specification)) == "1 dedicated ip")
-                    <div class="slide-toggle">
-                      <li> <span><b>1</b> Dedicated IP</span></li>
-                    </div>
-                    @else
                     <div class="slide-toggle">
                       <li> <span>{!!$Specification!!}</span></li>
                     </div>
-                    @endif
                   @endforeach
                 </ul>
               </div>
