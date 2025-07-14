@@ -930,13 +930,6 @@ observer.observe(yearsList, { childList: true, subtree: true });
 
 
 
-
-
-
-
-
-
-
 <script src="{{ url('/') }}/assets/js/counter.js?v={{date('YmdHi')}}"></script>
 
 @endsection
