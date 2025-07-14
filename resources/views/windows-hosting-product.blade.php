@@ -47,7 +47,7 @@
             
                  {{-- <div class="col-sm-12"> --}}
                 <div class="section-heading">
-                    <h2 class="text-center text_head " id="windows_hosting_plans">Choose Your Windows Hosting Plans</h2>
+                    <h2 class="text-center text_head " id="windows_hosting_plans">Check Out Our Cheap Windows Hosting in India</h2>
                 </div>
                 {{-- </div> --}}
                 
@@ -591,13 +591,16 @@
     <div class="container">
         <div class="win-support-php head-tb-p-40">
         <div class="row align-items-center">
+            <div class="section-heading">
+                    <h2 class="text-center text_head " id="windows_hosting_plans">Technical Specifications of Our Windows Hosting in India</h2>
+                </div>
             <div class="col-lg-6">
                 <div class="win-supprt-vid-cnt">
                     <div class="win-supprt-tittle">
                         Currently Supported PHP Versions
                     </div>
                     <div class="win-supprt-txt">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        We use the latest stable PHP versions, ensuring your website remains fast and secure without requiring any additional action on your part.
                     </div>
                 </div>
             </div>
@@ -621,7 +624,7 @@
                         Available .NET Core Versions
                     </div>
                     <div class="win-supprt-txt">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        We have got popular .NET Core versions pre-installed and ready to go. You just upload your project & we will handle the rest!
                     </div>
                 </div>
             </div>
@@ -641,10 +644,10 @@
             <div class="col-lg-6">
                 <div class="win-supprt-vid-cnt">
                     <div class="win-supprt-tittle">
-                        Database Servers
+                        Other Important Specifications
                     </div>
                     <div class="win-supprt-txt">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        Discover the key technical specifications of our Windows hosting that you should be aware of before purchasing with us!
                     </div>
                 </div>
             </div>
@@ -769,6 +772,8 @@
       
   <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
 @include('template.'.$themeversion.'.faq-section')
+@include('template.'.$themeversion.'.two-hosting-add')
+
     @if(!empty($FeaturedProductsData) && count($FeaturedProductsData) >0)
    
     @endif

@@ -172,7 +172,7 @@
                                                         $("#promobefore").show(); check_promo_validet=false;
                                                     }else{
                                                         message = $(div).find("#scrollingPanelContainer").prev().find('.alert').text();
-                                                        discount = $(div).find("span#discount").text().replace("INR", "").replace("USD", "").replace("$", "").replace(".00", "");
+                                                        discount = $(div).find("span#discount").text().replace("₹", "").replace("USD", "").replace("$", "").replace(".00", "");
 
                                                         message = $.trim(message);
                                                         if (message == 'Promotion Code Accepted! Your order total has been updated.'){
@@ -194,7 +194,7 @@
                                                             }
                                                         }
                                                             if(message == 'The promotion code you entered has been applied to your cart but no items qualify for the discount yet - please check the promotion terms'){
-                                                                 message = '<span class="red">This coupon is valid only for annual plans—choose a 1-year or longer term to grab the offer. </span>';
+                                                                 message = '<span class="red">The promotion code you entered has been applied to your cart but no items qualify for the discount yet - please check the promotion terms </span>';
    
                                                              htmlstr += '<span class="promo-text red">' + message + '</span>';
                                                             }
@@ -359,13 +359,6 @@
                     data:formData,
                     type:"post",
                     success:function(response){
-
-                        if (response.status === 'redirect') {
-                            hideLoader();
-                            $(function(){ $('#cartfull-popups').modal('show'); });
-                            {{-- window.location.href = response.url; --}}
-                        }
-
                         $("#finalPrice").html('Total: <span class="low-price"><span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>' + response + '</span>');
                         $("#finalPrices").html('Total: <span class="total-price"><span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!}</span>' + response + '</span>');
                     //hideLoader();
@@ -789,11 +782,11 @@
             type:"post",
             success:function(data){
 
-            var subtotal = data.subtotal.toString().replace("INR", "").replace("USD", "").replace("$", "").replace(",", "").replace(",", "");
-                    var taxtotal1 = data.taxtotal.toString().replace("INR", "").replace("USD", "").replace("$", "").replace(",", "");
-                    var taxtotal2 = data.taxtotal2.toString().replace("INR", "").replace("USD", "").replace("$", "").replace(",", "");
-                    var rawtotal = data.rawtotal.toString().replace("INR", "").replace("USD", "").replace("$", "");
-                    var rawdiscount = data.rawdiscount.toString().replace("INR", "").replace("USD", "").replace("$", "").replace(",", "");
+            var subtotal = data.subtotal.toString().replace("₹", "").replace("USD", "").replace("$", "").replace(",", "").replace(",", "");
+                    var taxtotal1 = data.taxtotal.toString().replace("₹", "").replace("USD", "").replace("$", "").replace(",", "");
+                    var taxtotal2 = data.taxtotal2.toString().replace("₹", "").replace("USD", "").replace("$", "").replace(",", "");
+                    var rawtotal = data.rawtotal.toString().replace("₹", "").replace("USD", "").replace("$", "");
+                    var rawdiscount = data.rawdiscount.toString().replace("₹", "").replace("USD", "").replace("$", "").replace(",", "");
                     /*$("#cartTotalspan").html('<span class="rupee">' + '{!! Config::get('Constant.sys_currency_symbol') !!}' + '</span><span class="original" >' + parseFloat(rawtotal) + '</span>');*/
                     $("#cartTotalspan").html('<span class="rupee">' + _currency + '</span><span class="original" >' + parseFloat(rawtotal) + '</span>');
                     /*$("#finalPricesinSignin").html('Total: <span class="total-price"><span class="rupee">{!! Config::get('Constant.sys_currency_symbol') !!} </span>' + parseFloat(rawtotal) + '</span>');*/
@@ -1023,7 +1016,7 @@
                                                         $("#promobefore").show(); check_promo_validet=false;
                                                     }else{
                                                         message = $(div).find("#scrollingPanelContainer").prev().find('.alert').text();
-                                                        discount = $(div).find("span#discount").text().replace("INR", "").replace("USD", "").replace("$", "").replace(".00", "");
+                                                        discount = $(div).find("span#discount").text().replace("₹", "").replace("USD", "").replace("$", "").replace(".00", "");
                                                         //alert(discount);
 
                                                         message = $.trim(message);
@@ -1052,7 +1045,7 @@
                                                             
                                                             redclass='red';
                                                         } else {
-                                                         redclass='';
+                                                         redclass='red';
                                                         }
                                                         var htmlstr = '<div class="promocde-applied-left">';
                                                         htmlstr += '<a onclick="removePromocode();" class="delete-icon" title="remove"><i class="remove-icon"></i></a>';

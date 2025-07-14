@@ -51,9 +51,10 @@ $linksArr['156'] = array("link" => "hosting/wordpress-hosting","name" => "Wordpr
 $linksArr['157'] = array("link" => "hosting/wordpress-hosting","name" => "Wordpress Hosting", "type" => "<span style='color:green'>Business</span>");
 
 		
-$linksArr['158'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:pink'>Starter</span>");
-$linksArr['159'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:blue'>Performance</span>");
-$linksArr['160'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
+$linksArr['539'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:pink'>Starter</span>");
+$linksArr['540'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:blue'>Performance</span>");
+$linksArr['541'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
+$linksArr['542'] = array("link" => "hosting/java-hosting","name" => "Java Hosting", "type" => "<span style='color:green'>Business</span>");
 
 		
 $linksArr['161'] = array("link" => "hosting/ecommerce-hosting","name" => "eCommerce Hosting", "type" => "<span style='color:pink'>Starter</span>");

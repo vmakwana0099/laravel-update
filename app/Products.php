@@ -344,6 +344,7 @@ class Products extends Model {
     }
 
     public static function getProductId($id, $catId) {
+        // dd($id,$catId);
         $response = false;
         $moduleFields = ['id'];
         $response = Self::select($moduleFields)
@@ -431,6 +432,7 @@ class Products extends Model {
     }
 
     public static function getProductsPackageRecords($id) {
+        // dd($id);
         $response = DB::table('products_package')
                 ->select(['varTitle',
                     DB::raw('replace(intOldPriceOneMonthINR, ".00", "") as intOldPriceOneMonthINR'),

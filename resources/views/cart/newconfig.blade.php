@@ -66,6 +66,7 @@ if (isset($productData['producttype']) && $productData['producttype']=="dedicate
             '386' => [853,840,844,841,845], //DSS29
             '387' => [868,855,859,856,860], //DSS30
             '389' => [484,471,475,472,476], //DSS32
+            
         ],
         'vps' => [
             //Forex

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <?php 
+	// dd(get_defined_vars());
 	$themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; 
 ?>
 @if(isset($bannerData) && !empty($bannerData) && count($bannerData) > 0)
@@ -21,71 +22,119 @@
                         		$_STARTER_PRICE_36_INR='_STARTER_PRICE_36_INR';
                         		$_PERFORMANCE_PRICE_36_INR='_PERFORMANCE_PRICE_36_INR';
                         		$_BUSINEESS_PRICE_36_INR='_BUSINEESS_PRICE_36_INR';
+
                         	@endphp
+
                         	@if(!empty($ProductsPackageData) && count($ProductsPackageData) >0)
-                        		@foreach($ProductsPackageData as $products)
-	                        		<div class="col-lg-3 col-md-6 col-sm-12">
-	                        			@if($products->chrDisplayontop == 'Y')
-	                        				<?php $popular = 'shared-plan-most-popular'; ?>
-	                        			@else
-	                        				<?php $popular = ' '; ?>
-	                        			@endif
-		                                <div class="shared-plan-box-main {{$popular}}" data-aos="fade-left" data-aos-easing="ease-out-back">
-		                                    <div class="shared-pln-box">
-		                                    	@if($products->chrDisplayontop == 'Y')
-			                                    	<div class="shared-most-popular-cnt">
-			                                            MOST POPULAR
-			                                        </div>
-		                                        @endif
-		                                        <div class="shared-plan-price">
-		                                            <div class="shared-plan-nm">
-		                                            	{{$products->varTitle}}
-		                                            </div>
-		                                            @php
-                                                    	$off_per = (explode(",",$products->varAdditionalOffer));
-                                                    @endphp
-		                                            <div class="shared-plan-cut-prc">
-		                                                <span class="cut-prc-disc">{{$off_per[2]}}</span>
-		                                            </div>
-		                                            @if($products->varTitle == 'Starter')
-			                                            <div class="shared-main-price">
-			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_STARTER_PRICE_36_INR) }}.00</span>/mo*
-			                                            </div>
-			                                        @elseif($products->varTitle == 'Performance')
-			                                        	<div class="shared-main-price">
-			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_PERFORMANCE_PRICE_36_INR) }}.00</span>/mo*
-			                                            </div>
-			                                        @elseif($products->varTitle == 'Business')
-			                                        	<div class="shared-main-price">
-			                                                {!! Config::get('Constant.sys_currency_symbol') !!}<span>{{ Config::get('Constant.'.$ProductBanner->varWHMCSPackageFieldName.$_BUSINEESS_PRICE_36_INR) }}.00</span>/mo*
-			                                            </div>
-		                                            @endif
-		                                            <div class="shared-plan-btn">
-		                                            	@if($products->varTitle == 'Starter')
-		                                                	{!!$StarterThreeYearButtonText!!}
-		                                                @elseif($products->varTitle == 'Performance')
-		                                                	{!!$PerformanceThreeYearButtonText!!}
-		                                                @elseif($products->varTitle == 'Business')
-		                                                	{!!$BusinessThreeYearButtonText!!}
-		                                                @endif
-		                                            </div>
-		                                        </div>
-		                                        <div class="shared-plan-cnt">
-		                                            <ul>
-		                                            	@php $SpecificationData = explode("\n",$ProductsPackageData[0]->txtSpecification); 
-		                                            	@endphp
-                                                        @foreach($SpecificationData as $Specification)
-			                                                <div class="slide-toggle">
-			                                                    <li>
-			                                                    	<span>{{$Specification}}</span>
-			                                                    </li>
-			                                                </div>
-			                                            @endforeach
-		                                            </ul>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </div>
+                        		{{-- @foreach($ProductsPackageData as $products) --}}
+                        		@foreach($ProductsPackageData as $elkey => $element)
+	                        		
+		                            @php
+            $popular_div_class = '';
+            if($elkey == 1){
+              $popular_div_class = 'shared-plan-most-popular';
+            }
+            $planName = $element->varTitle;
+            $SpecificationData = explode("\n",$element->txtSpecification);
+            if ($element->txtShortDescription == 'BEST SELLER') {
+              $class_best_seller = 'best-seller-div';
+            }else{
+              $class_best_seller = ' ';
+            }
+          @endphp
+
+        
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="shared-plan-box-main {{ $popular_div_class }}" data-aos="fade-left" data-aos-easing="ease-out-back" id="basic_three_div">
+            <div class="shared-pln-box">
+              @if($elkey == 1)
+                <div class="shared-most-popular-cnt">
+                  MOST POPULAR
+                </div>
+              @endif
+              <div class="shared-plan-price">
+                <div class="shared-plan-nm">
+                  {{$planName}}
+                </div>
+                <div class="shared-plan-cut-prc">
+                  {{-- <span class="cut-price">₹840.00</span> --}}                  
+                  @if(Config::get('Constant.sys_currency') == 'INR')
+                    @if (isset($element->productpricing['monthly']) && isset($element->productpricing['annually']))
+                      <span class="cut-price" id="oneyear-sale-price{{str_replace(' ', '', $planName)}}">
+                        @if(isset($element->productpricing['monthly_renewal']))
+                          {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly_renewal']}}
+                        @else
+                          {!! Config::get('Constant.sys_currency_symbol') !!}{{$element->productpricing['monthly']}}
+                        @endif
+                      </span>
+                    @endif
+                  @endif
+                  {{-- <span class="cut-prc-disc">Save 50%</span> --}}
+                  <span class="cut-prc-disc" id="offer-discount-{{str_replace(' ', '', $planName)}}">
+                    @php
+                      if(isset($element->productpricing['monthly_renewal'])){
+                          $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly_renewal']) * 100), 0);
+                      }else{
+                          $percentageOff = round((100-($element->productpricing['annually'] / $element->productpricing['monthly']) * 100), 0);
+                      }
+                    @endphp
+                    Save {{$percentageOff}}%
+                  </span>
+                </div>
+                <div class="shared-main-price">
+                  {{-- ₹<span>420.00</span>/mo* --}}
+                  ₹<span>{{$element->productpricing['annually']}}.00</span>/mo*
+                </div>
+                
+                <div class="shared-plan-btn">
+                  {{-- <a href="javascript:void(0)" class="primary-btn-sq-bdr">Choose Plan</a> --}}
+                  @if(isset($element->ButtonTextannually) && !empty($element->ButtonTextannually))
+                   {!! $element->ButtonTextannually !!}
+                  @endif
+                </div>
+                
+                @if(isset($element->productpricing['monthly_renewal']))
+                <div class="shared-plan-renew">
+                  {{-- Renews at ₹{{ $element->productpricing['yearly_renewal_permonth'] }}/mo after 1 year. Cancel anytime. --}}
+                  Renews at ₹{{ rtrim(rtrim(number_format($element->productpricing['yearly_renewal_permonth'], 2, '.', ''), '0'), '.') }}/mo after 1 year. Cancel anytime.
+
+                </div>
+                @endif
+              </div>
+              <div class="shared-plan-cnt">
+                <ul>
+                  @foreach ($SpecificationData as $key => $Specifica)
+                    @php
+                      $Specification = (trim($Specifica));
+                    @endphp
+
+                    @if(strtolower(trim($Specification)) == "1 vcpu core")
+                      <div class="slide-toggle">
+                        <li> <span><b>1</b> vCPU core</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "4 gb ram")
+                      <div class="slide-toggle">
+                        <li> <span><b>4 GB</b> RAM</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "50 gb ssd")
+                      <div class="slide-toggle">
+                        <li> <span><b>50GB</b> SSD</span></li>
+                      </div>
+                    @elseif(strtolower(trim($Specification)) == "1 dedicated ip")
+                    <div class="slide-toggle">
+                      <li> <span><b>1</b> Dedicated IP</span></li>
+                    </div>
+                    @else
+                    <div class="slide-toggle">
+                      <li> <span>{!!$Specification!!}</span></li>
+                    </div>
+                    @endif
+                  @endforeach
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 	                            @endforeach
 							@endif
                         </div>
