@@ -30,7 +30,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
     </div>
 </section>
 <section class="our-story-wrapper-main head-tb-p-40">
-    <div class="container-fluid">
+    <div class="container">
+        
         <div class="section-heading text-center">
             <h2 class="text_head text-center">
                 Know Our Story
@@ -38,25 +39,23 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
             <p>Every business has its own story, and ours began back in 2012!</p>
             <p>It began with a simple mission: To make web hosting better, faster, and easier for everyone. At the time, we saw too
                 many people struggling with slow servers, clunky dashboards, and support teams that didn’t quite solve problems. We
-                knew things could be different and set out to make it happen.</p>
-            <p>What started as a small team with a big vision has now grown into a trusted hosting provider serving thousands of
+                knew things could be different and set out to make it happen.What started as a small team with a big vision has now grown into a trusted hosting provider serving thousands of
                 websites across industries. Over the years, we have listened, learned, and leveled up, constantly evolving to meet
                 the changing needs of our customers.</p>
             <p>From 2012 to now, the journey has been incredible, and we are not done yet.
                 We are still growing, still improving, and still just getting started.
             </p>
         </div>
+        </div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                <div class="journey-section">
-        <div class="journey-header">
-            <h1>Zoho wasn't built in a day</h1>
-            
-            <p>Explore our journey through the years.</p>
-        </div>
+        
         <div class="journey-main">
             <div class="journey-years">
-                <div class="year-arrow disabled" id="year-up">▲</div>
+                <!-- <div class="year-arrow disabled" id="year-up">▲</div> -->
+                 <span id="scroll-up" class="our-story-year-prev"><i class="fa-solid fa-chevron-up"></i></span>
                 <ul class="years-list" id="years-list">
                     <li class="year-item active"><span class="year-dot"></span>a</li>
                     <li class="year-item"><span class="year-dot"></span>b</li>
@@ -68,7 +67,8 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
                     <li class="year-item"><span class="year-dot"></span>h</li>
                     <li class="year-item"><span class="year-dot"></span>i</li>
                 </ul>
-                <div class="year-arrow" id="year-down">▼</div>
+                <span id="scroll-down" class="our-story-year-prev"><i class="fa-solid fa-chevron-down"></i></span>
+                <!-- <div class="year-arrow" id="year-down">▼</div> -->
             </div>
             <div class="journey-content">
                 <div class="slider-row" id="slider-row">
@@ -97,30 +97,6 @@ $theme = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME
 </section>
 
 
-
-
-
-
-
-<!-- <section class="know-our-story head-tb-p-40">
-    <div class="container">
-        <div class="section-heading">
-            <h2 class="text_head">Know Our Story</h2>
-            <span class="know-story-sub-tittle">Every business has its own story - and ours began back in 2012!</span>
-            <p>It began with a simple mission: To make web hosting better, faster, and easier for everyone. At the time, we saw too many people struggling with slow servers, clunky dashboards, and support teams that didn’t quite solve problems. We knew things could be different and set out to make it happen.</p>
-            <p>What started as a small team with a big vision has now grown into a trusted hosting provider serving thousands of websites across industries. Over the years, we have listened, learned, and leveled up, constantly evolving to meet the changing needs of our customers.</p>
-            <p>From 2012 to now, the journey has been incredible, and we are not done yet. We are still growing, still improving, and still just getting started.</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="know-our-story-img">
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 
 <section class="globally_img head-tb-p-40">
@@ -774,8 +750,8 @@ const journeyData = [
 ];
 
 const yearsList = document.getElementById('years-list');
-const yearUp = document.getElementById('year-up');
-const yearDown = document.getElementById('year-down');
+// const yearUp = document.getElementById('year-up');
+// const yearDown = document.getElementById('year-down');
 const sliderRow = document.getElementById('slider-row');
 
 let selectedYearIdx = 0;
@@ -845,23 +821,36 @@ function scrollYearNavToActive() {
     const active = yearsList.querySelector('.active');
     if (active) {
         active.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+         const containerTop = yearsList.getBoundingClientRect().top;
+        const itemTop = active.getBoundingClientRect().top;
+        const offset = itemTop - containerTop;
+        const desiredPosition = yearsList.clientHeight * 0.3;
+        const scrollOffset = offset - desiredPosition;
+    
+        yearsList.scrollBy({
+            top: scrollOffset,
+            behavior: 'smooth'
+        });
+
     }
 }
 
-yearUp.onclick = () => {
-    if (selectedYearIdx > 0) {
-        selectedYearIdx--;
-        renderYears();
-        scrollToYear(selectedYearIdx);
-    }
-};
-yearDown.onclick = () => {
-    if (selectedYearIdx < journeyData.length - 1) {
-        selectedYearIdx++;
-        renderYears();
-        scrollToYear(selectedYearIdx);
-    }
-};
+
+
+// yearUp.onclick = () => {
+//     if (selectedYearIdx > 0) {
+//         selectedYearIdx--;
+//         renderYears();
+//         scrollToYear(selectedYearIdx);
+//     }
+// };
+// yearDown.onclick = () => {
+//     if (selectedYearIdx < journeyData.length - 1) {
+//         selectedYearIdx++;
+//         renderYears();
+//         scrollToYear(selectedYearIdx);
+//     }
+// };
 
 function updateArrows() {
     yearUp.classList.toggle('disabled', selectedYearIdx === 0);
@@ -908,6 +897,42 @@ rerenderAll();
 const observer = new MutationObserver(updateArrows);
 observer.observe(yearsList, { childList: true, subtree: true });
 </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const scrollUp = document.getElementById("scroll-up");
+        const scrollDown = document.getElementById("scroll-down");
+        const yearsList = document.getElementById("years-list");
+
+        const scrollAmount = 50; // Adjust scroll step in px
+
+        scrollUp.addEventListener("click", () => {
+            yearsList.scrollBy({
+                top: -scrollAmount,
+                behavior: "smooth"
+            });
+        });
+
+        scrollDown.addEventListener("click", () => {
+            yearsList.scrollBy({
+                top: scrollAmount,
+                behavior: "smooth"
+            });
+        });
+    });
+    
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -192,7 +192,12 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 <link rel="stylesheet" href="../assets/css/affiliate_policy.css?v={{date('YmdHi')}}" media="all" />
 @endif
 @if(Request::segment(2)=='java-hosting')
+<link rel="stylesheet" href="../assets/css/java-hosting-banner.css?v={{date('YmdHi')}}" media="all" />
 <link rel="stylesheet" href="../assets/css/java-hosting.css?v={{date('YmdHi')}}" media="all" />
+@endif
+@if(Request::segment(2)=='cpanel-vps-hosting')
+<link rel="stylesheet" href="../assets/css/cpanel-hosting-banner.css?v={{date('YmdHi')}}" media="all" />
+<link rel="stylesheet" href="../assets/css/cpanel-hosting.css?v={{date('YmdHi')}}" media="all" />
 @endif
 @if(Request::segment(1)=='why-hits')
 <link rel="stylesheet" href="../assets/css/why-hits.css?v={{date('YmdHi')}}" media="all" />
