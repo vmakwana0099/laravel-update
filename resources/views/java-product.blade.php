@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="shared-plan-bx-pd">
             <div class="section-heading">
-                <h2 class="text-center text_head " id="windows_hosting_plans">Choose Your Windows Hosting Plans</h2>
+                <h2 class="text-center text_head " id="java_hosting_plans">Choose Your Windows Hosting Plans</h2>
             </div>
             <div class="tab-content">
                 <!--This Code for Three Year-->
