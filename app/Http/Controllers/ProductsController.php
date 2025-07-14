@@ -36,10 +36,7 @@ class ProductsController extends FrontController {
 
     public function index($product_category, $product) {
         $cataliasId = slug::resolve_alias_for_routes($product_category);
-        // if($product == 'java-hosting'){
-        //     $cataliasId = 12;
-        // }
-
+        
         $aliasId = slug::resolve_alias_for_routes($product);
          if($product == 'java-hosting'){
             $aliasId = 955;
@@ -130,13 +127,11 @@ class ProductsController extends FrontController {
             else if($ProId->id == "32"){
                 $protext = "vps"; //For VPS Hosting India
             }
-<<<<<<< HEAD
             else if($ProId->id == "33"){
                 $protext = "vps"; //For Java Hosting
-=======
+            }
             else if($ProId->id == "34"){
                 $protext = "vps"; //For Cpanel VPS Hosting
->>>>>>> 1c864a32f51221f402f1b077fba26eb9cdb70ce4
             }
             else if($ProId->id == "21"){
                 $protext = "email"; //For Google Apps
@@ -164,11 +159,8 @@ class ProductsController extends FrontController {
                 $protext = "";
             }
 
-<<<<<<< HEAD
-            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "33" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32" ) {
-=======
-            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32"  || $ProId->id == "34") {
->>>>>>> 1c864a32f51221f402f1b077fba26eb9cdb70ce4
+
+            if ($ProId->id == "8" || $ProId->id == "25" || $ProId->id == "24" || $ProId->id == "23" || $ProId->id == "7" || $ProId->id == "26" || $ProId->id == "28" || $ProId->id == "29" || $ProId->id == "30" || $ProId->id == "21" || $ProId->id == "32"  || $ProId->id == "34" || $ProId->id == "33") {
                 $yearsArr = ["monthly","quarterly","semi-annually","annually","biennially","triennially"]; 
                 $i=0;
                 foreach ($ProductData['ProductsPackageData'] as $pkey => $pval){
