@@ -82,6 +82,260 @@ if(Request::segment(1) == "domain-registration"){
 }
 </script>';
 }
+if(Request::segment(2) == "java-hosting"){
+ //Domain registration page    
+  echo '<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "Java Hosting",
+  "image": "https://www.hostitsmart.com/assets/images/java_hosting/java-hosting-banner.webp",
+  "description": "Host IT Smart is one of the best Java Hosting Server Provider In India. Our Java Hosting plans starting at 420/month with 24/7 Technical Support.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Host IT Smart"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://www.hostitsmart.com/servers/java-hosting",
+    "priceCurrency": "INR",
+    "lowPrice": "420",
+    "highPrice": "1675",
+    "offerCount": "4"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "1500"
+  },
+  "review": [{
+    "@type": "Review",
+    "name": "Harish Nokhwaal",
+    "reviewBody": "I\'ve had a great experience with this hosting company! Their service is fast, reliable, and affordable. My website runs smoothly with zero downtime, and their customer support is always quick to help and very professional. Highly recommended for anyone looking for a solid hosting provider!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Harish Nokhwaal"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Anshu Bhardwaj",
+    "reviewBody": "I purchased a VPS server there. Everything seems fine so far. After the purchase, there were some errors with the VPS, but they fixed them. They even assisted me via call and AnyDesk. I really love their support.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Anshu Bhardwaj"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Rizwan Raja",
+    "reviewBody": "One of the best and cheap hosting in India, I have been using their services for the last 5 years and have never faced any problem. If you need a hosting solution, HOSTITSMART is the best in their services. Their support team is awesome. They will help in going far better in their fields, and all are very supportive.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Rizwan Raja"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nikhil Jain",
+    "reviewBody": "I was searching for a good company for my domain name and Java web hosting after my previous company got bankrupt. Luckily I found Host IT Smart. And all the things have again came at their right places at a very good price. Thanks, Host IT Smart Team & Jackob Sir.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Nikhil Jain"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "s2 TECH INDIA",
+    "reviewBody": "Exceptional help center! Quick and effective solutions provided with a friendly and knowledgeable team. They made my experience smooth and hassle-free. Definitely my go-to for assistance.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "s2 TECH INDIA"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Urvashi Shrivastava",
+    "reviewBody": "One of the best service providers. Extremely satisfied with their customer service and cost effectiveness. Using their services for quite a long and have never faced any delays in taking action against issues. Thanks much!!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Urvashi Shrivastava"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Divyanshu Agarwal",
+    "reviewBody": "I have been using their services quite a lot for the last 6 months. I like the ease of use they provided while working with VPS. Also, In case of any issues, the resolution is quite fast.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Divyanshu Agarwal"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nirmal Paradkar",
+    "reviewBody": "Very cooperative and very helpful person is Your employee, Mr. Mohan. He always behaves very nicely and is well-mannered. Solves all my problems quickly and has a good rapport with customers. He is also a technically sound person.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Nirmal Paradkar"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Nilesh Mourya",
+    "reviewBody": "Dealing with Happy Service’s customer support was a breeze. They were courteous, quick to respond, and resolved my issue efficiently, leaving me with a positive impression of their commitment to customer satisfaction.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Nilesh Mourya"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Selvakumar Baskaran",
+    "reviewBody": "The host Support team is easy to reach. Appreciate their efficiency of reaching out to them within seconds. Keep it up, guys. Mohsin was a smart guy to provide resolutions quickly.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Selvakumar Baskaran"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Bhavesh Tarkhala",
+    "reviewBody": "I have been using servers from Host IT Smart since the last 3 years and I recommend the service of Host IT Smart. They were quick to respond to any queries or concerns. Service and support are awesome!!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Bhavesh Tarkhala"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Patel Rushil",
+    "reviewBody": "I\'ve been using Host IT Smart for over 2 years now, and I couldn\'t be happier! The server performance is fantastic, with almost no downtime, and the loading speeds are incredible. But what stands out the most is their customer support. Anytime I’ve had an issue, their team has been quick to respond and extremely helpful. Highly recommend it for anyone looking for reliable and top-notch hosting!",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Patel Rushil"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Ramdas Tambe",
+    "reviewBody": "I am very happy to be a customer of host it smart from a reputed company. Especially the immediate service was made available. We hope to continue to provide the same service....Ramdas Tambe Reporter today news channel.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Ramdas Tambe"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Axone Infotech",
+    "reviewBody": "We have experienced exceptional server support and performance with this service. The team is highly responsive, professional, and always available to address any concerns or issues we encounter. Overall, we are highly satisfied with both the support and the server\'s performance.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Axone Infotech"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Vasudev Doddipalle",
+    "reviewBody": "Jay Vagadiya was very helpful and quickly resolved one of the issues faced.. We have made the right moving to hostitsmart. Helpdesk, Sales and technical support teams are very easy to approach for help when needed.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Vasudev Doddipalle"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Chandni Gupta",
+    "reviewBody": "Great Service!! I\'ve been using a Hosting service from Host IT Smart from the last few years. They provide a great service. You can reach them anytime for help or with queries. Their service is recommended. I didn\'t face any major issues while using their hosting plan. Everything works smoothly. Great service.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Chandni Gupta"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  },{
+    "@type": "Review",
+    "name": "Milan Parmar",
+    "reviewBody": "I have purchased a dedicated server of 32 GB RAM. And I am very much satisfied with the service. Mr Jay is very helpful and supportive. I recommend to all of you who are willing to buy their service.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-06-16",
+    "author": {"@type": "Person", "name": "Milan Parmar"},
+    "publisher": {"@type": "Organization", "name": "Host IT Smart"}
+  }]
+}
+</script>
+ ';
+}
 if(isset($CatId) && !empty($CatId)){ 
     if($CatId == 1 || $CatId == 9){
     

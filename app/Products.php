@@ -566,7 +566,7 @@ class Products extends Model {
                 $returnHtml .= "<button class='free-button' id ='".$button_id."' title='".$buttonText."'>Configure</button>";
             }elseif(in_array($whmcsproid, [465, 466, 463, 464, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478,509,510,511,508,516,518,519,520])){
                 $newVPSClass = 'primary-btn-sq-bdr';
-                if($whmcsproid == 509 || $whmcsproid == 518){
+                if($whmcsproid == 509 || $whmcsproid == 518 || $whmcsproid == 540){
                     $newVPSClass = 'primary-btn-sq';
                 }
                 // $returnHtml .= "<button class='vps_managed_btn' id ='".$button_id."' title='Add to Cart'>Add to Cart</button>";

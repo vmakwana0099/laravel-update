@@ -53,8 +53,13 @@ $alternative = array("linux-hosting-b4uindia-alternative","linux-hosting-bigrock
 @endif
 @if (!in_array(Request::segment(1), $alternative)) 
 @if(!in_array(Request::segment(2),$testimonial))
+@if(Request::segment(2) == 'java-hosting')
+<link rel="alternate" hreflang="x-default" href="https://global.hostitsmart.com/hosting/java-hosting" />  
+<link rel="alternate" href="https://global.hostitsmart.com/hosting/java-hosting" hreflang="en-us" />
+@else
 <link rel="alternate" hreflang="x-default" href="{{$global_url}}" />  
 <link rel="alternate" href="{{$global_url}}" hreflang="en-us" />
+@endif
 @endif
 @if(Request::segment(2) =='linux-hosting')
 <?php $canada_url=str_replace("linux-hosting","shared-hosting",$canada_url);?>
