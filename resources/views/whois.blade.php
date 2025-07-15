@@ -1,127 +1,89 @@
 @extends('layouts.app')
 @section('content')
-<?php
 
-// echo $aaaa;
-?>
-<div class="whois-main">
-    <div class="banner-inner whois-banner" style="background-image:url({{url('assets/images/whois-b.jpg')}})">
-        <div class="container">		
-            <div class="banner-content">
-                <div class="banner-image aos-init" data-aos="fade-up" data-aos-delay="100">
-                </div>
-                <h1 class="banner-title aos-init" data-aos="fade-up" data-aos-delay="200">
-                    Whois Domain Lookup Tool
-                </h1>
-                <span class="banner-subtitle aos-init" data-aos="fade-up" data-aos-delay="300">
-                    Find out the Complete Information For Domain in a single click
-                </span>
-                <div class="banner-search aos-init" data-aos="fade-up" data-aos-delay="400">
-                    {!! Form::open(['method' => 'post', 'class'=>'custom-search', 'autocomplete' => 'off','name' => 'whois', 'id' => 'whois']) !!}
-                    {!! Form::text('domainwhois',  old('domainwhois') , array('id' => 'domainwhois', 'autocomplete' => 'off','class' => 'form-control', 'placeholder' => 'Search for a Domain Name')) !!}
-                    <button type="submit" title="Search" onclick="validateform();"><i class="fa fa-search"></i></button>
-                    <span class="help-block" id="domainwhois-error">
-                        @if ($errors->has('domainwhois'))
-                        {{ $errors->first('domainwhois') }}
-                        @endif
-                    </span>
-                    {!! Form::close() !!}
-                </div>
 
-                <div class="banner-button aos-init" data-aos="fade-up" data-aos-delay="500">
-                    <a class="" title="Domain Registration" href="{{url('/domain-registration')}}">Domain Registration</a>
-                    <a class="" title="Transfer Domain" href="{{url('domain/domain-transfer')}}">Transfer Domain</a>
-                    <a class="" title="Renew Domain" href="{{url('/domain-privacy-protection')}}">Domain Privacy</a>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="use-our-whois-check-left">
+                    <div class="usr-whois-left-img">
+                          <img class="browser-img" src="/assets/images/whois_checker/enter-the-domain.webp" alt="enter-the-domain" />
+                    </div>
+                    <div class="usr-whois-left-cnt">
+                        <span>1. Enter the Domain You are Searching for</span>
+                        Just type the domain name you’re curious about, fast, simple, and no tech skills needed! You bring the name, we’ll bring the details.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="use-our-whois-check-right">
+                    <div class="usr-whois-right-box">
+                        <div class="usr-whois-right-row">
+                        <div class="usr-whois-right-img">
+                          <img class="browser-img" src="/assets/images/whois_checker/whois-record.webp" alt="whois-record" />
+                        </div>
+                        <div class="usr-whois-right-cnt">
+                            <span>2. We Instantly Fetch the WHOIS Record</span>
+                            Our WHOIS tool digs through the data in seconds! Instantly access the latest record with all the key info, owner, dates, status, and more.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="usr-whois-right-box">
+                        <div class="usr-whois-right-row">
+                        <div class="usr-whois-right-img">
+                          <img class="browser-img" src="/assets/images/whois_checker/registration-info.webp" alt="registration-info" />
+                        </div>
+                        <div class="usr-whois-right-cnt">
+                            <span>3. You Get Registration Info</span>
+                            Find out who’s behind the domain, when it was registered, and when it’s up for renewal. All the domain details are delivered instantly and clearly!
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        function validateform() {
-            $('#whois').validate({// initialize the plugin
-                onfocusout: function(element) {
-                    if (this.checkable(element)) {
-                        this.element(element);
-                    }
-                },
-                errorPlacement: function(error, element) {
-                    if ($(element).attr('id') == 'domainwhois') {
-                        error.insertAfter($("#domainwhois-error"));
-                    } else {
-                        error.insertAfter(element);
-                    }
-                },
-                invalidHandler: function(event, validator) { //display error alert on form submit   
-                    $('.alert-danger', $('#whois')).show();
-                },
-                highlight: function(element) { // hightlight error inputs
-                    $(element).closest('.form-group').addClass('has-error'); // set error class to the control group
-                }
-            });
+</section>
 
-            {{-- jQuery.validator.addMethod("domainchecker", function(value, element) {
-                return this.optional(element) || /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/.test(value);
-            }, "Please enter correct domain name."); --}}
 
-            jQuery.validator.addMethod("domainchecker", function(value, element) {
-                return this.optional(element) || /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value) || /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/.test(value);
-            }, "Please enter correct domain name.");
 
-            $("[name^=domainwhois]").each(function() {
-                $(this).rules("add", {
-                    required: true,
-                    maxlength: 58,
-                    domainchecker: true,
-                    messages: {
-                        required: "Please enter your domain name."
-                    }
-                });
-            });
-        }
-    </script>
-    @if(!empty($WhoisData))
-    @if(!empty($WhoisData['whois']))
-    <div class="inner_container whois-container head-tb-p-40">
-        <div class="container">
-            <div class="cms">
-                @php 
-                $th = 0; 
-                $myArray = explode("\n", $WhoisData['whois']);
-                $Newdata = str_replace('<br />',' ',$myArray)
-                @endphp
-                <table border="0px" class="table table-hover table-custom">
-                    @foreach($Newdata as $Data)
-                    @php $DataNew = trim($Data) @endphp
-                        @if($DataNew != '' && !empty($DataNew))
-                            @if($th == 0) 
-                                <tr class="whois_data"><th>{!!str_replace('---',' ',$DataNew)!!}</th></tr>
-                            @else
-                                <tr class="whois_data"><td>{!!str_replace('---',' ',$DataNew)!!}</td></tr>
-                            @endif
-                        @endif
-                    @php $th ++; @endphp 
-                    @endforeach
-                </table>
-            </div>
-        </div>
+
+
+
+
+
+<!-- 
+  <section class="container">
+
+    <!-- Left Box -->
+    <div class="step-box">
+      <img class="browser-img" src="/assets/images/whois_checker/enter-the-domain.webp" alt="enter-the-domain" />
+      <div class="search-badge">
+        www.hostitsmart.com
+      </div>
     </div>
-    @else
-    <div class="inner_container whois-container head-tb-p-40">
-        <div class="container">
-            @php $name = $_POST["domainwhois"]; @endphp
-            <h2 class="available-domain">{{ ucfirst($name) }} domain is available</h2>
+
+    <!-- Right Steps -->
+    <div class="right-column">
+      <div class="step-right">
+        <img src="https://cdn-icons-png.flaticon.com/512/709/709586.png" alt="Magnifying Glass" />
+        <div class="step-text">
+          <h4>2. We Instantly Fetch the WHOIS Record</h4>
+          <p>Our WHOIS tool digs through the data in seconds! Instantly access the latest record with all the key info, owner, dates, status, and more.</p>
         </div>
-    </div>
-    @endif
-    @endif
-    <div class="inner_container whois-container head-tb-p-40">
-        <div class="container">
-            <div class="bg-design">
-                {!!$CONTENT!!}
-            </div>
+      </div>
+
+      <div class="step-right">
+        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250615.png" alt="Info Icon" />
+        <div class="step-text">
+          <h4>3. You Get Registration Info</h4>
+          <p>Find out who’s behind the domain, when it was registered, and when it’s up for renewal. All the domain details are delivered instantly and clearly!</p>
         </div>
+      </div>
     </div>
-</div>
+  </section> -->
 <?php $themeversion = !isset($_SESSION['themepreview']) ? Config::get('Constant.DEFAULT_THEME') : $_SESSION['themepreview']; ?>
 @include('template.'.$themeversion.'.faq-section')
 @endsection
