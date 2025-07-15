@@ -472,7 +472,107 @@
 	</section>
 
 
-
+<section class="devlp-frndly-tools head-tb-p-40">
+		<div class="container">
+			<div class="section-heading">
+				<h2 class="text_head text-center">Developer-Friendly Tools Built-in with Our Cheap cPanel VPS</h2>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-img">
+						<img src="/assets/images/cpanel_hosting/developer-friendly-tools-01.webp" alt="developer-friendly-tools-01">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-cnt">
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/git-version-control.webp" alt="git-version-control">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Git Version Control</div>
+							<div class="devlp-frnd-cnt-data">Collaborating with Git is easier than ever. You can seamlessly manage your code versions right from your cPanel dashboard.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/node.webp" alt="node">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Node.js, Python, PHP Version Selector</div>
+							<div class="devlp-frnd-cnt-data">With our flexible version selector available in the cPanel VPS dashboard, you can switch between Node.js, Python, and PHP to run your app in your preferred environment.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/corn-jobs.webp" alt="corn-jobs">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Cron Jobs & Terminal Access</div>
+							<div class="devlp-frnd-cnt-data">By having a VPS with cPanel, you can automate tasks and use the terminal, just like in a real development workspace, to gain full command-line control.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/phpmyadmin.webp" alt="phpmyadmin">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">phpMyAdmin + Remote MySQL</div>
+							<div class="devlp-frnd-cnt-data">With cPanel VPS, you can easily manage your databases with phpMyAdmin, where you can also connect to your MySQL server remotely.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center flex-lg-row-reverse">
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-img">
+						<img src="/assets/images/cpanel_hosting/developer-friendly-tools-02.webp" alt="developer-friendly-tools-02">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-cnt">
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/DNS-Zone-Editor.webp" alt="DNS-Zone-Editor">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">DNS Zone Editor</div>
+							<div class="devlp-frnd-cnt-data">With the DNS zone editor present in your cPanel dashboard, you can tweak your DNS records in seconds and have complete control.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/Manage-API-Tokens.webp" alt="Manage-API-Tokens">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Manage API Tokens</div>
+							<div class="devlp-frnd-cnt-data">By having a VPS with cpanel, you can create and manage API tokens for safe and easy integration with external apps.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/ssl-support.webp" alt="ssl-support">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Free Let’s Encrypt SSL Support</div>
+							<div class="devlp-frnd-cnt-data">With cPanel VPS, you will get a free Let’s Encrypt SSL certificate to keep your website fully safe and secure.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/file-management.webp" alt="file-management">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Advanced File Management System</div>
+							<div class="devlp-frnd-cnt-data">The best part is that the cPanel dashboard features a robust file manager that helps you upload, edit, and organize your site files.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
 
 @endif
 @endsection

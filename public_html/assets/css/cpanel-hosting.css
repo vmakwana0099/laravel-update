@@ -46,3 +46,29 @@
 .cpanel-sec-ftr-title span {
     margin-right: 7px;
 }
+.devlp-frndly-tools-box {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.devlp-frnd-left-icon {
+    background: #fff;
+    min-width: 80px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 30px #0000001A;
+}
+.devlp-frnd-cnt-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.devlp-frnd-cnt-data {
+    font-size: 16px;
+    font-weight: 400;
+}
