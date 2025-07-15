@@ -573,6 +573,50 @@
 			</div>
 		</div>
 </section>
+<section class="vps-features  head-tb-p-40" id="features">
+        @if(!empty($FeaturesData) && count($FeaturesData) >0)
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="text_head">Features Of Our Cpanel VPS Hosting</h2>
+                </div>
+                <div class="row">
+                    <div class="features-main">
+                        @php
+                        $featureMainDivClass;
+                        $featureIconDivClass;
+                        
+                        $featureMainDivClass="features-start ";
+                        $featureIconDivClass="feature-icon d-flex justify-content-center align-items-center";
+                        @endphp
+                        <div class="{{$featureMainDivClass}}">
+                            
+                                <div class="row">
+                                    <div class="feature-ul d-flex flex-wrap" id="vps-all-features">
+                                        @foreach($FeaturesData as $Features)
+                                        
+                                            <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
+                                                <div class="content-main align-self-start" @if ($uagent !="mobile" )data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100" @endif>
+                                                    <div class="{{$featureIconDivClass}}"><i class="{{$Features->varIconClass}}"></i></div>
+                                                    <span>{{$Features->varTitle}}</span>
+                                                    <div class="content">{!! $Features->varShortDescription !!}</div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                        
+                               </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+    </section>
+ 
+
+@include('template.'.$themeversion.'.testimonial_section')
+
+@include('template.'.$themeversion.'.support_section_home')    
+    @include('template.'.$themeversion.'.faq-section')
 
 @endif
 @endsection
