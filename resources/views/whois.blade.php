@@ -49,7 +49,41 @@
 
 
 
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Step 1 Left -->
+    <div class="col-lg-6">
+      <div class="step-box">
+        <div class="step-box-img">
+        <img src="https://www.hostitsmart.com/assets/images/whois/enter-the-domain.webp" alt="Search Domain">
+        </div>
+        <div class="domain-tag">
+          <span>1. Enter the Domain You are Searching for</span>
+          Just type the domain name you’re curious about, fast, simple, and no tech skills needed! You bring the name, we’ll bring the details.
+        </div>
+      </div>
+    </div>
 
+    <!-- Step 2 and 3 Right -->
+    <div class="col-lg-6 d-flex flex-column gap-3">
+      <div class="info-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/709/709586.png" alt="Magnifying Glass">
+        <div class="info-text">
+          <h5>2. We Instantly Fetch the WHOIS Record</h5>
+          <p>Our WHOIS tool digs through the data in seconds! Instantly access the latest record with all the key info, owner, dates, status, and more.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250615.png" alt="Info Icon">
+        <div class="info-text">
+          <h5>3. You Get Registration Info</h5>
+          <p>Find out who’s behind the domain, when it was registered, and when it’s up for renewal. All the domain details are delivered instantly and clearly!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
