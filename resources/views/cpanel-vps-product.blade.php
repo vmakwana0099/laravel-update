@@ -104,7 +104,7 @@
 
 	<section class="cpanel-mngmnt-prom-main head-tb-p-40">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-7">
 			<div class="">
 				<h2 class="text_head">
@@ -274,7 +274,7 @@
 							</div>
 				<div class="col-lg-5">
 					<div class="cpanel-mngmnt-img">
-						<img src="/assets/images/cpanel_hosting/cpanel_management_promotion.png" alt="cpanel_management_promotion">
+						<img src="/assets/images/cpanel_hosting/cpanel_management_promotion.webp" alt="cpanel_management_promotion">
 					</div>
 				</div>
 			</div>
