@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <div class="shared-plan-bx-pd">
                 <div class="section-heading">
-                    <h2 class="text_head text-center">Check Cheap cPanel VPS Plans For Your Business</h2>
+                    <h2 class="text_head text-center" id="cPanel-plans">Check Cheap cPanel VPS Plans For Your Business</h2>
                 </div>
                 <div class="row justify-content-center">
                     @foreach ($ProductsPackageData as $elkey => $element)
@@ -102,9 +102,22 @@
         </div>
     </section>
 
-    @include('template.'.$themeversion.'.testimonial_section')
+    <div class="dy-money-back-grnt head-tb-p-40">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-12">
+	                <div class="dy-money-back-grnt-box text-center">
+	                    <h2>30-Day Moneyback Guarantee</h2>
+	                    <p>We want you to love when you buy our services, but if, for any reason, you are not completely satisfied, we have got you covered! With our 30-Day Money-Back Guarantee, you can shop with confidence. Simply contact our support team, and we will take care of the rest!</p>
+	                    <a href="https://www.hostitsmart.com/terms#refund-policy" target="_blank" title="Check Our Refund Policy">Check Our Refund Policy</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    
 
-	<section class="cpanel-mngmnt-prom-main head-tb-p-40">
+	<section class="cPanel-mngmnt-prom-main head-tb-p-40">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7">
@@ -116,10 +129,10 @@
 					Learn how cPanel VPS makes your server management easy, even if you’re not a tech expert
 				</p>
 			</div>
-					<div class="cpanel-mngmnt-left">
-						<div class="cpanel-mngmnt-cnt-row">
-							<div class="cpanel-mngmnt-cnt-box">
-								<div class="cpanel-mngmnt-title">
+					<div class="cPanel-mngmnt-left">
+						<div class="cPanel-mngmnt-cnt-row">
+							<div class="cPanel-mngmnt-cnt-box">
+								<div class="cPanel-mngmnt-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="26"
 										viewBox="0 0 28 26">
 										<defs>
@@ -135,10 +148,10 @@
 										</g>
 									</svg></span>User-friendly Interface
 								</div>
-								<div class="cpanel-mngmnt-data">If you are not a tech expert, using cPanel’s clean and user-friendly interface, you can navigate your VPS with ease to make your task management effortless.</div>
+								<div class="cPanel-mngmnt-data">If you are not a tech expert, using cPanel’s clean and user-friendly interface, you can navigate your VPS with ease to make your task management effortless.</div>
 							</div>
-							<div class="cpanel-mngmnt-cnt-box">
-								<div class="cpanel-mngmnt-title">
+							<div class="cPanel-mngmnt-cnt-box">
+								<div class="cPanel-mngmnt-title">
 									<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.524"
 											height="26" viewBox="0 0 24.524 26">
 											<defs>
@@ -160,13 +173,13 @@
 											</g>
 										</svg></span>Powerful Management via WHM
 								</div>
-								<div class="cpanel-mngmnt-data">With WHM, you will get an easy-to-use and powerful server management tool to manage
+								<div class="cPanel-mngmnt-data">With WHM, you will get an easy-to-use and powerful server management tool to manage
 									your server and create accounts, manage settings, and tweak performance from one place.</div>
 							</div>
 							</div>
-							<div class="cpanel-mngmnt-cnt-row">
-								<div class="cpanel-mngmnt-cnt-box">
-									<div class="cpanel-mngmnt-title">
+							<div class="cPanel-mngmnt-cnt-row">
+								<div class="cPanel-mngmnt-cnt-box">
+									<div class="cPanel-mngmnt-title">
 										<span>
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.66"
 												height="26" viewBox="0 0 18.66 26">
@@ -185,11 +198,11 @@
 											</svg>
 										</span>1-Click Installations
 									</div>
-									<div class="cpanel-mngmnt-data">If you want to install WordPress or any other app, cPanel offers a 1-click
+									<div class="cPanel-mngmnt-data">If you want to install WordPress or any other app, cPanel offers a 1-click
 										installation, eliminating the need for coding and other hassles.</div>
 								</div>
-								<div class="cpanel-mngmnt-cnt-box">
-									<div class="cpanel-mngmnt-title">
+								<div class="cPanel-mngmnt-cnt-box">
+									<div class="cPanel-mngmnt-title">
 										<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.865"
 												height="26" viewBox="0 0 26.865 26">
 												<defs>
@@ -206,12 +219,12 @@
 												</g>
 											</svg></span>Resource Monitoring
 									</div>
-									<div class="cpanel-mngmnt-data">With cPanel VPS, you can keep an eye on your server’s usage in real-time to know how much CPU, RAM, and bandwidth you are using to stay in control.</div>
+									<div class="cPanel-mngmnt-data">With cPanel VPS, you can keep an eye on your server’s usage in real-time to know how much CPU, RAM, and bandwidth you are using to stay in control.</div>
 								</div>
 							</div>
-							<div class="cpanel-mngmnt-cnt-row">
-								<div class="cpanel-mngmnt-cnt-box">
-									<div class="cpanel-mngmnt-title">
+							<div class="cPanel-mngmnt-cnt-row">
+								<div class="cPanel-mngmnt-cnt-box">
+									<div class="cPanel-mngmnt-title">
 										<span>
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.644"
 												height="26" viewBox="0 0 24.644 26">
@@ -243,10 +256,10 @@
 											</svg>
 										</span>Robust Ecosystem
 									</div>
-									<div class="cpanel-mngmnt-data">cPanel offers numerous tools and add-ons, creating a robust ecosystem that provides flexibility and features to help you grow your website.</div>
+									<div class="cPanel-mngmnt-data">cPanel offers numerous tools and add-ons, creating a robust ecosystem that provides flexibility and features to help you grow your website.</div>
 								</div>
-								<div class="cpanel-mngmnt-cnt-box">
-									<div class="cpanel-mngmnt-title">
+								<div class="cPanel-mngmnt-cnt-box">
+									<div class="cPanel-mngmnt-title">
 										<span>
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26"
 												height="26" viewBox="0 0 26 26">
@@ -269,35 +282,24 @@
 											</svg>
 										</span>Centralized Control
 									</div>
-									<div class="cpanel-mngmnt-data">With cPanel, you can avoid rushing between tools and tabs & enjoy centralized controls for emails, databases, files, and domains from one place.</div>
+									<div class="cPanel-mngmnt-data">With cPanel, you can avoid rushing between tools and tabs & enjoy centralized controls for emails, databases, files, and domains from one place.</div>
 								</div>
 							</div>
 							</div>
 							</div>
 				<div class="col-lg-5">
-					<div class="cpanel-mngmnt-img">
-						<img src="/assets/images/cpanel_hosting/cpanel_management_promotion.webp" alt="cpanel_management_promotion">
+					<div class="cPanel-mngmnt-img">
+						<img src="/assets/images/cPanel_hosting/cPanel_management_promotion.webp" alt="cPanel_management_promotion">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="dy-money-back-grnt head-tb-p-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="dy-money-back-grnt-box text-center">
-                            <h2>Is your Application Environment Windows-based?</h2>
-                            <p>Get Powerful Windows VPS with RPD Access!</p>
-                            <a href="https://www.hostitsmart.com/servers/windows-vps-hosting" target="_blank" title="Get Windows VPS">Get Windows VPS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </div>
+	@include('template.'.$themeversion.'.testimonial_section')
+	
 
-	<section class="cpanel-sec-ftr-main head-tb-p-40">
+	<section class="cPanel-sec-ftr-main head-tb-p-40">
 		<div class="container">
 			<div class="section-heading">
 				<h2 class="text_head text-center">
@@ -307,14 +309,14 @@
 			</div>
 			<div class="row align-items-center">
 				<div class="col-lg-6">
-					<div class="cpanel-sec-ftr-img">
-					<img src="/assets/images/cpanel_hosting/cpanel-security-features.webp" alt="cpanel-security-features">
+					<div class="cPanel-sec-ftr-img">
+					<img src="/assets/images/cPanel_hosting/cPanel-security-features.webp" alt="cPanel-security-features">
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="cpanel-sec-ftr-cnt">
-						<div class="cpanel-sec-ftr-box">
-							<div class="cpanel-sec-ftr-title">
+					<div class="cPanel-sec-ftr-cnt">
+						<div class="cPanel-sec-ftr-box">
+							<div class="cPanel-sec-ftr-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
 										height="29.942" viewBox="0 0 30 29.942">
 										<defs>
@@ -342,13 +344,13 @@
 										</g>
 									</svg></span> Two-Factor Authentication
 							</div>
-							<div class="cpanel-sec-ftr-data">
+							<div class="cPanel-sec-ftr-data">
 								You don’t have to worry about when you can add that extra layer of login security with a simple code
 								received on your phone
 							</div>
 						</div>
-						<div class="cpanel-sec-ftr-box">
-							<div class="cpanel-sec-ftr-title">
+						<div class="cPanel-sec-ftr-box">
+							<div class="cPanel-sec-ftr-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
 										height="29.942" viewBox="0 0 30 29.942">
 										<defs>
@@ -376,12 +378,12 @@
 										</g>
 									</svg></span> ModSecurity Configuration
 							</div>
-							<div class="cpanel-sec-ftr-data">
+							<div class="cPanel-sec-ftr-data">
 								You can customize your web protection with rules built into your cPanel to block common threats automatically.
 							</div>
 						</div>
-						<div class="cpanel-sec-ftr-box">
-							<div class="cpanel-sec-ftr-title">
+						<div class="cPanel-sec-ftr-box">
+							<div class="cPanel-sec-ftr-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
 										height="29.942" viewBox="0 0 30 29.942">
 										<defs>
@@ -409,12 +411,12 @@
 										</g>
 									</svg></span> Brute Force Protection Tools
 							</div>
-							<div class="cpanel-sec-ftr-data">
+							<div class="cPanel-sec-ftr-data">
 								With cPanel VPS, you can effortlessly stop repeating login attempts in their tracks by using its brute force protection tools to shield your server.
 							</div>
 						</div>
-						<div class="cpanel-sec-ftr-box">
-							<div class="cpanel-sec-ftr-title">
+						<div class="cPanel-sec-ftr-box">
+							<div class="cPanel-sec-ftr-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
 										height="29.942" viewBox="0 0 30 29.942">
 										<defs>
@@ -442,12 +444,12 @@
 										</g>
 									</svg></span> Various Security Tools
 							</div>
-							<div class="cpanel-sec-ftr-data">
+							<div class="cPanel-sec-ftr-data">
 								From password protection to IP blocking and hotlink prevention, cPanel offers you all the tools to lock things down.
 							</div>
 						</div>
-						<div class="cpanel-sec-ftr-box">
-							<div class="cpanel-sec-ftr-title">
+						<div class="cPanel-sec-ftr-box">
+							<div class="cPanel-sec-ftr-title">
 								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
 										height="29.942" viewBox="0 0 30 29.942">
 										<defs>
@@ -475,7 +477,7 @@
 										</g>
 									</svg></span> ConfigServer Security & Firewall
 							</div>
-							<div class="cpanel-sec-ftr-data">
+							<div class="cPanel-sec-ftr-data">
 								The cPanel dashboard offers advanced server protection and easy firewall control, safeguarding your server against threats and enabling seamless security management.
 							</div>
 						</div>
@@ -485,33 +487,19 @@
 		</div>
 	</section>
 
-	<section class="sec-dt-acr-bkp head-tb-p-40">
-	    <div class="container">
-	        <div class="row align-items-center">
-	            <div class="col-lg-6">
-	                <div class="sec-dt-acr-img">
-	                    <img class="img-fluid" src="../assets/images/windows_vps_hosting/Acronis_Backup_Solution.webp" alt="Acronis_Backup_Solution">
-	                </div>
-	            </div>
-	            <div class="col-lg-6">
-	                <div class="sec-dt-acr-cnt">
-	                    <div class="section-heading">
-	                        <h2 class="text_head">Secure Your Data with Acronis Backup Solution</h2>
-	                        <p>Enjoy peace of mind knowing your valuable data is securely backed up with our world-class backup solution tailored to suit your needs.</p>
-	                    </div>
-	                    <div class="sec-dt-acr-price">
-	                        <div class="sec-dt-prc-one">
-	                            For Just
-	                        </div>
-	                        <div class="sec-dt-prc-two">
-	                            ₹100/mo <span>(For 10GB Data)</span>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    </section>
+	<div class="dy-money-back-grnt head-tb-p-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dy-money-back-grnt-box text-center">
+                        <h2>Is your Application Environment Windows-based?</h2>
+                        <p>Get Powerful Windows VPS with RPD Access!</p>
+                        <a href="https://www.hostitsmart.com/servers/windows-vps-hosting" target="_blank" title="Get Windows VPS">Get Windows VPS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<section class="devlp-frndly-tools head-tb-p-40">
 			<div class="container">
@@ -521,14 +509,14 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<div class="devlp-frnd-tools-img">
-							<img src="/assets/images/cpanel_hosting/developer-friendly-tools-01.webp" alt="developer-friendly-tools-01">
+							<img src="/assets/images/cPanel_hosting/developer-friendly-tools-01.webp" alt="developer-friendly-tools-01">
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="devlp-frnd-tools-cnt">
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/git-version-control.webp" alt="git-version-control">
+									<img src="/assets/images/cPanel_hosting/git-version-control.webp" alt="git-version-control">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Git Version Control</div>
@@ -537,7 +525,7 @@
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/node.webp" alt="node">
+									<img src="/assets/images/cPanel_hosting/node.webp" alt="node">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Node.js, Python, PHP Version Selector</div>
@@ -546,7 +534,7 @@
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/corn-jobs.webp" alt="corn-jobs">
+									<img src="/assets/images/cPanel_hosting/corn-jobs.webp" alt="corn-jobs">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Cron Jobs & Terminal Access</div>
@@ -555,7 +543,7 @@
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/phpmyadmin.webp" alt="phpmyadmin">
+									<img src="/assets/images/cPanel_hosting/phpmyadmin.webp" alt="phpmyadmin">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">phpMyAdmin + Remote MySQL</div>
@@ -568,14 +556,14 @@
 				<div class="row align-items-center flex-lg-row-reverse">
 					<div class="col-lg-6">
 						<div class="devlp-frnd-tools-img">
-							<img src="/assets/images/cpanel_hosting/developer-friendly-tools-02.webp" alt="developer-friendly-tools-02">
+							<img src="/assets/images/cPanel_hosting/developer-friendly-tools-02.webp" alt="developer-friendly-tools-02">
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="devlp-frnd-tools-cnt">
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/DNS-Zone-Editor.webp" alt="DNS-Zone-Editor">
+									<img src="/assets/images/cPanel_hosting/DNS-Zone-Editor.webp" alt="DNS-Zone-Editor">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">DNS Zone Editor</div>
@@ -584,16 +572,16 @@
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/Manage-API-Tokens.webp" alt="Manage-API-Tokens">
+									<img src="/assets/images/cPanel_hosting/Manage-API-Tokens.webp" alt="Manage-API-Tokens">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Manage API Tokens</div>
-								<div class="devlp-frnd-cnt-data">By having a VPS with cpanel, you can create and manage API tokens for safe and easy integration with external apps.</div>
+								<div class="devlp-frnd-cnt-data">By having a VPS with cPanel, you can create and manage API tokens for safe and easy integration with external apps.</div>
 								</div>
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/ssl-support.webp" alt="ssl-support">
+									<img src="/assets/images/cPanel_hosting/ssl-support.webp" alt="ssl-support">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Free Let’s Encrypt SSL Support</div>
@@ -602,7 +590,7 @@
 							</div>
 							<div class="devlp-frndly-tools-box">
 								<div class="devlp-frnd-left-icon">
-									<img src="/assets/images/cpanel_hosting/file-management.webp" alt="file-management">
+									<img src="/assets/images/cPanel_hosting/file-management.webp" alt="file-management">
 								</div>
 								<div class="devlp-frndly-cnt">
 								<div class="devlp-frnd-cnt-title">Advanced File Management System</div>
@@ -618,7 +606,7 @@
         @if(!empty($FeaturesData) && count($FeaturesData) >0)
             <div class="container">
                 <div class="section-heading text-center">
-                    <h2 class="text_head">Features Of Our Cpanel VPS Hosting</h2>
+                    <h2 class="text_head">Features Of Our cPanel VPS Hosting</h2>
                 </div>
                 <div class="row">
                     <div class="features-main">
