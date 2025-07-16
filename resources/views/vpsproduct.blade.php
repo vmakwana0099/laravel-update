@@ -3245,7 +3245,7 @@
         </div>
     </section>
    
-    <section class="sec-dt-acr-bkp win-vps-pd-40">
+    <section class="sec-dt-acr-bkp head-tb-p-40">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">

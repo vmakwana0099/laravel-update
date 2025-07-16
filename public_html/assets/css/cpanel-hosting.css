@@ -81,6 +81,27 @@
     transition-duration: .8s;
     margin: 0 auto;
 }
+.sec-dt-acr-price {
+    display: flex;
+    align-items: baseline;
+}
+.sec-dt-prc-one {
+    font-size: 20px;
+    font-weight: 600;
+    color: #28282a;
+}
+.sec-dt-prc-two {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000C66;
+    margin-left: 10px;
+}
+.sec-dt-prc-two span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #28282a;
+}
 
 .hosting-features-icon.instant-setup {
     background-image: url(/assets/images/cpanel_hosting/instant-setup.webp);
