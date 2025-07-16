@@ -104,7 +104,7 @@
 
 	<section class="cpanel-mngmnt-prom-main head-tb-p-40">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-7">
 			<div class="">
 				<h2 class="text_head">
@@ -283,9 +283,15 @@
 
 
 
-	<section class="cpanel-sec-ftr-main">
+	<section class="cpanel-sec-ftr-main head-tb-p-40">
 		<div class="container">
-			<div class="row">
+			<div class="section-heading">
+				<h2 class="text_head text-center">
+					Security Features Specific to cPanel VPS
+				</h2>
+				<p class="text-center">Our cheap cPanel VPS hosting comes packed with smart security features that keep your project safe and sound.</p>
+			</div>
+			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="cpanel-sec-ftr-img">
 					<img src="/assets/images/cpanel_hosting/cpanel-security-features.webp" alt="cpanel-security-features">
@@ -295,28 +301,168 @@
 					<div class="cpanel-sec-ftr-cnt">
 						<div class="cpanel-sec-ftr-box">
 							<div class="cpanel-sec-ftr-title">
-							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="29.942" viewBox="0 0 30 29.942">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#068c46"/>
-      <stop offset="1" stop-color="#068c46" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
-    <g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
-      <g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
-        <g id="_1" data-name="1">
-          <circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971" r="14.971" fill="#1dd882"/>
-          <path id="Path_248390" data-name="Path 248390" d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z" transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)"/>
-          <path id="Path_248391" data-name="Path 248391" d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z" transform="translate(-108.883 -141.084)" fill="#fff"/>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg></span>	Two-Factor Authentication
+								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+										height="29.942" viewBox="0 0 30 29.942">
+										<defs>
+											<linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775"
+												gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#068c46" />
+												<stop offset="1" stop-color="#068c46" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+										<g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+											<g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+												<g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+													<g id="_1" data-name="1">
+														<circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971"
+															r="14.971" fill="#1dd882" />
+														<path id="Path_248390" data-name="Path 248390"
+															d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z"
+															transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)" />
+														<path id="Path_248391" data-name="Path 248391"
+															d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z"
+															transform="translate(-108.883 -141.084)" fill="#fff" />
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg></span> Two-Factor Authentication
 							</div>
+							<div class="cpanel-sec-ftr-data">
+								You don’t have to worry about when you can add that extra layer of login security with a simple code
+								received on your phone
+							</div>
+						</div>
+						<div class="cpanel-sec-ftr-box">
 							<div class="cpanel-sec-ftr-title">
-								You don’t have to worry about when you can add that extra layer of login security with a simple code received on your phone
+								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+										height="29.942" viewBox="0 0 30 29.942">
+										<defs>
+											<linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775"
+												gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#068c46" />
+												<stop offset="1" stop-color="#068c46" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+										<g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+											<g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+												<g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+													<g id="_1" data-name="1">
+														<circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971"
+															r="14.971" fill="#1dd882" />
+														<path id="Path_248390" data-name="Path 248390"
+															d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z"
+															transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)" />
+														<path id="Path_248391" data-name="Path 248391"
+															d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z"
+															transform="translate(-108.883 -141.084)" fill="#fff" />
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg></span> ModSecurity Configuration
+							</div>
+							<div class="cpanel-sec-ftr-data">
+								You can customize your web protection with rules built into your cPanel to block common threats automatically.
+							</div>
+						</div>
+						<div class="cpanel-sec-ftr-box">
+							<div class="cpanel-sec-ftr-title">
+								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+										height="29.942" viewBox="0 0 30 29.942">
+										<defs>
+											<linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775"
+												gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#068c46" />
+												<stop offset="1" stop-color="#068c46" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+										<g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+											<g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+												<g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+													<g id="_1" data-name="1">
+														<circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971"
+															r="14.971" fill="#1dd882" />
+														<path id="Path_248390" data-name="Path 248390"
+															d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z"
+															transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)" />
+														<path id="Path_248391" data-name="Path 248391"
+															d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z"
+															transform="translate(-108.883 -141.084)" fill="#fff" />
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg></span> Brute Force Protection Tools
+							</div>
+							<div class="cpanel-sec-ftr-data">
+								With cPanel VPS, you can effortlessly stop repeating login attempts in their tracks by using its brute force protection tools to shield your server.
+							</div>
+						</div>
+						<div class="cpanel-sec-ftr-box">
+							<div class="cpanel-sec-ftr-title">
+								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+										height="29.942" viewBox="0 0 30 29.942">
+										<defs>
+											<linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775"
+												gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#068c46" />
+												<stop offset="1" stop-color="#068c46" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+										<g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+											<g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+												<g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+													<g id="_1" data-name="1">
+														<circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971"
+															r="14.971" fill="#1dd882" />
+														<path id="Path_248390" data-name="Path 248390"
+															d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z"
+															transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)" />
+														<path id="Path_248391" data-name="Path 248391"
+															d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z"
+															transform="translate(-108.883 -141.084)" fill="#fff" />
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg></span> Various Security Tools
+							</div>
+							<div class="cpanel-sec-ftr-data">
+								From password protection to IP blocking and hotlink prevention, cPanel offers you all the tools to lock things down.
+							</div>
+						</div>
+						<div class="cpanel-sec-ftr-box">
+							<div class="cpanel-sec-ftr-title">
+								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+										height="29.942" viewBox="0 0 30 29.942">
+										<defs>
+											<linearGradient id="linear-gradient" x1="0.196" y1="0.021" x2="0.857" y2="0.775"
+												gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#068c46" />
+												<stop offset="1" stop-color="#068c46" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+										<g id="Group_171414" data-name="Group 171414" transform="translate(0.466 0.466)">
+											<g id="Layer_2" data-name="Layer 2" transform="translate(-0.466 -0.466)">
+												<g id="Layer_1_copy_8" data-name="Layer 1 copy 8" transform="translate(0 0)">
+													<g id="_1" data-name="1">
+														<circle id="Ellipse_538" data-name="Ellipse 538" cx="14.971" cy="14.971"
+															r="14.971" fill="#1dd882" />
+														<path id="Path_248390" data-name="Path 248390"
+															d="M141.7,161.573a14.869,14.869,0,0,1-9.749,12.216l-12.476-12.476L119,159.891l.136-1.286.8-.711,1.617-.178,1.034.478L125,160.609l6.308-6.307,1.709-.432,1.407.432Z"
+															transform="translate(-111.7 -144.546)" fill="url(#linear-gradient)" />
+														<path id="Path_248391" data-name="Path 248391"
+															d="M128.5,150.84l-6.308,6.307-2.417-2.417a2.2,2.2,0,0,0-3.116,3.116l3.837,3.837c.041.049.085.1.131.144a2.218,2.218,0,0,0,3.128,0c.046-.046.09-.095.131-.144l7.729-7.728a2.2,2.2,0,1,0-3.116-3.116Z"
+															transform="translate(-108.883 -141.084)" fill="#fff" />
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg></span> ConfigServer Security & Firewall
+							</div>
+							<div class="cpanel-sec-ftr-data">
+								The cPanel dashboard offers advanced server protection and easy firewall control, safeguarding your server against threats and enabling seamless security management.
 							</div>
 						</div>
 					</div>
@@ -326,7 +472,151 @@
 	</section>
 
 
+<section class="devlp-frndly-tools head-tb-p-40">
+		<div class="container">
+			<div class="section-heading">
+				<h2 class="text_head text-center">Developer-Friendly Tools Built-in with Our Cheap cPanel VPS</h2>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-img">
+						<img src="/assets/images/cpanel_hosting/developer-friendly-tools-01.webp" alt="developer-friendly-tools-01">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-cnt">
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/git-version-control.webp" alt="git-version-control">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Git Version Control</div>
+							<div class="devlp-frnd-cnt-data">Collaborating with Git is easier than ever. You can seamlessly manage your code versions right from your cPanel dashboard.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/node.webp" alt="node">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Node.js, Python, PHP Version Selector</div>
+							<div class="devlp-frnd-cnt-data">With our flexible version selector available in the cPanel VPS dashboard, you can switch between Node.js, Python, and PHP to run your app in your preferred environment.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/corn-jobs.webp" alt="corn-jobs">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Cron Jobs & Terminal Access</div>
+							<div class="devlp-frnd-cnt-data">By having a VPS with cPanel, you can automate tasks and use the terminal, just like in a real development workspace, to gain full command-line control.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/phpmyadmin.webp" alt="phpmyadmin">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">phpMyAdmin + Remote MySQL</div>
+							<div class="devlp-frnd-cnt-data">With cPanel VPS, you can easily manage your databases with phpMyAdmin, where you can also connect to your MySQL server remotely.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center flex-lg-row-reverse">
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-img">
+						<img src="/assets/images/cpanel_hosting/developer-friendly-tools-02.webp" alt="developer-friendly-tools-02">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="devlp-frnd-tools-cnt">
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/DNS-Zone-Editor.webp" alt="DNS-Zone-Editor">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">DNS Zone Editor</div>
+							<div class="devlp-frnd-cnt-data">With the DNS zone editor present in your cPanel dashboard, you can tweak your DNS records in seconds and have complete control.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/Manage-API-Tokens.webp" alt="Manage-API-Tokens">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Manage API Tokens</div>
+							<div class="devlp-frnd-cnt-data">By having a VPS with cpanel, you can create and manage API tokens for safe and easy integration with external apps.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/ssl-support.webp" alt="ssl-support">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Free Let’s Encrypt SSL Support</div>
+							<div class="devlp-frnd-cnt-data">With cPanel VPS, you will get a free Let’s Encrypt SSL certificate to keep your website fully safe and secure.</div>
+							</div>
+						</div>
+						<div class="devlp-frndly-tools-box">
+							<div class="devlp-frnd-left-icon">
+								<img src="/assets/images/cpanel_hosting/file-management.webp" alt="file-management">
+							</div>
+							<div class="devlp-frndly-cnt">
+							<div class="devlp-frnd-cnt-title">Advanced File Management System</div>
+							<div class="devlp-frnd-cnt-data">The best part is that the cPanel dashboard features a robust file manager that helps you upload, edit, and organize your site files.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<section class="vps-features  head-tb-p-40" id="features">
+        @if(!empty($FeaturesData) && count($FeaturesData) >0)
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="text_head">Features Of Our Cpanel VPS Hosting</h2>
+                </div>
+                <div class="row">
+                    <div class="features-main">
+                        @php
+                        $featureMainDivClass;
+                        $featureIconDivClass;
+                        
+                        $featureMainDivClass="features-start ";
+                        $featureIconDivClass="feature-icon d-flex justify-content-center align-items-center";
+                        @endphp
+                        <div class="{{$featureMainDivClass}}">
+                            
+                                <div class="row">
+                                    <div class="feature-ul d-flex flex-wrap" id="vps-all-features">
+                                        @foreach($FeaturesData as $Features)
+                                        
+                                            <div class="feature-box col-xs-12 col-sm-6 col-md-4 d-flex flex-wrap justify-content-center">
+                                                <div class="content-main align-self-start" @if ($uagent !="mobile" )data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100" @endif>
+                                                    <div class="{{$featureIconDivClass}}"><i class="{{$Features->varIconClass}}"></i></div>
+                                                    <span>{{$Features->varTitle}}</span>
+                                                    <div class="content">{!! $Features->varShortDescription !!}</div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                        
+                               </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+    </section>
+ 
 
+@include('template.'.$themeversion.'.testimonial_section')
+
+@include('template.'.$themeversion.'.support_section_home')    
+    @include('template.'.$themeversion.'.faq-section')
 
 @endif
  <section class="vps-features  head-tb-p-40" id="features">

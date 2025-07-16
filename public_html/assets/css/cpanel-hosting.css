@@ -22,11 +22,102 @@
     font-size: 16px;
     font-weight: 400;
 }
-.cpanel-mngmnt-img img {
-    position: absolute;
-    bottom: 0;
-    max-width: 600px;
-}
+
 .cpanel-mngmnt-cnt-row:nth-child(3) {
     border-bottom: 0 !important;
+}
+
+.cpanel-sec-ftr-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.cpanel-sec-ftr-box {
+    margin-bottom: 20px;
+}
+.cpanel-sec-ftr-data {
+    font-size: 16px;
+    font-weight: 400;
+}
+.cpanel-sec-ftr-title span {
+    margin-right: 7px;
+}
+.devlp-frndly-tools-box {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.devlp-frnd-left-icon {
+    background: #fff;
+    min-width: 80px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 30px #0000001A;
+}
+.devlp-frnd-cnt-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.devlp-frnd-cnt-data {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+.hosting-features-icon {
+    width: 56px;
+    height: 56px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    transition-duration: .8s;
+    margin: 0 auto;
+}
+
+.hosting-features-icon.instant-setup {
+    background-image: url(/assets/images/cpanel_hosting/instant-setup.webp);
+}
+.hosting-features-icon.backup-solution {
+    background-image: url(/assets/images/cpanel_hosting/backup-solution.webp);
+}
+.hosting-features-icon.ssd-processing {
+    background-image: url(/assets/images/cpanel_hosting/ssd-processing.webp);
+}
+.hosting-features-icon.no-overselling {
+    background-image: url(/assets/images/cpanel_hosting/no-overselling.webp);
+}
+.hosting-features-icon.live-migration {
+    background-image: url(/assets/images/cpanel_hosting/live-migration.webp);
+}
+.hosting-features-icon.network {
+    background-image: url(/assets/images/cpanel_hosting/network.webp);
+}
+.hosting-features-icon.industry-standards {
+    background-image: url(/assets/images/cpanel_hosting/industry-standards.webp);
+}
+.hosting-features-icon.ssh-access {
+    background-image: url(/assets/images/cpanel_hosting/ssh-access.webp);
+}
+.hosting-features-icon.latest-server {
+    background-image: url(/assets/images/cpanel_hosting/latest-server.webp);
+}
+.hosting-features-icon.powerful-scalable {
+    background-image: url(/assets/images/cpanel_hosting/powerful-scalable.webp);
+}
+.hosting-features-icon.enhanced-level-security {
+    background-image: url(/assets/images/cpanel_hosting/enhanced-level-security.webp);
+}
+.hosting-features-icon.optimized-storage {
+    background-image: url(/assets/images/cpanel_hosting/optimized-storage.webp);
+}
+.hosting-features-icon.root-access-whm {
+    background-image: url(/assets/images/cpanel_hosting/root-access-whm.webp);
 }

@@ -233,7 +233,12 @@
         <div class="section-heading disc-power-head">
             <h2 class="text_head text-center">Here’s Why We Choose KVM for Our Java VPS (And You Should Too)</h2>
         </div>
-        <div class="row">
+        <div class="row flex-lg-row-reverse">
+            <div class="col-lg-7">
+                <div class="disc-full-power-img d-flex justify-content-center justify-content-lg-end">
+                    <img class="img-fluid" loading="lazy" src="../assets/images/java_hosting/kvm-java-hosting.webp" alt="kvm-java-hosting">
+                </div>
+            </div>
             <div class="col-lg-5">
                             <div id="accordion-box" class="accordion faq-wrap">
 
@@ -309,11 +314,7 @@
                                 </div>
                             </div>
             </div>
-            <div class="col-lg-7">
-                <div class="disc-full-power-img d-flex justify-content-center justify-content-lg-end">
-                    <img class="img-fluid" loading="lazy" src="../assets/images/java_hosting/kvm-java-hosting.webp" alt="kvm-java-hosting">
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>
