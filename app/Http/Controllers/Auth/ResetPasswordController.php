@@ -2,89 +2,48 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\PowerpanelController;
-use Illuminate\Contracts\Auth\PasswordBroker;
-use Illuminate\Foundation\Auth\ResetsPasswords;
-use App\Helpers\MyLibrary;
-use App\EmailLog;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
-class ResetPasswordController extends PowerpanelController
+class ResetPasswordController extends Controller
 {
-        /*
-        |--------------------------------------------------------------------------
-        | Password Reset Controller
-        |--------------------------------------------------------------------------
-        |
-        | This controller is responsible for handling password reset requests
-        | and uses a simple trait to include this behavior. You're free to
-        | explore this trait and override any methods you wish to tweak.
-        |
-        */
-
-        use ResetsPasswords;
-
-        /**
-         * Where to redirect users after resetting their password.
-         *
-         * @var string
-         */
-        protected $redirectTo = 'powerpanel/dashboard';
-
-        /**
-         * Create a new controller instance.
-         *
-         * @return void
-         */
-        public function __construct()
-        {
-                //$this->middleware('guest');
-        }
-
-        /**
-     * Get the password reset validation rules.
-     *
-     * @return array
-     */
-    protected function rules()
+    public function __construct()
     {
-        return [
-            'token' => 'required|handle_xss',
-            'email' => 'required|email|handle_xss',
-            'password' => 'required|confirmed|min:6|max:20|check_passwordrules|handle_xss',
-        ];
+        $this->middleware('guest');
     }
 
-        public function sendResetLinkAjax(Request $request, PasswordBroker $passwords)
-        {   
-            if( $request->ajax() )
-            {
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('auth.passwords.reset')->with([
+            'token' => $token,
+            'email' => $request->email,
+        ]);
+    }
 
-                $this->validate($request, ['email' => 'required|email']);   
-                $response = $passwords->sendResetLink($request->only('email'), function($m){
-                                $m->subject('Your Password Reset Link');
-                });
+    public function reset(Request $request)
+    {
+        $request->validate([
+            'token'    => 'required',
+            'email'    => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ]);
 
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password),
+                ])->save();
 
-            
-                
-
-                switch ($response)
-                {
-                        case PasswordBroker::RESET_LINK_SENT:
-                                 return[
-                                                 'error'=>'false',
-                                                 'msg'=>'A password link has been sent to your email address'
-                                 ];                          
-
-                        case PasswordBroker::INVALID_USER:
-                                 return[
-                                                 'error'=>'true',
-                                                 'msg'=>"We can't find a user with that email address"
-                                 ];
-                }
+                Auth::login($user);
             }
-            return false;
-        }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('login')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
+    }
 }
