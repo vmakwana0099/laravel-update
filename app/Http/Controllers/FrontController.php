@@ -92,7 +92,7 @@ class FrontController extends Controller {
                 if (empty($_COOKIE["sys_currency"])) {
                     
                      time_zone::time_zone();
-                       if ($_SERVER['HTTP_HOST'] == "localhost") {
+                       if ($request->getHost() == "localhost") {
                            $IP = "27.54.170.98";
                            //file_put_contents("locationapilog.txt",,mode,context)
                            //--------------------- Code need to comment ----------

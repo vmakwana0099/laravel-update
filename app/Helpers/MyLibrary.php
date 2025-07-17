@@ -4140,7 +4140,7 @@ $additionaldomainfields['.presse.se'] = $additionaldomainfields['.se'];
         $whmcsid = $request->session()->has('WhmcsID')?$request->session()->get('WhmcsID'):'';
         $userstr = $userid. "|".$whmcsid;
         //echo '<pre>';print_r($_SESSION);exit;
-        $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        $url = $request->fullUrl();
         $referralurl = (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']))?$_SERVER['HTTP_REFERER']:'';
         $varData = (isset($_REQUEST) && !empty(isset($_REQUEST)))?serialize($_REQUEST):'';
         $text = self::isLogValidUrl($url);
