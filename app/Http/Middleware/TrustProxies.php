@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;
+use Illuminate\Http\Request;
 
 class TrustProxies extends Middleware
 {
@@ -20,11 +20,4 @@ class TrustProxies extends Middleware
      * @var int
      */
     protected $headers = Request::HEADER_X_FORWARDED_ALL;
-
-    /**
-     * The trusted headers for this application.
-     *
-     * @var int
-     */
-    protected $trustedHeaders = Request::HEADER_X_FORWARDED_ALL;
 }

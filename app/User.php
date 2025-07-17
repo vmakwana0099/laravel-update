@@ -2,11 +2,9 @@
 namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
 use App\Notifications\MailResetPasswordToken;
 use DB;
 class User extends Authenticatable {
-	use EntrustUserTrait;
 	use Notifiable;
 	/**
   * The attributes that are mass assignable.

@@ -10,8 +10,7 @@ use App\EventLead;
 use App\CommonModel;
 use App\Helpers\MyLibrary;
 use Config;
-
-class EventLeadController extends PowerpanelController {
+class EventleadController extends PowerpanelController {
 	
 	/**
 	* Create a new Dashboard controller instance.

@@ -183,21 +183,17 @@ return [
 				App\Providers\RouteServiceProvider::class,
 
 				App\Providers\MailConfigServiceProvider::class,
-				Zizaco\Entrust\EntrustServiceProvider::class,
 				Collective\Html\HtmlServiceProvider::class,				
 				Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 				Maatwebsite\Excel\ExcelServiceProvider::class,
 				Intervention\Image\ImageServiceProvider::class,
 				Mariuzzo\LaravelJsLocalization\LaravelJsLocalizationServiceProvider::class,
 				Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
-				Unisharp\Ckeditor\ServiceProvider::class,
-				Barryvdh\Debugbar\ServiceProvider::class,
 				Spatie\Sitemap\SitemapServiceProvider::class,
 				//Spatie\Backup\BackupServiceProvider::class,
 				ZanySoft\Zip\ZipServiceProvider::class,
 				Cviebrock\EloquentSluggable\ServiceProvider::class,
                                 Laravel\Socialite\SocialiteServiceProvider::class,
-                                Stevebauman\Location\LocationServiceProvider::class,
 
 		],
 
@@ -247,15 +243,12 @@ return [
 				'URL' => Illuminate\Support\Facades\URL::class,
 				'Validator' => Illuminate\Support\Facades\Validator::class,
 				'View' => Illuminate\Support\Facades\View::class,
-				'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
 				'Form'      => Collective\Html\FormFacade::class,
 				'Input' => Illuminate\Support\Facades\Input::class,
 				'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 				'Image'     => Intervention\Image\Facades\Image::class,
 				'Zip' => ZanySoft\Zip\ZipFacade::class,
-				'Debugbar' => Barryvdh\Debugbar\Facade::class,
                                 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-                                'Location' => Stevebauman\Location\Facades\Location::class,
                    
 		],
 

@@ -13,7 +13,7 @@ use App\CommonModel;
 use Carbon\Carbon;
 use Config;
 
-class PopUpController extends PowerpanelController {
+class PopupController extends PowerpanelController {
 	/**
 	* Create a new controller instance.
 	* @return void

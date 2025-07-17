@@ -11,8 +11,7 @@ use App\Services;
 use App\CommonModel;
 use App\Helpers\MyLibrary;
 use Config;
-
-class AppointmentLeadController extends PowerpanelController {
+class AppointmentleadController extends PowerpanelController {
 	
 	/**
 	* Create a new Dashboard controller instance.

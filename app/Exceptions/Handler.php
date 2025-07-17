@@ -2,13 +2,10 @@
 
 namespace App\Exceptions;
 
-use Exception;
-use Symfony\Component\Debug\Exception\FlattenException;
-use Symfony\Component\Debug\ExceptionHandler as SymfonyExceptionHandler;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Request;
+use Throwable;
 use App\Helpers\MyLibrary;
-use DB;
 
 class Handler extends ExceptionHandler
 {
@@ -34,56 +31,41 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
-     * @param  \Exception  $exception
+     * @param  \Throwable  $exception
      * @return void
+     * @throws \Throwable
      */
-    public function report(Exception $exception)
-    {   
-       
-        //Write error file -----------------------------
+    public function report(Throwable $exception)
+    {
         try {
-        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException && $exception->getStatusCode() == 404) {
-        // Skip logging 404 errors
-        return;
-        }
-        $e = FlattenException::create($exception);
-    
-        $handler = new SymfonyExceptionHandler();
-    
-        $html = $handler->getHtml($e);
-        
-        $ip = Mylibrary::get_client_ip();
-        $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        $text = $html;
-        
-        $logData = array();	
-        if(isset($ip) && !empty($ip)){ $logData['varIpAddress'] = $ip; }
-        if(isset($url) && !empty($url)){ $logData['varUrl'] = $url; }
-        $referralurl = (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']))?$_SERVER['HTTP_REFERER']:'';
-        
-        if(isset($referralurl) && !empty($referralurl)){ 
-            $logData['varReferralurl'] = $referralurl; 
-        }
-        // if(isset($text) && !empty($text)){ 
-        //     $logData['varText'] = $html;
-        //     if ($ip != 27.54.170.98 || $ip != 172.31.39.245) {   //internal IP
-        //         DB::table('clientactivityerror_log')->insert($logData);	
-        //     }
-        // }
-        if (isset($text) && !empty($text)) { 
-            $logData['varText'] = $html;
-            if ($ip != '85.209.11.20') {   // internal IP
-                DB::table('clientactivityerror_log')->insert($logData); 
-            }
-        }
+            if ($this->shouldReport($exception)) {
+                // Skip logging 404 errors
+                if (method_exists($exception, 'getStatusCode') && $exception->getStatusCode() == 404) {
+                    return;
+                }
 
-        
-        } catch (Exception $ex) {
-            dd($ex);
+                $ip = MyLibrary::get_client_ip();
+                $host = $_SERVER['HTTP_HOST'] ?? 'cli';
+                $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+                $url = "https://".$host.$requestUri;
+                $referralurl = $_SERVER['HTTP_REFERER'] ?? '';
+
+                $logData = [];
+                if (!empty($ip)) $logData['varIpAddress'] = $ip;
+                if (!empty($url)) $logData['varUrl'] = $url;
+                if (!empty($referralurl)) $logData['varReferralurl'] = $referralurl;
+
+                $logData['varText'] = $exception->getMessage();
+
+                // Prevent logging for internal IP (adjust IPs as needed)
+                if (app()->bound('db') && $ip !== '85.209.11.20') {
+                    DB::table('clientactivityerror_log')->insert($logData);
+                }
+            }
+        } catch (\Throwable $e) {
+            // Optionally log to file or ignore
+            // file_put_contents(storage_path('logs/custom-error.log'), $e->getMessage(), FILE_APPEND);
         }
-        //----------------------------------------------
 
         parent::report($exception);
     }
@@ -92,10 +74,10 @@ class Handler extends ExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param  \Throwable  $exception
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Throwable $exception)
     {
         return parent::render($request, $exception);
     }

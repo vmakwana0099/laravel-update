@@ -11,8 +11,7 @@ use App\ContactLead;
 use App\CommonModel;
 use App\Helpers\MyLibrary;
 use Config;
-
-class ContactLeadController extends PowerpanelController {
+class ContactleadController extends PowerpanelController {
 
     /**
      * Create a new Dashboard controller instance.

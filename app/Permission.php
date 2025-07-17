@@ -1,48 +1,61 @@
 <?php 
+
 namespace App;
-use Zizaco\Entrust\EntrustPermission;
-class Permission extends EntrustPermission{
 
+use Illuminate\Database\Eloquent\Model;
 
-	public static function getPermissions(){
-		$response=false;
-		$permissionFields=['id','name','display_name','description','intFKModuleCode'];
-		$moduleFields=['id','varTitle'];
-		$response=Self::getPowerPanelRecords($permissionFields, $moduleFields)
-		->get()		
-		->toArray();
-		return $response;
-	}
+class Permission extends Model
+{
+    protected $table = 'permissions'; // If not using Laravel default table naming
+    public $timestamps = true; // Adjust based on your table structure
 
-	/**
-	* This method get records 
-	* @return  Object
-	* @since   2016-08-16
-	* @author  NetQuick
-	*/
-	static function getPowerPanelRecords($permissionFields=false, $moduleFields=false) {
-		$response=false;
-		$response=Self::select($permissionFields);
-		if($moduleFields!=false){
-			$data['modules'] = function ($query) use ($moduleFields) { $query->select($moduleFields); };
-		}
-		if(count($data)>0){
-			$response = $response->with($data);
-		}
-		return $response;
-	}
+    protected $fillable = [
+        'name', 'display_name', 'description', 'intFKModuleCode'
+    ];
 
-	/**
-	 * This method handels module relation
-	 * @return  Object
-	 * @since   2016-07-24
-	 * @author  NetQuick
-	 */
-	public function modules() {
-			return $this->belongsTo('App\Modules', 'intFKModuleCode', 'id');
-	}
+    /**
+     * Get all permissions with optional related module data.
+     */
+    public static function getPermissions()
+    {
+        $permissionFields = ['id', 'name', 'display_name', 'description', 'intFKModuleCode'];
+        $moduleFields = ['id', 'varTitle'];
 
-	public function permissionRole(){
-		return $this->hasOne('App\Permission_role','id','permission_id');
-	}
+        return self::getPowerPanelRecords($permissionFields, $moduleFields)
+            ->get()
+            ->toArray();
+    }
+
+    /**
+     * Query builder with optional module relation eager loading.
+     */
+    public static function getPowerPanelRecords($permissionFields = [], $moduleFields = [])
+    {
+        $query = self::select($permissionFields);
+
+        if (!empty($moduleFields)) {
+            $query->with(['modules' => function ($q) use ($moduleFields) {
+                $q->select($moduleFields);
+            }]);
+        }
+
+        return $query;
+    }
+
+    /**
+     * Relationship with modules table.
+     */
+    public function modules()
+    {
+        return $this->belongsTo(Modules::class, 'intFKModuleCode', 'id');
+    }
+
+    /**
+     * Relationship with permission_role table.
+     * Adjust this model name and relation if you're changing your ACL system.
+     */
+    public function permissionRole()
+    {
+        return $this->hasOne(PermissionRole::class, 'permission_id', 'id');
+    }
 }

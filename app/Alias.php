@@ -17,7 +17,7 @@ class Alias extends Model {
     protected static $fetchedID = [];
     protected static $fetchedAlias = null;
 
-    public function sluggable() {
+    public function sluggable(): array {
         return [
             'varAlias' => [
                 'source' => 'alias'
@@ -25,24 +25,8 @@ class Alias extends Model {
         ];
     }
 
-    // static function getAlias($slug = false){	
-    // 	$response = false;
-    // 	if(!in_array($slug, Self::$fetchedID)){
-    // 		array_push(Self::$fetchedID, $slug);
-    // 		Self::$fetchedAlias = Self::where('varAlias', $slug)->get()->first();						
-    // 	}
-    // 	$response = Self::$fetchedAlias;
-    // 	return $response;
-    // }
-    // static function getAlias($slug = false)
-    // { 
-    // 	$response = false;
-    // 	if(!empty($slug))
-    // 	{
-    // 		$response = Self::select(['id', 'intFkModuleCode', 'varAlias'])->where('varAlias', $slug)->get()->first();              
-    // 	}
-    // 	return $response;
-    // }
+
+
 
     static function getAlias($slug = false) {
         $response = false;
